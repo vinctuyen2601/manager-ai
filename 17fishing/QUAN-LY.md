@@ -619,7 +619,7 @@ Xếp theo **mức thiệt hại nếu bỏ mặc ba tháng**, không theo mức
 | # | Việc | Thiệt hại nếu bỏ mặc | Chờ ai |
 |---|---|---|---|
 | 1 | **Xoay khoá R2 + mật khẩu Postgres** đã lộ trong git từ 19/04 | mất/hỏng 213 MB ảnh; ai đọc được toàn bộ CSDL | chủ shop, ở Cloudflare + máy chủ |
-| 2 | **Xoay token admin** đã dán vào chat, hết hạn 23/09 | toàn quyền gian hàng và đơn hàng cho bất kỳ ai đọc được đoạn chat | chủ shop |
+| 2 | **Xoay token admin** — đã dán vào chat **LẦN THỨ BA** (14/09). Hết hạn 23/09, còn 9 ngày. Bản sao đang nằm ở `~/.17fishing-admin-token` trên máy chủ shop, xoá sau khi xoay | toàn quyền gian hàng và đơn hàng cho bất kỳ ai đọc được đoạn chat | chủ shop |
 | 3 | **Xác minh sao lưu đã cắm điện** (cron + S3_BUCKET) | mất trắng 104 bài, 11 sản phẩm, toàn bộ số liệu | chủ shop, 3 lệnh ở mục 4 |
 | 4 | **Bịt `GET /customers/phone/:phone`** — thiếu 1 dòng `@UseGuards` | rò cả bảng khách hàng kèm số tiền đã tiêu, không cần đăng nhập | sửa mã — **không thuộc quyền tôi** |
 | 5 | **Kiểm `JWT_SECRET` có đặt trên máy chủ không** | nếu trống, ai cũng tự ký được token admin | chủ shop, 1 lệnh ở mục 7 |
@@ -631,6 +631,7 @@ Xếp theo **mức thiệt hại nếu bỏ mặc ba tháng**, không theo mức
 | 11 | **Xoá 460 đánh giá mồ côi** của 15 sản phẩm đã biến mất | càng để càng khó tách khỏi 25 đánh giá thật | chủ shop quyết — **việc không hoàn tác được, tôi không tự làm** |
 | ✅ 12 | **Sửa giá Phao Nano Ngọc Liên Sơn**: thẻ hiện 80.000đ, biến thể bán 70.000đ | khách thấy giá cao hơn giá thật | chủ shop quyết giá đúng là bao nhiêu |  **XONG 14/09 — chủ shop chốt 80.000đ, đã đồng bộ thẻ và phân loại**
 | 13 | **Ngưỡng freeship 100.000đ trên hàng nặng** (14/09: đo lại thấy **7/11 sản phẩm mua MỘT món đã vượt ngưỡng**, và món rẻ nhất 55k thì mua 2 cái cũng vượt — tức ngưỡng này gần như không còn lọc gì) — ghế 5,5 kg giá 1,55tr và ghế 4,4 kg giá 3,85tr đều **miễn ship**. Cước thật đi liên tỉnh cho 5 kg lớn hơn 15.000đ nhiều lần | ăn vào lãi đúng những món lãi nhất | **chỉ chủ shop biết cước thật là bao nhiêu** |
+| 22 | **Dọn 3 bản ghi thử combo** khi xem xong: `Hộp đựng phao 6 ngăn chống sốc`, `THỬ COMBO 1`, `THỬ COMBO 2`. Đều ẩn khỏi gian hàng nên không gấp | rác dữ liệu | chạy `node dung-combo.mjs --xoa`, hoặc xoá trong CMS |
 | 21 | **Gắn quà tặng cho sản phẩm đầu tiên** — luật "mua ≥ n cái A tặng B" đã chạy end-to-end từ 14/09 nhưng **0/11 sản phẩm dùng**. Cần một sản phẩm đánh dấu "là hàng tặng" rồi gắn vào một món bán chạy | tính năng nằm không, và chưa kiểm được trên dữ liệu thật | **chỉ chủ shop quyết tặng gì cho món nào** |
 | 14 | Dọn 4 vết chữ máy còn sót trong bài đã đăng (mục 5, ý 10) | khách đọc thấy "tối ưu SEO", "[MUA NGAY CHÍNH HÃNG]", "Gà Rutin" | chủ shop |
 | 15 | Sửa banner hero: tiêu đề là dấu cách, phụ đề thiếu chữ ("MÙA GẢI") | lỗi chính tả ngay trang chủ | chủ shop, sửa trong CMS |
@@ -680,6 +681,40 @@ rủi ro cụ thể thì sẽ bị bỏ sau hai tuần.
 ---
 
 ## 11. Hiểu biết tích luỹ
+
+### 14/09/2026 · Luật quà đã kiểm trên PRODUCTION, không tạo đơn nào
+
+Dựng hai dạng combo bằng API quản trị rồi thử bằng `POST /orders/tinh-tien` —
+endpoint đó chạy **đúng cùng hàm** `tinhTien()` mà lúc tạo đơn gọi, trả đủ dòng
+quà, nhưng không ghi đơn. Không vi phạm luật "không đặt đơn thật".
+
+Ba bản ghi tạo ra đều **ẩn khỏi gian hàng**, xác nhận bằng đo: `/api/products`
+vẫn trả đúng 11 sản phẩm như trước.
+
+```
+quà      isGift=true    -> products.service lọc `is_gift = false`
+hai chủ  isActive=false -> ẩn, nhưng dinhGia() vẫn tra được giá
+```
+
+Kết quả trên production:
+
+```
+dạng 1 · mua 1   80.000đ  ship 15.000đ  không quà, thiếu 20.000đ để miễn
+dạng 1 · mua 2  160.000đ  MIỄN PHÍ      1 quà
+dạng 1 · mua 4  320.000đ  MIỄN PHÍ      VẪN 1 quà (không nhân bội)
+dạng 2 · mua 1   55.000đ  MIỄN PHÍ      1 quà  <- ca freeship có tác dụng thật
+hai luật cùng lúc                       2 quà, gộp đúng
+```
+
+Ba đòn tấn công đều bị chặn:
+
+- gửi kèm dòng quà giả x5 -> máy chủ vứt, chỉ giữ 1 quà theo luật của nó
+- gửi **ghế 3,85tr** dưới dạng dòng quà -> **biến mất hoàn toàn** khỏi kết quả
+- gửi ghế giá 0 mà không gắn cờ -> máy chủ tự tra, tính đủ 3.850.000đ
+
+Bài học vẫn cũ nhưng lần này có bằng chứng: **nguồn sự thật duy nhất về tiền**
+nằm ở `tinhTien()`, và mọi thứ trình duyệt gửi lên đều là gợi ý chứ không phải
+dữ kiện. Giữ nguyên tắc đó thì thêm tính năng tiền bạc mới không sinh lỗ mới.
 
 ### 14/09/2026 · Hỏi định nghĩa trước khi vẽ giải pháp
 
