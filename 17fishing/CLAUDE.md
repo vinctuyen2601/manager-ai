@@ -167,3 +167,52 @@ bên CMS. Lệch hai con số đó là người dùng bị từ chối sau khi �
 
 Ảnh tải lên tự chuyển WebP, xoay theo EXIF và chặn cạnh dài 1600px ở
 `storage/r2.service.ts`.
+
+---
+
+## 9. Bẫy theo repo
+
+Ba repo của shop dùng chung hồ sơ này, nhưng mỗi cái có bẫy riêng. Gom cả về đây
+chứ không rải vào `CLAUDE.md` từng repo: rải ra là sáu chỗ phải nhớ cập nhật, và
+đã có lần một cái bẫy nằm cả hai nơi rồi hai bên nói khác nhau.
+
+### 17fishing-BE
+
+**`gen_random_uuid()`, KHÔNG phải `uuid_generate_v4()`.** Repo này không bật
+extension uuid-ossp; chép migration từ GaRutin sang là hỏng ngay lúc deploy, mà
+hỏng trên production vì không có môi trường thử.
+
+**`GSC_SITE_URL` phải là `https://17-fishing.com/`** — property là loại tiền tố
+URL, không phải `sc-domain:`. Khai sai thì Google báo *thiếu quyền*, và ta đi
+tìm nhầm sang phía quyền tài khoản dịch vụ.
+
+**`GET /customers/phone/:phone` đang HỞ** — trả 200 không cần token. Xem mục 7.
+
+### 17fishing-Web
+
+**`loading.tsx` KHÔNG được nằm ngay trong `/san-pham`.** Nó tạo Suspense ngầm cho
+**cả segment** kể cả `[slug]`: có Suspense thì Next truyền dữ liệu ngay, mã 200
+chốt xong trước khi `notFound()` kịp ném — nên **mọi đường dẫn sản phẩm sai trả
+200** kèm nội dung trang 404, và Google giữ chúng trong chỉ mục. Nay nó nằm trong
+nhóm `(danh-sach)`. **Đừng dời lên một cấp.**
+
+**`normalizeProduct(null)` cho ra object TRUTHY.** Trải `null` ra rồi thêm một
+trường thì được object có đúng trường đó — truthy. Nên `if (!product) notFound()`
+không bao giờ chạy, API trả 200 kèm thân rỗng cho slug không tồn tại.
+
+**`boKhoi.tsx` là bước 3 trong ba bước thêm block** (mục 4). Quên nó thì hỏng IM
+LẶNG — chạy `npm run kiem-khoi` để so với registry bên BE.
+
+**`TrackVisit` bỏ qua khung nhúng và trang công cụ.** Thêm trang công cụ mới thì
+phải thêm vào danh sách đó, nếu không nó tự đếm mình thành lượt khách.
+
+### 17fishing-CMS
+
+**Khung xem trước NHÚNG trang thật qua iframe**, không vẽ lại giao diện. Vẽ lại
+là hai bản sẽ trôi dạt, và lúc đó xem trước thành thứ gây hiểu nhầm.
+
+**Bản nháp gửi sang khung xem trước phải gồm `blockOrder`.** Thiếu nó thì đảo thứ
+tự block trông như không có tác dụng — đã mất một vòng đi tìm nhầm sang iframe.
+
+**Giới hạn tải tệp 18 MB** ở `src/lib/upload.ts`, phải khớp `MediaController.TOI_DA`
+bên BE.

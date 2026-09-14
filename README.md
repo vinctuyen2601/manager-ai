@@ -27,23 +27,28 @@ trong `GaRutinBE/CLAUDE.md`, nên phiên làm ở `GaRutinWeb` hay `GaRutinCMS`
 Cách chữa sai là chép hồ sơ sang cả ba repo. Không làm vậy: ba bản sẽ trôi dạt,
 y hệt `tracking.service.ts` hai shop. Chỉ giữ một bản, các repo trỏ vào.
 
-## Cách các repo nạp hồ sơ
+## Cách các repo lấy hồ sơ: ĐỌC, không tự nạp
 
-`CLAUDE.md` của mỗi repo chứa một dòng nhập:
+`CLAUDE.md` của mỗi repo dài 25 dòng và không chứa hiểu biết nào — nó chỉ ra
+lệnh đọc `manager-ai/<dự án>/CLAUDE.md` trước khi bắt tay.
 
-```
-@~/my-project/manager-ai/garutin/CLAUDE.md
-```
+### Đã thử tự nạp bằng `@` và KHÔNG được — đừng thử lại
 
-Claude Code đọc dòng `@` này và **nhập thẳng nội dung tệp** vào phiên — một bản
-duy nhất nhưng nạp tự động ở cả ba repo.
+Claude Code có cú pháp `@đường/dẫn` để nhập tệp vào `CLAUDE.md`. Đo ngày
+14/09/2026 bằng cách chạy một phiên riêng rồi hỏi một con số chỉ có trong hồ sơ:
 
-`QUAN-LY.md` cố ý **không** nhập: nó dài hàng trăm dòng, nhét vào mọi phiên là
-làm loãng. Repo chỉ ghi đường dẫn để mở khi cần.
+| Khai thế nào | Kết quả |
+|---|---|
+| `@~/my-project/manager-ai/17fishing/CLAUDE.md` | ✗ không nạp |
+| `@../manager-ai/17fishing/CLAUDE.md` | ✗ không nạp |
+| `@manager-ai/17fishing/CLAUDE.md` đặt ở `CLAUDE.md` gốc | ✗ không nạp |
+| `@.ho-so/thu.md` — tệp nằm **trong chính repo** | ✓ nạp |
 
-Phần còn lại của `CLAUDE.md` mỗi repo là **bẫy riêng của repo đó** — thứ chỉ
-đúng với chính nó, ví dụ `loading.tsx` không được nằm trong `/san-pham` của
-`17fishing-Web`. Loại đó ở lại repo, không đưa lên đây.
+**`@` chỉ với tới tệp nằm trong repo đang mở.** Trỏ ra ngoài thì bị bỏ qua
+**không một lời báo nào** — tệp vẫn ghi "tự nạp", phiên vẫn chạy, chỉ là mù.
+
+Nên chọn cách đọc tay: tốn một lần đọc tệp, nhưng không có mắt xích nào hỏng
+ngầm được. Tệp có hay không thấy ngay.
 
 ## Luật chia: cái gì ở đâu
 
@@ -53,12 +58,15 @@ khác của cùng shop không?":
 | Còn đúng | Ví dụ | Ghi ở |
 |---|---|---|
 | ✔ cả ba repo | bán gì, quy mô thật, đọc bảng phân tích thế nào, việc treo | `manager-ai/<dự án>/` |
-| ✘ chỉ một repo | `loading.tsx` không được nằm trong `/san-pham`, `VITE_*` nhúng lúc build | `CLAUDE.md` của repo đó |
+| ✘ chỉ một repo | `loading.tsx` không được nằm trong `/san-pham`, `VITE_*` nhúng lúc build | `manager-ai/<dự án>/` mục "Bẫy theo repo" |
 | ✔ cả hai shop | quyền hạn, git, CloudFront 30 giây, bẫy tiếng Việt | `~/my-project/CLAUDE.md` |
 
 Ghi hai chỗ thì sáu tháng nữa hai chỗ nói khác nhau, và không ai biết chỗ nào
-đúng. Đã dọn một lượt ngày 14/09/2026: bốn cái bẫy đang nằm cả ở hồ sơ lẫn thẻ
-repo.
+đúng.
+
+Kể cả bẫy của riêng một repo cũng để ở đây, **không** để trong repo đó. Sáu repo
+là sáu chỗ phải nhớ cập nhật, và trong đúng một buổi sáng đã có bốn cái bẫy nằm
+cả hai nơi. Repo chỉ giữ mã.
 
 Kiểm dây nối còn nguyên:
 

@@ -42,18 +42,23 @@ case "${1:-}" in
       duan="${DUAN[$repo]}"
       tep="$MA/$repo/CLAUDE.md"
       ho_so="$GOC/$duan/CLAUDE.md"
-      nhap="@~/my-project/manager-ai/$duan/CLAUDE.md"
+      lenh="~/my-project/manager-ai/$duan/CLAUDE.md"
 
-      if   [[ ! -f "$tep" ]];                 then ket="THIẾU CLAUDE.md"; loi=1
-      elif [[ ! -f "$ho_so" ]];               then ket="hồ sơ $duan không tồn tại"; loi=1
-      elif ! grep -qF "$nhap" "$tep";         then ket="không nhập hồ sơ $duan"; loi=1
+      # Không dùng cú pháp @ của Claude Code: đã đo 14/09/2026, @ chỉ với tới
+      # tệp nằm TRONG repo đang mở, trỏ ra ngoài thì bỏ qua không báo gì.
+      # Chi tiết phép đo: README.md.
+      if   [[ ! -f "$tep" ]];                        then ket="THIẾU CLAUDE.md"; loi=1
+      elif [[ ! -f "$ho_so" ]];                      then ket="hồ sơ $duan không tồn tại"; loi=1
+      elif ! grep -qF "$lenh" "$tep";                then ket="không trỏ tới hồ sơ $duan"; loi=1
+      elif ! grep -qF "BẮT BUỘC đọc" "$tep";         then ket="thiếu lệnh bắt buộc đọc"; loi=1
+      elif grep -qE "^@" "$tep";                     then ket="còn dòng @ (không nạp được, xem README)"; loi=1
       else ket=""
       fi
 
       if [[ -n "$ket" ]]; then printf '   ✗ %-16s %s\n' "$repo" "$ket"
       else                     printf '   ✓ %-16s → %s\n' "$repo" "$duan"; fi
     done
-    [[ $loi -eq 0 ]] && echo "→ Sáu repo đều nạp đúng hồ sơ dự án." \
+    [[ $loi -eq 0 ]] && echo "→ Sáu repo đều trỏ đúng hồ sơ dự án." \
                      || { echo "→ Có repo đứt dây nối, sửa CLAUDE.md của nó." >&2; exit 1; }
     ;;
 

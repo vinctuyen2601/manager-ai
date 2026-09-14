@@ -3,10 +3,14 @@
 Tệp này nạp cho **cả sáu repo** trong `~/my-project` — phần đúng với cả hai
 cửa hàng.
 
-Hiểu biết riêng của từng cửa hàng nằm ở `manager-ai/<dự án>/CLAUDE.md` và được
-`CLAUDE.md` của mỗi repo nhập vào bằng dòng `@`, nên cũng tự nạp. Một hồ sơ dùng
-chung cho cả ba repo của một shop, không chép thành ba bản. Chi tiết và phép
-kiểm dây nối: `manager-ai/README.md`, `./dong-bo.sh kiem`.
+Hiểu biết riêng của từng cửa hàng nằm ở `manager-ai/<dự án>/CLAUDE.md` — một hồ
+sơ dùng chung cho cả ba repo của shop, gồm cả bẫy của từng repo. Tệp đó **không
+tự nạp**: mở repo nào thì `CLAUDE.md` của repo đó bảo phải đọc, và phải đọc thật
+trước khi làm.
+
+Đừng tìm cách tự nạp nó bằng cú pháp `@`. Đã đo: `@` chỉ với tới tệp nằm trong
+repo đang mở, trỏ ra ngoài thì **bị bỏ qua không báo gì** — tệp vẫn ghi "tự nạp"
+mà thực tế mù. Phép đo và phép kiểm: `manager-ai/README.md`, `./dong-bo.sh kiem`.
 
 ---
 

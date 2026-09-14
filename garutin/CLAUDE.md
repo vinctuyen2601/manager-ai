@@ -207,3 +207,42 @@ tầng phải vận hành.
 Kiểm bản đã lên: dò cho tới khi thấy thay đổi thật. Route mới thì `404 → 401`
 là bằng chứng đã lên **và** guard còn nguyên. Đã từng chèn route giữa
 `@UseGuards` và route bên dưới làm rớt guard của nó — kiểm cả hai.
+
+---
+
+## 8. Bẫy theo repo
+
+Ba repo của shop dùng chung hồ sơ này, nhưng mỗi cái có bẫy riêng. Gom cả về đây
+chứ không rải vào `CLAUDE.md` từng repo: rải ra là sáu chỗ phải nhớ cập nhật, và
+đã có lần một cái bẫy nằm cả hai nơi rồi hai bên nói khác nhau.
+
+### GaRutinBE
+
+**`registry.ts` là nguồn sự thật của prompt AI**, bảng `ai_prompts` chỉ chứa bản
+ghi đè. Sửa prompt thẳng trong CSDL mà không sửa registry là lần deploy sau mất sạch.
+
+**`phan-tich.ts` ghim `lồng`/`lông`, `chuồng`/`chuông` thành mã riêng** trước khi
+bỏ dấu. Thêm từ khoá mới có nguy cơ chập thì phải thêm vào bảng đó.
+
+**Kiểm hàm sinh UUID của migration gần nhất trước khi viết cái mới** — hai shop
+không giống nhau, chép chéo là hỏng lúc deploy.
+
+### GaRutinWeb
+
+**Bộ tối ưu ảnh của Next đã TẮT.** Hạn mức Vercel cạn là mọi ảnh trả 402 và biến
+mất sạch — đã xảy ra thật. Ảnh nén sẵn tại nguồn trên R2. Đừng bật lại mặc định.
+
+**Canonical phải khai ở TỪNG route.** Metadata ở layout gốc được mọi route kế
+thừa, nên một canonical ở đó biến cả 20 trang sản phẩm và 69 bài viết thành "bản
+trùng của trang chủ". Đã sửa 11/09 — đừng đưa canonical trở lại layout.
+
+**`src/lib/gia.ts` là nơi DUY NHẤT quyết định giá hiển thị.** Trước đây có bốn
+bản chép tay, mỗi nơi một kiểu.
+
+### GaRutinCMS
+
+**`VITE_*` nhúng lúc BUILD.** Đổi biến môi trường xong phải build lại, không thì
+giá trị cũ vẫn nằm trong gói.
+
+**Xem trước sản phẩm bị giới hạn chiều cao** (`maxHeight: 420`) — mô tả dài bị
+cắt. Cố ý, để form không dài vô tận.
