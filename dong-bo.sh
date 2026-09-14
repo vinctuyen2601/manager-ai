@@ -1,15 +1,23 @@
 #!/usr/bin/env bash
-# Đồng bộ tài liệu agent giữa repo này và ~/.claude
+# Đồng bộ tài liệu quản lý giữa repo này, ~/.claude và sáu repo mã nguồn.
 #
-# Hai chiều tách bạch, không có chế độ "tự đoán":
-#   cai  — repo  → ~/.claude   (dựng máy mới, hoặc lấy lại bản đã commit)
-#   luu  — ~/.claude → repo    (sau khi sửa, để commit)
+# Ba việc tách bạch, không có chế độ "tự đoán":
+#   cai   — repo  → ~/.claude   (dựng máy mới, hoặc lấy lại bản đã commit)
+#   luu   — ~/.claude → repo    (sau khi sửa, để commit)
+#   kiem  — soát dây nối: repo mã nguồn có thật sự nhập hồ sơ dự án không
 #
-# Cố ý không gộp thành một lệnh "sync": đồng bộ hai chiều tự động là cách chắc
-# chắn nhất để một hôm nào đó bản cũ đè mất bản mới mà không ai biết.
+# Cố ý không gộp cai/luu thành một lệnh "sync": đồng bộ hai chiều tự động là
+# cách chắc chắn nhất để một hôm nào đó bản cũ đè mất bản mới mà không ai biết.
 set -euo pipefail
 GOC="$(cd "$(dirname "$0")" && pwd)"
 DICH="$HOME/.claude"
+MA="$HOME/my-project"
+
+# repo → dự án. Nguồn sự thật của phép kiểm bên dưới.
+declare -A DUAN=(
+  [GaRutinBE]=garutin      [GaRutinWeb]=garutin      [GaRutinCMS]=garutin
+  [17fishing-BE]=17fishing [17fishing-Web]=17fishing [17fishing-CMS]=17fishing
+)
 
 case "${1:-}" in
   cai)
@@ -18,14 +26,39 @@ case "${1:-}" in
     cp -rv "$GOC/skills/"* "$DICH/skills/"
     echo "→ Đã cài. Khởi động lại Claude Code để nạp agent mới."
     ;;
+
   luu)
     cp -v "$DICH/agents/quan-ly-tai-san.md" "$GOC/agents/"
     cp -rv "$DICH/skills/quan-ly" "$GOC/skills/"
-    cp -v "$HOME/my-project/CLAUDE.md" "$GOC/CLAUDE-chung.md"
+    cp -v "$MA/CLAUDE.md" "$GOC/chung/CLAUDE.md"
     echo "→ Đã chép về repo. Xem 'git diff' rồi commit."
     ;;
+
+  kiem)
+    # Hỏng ở đây là hỏng IM LẶNG: phiên vẫn chạy, chỉ là không biết gì về shop.
+    # Đúng loại lỗi đã mất cả ngày 14/09 mới nhận ra, nên phải có phép kiểm.
+    loi=0
+    for repo in "${!DUAN[@]}"; do
+      duan="${DUAN[$repo]}"
+      tep="$MA/$repo/CLAUDE.md"
+      ho_so="$GOC/$duan/CLAUDE.md"
+      nhap="@~/my-project/manager-ai/$duan/CLAUDE.md"
+
+      if   [[ ! -f "$tep" ]];                 then ket="THIẾU CLAUDE.md"; loi=1
+      elif [[ ! -f "$ho_so" ]];               then ket="hồ sơ $duan không tồn tại"; loi=1
+      elif ! grep -qF "$nhap" "$tep";         then ket="không nhập hồ sơ $duan"; loi=1
+      else ket=""
+      fi
+
+      if [[ -n "$ket" ]]; then printf '   ✗ %-16s %s\n' "$repo" "$ket"
+      else                     printf '   ✓ %-16s → %s\n' "$repo" "$duan"; fi
+    done
+    [[ $loi -eq 0 ]] && echo "→ Sáu repo đều nạp đúng hồ sơ dự án." \
+                     || { echo "→ Có repo đứt dây nối, sửa CLAUDE.md của nó." >&2; exit 1; }
+    ;;
+
   *)
-    echo "Dùng: $0 cai | luu" >&2
+    echo "Dùng: $0 cai | luu | kiem" >&2
     exit 1
     ;;
 esac

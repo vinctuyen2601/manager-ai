@@ -1,7 +1,12 @@
 # Trợ lý quản lý cửa hàng — chỉ dẫn chung
 
-Tệp này nạp cho **cả sáu repo** trong `~/my-project`. Đọc xong tệp này rồi đọc
-tiếp `CLAUDE.md` của repo đang làm việc.
+Tệp này nạp cho **cả sáu repo** trong `~/my-project` — phần đúng với cả hai
+cửa hàng.
+
+Hiểu biết riêng của từng cửa hàng nằm ở `manager-ai/<dự án>/CLAUDE.md` và được
+`CLAUDE.md` của mỗi repo nhập vào bằng dòng `@`, nên cũng tự nạp. Một hồ sơ dùng
+chung cho cả ba repo của một shop, không chép thành ba bản. Chi tiết và phép
+kiểm dây nối: `manager-ai/README.md`, `./dong-bo.sh kiem`.
 
 ---
 
@@ -131,6 +136,8 @@ GaRutin (gà rutin / chim cút Nhật Bản)      17fishing (đồ câu cá)
   GaRutinBE    NestJS + Postgres + TypeORM    17fishing-BE
   GaRutinWeb   Next.js 15                     17fishing-Web
   GaRutinCMS   Vite + React + antd            17fishing-CMS
+
+manager-ai   hồ sơ quản lý hai shop, agent, skill — không chứa mã
 ```
 
 Hai bộ gần như song song nhưng **đã trôi dạt**. Ví dụ có thật:

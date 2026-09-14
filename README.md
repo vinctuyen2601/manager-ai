@@ -1,59 +1,92 @@
-# manager-agent — bộ tài liệu người quản lý tài sản
+# manager-ai — trí nhớ của người quản lý
 
-Thư mục này là **nguồn sự thật** cho agent quản lý và bộ chỉ dẫn đi kèm.
+Repo này giữ **hiểu biết về cửa hàng**, tách khỏi mã nguồn. Mã nằm ở sáu repo
+kia; những gì một người quản lý cần biết để làm việc trên chúng thì nằm ở đây.
 
-## Vì sao có thư mục này
-
-Trước đây các tệp chỉ nằm ở `~/.claude/` — thư mục cấu hình của Claude Code trên
-máy cá nhân. Hai hệ quả:
-
-- **Không repo nào theo dõi chúng.** Tệp agent 27 KB, viết qua nhiều buổi, chỉ
-  tồn tại đúng một bản trên một máy. Máy hỏng là mất.
-- **Sáu repo đều `.gitignore` mục `.claude`**, nên không đưa vào repo được. Riêng
-  `GaRutinBE` có ngoại lệ `!.claude/agents/` nhưng thư mục đó rỗng — ngoại lệ vô
-  dụng, và không ai biết cho tới khi kiểm.
-
-Tên `manager-agent` nằm ngoài mọi luật ignore nên không bị chặn.
-
-## Nội dung
+## Cách sắp xếp: theo DỰ ÁN, không theo repo
 
 ```
-agents/quan-ly-tai-san.md   agent nhận bàn giao và trông coi một tài sản bất kỳ
-skills/quan-ly/SKILL.md     bản chạy trong cuộc trò chuyện, không tách phiên riêng
-CLAUDE-chung.md             bản sao chỉ dẫn chung của ~/my-project/CLAUDE.md
+chung/CLAUDE.md         vai trò, quyền hạn, bẫy dùng chung cả hai shop
+                        (bản sao lưu vết của ~/my-project/CLAUDE.md)
+
+garutin/CLAUDE.md       hiểu biết GaRutin — tự nạp vào cả 3 repo GaRutin
+garutin/QUAN-LY.md      hồ sơ đầy đủ: việc treo, số liệu, rủi ro
+
+17fishing/CLAUDE.md     hiểu biết 17fishing — tự nạp vào cả 3 repo 17fishing
+17fishing/QUAN-LY.md    hồ sơ đầy đủ
+
+agents/quan-ly-tai-san.md   agent nhận bàn giao và trông coi một tài sản
+skills/quan-ly/SKILL.md     bản chạy trong cuộc trò chuyện, không tách phiên
 ```
 
-`CLAUDE-chung.md` là **bản sao để lưu vết**, không phải bản đang chạy. Bản chạy
-là `~/my-project/CLAUDE.md`. Sửa bản chạy trước, rồi `./dong-bo.sh luu` để chép
-sang đây.
+**Một shop = một hồ sơ, ba repo cùng dùng.** Trước đây hiểu biết GaRutin nằm
+trong `GaRutinBE/CLAUDE.md`, nên phiên làm ở `GaRutinWeb` hay `GaRutinCMS`
+**không nạp gì cả** — và suốt ngày 14/09 việc chủ yếu làm đúng ở Web và CMS.
+Đó là lý do phải đo lại nhiều thứ lẽ ra đã biết.
 
-## Cài lên máy mới
+Cách chữa sai là chép hồ sơ sang cả ba repo. Không làm vậy: ba bản sẽ trôi dạt,
+y hệt `tracking.service.ts` hai shop. Chỉ giữ một bản, các repo trỏ vào.
+
+## Cách các repo nạp hồ sơ
+
+`CLAUDE.md` của mỗi repo chứa một dòng nhập:
+
+```
+@~/my-project/manager-ai/garutin/CLAUDE.md
+```
+
+Claude Code đọc dòng `@` này và **nhập thẳng nội dung tệp** vào phiên — một bản
+duy nhất nhưng nạp tự động ở cả ba repo.
+
+`QUAN-LY.md` cố ý **không** nhập: nó dài hàng trăm dòng, nhét vào mọi phiên là
+làm loãng. Repo chỉ ghi đường dẫn để mở khi cần.
+
+Phần còn lại của `CLAUDE.md` mỗi repo là **bẫy riêng của repo đó** — thứ chỉ
+đúng với chính nó, ví dụ `loading.tsx` không được nằm trong `/san-pham` của
+`17fishing-Web`. Loại đó ở lại repo, không đưa lên đây.
+
+## Luật chia: cái gì ở đâu
+
+Một điều chỉ được ghi **đúng một chỗ**. Hỏi "điều này còn đúng nếu đổi sang repo
+khác của cùng shop không?":
+
+| Còn đúng | Ví dụ | Ghi ở |
+|---|---|---|
+| ✔ cả ba repo | bán gì, quy mô thật, đọc bảng phân tích thế nào, việc treo | `manager-ai/<dự án>/` |
+| ✘ chỉ một repo | `loading.tsx` không được nằm trong `/san-pham`, `VITE_*` nhúng lúc build | `CLAUDE.md` của repo đó |
+| ✔ cả hai shop | quyền hạn, git, CloudFront 30 giây, bẫy tiếng Việt | `~/my-project/CLAUDE.md` |
+
+Ghi hai chỗ thì sáu tháng nữa hai chỗ nói khác nhau, và không ai biết chỗ nào
+đúng. Đã dọn một lượt ngày 14/09/2026: bốn cái bẫy đang nằm cả ở hồ sơ lẫn thẻ
+repo.
+
+Kiểm dây nối còn nguyên:
 
 ```bash
-./dong-bo.sh cai      # chép từ thư mục này sang ~/.claude
+./dong-bo.sh kiem
 ```
 
-## Sau khi sửa tài liệu
+## Đồng bộ với ~/.claude
 
-Sửa ở `~/.claude` rồi chép ngược về đây để commit:
+Agent và skill phải nằm ở `~/.claude` mới chạy được, nhưng `~/.claude` không
+được repo nào theo dõi — máy hỏng là mất. Nên giữ bản gốc ở đây và chép qua lại:
 
 ```bash
-./dong-bo.sh luu
+./dong-bo.sh cai      # repo → ~/.claude   (máy mới, hoặc lấy lại bản đã commit)
+./dong-bo.sh luu      # ~/.claude → repo   (sau khi sửa, để commit)
 git add -A && git commit -m "..." && git push
 ```
 
-**Chép chứ không symlink.** Symlink trong git chạy được nhưng hỏng lặng lẽ khi
-đổi máy hoặc đổi đường dẫn nhà, và lúc đó agent đơn giản là không nạp — không có
-thông báo nào. Chép thì thấy ngay tệp có hay không.
+**Chép chứ không symlink.** Symlink chạy được trong git nhưng hỏng lặng lẽ khi
+đổi máy hoặc đổi đường dẫn nhà — lúc đó agent đơn giản là không nạp, không có
+thông báo nào.
 
-## Cần làm một lần
+## Vì sao tên là `manager-ai`
 
-Thư mục này **chưa có remote**. Cần tạo repo trên GitHub rồi:
+Sáu repo đều `.gitignore` mục `.claude`, nên tài liệu để trong đó không đưa vào
+git được. `GaRutinBE` có ngoại lệ `!.claude/agents/` nhưng thư mục đó rỗng —
+ngoại lệ vô dụng mà không ai biết cho tới khi kiểm. Tên này nằm ngoài mọi luật
+ignore.
 
-```bash
-git remote add origin git@github-personal:<tài-khoản>/manager-agent.git
-git push -u origin main
-```
-
-Nhớ dùng alias `github-personal` — khoá SSH mặc định xác thực nhầm sang tài khoản
-công ty.
+Remote dùng alias `git@github-personal:...`. Khoá SSH mặc định xác thực nhầm
+sang tài khoản công ty.
