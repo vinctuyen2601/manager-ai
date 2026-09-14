@@ -630,7 +630,8 @@ Xếp theo **mức thiệt hại nếu bỏ mặc ba tháng**, không theo mức
 | 10 | **Quyết số phận 2 sản phẩm đã tắt** (một trong đó là món DUY NHẤT từng bán được, vẫn hút 8 khách/30 ngày) | bán lại được thì bật lên; không thì phải 301 sang món thay thế | **chỉ chủ shop trả lời được** |
 | 11 | **Xoá 460 đánh giá mồ côi** của 15 sản phẩm đã biến mất | càng để càng khó tách khỏi 25 đánh giá thật | chủ shop quyết — **việc không hoàn tác được, tôi không tự làm** |
 | ✅ 12 | **Sửa giá Phao Nano Ngọc Liên Sơn**: thẻ hiện 80.000đ, biến thể bán 70.000đ | khách thấy giá cao hơn giá thật | chủ shop quyết giá đúng là bao nhiêu |  **XONG 14/09 — chủ shop chốt 80.000đ, đã đồng bộ thẻ và phân loại**
-| 13 | **Ngưỡng freeship 100.000đ trên hàng nặng** — ghế 5,5 kg giá 1,55tr và ghế 4,4 kg giá 3,85tr đều **miễn ship**. Cước thật đi liên tỉnh cho 5 kg lớn hơn 15.000đ nhiều lần | ăn vào lãi đúng những món lãi nhất | **chỉ chủ shop biết cước thật là bao nhiêu** |
+| 13 | **Ngưỡng freeship 100.000đ trên hàng nặng** (14/09: đo lại thấy **7/11 sản phẩm mua MỘT món đã vượt ngưỡng**, và món rẻ nhất 55k thì mua 2 cái cũng vượt — tức ngưỡng này gần như không còn lọc gì) — ghế 5,5 kg giá 1,55tr và ghế 4,4 kg giá 3,85tr đều **miễn ship**. Cước thật đi liên tỉnh cho 5 kg lớn hơn 15.000đ nhiều lần | ăn vào lãi đúng những món lãi nhất | **chỉ chủ shop biết cước thật là bao nhiêu** |
+| 21 | **Gắn quà tặng cho sản phẩm đầu tiên** — luật "mua ≥ n cái A tặng B" đã chạy end-to-end từ 14/09 nhưng **0/11 sản phẩm dùng**. Cần một sản phẩm đánh dấu "là hàng tặng" rồi gắn vào một món bán chạy | tính năng nằm không, và chưa kiểm được trên dữ liệu thật | **chỉ chủ shop quyết tặng gì cho món nào** |
 | 14 | Dọn 4 vết chữ máy còn sót trong bài đã đăng (mục 5, ý 10) | khách đọc thấy "tối ưu SEO", "[MUA NGAY CHÍNH HÃNG]", "Gà Rutin" | chủ shop |
 | 15 | Sửa banner hero: tiêu đề là dấu cách, phụ đề thiếu chữ ("MÙA GẢI") | lỗi chính tả ngay trang chủ | chủ shop, sửa trong CMS |
 | 16 | Thay 5 ảnh bìa 404 (1 trong đó ở bài top-3 lưu lượng) | bài đông khách nhìn như bỏ hoang | chủ shop |
@@ -679,6 +680,57 @@ rủi ro cụ thể thì sẽ bị bỏ sau hai tuần.
 ---
 
 ## 11. Hiểu biết tích luỹ
+
+### 14/09/2026 · Hỏi định nghĩa trước khi vẽ giải pháp
+
+Chủ shop hỏi "có nên tạo block UI cho combo không". Tôi đi thẳng vào giải pháp:
+sửa ô nhập `comboItems`, tách khối "Bộ sản phẩm bao gồm"... Chủ shop cắt ngang:
+**"combo là gì? định nghĩa trước"**.
+
+Đo lại thì lộ ra thứ đáng lẽ phải thấy từ đầu: chữ "combo" đã được cài **ba
+lần, ba hình dạng khác nhau, cả ba đều rỗng** — danh mục `Combo` 0 sản phẩm,
+cờ `isCombo` 0/11, khối `combo` gõ tay 0 lượt dùng. Ba lần cài mà không lần nào
+có nội dung là dấu hiệu kinh điển của việc **chưa ai định nghĩa nó**.
+
+Và định nghĩa thật của chủ shop không phải thứ nào trong ba: combo là **luật
+khuyến mãi trên giỏ**, không phải một món hàng. Toàn bộ hướng tôi vẽ ra trước
+đó là sai — không sai chi tiết, mà sai chỗ đặt chân.
+
+Bài học: khi một khái niệm đã có nhiều bản cài trong mã mà bản nào cũng rỗng,
+**đừng chọn bản nào để sửa**. Hỏi định nghĩa.
+
+### 14/09/2026 · Thổi một chỗ chỉnh chữ thành lỗi trung thực
+
+Tôi báo đã tìm ra "một lỗi nói dối với khách": cờ `mienPhiDoQua` bật cả khi đơn
+đã tự vượt ngưỡng tiền, nên giao diện ghi "MIỄN PHÍ (theo ưu đãi)" trong khi
+ưu đãi không liên quan.
+
+Chủ shop bác ngay: *"đâu có nói dối, chính sách là trên 100k thì miễn phí mà"*.
+Kiểm lại phạm vi thì cờ đó **không chạm vào tiền ở bất kỳ đâu** — nó nối tới
+đúng một hậu tố trong một dòng chữ. Khách được miễn ship thật trong cả hai
+trường hợp. Không ai mất gì.
+
+Đã bỏ hẳn cả cờ lẫn hậu tố, và **sửa lại commit message** vì chúng đang mang
+đúng khẳng định sai đó — commit là trí nhớ của dự án, để nguyên thì sáu tháng
+nữa có người đọc và tin.
+
+Bài học: trước khi gọi một thứ là lỗi, **đo xem nó chạm tới đâu**. Một cờ chỉ
+nối tới một dòng chữ thì dù sai cũng là việc chỉnh chữ, không phải lỗi trung
+thực. Gọi to hơn thực tế làm loãng những lần báo động thật.
+
+### 14/09/2026 · Repo không có khung kiểm thử, nhưng đường tiền thì vẫn phải kiểm
+
+Luật quà tặng quyết định **cho hàng rời kho miễn phí** và **khách trả bao nhiêu
+tiền ship**. Repo `17fishing-BE` không có jest, không có spec nào.
+
+Dựng cả jest cho một tính năng thì nặng hơn thứ cần bảo vệ; để trống thì cũng
+sai. Cách đã chọn: tách phần quyết định thành hàm **thuần** (`chonQua`), rồi
+nặn một thể `OrdersService` và gán bốn phụ thuộc giả — không cần Postgres,
+không cần `.env`, chạy một giây.
+
+`npm run kiem-qua` · 35 phép kiểm. Hai phép từng báo hỏng: một là lỗi kỳ vọng
+của chính tôi (quên 2×85k = 170k đã vượt ngưỡng), một là chỗ chủ shop bác ở
+trên. Cách này dùng lại được cho mọi luật tiền về sau.
 
 ### 14/09/2026 — nối Search Console và dựng khuôn block
 

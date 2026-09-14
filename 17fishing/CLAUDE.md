@@ -121,7 +121,86 @@ GaRutin có. **Sửa một bên xong phải mở bên kia ra xem**, đừng gi�
 
 ---
 
-## 6. Bản đồ API quản trị
+## 6. Combo của shop này KHÔNG phải combo bạn nghĩ
+
+Chủ shop đã chốt định nghĩa ngày 14/09/2026. **Combo không phải một sản phẩm.**
+
+> Combo là **luật khuyến mãi trên giỏ**: mua **≥ n cái sản phẩm A** thì được
+> **tặng B (× m)**, có thể kèm **miễn phí ship**.
+
+Case "mua A tặng B" chỉ là `n = 1`, không phải luật thứ hai.
+
+### Đừng đi nhầm vào ba thứ cùng tên
+
+Đo ngày 14/09, cả ba đều **rỗng** — vì không cái nào là thứ chủ shop cần:
+
+```
+danh mục "Combo"                  0 sản phẩm
+cờ isCombo + comboItems           0 / 11 sản phẩm
+khối `combo` gõ tay ở registry    0 sản phẩm dùng
+```
+
+Ba cái đó đều coi combo là một **món hàng**. Ai vào sau mà thấy `isCombo` rồi
+tưởng "đã có sẵn, chỉ cần điền" là đi nhầm đường ngay từ bước một.
+
+### Luật nằm ở đâu
+
+Cột `gifts` (jsonb) của chính sản phẩm được mua:
+
+```ts
+{ productId, soLuong, muaToiThieu, freeship }
+```
+
+`muaToiThieu` trống rơi về 1. Vì là jsonb nên **thêm trường không cần migration**.
+
+Nơi luật chạy: `orders.service.tinhTien()` — cũng là nguồn sự thật duy nhất về
+tiền. Quà thành một dòng `OrderItem` giá 0đ, cờ `laQua`.
+
+### Ba chỗ phải giữ, đừng "dọn" đi
+
+- Dòng quà **luôn do máy chủ sinh**; mọi dòng `laQua` gửi lên bị vứt trước khi
+  tính. Nhận vào là ai cũng lấy được ghế 3,85tr giá 0đ
+- `dinhGia()` **bỏ qua** dòng quà — không bỏ thì nó kéo giá 0 về giá niêm yết
+  và khách bị thu tiền món được tặng
+- **Không nhân quà theo bội số**: mua 4 với luật "mua 2 tặng 1" vẫn tặng 1. Cho
+  hụt còn sửa được, cho thừa là mất hàng thật
+
+### Số đo về freeship — biết trước kẻo quảng cáo hão
+
+Ngưỡng miễn phí ship **100.000đ**, phí ship **15.000đ** phẳng.
+
+```
+7/11 sản phẩm  mua MỘT món đã vượt ngưỡng
+món rẻ nhất    55k  →  mua 2 cái = 110k, cũng vượt
+```
+
+Nghĩa là **với `n ≥ 2` thì cờ freeship của quà gần như luôn thừa** — ngưỡng đã
+tự miễn trước rồi. Nó chỉ có tác dụng thật ở case `n = 1` trên bốn món dưới
+100k: lưỡi 55k, phao 80k / 85k / 99k.
+
+Đừng dán nhãn "mua 2 tặng freeship" rồi tưởng đang cho khách thêm thứ gì.
+
+Giao diện **không** phân biệt miễn phí do quà hay do ngưỡng — chính sách là
+"trên ngưỡng thì miễn", khách chỉ cần biết phải trả bao nhiêu. Đã có một lượt
+tôi tách ra thành "(theo ưu đãi)" và chủ shop bác: không có gì sai để sửa.
+
+### Bộ kiểm
+
+```bash
+cd 17fishing-BE && npm run kiem-qua     # 35 phép, 1 giây, không cần Postgres
+```
+
+Repo không có khung kiểm thử nào. Bộ này nặn một thể `OrdersService` rồi gán
+bốn phụ thuộc giả. **Thêm luật quà mới thì thêm phép kiểm ở đó TRƯỚC.**
+
+### Chưa ai dùng
+
+Tính tới 14/09/2026 **chưa sản phẩm nào gắn quà**. Tính năng đã chạy nhưng chưa
+có nội dung — muốn kiểm thật thì phải gắn quà cho một sản phẩm trước.
+
+---
+
+## 7. Bản đồ API quản trị
 
 Sau `JwtAuthGuard`, tiền tố `https://api.17-fishing.com/api`.
 
@@ -141,7 +220,7 @@ phân tích  GET /admin/analytics/{visits,table,sources,funnel,hours,devices,
 
 ---
 
-## 7. Việc treo NGUY nhất
+## 8. Việc treo NGUY nhất
 
 `GET /customers/phone/:phone` **trả 200 không cần token** — ai trên Internet cũng
 tra được khách theo số điện thoại. Đã ghi trong hồ sơ từ 10/09, tới 14/09 vẫn
@@ -151,7 +230,7 @@ Phần còn lại xem `QUAN-LY.md` mục 8.
 
 ---
 
-## 8. Vận hành
+## 9. Vận hành
 
 ```
 deploy    push vào main → GitHub Actions → EC2
@@ -170,7 +249,7 @@ bên CMS. Lệch hai con số đó là người dùng bị từ chối sau khi �
 
 ---
 
-## 9. Bẫy theo repo
+## 10. Bẫy theo repo
 
 Ba repo của shop dùng chung hồ sơ này, nhưng mỗi cái có bẫy riêng. Gom cả về đây
 chứ không rải vào `CLAUDE.md` từng repo: rải ra là sáu chỗ phải nhớ cập nhật, và
@@ -186,7 +265,7 @@ hỏng trên production vì không có môi trường thử.
 URL, không phải `sc-domain:`. Khai sai thì Google báo *thiếu quyền*, và ta đi
 tìm nhầm sang phía quyền tài khoản dịch vụ.
 
-**`GET /customers/phone/:phone` đang HỞ** — trả 200 không cần token. Xem mục 7.
+**`GET /customers/phone/:phone` đang HỞ** — trả 200 không cần token. Xem mục 8.
 
 ### 17fishing-Web
 
