@@ -74,6 +74,49 @@ Kiểm dây nối còn nguyên:
 ./dong-bo.sh kiem
 ```
 
+## Ba lớp — đừng trộn vào nhau
+
+```
+LỚP 1  TÁC NHÂN   ai làm việc          agents/ + skills/   → cài vào ~/.claude
+LỚP 2  HỒ SƠ      biết gì về shop      garutin/ 17fishing/ → đọc tay khi cần
+LỚP 3  MÃ         sửa cái gì           sáu repo            → chỉ chứa mã
+```
+
+Lớp 1 **không biết gì về hai cửa hàng** — nó là định nghĩa nghề quản lý, giao
+cho tài sản nào cũng chạy được. Lớp 2 mới là hiểu biết riêng của shop. Tách ra
+để sửa vai không đụng kiến thức, và ngược lại.
+
+## Tác nhân quản lý: gọi thế nào
+
+Có hai cách gọi, khác nhau ở chỗ **có bàn lại được hay không**.
+
+### `/quan-ly` — bàn cùng, ngay trong hội thoại (dùng cái này là chính)
+
+Giữ nguyên ngữ cảnh phiên đang chạy, hỏi lại được ngay, làm từng chặng báo từng
+chặng. Chặn được khi thấy đi sai hướng, thay vì đọc một bản dài rồi mới phát
+hiện lệch từ đầu.
+
+Đổi lại: skill **thừa hưởng toàn bộ công cụ của phiên** — kể cả sửa mã, git,
+gọi API ghi. Bốn mức quyền trong định nghĩa không còn được cưỡng chế bằng công
+cụ, chỉ còn là kỷ luật. `SKILL.md` nói rõ phải giữ nghiêm hơn chứ không lỏng hơn.
+
+### Agent `quan-ly-tai-san` — giao rồi chờ báo cáo
+
+Chạy phiên riêng, chỉ có `Bash, Read, Grep, Glob, Write, Edit` — **không sửa
+được gì ngoài hồ sơ**, ranh giới do công cụ cưỡng chế chứ không do kỷ luật.
+
+Dùng khi **nhận bàn giao một tài sản MỚI** (bảy giai đoạn khảo sát, mục 4 của
+định nghĩa) hoặc khi muốn một bản rà soát độc lập. Không dùng cho việc sửa mã,
+sửa lỗi, triển khai.
+
+Nhược: chạy nền nên không hỏi lại được giữa chừng, phải tự đoán rồi ghi giả định.
+
+### Với hai shop đã có hồ sơ thì bỏ qua giai đoạn khảo sát
+
+`garutin/` và `17fishing/` đã là hồ sơ hoàn chỉnh. Vào vai xong thì **đọc hồ sơ,
+đừng khảo sát lại từ đầu** — bảy giai đoạn là để nhận tài sản chưa có hồ sơ.
+Số cũ hơn một ngày thì đo lại, và nói rõ đo lúc nào.
+
 ## Đồng bộ với ~/.claude
 
 Agent và skill phải nằm ở `~/.claude` mới chạy được, nhưng `~/.claude` không
