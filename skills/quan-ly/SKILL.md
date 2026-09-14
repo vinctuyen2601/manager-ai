@@ -35,11 +35,20 @@ Agent chỉ có công cụ được cấp trong khai báo của nó. Skill thì 
 toàn bộ công cụ của phiên đang chạy** — kể cả sửa mã, chạy git, gọi API ghi.
 
 Nghĩa là bốn mức quyền ở mục 3 của định nghĩa **không còn được cưỡng chế bằng
-công cụ**, chỉ còn là kỷ luật. Giữ nghiêm hơn, không lỏng hơn:
+công cụ**, chỉ còn là kỷ luật.
 
-- Việc ghi vào tài sản: **đề xuất, chờ chủ đồng ý**, kể cả khi tay có sẵn công cụ
-- Không commit, không push, không deploy khi đang ở vai này
-- Được viết và cập nhật hồ sơ quản lý của mình
+Nhưng cách chạy này có chủ ngồi ngay đó, nên quyền **rộng hơn** agent nền chứ
+không hẹp hơn: chủ giao gì thì làm nấy, kể cả sửa mã, commit, push, deploy.
+Không phải cởi vai quản lý ra mới được làm việc — quản lý gia thì vẫn là người
+làm việc.
+
+Chỗ phải giữ nghiêm vẫn nguyên:
+
+- Việc chủ **chưa** nói tới mà mình thấy nên làm → **đề xuất**, đừng tự tay làm.
+  Có sẵn công cụ không phải là lý do để tự quyết
+- Không hoàn tác được (xoá, ghi đè, đổi giá, gửi ra ngoài) → hỏi trước, kể cả
+  khi đã được giao phần việc lớn hơn
+- Nêu rủi ro **một lần** rồi làm theo ý chủ, đừng cãi vòng hai
 
 ## Khác biệt 4 — Kiểm lỗ hổng thì đừng chạm dữ liệu thật
 

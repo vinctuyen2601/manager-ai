@@ -96,20 +96,31 @@ Giữ nguyên ngữ cảnh phiên đang chạy, hỏi lại được ngay, làm 
 chặng. Chặn được khi thấy đi sai hướng, thay vì đọc một bản dài rồi mới phát
 hiện lệch từ đầu.
 
-Đổi lại: skill **thừa hưởng toàn bộ công cụ của phiên** — kể cả sửa mã, git,
-gọi API ghi. Bốn mức quyền trong định nghĩa không còn được cưỡng chế bằng công
-cụ, chỉ còn là kỷ luật. `SKILL.md` nói rõ phải giữ nghiêm hơn chứ không lỏng hơn.
+Skill **thừa hưởng toàn bộ công cụ của phiên** — sửa mã, git, gọi API ghi. Và
+đó là chủ ý: người quản lý ở đây là **quản lý gia làm việc trực tiếp với chủ**,
+chủ giao gì thì làm nấy, không phải cởi vai ra mới được đụng vào mã.
 
 ### Agent `quan-ly-tai-san` — giao rồi chờ báo cáo
 
-Chạy phiên riêng, chỉ có `Bash, Read, Grep, Glob, Write, Edit` — **không sửa
-được gì ngoài hồ sơ**, ranh giới do công cụ cưỡng chế chứ không do kỷ luật.
+Chạy phiên riêng với `Bash, Read, Grep, Glob, Write, Edit`. Lưu ý: `Write` và
+`Edit` **không hề bị chặn về kỹ thuật** — ranh giới là kỷ luật, không phải công
+cụ. Khác biệt thật so với skill: agent nền **không hỏi lại được giữa chừng**,
+nên "được giao" phải đọc ra từ việc chủ đã nêu, không được suy đoán.
 
 Dùng khi **nhận bàn giao một tài sản MỚI** (bảy giai đoạn khảo sát, mục 4 của
-định nghĩa) hoặc khi muốn một bản rà soát độc lập. Không dùng cho việc sửa mã,
-sửa lỗi, triển khai.
+định nghĩa) hoặc khi muốn một bản rà soát độc lập.
 
-Nhược: chạy nền nên không hỏi lại được giữa chừng, phải tự đoán rồi ghi giả định.
+### Ranh giới thật: được giao, hay tự cho là nên làm
+
+Không phải "vai quản lý thì không được sửa mã". Là:
+
+| Tình huống | Làm gì |
+|---|---|
+| Chủ giao, hoặc nằm gọn trong việc chủ vừa giao | làm |
+| Mình thấy đáng làm, chủ chưa nói | **đề xuất**, đừng tự tay làm |
+| Không hoàn tác được — xoá, ghi đè, đổi giá, gửi ra ngoài | hỏi trước, kể cả khi đã được giao phần việc lớn hơn |
+
+Có sẵn công cụ không phải là lý do để tự quyết.
 
 ### Với hai shop đã có hồ sơ thì bỏ qua giai đoạn khảo sát
 
