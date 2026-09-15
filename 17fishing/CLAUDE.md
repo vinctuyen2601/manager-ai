@@ -239,6 +239,46 @@ Luật: **≤48 ký tự, bỏ tiền tố rỗng, nhắc lại đúng câu ngư
 riêng; hero slider giữ mọi banner trong DOM nên mỗi banner một `<h1>`. Sửa ở
 tầng dựng: `haCapH1()` trong `lib/seo`, và `laH1` trong `HeroBanner`.
 
+### Vì sao mọi trang kẹt hạng 7–9 — KHÔNG phải nội dung mỏng
+
+Đo 15/09/2026: trung bình **1.120 từ/bài**, trang mạnh nhất 1.600–2.100 từ.
+Nội dung không mỏng. Nguyên nhân nằm ở **phân bố liên kết nội bộ**:
+
+```
+417 liên kết bài↔bài
+  4 bài ôm 371 cái = 89%
+ 90/104 bài KHÔNG bài nào trỏ tới
+ bốn trang NHIỀU LƯU LƯỢNG NHẤT nhận ĐÚNG 0 liên kết
+ bài ôm nhiều link nhất có 0 hiển thị/90 ngày
+```
+
+**Gốc rễ ở DỮ LIỆU, không phải thuật toán.** 98/104 bài mang tag `câu cá`,
+92/104 mang `kỹ thuật`, 65 tag còn lại chỉ xuất hiện 1–2 lần, **104/104 bài
+không có danh mục**. Phép cân theo độ hiếm triệt tiêu hai tag phổ thông đúng
+như thiết kế, nhưng chúng vẫn cho điểm *dương rất nhỏ* → gần như mọi bài thành
+"ứng viên có điểm" → xếp hạng thật sự do **tiêu chí phá hoà: ngày đăng** quyết
+định → bốn bài mới nhất hiện dưới gần như mọi bài.
+
+Đã sửa `chonBaiLienQuan()`: cộng thẳng điểm khớp **từ trong tiêu đề** vào
+`chamDiem`. Kết quả trên bản chạy thật: mồ côi **90 → 3**, tập trung **89% →
+9%**, nhiều nhất **93 → 10** link.
+
+**Ba cách đã thử và THẤT BẠI — đừng đi lại:**
+
+1. Làm tầng hai chạy sau khi tag cạn → vô dụng, **tag không bao giờ cạn**
+2. Cân theo độ hiếm từ tiêu đề → `chọn` ở 24 bài, `phao` 17, `hướng`/`dẫn` 13,
+   `đài` 10. Từ đệm và từ chuyên môn **cùng dải tần suất**, không ngưỡng nào
+   tách được
+3. Bình phương độ hiếm → sáu bảy chữ đệm cộng dồn vẫn đè bẹp một từ chuyên môn
+
+Phải dùng danh sách chữ đệm, theo luật chặt: **chỉ nhận từ không thể là thuật
+ngữ câu cá**. Nên KHÔNG có `cần`, `đài`, `đơn`, `lửng`, `đáy`, `tay`, `lục`,
+`nổi`, `chìm`. Và **không bỏ dấu** khi tách từ tiêu đề — `mồi` với `mới` đều
+thành `moi`.
+
+Việc gốc vẫn còn: **gắn tag chuyên môn và danh mục cho 104 bài**. Sửa thuật
+toán chỉ là chữa triệu chứng; có tag tử tế thì tầng tag mới làm đúng việc của nó.
+
 ### Chỗ đáng giá nhất KHÔNG nằm trong mã
 
 ```
