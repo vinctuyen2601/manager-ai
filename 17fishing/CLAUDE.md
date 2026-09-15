@@ -200,7 +200,71 @@ có nội dung — muốn kiểm thật thì phải gắn quà cho một sản p
 
 ---
 
-## 7. Bản đồ API quản trị
+## 7. SEO — số đo nền và bốn thứ đã sửa
+
+Đo Search Console 90 ngày, ngày 14–15/09/2026:
+
+```
+                trang   hiển thị   nhấp    CTR
+blog              77      8.160    106    1,3%
+sản phẩm           8        780     69    8,8%   <- gấp 6,8 lần blog
+khác              13        268     20    7,5%
+                         ───────  ─────
+                            9.208    195   2,12%
+```
+
+**Mọi trang kẹt hạng 7–9**, không có gì trong top 3. Vấn đề của tài sản này
+không phải thiếu lưu lượng — mà lưu lượng đang rò.
+
+### Bốn thứ đã sửa
+
+**Hai bài 404 mà vẫn xếp hạng.** 988 hiển thị, 14 nhấp/90 ngày đổ vào hư không.
+Cả hai bài còn sống, chỉ bị đổi slug mà quên chuyển hướng.
+→ **Đổi slug thì PHẢI thêm chuyển hướng vào `next.config.ts` ngay lúc đổi.**
+Sitemap tự sinh từ slug mới nên nhìn vào đó không thấy gì bất thường. Chỉ
+Search Console mới thấy.
+
+**Đuôi tiêu đề ăn hết ngân sách.** `" | 17Fishing - Dụng Cụ Câu Cá Chính Hãng"`
+dài 40 ký tự, Google chỉ hiện ~60, tiêu đề bài trung bình đã 50 → 100/104 bài
+bị cắt cụt. Thêm `BRAND_TITLE_SUFFIX` = `"17Fishing"` chỉ cho thẻ title.
+**Đừng đụng `BRAND_TAGLINE`** — nó còn dùng cho ảnh Open Graph và dữ liệu có
+cấu trúc.
+
+**Tiêu đề không nhắc lại câu hỏi.** 29 từ khoá hạng 6–9 mà **0 nhấp**, toàn
+dạng "X là gì". Google xếp hạng vì nội dung có, nhưng đoạn hiện ra không hứa
+trả lời câu hỏi. Đã viết lại `seoTitle` cho 22 bài mạnh nhất + 7 sản phẩm.
+Luật: **≤48 ký tự, bỏ tiền tố rỗng, nhắc lại đúng câu người ta gõ.**
+
+**Hai `<h1>` trên trang, ba trên trang chủ.** Nội dung soạn tay mang theo `<h1>`
+riêng; hero slider giữ mọi banner trong DOM nên mỗi banner một `<h1>`. Sửa ở
+tầng dựng: `haCapH1()` trong `lib/seo`, và `laH1` trong `HeroBanner`.
+
+### Chỗ đáng giá nhất KHÔNG nằm trong mã
+
+```
+CÓ lưu lượng, KHÔNG đánh giá          CÓ đánh giá, KHÔNG lưu lượng
+  Ghế Zhongzhou 274 ht · 30 nhấp        4/6 món có sao đang ở 0 hiển thị
+  Ghế AK Power  139 ht · 15 nhấp
+  Cần Strong Bull 112 ht · 12 nhấp
+```
+
+541 hiển thị và 58 nhấp/90 ngày đang hiện lên Google **không sao nào**, trong
+khi 24 đánh giá hiện có nằm hết trên nhóm phao rẻ không ai tìm. Mã đã đúng —
+`aggregateRating` phát tự động khi `reviewCount > 0`. Thiếu là thiếu **đánh giá
+thật cho ba món đang có hạng**, và chỉ chủ shop làm được.
+
+### Ba bẫy khi đo SEO ở đây
+
+1. **Đừng cắt slug rồi đem đi tra.** Tôi cắt cụt URL lúc in bảng rồi lấy chính
+   chuỗi đó fetch → báo 404 giả.
+2. **Next phục vụ bản cũ rồi mới làm mới ngầm.** Sửa dữ liệu xong, lần gọi ĐẦU
+   vẫn trả bản cũ. Phải gọi một vòng để kích hoạt, chờ, rồi mới đo.
+3. **So khớp đường dẫn phải chặn ở dấu nháy.** `/blog/ky-thuat-cau-ca` khớp
+   chuỗi con vào `/blog/ky-thuat-cau-ca-me-...` → báo 5 bài, thực tế 1.
+
+---
+
+## 8. Bản đồ API quản trị
 
 Sau `JwtAuthGuard`, tiền tố `https://api.17-fishing.com/api`.
 
@@ -220,7 +284,7 @@ phân tích  GET /admin/analytics/{visits,table,sources,funnel,hours,devices,
 
 ---
 
-## 8. Việc treo NGUY nhất
+## 9. Việc treo NGUY nhất
 
 `GET /customers/phone/:phone` **trả 200 không cần token** — ai trên Internet cũng
 tra được khách theo số điện thoại. Đã ghi trong hồ sơ từ 10/09, tới 14/09 vẫn
@@ -230,7 +294,7 @@ Phần còn lại xem `QUAN-LY.md` mục 8.
 
 ---
 
-## 9. Vận hành
+## 10. Vận hành
 
 ```
 deploy    push vào main → GitHub Actions → EC2
@@ -249,7 +313,7 @@ bên CMS. Lệch hai con số đó là người dùng bị từ chối sau khi �
 
 ---
 
-## 10. Bẫy theo repo
+## 11. Bẫy theo repo
 
 Ba repo của shop dùng chung hồ sơ này, nhưng mỗi cái có bẫy riêng. Gom cả về đây
 chứ không rải vào `CLAUDE.md` từng repo: rải ra là sáu chỗ phải nhớ cập nhật, và
@@ -265,7 +329,7 @@ hỏng trên production vì không có môi trường thử.
 URL, không phải `sc-domain:`. Khai sai thì Google báo *thiếu quyền*, và ta đi
 tìm nhầm sang phía quyền tài khoản dịch vụ.
 
-**`GET /customers/phone/:phone` đang HỞ** — trả 200 không cần token. Xem mục 8.
+**`GET /customers/phone/:phone` đang HỞ** — trả 200 không cần token. Xem mục 9.
 
 ### 17fishing-Web
 
