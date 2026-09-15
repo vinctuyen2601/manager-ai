@@ -573,6 +573,58 @@ từ API chứ không gõ cứng slug, và xuất hiện trên cả 90 trang.
 **Hệ quả về sau:** khi thêm trang mới, kiểm H1 có nhắm cụm người ta thật sự gõ
 không. Thẻ `<title>` đúng không cứu được H1 sai.
 
+### 15/09/2026 · Site gần như không được lập chỉ mục — mọi kế hoạch nội dung phải xếp sau
+
+**Điều đã biết** (URL Inspection API, quét 88 URL chính + báo cáo Search Console):
+
+| | kết quả |
+|---|---|
+| URL **có trong chỉ mục** | **10 / 88** |
+| Google **từng thu thập** | **13 / 88** |
+| Đã phát hiện – chưa lập chỉ mục | 56 trong phép quét · **98** theo GSC |
+| Google chưa biết tới URL | 19 |
+| Đã thu thập – chưa lập chỉ mục | 2 trong phép quét · 7 theo GSC |
+
+**Con số quyết định là dòng cuối.** "Đã thu thập – chưa lập chỉ mục" chỉ có 7 —
+tức Google **hầu như chưa hề đọc rồi chê** nội dung của mình. Nó chưa đọc. 75
+trang chưa bao giờ được thu thập. Đây là vấn đề **ngân sách thu thập**, không
+phải vấn đề chất lượng bài.
+
+**Đã loại trừ, đừng kiểm lại:**
+- Không URL nào trong sitemap trả 404 (dò cả 90)
+- `lastmod` đúng ngày sửa thật, trải từ 04/2026 tới nay
+- Sitemap: Google **tải ngày 14/09/2026**, 0 lỗi, 0 cảnh báo, 93 URL. Nó thấy
+  mọi trang và chủ động không đi đọc.
+- robots.txt cho phép, SSR đầy đủ, canonical đúng, không thẻ noindex
+
+**Hệ quả bắt buộc nhớ:** **viết thêm bài chỉ tạo thêm URL không được đọc.** Mọi
+đề xuất nội dung — đuôi dài, chùm mới, trang hub — đều vô nghĩa cho tới khi tỉ
+lệ lập chỉ mục khá lên. Thứ tự đúng: vào chỉ mục trước, tối ưu sau.
+
+Việc có tác dụng, xếp theo tốc độ: (1) bấm "Yêu cầu lập chỉ mục" trong Search
+Console, ~10 URL/ngày — thứ duy nhất cho kết quả trong vài ngày, và Google
+không mở API cho trang thường nên **chỉ chủ shop làm được**; (2) cắt bớt URL
+thay vì thêm — 66 bài mà chỉ 5 được lập chỉ mục; (3) liên kết nội bộ; (4)
+backlink, sửa gốc nhưng chậm nhất.
+
+### 15/09/2026 · 42% số nhấp đang treo trên URL www giữa lúc chuyển hướng
+
+**Điều đã biết:** Search Console ghi nhận **6 trang / 2.866 hiển thị / 133 nhấp
+trên `www.garutin.com`** — 42% tổng số nhấp của site. Phiên trước đã đặt chuyển
+hướng 308 từ www sang không-www (đúng, vì đó là lỗi trùng máy chủ), nhưng bản
+không-www của chính những trang đó **chưa được lập chỉ mục**.
+
+Bốn trang đang treo: `mua-ga-rutin-tp-hcm` (1.603 ht), `phan-biet-ga-rutin-khoe-manh`
+(716), `may-ap-trung-ga-rutin` (532), `ga-rutin-mua-mua` (8).
+
+**Vì sao nguy:** trên site bình thường Google chuyển giao sau vài tuần. Trên
+site chỉ được thu thập 13/88 URL thì không có gì bảo đảm thời gian đó, và trong
+lúc chờ thì lưu lượng có thể mất.
+
+**Hệ quả về sau:** hợp nhất máy chủ trên site có tỉ lệ lập chỉ mục thấp thì
+phải **yêu cầu lập chỉ mục thủ công cho các trang đích ngay sau khi bật chuyển
+hướng**, đừng chờ Google tự làm.
+
 ### 10/09/2026 · Về cách chủ shop làm việc
 **Điều đã biết:** Thích nói thẳng, kéo lại ngay khi tôi lan man sang kiến trúc
 thay vì trả lời câu được hỏi. Ưu tiên đã nêu rõ: **sản phẩm + review > bài viết
