@@ -416,6 +416,61 @@ duyệt.
 **Hệ quả về sau:** sản phẩm nhân bản từ sản phẩm khác thì phải rà **toàn bộ**
 mô tả, không chỉ tiêu đề và bảng thông số.
 
+### 15/09/2026 · serper.dev không trả "Mọi người cũng hỏi" và "Tìm kiếm liên quan" — đã gỡ
+
+**Điều đã biết:** Chức năng khám phá từ khoá thiết kế ba nguồn: Google
+Autocomplete (miễn phí) cộng hai khối mua qua serper.dev. Hai khối mua tiền
+**luôn trả về mảng rỗng**.
+
+**Biết bằng cách:** gọi thẳng `https://google.serper.dev/search` từ chính máy
+chủ, bốn truy vấn:
+
+| truy vấn | organic | peopleAlsoAsk | relatedSearches |
+|---|---|---|---|
+| gà rutin | 6 | 0 | 0 |
+| nuôi gà cảnh | — | 0 | 0 |
+| câu cá | — | 0 | 0 |
+| cách nuôi gà | — | 0 | 0 |
+
+Phản hồi chỉ có ba trường cấp một: `searchParameters`, `organic`, `credits`.
+"Câu cá" là truy vấn rộng, chắc chắn có khối "Tìm kiếm liên quan" khi tìm bằng
+trình duyệt — nên đây không phải chuyện ngách hẹp. Tài liệu serper ghi hai
+trường đó chỉ xuất hiện "khi có", và đã có người dùng khác báo chúng luôn rỗng.
+
+**Đã loại trừ trước khi kết luận** (mất khá nhiều vòng, ghi lại để khỏi lặp):
+khoá đúng và còn hạn mức (40 ký tự, gọi thẳng ra HTTP 200); mã nguồn đúng bản
+mới trên máy chủ; bản biên dịch trong `dist` có thay đổi; tiến trình đã khởi
+động lại. Từng nghi `pm2 restart` không nạp `.env` mới — **sai**: app dùng
+`ConfigModule.forRoot()`, tức dotenv tự đọc tệp mỗi lần tiến trình khởi động,
+nên `--update-env` là thừa.
+
+**Đã làm:** gỡ hai kênh `cau-hoi` và `lien-quan`. Giữ lại thì mỗi lần gọi tốn
+một credit để nhận về hai con số 0.
+
+**Hệ quả về sau:** đừng thử lại. Autocomplete là nguồn chính và vẫn chạy tốt,
+không cần khoá nào.
+
+### 15/09/2026 · Cùng lời gọi đó lại trả lời được câu đắt hơn nhiều
+
+**Điều đã biết:** `organic` luôn đầy đủ. Đó chính là thứ Search Console không
+bao giờ cho biết: mình đứng hạng 9 **giữa những ai**.
+
+Hai trang một khác nhau cho cùng một con số hạng, mà dẫn tới hai kế hoạch
+ngược nhau:
+
+- toàn Shopee, TikTok, Facebook → Google xếp theo **loại trang**, không theo
+  chất lượng bài. Viết thêm nội dung không kéo được hạng. Việc đúng là bỏ từ
+  khoá đó, dồn sang truy vấn có ý định cụ thể hơn.
+- toàn blog và shop nhỏ → với tới được, đáng đầu tư.
+
+**Đã làm:** `POST keywords/doi-thu` (tối đa 10 từ mỗi lượt vì trần 30 giây của
+CloudFront) và `GET keywords/hang-dau`. Không lưu CSDL, không migration — SERP
+hết hạn nhanh, lưu lại chỉ tạo ra bảng số cũ mà ai đọc cũng tưởng là hiện tại.
+28 phép kiểm cho phần thuần ở `kiem/doi-thu.ts`.
+
+**Hệ quả về sau:** trước khi đề xuất đầu tư vào bất kỳ từ khoá nào, đọc trang
+một của nó đã. Chi phí một credit trên hạn mức 2.500.
+
 ### 10/09/2026 · Về cách chủ shop làm việc
 **Điều đã biết:** Thích nói thẳng, kéo lại ngay khi tôi lan man sang kiến trúc
 thay vì trả lời câu được hỏi. Ưu tiên đã nêu rõ: **sản phẩm + review > bài viết
