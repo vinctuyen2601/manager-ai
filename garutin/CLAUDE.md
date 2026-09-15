@@ -174,6 +174,50 @@ kiếm. Nhưng ý đúng thì học: nút mua nằm ngay trong bài hướng d�
 Trang họ gửi lần đầu (`/page/1/?s=gà+rutin`) **không thể lên top**: khai
 `noindex,follow` và `robots.txt` chặn `/?s=*`. Đó là trang tìm kiếm nội bộ.
 
+### 🔴 www và không-www từng là HAI SITE — đã vá 15/09
+
+Đây là thứ nặng nhất tìm được, và nó **chỉ lộ ra khi có dữ liệu theo TRANG**
+(`gsc-trang`, vừa ghép sang GaRutinBE cùng ngày — trước đó chiều này không có).
+
+```
+www.garutin.com   6 trang ·  2.866 hiển thị · 133 nhấp  = 20% tổng
+garutin.com      16 trang · 11.320 hiển thị · 186 nhấp
+```
+
+`www` trả **200, không chuyển hướng** → Google xếp hạng nó như site riêng, hai
+bản sao chia nhau tín hiệu nên không bản nào đủ mạnh.
+
+**Thẻ canonical ĐÃ khai đúng ở cả hai bản — và Google vẫn bỏ qua.** Canonical
+là gợi ý, không phải mệnh lệnh. Chỉ 301/308 mới ép được. Nhớ điều này: thấy
+canonical đúng rồi tưởng yên là sai.
+
+Đã thêm chuyển hướng trong `next.config.ts`, đã dò thấy 308 trên bản chạy thật.
+17fishing không dính — `www.17-fishing.com` không phân giải.
+
+### ⚠ 22 trang cửa ngõ "Mua Gà Rutin [quận]" — chưa xử
+
+Củ Chi, Hóc Môn, Bình Chánh, Nhà Bè, Thủ Đức, Bình Tân, Tân Bình, Gò Vấp,
+Bình Thạnh, Hà Nội, Quận 1/3/5/6/7/8/9/11/12… gần như giống hệt nhau.
+
+Đây là **trang cửa ngõ**, Google có chính sách phạt rõ ràng. Và đo ra chúng
+**không mang về gì**:
+
+```
+chỉ 4/22 trang có dữ liệu
+mua-ga-rutin-tp-hcm      1.603 hiển thị · 120 nhấp   <- gần như toàn bộ
+mua-ga-rutin-tan-binh       53 hiển thị ·   3 nhấp
+mua-ga-rutin-quan-3          4 hiển thị ·   0 nhấp
+mua-ga-rutin-thu-duc         1 hiển thị ·   0 nhấp
+```
+
+18 trang còn lại: **0 hiển thị**, chỉ pha loãng.
+
+Các chùm trùng khác: **3 bài "gà rutin không đẻ"** (chùm đang 0 hiển thị — dấu
+hiệu Google không biết chọn bài nào), **2 bài "bao lâu thì đẻ trứng"**, **6 bài
+về chuồng**.
+
+Gộp/xoá bài là **không hoàn tác được** — phải chủ shop quyết.
+
 ### CHÙM "CHUỒNG" — trận đánh trực tiếp, và một lỗi từ vựng
 
 ```
@@ -181,7 +225,9 @@ Trang họ gửi lần đầu (`/page/1/?s=gà+rutin`) **không thể lên top**
 "lồng"     82 hiển thị ·  2 từ khoá      → chuồng gấp 10,2 lần
 ```
 
-**Hai sản phẩm lồng của GaRutin đều đặt tên là "LỒNG":**
+**ĐÃ SỬA 15/09** — đổi tên hai sản phẩm sang "Chuồng nuôi gà rutin", giữ
+nguyên slug (URL đang có thứ hạng, đổi slug là mất hạng và phải thêm chuyển
+hướng — đó là quyết định riêng). Trước khi sửa:
 
 ```
 /san-pham/long-ga-rutin-cao-cap-size-lon   Lồng gà rutin cao cấp size lớn

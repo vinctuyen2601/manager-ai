@@ -262,6 +262,10 @@ xem có ai tìm chúng không.
 | Xoá 3 đơn test khỏi dữ liệu | chủ shop quyết |
 | 17fishing chưa nối Search Console | |
 | Mã chết: `crawl-to-drafts` (không có lối vào), trang `/keywords-cu` | |
+| 🔴 | **Gộp 22 trang cửa ngõ "Mua Gà Rutin [quận]"** — chỉ 4/22 có dữ liệu, 18 trang 0 hiển thị. Google có chính sách phạt trang cửa ngõ | pha loãng tín hiệu, rủi ro bị đánh giá thấp cả site | **chủ shop** — xoá nội dung không hoàn tác được |
+| 🟠 | **Gộp 3 bài "gà rutin không đẻ" + 2 bài "bao lâu đẻ trứng"** — chùm "không đẻ" đang 0 hiển thị | Google không biết chọn bài nào nên không chọn bài nào | chủ shop |
+| 🟠 | **Gom 6 bài về chuồng thành cụm có trang trụ** — chùm 919 hiển thị, trận trực tiếp với lolipet | 6 bài cùng hạng 6–10, chia phiếu nhau | chủ shop duyệt bài nào làm trụ |
+| 🟠 | **Xoay token admin GaRutin** — đã dán vào chat 15/09, hết hạn 04/10 | toàn quyền gian hàng cho ai đọc được đoạn chat | chủ shop |
 
 ---
 
