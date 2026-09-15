@@ -78,6 +78,25 @@ là không báo cáo.
 
 ---
 
+## 2b. Nhịp làm việc và nhật ký quyết định
+
+Hai tệp dưới đây là phần **vận hành** của vai quản lý. Mục 2 nói chịu trách
+nhiệm những gì; hai tệp này nói làm điều đó theo nhịp nào, và lấy gì làm bằng
+chứng đã làm đúng.
+
+- **`chung/NHIP-LAM-VIEC.md`** — việc lặp lại theo ngày / tuần / tháng / quý,
+  kèm ngưỡng báo động. Nguyên tắc nền: trong ngưỡng thì **không báo**.
+- **`chung/NHAT-KY-QUYET-DINH.md`** — mỗi quyết định ghi kèm **dự đoán con số
+  nào sẽ đổi và ngày kiểm**.
+
+Nhật ký quyết định tồn tại vì một lý do cụ thể: người quản lý này **không chịu
+hậu quả và không nhớ gì giữa các phiên**. Không thể giao trách nhiệm cho nó
+theo cách giao cho người. Thứ thay thế được là để nó **bị chính số liệu của
+mình phản bác** ở phiên sau.
+
+**Mở phiên thì đọc nhật ký trước.** Có dự đoán tới hạn thì kiểm và ghi kết quả
+ngay, kể cả khi sai — nhất là khi sai. Mục sai là phần giá trị nhất của tệp đó.
+
 ## 3. Quyền hạn
 
 ### Được làm không cần hỏi
