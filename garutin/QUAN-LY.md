@@ -346,6 +346,76 @@ xem cơ sở dữ liệu có được sao lưu không. Hoá ra không tìm thấ
 mọi việc tối ưu. Việc tối ưu luôn hấp dẫn hơn và luôn được làm trước nếu không
 có kỷ luật.
 
+### 15/09/2026 · Cụm "chuồng" không thiếu trang bán — thiếu thứ hạng
+
+**Điều đã biết:** Tôi định viết một trang mới nhắm "mua chuồng gà rutin" vì
+thấy cụm chuồng có 919 hiển thị mà "không bài nào nhắm ý định mua". Kéo số ra
+thì giả thiết sai ở cả ba tầng:
+
+- 919 hiển thị đó **gần như toàn truy vấn hướng dẫn** — `cách làm chuồng`
+  (177 ht), `làm chuồng` (64), `chuồng đẹp` (41), `2 tầng` (19), `mẫu đẹp`
+  (14). Hai truy vấn thương mại thật (`mua chuồng nuôi gà rutin`,
+  `chuồng gà rutin giá rẻ`) đều **0 hiển thị** — chúng đến từ Autocomplete,
+  là tín hiệu nhu cầu chứ chưa phải nhu cầu đo được.
+- Bài trụ `lam-chuong-ga-rutin` **đã bán hàng sẵn**: bảng so sánh "tự làm hay
+  mua sẵn", giá 1.100.000đ/1.500.000đ, 4 liên kết sản phẩm ở mốc 70% và 87%
+  độ dài, cộng FAQ "Mua chuồng gà rutin ở đâu, giá bao nhiêu?".
+- Autocomplete cho `chuồng gà rutin` trả về 5/9 biến thể là tự làm (2 tầng,
+  thùng xốp, đẹp, ngoài trời, tự làm) — **bài trụ đã có mục riêng cho cả năm**.
+
+**Hệ quả về sau:** trang thứ tư sẽ tranh slot với chính bài trụ đang giữ hạng
+8,9–9,4 trên hai truy vấn gốc. Đúng cái bẫy đã phải gộp bỏ 20 trang cửa ngõ.
+Trước khi viết trang mới cho một cụm, **đọc bài đang xếp hạng trong cụm đó
+đã** — ba lần trong dự án này giả thiết "chưa có bài" đều sai.
+
+### 15/09/2026 · Trang sản phẩm gần như vô hình trên Google
+
+**Điều đã biết (Search Console, 90 ngày, đo 15/09/2026):**
+
+| loại trang | số trang | hiển thị | nhấp |
+|---|---|---|---|
+| khác (chủ yếu trang chủ) | 4 | 5.479 | 36 |
+| blog | 13 | 8.684 | 283 |
+| **sản phẩm** | **5** | **23** | **0** |
+
+Sản phẩm chiếm **0,16% hiển thị và 0 nhấp** trên tổng 14.186 hiển thị. Không
+trang chuồng nào xuất hiện, dù hai sản phẩm chuồng có **5 liên kết nội bộ mỗi
+cái** — nhiều nhất trong 20 sản phẩm.
+
+**Đã loại trừ:** có trong sitemap (20/89 URL), SSR đầy đủ, canonical đúng,
+`<title>` và meta description viết riêng, H1 đúng, không có thẻ noindex.
+
+**Còn lại là giả thiết chưa kiểm được:** chèn ép cùng tên miền (Google hiếm khi
+cho hai URL cùng site vào một truy vấn, mà bài trụ đang giữ slot), và thẩm
+quyền tên miền thấp. Kiểm được khi có khoá serper.dev để đọc SERP thật.
+
+### 15/09/2026 · Từ khoá gốc "gà rutin" là chỗ rò lớn nhất, không phải cụm chuồng
+
+**Điều đã biết:** `gà rutin` — **1.276 hiển thị, 5 nhấp, CTR 0,4%, hạng 9,5**.
+Một truy vấn này chiếm **30% toàn bộ hiển thị của site**. Hạng 9,5 là đáy trang
+một, nơi CTR gần như bằng không.
+
+So sánh trong cùng bảng: `mua gà rutin ở tphcm` hạng 5,1 → CTR 9,3%;
+`gà rutin tphcm` hạng 5,0 → 7,7%. Tức là ở hạng 5 site này thu 8–9%.
+
+**Hệ quả:** kéo `gà rutin` từ 9,5 về khoảng 5 đổi được **5 nhấp → ~100
+nhấp/tháng** — lớn hơn toàn bộ cụm chuồng (919 ht, 18 nhấp) cộng lại. Mọi đề
+xuất về cụm nhỏ nên xếp sau việc này.
+
+### 15/09/2026 · Lỗi dữ liệu: mô tả sản phẩm 1,5 triệu tự mâu thuẫn
+
+**Điều đã biết:** Mô tả "Chuồng nuôi gà rutin cao cấp size lớn" là bản sao của
+bản 60cm, chỉ đổi tiêu đề và bảng thông số; gạch đầu dòng giữa bài vẫn ghi
+`Kích thước 60 × 40 × 45cm`. Khách đọc thấy 80 ở đầu, 60 ở giữa, 80 ở cuối.
+**Đã sửa 15/09/2026** (một chuỗi, kiểm lại trên production: 0 chỗ còn ghi 60).
+
+**Chưa sửa:** hai mô tả chuồng còn lại giống nhau khoảng 95% — trùng lặp nội
+dung giữa hai sản phẩm cùng site. Viết lại là đổi lời chào hàng, cần chủ shop
+duyệt.
+
+**Hệ quả về sau:** sản phẩm nhân bản từ sản phẩm khác thì phải rà **toàn bộ**
+mô tả, không chỉ tiêu đề và bảng thông số.
+
 ### 10/09/2026 · Về cách chủ shop làm việc
 **Điều đã biết:** Thích nói thẳng, kéo lại ngay khi tôi lan man sang kiến trúc
 thay vì trả lời câu được hỏi. Ưu tiên đã nêu rõ: **sản phẩm + review > bài viết
