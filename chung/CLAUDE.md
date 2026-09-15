@@ -185,6 +185,26 @@ này.
 npm run build && migration && pm2 restart` — vài phút. Đừng kết luận "chưa lên"
 sau một phút.
 
+**`git pull` trên máy chủ deploy là bẫy nằm chờ.** Ngày 15/09/2026 deploy
+17fishing-BE chết ngay bước đầu: `Your local changes to the following files
+would be overwritten by merge: package-lock.json`. Máy chủ có thay đổi cục bộ ở
+tệp đó từ lúc nào không rõ.
+
+Kiểu hỏng này **âm thầm**: mọi commit không đụng tệp đó vẫn deploy bình thường,
+nên nó nằm im cho tới đúng lần thêm một gói mới. Mất mười phút đoán mò vì API
+vẫn sống, chỉ mỗi mã mới không lên.
+
+Cách phân biệt nhanh "deploy chưa xuống" với "app chết": gọi một endpoint cũ.
+Còn 200 nghĩa là app sống và đang chạy mã cũ. Rồi kiểm một thay đổi ở commit
+trước đó để biết chính xác bản nào đang chạy.
+
+Nay cả hai repo BE dùng `git fetch origin main && git reset --hard origin/main`.
+
+**Thêm sự kiện thông báo phải nhớ HAI chỗ.** Backend phát sự kiện, nhưng danh
+sách chọn trong CMS là danh sách gõ cứng (`features/notifications/types`).
+Thêm một chỗ thôi thì tác vụ chạy mà không kênh nào nhận, và màn hình Thông báo
+không có gì để tick.
+
 ### LLM
 
 - **Token suy luận tính vào `max_tokens`** với `gpt-oss-120b`. Prompt nhiều quy
