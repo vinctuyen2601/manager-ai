@@ -194,29 +194,23 @@ canonical đúng rồi tưởng yên là sai.
 Đã thêm chuyển hướng trong `next.config.ts`, đã dò thấy 308 trên bản chạy thật.
 17fishing không dính — `www.17-fishing.com` không phân giải.
 
-### ⚠ 22 trang cửa ngõ "Mua Gà Rutin [quận]" — chưa xử
+### ✅ 21 trang "Mua Gà Rutin [quận]" — ĐÃ GỘP TỪ TRƯỚC, đừng báo động lại
 
-Củ Chi, Hóc Môn, Bình Chánh, Nhà Bè, Thủ Đức, Bình Tân, Tân Bình, Gò Vấp,
-Bình Thạnh, Hà Nội, Quận 1/3/5/6/7/8/9/11/12… gần như giống hệt nhau.
+20/21 bài đã đặt `redirectTo = mua-ga-rutin-tp-hcm`, đang 308 trên bản chạy
+thật. Giữ lại đúng bài đích: **1.603 hiển thị · 120 nhấp · hạng 5,8**, trang
+mạnh thứ tư toàn site.
 
-Đây là **trang cửa ngõ**, Google có chính sách phạt rõ ràng. Và đo ra chúng
-**không mang về gì**:
+**Bẫy đã mắc 15/09:** tôi đọc danh sách bài trong CMS, thấy 21 tiêu đề
+"Bí Quyết Mua Gà Rutin [quận] Uy Tín" gần như giống hệt nhau và báo động là
+trang cửa ngõ đang sống. Sai — **bài đã gộp vẫn nằm nguyên trong danh sách**,
+chỉ khác ở cột `redirectTo`. Phải nhìn cột đó trước khi kết luận.
 
-```
-chỉ 4/22 trang có dữ liệu
-mua-ga-rutin-tp-hcm      1.603 hiển thị · 120 nhấp   <- gần như toàn bộ
-mua-ga-rutin-tan-binh       53 hiển thị ·   3 nhấp
-mua-ga-rutin-quan-3          4 hiển thị ·   0 nhấp
-mua-ga-rutin-thu-duc         1 hiển thị ·   0 nhấp
-```
+Số hiển thị lẻ tẻ còn thấy ở vài trang (tân bình 53, quận 3 là 4, thủ đức 1)
+là dữ liệu **90 ngày**, tính cả giai đoạn trước khi gộp — không phải dấu hiệu
+chúng còn sống.
 
-18 trang còn lại: **0 hiển thị**, chỉ pha loãng.
-
-Các chùm trùng khác: **3 bài "gà rutin không đẻ"** (chùm đang 0 hiển thị — dấu
-hiệu Google không biết chọn bài nào), **2 bài "bao lâu thì đẻ trứng"**, **6 bài
-về chuồng**.
-
-Gộp/xoá bài là **không hoàn tác được** — phải chủ shop quyết.
+Các chùm trùng CHƯA xử: **3 bài "gà rutin không đẻ"** (chùm đang 0 hiển thị),
+**2 bài "bao lâu thì đẻ trứng"**, **6 bài về chuồng** (chùm 919 hiển thị).
 
 ### CHÙM "CHUỒNG" — trận đánh trực tiếp, và một lỗi từ vựng
 
