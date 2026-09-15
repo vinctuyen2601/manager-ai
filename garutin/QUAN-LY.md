@@ -471,6 +471,57 @@ hết hạn nhanh, lưu lại chỉ tạo ra bảng số cũ mà ai đọc cũng
 **Hệ quả về sau:** trước khi đề xuất đầu tư vào bất kỳ từ khoá nào, đọc trang
 một của nó đã. Chi phí một credit trên hạn mức 2.500.
 
+### 15/09/2026 · "Hạng 7–9" hoá ra là TRANG HAI, không phải đáy trang một
+
+**Điều đã biết:** Suốt nhiều phiên đã ghi "mọi trang kẹt hạng 7–9" và tìm cách
+đẩy lên hạng 5. Đọc trang một thật thì giả định nền sai: **trang một chỉ có
+7–9 vị trí tự nhiên**, không phải 10. Phần còn lại là băng video, ảnh, mua sắm.
+
+| truy vấn | vị trí tự nhiên trên trang một | hạng GSC của mình |
+|---|---|---|
+| gà rutin | 7 | 9,5 |
+| mua gà rutin ở tphcm | 9 | 5,1 |
+| chuồng nuôi gà rutin | 7 | 8,9 |
+
+Hạng 9,5 mà trang một hết chỗ ở vị trí 7 nghĩa là **đang ở trang hai**. Đó là
+lời giải cho CTR 0,4% — con số luôn trông vô lý nếu tin rằng hạng 9,5 nằm cuối
+trang một.
+
+**Kiểm chéo:** quét 20 truy vấn nhiều hiển thị nhất, garutin.com **không có mặt
+trên trang một ở 19/20**. Lần duy nhất xuất hiện là truy vấn thương hiệu
+"garutin", hạng 3.
+
+**Hệ quả về sau:** đừng đọc `position` của Search Console như thứ hạng trên
+trang một. Với ngách này nó thường là trang hai. Khoảng cách tới trang một xa
+hơn nhiều so với những gì các phiên trước đã ghi, và mọi ước lượng kiểu "kéo
+từ 9,5 về 5 được ~100 nhấp" đều lạc quan quá mức — trước hết phải vào được
+trang một đã.
+
+### 15/09/2026 · Bản đồ trang một: ai thật sự đang giữ chỗ
+
+**Điều đã biết (20 truy vấn, 15/09/2026):** đếm số lần xuất hiện trên trang một
+
+| tên miền | số lần | loại |
+|---|---|---|
+| facebook.com | 34 | nhóm và bài đăng |
+| lolipet.net | 20 | đối thủ trực tiếp |
+| tiktok.com | 19 | video |
+| youtube.com | 19 | video |
+| marketplace.tripmap.vn | 13 | rao vặt |
+| shopee.vn | 12 | sàn |
+
+13/20 truy vấn có sàn cộng mạng xã hội chiếm quá nửa trang một, tương ứng
+**46% tổng lượt hiển thị**.
+
+**lolipet.net có mặt ở gần như mọi truy vấn, thường ở vị trí 1–2.** Đây là đối
+thủ duy nhất đáng nghiên cứu kỹ; các tên còn lại hoặc là nền tảng, hoặc là báo
+chí viết một lần (baohaiphong.vn, afamily.vn) chứ không cạnh tranh lâu dài.
+
+**Hệ quả về sau:** với ngách này, nội dung blog cạnh tranh với **nhóm Facebook
+và video TikTok**, không phải với blog khác. Trước khi đề xuất viết bài cho một
+truy vấn, đọc trang một của nó — nếu quá nửa là nền tảng thì bài viết không
+phải công cụ đúng.
+
 ### 10/09/2026 · Về cách chủ shop làm việc
 **Điều đã biết:** Thích nói thẳng, kéo lại ngay khi tôi lan man sang kiến trúc
 thay vì trả lời câu được hỏi. Ưu tiên đã nêu rõ: **sản phẩm + review > bài viết
