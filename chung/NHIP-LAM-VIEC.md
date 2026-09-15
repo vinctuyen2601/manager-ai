@@ -44,7 +44,7 @@ nhất nối lưu lượng với doanh thu.
 | API và web còn sống | có mã 5xx |
 | URL trong sitemap trả 404 | > 0 |
 | Liên kết nội bộ trỏ vào trang chuyển hướng | > 0 |
-| Deploy gần nhất có thành công không | thất bại |
+| Deploy gần nhất có thành công không | **GitHub tự gửi email** — không dựng thêm |
 
 Bốn dòng này đều là lỗi đã xảy ra thật, nên chúng lặp lại được.
 
