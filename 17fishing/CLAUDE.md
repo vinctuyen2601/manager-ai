@@ -276,8 +276,27 @@ ngữ câu cá**. Nên KHÔNG có `cần`, `đài`, `đơn`, `lửng`, `đáy`, 
 `nổi`, `chìm`. Và **không bỏ dấu** khi tách từ tiêu đề — `mồi` với `mới` đều
 thành `moi`.
 
-Việc gốc vẫn còn: **gắn tag chuyên môn và danh mục cho 104 bài**. Sửa thuật
-toán chỉ là chữa triệu chứng; có tag tử tế thì tầng tag mới làm đúng việc của nó.
+**Việc gốc đã làm nốt 15/09** — gắn danh mục + tag chuyên môn cho 103/104 bài
+bằng `script/gan-tag.mjs`:
+
+```
+                tag phổ biến nhất   số tag   tag ở >30% số bài
+trước            câu cá — 94%         67            2
+sau              mồi câu — 22%        68            0
+```
+
+Năm danh mục, **hiện ra cho khách** ở `/blog`, trang bài và khối "Đọc thêm":
+Chọn đồ nghề (41) · Kỹ thuật câu (27) · Mồi câu (21) · Tin tức & sự kiện (8) ·
+Theo loài cá (6). Một bài không xếp được, cố ý để trống.
+
+Luật chấm tag: cụm trong **tiêu đề** tính ngay; cụm trong **thân bài** phải nhắc
+**từ 3 lần**; tối đa **4 tag**. Bản đầu tính cả nhắc một lần → bài "chọn gác
+cần" gắn luôn `trắm đen`, `rô phi` vì thân bài có ví dụ thoáng qua. Quá 4 tag
+thì mọi bài lại giống mọi bài, quay về đúng chỗ cũ.
+
+`gan-tag.mjs` tự **DỪNG** nếu có tag nào phủ >30% số bài hoặc >15% bài không
+tag — hai phép chặn để không lặp lại chính lỗi vừa sửa. Và không ghi đè bằng
+dữ liệu rỗng hơn: bài không xếp được thì giữ nguyên tag cũ.
 
 ### Chỗ đáng giá nhất KHÔNG nằm trong mã
 
