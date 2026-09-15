@@ -145,7 +145,82 @@ trong lúc render để bộ đo bỏ qua.
 
 ---
 
-## 5. Bản đồ API quản trị
+## 5. Đối thủ lolipet.net — đo ngày 15/09/2026
+
+Chủ shop hỏi vì sao họ luôn trên top. Đo cả hai bên:
+
+```
+                        GaRutin        lolipet.net
+phủ chủ đề rutin        30/31 của họ   31
+tốc độ tải              271ms          1.214ms
+nặng trang              94KB           174KB
+số từ (bài cùng đề)     2.243          2.018
+schema                  Article+LB+BC  chỉ Organization
+link nội bộ mỗi trang   17             114
+TỔNG URL                93             1.929
+nội dung cũ nhất        22/03/2026     2013
+```
+
+**GaRutin thắng gần hết mặt kỹ thuật và KHÔNG thiếu nội dung.** Hai dòng cuối
+là câu trả lời: site 6 tháng tuổi, 93 URL, đấu site 13 năm tuổi, 1.929 URL.
+
+Điểm yếu của họ: gà rutin chỉ là **31/1.929 URL — 1,6% site**. Họ là cửa hàng
+thú cưng tổng hợp (hamster, nhím, thỏ, chuột lang). GaRutin **100% gà rutin**.
+
+Chiêu của họ: đăng bài hướng dẫn ~2.000 từ **dưới dạng sản phẩm WooCommerce**,
+có giá và nút mua ngay trong bài. **Đừng bắt chước** — nó làm lẫn ý định tìm
+kiếm. Nhưng ý đúng thì học: nút mua nằm ngay trong bài hướng dẫn.
+
+Trang họ gửi lần đầu (`/page/1/?s=gà+rutin`) **không thể lên top**: khai
+`noindex,follow` và `robots.txt` chặn `/?s=*`. Đó là trang tìm kiếm nội bộ.
+
+### CHÙM "CHUỒNG" — trận đánh trực tiếp, và một lỗi từ vựng
+
+```
+"chuồng"  837 hiển thị · 22 từ khoá
+"lồng"     82 hiển thị ·  2 từ khoá      → chuồng gấp 10,2 lần
+```
+
+**Hai sản phẩm lồng của GaRutin đều đặt tên là "LỒNG":**
+
+```
+/san-pham/long-ga-rutin-cao-cap-size-lon   Lồng gà rutin cao cấp size lớn
+/san-pham/long-ga-rutin-cao-cap            Lồng gà rutin cao cấp giá rẻ
+```
+
+Thân trang có 14 lần chữ "chuồng" nhưng **tiêu đề thì không**. Trong khi
+lolipet có **9 sản phẩm "Chuồng nuôi gà rutin full phụ kiện 1–9"** nhắm đúng
+chùm thương mại đó.
+
+Và 9 từ khoá thương mại của chùm này đang ở `chua-du-lieu` — **0 hiển thị**:
+mua chuồng nuôi gà rutin · chuồng gà rutin giá rẻ · kích thước chuồng nuôi gà
+rutin · thiết kế chuồng nuôi gà rutin · chuồng gà rutin hà nội / đà nẵng.
+
+Đây là họ hàng của cái bẫy `lồng`/`lông` đã ghi ở mục bẫy chung — nhưng lần
+này không phải lỗi so khớp, mà là **gọi tên hàng bằng từ khách không dùng**.
+
+### Số liệu Search Console 90 ngày
+
+```
+4.191 hiển thị · 103 nhấp · CTR 2,46%
+
+sua-tieu-de   53 từ  2.461 ht   12 nhấp   <- 59% hiển thị, CTR 0,49%
+da-tot        12 từ    918 ht   78 nhấp
+bo-sung       87 từ    661 ht   10 nhấp
+viet-moi      53 từ    151 ht    3 nhấp
+```
+
+**Khoảng dịch được (hạng 5–15): 33 từ khoá, 3.388 hiển thị, mới 86 nhấp.**
+Đáng chú ý nhất: **"gà rutin" đang ở hạng 9,5 với 1.276 hiển thị mà 5 nhấp.**
+
+Nhóm thương mại đã thắng sẵn, đừng phá: mua gà rutin ở tphcm (h5,1 · 26 nhấp)
+· gà rutin tphcm (h5,0 · 10) · bán gà rutin tphcm (h5,6 · 6).
+
+Chỉ 46 từ khoá ở hạng >15 và chúng chỉ có 60 hiển thị — **đừng đổ công vào đó**.
+
+---
+
+## 6. Bản đồ API quản trị
 
 Tất cả sau `JwtAuthGuard`, tiền tố `https://api.garutin.com/api`.
 
@@ -170,7 +245,7 @@ cấu hình   GET/PATCH /admin/site-config
 
 ---
 
-## 6. Prompt AI
+## 7. Prompt AI
 
 `src/ai-prompts/registry.ts` là **nguồn sự thật** của prompt mặc định; bảng
 `ai_prompts` chỉ chứa bản ghi đè, sửa được từ CMS.
@@ -189,7 +264,7 @@ prompt. Không làm vậy thì mô hình in bảng tự chấm điểm thay cho 
 
 ---
 
-## 7. Vận hành
+## 8. Vận hành
 
 ```
 deploy    push vào main → GitHub Actions → EC2
@@ -210,7 +285,7 @@ là bằng chứng đã lên **và** guard còn nguyên. Đã từng chèn route
 
 ---
 
-## 8. Bẫy theo repo
+## 9. Bẫy theo repo
 
 Ba repo của shop dùng chung hồ sơ này, nhưng mỗi cái có bẫy riêng. Gom cả về đây
 chứ không rải vào `CLAUDE.md` từng repo: rải ra là sáu chỗ phải nhớ cập nhật, và
