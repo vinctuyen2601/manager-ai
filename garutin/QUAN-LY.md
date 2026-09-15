@@ -522,6 +522,57 @@ và video TikTok**, không phải với blog khác. Trước khi đề xuất vi
 truy vấn, đọc trang một của nó — nếu quá nửa là nền tảng thì bài viết không
 phải công cụ đúng.
 
+### 15/09/2026 · lolipet.net thắng bằng quy mô, không bằng nội dung
+
+**Điều đã biết:** lolipet.net đứng trên garutin.com ở gần như mọi truy vấn của
+ngách này (có mặt 20/20 trang một đã quét, thường ở vị trí 1–2). Đọc thẳng
+trang của họ thì **nội dung của mình tốt hơn ở mọi mặt đo được**:
+
+| | lolipet | GaRutin |
+|---|---|---|
+| Bài "làm chuồng" | 1.834 từ · 17 đề mục | **2.683 từ · 37 đề mục** |
+| Thẻ H1 trang hub | **4 thẻ** (lỗi) | 1 |
+| Schema | Organization, Breadcrumb | Article, Product, LocalBusiness, FAQ, Offer… |
+
+Khác biệt nằm ở quy mô và cấu trúc:
+
+| | lolipet | GaRutin |
+|---|---|---|
+| Tổng URL trong sitemap | **2.105** | 90 |
+| Liên kết nội bộ mỗi trang | **125–132** | 38–43 |
+| Trang hub cho gà rutin | **8** | 0 |
+
+Và họ **không phải shop gà rutin** — họ bán chó, mèo, bò sát, thỏ, hamster,
+sóc, nhím, vẹt; gà rutin chỉ là 45/2.105 URL. Họ thắng ở ngách của mình bằng
+thẩm quyền tích luỹ từ việc bán mọi thứ.
+
+Một chi tiết đáng chú ý về cách họ làm: **bài viết về gà rutin của họ đăng dưới
+dạng `/product/`, không phải `/blog/`** — nằm trong loại bài sản phẩm của
+WooCommerce nên vào sitemap sản phẩm và nằm trong cấu trúc danh mục của cửa
+hàng. Họ có hub theo nhu cầu: `/ga-rutin/` (hạng 2 cho "gà rutin", 1.644 từ) và
+sáu hub con — gà đẹp, lồng chuồng, thức ăn, phụ kiện, thông tin cách nuôi,
+combo.
+
+**Hệ quả về sau:** **viết thêm bài không kéo được hạng ở ngách này.** Ba chùm
+lớn — chuồng, gà, cách nuôi — mình đã sâu hơn đối thủ rồi. Đòn bẩy nằm ở cấu
+trúc và số liên kết, không nằm ở số chữ.
+
+### 15/09/2026 · /san-pham để trống tín hiệu mạnh nhất của nó
+
+**Điều đã biết:** `/san-pham` là trang danh mục duy nhất của site, tương đương
+`/ga-rutin/` của lolipet — trang đang giữ hạng 2 cho truy vấn đáng giá nhất
+ngách. Trang của mình có **344 từ** và thẻ H1 ghi **"🐦 Tất cả sản phẩm"**,
+trong khi thẻ `<title>` lại nhắm đúng ("Mua Gà Rutin Cảnh…"). Hai tín hiệu nói
+hai chuyện khác nhau, và H1 — thứ mạnh nhất — dùng cho cụm không ai tìm.
+
+**Đã sửa 15/09/2026:** H1 đổi thành "Mua gà rutin cảnh thuần chủng"; thêm phần
+mở đầu, khoảng giá lấy từ danh mục sống, mục combo, mục chuồng, mục đặt hàng và
+khối dẫn sang bài hướng dẫn. Chân trang nâng từ 4 lên khoảng 16 liên kết, lấy
+từ API chứ không gõ cứng slug, và xuất hiện trên cả 90 trang.
+
+**Hệ quả về sau:** khi thêm trang mới, kiểm H1 có nhắm cụm người ta thật sự gõ
+không. Thẻ `<title>` đúng không cứu được H1 sai.
+
 ### 10/09/2026 · Về cách chủ shop làm việc
 **Điều đã biết:** Thích nói thẳng, kéo lại ngay khi tôi lan man sang kiến trúc
 thay vì trả lời câu được hỏi. Ưu tiên đã nêu rõ: **sản phẩm + review > bài viết
