@@ -298,6 +298,51 @@ thì mọi bài lại giống mọi bài, quay về đúng chỗ cũ.
 tag — hai phép chặn để không lặp lại chính lỗi vừa sửa. Và không ghi đè bằng
 dữ liệu rỗng hơn: bài không xếp được thì giữ nguyên tag cũ.
 
+### Hai TẦNG liên kết nội bộ — đừng nhầm chúng với nhau
+
+```
+tầng KHUÔN    khối "Đọc thêm" do Web dựng, 4 link/bài
+tầng NGỮ CẢNH link nằm giữa câu văn, do người viết (hoặc script) đặt
+```
+
+Google **giảm trọng số tầng khuôn** vì nó lặp y hệt trên mọi trang; tầng ngữ
+cảnh mới tính đủ. Đo 15/09 trước khi sửa: 416 link khuôn nhưng **chỉ 3/104 bài**
+có link ngữ cảnh. Sửa phân bố tầng khuôn là cần, nhưng chưa đủ.
+
+Đã chạy `script/noi-ngu-canh.mjs`: 232 link ngữ cảnh vào 88 bài.
+
+Sáu luật trong đó, mỗi luật đều vá một cách hỏng cụ thể:
+
+1. **Mỗi cụm một bài đại diện** (cụm trong tiêu đề + nhiều hiển thị nhất) —
+   không có thì `"mồi câu"` là chủ đề lõi của 5 bài, không biết trỏ đâu
+2. Chỉ nối **lần nhắc đầu tiên**
+3. Tối đa **3 link/bài nguồn**, mỗi **bài đích nhận tối đa 10** — bỏ trần thì
+   4 bài đầu ôm 36%
+4. Chỉ nối khi **cùng danh mục** hoặc cụm **đủ hẹp** (tag của ≤8 bài) — bỏ luật
+   này thì `"trắm đen"` trong bài về gác cần lại trỏ sang bài phao hố đấu
+5. Bỏ qua chỗ nằm trong `<a>` hoặc trong `<h*>`
+6. **Cụm dài nối trước**, để `"phao câu"` không nuốt `"phao câu đài"`
+
+Hai phép chặn kỹ thuật phải giữ:
+
+- Chỉ số tìm trên chuỗi đã hạ chữ phải **trùng độ dài** chuỗi gốc, nếu không
+  chèn lệch vị trí và vỡ HTML. Một bài đã bị bỏ qua vì phép này.
+- Chèn từ **CUỐI lên ĐẦU** để chỉ số phía trước không xê dịch.
+
+Chèn quanh **chuỗi gốc** chứ không chuỗi hạ chữ, nên neo giữ nguyên chữ hoa của
+bài: `"Mồi Câu"`, `"Điểm Câu"`.
+
+### Kết quả liên kết nội bộ sau một ngày
+
+```
+                        đầu buổi 15/09      cuối buổi
+tổng link bài↔bài            417              604
+bài mồ côi                 90/104            2/104
+4 bài đầu ôm                  89%              10%
+nhiều nhất một bài        93 link          15 link
+bài có link ngữ cảnh         3/104           88/104
+```
+
 ### Chỗ đáng giá nhất KHÔNG nằm trong mã
 
 ```
