@@ -366,9 +366,9 @@ thật cho ba món đang có hạng**, và chỉ chủ shop làm được.
 3. **So khớp đường dẫn phải chặn ở dấu nháy.** `/blog/ky-thuat-cau-ca` khớp
    chuỗi con vào `/blog/ky-thuat-cau-ca-me-...` → báo 5 bài, thực tế 1.
 
-### Bốn bẫy của bộ đồ nghề viết bài — 17/09/2026
+### Sáu bẫy của bộ đồ nghề viết bài — 17/09/2026
 
-Cả bốn đều thuộc một họ: **thước đo hỏng làm bài bẩn trông như bài sạch**, hoặc
+Cả sáu đều thuộc một họ: **thước đo hỏng làm bài bẩn trông như bài sạch**, hoặc
 làm bài sạch trông như bài hỏng. Đo được khi viết lại 30 bài.
 
 1. **Cấm cụm bằng chuỗi phẳng thì lọt biến thể.** Luật cấm `giúp bạn`, mô tả
@@ -390,7 +390,29 @@ làm bài sạch trông như bài hỏng. Đo được khi viết lại 30 bài.
    sạch, **không báo lỗi gì**, và cổng kiểm cũng không bắt được vì nó chỉ đo thẻ
    `<a>` đã sinh ra. Phải `bc.song.add(slug)` cho cả đợt TRƯỚC khi dựng nội dung.
 
-4. **`salePrice`/`price` về dạng CHUỖI.** So `salePrice < price` trên chuỗi thì
+4. **Bộ tự nối liên kết chạy LÚC LƯU — sửa nội dung để gỡ link là vô ích.**
+   `src/posts/noi-noi-bo.ts` chèn thẻ `<a>` vào thân bài mỗi lần `create` hoặc
+   `update` có `dto.content`. Gỡ một liên kết rồi PATCH lại thì nó chèn lại
+   ngay trong cùng lệnh đó. Muốn gỡ thật phải sửa mã, không sửa nội dung.
+
+   Hệ quả khi soi: bản trong CSDL **đã có** liên kết chèn, nên đừng so nội dung
+   mình viết với nội dung đọc về rồi kết luận "có kẻ sửa bài". Và
+   `GET /admin/posts/:id` **không tồn tại** (404) — lấy `content` từ danh sách
+   `GET /admin/posts`. Tôi đã kết luận nhầm hai lần vì `ct.content` là
+   `undefined` mà không kiểm mã HTTP.
+
+5. **Cụm thẻ quá chung thì nối sai đề tài.** Thẻ `kỹ thuật câu` gắn ở 5 bài;
+   dòng 57 chọn bài đại diện là **bài ĐẦU TIÊN có cụm trong tiêu đề** →
+   trúng `ky-thuat-cau-jig-cua-nguoi-nhat`. Và 5 ≤ `CUM_HEP` (8) nên nó được
+   coi là cụm hẹp, **bỏ qua phép kiểm cùng danh mục** ở dòng 79. Kết quả:
+   mọi bài có chữ "kỹ thuật câu <bất kỳ>" đều bị trỏ sang bài câu jig.
+   Đo 17/09/2026: **3 bài bị gắn nhầm** (mồi chép, rô phi, chọn phao) trên
+   khoảng 69 liên kết được chèn — tỉ lệ sai ~4%.
+
+   Sửa được ở hai chỗ: bỏ cụm chung khỏi thẻ (dữ liệu, không cần deploy), hoặc
+   thêm danh sách chặn cụm chung trong `noi-noi-bo.ts` (mã, phải deploy).
+
+6. **`salePrice`/`price` về dạng CHUỖI.** So `salePrice < price` trên chuỗi thì
    `"99000" < "120000"` là false, và giá hiển thị sai 99.000đ thành 120.000đ.
    Luôn bọc `Number()`.
 
