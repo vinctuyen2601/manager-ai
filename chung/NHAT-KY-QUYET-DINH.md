@@ -88,6 +88,31 @@ nhỏ. Nhóm bị từ chối còn **dài hơn** nhóm được nhận (1.158 t�
 nhân — gộp bừa thì mất bài mà không sửa được gốc.
 **Kiểm ngày:** 15/10/2026, xem có manh mối mới không · **Trạng thái:** ⏳
 
+### QĐ-09 · Viết lại 30/35 bài nháp, bỏ hẳn 5 bài — 17fishing
+**Vì sao:** chủ shop yêu cầu tăng số lượng bài. Đo trước khi viết cho thấy
+"thêm bài" không phải đòn bẩy: 15 bài đầu chiếm **85%** toàn bộ 6.687 hiển thị
+của blog, và 35 bài nháp cộng lại chỉ được 337 hiển thị / 5 nhấp trong 90 ngày.
+Nên đổi cách làm chứ không đổi việc làm — dùng 35 bài đó làm **kho chủ đề**, và
+chỉ viết bài nào **chưa bài sống nào trả lời đúng câu hỏi đó**.
+
+Bỏ hẳn 5 bài vì không viết lại được: 3 bài là tin nội bộ của vietnam-fishing
+(thông cáo MSS, chuyến xe đoàn viên, nhân vật tháng 3) và 2 bài PR cho hai hãng
+cần shop không bán (La Văn Cương, 360c). Viết lại chúng bằng tên mình là bịa.
+
+**Phép đo dẫn tới quyết định:** xếp 61 bài sống + 35 bài nháp vào cụm chủ đề.
+Phép so bằng IDF trên TIÊU ĐỀ báo 29/35 là "chỗ trống" — **sai**, vì nó không
+thấy blog đã có 12 bài về phao. Phải so theo cụm chủ đề mới ra đúng.
+
+**Dự đoán:** 30 bài mới đem về **300–800 hiển thị/tháng** sau 3 tháng, tức
+khoảng 5–12% tổng hiển thị blog. Nhấp thì gần như không đổi (dưới 5 nhấp/tháng)
+— đây là bài đầu phễu, không phải bài bán hàng.
+**Nếu sau 3 tháng dưới 200 hiển thị/tháng** thì kết luận: thêm bài không phải
+đòn bẩy của site này, và dừng hẳn việc viết thêm.
+
+**Số đo nền ngày 17/09/2026:** 91 bài sống (từ 61) · mồ côi 8/91 (từ 13/61) ·
+liên kết gãy 0 (từ 6) · sitemap 91 URL blog.
+**Kiểm ngày:** 17/12/2026 · **Trạng thái:** ⏳ chờ kiểm
+
 ---
 
 ## Dự đoán đã rút lại

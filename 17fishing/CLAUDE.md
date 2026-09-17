@@ -366,6 +366,34 @@ thật cho ba món đang có hạng**, và chỉ chủ shop làm được.
 3. **So khớp đường dẫn phải chặn ở dấu nháy.** `/blog/ky-thuat-cau-ca` khớp
    chuỗi con vào `/blog/ky-thuat-cau-ca-me-...` → báo 5 bài, thực tế 1.
 
+### Bốn bẫy của bộ đồ nghề viết bài — 17/09/2026
+
+Cả bốn đều thuộc một họ: **thước đo hỏng làm bài bẩn trông như bài sạch**, hoặc
+làm bài sạch trông như bài hỏng. Đo được khi viết lại 30 bài.
+
+1. **Cấm cụm bằng chuỗi phẳng thì lọt biến thể.** Luật cấm `giúp bạn`, mô tả
+   phao điện viết `giúp anh em cần thủ` → lọt cổng kiểm, nằm nguyên văn quảng
+   cáo cũ ba ngày mà bảng đo vẫn báo sạch. Phải cấm bằng **mẫu**:
+   `/giúp (bạn|anh em|cần thủ|người dùng|quý khách)/`. Vá xong thì số sản phẩm
+   bẩn nhảy từ 2 lên 5.
+
+2. **Bóc thẻ HTML trước khi cắt câu là sai.** `</li><li>` thành một dấu cách nên
+   cả danh sách gạch đầu dòng dính lại thành MỘT câu, và bài viết chuẩn bị báo
+   "câu quá 34 từ". Phải chèn dấu chấm ở ranh giới thẻ khối
+   (`p, li, h1-6, td, th, tr, div, blockquote, br`) trước khi bóc thẻ. Sau khi
+   vá, câu trung bình tụt từ ~16 xuống ~11 — con số cũ là ảo. Cùng họ với lỗi
+   `<table>` bị làm phẳng đã vấp trước đó.
+
+3. **Hàm sinh liên kết rụng im lặng.** `lk(slug, chữ)` chỉ sinh thẻ `<a>` khi
+   slug **đã published**, không thì trả về chữ trơn. Viết một đợt 5 bài trỏ lẫn
+   nhau thì lúc dựng nội dung cả 5 vẫn là nháp → toàn bộ liên kết trong cụm mất
+   sạch, **không báo lỗi gì**, và cổng kiểm cũng không bắt được vì nó chỉ đo thẻ
+   `<a>` đã sinh ra. Phải `bc.song.add(slug)` cho cả đợt TRƯỚC khi dựng nội dung.
+
+4. **`salePrice`/`price` về dạng CHUỖI.** So `salePrice < price` trên chuỗi thì
+   `"99000" < "120000"` là false, và giá hiển thị sai 99.000đ thành 120.000đ.
+   Luôn bọc `Number()`.
+
 ---
 
 ## 8. Bản đồ API quản trị
