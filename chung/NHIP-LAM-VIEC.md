@@ -70,6 +70,57 @@ Không có gì ở dòng 1 và 2 thì nói "không có gì" rồi sang dòng 3 n
 
 ---
 
+## ĐO ĐƯỢC GÌ VỀ VIỆC RA TIỀN — cập nhật 18/09/2026
+
+Từ 18/09 cả hai shop ghi nhận **`zalo_click`** và **`phone_click`**, bắt bằng
+một bộ nghe chung ở tầng document trong `TrackVisit`. Trước đó chỉ có `view`,
+`add_to_cart`, `begin_checkout`, `purchase` — **thiếu đúng bước ra tiền**, vì
+đơn thật chốt qua Zalo.
+
+Đây là thứ phải xem hằng tuần từ nay: **bấm Zalo trên mỗi trang nào**. Nó là
+cầu duy nhất nối lưu lượng với doanh thu khi đơn không đi qua giỏ hàng.
+
+### Số nền trước khi có phép đo này (90 ngày, đo 18/09/2026)
+
+| | 17fishing | GaRutin |
+|---|---|---|
+| Hiển thị Google | 9.432 | 14.612 |
+| Nhấp | 199 | 316 |
+| CTR | 2,11% | 2,16% |
+| Người xem sản phẩm | 194 | 89 |
+| Vào trang đặt hàng | 17 | 6 |
+| Đặt xong | 2 | 6 |
+
+### CTR chia theo LOẠI TRANG, không theo thứ hạng
+
+| loại | hạng | CTR |
+|---|---|---|
+| Trang sản phẩm 17fishing | 3–6 | **9–14%** |
+| `mua-ga-rutin-tp-hcm` (ý định mua) | 5,9 | **7,4%** — 120 nhấp |
+| Bài kỹ thuật 17fishing | 7–9 | **0–0,8%** |
+
+Trang trả lời **"mua ở đâu"** được bấm gấp 10–20 lần trang trả lời **"làm thế
+nào"**, ở cùng thứ hạng. 17fishing có **2/89** bài loại đó; GaRutin có **8/52**
+và đó là bài mạnh nhất của họ.
+
+### Facebook là kênh khác hẳn
+
+17fishing, toàn bộ lịch sử:
+
+| nguồn | khách | trang/khách | đơn |
+|---|---|---|---|
+| direct | 524 | 2,0 | 0 |
+| **facebook** | **122** | **6,8** | **1** |
+| google | 109 | 1,9 | 0 |
+
+Khách từ page Facebook xem **gấp 3,4 lần** số trang, và là nguồn **duy nhất** có
+đơn được ghi nhận. Chủ shop xác nhận có page FB gắn link web.
+
+Việc chưa làm: **gắn UTM vào link trên page FB**. Hiện mọi thứ gộp thành
+"facebook", không tách được link hồ sơ với từng bài đăng.
+
+---
+
 ## HẰNG TUẦN — khoảng 20 phút
 
 Đo sáu con số, so với tuần trước:
