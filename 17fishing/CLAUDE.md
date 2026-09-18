@@ -683,6 +683,12 @@ LẶNG — chạy `npm run kiem-khoi` để so với registry bên BE.
 **`TrackVisit` bỏ qua khung nhúng và trang công cụ.** Thêm trang công cụ mới thì
 phải thêm vào danh sách đó, nếu không nó tự đếm mình thành lượt khách.
 
+**Ô tìm kiếm đang TẠM ẨN** (chủ shop quyết 18/09/2026) — hằng
+`HIEN_O_TIM_KIEM` trong `SiteHeader.tsx`. Lý do và điều kiện bật lại: QĐ-11
+trong `chung/NHAT-KY-QUYET-DINH.md`. **Đừng đề xuất bật lại** trước khi shop
+vượt ~30 mã hàng VÀ trạng thái 0 kết quả đã được sửa tử tế. Phần dưới đây mô
+tả đường ống vẫn đang chạy nguyên vẹn phía sau.
+
 **Ô tìm kiếm: đường ống đã xong từ lâu, chỉ thiếu nút bấm.** Tới 18/09/2026 ô
 tìm kiếm ở header là ô CHẾT — có `<input>`, có nút "🔍 Tìm", không có
 `onChange`, `onClick` hay `<form>` nào. Trong khi mọi mảnh khác đã dựng đủ:

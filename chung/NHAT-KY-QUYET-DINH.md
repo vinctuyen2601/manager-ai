@@ -173,16 +173,31 @@ hàng, nơi lưới làm khách ngợp. Với **11 mã**, tuyển chọn chính 
 — và mọi sản phẩm cách trang chủ đúng một cú chạm. Bắt chước editorial của DTC
 lớn ở quy mô này chỉ bắt khách bấm thêm.
 
-**Dự đoán:**
-- Bảng từ khoá `search_logs` đang **rỗng tuyệt đối**; sau 4 tuần có
-  **≥ 30 lượt tìm**, trong đó ≥ 5 từ khoá `result_count = 0`. Nhóm 0 kết quả
-  mới là phần đáng tiền: đó là danh sách khách muốn mua mà shop không có.
-- Tỉ lệ khách vào `/` rồi mở một trang `/san-pham/...` **nhích lên**, vì bỏ
-  được một chặng trung gian.
+**Dự đoán:** tỉ lệ khách vào `/` rồi mở một trang `/san-pham/...` **nhích
+lên**, vì bỏ được một chặng trung gian.
 
-**Nếu sau 4 tuần dưới 10 lượt tìm** thì kết luận: khách của shop không tìm bằng
-ô tìm kiếm mà duyệt theo danh mục — **thôi đầu tư vào tìm kiếm**, dồn chỗ đó
-cho điều hướng danh mục.
+#### Phần tìm kiếm: ĐÃ RÚT LẠI cùng ngày
+
+Tôi định đo `search_logs` trong 4 tuần để xem khách muốn mua gì mà shop không
+có. **Chủ shop quyết tạm ẩn ô tìm kiếm** — 11 mã hàng thì chưa cần.
+
+Đo lại thì chủ shop đúng, và tôi đã cân nhắc thiếu một chỗ: trang chủ nay hiện
+đủ cả 11 sản phẩm nên tìm kiếm không giúp gì cho điều hướng, còn **mặt trái
+thì có thật** — trang 0 kết quả hiện chỉ có mỗi chữ "Sản phẩm", không gợi ý
+gì. Khách gõ một món shop không bán sẽ thấy một cửa hàng trống rỗng, tệ hơn
+hẳn việc cứ cuộn danh sách đầy đủ. Tôi chỉ cân giá trị của dữ liệu từ khoá mà
+quên cân cái giá khách phải trả khi tìm trượt.
+
+Ẩn bằng hằng `HIEN_O_TIM_KIEM` trong `SiteHeader.tsx`, **không xoá mã**. Phía
+sau vẫn nguyên: `SearchBox.tsx`, khớp theo từng từ ở backend, `search_logs`,
+và `/san-pham?search=` khi vào thẳng.
+
+**Điều kiện bật lại — hai cái, phải đủ cả hai:**
+1. danh mục vượt khoảng **30 mã hàng** (lúc đó cuộn hết mới thành cực hình)
+2. trạng thái 0 kết quả đã sửa thành lối ra tử tế: gợi ý toàn bộ hàng đang có
+   + nút Zalo hỏi hàng
+
+**Đừng nhắc lại chuyện này trước khi đủ hai điều kiện trên.**
 
 **Cách đo lại:**
 - `GET /admin/analytics/searches?from=…&to=…` và `&onlyEmpty=1`
@@ -191,8 +206,9 @@ cho điều hướng danh mục.
 - Tham số là `from`/`to`; **`?days=` bị bỏ qua không báo gì.**
 
 **Số đo nền 18/09/2026:**
-- `search_logs`: **0 dòng thật** (4 dòng `phao`, `can cau`, `may cau`,
-  `mai cheo` là truy vấn thử của tôi lúc kiểm, `visitor_id` rỗng — bỏ qua)
+- `search_logs`: **0 dòng thật** (6 dòng `phao`, `can cau`, `may cau`,
+  `mai cheo`, `phao dien`, `ghe cau` là truy vấn thử của tôi lúc kiểm,
+  `visitor_id` rỗng — bỏ qua). Bảng này đóng băng ở đây cho tới khi bật lại.
 - Trang chủ 30 ngày: **604 lượt / 184 khách**, 28% toàn bộ lượt xem
 - `/san-pham`: 476 lượt / 116 khách · 11 sản phẩm · 5 thương hiệu
 - Trên Google trang chủ chỉ có **48 hiển thị / 1 nhấp** — trang chủ **không**
