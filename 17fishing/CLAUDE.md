@@ -366,6 +366,30 @@ thật cho ba món đang có hạng**, và chỉ chủ shop làm được.
 3. **So khớp đường dẫn phải chặn ở dấu nháy.** `/blog/ky-thuat-cau-ca` khớp
    chuỗi con vào `/blog/ky-thuat-cau-ca-me-...` → báo 5 bài, thực tế 1.
 
+### Giá sản phẩm nằm trong `variants`, KHÔNG phải ở `price`
+
+Ba món có giá **biến thiên theo cỡ**, mà `price` chỉ là cỡ nhỏ nhất:
+
+| món | `price` ghi | thực tế |
+|---|---|---|
+| Thanh Long Chấn Thiên | 585.000đ (cỡ 2m7) | 585.000đ – 1.160.000đ |
+| Strong Bull | 1.600.000đ (cỡ 3m6) | 1.600.000đ – 4.769.000đ (cỡ 10m) |
+| Ghế Zhongzhou | 1.550.000đ (ghế+balo) | 1.550.000đ – 1.950.000đ |
+
+Đo 18/09/2026: **27 chỗ** trong bài viết và mô tả sản phẩm đang trích giá phẳng
+cho ba món này — tức nói với khách rằng cỡ 3m6 giá 585.000đ trong khi nó là
+795.000đ. Đã sửa thành "từ X".
+
+**Hàm lấy giá phải đọc `variants`.** `Number(p.price)` chỉ đúng với món một cỡ.
+Có `variants` thì lấy dải min–max, và khi trích một con số thì ghi "từ".
+
+Phao và cước thì ngược lại: có `variants` nhưng **mọi cỡ cùng một giá** — chỗ đó
+ghi giá phẳng là đúng. Phải kiểm, đừng thêm "từ" cho tất cả.
+
+**Chưa khớp, cần chủ shop xác nhận:** mô tả cước Chuanze ghi "số lớn nhất là 14"
+(theo lời chủ shop), nhưng `variants` trên trang chỉ có **0.8 tới 4.0**. Khách
+đọc mô tả rồi mở ô chọn sẽ không thấy số mình cần.
+
 ### Sáu bẫy của bộ đồ nghề viết bài — 17/09/2026
 
 Cả sáu đều thuộc một họ: **thước đo hỏng làm bài bẩn trông như bài sạch**, hoặc
