@@ -407,8 +407,29 @@ chỉ có 3 ảnh tổng nên đang tắt khối này.
 dung vào payload RSC, nên `sed 's/<[^>]*>//'` thuần đếm ra gấp 3–4 lần thật.
 Và bảng nhiều hàng thì nhãn cột lặp theo số hàng — đó không phải lỗi.
 
-**Số đo 18/09:** 3/13 sản phẩm dùng mẫu, cả ba đều có `mo-ta`, không trang nào
-lặp nội dung.
+**Số đo 18/09 sau khi chuyển hết:** **11/11 sản phẩm đang bán** dùng mẫu
+`hang-ky-thuat`, tất cả đều có `mo-ta`, không trang nào lặp mục. Hai món đã
+ngừng bán để nguyên vì đang chuyển hướng 308 sang món thay thế.
+
+`blockOrder` dùng chung cho cả 11:
+`uu-dai → hero → qua-tang → diem-manh → thong-so → huong-dan → dat-hang →
+mo-ta → cau-hoi → danh-gia → lien-quan`
+
+**Phép kiểm tự động sau mỗi lần đổi mẫu** — chạy được lại bất cứ lúc nào:
+
+1. Các `<h2>` trong `description` phải xuất hiện hết trên trang (mô tả có hiện
+   không). Dò **nội dung**, đừng dò tiêu đề khối.
+2. Ít nhất 3/4 tiêu đề khối phải có mặt: *Bảng tra cứu thông số*, *Những điểm
+   làm nên khác biệt*, *Dùng như thế nào cho đúng*, *Câu hỏi thường gặp*.
+3. `description` **không được** còn mục tên kiểu `Thông số`, `Cấu tạo`,
+   `Dùng và giữ`, `Giữ …`, `Trước khi…`, `Sắp đồ…` — đó là phần đã chuyển vào
+   khối, còn lại là lặp.
+4. Bỏ `<script>` trước khi đếm chữ; bảng nhiều hàng thì nhãn cột lặp theo số
+   hàng, không phải lỗi.
+
+**Trang dựng lại không đều.** Sau khi ghi, có trang hiện khối sau 25 giây, có
+trang mất hơn 3 phút. Đừng kết luận hỏng ở lần dò đầu — dò lại vài lần rồi mới
+báo động.
 
 ### Giá sản phẩm nằm trong `variants`, KHÔNG phải ở `price`
 
