@@ -386,9 +386,29 @@ Có `variants` thì lấy dải min–max, và khi trích một con số thì gh
 Phao và cước thì ngược lại: có `variants` nhưng **mọi cỡ cùng một giá** — chỗ đó
 ghi giá phẳng là đúng. Phải kiểm, đừng thêm "từ" cho tất cả.
 
-**Chưa khớp, cần chủ shop xác nhận:** mô tả cước Chuanze ghi "số lớn nhất là 14"
-(theo lời chủ shop), nhưng `variants` trên trang chỉ có **0.8 tới 4.0**. Khách
-đọc mô tả rồi mở ô chọn sẽ không thấy số mình cần.
+### Số 14 là của LƯỠI, không phải cước — sửa 18/09/2026
+
+Chủ shop xác nhận: **14 là size lớn nhất của LƯỠI**. Cước thì theo đúng biến thể
+sản phẩm — **0.8 · 1.0 · 1.2 · 1.5 · 2.0 · 2.5 · 3.0 · 4.0**.
+
+Tôi hiểu nhầm lời chủ shop ở phiên trước và viết "kho có dải rộng, số lớn nhất
+là 14" vào mô tả **cước**, kéo theo mấy chỗ khác trích số 0.4 (cũng không có
+trong kho, nhỏ nhất là 0.8). Đã sửa 9 chỗ: 2 mô tả sản phẩm và 7 bài.
+
+**Phân biệt hai loại chỗ khi sửa kiểu này** — chỉ sửa loại đầu:
+
+- **Nói về SẢN PHẨM của shop** → phải khớp `variants`. Ví dụ "cước Chuanze có
+  dải 0.4 trở lên" là sai vì shop không bán 0.4.
+- **Nói về cỡ thẻo NÓI CHUNG** → giữ nguyên. `kich-thuoc-day-theo...` và
+  `kien-thuc-ve-day-cau-ca...` dùng 0.4 trong bảng hướng dẫn chung; đó là cỡ có
+  thật trên thị trường, không phải lỗi.
+
+Phép dò "bài nào chứa cả `0.4` lẫn liên kết tới sản phẩm cước" **báo nhầm** bài
+hướng dẫn chung — hai thứ đó nằm ở hai đoạn cách xa nhau. Phải nhìn ngữ cảnh,
+đừng kết luận bằng phép kiểm cùng-một-trang.
+
+Chỗ vừa là hướng dẫn chung vừa trỏ tới sản phẩm thì thêm một câu nối: dải chung
+là bao nhiêu, dòng của shop bắt đầu từ đâu.
 
 ### Sáu bẫy của bộ đồ nghề viết bài — 17/09/2026
 
