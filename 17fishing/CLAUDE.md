@@ -723,6 +723,28 @@ Còn hai chỗ `no-store` ảnh hưởng riêng trang chứa chúng, chưa sửa
 `lien-he/page.tsx:17` và `[slug]/page.tsx:18`. Ưu tiên thấp, làm riêng và đo
 riêng.
 
+**Mức dùng Vercel — chủ shop đã hỏi 18/09/2026, đừng bắt hỏi lại.**
+
+Bật ISR **không** làm tăng rủi ro vượt hạn mức, mà đổi hướng tiêu thụ sang
+loại rẻ hơn: trước đây 100% lượt truy cập là một *function invocation* (hạng
+mục bị siết nhất), nay phần lớn chỉ là một *ISR read*, CDN trả thẳng không
+đụng tới hàm. Băng thông và Edge Requests không đổi. `regions` thì không tiêu
+thụ gì cả, chỉ nói hàm chạy ở đâu.
+
+Kể cả kịch bản xấu nhất (crawler quét liên tục) bản sau vẫn nhẹ hơn bản trước.
+
+Số nền để so: **1.424 lượt xem / 670 khách trong 30 ngày** (19/08–18/09), tức
+~47 lượt/ngày. Hạn mức Hobby là 1.000.000 ISR reads và 1.000.000 invocations
+mỗi tháng — nhân 10 lần cho bot và tài nguyên tĩnh thì vẫn quanh **1,5%**,
+cách ngưỡng khoảng 700 lần.
+
+**Image Optimization của Vercel đang TẮT** (`loader: 'custom'` trong
+`next.config.ts`, ảnh đi qua R2). Đây là hạng mục dễ vỡ hoá đơn nhất — đọc chú
+thích trong tệp đó trước khi nghĩ tới việc đổi.
+
+Chủ shop tự kiểm ở Vercel Dashboard → Usage, hai dòng *Function Invocations*
+và *ISR Reads*.
+
 **Ô tìm kiếm ĐANG BẬT, có gợi ý lúc gõ** (`HIEN_O_TIM_KIEM = true` trong
 `SiteHeader.tsx`). Chủ shop tạm ẩn rồi mở lại ngay trong ngày 18/09/2026 —
 xem QĐ-11. Ba điều đừng gỡ khỏi `SearchBox.tsx`:
