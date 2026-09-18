@@ -366,6 +366,50 @@ thật cho ba món đang có hạng**, và chỉ chủ shop làm được.
 3. **So khớp đường dẫn phải chặn ở dấu nháy.** `/blog/ky-thuat-cau-ca` khớp
    chuỗi con vào `/blog/ky-thuat-cau-ca-me-...` → báo 5 bài, thực tế 1.
 
+### 🔴 Mô tả BIẾN MẤT nếu `blockOrder` thiếu khối `mo-ta`
+
+Sản phẩm có `templateId` thì trang dựng theo `blockOrder`. **Không có khối
+`mo-ta` trong đó thì trường `description` không render ra chữ nào** — nó chỉ còn
+nằm trong JSON-LD cho Google đọc.
+
+Đo 18/09/2026: **2/3 sản phẩm dùng mẫu** đang thiếu khối đó, tức mô tả của chúng
+khách không đọc được. Trong đó có phao điện — bản mô tả viết lại ngày 17/09 nằm
+im suốt mà không ai biết.
+
+Mẫu `hang-ky-thuat` **vốn khai báo `mo-ta`**. Hai sản phẩm đó tự ghi đè
+`blockOrder` và đánh rơi nó. Đây là lỗi cấu hình, không phải giới hạn của mẫu.
+
+**Kiểm bằng nội dung, đừng kiểm bằng tiêu đề.** Tôi dò chuỗi "Mô tả sản phẩm"
+và kết luận Chuanze X Master vẫn hỏng sau 4 lần thử — sai, mô tả đã hiện, chỉ là
+khối đó không phải lúc nào cũng in tiêu đề. Phải dò chính các `<h2>` bên trong
+`description`.
+
+### Chia việc giữa mô tả và khối
+
+Trang có mẫu dễ **lặp**: mô tả có mục "Thông số dùng" mà khối `thong-so` lại in
+đúng những số đó lần nữa. Phao điện đang lặp như vậy cho tới 18/09.
+
+Quy ước từ nay:
+
+| | giữ gì |
+|---|---|
+| **`description`** | lý lẽ — hợp với ai, khi nào chọn món khác, vì sao chọn thế |
+| **khối `thong-so`** | bảng tra cứu |
+| **khối `huong-dan`** | các bước làm |
+| **khối `cau-hoi`** | hỏi đáp |
+| **khối `diem-manh`** | 3–4 điểm khác biệt |
+
+**Khối `cau-kien` đòi ảnh chi tiết TỪNG BỘ PHẬN** (`items[].anh`). Không có ảnh
+đúng loại thì bỏ khối đó khỏi `blockOrder`, đừng bật rồi để rỗng. Ngọc Liên Sơn
+chỉ có 3 ảnh tổng nên đang tắt khối này.
+
+**Đếm chữ lặp trên trang phải bỏ `<script>` trước.** Next nhét lại toàn bộ nội
+dung vào payload RSC, nên `sed 's/<[^>]*>//'` thuần đếm ra gấp 3–4 lần thật.
+Và bảng nhiều hàng thì nhãn cột lặp theo số hàng — đó không phải lỗi.
+
+**Số đo 18/09:** 3/13 sản phẩm dùng mẫu, cả ba đều có `mo-ta`, không trang nào
+lặp nội dung.
+
 ### Giá sản phẩm nằm trong `variants`, KHÔNG phải ở `price`
 
 Ba món có giá **biến thiên theo cỡ**, mà `price` chỉ là cỡ nhỏ nhất:
