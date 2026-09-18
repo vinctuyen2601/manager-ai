@@ -683,11 +683,39 @@ LẶNG — chạy `npm run kiem-khoi` để so với registry bên BE.
 **`TrackVisit` bỏ qua khung nhúng và trang công cụ.** Thêm trang công cụ mới thì
 phải thêm vào danh sách đó, nếu không nó tự đếm mình thành lượt khách.
 
-**Ô tìm kiếm đang TẠM ẨN** (chủ shop quyết 18/09/2026) — hằng
-`HIEN_O_TIM_KIEM` trong `SiteHeader.tsx`. Lý do và điều kiện bật lại: QĐ-11
-trong `chung/NHAT-KY-QUYET-DINH.md`. **Đừng đề xuất bật lại** trước khi shop
-vượt ~30 mã hàng VÀ trạng thái 0 kết quả đã được sửa tử tế. Phần dưới đây mô
-tả đường ống vẫn đang chạy nguyên vẹn phía sau.
+**Ô tìm kiếm ĐANG BẬT, có gợi ý lúc gõ** (`HIEN_O_TIM_KIEM = true` trong
+`SiteHeader.tsx`). Chủ shop tạm ẩn rồi mở lại ngay trong ngày 18/09/2026 —
+xem QĐ-11. Ba điều đừng gỡ khỏi `SearchBox.tsx`:
+
+- **debounce 280ms + AbortController.** Không có AbortController thì gõ "phao"
+  rồi "phao dien", phản hồi "phao" về sau cùng sẽ đè kết quả đúng bằng kết quả
+  cũ. Đo bằng Chrome thật: 9 phím gom lại còn **1** lệnh gọi.
+- **`suggest=1` trong URL gợi ý.** Backend thấy cờ này thì bỏ qua `logSearch`.
+  Thiếu nó thì mỗi nhịp gõ đẻ một dòng `search_logs` và bảng từ khoá chỉ còn
+  những mảnh chữ dở dang — mất hẳn giá trị duy nhất của nó.
+- **Lỗi mạng KHÁC "không có hàng".** Bản đầu gộp hai thứ: fetch hỏng thì đặt
+  danh sách rỗng, và khách thấy "Không có sản phẩm nào khớp". Một cú nghẽn 4G
+  đủ để web nói dối rằng shop không bán món khách tìm. Nay tách thành "Chưa
+  tải được gợi ý". Bắt được nhờ chặn lệnh gọi bằng
+  `Network.setBlockedURLs` trên Chrome thật — không phép thử nào khác thấy.
+
+Khay 0 kết quả đưa thẳng nút Zalo (số lấy từ `site_config`, **không** phải
+`NEXT_PUBLIC_ZALO` — biến đó không tồn tại, dùng nó thì link ra `zalo.me/`
+cụt đuôi mà không báo lỗi gì).
+
+**Thử giao diện bằng Chrome thật, không đoán.** Node 22 có sẵn `WebSocket` nên
+điều khiển Chrome qua DevTools Protocol không cần cài gì:
+`google-chrome --headless=new --remote-debugging-port=9333`, lấy target bằng
+`curl -X PUT localhost:9333/json/new`, rồi `Input.insertText` để gõ từng ký
+tự. Kịch bản mẫu còn ở scratchpad phiên 18/09. **Nhớ khớp `WEB_URL` của BE với
+đúng cổng web đang chạy** — lệch cổng thì CORS chặn, và triệu chứng trông y
+hệt "không có sản phẩm nào".
+
+**Và kiểm `next start` có thật sự chiếm được cổng.** Đã mất một vòng đo nhầm
+vì server cũ chưa chết: `next start` ngã `EADDRINUSE` rồi im, curl vẫn 200 vì
+bản CŨ đang phục vụ. Đối chiếu tên chunk có băm nội dung trước khi tin phép đo.
+
+Phần dưới đây mô tả đường ống phía sau.
 
 **Ô tìm kiếm: đường ống đã xong từ lâu, chỉ thiếu nút bấm.** Tới 18/09/2026 ô
 tìm kiếm ở header là ô CHẾT — có `<input>`, có nút "🔍 Tìm", không có

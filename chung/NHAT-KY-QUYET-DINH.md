@@ -176,7 +176,24 @@ lớn ở quy mô này chỉ bắt khách bấm thêm.
 **Dự đoán:** tỉ lệ khách vào `/` rồi mở một trang `/san-pham/...` **nhích
 lên**, vì bỏ được một chặng trung gian.
 
-#### Phần tìm kiếm: ĐÃ RÚT LẠI cùng ngày
+#### Phần tìm kiếm: ẩn rồi mở lại trong cùng ngày — chốt là BẬT
+
+Chủ shop tạm ẩn, rồi **mở lại ngay trong ngày** kèm yêu cầu thêm gợi ý có
+debounce. Kết cục tốt hơn cả hai phương án ban đầu: gợi ý lúc gõ **giải luôn
+mối lo đã khiến ẩn nó đi** — khách thấy hàng ngay trong lúc gõ nên gần như
+không rơi vào trang 0 kết quả nữa, còn khi thật sự không có hàng thì khay đưa
+thẳng nút Zalo, tức đẩy vào đúng kênh chốt đơn thật của shop.
+
+`search_logs` vẫn đo được vì truy vấn gợi ý gắn cờ `suggest=1` và không ghi
+log — chỉ lần tìm có chủ ý mới vào bảng. Nên phép đo 4 tuần dưới đây vẫn dùng
+được nguyên.
+
+**Dự đoán (giữ nguyên):** sau 4 tuần có **≥ 30 lượt tìm**, trong đó ≥ 5 từ
+khoá `result_count = 0` — nhóm 0 kết quả là danh sách khách muốn mua mà shop
+không có. **Dưới 10 lượt** thì kết luận khách duyệt theo danh mục chứ không
+tìm, và thôi đầu tư vào tìm kiếm.
+
+#### Ghi lại phần đã rút lại, vì lý do vẫn đúng
 
 Tôi định đo `search_logs` trong 4 tuần để xem khách muốn mua gì mà shop không
 có. **Chủ shop quyết tạm ẩn ô tìm kiếm** — 11 mã hàng thì chưa cần.

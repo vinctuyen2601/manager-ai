@@ -246,6 +246,42 @@ Cả hai CSDL nay đều dùng `TIMESTAMPTZ`. Đổi múi giờ là **một bư�
 `AT TIME ZONE 'Asia/Ho_Chi_Minh'`. Công thức hai bước kiểu cũ là **dấu hiệu
 lỗi**, không phải phong cách.
 
+### CSDL thử phải dựng bằng MIGRATION, không bằng `DB_SYNC`
+
+**Lược đồ suy từ entity KHÁC lược đồ production.** Đã trả giá đúng hai lần,
+lần sau nặng hơn lần trước:
+
+- GaRutin: chạy BE ở chế độ dev đưa `created_at` về `TIMESTAMP` trần
+- 17fishing 18/09/2026: `products.category_id` là **varchar** khi dựng bằng
+  `DB_SYNC=true`, nhưng là **uuid** khi dựng bằng migration. Một truy vấn so
+  `dm.id::text = p.category_id` **qua sạch 12 phép kiểm ở máy** rồi làm
+  **mọi lệnh tìm kiếm trên production trả 500**
+
+Kiểu hỏng này độc ở chỗ phép kiểm ở máy càng nhiều thì càng tự tin sai. Không
+có dấu hiệu nào báo rằng mình đang đo trên một lược đồ khác.
+
+**Cách dựng đúng:**
+
+```bash
+docker run -d --name kiem-pg -e POSTGRES_PASSWORD=pw -e POSTGRES_USER=postgres \
+  -e POSTGRES_DB=smoke -p 55448:5432 postgres:16
+# DATABASE_URL ép ssl -> "server does not support SSL". Phải dùng biến RỜI.
+env -u DATABASE_URL DB_HOST=localhost DB_PORT=55448 DB_USERNAME=postgres \
+  DB_PASSWORD=pw DB_NAME=smoke npm run migration:run
+```
+
+Rồi **xác minh** kiểu cột trước khi tin phép kiểm:
+
+```sql
+SELECT table_name||'.'||column_name||' = '||data_type
+  FROM information_schema.columns
+ WHERE (table_name='products'   AND column_name='category_id')
+    OR (table_name='categories' AND column_name='id');
+```
+
+**Khi so hai cột khoá ngoại thì ép CẢ HAI vế** (`a.id::text = b.x::text`) —
+đúng với mọi tổ hợp kiểu, và không ném lỗi khi cột chứa giá trị rác.
+
 ### Đo đạc
 
 **Sự kiện lạ gửi lên `/track` bị âm thầm biến thành `'view'`.** Cả hai backend
