@@ -411,10 +411,13 @@ khách thêm giỏ sớm là mất mà không ai biết.
 Với GA phải **đảo thứ tự** so với đoạn mẫu của Google: `dataLayer` khai trước,
 `gtag.js` nạp sau, để lời gọi sớm rơi vào mảng rồi được đọc lại.
 
-**Còn treo, cần chủ shop quyết:** ngay cả sau khi hoãn, hai script đo vẫn tốn
-**9 điểm Performance, 390ms TBT, 419 KB và 5 giây TTI**. Đáng giữ hay không phụ
-thuộc hai câu chưa có lời đáp — shop **có chạy quảng cáo Facebook không**, và
-**có ai mở Google Analytics không** khi CMS đã có bảng phân tích riêng.
+**ĐÃ CHỐT 18/09/2026: giữ cả Google Analytics lẫn Facebook Pixel.** Chủ shop
+xem mức 82 điểm là ổn và không bỏ script nào.
+
+Cái giá đã biết và đã chấp nhận: hai script đo vẫn tốn **9 điểm Performance,
+390ms TBT, 419 KB và 5 giây TTI**. **Đừng nêu lại chuyện bỏ chúng** trừ khi có
+dữ liệu mới — ví dụ đo được rằng khách rời trang vì chờ, hoặc chủ shop nói
+không còn dùng tới một trong hai.
 
 **Vì sao chuyện này quan trọng hơn vẻ ngoài:** khách từ Facebook xem **6,8
 trang mỗi người**, gấp 3,4 lần mọi nguồn khác, và là nguồn duy nhất có đơn được
