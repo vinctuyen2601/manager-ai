@@ -113,6 +113,38 @@ khoảng 5–12% tổng hiển thị blog. Nhấp thì gần như không đổi 
 liên kết gãy 0 (từ 6) · sitemap 91 URL blog.
 **Kiểm ngày:** 17/12/2026 · **Trạng thái:** ⏳ chờ kiểm
 
+### QĐ-10 · Khối sản phẩm dưới bài: một hàng cuộn ngang — cả hai shop
+**Vì sao:** chủ shop hỏi có thể theo dõi từng người đọc bài nào để gợi ý nội
+dung cho khách mới không. Đo trước khi xây: **dữ liệu có đủ** (`page_visit` lưu
+`visitor_id` + `path` + thời gian), nhưng **quá mỏng để gợi ý**.
+
+Bài đọc nhiều nhất của 17fishing: **135 lượt trên 135 khách riêng** — gần như
+không ai đọc bài thứ hai. GaRutin 103 lượt / 69 khách. Gợi ý kiểu "đọc A thường
+đọc tiếp B" cần nhiều người đọc từ 2 bài trở lên; ở đây gần như không có cặp nào.
+
+Chỗ nghẽn nằm ở bố cục: khối "Bài viết liên quan" **đã có sẵn 4 bài** dưới mỗi
+bài, nhưng nằm dưới một lưới 2 cột × 4 sản phẩm — trên điện thoại là gần một
+màn hình phải cuộn qua. Chủ shop chọn cách gọn hơn đề xuất ban đầu của tôi: giữ
+sản phẩm ở trên nhưng **cuộn ngang một hàng**, nên không phải chọn giữa bán hàng
+và giữ người đọc.
+
+**Dự đoán:** số bài mỗi khách trên các bài blog mạnh nhất nhích từ **1,00 lên
+1,05 – 1,20** ở 17fishing trong 4 tuần. Hiệu ứng nhỏ vì đây chỉ là tiết kiệm
+một màn hình cuộn.
+**Nếu KHÔNG nhúc nhích** thì giả thuyết "khối bị chôn" sai, và **dừng đoán về bố
+cục** — chuyển sang giả thuyết khác (nội dung không có lý do đọc tiếp, hoặc
+người tới từ tìm kiếm vốn chỉ cần một câu trả lời rồi đi).
+
+**Cách đo lại:** `GET /admin/analytics/table?from=…&to=…`, lọc đường dẫn
+`/blog/`, lấy `visits / uniqueVisitors` của 4 bài nhiều lượt nhất.
+**Lưu ý đo:** tham số là `from`/`to`, **`?days=` bị bỏ qua**.
+
+**Số đo nền 18/09/2026 (30 ngày):**
+- 17fishing: 1.341 lượt / 663 khách · bài top `huong-dan-cach-buoc-luoi-cau` 135/135 = **1,00**
+- GaRutin: 983 lượt / 379 khách · bài top `mua-ga-rutin-tp-hcm` 103/69 = **1,49**
+
+**Kiểm ngày:** 16/10/2026 · **Trạng thái:** ⏳ chờ kiểm
+
 ---
 
 ## Dự đoán đã rút lại
