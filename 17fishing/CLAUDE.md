@@ -683,6 +683,54 @@ LẶNG — chạy `npm run kiem-khoi` để so với registry bên BE.
 **`TrackVisit` bỏ qua khung nhúng và trang công cụ.** Thêm trang công cụ mới thì
 phải thêm vào danh sách đó, nếu không nó tự đếm mình thành lượt khách.
 
+**Ô tìm kiếm: đường ống đã xong từ lâu, chỉ thiếu nút bấm.** Tới 18/09/2026 ô
+tìm kiếm ở header là ô CHẾT — có `<input>`, có nút "🔍 Tìm", không có
+`onChange`, `onClick` hay `<form>` nào. Trong khi mọi mảnh khác đã dựng đủ:
+
+- `products.service` nhận `?search=` và **`unaccent` cả hai vế** — khách gõ
+  "can cau" vẫn khớp "Cần câu" (đã đo: ra 1 kết quả đúng)
+- tìm cả trong `brand`, nên gõ "chuanze" cũng ra
+- `/san-pham` đã biết đổi `<h1>` thành `Kết quả: "..."` và đặt `noindex`
+- `products.service` **tự ghi mọi từ khoá** vào bảng `search_logs` kèm
+  `result_count`, không cần web gọi thêm gì
+- admin đã có `GET /admin/analytics/searches` (thêm `onlyEmpty=1` để lấy đúng
+  nhóm 0 kết quả)
+
+Vì thiếu đúng sợi dây đó nên bảng từ khoá rỗng suốt, và hồ sơ này từng ghi
+nhầm là "không có tín hiệu ô tìm kiếm" — **không phải chưa xây, mà là đã xây
+xong rồi bỏ quên nút bấm.** Bài học chung: trước khi kết luận "thiếu tính
+năng", dò ngược đường ống từ CSDL ra.
+
+Nay là `components/shared/SearchBox.tsx`. Hai điều đừng gỡ:
+- `action="/san-pham" method="get"` **thật** chứ không chỉ `onSubmit` — khách
+  4G bấm tìm trong một hai giây đầu vẫn đi được khi React chưa hydrate xong
+- **không** đọc `useSearchParams()` để điền sẵn từ khoá cũ: header nằm trong
+  layout gốc, hook đó sẽ kéo MỌI trang của web sang render phía client
+
+`search_logs.visitor_id` sẽ **luôn rỗng**: web gọi API từ phía server nên
+không mang theo `visitor_id` ở localStorage của khách. Từ khoá vẫn ghi đúng —
+chỉ là không nối được với người. Đừng đi sửa, chưa đáng.
+
+**4 dòng đầu bảng `search_logs` là truy vấn thử của tôi** ngày 18/09/2026
+(`phao`, `can cau`, `may cau`, `mai cheo`), `visitor_id` rỗng. Bỏ qua khi đọc
+thống kê lần đầu.
+
+**Tìm kiếm khớp theo TỪNG TỪ, đừng đổi về cả cụm.** Ngay hôm nối ô tìm kiếm,
+bảng từ khoá lộ ra `"ghe cau"` → **0 kết quả** dù shop bán hai cái ghế: điều
+kiện cũ là `ILIKE '%<cả câu>%'`, mà không tên nào chứa đúng chuỗi đó. Nay mỗi
+từ phải có mặt ở **tên, thương hiệu hoặc tên danh mục**, nối bằng AND.
+
+Danh mục tra bằng `EXISTS`, **không** bằng `leftJoin('categories', …)`:
+TypeORM không nhận tên bảng thô ở đó khi truy vấn có `take`/`skip` và ngã 500
+với `Cannot read properties of undefined (reading 'databaseName')`. Đã thử và
+đã ngã — đừng "dọn" EXISTS thành join.
+
+`dm.id::text = p.category_id` chứ đừng ép chiều ngược lại: `categories.id` là
+uuid còn `products.category_id` là varchar.
+
+**GaRutin KHÔNG có ô tìm kiếm** và `products.service` bên đó không có nhánh
+`search` nào — lỗi này không lan sang. Kiểm 18/09/2026.
+
 ### 17fishing-CMS
 
 **Khung xem trước NHÚNG trang thật qua iframe**, không vẽ lại giao diện. Vẽ lại

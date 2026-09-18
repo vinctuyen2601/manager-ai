@@ -39,7 +39,7 @@ nhiệm bảy việc:
 | | Trách nhiệm | Tình trạng dữ liệu |
 |---|---|---|
 | 1 | Hàng trên kệ đúng, đủ, đẹp, đúng giá | **đủ dữ liệu — mạnh nhất** |
-| 2 | Biết khách vào bao nhiêu, từ đâu, xem gì | đủ, trừ tín hiệu ô tìm kiếm |
+| 2 | Biết khách vào bao nhiêu, từ đâu, xem gì | **đủ** — ô tìm kiếm nối 18/09/2026 |
 | 3 | Nhìn chỗ khách ngập ngừng rồi bỏ đi | **mỏng** — quá ít đơn để kết luận |
 | 4 | Đơn hàng và hậu mãi | **mù** — xem mục 4 |
 | 5 | Kéo khách mới về (SEO, nội dung, quảng cáo) | đủ với GaRutin |
@@ -224,8 +224,18 @@ không có gì để tick.
 **ba lần**. Đừng bỏ dấu khi so khớp trừ khi thật sự cần, và nếu cần thì đừng
 ánh xạ những cặp dễ chập.
 
-**So khớp phải theo TẬP TỪ, không theo chuỗi con.** `indexOf` làm "gô" khớp vào
-giữa "gôm", và mọi từ khoá đều báo là đã có bài.
+**So khớp phải theo TẬP TỪ, không theo chuỗi con.** Đã dính **hai lần, hai chỗ
+khác hẳn nhau**:
+
+- `indexOf` làm "gô" khớp vào giữa "gôm", và mọi từ khoá đều báo là đã có bài
+- tìm sản phẩm dùng `ILIKE '%<cả câu>%'`: khách gõ **"ghe cau"** ra **0 kết
+  quả** dù shop bán hai cái ghế, chỉ vì không tên nào chứa đúng chuỗi đó —
+  "Ghế Săn Hàng Zhongzhou…" và "GHẾ ĐỊA HÌNH AK POWER - ĐỈNH CAO CÂU CÁ" có cả
+  hai từ nhưng không đứng cạnh nhau (sửa 18/09/2026)
+
+Cùng một lỗi, một lần cắn ở phía chuỗi quá HẸP (chuỗi con khớp bừa vào giữa
+từ), một lần cắn ở phía quá CHẶT (cả cụm phải liền nhau). Tách câu ra thành
+từ rồi nối bằng AND thì cả hai hướng đều đúng.
 
 **Dấu huyền trong chú thích phá vỡ template literal của TS.** Viết chú thích
 tiếng Việt bên trong chuỗi `` ` `` thì tránh dấu nháy ngược, hoặc thoát nó.
@@ -235,6 +245,29 @@ tiếng Việt bên trong chuỗi `` ` `` thì tránh dấu nháy ngược, ho�
 Cả hai CSDL nay đều dùng `TIMESTAMPTZ`. Đổi múi giờ là **một bước**:
 `AT TIME ZONE 'Asia/Ho_Chi_Minh'`. Công thức hai bước kiểu cũ là **dấu hiệu
 lỗi**, không phải phong cách.
+
+### Đo đạc
+
+**Sự kiện lạ gửi lên `/track` bị âm thầm biến thành `'view'`.** Cả hai backend
+đều có whitelist sự kiện phễu, và nhánh dự phòng **không** vứt bỏ giá trị lạ —
+nó ghi thành lượt xem trang. Nên thêm một sự kiện mới ở web mà quên thêm vào
+backend thì hỏng **hai lần cùng lúc**: sự kiện mới không bao giờ xuất hiện, và
+mỗi lần nó xảy ra lại cộng thêm một lượt xem trang giả.
+
+Đã dính 18/09/2026 với `zalo_click` và `phone_click`: tôi đọc thấy
+`event?: string` trong chữ ký hàm rồi kết luận "backend nhận mọi chuỗi, không
+cần sửa". Whitelist nằm cách đó bảy dòng. Sai lặng lẽ — không lỗi, không cảnh
+báo, chỉ có số liệu sai.
+
+Hai chỗ phải sửa, **viết khác nhau ở hai shop**:
+- `17fishing-BE`: hằng `EVENTS` ở đầu `tracking.service.ts`
+- `GaRutinBE`: mảng viết nội dòng bên trong hàm `track()` — rà theo tên
+  `EVENTS` sẽ **không thấy**
+
+Cột `event` là `varchar(32)` ở cả hai nên thêm giá trị **không cần migration**.
+
+**Quy tắc từ nay:** thêm sự kiện đo mới thì sửa backend TRƯỚC, web SAU. Và sau
+khi deploy phải hỏi thật một câu vào bảng xem sự kiện đó có dòng nào chưa.
 
 ---
 

@@ -145,6 +145,62 @@ người tới từ tìm kiếm vốn chỉ cần một câu trả lời rồi �
 
 **Kiểm ngày:** 16/10/2026 · **Trạng thái:** ⏳ chờ kiểm
 
+### QĐ-11 · Trang chủ 17fishing: nối ô tìm kiếm, gộp hai khối sản phẩm
+**Vì sao:** chủ shop muốn trang chủ "chuyên nghiệp hơn". Đo trước khi thiết kế
+thì bốn thứ hỏng lộ ra, và không bản thiết kế nào chữa được chúng:
+
+1. **Ô tìm kiếm ở header là ô chết** — có input, có nút, không có `onChange`,
+   `onClick` hay `<form>` nào. Cả đường ống phía sau thì đã dựng sẵn từ lâu:
+   backend nhận `?search=` và `unaccent` cả hai vế, `/san-pham` đã biết đổi
+   tiêu đề thành `Kết quả: "..."`, `products.service` tự ghi mọi từ khoá vào
+   bảng `search_logs` kèm `result_count`, admin đã có
+   `GET /admin/analytics/searches`. Thiếu đúng một sợi dây ở giao diện.
+   Đây chính là lời giải cho dòng "đủ, trừ tín hiệu ô tìm kiếm" trong hồ sơ —
+   **không phải chưa xây, mà là đã xây xong rồi bỏ quên nút bấm.**
+   Ô đó còn để `hidden md:flex`: 68% khách dùng điện thoại không hề có đường
+   nào để tìm sản phẩm.
+2. **Hai khối sản phẩm trùng nhau 7/8.** Shop có 11 mã hàng mà trang chủ dựng
+   riêng "Bán chạy" (`featured=true&limit=8`) và "Sản phẩm mới đăng"
+   (`limit=8`) — trên điện thoại là ~1.400px cuộn để gặp lại thứ vừa xem.
+3. **Dải thương hiệu viết cứng** trong `page.tsx`, thiếu ISENI dù shop đang
+   bán lưỡi câu carbon ISENI.
+4. **Dải tin cậy đứng trên hero**, ăn ~112px đầu màn hình điện thoại: khách
+   chưa biết shop bán gì đã phải đọc chính sách đổi trả.
+
+**Chỗ xu thế 2026 KHÔNG áp dụng:** câu đang được lặp nhiều nhất là "lưới sản
+phẩm đã chết, tuyển chọn mới là thứ chuyển đổi". Nó viết cho shop hàng trăm mã
+hàng, nơi lưới làm khách ngợp. Với **11 mã**, tuyển chọn chính là **hiện hết**
+— và mọi sản phẩm cách trang chủ đúng một cú chạm. Bắt chước editorial của DTC
+lớn ở quy mô này chỉ bắt khách bấm thêm.
+
+**Dự đoán:**
+- Bảng từ khoá `search_logs` đang **rỗng tuyệt đối**; sau 4 tuần có
+  **≥ 30 lượt tìm**, trong đó ≥ 5 từ khoá `result_count = 0`. Nhóm 0 kết quả
+  mới là phần đáng tiền: đó là danh sách khách muốn mua mà shop không có.
+- Tỉ lệ khách vào `/` rồi mở một trang `/san-pham/...` **nhích lên**, vì bỏ
+  được một chặng trung gian.
+
+**Nếu sau 4 tuần dưới 10 lượt tìm** thì kết luận: khách của shop không tìm bằng
+ô tìm kiếm mà duyệt theo danh mục — **thôi đầu tư vào tìm kiếm**, dồn chỗ đó
+cho điều hướng danh mục.
+
+**Cách đo lại:**
+- `GET /admin/analytics/searches?from=…&to=…` và `&onlyEmpty=1`
+- `GET /admin/analytics/table?from=…&to=…`, so lượt `/` với tổng lượt
+  `/san-pham/...`
+- Tham số là `from`/`to`; **`?days=` bị bỏ qua không báo gì.**
+
+**Số đo nền 18/09/2026:**
+- `search_logs`: **0 dòng thật** (4 dòng `phao`, `can cau`, `may cau`,
+  `mai cheo` là truy vấn thử của tôi lúc kiểm, `visitor_id` rỗng — bỏ qua)
+- Trang chủ 30 ngày: **604 lượt / 184 khách**, 28% toàn bộ lượt xem
+- `/san-pham`: 476 lượt / 116 khách · 11 sản phẩm · 5 thương hiệu
+- Trên Google trang chủ chỉ có **48 hiển thị / 1 nhấp** — trang chủ **không**
+  phải cửa vào từ tìm kiếm, khách tới từ Facebook và link trực tiếp
+
+**Kiểm ngày:** 16/10/2026 · **Trạng thái:** ⏳ chờ kiểm
+
+
 ---
 
 ## Dự đoán đã rút lại
