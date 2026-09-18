@@ -260,6 +260,62 @@ Chỉ 46 từ khoá ở hạng >15 và chúng chỉ có 60 hiển thị — **đ
 
 ---
 
+### Số liệu gà — CHỐT 18/09/2026, đừng suy lại
+
+**70–80 gram · 150–250 trứng mỗi năm.** Chủ trại chốt, lấy gian hàng làm nguồn
+đúng vì số đó do người cầm gà viết.
+
+Trước đó blog và gian hàng đá nhau: blog ghi **50–70g** (13 lần) và **250–300
+trứng** (6 lần), gian hàng ghi 70–80g và 150–250. Khách đọc blog rồi mở trang
+sản phẩm là thấy ngay. Đã sửa 16 bài blog cho khớp.
+
+**Ba chỗ KHÔNG được thay mù khi đụng tới hai con số này:**
+
+1. `nuoi-ga-rutin-mua-dong` có `50–70cm` — đó là **chiều cao kê chuồng**, không
+   phải cân nặng. Mẫu thay bắt buộc phải đòi đơn vị gram.
+2. `ga-rutin-coi-coc-cham-lon` tách `50–70g (mái) và 40–55g (trống)`. Đổi riêng
+   vế mái thì con số trống thành vô nghĩa — phải viết lại cả cụm.
+3. `ga-rutin-vs-chim-cut` là **bảng so sánh**: cột chim cút Nhật giữ nguyên
+   250–300, đó là số thật của loài đó. Chỉ đổi cột gà rutin.
+
+**Đổi số thì phải sửa cả câu quanh nó.** "150–250 quả/năm" mà vẫn viết "gần như
+ngày nào cũng đẻ" là tự mâu thuẫn; phép tính "5 mái = 1.250–1.500 quả" cũng phải
+đổi theo. Sửa xong ba chỗ đó. Tiện tay sửa luôn một lỗi hiển nhiên có sẵn:
+`ga-rutin-de-trung-2` viết "một con mái đẻ **5 quả mỗi ngày**".
+
+**`&nbsp;` làm lọt lưới.** `cach-cham-soc-ga-rutin` viết `50–70&nbsp;g` nên mẫu
+`\s*` không bắt được, dò trên văn bản đã bóc thẻ thì thấy mà thay trên HTML thô
+thì trượt. Mẫu phải nhận cả `&nbsp;`.
+
+### 20 mô tả sản phẩm — viết lại 18/09/2026
+
+Hiện trạng trước khi viết: **14/20 sản phẩm chỉ có 15–32 từ** (bốn gạch đầu dòng
+emoji), và cả 20 cộng lại được **25 hiển thị trong 90 ngày**. Hai chuồng dùng
+chung một mô tả chỉ khác kích thước; ba combo cũng vậy.
+
+**Cái khó là 13 sản phẩm gần như giống hệt nhau** — cùng một con gà, khác mỗi bộ
+lông. Viết 13 trang cùng nội dung chăm sóc là tự tạo 13 trang cạnh nhau. Cách
+làm: mỗi trang chỉ giữ phần RIÊNG (nhìn thế nào ra màu này, có đoán được trống
+mái không, giá vì sao chênh, ghép với màu nào), phần chung đẩy sang blog bằng
+liên kết. Cổng kiểm có thêm phép đo **tỉ lệ câu trùng giữa mọi cặp mô tả**;
+kết quả 0/190 cặp trùng.
+
+**Nhắm `gà rutin ngũ sắc`** — từ khoá có 3 biến thể trong bảng gợi ý mà chưa
+trang nào nhận. Đích là `trong-hac-he-7-mau-ga-rutin`, và nội dung nói đúng sự
+thật: bộ lông bảy màu là lông tự nhiên của con TRỐNG, mái cùng dòng nâu trơn.
+
+**Bẫy: hai sản phẩm trùng tên hệt nhau.** Cả `mai-vang-ga-rutin-cho-trung` và
+`mai-vang-ga-rutin` đều tên "Mái vàng", cùng giá 70.000đ. Hàm tìm theo tên trả
+về con đầu tiên → sinh ra một trang **tự trỏ vào chính nó**. Tìm sản phẩm theo
+**slug**, đừng theo tên. Cần đổi tên một trong hai cho khách khỏi chọn nhầm.
+
+**Bẫy so khớp:** `/san-pham/long-ga-rutin-cao-cap` là tiền tố của
+`...-cao-cap-size-lon`, và `/san-pham/mai-vang-ga-rutin` là tiền tố của
+`...-cho-trung`. Dò bằng `includes` báo tự trỏ giả ở hai món. Chặn ở dấu nháy.
+
+**Số đo sau:** 20/20 mô tả sạch giọng · 0 quá mỏng · 0 liên kết gãy · 0 cặp
+trùng nội dung · 0 sản phẩm không được món nào trỏ tới · 20/20 trang trả 200.
+
 ### Liên kết nội bộ — 28 chỗ gãy, sửa 18/09/2026
 
 Phát hiện khi đối chiếu với 17fishing: `noi-noi-bo.ts` hai shop **mã giống hệt**,
