@@ -260,6 +260,40 @@ Chỉ 46 từ khoá ở hạng >15 và chúng chỉ có 60 hiển thị — **đ
 
 ---
 
+### Liên kết nội bộ — 28 chỗ gãy, sửa 18/09/2026
+
+Phát hiện khi đối chiếu với 17fishing: `noi-noi-bo.ts` hai shop **mã giống hệt**,
+chỉ khác chú thích. Sửa một bên xong kiểm bên kia là đúng luật, và lần này bên
+GaRutin nặng hơn.
+
+**13 liên kết trỏ tới `/blog/ga-rutin`** — không có bài nào slug đó, web trả 404.
+Cả 13 neo đều kiểu "blog của chúng tôi" / "bài viết", tức chúng muốn về trang
+chỉ mục `/blog` (486 hiển thị, 7 nhấp trong 90 ngày). Đã trỏ lại về `/blog`.
+
+**15 liên kết nữa trỏ tới slug BỊA** — đúng thứ mà chú thích đầu `noi-noi-bo.ts`
+cảnh báo, và là lần thứ hai: `cham-soc-ga-rutin` (thật là `cach-cham-soc-ga-rutin`),
+`ga-rutin-la-gi` (thật là `giong-ga-rutin-nho-nhat-the-gioi`), `nuoi-ga-rutin`,
+`cach-nuoi-ga-rutin`, `kinh-nghiem-nuoi-ga-rutin`, `ga-rutin-bi-ky-sinh-trung`,
+`cach-nhan-giong-ga-rutin`, `huong-dan-nuoi-ga-rutin-trong-nha`. Mỗi cái đều có
+bài thật tương ứng — đã ánh xạ theo danh sách 52 slug sống, không đoán.
+
+**Đếm liên kết gãy phải quét TOÀN BỘ slug, đừng dò một slug.** Lần đầu tôi chỉ dò
+`/blog/ga-rutin` nên báo "13 cái, xong" trong khi thực tế còn 15 cái khác.
+
+**18 neo "nuôi gà rutin" trỏ vào bài MÙA ĐÔNG.** Bài đó có **0 hiển thị** trong
+GSC, nên 18 neo mang cụm lõi của shop đang dồn vào một trang Google không hề
+hiện. Đích đúng là `nuoi-ga-rutin-tai-nha`.
+
+Sửa nội dung **không đủ**: bộ nối chạy lúc lưu và chèn lại ngay — 9/26 bài bị
+chèn lại trong chính lệnh PATCH. Phải đổi **cụm** trước: đổi thẻ `nuôi gà rutin`
+thành `cách nuôi gà rutin tại nhà`, khi đó bài đại diện trở thành chính bài trụ
+(dòng 57 chọn bài đầu tiên có cụm trong TIÊU ĐỀ). Sau đó vá nội dung mới đứng.
+
+**Số đo sau khi sửa:** 52 bài sống · liên kết gãy 0 (từ 28) · mồ côi 0/52
+(từ 5) · 6,6 liên kết mỗi bài.
+
+---
+
 ## 6. Bản đồ API quản trị
 
 Tất cả sau `JwtAuthGuard`, tiền tố `https://api.garutin.com/api`.
