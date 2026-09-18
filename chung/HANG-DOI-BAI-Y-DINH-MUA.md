@@ -35,7 +35,80 @@ máy chủ và tự kết luận `voi-toi-duoc` hoặc `kho-voi-toi`.
 
 ---
 
-## 17fishing — VIẾT MỚI, 3 bài
+## ⚠ PHÁT HIỆN 18/09/2026 — "mua X" KHÔNG phải truy vấn của bài blog
+
+Chủ shop nêu cụm `mua cần câu`, `mua phao câu`, `mua phao câu chép`,
+`mua phao câu điện`. Đo kiểu trang đang xếp hạng bằng
+`POST /admin/keywords/doi-thu` — 4 truy vấn, khoảng 35 kết quả:
+
+| loại trang đang xếp hạng | số kết quả |
+|---|---|
+| trang danh mục | ~11 |
+| trang chủ shop | 3 |
+| trang sản phẩm / sàn | ~7 |
+| mạng xã hội | 5 |
+| **bài blog** | **1** |
+
+**Đúng MỘT kết quả trên ~35 là bài blog.** Google trả trang hàng cho truy vấn
+"mua X", không trả bài viết. Viết bài blog đặt tên "mua cần câu" là đánh sai
+định dạng — dù bài có hay đến đâu.
+
+### Việc đáng làm nhất, chưa làm: viết nội dung cho TRANG DANH MỤC
+
+Đo `/san-pham?cat=phao-cau-ca` và `/san-pham?cat=cau-dai` ngày 18/09/2026:
+
+- có `<title>`, có meta description, có `<h1>` — **đủ phần đầu**
+- **không một đoạn văn nào trong thân trang.** Toàn trang 276–300 từ, gần hết
+  là menu, tên sản phẩm và chân trang
+
+Đối thủ đang đứng đầu (vuadocau, vietnam-fishing, ngocbienfishing) đều có khối
+chữ mô tả trên trang danh mục. Đây là chỗ chênh lệch rõ nhất và rẻ nhất để bù.
+
+**Đề xuất:** thêm một khối 150–250 từ cho mỗi danh mục, lấy từ hiểu biết đã có
+trong mô tả sản phẩm (chọn tải chì theo gió, chọn cỡ cần theo bờ hồ…). Sáu danh
+mục: `combo`, `cau-dai`, `ghe-cau-ca`, `may-cau`, `phao-cau-ca`, `phu-kien`.
+
+Ghi chú: meta description của `phao-cau-ca` đang chứa cụm cấm "một cách".
+
+### Vì sao KHÔNG viết bài trùng tên từ khoá
+
+Shop đã có bài cho cả ba ý chủ shop nêu — đẻ bài thứ hai là tự cạnh tranh:
+
+| ý | bài đã có | dài |
+|---|---|---|
+| giá cần câu tay | `top-5-can-cau-tay-ua-thich-nhat` (*Cần Câu Tay Bao Nhiêu Tiền Là Đủ?*) | 729 từ |
+| phao điện | `huong-dan-lua-chon-va-su-dung-phao-dien-cau-dem` | 603 từ |
+| phao câu đài | `chon-phao-cau-dai-chuan-nhat` | 621 từ |
+
+---
+
+## 17fishing — ĐÃ VIẾT 18/09/2026, 3 bài
+
+Chọn ba **chỗ trống thật**, đo bằng so khớp tập từ trên 89 bài sống (không dùng
+`indexOf` — xem bẫy "tập từ, không chuỗi con"):
+
+| chủ đề | bài cũ khớp | đã viết |
+|---|---|---|
+| địa điểm mua / Hà Nội | **0** | `mua-do-cau-ca-o-ha-noi` |
+| so 3 phao đang bán kèm giá | chưa bài nào | `mua-phao-cau-chep-ba-loai-dang-ban` |
+| bộ đồ đầu tiên / combo | **0** | `mua-bo-do-cau-dai-dau-tien-het-bao-nhieu` |
+
+Cả ba mang từ khoá chủ shop nêu vào thân bài tự nhiên và đổ người đọc về trang
+danh mục + trang sản phẩm — nơi thật sự xếp hạng được.
+
+**Số đo lúc đăng:** 553–637 từ · câu TB 11,2–13,6 · giọng văn sạch cả ba ·
+liên kết sản phẩm 3–6 mỗi bài · liên kết danh mục 1–5 · 0 liên kết gãy.
+Đã bổ sung liên kết VÀO từ 3 bài cũ (luật "mỗi bài mới phải có bài cũ trỏ
+tới"): `top-5-can-cau-tay-ua-thich-nhat`, `chon-phao-cau-dai-chuan-nhat`,
+`can-cau-tay-kinh-nghiem-lua-chon-phu-hop`.
+
+**Kiểm ngày 18/10/2026:** ba bài này có hiển thị trên Search Console không, và
+có bài nào kéo được nhấp vào `/san-pham` không. Nếu hiển thị gần 0 thì càng
+củng cố kết luận ở trên — dồn sức vào trang danh mục, thôi viết bài cho "mua X".
+
+---
+
+## 17fishing — kế hoạch cũ (giữ để đối chiếu)
 
 Kho ở **Đông Tiên Hưng, Hưng Yên** (sát Hà Nội). Chưa có bài ý định mua nào:
 2/89 bài, trong khi GaRutin 8/52.
