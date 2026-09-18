@@ -70,6 +70,46 @@ Không có gì ở dòng 1 và 2 thì nói "không có gì" rồi sang dòng 3 n
 
 ---
 
+## HAI KÊNH, HAI VIỆC KHÁC NHAU — chủ shop nói 18/09/2026
+
+Đây là **lời chủ shop**, không phải kết luận từ số liệu. Ghi lại vì nó đổi cách
+đọc mọi bảng phân tích, và người quản lý không có cách nào tự suy ra.
+
+**Facebook = bán ngay.** Bài đăng thường gắn thẳng link sản phẩm. Người bấm vào
+là người đã thấy món hàng và muốn mua. Đích đến đúng là **trang sản phẩm**, hoặc
+trang danh mục — không phải bài viết.
+
+**Google = nâng tầm thương hiệu.** Người tìm trên Google đang tìm **kiến thức**,
+và Google ưu tiên hiện bài blog. Đường đi là *bài viết → gợi ý hàng để mua*, chứ
+không phải vào thẳng trang bán. Tệp khách này **chủ yếu để dựng uy tín**, không
+phải để chốt đơn ngay.
+
+### Điều này sửa lại ba cách đọc số
+
+1. **CTR bài blog thấp KHÔNG có nghĩa là bài vô dụng.** Đo 18/09: bài kỹ thuật
+   0–0,8% CTR, trang sản phẩm 9–14%. Trước đó tôi đọc con số này thành "viết bài
+   kỹ thuật không đáng" — sai. Hai loại trang làm hai việc khác nhau, so CTR
+   trực tiếp với nhau là so nhầm.
+
+2. **Vì vậy liên kết từ BÀI sang HÀNG mới là mắt xích quyết định của kênh
+   Google.** Không có nó thì bài viết dựng được uy tín rồi để khách đi. Đo
+   18/09 trước khi sửa: GaRutin chỉ **6/52 bài** có liên kết sang sản phẩm, và
+   bốn bài mạnh nhất cộng 4.619 hiển thị không có cái nào. Đã sửa lên 13/52.
+
+3. **Đo Facebook và Google bằng hai thước khác nhau.**
+   - Facebook: nhấp → trang sản phẩm → `zalo_click` hoặc đơn. Vòng ngắn, đo
+     được trong tuần.
+   - Google: hiển thị → nhấp vào bài → có sang trang sản phẩm không. Vòng dài,
+     đo theo tháng. Đừng trách kênh Google vì không ra đơn trong tuần.
+
+### Hệ quả cho việc viết bài
+
+Nhịp 2–3 bài mỗi tuần vẫn giữ. Nhưng mỗi bài phải có **đường dẫn sang hàng đặt
+đúng chỗ người đọc cần** — đó chính là phần "gợi ý hàng để mua" mà chủ shop nói,
+và nó là lý do tồn tại của bài viết trong mô hình này.
+
+---
+
 ## ĐO ĐƯỢC GÌ VỀ VIỆC RA TIỀN — cập nhật 18/09/2026
 
 Từ 18/09 cả hai shop ghi nhận **`zalo_click`** và **`phone_click`**, bắt bằng
