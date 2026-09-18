@@ -260,6 +260,56 @@ Chỉ 46 từ khoá ở hạng >15 và chúng chỉ có 60 hiển thị — **đ
 
 ---
 
+### 🔴 Số điện thoại MẪU trên trang nhiều nhấp nhất — sửa 18/09/2026
+
+Bài `mua-ga-rutin-tp-hcm` kết bằng *"gọi điện đến số **0909 123 456**"*. Đó là
+dãy số mẫu, không phải của trại. Số thật là **0365008997**, dùng ở 18 chỗ trên
+trang chủ và trong link `zalo.me`.
+
+Trang đó có **120 nhấp trong 90 ngày — nhiều nhất toàn site**, và số sai nằm
+đúng ở câu kêu gọi hành động. Không biết đã mất bao nhiêu khách vì nó.
+
+Đã sửa thành `<a href="tel:0365008997">0365 008 997</a>`.
+
+**Phép dò số điện thoại phải nhận dạng có dấu cách.** Mẫu đầu tiên tôi viết là
+`0\d{2}[\s.]?\d{3}[\s.]?\d{3,4}` — nó **không bắt được** `0909 123 456` vì
+nhóm giữa bị cắt. Mẫu đúng: `\b0\d{1,3}[\s.\-]?\d{3}[\s.\-]?\d{3,4}\b`.
+17fishing kiểm cùng lúc: dùng đúng `0358319291` ở cả 45 chỗ.
+
+### Blog không có cửa sang gian hàng — sửa 18/09/2026
+
+Đo 18/09: **6/52 bài** có liên kết sang sản phẩm. 17fishing là **47/89**.
+
+Bốn bài mạnh nhất sau `lam-chuong-ga-rutin` — cộng **4.619 hiển thị** — không có
+một liên kết sản phẩm nào: `giong-ga-rutin-nho-nhat-the-gioi` (1.750),
+`mua-ga-rutin-tp-hcm` (1.626 · 120 nhấp), `phan-biet-ga-rutin-khoe-manh` (730),
+`may-ap-trung-ga-rutin` (513).
+
+**Cách sửa rẻ nhất: các bài màu và bài giá ĐÃ CÓ sẵn bảng liệt kê đúng tên sản
+phẩm**, chỉ thiếu việc biến tên thành liên kết. Không thêm văn vào bài đang xếp
+hạng — chèn chữ vào đó là rủi ro không cần thiết.
+
+Hai bẫy khi làm việc này:
+
+1. **Tên trong ô bảng bị tách khỏi thẻ `<strong>`.** Nhiều ô viết
+   `<strong>Trắng</strong> (trống hoặc mái)` — phần trong ngoặc nằm NGOÀI thẻ.
+   Khớp cả cụm thì trượt; phải khớp đúng phần in đậm.
+2. **Thay cụm DÀI trước.** Không thì "Trắng" nuốt mất "Trắng đốm" và
+   "Trắng đốm vàng".
+
+**Số đo sau:** 13/52 bài có dẫn sang hàng · hiển thị được phủ **3.965 → 8.584** ·
+sản phẩm không bài nào dẫn tới **14/20 → 0/20**.
+
+### Hai phép đo của tôi báo sai hôm 18/09
+
+**`?days=` bị BỎ QUA ở mọi endpoint phân tích.** Tham số thật là `from` và `to`
+(`tracking.controller.ts`). Gọi `?days=7` trả về **toàn bộ lịch sử**, và tôi đã
+báo "826 khách Facebook trong 7 ngày" trong khi số 7 ngày thật là 30.
+
+**GaRutin giảm 42% lượt xem là ẢO.** Bộ lọc bot siết lại deploy `1b86db5` ngày
+**16/09 10:30**, đúng giữa tuần đo. Khách riêng chỉ giảm 22%, dưới ngưỡng. Mốc
+nền sạch tính từ 16/09 trở đi — đừng so với số trước ngày đó.
+
 ### Số liệu gà — CHỐT 18/09/2026, đừng suy lại
 
 **70–80 gram · 150–250 trứng mỗi năm.** Chủ trại chốt, lấy gian hàng làm nguồn
