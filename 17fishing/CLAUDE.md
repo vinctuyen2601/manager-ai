@@ -409,8 +409,20 @@ làm bài sạch trông như bài hỏng. Đo được khi viết lại 30 bài.
    Đo 17/09/2026: **3 bài bị gắn nhầm** (mồi chép, rô phi, chọn phao) trên
    khoảng 69 liên kết được chèn — tỉ lệ sai ~4%.
 
-   Sửa được ở hai chỗ: bỏ cụm chung khỏi thẻ (dữ liệu, không cần deploy), hoặc
-   thêm danh sách chặn cụm chung trong `noi-noi-bo.ts` (mã, phải deploy).
+   **Đã sửa 18/09/2026 bằng DỮ LIỆU, không deploy:** đổi thẻ `kỹ thuật câu`
+   thành `kỹ thuật câu jig` ở hai bài jig, gỡ thẻ đó khỏi ba bài không liên
+   quan, rồi gỡ ba liên kết đã chèn. Xác nhận không chèn lại.
+
+   Thứ tự bắt buộc: **sửa thẻ trước, gỡ liên kết sau.** PATCH chỉ có `tags`
+   không kích hoạt bộ nối (`posts.service.ts` dòng 194 chỉ chạy khi
+   `dto.content !== undefined`), còn PATCH có `content` mà thẻ chưa sửa thì nó
+   chèn lại ngay trong cùng lệnh.
+
+   **Đừng cố quét tự động tìm các ca còn lại.** Đã thử tiêu chí "trong tiêu đề
+   bài đại diện, cụm còn bị nối thêm chữ phía sau" → gắn cờ 36/61 cụm, gần hết
+   là cụm ĐÚNG (`cá diếc` trỏ tới bài cá diếc vẫn chuẩn dù tiêu đề còn chữ).
+   Phân biệt ca sai với ca đúng ở đây cần hiểu nghĩa, không có luật hình thức
+   nào thay được. Soi tay khi thấy bất thường, đừng quét bừa rồi gỡ nhầm.
 
 6. **`salePrice`/`price` về dạng CHUỖI.** So `salePrice < price` trên chuỗi thì
    `"99000" < "120000"` là false, và giá hiển thị sai 99.000đ thành 120.000đ.
