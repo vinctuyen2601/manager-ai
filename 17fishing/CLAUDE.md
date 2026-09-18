@@ -683,6 +683,46 @@ LẶNG — chạy `npm run kiem-khoi` để so với registry bên BE.
 **`TrackVisit` bỏ qua khung nhúng và trang công cụ.** Thêm trang công cụ mới thì
 phải thêm vào danh sách đó, nếu không nó tự đếm mình thành lượt khách.
 
+**Tốc độ: hai thứ hạ tầng đã sửa 18/09/2026 — đừng lùi lại.**
+
+1. **`layout.tsx` phải giữ `next: { revalidate: 3600 }`, KHÔNG được quay về
+   `cache: 'no-store'`.** Đây là layout GỐC; một lời gọi `no-store` ở đó ép cả
+   site sang chế độ động và mọi `revalidate` ở trang con **bị vô hiệu lặng
+   lẽ** — sản phẩm 120s, blog 120s, danh sách blog 60s, kho giao diện 300s.
+   Dấu hiệu nhận ra: cột **"Revalidate" TRỐNG** trong bảng route lúc
+   `next build`, và `x-vercel-cache: MISS` ở mọi trang.
+   Con số 3600 khớp `getSiteConfig()` trong `lib/api.ts` để Next gộp hai lời
+   gọi làm một. Chủ shop thấy sửa site-config lâu hiện thì **hạ xuống 300**,
+   đừng quay về `no-store`.
+
+2. **`vercel.json` khai `regions: ["sin1"]`.** Không có tệp này thì Vercel
+   chạy hàm ở `iad1` — Washington DC — trong khi khách và backend đều ở châu
+   Á, tức mỗi lượt dựng trang vượt Thái Bình Dương hai lần. Gói hiện tại
+   **có** nhận khoá này (đã kiểm: `x-vercel-id` đổi từ `iad1` sang `sin1`).
+
+   Phép kiểm: `curl -sD - -o /dev/null https://17-fishing.com/ | grep x-vercel-id`
+   — phần giữa phải là `sin1`.
+
+**Kết quả đo (TTFB, lượt ấm, từ Việt Nam):**
+
+| Trang | Trước | Sau | |
+|---|---|---|---|
+| `/` | 0,98s | **0,23s** | HIT |
+| `/san-pham` | 0,68s | **0,26s** | động, không cache được |
+| `/san-pham/<slug>` | 0,74s | **0,25s** | HIT |
+| `/blog/<slug>` | 0,62s | **0,18s** | HIT |
+
+**`/san-pham` không bao giờ cache được** vì đọc `searchParams` — nó là trang
+lọc. Đừng đi "sửa" cho nó HIT; phần cải thiện của nó đến từ việc đổi vùng.
+
+**`/theo-doi/[token]` PHẢI giữ `no-store`.** Trang tra cứu đơn theo token, dữ
+liệu riêng từng khách. Cache nó là lỗi bảo mật. Đã kiểm sau khi sửa: vẫn
+`no-store`, vẫn MISS.
+
+Còn hai chỗ `no-store` ảnh hưởng riêng trang chứa chúng, chưa sửa:
+`lien-he/page.tsx:17` và `[slug]/page.tsx:18`. Ưu tiên thấp, làm riêng và đo
+riêng.
+
 **Ô tìm kiếm ĐANG BẬT, có gợi ý lúc gõ** (`HIEN_O_TIM_KIEM = true` trong
 `SiteHeader.tsx`). Chủ shop tạm ẩn rồi mở lại ngay trong ngày 18/09/2026 —
 xem QĐ-11. Ba điều đừng gỡ khỏi `SearchBox.tsx`:
