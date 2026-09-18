@@ -366,6 +366,62 @@ thật cho ba món đang có hạng**, và chỉ chủ shop làm được.
 3. **So khớp đường dẫn phải chặn ở dấu nháy.** `/blog/ky-thuat-cau-ca` khớp
    chuỗi con vào `/blog/ky-thuat-cau-ca-me-...` → báo 5 bài, thực tế 1.
 
+### Tốc độ trang — đo 18/09/2026, trang sản phẩm trên điện thoại
+
+**Báo cáo Lighthouse chạy từ trình duyệt thường bị NHIỄU nặng.** Bản chủ shop
+gửi có ít nhất 5 tiện ích (Grammarly, Google Docs Offline…) chiếm **1.680ms
+CPU** — bằng 29% tổng — và chiếm trọn danh sách "JS tải về mà không dùng".
+Luôn chạy ở cửa sổ ẩn danh, hoặc `--chrome-flags="--disable-extensions"`.
+
+Chạy được tại chỗ, không cần chủ shop:
+```
+npx -y lighthouse@13 "<url>" --output=json --output-path=out.json \
+  --only-categories=performance \
+  --chrome-flags="--headless=new --no-sandbox --disable-gpu --disable-extensions"
+```
+
+**Ba mốc đo được:**
+
+| | máy chủ shop (có tiện ích) | máy sạch, sau khi hoãn script | chặn hẳn script đo |
+|---|---|---|---|
+| Performance | 65 | **82** | **91** |
+| Total Blocking Time | 1.940ms | **420ms** | 30ms |
+| Time to Interactive | 8,4s | 8,4s | **3,5s** |
+| Nặng trang | 870 KB | 943 KB | **524 KB** |
+
+**Trang vốn hiện ra rất nhanh** — FCP 1,1s, CLS 0, không tài nguyên nào chặn
+hiển thị. Vấn đề duy nhất là JavaScript chiếm luồng chính.
+
+### Script đo là phần nặng nhất của trang, không phải mã shop
+
+| | nặng | CPU (máy nhiễu) |
+|---|---|---|
+| `googletagmanager.com/gtag/js` | 171 KB | 213ms |
+| `facebook.net/signals/config` | 136 KB | 457ms |
+| `facebook.net/en_US/fbevents.js` | 108 KB | 1.012ms |
+| **cộng** | **415 KB** | **~1.800ms** |
+| mã của chính shop | ~145 KB | 2.063ms |
+
+**Đã sửa bằng cách TÁCH ĐÔI, không phải hoãn cả cụm.** Đoạn mồi (`window.fbq`
++ hàng đợi, `window.dataLayer`) vẫn `afterInteractive`; chỉ tệp nặng chuyển
+`lazyOnload`. Hoãn cả cụm thì `fbq()` ở `lib/fbpixel.ts` có chắn
+`if (window.fbq)` nên nó **nuốt im lặng** mọi sự kiện trong hai giây đầu —
+khách thêm giỏ sớm là mất mà không ai biết.
+
+Với GA phải **đảo thứ tự** so với đoạn mẫu của Google: `dataLayer` khai trước,
+`gtag.js` nạp sau, để lời gọi sớm rơi vào mảng rồi được đọc lại.
+
+**Còn treo, cần chủ shop quyết:** ngay cả sau khi hoãn, hai script đo vẫn tốn
+**9 điểm Performance, 390ms TBT, 419 KB và 5 giây TTI**. Đáng giữ hay không phụ
+thuộc hai câu chưa có lời đáp — shop **có chạy quảng cáo Facebook không**, và
+**có ai mở Google Analytics không** khi CMS đã có bảng phân tích riêng.
+
+**Vì sao chuyện này quan trọng hơn vẻ ngoài:** khách từ Facebook xem **6,8
+trang mỗi người**, gấp 3,4 lần mọi nguồn khác, và là nguồn duy nhất có đơn được
+ghi nhận. Họ vào từ trình duyệt trong ứng dụng trên điện thoại — nơi luồng
+chính vốn đã chậm. Tức thời gian chặn đánh mạnh nhất vào đúng tệp khách đang
+mua hàng.
+
 ### 🔴 Mô tả BIẾN MẤT nếu `blockOrder` thiếu khối `mo-ta`
 
 Sản phẩm có `templateId` thì trang dựng theo `blockOrder`. **Không có khối
