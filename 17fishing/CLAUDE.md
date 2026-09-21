@@ -725,6 +725,33 @@ biết tin phần nào. Và "quan sát rõ từ xa **hàng chục mét**" là co
 kiểm chứng được — thay bằng dữ kiện có thật trong bảng thông số (cần phù hợp
 5m4 – 7m2).
 
+**Khối `cau-kien` — soi 21/09/2026, viết cho 5/10 sản phẩm.**
+
+Trước đó chỉ 2/10 có (hai phao Chuanze). Tám cái còn lại **không có trong
+`blockOrder` và `blockData` cũng rỗng** — chưa từng được điền, chứ không phải
+bị tắt chờ ảnh.
+
+Nguồn nội dung: **chữ in trên chính ảnh sản phẩm của nhà cung cấp.** Mở từng
+ảnh ra đọc thì có sẵn thông số thật — chân ghế chỉnh 16cm, mặt ngồi 2401cm²,
+ngả 170 độ, hợp kim nhôm magie 4,4kg, carbon T1100+30T+40T, đuôi lưỡi chếch
+14 độ. Không phải bịa, chỉ là chưa ai chép xuống.
+
+| có ảnh cận bộ phận → ĐÃ VIẾT | thiếu ảnh → CHƯA VIẾT |
+|---|---|
+| Ghế Zhongzhou · Ghế AK Power | Túi ZKAI (3 ảnh trùng nhau) |
+| Máy câu Tokushima · Cần Strong Bull | Cước Chuanze (chỉ 1 ảnh) |
+| Lưỡi ISENI | Ngọc Liên Sơn (ảnh là lưới 4 ô gộp sẵn) |
+
+**Một thứ trên ảnh KHÔNG được chép:** banner Strong Bull ghi "thoải mái câu
+bất kỳ con cá nào nặng 100 pound" (~45kg) trong khi chính ảnh đó ghi "10KG
+tải tĩnh MAX". Hai con số đánh nhau — chép lại là hứa sai. Đọc ảnh nhà cung
+cấp thì phải lọc, không bê nguyên.
+
+**Chèn khối chứ đừng sắp lại cả thứ tự** nếu chủ shop chỉ duyệt việc viết nội
+dung. Chèn ngay sau `diem-manh` (kể cả bản `-bento`); không có thì chèn trước
+`thong-so`. Có phép kiểm so chuỗi thứ tự khối cũ trước/sau để chắc không xáo
+trộn.
+
 **Thứ tự khối chuẩn — đi theo câu hỏi của khách, không theo thứ tự nhập liệu.**
 Sắp cho phao điện 21/09/2026, dùng làm khuôn cho các sản phẩm sau:
 
