@@ -805,10 +805,38 @@ giữ cho lần sau:
    đúng về sau khi shop nhập dòng mới
 4. **Không bịa sản phẩm thay thế**
 
-**Cảnh báo về tình trạng gian hàng:** shop hiện **không còn cần tay phổ thông
-nào để bán**. Chỉ còn cần săn hàng từ 1.600.000đ, mà nhóm đó không hợp người
-mới. Mọi bài hướng dẫn chọn cần cho người mới nay dẫn tới một danh mục không
-có hàng hợp với họ.
+**🔴 ĐỪNG TRỎ CHUYỂN HƯỚNG VÀO MỘT SẢN PHẨM — trỏ vào DANH MỤC.**
+
+Sản phẩm bị tắt là chuỗi chuyển hướng gãy im lặng. Đã xảy ra: `next.config.ts`
+trỏ Kirin Sharp sang Thanh Long, rồi Thanh Long bị bỏ bán — chuỗi thành
+**Kirin → Thanh Long → 404**, đi qua hai chặng rồi vứt sạch thứ hạng của cả
+hai. Danh mục thì luôn còn đó.
+
+Phép kiểm: `curl -sL -o /dev/null -w '%{http_code} %{url_effective}\n' <url>`
+— phải kết thúc ở 200, không phải 404.
+
+**Cảnh báo về tình trạng gian hàng — đo 21/09/2026, 30 ngày:**
+
+Shop **không còn cần tay phổ thông nào để bán**. Chỉ còn cần săn hàng từ
+1.600.000đ, mà chính mô tả của nó ghi "người mới tập thì đừng bắt đầu bằng cần
+này".
+
+| | lượt | khách |
+|---|---|---|
+| 17 bài về cần câu | 104 | 96 |
+| trang sản phẩm cần | 72 | 59 |
+| — riêng Thanh Long (đã bỏ bán) | **27** | **24** |
+| **rơi vào 404 mỗi tháng** | **35** | **30** |
+
+30 khách mỗi tháng trên tổng ~460, tức **6,5% số khách** đâm vào tường. Thanh
+Long từng là **trang sản phẩm cần được xem nhiều nhất**.
+
+Đã chặn máu bằng chuyển hướng về `/san-pham?cat=cau-dai` (21/09) nên không còn
+404, nhưng đó chỉ là băng bó: khách tới nơi vẫn không có món hợp để mua.
+
+**Khi nhập lại cần phổ thông** (4H, cỡ 2m7 – 4m5): trỏ hai dòng chuyển hướng
+trong `next.config.ts` về sản phẩm mới, và rà lại 11 bài đã gỡ Thanh Long để
+gắn sản phẩm mới vào.
 
 **Bẫy khi sửa nội dung bài:** bản trong CSDL **khác** bản mình đã gửi, vì bộ tự
 nối đã chèn thẻ `<a>` vào giữa câu. Đo 21/09: mẫu `Mua bộ đồ câu đài đầu tiên`
