@@ -694,6 +694,37 @@ Nay cả hai đọc `cam_ket`. **Chốt là 7 ngày** (chủ shop 21/09/2026).
 Sửa bằng `PATCH /admin/site-config` với thân `{key, value}` — **không** nhận
 object cả cụm, gửi sai dạng trả 400.
 
+**Thứ tự khối chuẩn — đi theo câu hỏi của khách, không theo thứ tự nhập liệu.**
+Sắp cho phao điện 21/09/2026, dùng làm khuôn cho các sản phẩm sau:
+
+```
+uu-dai → hero → qua-tang
+→ mo-ta      mua mức nào? món này có hợp tôi không?
+→ diem-manh  vì sao nó tốt
+→ cau-kien   bằng chứng, ảnh thật từng bộ phận
+→ thong-so   tra số
+→ cau-hoi    gỡ phản đối
+→ danh-gia   người khác nói gì
+→ dat-hang   chốt, ngay sau hai khối tạo tin mạnh nhất
+→ huong-dan  dùng sau khi mua
+→ lien-quan  mua kèm
+```
+
+Hai chỗ thứ tự cũ sai, để ý đừng lặp lại:
+
+- **`huong-dan` đứng trước mô tả và FAQ.** Lắp pin, lau khô, cất vào ống là
+  việc SAU khi mua — nó chen vào đúng lúc khách còn đang cân nhắc
+- **`mo-ta` bị chôn sau cả `dat-hang`.** Đó lại là phần thuyết phục nhất, và
+  nay mở đầu bằng mục chọn phân loại — tức thứ CHẶN đơn
+
+`mo-ta` đặt ngay dưới `hero` là có chủ ý: ô chọn phân loại nằm trong hero nên
+hướng dẫn chọn phải liền kề. Gỡ thứ chặn đơn quan trọng hơn thêm thứ thuyết
+phục.
+
+Đẩy `dat-hang` xuống gần cuối **không** mất đơn: điện thoại có thanh mua cố
+định `fixed bottom-0 md:hidden` bám suốt trang, máy tính thì hero đã có nút.
+Khối này là cú chốt THỨ HAI, nơi có COD và tính phí ship.
+
 **Khi bán hàng có phân loại: phải có mục dạy chọn phân loại.** Đo trang phao
 điện 21/09/2026 — trang bắt khách chọn 1 trong 5 mức tải chì mà cả 277 từ mô
 tả không nhắc một chữ nào về cách chọn (không có "1.5", "2.5", "3.5", "tải
