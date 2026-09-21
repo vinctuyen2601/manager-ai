@@ -683,6 +683,31 @@ LẶNG — chạy `npm run kiem-khoi` để so với registry bên BE.
 **`TrackVisit` bỏ qua khung nhúng và trang công cụ.** Thêm trang công cụ mới thì
 phải thêm vào danh sách đó, nếu không nó tự đếm mình thành lượt khách.
 
+**Chính sách đổi trả có MỘT nguồn: `site_config.cam_ket`.** Đừng gõ số ngày
+vào bất kỳ tệp nào. Đo 21/09/2026: trang chủ viết cứng "Đổi trả 7 ngày" còn
+`cam_ket` ghi "Đổi mới 30 ngày" — hai trang cùng shop hứa hai chính sách chênh
+hơn bốn lần. Chú thích trong `khoi/CamKet.tsx` đã tiên đoán đúng tình huống
+này từ trước mà vẫn xảy ra, vì trang chủ không đọc nguồn đó.
+
+Nay cả hai đọc `cam_ket`. **Chốt là 7 ngày** (chủ shop 21/09/2026).
+
+Sửa bằng `PATCH /admin/site-config` với thân `{key, value}` — **không** nhận
+object cả cụm, gửi sai dạng trả 400.
+
+**Khi bán hàng có phân loại: phải có mục dạy chọn phân loại.** Đo trang phao
+điện 21/09/2026 — trang bắt khách chọn 1 trong 5 mức tải chì mà cả 277 từ mô
+tả không nhắc một chữ nào về cách chọn (không có "1.5", "2.5", "3.5", "tải
+chì", "gram"). Tệ hơn, FAQ trả lời *"mức 1.8g là lựa chọn cân bằng"* trong khi
+**không có phân loại 1.8g nào** — 1.8g là trọng lượng thân phao, một hằng số;
+thứ khách chọn là TẢI CHÌ.
+
+Cùng họ với lỗi chủ shop từng chỉ ra: *"số 14 là của lưỡi, không phải cước"*.
+**Phép kiểm trước khi đăng bất kỳ mô tả nào:** mọi con số trong mô tả và FAQ
+phải khớp được với một giá trị có thật trong `variants`, hoặc phải nói rõ nó
+là thông số cố định chứ không phải lựa chọn.
+
+---
+
 **🔴 TẮT MỘT SẢN PHẨM LÀM GÃY MỌI BÀI TRỎ TỚI NÓ.**
 
 `isActive=false` khiến `/san-pham/<slug>` trả **404**, nhưng KHÔNG gỡ liên kết
