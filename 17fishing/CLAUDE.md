@@ -725,6 +725,31 @@ biết tin phần nào. Và "quan sát rõ từ xa **hàng chục mét**" là co
 kiểm chứng được — thay bằng dữ kiện có thật trong bảng thông số (cần phù hợp
 5m4 – 7m2).
 
+**Bộ soi 10 trang sản phẩm: `17fishing/script/soi-san-pham.mjs`.**
+Chạy `node soi-san-pham.mjs`. Danh sách kiểm lấy từ lỗi ĐÃ xảy ra thật, không
+phải lo xa. Trạng thái 21/09/2026 sau khi dọn:
+
+| | 21/09 trước | sau |
+|---|---|---|
+| thứ tự khối lệch | 9 | **0** |
+| `mo-ta` không hiện | 1 (Máy câu) | **0** |
+| phân loại không dạy chọn | 4 | **1** (Ngọc Liên Sơn) |
+| thiếu `cau-kien` | 8 | **3** (thiếu ảnh) |
+| `seoTitle` > 48 ký tự | 4 | 4 — chưa duyệt sửa |
+| không có video | 10 | 10 |
+
+**⚠ Chính bộ soi này từng báo động giả, đã vá hai lần — đọc trước khi tin nó:**
+
+1. **So số phải chuẩn hoá CẢ HAI vế.** Biến thể ghi `3,6M` còn mô tả viết
+   `3m6`; so thô thì trượt. Và biến thể tên bằng chữ (`ghế + balo`) không có
+   chữ số nào để so. Báo nhầm 2/3 ca.
+2. **"Nhắc 0" khác hẳn "nhắc một phần".** Nhắc 0 là mô tả không dạy chọn gì —
+   lỗi thật. Nhắc một phần thường là gộp có chủ ý ("7m2 trở lên"), không phải
+   lỗi. Gộp hai thứ vào một cờ đỏ là báo nhầm chính bài mình vừa viết.
+
+Bài học chung: **bộ soi tự viết cũng phải soi lại.** Mỗi lần nó báo đỏ, soi
+tay một ca trước khi sửa hàng loạt.
+
 **Khối `cau-kien` — soi 21/09/2026, viết cho 5/10 sản phẩm.**
 
 Trước đó chỉ 2/10 có (hai phao Chuanze). Tám cái còn lại **không có trong
