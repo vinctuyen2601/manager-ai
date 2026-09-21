@@ -284,6 +284,24 @@ SELECT table_name||'.'||column_name||' = '||data_type
 
 ### Đo đạc
 
+**🔴 BẢNG TỪ KHOÁ CHỈ THẤY ~8% LƯỢNG HIỂN THỊ THẬT.** Google ẩn danh phần lớn
+truy vấn đuôi dài trong API, nên cộng các dòng từ khoá KHÔNG ra tổng của site.
+
+Đo 17fishing ngày 21/09/2026, cùng một khoảng 90 ngày:
+
+| Nguồn | Hiển thị | Nhấp |
+|---|---|---|
+| `gsc-trang` (theo TRANG) | **9.820** | **209** |
+| `admin/keywords` (theo TỪ KHOÁ) | 748 | 11 |
+| chênh | **9.072 (92%)** | 198 (95%) |
+
+Không phải `rowLimit` cắt — giới hạn là 500 dòng mà chỉ trả về 103.
+
+**Quy tắc:** muốn nói về lưu lượng của SITE hay của một TRANG thì dùng
+`gsc-trang`. Bảng từ khoá chỉ dùng để biết **truy vấn nào đang có mặt**, đừng
+dùng để tính tổng hay tính CTR toàn site — sai một bậc độ lớn.
+
+
 **API kiểm chỉ mục trả trạng thái bằng TIẾNG VIỆT.** Dò chuỗi tiếng Anh
 (`submitted and indexed`, `URL is on Google`) thì không khớp gì và báo
 **"đã vào chỉ mục: 0 (0%)"** — đã in ra con số sai đó ở cả hai lần đo 18/09 và
