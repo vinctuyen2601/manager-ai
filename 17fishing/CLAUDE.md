@@ -725,6 +725,34 @@ biết tin phần nào. Và "quan sát rõ từ xa **hàng chục mét**" là co
 kiểm chứng được — thay bằng dữ kiện có thật trong bảng thông số (cần phù hợp
 5m4 – 7m2).
 
+**Video nằm TRONG thư viện ảnh, ở vị trí thứ hai** (sửa 21/09/2026).
+
+Trước đó `videos` chỉ dựng bởi khối `KhoiVideo` tách rời, mà khối đó **không
+sản phẩm nào bật** — upload video lên thì không hiện ở đâu cả, lặng lẽ, không
+lỗi, không mất file. Nay `ProductDetailClient` gộp ảnh và video thành một dải
+`slides`: ảnh đầu → video → ảnh còn lại.
+
+Ba thuộc tính phát phải giữ **giống hệt `KhoiVideo`** — đổi một nơi mà quên
+nơi kia là hai chỗ chạy khác nhau: `preload="metadata"` · **KHÔNG** autoplay ·
+`playsInline` (thiếu nó Safari iPhone mở toàn màn hình).
+
+Ô video trong dải thumbnail dùng **ảnh đầu làm nền**, không dựng thumbnail từ
+tệp video — dựng từ video thì phải tải video về, đúng thứ đang tránh cho khách
+4G.
+
+**Cách thử mà không đụng production:** trang `/san-pham/<slug>/xem-truoc?draft=`
+nhận bản nháp base64, nên nhét `videos` vào đó là thử được. Kết hợp Chrome qua
+DevTools Protocol để bấm thật (thẻ `<video>` chỉ dựng sau khi bấm, không có
+trong HTML đầu tiên — kiểm bằng `curl` sẽ thấy 0 và tưởng hỏng).
+
+**Ghi chú bộ ảnh nằm cạnh ô upload trong CMS** (`ProductFormPage.tsx`): tối
+thiểu 5 ảnh + 1 video · hero thể hiện 90% sản phẩm · các ảnh sau là kết cấu và
+từng tính năng riêng · video ngay sau hero. Đặt ở đó chứ không thành tài liệu
+riêng — lúc đang nhập hàng không ai mở tài liệu ra đọc.
+
+**Số nền 21/09/2026:** 3,8 ảnh/sản phẩm · **0 video** · **0/10 ảnh hero là ảnh
+sản phẩm** (cả 10 đều là banner nhà cung cấp).
+
 **Bộ soi 10 trang sản phẩm: `17fishing/script/soi-san-pham.mjs`.**
 Chạy `node soi-san-pham.mjs`. Danh sách kiểm lấy từ lỗi ĐÃ xảy ra thật, không
 phải lo xa. Trạng thái 21/09/2026 sau khi dọn:
