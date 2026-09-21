@@ -694,6 +694,27 @@ Nay cả hai đọc `cam_ket`. **Chốt là 7 ngày** (chủ shop 21/09/2026).
 Sửa bằng `PATCH /admin/site-config` với thân `{key, value}` — **không** nhận
 object cả cụm, gửi sai dạng trả 400.
 
+**Phao điện CÓ SẴN PIN trong hộp** — chủ shop xác nhận 21/09/2026. Đây là câu
+hỏi số một trước khi mua một cái phao điện mà trang từng không trả lời ở đâu
+cả. Nay nói ở ba chỗ: dải ưu đãi, bảng thông số, và FAQ.
+
+**Chưa biết MÃ pin.** Đừng bịa ra một mã (CR425, AG…) — chưa hỏi được thì viết
+"pin thay thế được, cần mua dự phòng thì nhắn shop".
+
+**`seoTitle` đừng chứa mã model.** Không ai gõ "T-02" vào Google, mà nó chiếm
+chỗ trong khoảng 60 ký tự hiển thị. Mã model để trong BẢNG THÔNG SỐ — đúng chỗ
+của nó, vì mã in trên thân sản phẩm thật.
+
+Công thức: `<title>` = `seoTitle` + `" | 17Fishing"` (12 ký tự). Nên `seoTitle`
+phải **≤ 48 ký tự** thì tổng mới vừa 60.
+
+**Từ thổi phồng lệch giọng còn hại hơn là nhạt.** Trang phao điện từng vừa viết
+"Nói thẳng: phao điện nhạy kém hơn phao nano cùng cỡ" ở phần mô tả, vừa viết
+"Đuôi LED **siêu sáng**" ở phần điểm mạnh. Hai giọng đánh nhau thì khách không
+biết tin phần nào. Và "quan sát rõ từ xa **hàng chục mét**" là con số không
+kiểm chứng được — thay bằng dữ kiện có thật trong bảng thông số (cần phù hợp
+5m4 – 7m2).
+
 **Thứ tự khối chuẩn — đi theo câu hỏi của khách, không theo thứ tự nhập liệu.**
 Sắp cho phao điện 21/09/2026, dùng làm khuôn cho các sản phẩm sau:
 
