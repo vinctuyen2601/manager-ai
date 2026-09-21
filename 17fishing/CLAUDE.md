@@ -733,10 +733,27 @@ phải lo xa. Trạng thái 21/09/2026 sau khi dọn:
 |---|---|---|
 | thứ tự khối lệch | 9 | **0** |
 | `mo-ta` không hiện | 1 (Máy câu) | **0** |
-| phân loại không dạy chọn | 4 | **1** (Ngọc Liên Sơn) |
-| thiếu `cau-kien` | 8 | **3** (thiếu ảnh) |
-| `seoTitle` > 48 ký tự | 4 | 4 — chưa duyệt sửa |
-| không có video | 10 | 10 |
+| phân loại không dạy chọn | 4 | **0** |
+| `seoTitle` > 48 ký tự | 4 | **0** |
+| thiếu `cau-kien` | 8 | **3** — chờ ảnh |
+| không có video | 10 | 10 — chờ chủ shop |
+
+**Sạch hoàn toàn: 6/10** (trước: 1/10).
+
+**Ba lỗi SỐ LIỆU tìm ra khi rút gọn seoTitle** — không nằm trong kế hoạch, và
+đều là loại chỉ lộ ra khi đối chiếu tiêu đề với `variants` thật:
+
+1. 🔴 **Cước ghi "số 0.4 đến 14"** trong khi cước chỉ có **0.8 – 4.0**. Số
+   **14 là cỡ LƯỠI** — đúng lỗi chủ shop đã chỉ ra một lần ("size lớn nhất
+   của lưỡi nhé không phải cước đâu"), nó quay lại ở một chỗ khác. Sửa rồi.
+   **Mỗi lần đụng nội dung cước, dò lại số 14.**
+2. 🔴 **Túi ZKAI ghi "khoảng 52 × 12 cm"** — bảng size in trên ảnh nhà cung
+   cấp ghi dài 52 · rộng 52 · rộng ĐÁY 12. Tức lấy chiều dài ghép với chiều
+   rộng đáy. Sửa thành `52 × 52 cm, rộng đáy 12 cm`.
+3. ⚠ **Ghế Zhongzhou: chân ghế 16cm hay 18cm?** Thông số shop ghi "khoảng
+   18cm", ảnh nhà cung cấp ghi "Tăng chiều cao 16cm" (hai lần). **Chưa kiểm
+   được cái nào đúng** — đã gỡ con số khỏi phần mới viết và khỏi seoTitle,
+   giữ nguyên thông số cũ. **Chủ shop đo lại rồi thống nhất một số.**
 
 **⚠ Chính bộ soi này từng báo động giả, đã vá hai lần — đọc trước khi tin nó:**
 
