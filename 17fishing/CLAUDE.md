@@ -698,6 +698,16 @@ object cả cụm, gửi sai dạng trả 400.
 hỏi số một trước khi mua một cái phao điện mà trang từng không trả lời ở đâu
 cả. Nay nói ở ba chỗ: dải ưu đãi, bảng thông số, và FAQ.
 
+**Phao điện KÈM CẢ HAI ĐUÔI** — LED và đuôi thường, thay cho nhau (chủ shop
+xác nhận 21/09/2026). Đây là điểm bán hàng mạnh nhất của món này và từng bị
+chôn trong đúng một dòng thông số viết `Loại đuôi: Đuôi LED / Đuôi thường` —
+**dấu gạch chéo đọc như "chọn một trong hai", đúng nghĩa ngược lại**. FAQ còn
+viết "dùng bản đuôi thường", chữ "bản" khiến khách tưởng đó là phân loại khác
+phải mua riêng.
+
+Bài học chung: **thứ KÈM THEO phải nói bằng chữ "kèm", đừng dùng dấu gạch
+chéo.** Gạch chéo trong bảng thông số luôn đọc thành "hoặc".
+
 **Chưa biết MÃ pin.** Đừng bịa ra một mã (CR425, AG…) — chưa hỏi được thì viết
 "pin thay thế được, cần mua dự phòng thì nhắn shop".
 
