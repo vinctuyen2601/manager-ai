@@ -234,6 +234,41 @@ và `/san-pham?search=` khi vào thẳng.
 **Kiểm ngày:** 16/10/2026 · **Trạng thái:** ⏳ chờ kiểm
 
 
+### Số nền CHỈ MỤC — đo 21/09/2026
+
+Quét bằng `chung/kiem-chi-muc.mjs` (gọi Search Console qua endpoint
+`POST /admin/keywords/kiem-chi-muc` của chính backend từng shop).
+
+| | 17fishing | GaRutin |
+|---|---|---|
+| **Tổng đã vào chỉ mục** | **92/111 = 82%** | **25/76 = 32%** |
+| Sản phẩm | 10/10 | 15/20 |
+| Danh mục | 5/6 | 0/1 |
+| Trang tĩnh | 3/3 | 3/3 |
+| Bài viết | 74/92 | **7/52** |
+
+**GaRutin mới là chỗ có vấn đề, không phải 17fishing.** 45/52 bài không vào
+chỉ mục, trong đó **35 bài ở trạng thái "Đã phát hiện thấy – hiện chưa được
+lập chỉ mục"** — Google biết URL tồn tại nhưng chưa ưu tiên bò vào.
+
+**Đã loại trừ nguyên nhân kỹ thuật.** Dò ba bài mẫu: không có thẻ `robots`
+chặn, canonical tự trỏ đúng, bài dài 1.461 – 3.980 từ. Tức đây là vấn đề **ưu
+tiên thu thập / uy tín tên miền**, không phải lỗi mã — không sửa được bằng một
+lần deploy.
+
+Giả thuyết đáng theo: GaRutin vừa qua một đợt tái cấu trúc URL lớn (21 trang
+"mua gà rutin [quận]" bị gộp, nhiều bài nhận `redirectTo`). Đổi URL hàng loạt
+làm Google hạ ưu tiên bò trong một thời gian.
+
+**Kiểm lại 21/10/2026.** Nếu nhóm "Đã phát hiện thấy" của GaRutin không giảm
+thì kết luận: viết thêm bài cho GaRutin là vô ích cho tới khi giải được bài
+toán uy tín — và chuyển sức sang 17fishing, nơi 82% nội dung thật sự vào được
+chỉ mục.
+
+**⚠ Bẫy đo đã dính hai lần ở chính phép đo này:** xem mục "Đo đạc" trong
+`chung/CLAUDE.md`.
+
+
 ---
 
 ## Dự đoán đã rút lại

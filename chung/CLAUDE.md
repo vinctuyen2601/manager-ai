@@ -284,6 +284,27 @@ SELECT table_name||'.'||column_name||' = '||data_type
 
 ### Đo đạc
 
+**API kiểm chỉ mục trả trạng thái bằng TIẾNG VIỆT.** Dò chuỗi tiếng Anh
+(`submitted and indexed`, `URL is on Google`) thì không khớp gì và báo
+**"đã vào chỉ mục: 0 (0%)"** — đã in ra con số sai đó ở cả hai lần đo 18/09 và
+21/09, trong khi số thật là 82% và 32%.
+
+Độc ở chỗ: bảng phân nhóm ngay bên trên lại ĐÚNG, vì nó nhóm theo chuỗi thô.
+Hai con số cạnh nhau, một đúng một sai, không có gì báo.
+
+Các giá trị có thật: `Đã được gửi và lập chỉ mục` · `Đã thu thập dữ liệu –
+hiện chưa được lập chỉ mục` · `Đã phát hiện thấy – hiện chưa được lập chỉ mục`
+· `Google không xác định được URL` · `Trang trùng lặp, Google đã chọn một
+trang chính tắc khác…`
+
+**Quy tắc:** trước khi viết biểu thức phân loại trên dữ liệu API, in ra tập
+giá trị CÓ THẬT (`Counter(x.trangThai)`) rồi mới viết. Đừng đoán chuỗi.
+
+Script đã vá: `chung/kiem-chi-muc.mjs`, dùng
+`node kiem-chi-muc.mjs 17fishing|garutin`. Lô 4 URL — lô 10 vượt trần 30 giây
+của CloudFront.
+
+
 **Sự kiện lạ gửi lên `/track` bị âm thầm biến thành `'view'`.** Cả hai backend
 đều có whitelist sự kiện phễu, và nhánh dự phòng **không** vứt bỏ giá trị lạ —
 nó ghi thành lượt xem trang. Nên thêm một sự kiện mới ở web mà quên thêm vào
