@@ -683,6 +683,57 @@ LẶNG — chạy `npm run kiem-khoi` để so với registry bên BE.
 **`TrackVisit` bỏ qua khung nhúng và trang công cụ.** Thêm trang công cụ mới thì
 phải thêm vào danh sách đó, nếu không nó tự đếm mình thành lượt khách.
 
+**🔴 TẮT MỘT SẢN PHẨM LÀM GÃY MỌI BÀI TRỎ TỚI NÓ.**
+
+`isActive=false` khiến `/san-pham/<slug>` trả **404**, nhưng KHÔNG gỡ liên kết
+nào trong blog. Đo 21/09/2026 sau khi chủ shop tắt cần Thanh Long:
+**11/92 bài** trỏ vào một trang 404, trong đó có 3 bài vừa viết hôm 18/09 và
+các bài trụ như `top-5-can-cau-tay-ua-thich-nhat`.
+
+Không có cảnh báo nào. Không ai biết cho tới khi quét.
+
+**Cách đúng khi hàng tạm hết:** đặt `stockStatus = out_of_stock` và GIỮ
+`isActive = true`. Trang vẫn sống, mọi liên kết vẫn chạy, thẻ "Hết hàng" hiện
+trên ảnh, khách vẫn nhắn Zalo hỏi được. Chỉ tắt hẳn khi bỏ bán vĩnh viễn — và
+khi đó phải quét lại toàn bộ bài.
+
+**Phép quét** (lưu ở scratchpad phiên 18/09, `_quet404sp.mjs`): lấy
+`/admin/products` để biết slug nào còn sống, rồi dò `href="/san-pham/<slug>"`
+trong `content` của mọi bài published. Nhớ lấy `content` từ danh sách
+`GET /admin/posts` — `GET /admin/posts/:id` trả 404.
+
+Tính tới 21/09/2026 có **3 sản phẩm đã tắt**: `can-cau-carbon-thanh-long-…`,
+`phao-long-cong-tieu-phuong-hoang-…`, `can-cau-kirin-sharp-…`.
+
+**Hệ quả với danh mục:** `cau-dai` giờ chỉ còn **1** sản phẩm (cần săn hàng từ
+1.600.000đ), `combo` **rỗng hẳn**. Bậc thang giá cần câu phổ thông mà nhiều bài
+đang dựa vào (585.000đ – 1.160.000đ) không còn bán được thứ gì.
+
+---
+
+**Trang danh mục có khối chữ từ 21/09/2026.**
+
+Nội dung nằm ở `categories.description` (kiểu `text`, không giới hạn) —
+**không có cột riêng**, đừng đi tìm. Dựng bởi
+`components/shared/MoTaDanhMuc.tsx`:
+
+- **văn bản THUẦN**, không phải HTML. Dòng trống ngắt đoạn, dòng mở đầu `- `
+  thành gạch đầu dòng. Cố ý không dùng `dangerouslySetInnerHTML` vì nội dung
+  này do người nhập trong CMS
+- **đoạn đầu** hiện TRÊN lưới sản phẩm và cũng là meta description, nên phải
+  đứng một mình đọc đủ nghĩa và dưới 160 ký tự. Phần còn lại hiện DƯỚI lưới
+- meta cắt ở ranh giới CÂU (`metaTuMoTa` trong trang danh sách), không ném cả
+  khối chữ vào thẻ meta
+- trang tìm kiếm và Flash Sale KHÔNG hiện khối này
+
+Kết quả: `phao-cau-ca` 300 → **624 từ**, `phu-kien` 488, `ghe-cau-ca` 445,
+`may-cau` 378. `cau-dai` và `combo` **chưa viết** — chờ quyết định về cần
+Thanh Long.
+
+**Độ trễ khi sửa nội dung danh mục:** `getCategories()` cache 3600s, nên sửa
+trong CMS tới **một giờ sau** mới hiện trên web. Đừng kết luận "không ăn" khi
+vừa sửa xong.
+
 **Tốc độ: hai thứ hạ tầng đã sửa 18/09/2026 — đừng lùi lại.**
 
 1. **`layout.tsx` phải giữ `next: { revalidate: 3600 }`, KHÔNG được quay về
