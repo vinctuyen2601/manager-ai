@@ -705,6 +705,32 @@ trong `content` của mọi bài published. Nhớ lấy `content` từ danh sác
 Tính tới 21/09/2026 có **3 sản phẩm đã tắt**: `can-cau-carbon-thanh-long-…`,
 `phao-long-cong-tieu-phuong-hoang-…`, `can-cau-kirin-sharp-…`.
 
+**Đã dọn 21/09/2026.** Chủ shop chốt bỏ hẳn Thanh Long (giữ bản ghi vì đơn cũ
+trỏ vào nó). 11 bài đã sửa xong, quét lại còn **0/92**. Nguyên tắc đã dùng,
+giữ cho lần sau:
+
+1. **Bỏ mọi con số giá của hàng đã ngừng bán** — giá đó là quảng cáo sai
+2. **Giữ lời khuyên, bỏ sản phẩm.** "4H, cỡ 3m6 dễ dùng nhất cho người mới" là
+   kiến thức đúng dù shop có bán gì hay không
+3. **Trỏ về DANH MỤC, đừng trỏ sang sản phẩm khác.** Thứ duy nhất còn lại là
+   cần săn hàng, mà chính mô tả của nó ghi "người mới tập thì đừng bắt đầu
+   bằng cần này" — đẩy người mới sang đó là bán sai hàng. Link danh mục còn
+   đúng về sau khi shop nhập dòng mới
+4. **Không bịa sản phẩm thay thế**
+
+**Cảnh báo về tình trạng gian hàng:** shop hiện **không còn cần tay phổ thông
+nào để bán**. Chỉ còn cần săn hàng từ 1.600.000đ, mà nhóm đó không hợp người
+mới. Mọi bài hướng dẫn chọn cần cho người mới nay dẫn tới một danh mục không
+có hàng hợp với họ.
+
+**Bẫy khi sửa nội dung bài:** bản trong CSDL **khác** bản mình đã gửi, vì bộ tự
+nối đã chèn thẻ `<a>` vào giữa câu. Đo 21/09: mẫu `Mua bộ đồ câu đài đầu tiên`
+khớp 0 lần vì thực tế là `Mua bộ đồ <a …>câu đài</a> đầu tiên`. Luôn đọc nguyên
+văn từ `GET /admin/posts` rồi mới dựng mẫu thay thế.
+
+`noi-noi-bo.ts` chỉ chèn liên kết **blog→blog**, đã kiểm — nó KHÔNG đụng liên
+kết sản phẩm, nên gỡ link sản phẩm bằng cách sửa nội dung là ăn thật.
+
 **Hệ quả với danh mục:** `cau-dai` giờ chỉ còn **1** sản phẩm (cần săn hàng từ
 1.600.000đ), `combo` **rỗng hẳn**. Bậc thang giá cần câu phổ thông mà nhiều bài
 đang dựa vào (585.000đ – 1.160.000đ) không còn bán được thứ gì.
@@ -727,8 +753,13 @@ Nội dung nằm ở `categories.description` (kiểu `text`, không giới hạ
 - trang tìm kiếm và Flash Sale KHÔNG hiện khối này
 
 Kết quả: `phao-cau-ca` 300 → **624 từ**, `phu-kien` 488, `ghe-cau-ca` 445,
-`may-cau` 378. `cau-dai` và `combo` **chưa viết** — chờ quyết định về cần
-Thanh Long.
+`may-cau` 378, `cau-dai` 298 từ nội dung (viết lại 21/09 cho khớp thực tế chỉ
+còn cần săn hàng). `combo` **không viết** — nhóm đang rỗng hàng.
+
+**Danh mục rỗng hiện "sắp có hàng" + nút Zalo**, không còn báo "Không tìm thấy
+sản phẩm nào" như trang hỏng. Chỉ áp dụng khi không kèm bộ lọc nào khác — lọc
+giá hay thương hiệu ra 0 kết quả vẫn báo như cũ, vì đó là lọc hẹp quá chứ
+không phải hết hàng.
 
 **Độ trễ khi sửa nội dung danh mục:** `getCategories()` cache 3600s, nên sửa
 trong CMS tới **một giờ sau** mới hiện trên web. Đừng kết luận "không ăn" khi
