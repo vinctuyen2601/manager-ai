@@ -321,6 +321,56 @@ Dấu hiệu số 3 là chốt an toàn. Sai ở đó thì cả thay đổi này
 
 ---
 
+### QĐ-13 · GaRutin: chuyển bộ lọc "chỉ đếm khi có tương tác" từ 17fishing sang
+
+**Vì sao:** chủ shop thấy số "trực tiếp" của GaRutin bất thường. Soi ra hai
+chuyện tách bạch nhau.
+
+**Chuyện thứ nhất — 87% trực tiếp KHÔNG phải lỗi.** GaRutin không có kênh
+Facebook (ô cấu hình để trống, 90 ngày nhận đúng 4 lượt). Bỏ Facebook khỏi
+17fishing thì tỉ lệ trực tiếp của nó nhảy từ 50% lên **82%**, sát 87% của
+GaRutin. Hai shop giống nhau; chênh lệch nằm trọn ở chỗ một bên có Facebook.
+
+**Chuyện thứ hai — có rác thật, ~39%.** Nhóm trực tiếp 1.354 lượt / 625 khách:
+
+| dấu hiệu | lượt | khách |
+|---|---:|---:|
+| iOS 13.2.3 (11/2019), mỗi khách 1 trang | 60 | 60 |
+| Chrome ghi đủ số build, 1 lượt/khách | 33 | 33 |
+| 16 khách quét hơn 10 trang | 434 | 16 |
+| **cộng** | **527 (39%)** | |
+
+Đúng dấu vân tay của 17fishing (QĐ-12). Cùng một trại bot quét cả hai shop.
+
+Phần còn lại là người: 00–08h chỉ 15% (bot rải đều thì 33%), và nhóm này sinh
+ra 6 `begin_checkout` của 3 khách, 5 `add_to_cart` của 4 khách, 1 `zalo_click`.
+
+**Đã làm:** chuyển bộ lọc sang GaRutinWeb, ngưỡng giữ BẰNG 17fishing (3s / 15s)
+để hai shop còn so được với nhau. Ba chỗ cố ý khác: `gtag` không hoãn (GA có bộ
+lọc riêng), cờ `garutin_visited` chỉ ghi khi thật sự gửi, giữ nguyên cờ 404.
+
+Sửa kèm ở GaRutinBE: hai danh sách bot đã lệch (42 mục lúc ghi, 18 lúc đọc —
+thiếu curl, wget, lighthouse, gptbot, claudebot, chatgpt-user,
+facebookexternalhit…), nay dùng chung một danh sách và thêm
+`google-read-aloud`. Và chuyển endpoint `soi-truc-tiep` sang.
+
+**Dự đoán, kiểm ngày 29/09/2026** — cùng ngày với QĐ-12 để đối chiếu hai shop:
+
+1. Nhóm iOS 13.2.3 của GaRutin **giảm hơn 90%**.
+2. Tổng lượt "trực tiếp" 7 ngày giảm **30–50%** — ít hơn mức dự đoán cho
+   17fishing (50–75%) vì tỉ lệ rác bên này thấp hơn (39% so với 73%).
+3. `purchase`, `add_to_cart`, `zalo_click` **KHÔNG đổi**. Đây là chốt an toàn:
+   sai ở đây nghĩa là đã chặn nhầm người thật.
+
+**Kiểm ngày:** 29/09/2026 · **Trạng thái:** ⏳ chờ kiểm
+
+**Việc còn treo, chưa làm:** bảng nguồn GaRutin không gom tên miền —
+`google.com` / `google` / `google.com.vn` nằm ba dòng riêng, `tiktok.com` và
+`tiktok` hai dòng. Google thật là 146 lượt chứ không phải 132 như dòng đầu
+bảng. 17fishing có `SOURCE_EXPR` làm việc này, GaRutin thì không.
+
+---
+
 ## Dự đoán đã rút lại
 
 ### 15/09/2026 · "Kéo `gà rutin` về hạng 5 được ~100 nhấp"
