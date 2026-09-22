@@ -271,6 +271,56 @@ chỉ mục.
 
 ---
 
+### QĐ-12 · 17fishing: chỉ đếm lượt xem khi có dấu hiệu người thật
+
+**Vì sao:** chủ shop nghi nhóm "truy cập trực tiếp" — nguồn lớn nhất — thật ra
+là bot. Soi bằng `GET /admin/analytics/soi-truc-tiep` (đã mở rộng cùng ngày):
+
+| dấu hiệu | lượt | % | khách |
+|---|---:|---:|---:|
+| iOS 13.2.3 (phát hành 11/2019), mỗi khách đúng 1 trang | 222 | 19% | **212** |
+| Chrome ghi đủ số build, 1 lượt / 1 khách mới | 88 | 8% | 88 |
+| 13 khách quét ~42 trang mỗi người | 548 | 47% | 13 |
+| **cộng phần đáng ngờ** | **858** | **73%** | 313 |
+| phần còn lại | 310 | 27% | 217 |
+
+212 "khách" khác nhau dùng chung một chuỗi UA bảy năm tuổi là dấu vân tay của
+trại bot. Nhưng **không phải tất cả là bot**: đường cong giờ giống người Việt
+(00–08h chỉ 11%, bot rải đều thì 33%), và chính nhóm này sinh ra 27 lượt
+`begin_checkout`, 17 `add_to_cart`, **9 `purchase` của 2 khách**. Bot không đặt
+hàng.
+
+**Đã làm:** `/track` không còn gọi lúc trang tải xong. Có tương tác thì gửi khi
+đủ 3 giây; không tương tác thì chỉ gửi nếu tab còn hiển thị đủ 15 giây. Nghe
+pointerdown/touchstart/keydown/scroll/wheel, cố ý bỏ `pointermove`.
+
+Làm chặt hơn đề xuất ban đầu của chủ shop ("chờ 3 giây") vì chờ suông không lọc
+được gì — trình thu thập nào đợi network-idle cũng ở lại quá 3 giây. Thứ phân
+biệt được là CÓ TƯƠNG TÁC hay không.
+
+Sửa kèm hai lỗi tìm ra lúc đào: `Google-Read-Aloud` đang được đếm như người
+(UA không chứa chữ "bot" nên lọt mọi mẫu), và **hai danh sách bot đã trôi dạt**
+— bản lúc ĐỌC thiếu 24 mục so với bản lúc GHI, gồm curl, wget, lighthouse,
+gptbot, claudebot, facebookexternalhit. Nay dùng chung một danh sách.
+
+**Dự đoán, kiểm ngày 29/09/2026** (7 ngày, đủ mẫu vì site có ~110 lượt/ngày):
+
+1. Nhóm iOS 13.2.3 **giảm hơn 90%** — chúng không cuộn, không bấm, và khó ở lại
+   15 giây.
+2. Tổng lượt "trực tiếp" 7 ngày giảm **50–75%** so với 7 ngày trước đó.
+3. Số `purchase`, `add_to_cart`, `zalo_click` **KHÔNG đổi** — chúng không bị
+   hoãn. Nếu chúng cũng giảm thì tôi đã chặn nhầm người thật, phải nới ngưỡng
+   hoặc gỡ.
+
+Dấu hiệu số 3 là chốt an toàn. Sai ở đó thì cả thay đổi này là sai.
+
+**Kiểm ngày:** 29/09/2026 · **Trạng thái:** ⏳ chờ kiểm
+
+**⚠ Mọi so sánh lưu lượng bắc qua ngày 22/09/2026 đều khập khiễng.** Định nghĩa
+"một lượt xem" đã đổi từ "trang được tải" sang "trang có người xem".
+
+---
+
 ## Dự đoán đã rút lại
 
 ### 15/09/2026 · "Kéo `gà rutin` về hạng 5 được ~100 nhấp"
