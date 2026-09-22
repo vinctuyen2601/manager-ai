@@ -94,6 +94,22 @@ Khuôn dựng sẵn chỉ gieo khi CHƯA có — thêm block vào registry thì 
 
 ---
 
+## 4b. Giọng viết trang sản phẩm — đọc TRƯỚC khi sửa mô tả
+
+`17fishing/GIONG-TRANG-SAN-PHAM.md`
+
+Chủ shop nhận xét 22/09/2026: mô tả cũ "giọng văn mang tính AI rất nhiều", và
+chỉnh lại một điểm quan trọng — **cây viết blog khác cây viết trang sản phẩm.**
+
+Ba số đo gọn nhất để nhớ, so với `vuadocau.com` (hạng TB 1,5 ở truy vấn sản
+phẩm): mô tả của shop ngắn hơn **3,5 lần** (322 từ so với 1.121), có **57 dấu
+gạch ngang** trong khi họ có **0**, và **0 lần** dùng tiếng người đi câu
+("anh em", "cần thủ") trong khi họ dùng ở 5/8 trang.
+
+Viết hay sửa mô tả sản phẩm mà chưa đọc tệp đó thì sẽ lặp lại đúng ba lỗi trên.
+
+---
+
 ## 5. Bẫy đã trả giá — đọc kỹ
 
 Đây là bẫy ở tầm **cửa hàng**. Bẫy của riêng từng repo nằm trong `CLAUDE.md` của
