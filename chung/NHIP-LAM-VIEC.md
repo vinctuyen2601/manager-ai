@@ -44,11 +44,22 @@ nhất nối lưu lượng với doanh thu.
 | API và web còn sống | có mã 5xx |
 | URL trong sitemap trả 404 | > 0 |
 | Liên kết nội bộ trỏ vào trang chuyển hướng | > 0 |
+| Ảnh 404 trên trang khách xem | > 0 |
 | Deploy gần nhất có thành công không | **GitHub tự gửi email** — không dựng thêm |
 
 Bốn dòng này đều là lỗi đã xảy ra thật, nên chúng lặp lại được.
 
-Chạy bằng `node manager-ai/script/canh-hang-ngay.mjs`. **Im lặng và thoát mã 0
+Chạy bằng `node manager-ai/script/canh-hang-ngay.mjs`.
+Riêng ảnh chạy bằng `node manager-ai/17fishing/script/quet-anh-hong.mjs <tên miền>`
+— nó BÒ THEO LIÊN KẾT chứ không theo sitemap.
+
+Vì sao phải bò theo liên kết: ngày 21/09/2026 tôi quét 117 URL trong sitemap rồi
+báo "0 ảnh hỏng". Hôm sau công cụ của chủ shop trả về 6 ảnh 404. Tôi đúng trong
+phạm vi mình quét, và phạm vi đó thiếu — **trang phân trang không nằm trong
+sitemap**, cái sót nằm ở `/blog?page=6`.
+
+Và phải chạy HAI LƯỢT: trang ít người vào có thể phục vụ HTML cũ rất lâu do ISR,
+chỉ tự lành sau lần yêu cầu đầu tiên. Lượt đầu hâm nóng, lượt sau mới là kết quả. **Im lặng và thoát mã 0
 là bình thường**; có vấn đề thì in ra và thoát mã 1.
 
 Bằng chứng nó đáng có: chạy lần đầu ngày 15/09/2026 là bắt ngay 3 liên kết nội
