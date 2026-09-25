@@ -37,8 +37,22 @@ thì mọi hàng đều đạt ngưỡng, kết quả trả về đúng một d�
 nhận nền theo trung vị độ sáng. Và nó vẫn bó tay khi có **vật thể dọc** chạy
 suốt ảnh — khoanh `--x` vào cột chữ.
 
-**3. Cỡ chữ phải đặt cứng khi nhiều ô nằm cạnh nhau.** Để tự co cho vừa thì ô
+**3. Nền chuyển màu theo chiều NGANG thì phải vá bằng dải ngang.** `toi` nhân
+bản một dải DỌC rồi kéo ngang, giữ được gradient dọc nhưng làm phẳng gradient
+ngang. Trên thẻ so sánh a31 (nền sáng dần từ trái sang phải) miếng vá hiện ra
+thành khối màu đều, sáng hơn hẳn nền quanh nó. Dùng `ngang` cho trường hợp đó.
+
+**4. Cỡ chữ phải đặt cứng khi nhiều ô nằm cạnh nhau.** Để tự co cho vừa thì ô
 chữ ngắn phình to, ba ô cạnh nhau nhìn thành ba khối rời.
+
+## Đo toạ độ
+
+`do-dai-chu.py` chỉ ra được dải, không ra được ô. Đọc ô bằng mắt trên ảnh thu
+nhỏ thì sai: đã đặt ô tiêu đề a41 ở y 28-78 trong khi chữ nằm ở y 58-100, kết
+quả là nửa dưới nét chữ Hán vẫn nguyên dưới dòng tiếng Việt mới.
+
+Cách chắc ăn: in lưới toạ độ 50px lên chính ảnh gốc rồi đọc thẳng. Mười dòng
+Pillow, và nó bỏ hẳn khâu nhẩm tỉ lệ.
 
 ## Font
 

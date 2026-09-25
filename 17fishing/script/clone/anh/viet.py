@@ -124,3 +124,40 @@ def xoa(im, box, x_sach=None, rong_mau=10):
     dai_ = im.crop((x_sach, y0, x_sach + rong_mau, y1)).resize((x1 - x0, y1 - y0))
     # Làm mượt nhẹ: kéo ngang một dải 10px ra 700px để lại vệt sọc thấy rõ.
     im.paste(dai_.filter(ImageFilter.GaussianBlur(1.2)), (x0, y0))
+
+def hang_sach(im, x0, x1, y0, y1, cao=6, tru=()):
+    """Tìm HÀNG NGANG sạch nhất quanh một ô — bản đối xứng của `cot_sach`.
+
+    Dùng khi nền chuyển màu theo chiều NGANG. Nhân bản dải DỌC rồi kéo ngang
+    (hàm `xoa`) giữ được gradient dọc nhưng LÀM PHẲNG gradient ngang, nên trên
+    thẻ có nền sáng dần từ trái sang phải, miếng vá hiện ra thành một khối màu
+    đều sáng hơn hẳn phần nền quanh nó. Đúng lỗi đó ở ảnh so sánh a31.
+    """
+    g = im.convert('L')
+    px = g.load()
+    xs = list(range(x0, min(x1, im.width), 4))
+    if not xs:
+        return max(0, y0 - cao)
+    tot, diem_tot = None, 10 ** 9
+    for y in range(max(0, y0 - 120), min(im.height - cao, y1 + 120)):
+        if y0 - cao <= y <= y1 or any(a <= y <= b for a, b in tru):
+            continue
+        doc_ = max(max(px[x, y + i] for i in range(cao))
+                   - min(px[x, y + i] for i in range(cao)) for x in xs)
+        diem = doc_ * 2 + abs(y - (y0 + y1) // 2) / max(1, im.height) * 60
+        if diem < diem_tot:
+            tot, diem_tot = y, diem
+    return tot if tot is not None else max(0, y0 - cao)
+
+
+def xoa_ngang(im, box, y_sach=None, cao_mau=6):
+    """Xoá chữ bằng cách nhân bản một dải NGANG sạch, kéo dọc xuống.
+
+    Giữ nguyên gradient theo chiều ngang. Cặp với `xoa` (giữ gradient dọc);
+    chọn cái nào là theo chiều nền chuyển màu, không theo thói quen.
+    """
+    x0, y0, x1, y1 = box
+    if y_sach is None:
+        y_sach = hang_sach(im, x0, x1, y0, y1, cao_mau)
+    dai_ = im.crop((x0, y_sach, x1, y_sach + cao_mau)).resize((x1 - x0, y1 - y0))
+    im.paste(dai_.filter(ImageFilter.GaussianBlur(1.2)), (x0, y0))

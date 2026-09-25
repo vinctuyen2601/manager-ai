@@ -16,6 +16,7 @@ Sáu bước trong `../../QUY-TRINH-1688.md`. Đây là phần chạy được.
 | `anh/do-dai-chu.py` | 3c | dò toạ độ dải chữ trên ảnh xưởng |
 | `anh/viet-hoa-anh.py` | 3c | thay chữ Trung bằng chữ Việt theo `ke-hoach-anh.json` |
 | `anh/viet.py` | 3c | bộ hàm nền: xoá, mờ, phủ, viết chữ có dấu |
+| `anh/luoi-toa-do.py` | 3c | in lưới toạ độ lên ảnh để đọc ô cho đúng |
 
 ## Chạy
 
@@ -32,6 +33,7 @@ cp bang-su-that.mau.json bang-su-that.json
 
 # 3c — Việt hoá chữ trên ảnh. LUÔN --soat trước, rồi MỞ ẢNH RA XEM.
 python3 anh/do-dai-chu.py anh/a06.jpg --x 0 420
+python3 anh/luoi-toa-do.py anh/a06.jpg   # rồi đọc ô trên ảnh có lưới
 python3 anh/viet-hoa-anh.py ke-hoach-anh.json --soat
 python3 anh/viet-hoa-anh.py ke-hoach-anh.json
 

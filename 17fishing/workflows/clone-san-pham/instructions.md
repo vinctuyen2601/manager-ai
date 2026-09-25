@@ -164,11 +164,23 @@ Ba cách xoá chữ, chọn theo nền — chọn sai thì miếng vá lộ ra t
 |---|---|---|
 | `trang` | nền trắng phẳng | tô trắng |
 | `phang` | ô màu phẳng (huy hiệu, thẻ) | tô bằng màu trung bình mép trái ô |
-| `toi` | nền chuyển màu (mặc định) | nhân bản một dải DỌC sạch cùng độ cao |
+| `toi` | nền chuyển màu DỌC (mặc định) | nhân bản một dải DỌC sạch cùng độ cao |
+| `ngang` | nền chuyển màu NGANG | nhân bản một dải NGANG sạch cùng bề rộng |
 | `anh` | nền là ảnh chụp | làm mờ rồi phủ tối |
+| `giu` | vùng đã được dải trước xoá sạch | không đụng nền, chỉ viết |
 
-`toi` là mặc định vì nó đúng cho mọi nền chuyển màu theo chiều dọc. Trên ảnh
-chụp thì nó ra vệt sọc ngang, chỗ đó phải dùng `anh`.
+`toi` là mặc định vì nền chuyển màu theo chiều dọc hay gặp nhất. Nhưng nó LÀM
+PHẲNG gradient ngang: trên thẻ sáng dần từ trái sang phải, miếng vá hiện ra
+thành khối màu đều sáng hơn nền. Chỗ đó dùng `ngang`. Trên ảnh chụp thì cả hai
+đều ra vệt sọc, phải dùng `anh`.
+
+Xoá một khối lớn rồi viết nhiều dòng lên thì dùng một dải `bo: true` để xoá,
+các dải chữ sau đặt `nen: "giu"`. Để mỗi dòng tự vá nền lần nữa thì các miếng
+vá chồng nhau, để lại đường nối ngang.
+
+**Đọc toạ độ ô bằng `luoi-toa-do.py`, đừng ước lượng trên ảnh thu nhỏ.** Đã đặt
+ô tiêu đề ở y 28-78 trong khi chữ nằm ở y 58-100 — nửa dưới nét chữ Hán còn
+nguyên dưới dòng tiếng Việt, chỉ lộ ra khi mở ảnh thành phẩm.
 
 **Đặt `co` (cỡ chữ) cứng khi nhiều ô nằm cạnh nhau trên cùng hàng.** Để tự co
 cho vừa thì ô chữ ngắn phình to, ba ô cạnh nhau nhìn thành ba khối rời.

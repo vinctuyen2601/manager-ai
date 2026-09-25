@@ -21,7 +21,9 @@ Kế hoạch (ke-hoach-anh.json):
  ]
 }
 
-  nen: "trang" tô trắng · "toi" nhân bản dải dọc · "anh" làm mờ rồi phủ tối
+  nen: "trang" tô trắng · "phang" tô màu trung bình · "toi" nhân bản dải dọc
+       · "anh" làm mờ rồi phủ tối
+       · "ngang" nhân bản dải NGANG (nền chuyển màu ngang) · "giu" chỉ viết
   bo: true  -> chỉ xoá, không viết gì đè lên
   co: BẮT BUỘC đặt khi nhiều dải nằm cạnh nhau trên cùng một hàng. Để tự co
       thì ô chữ ngắn phình to, ba cột cạnh nhau nhìn thành ba khối rời.
@@ -38,7 +40,7 @@ import sys
 from PIL import Image, ImageDraw
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from viet import mo, phu, to, nen, viet, xoa, cot_sach  # noqa: E402
+from viet import mo, phu, to, nen, viet, xoa, xoa_ngang, cot_sach  # noqa: E402
 
 
 def mot_anh(vao, ra, dai_ds, soat=False):
@@ -63,6 +65,13 @@ def mot_anh(vao, ra, dai_ds, soat=False):
             phu(im, box, tuple(d.get('phuMau', [0, 0, 0])), d.get('phuDuc', 110))
         elif kieu == 'phang':
             to(im, box, nen(im, (x0, y0, min(x0 + 8, x1), y1)))
+        elif kieu == 'ngang':
+            xoa_ngang(im, box, d.get('hangSach'))
+        elif kieu == 'giu':
+            # Không đụng nền. Dùng cho dải chỉ VIẾT, khi một dải trước đó đã
+            # xoá trọn cả khối. Thiếu chế độ này thì mỗi dòng chữ lại vá nền
+            # thêm một lần, và các miếng vá chồng nhau để lại đường nối ngang.
+            pass
         else:
             xoa(im, box, d.get('cotSach'))
 
