@@ -109,8 +109,18 @@ if (THU) {
 // ── tải ảnh ────────────────────────────────────────────────────────────────
 const url = {};
 for (const a of n.anh || []) {
+  // KIỂU MIME phải khai tay. `new Blob([buf])` không có `type` thì phần
+  // multipart đi lên là `application/octet-stream`, backend lưu đúng chuỗi đó
+  // làm Content-Type của tệp trên S3, và CDN trả về y như vậy. Ảnh vẫn tải
+  // được bằng curl (200, đủ byte) nên mọi phép kiểm "ảnh sống" đều ĐẠT —
+  // nhưng thư viện Media của CMS lọc theo mimeType nên không thấy tấm nào.
+  // Đã dính đúng thế với 19 ảnh cần Bennuo, phải tải lại toàn bộ.
+  const KIEU = { jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png',
+                 webp: 'image/webp', gif: 'image/gif' };
+  const duoi = path.extname(a.tep).slice(1).toLowerCase();
+  if (!KIEU[duoi]) { console.error(`đuôi tệp lạ, không biết kiểu MIME: ${a.tep}`); process.exit(1); }
   const fd = new FormData();
-  fd.append('file', new Blob([fs.readFileSync(a.tep)]), path.basename(a.tep));
+  fd.append('file', new Blob([fs.readFileSync(a.tep)], { type: KIEU[duoi] }), path.basename(a.tep));
   const r = await fetch(`${API}/admin/media/upload?name=${encodeURIComponent(a.ten)}`, {
     method: 'POST', headers: { Authorization: `Bearer ${TOKEN}` }, body: fd,
   });

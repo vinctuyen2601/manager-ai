@@ -216,6 +216,19 @@ Ba chỗ hay lệch nghĩa, kiểm trước khi gửi:
 
 ---
 
+**Ảnh tải lên phải khai kiểu MIME.** `new Blob([buf])` không có `type` thì
+backend BỎ HẲN khâu chuyển sang WebP, S3 lưu `application/octet-stream`, và
+thư viện Media của CMS lọc theo mimeType nên không thấy tấm nào. `curl` vẫn
+trả 200 đủ byte nên mọi phép kiểm "ảnh sống" đều đạt — đã để lọt 19 ảnh đúng
+kiểu này, chủ shop phát hiện trước.
+
+Dấu hiệu nhận ra trong một giây: **URL trả về còn đuôi `.jpg`**. Ảnh đi đúng
+đường ở shop này luôn ra `.webp`. Kiểm sau khi tải:
+
+```bash
+curl -s -o /dev/null -w '%{http_code}|%{content_type}|%{size_download}' "$url"
+```
+
 ## Bước 5 · Đánh giá
 
 Bỏ qua nếu không có element đánh giá.
