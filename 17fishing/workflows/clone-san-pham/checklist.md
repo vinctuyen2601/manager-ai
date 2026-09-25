@@ -34,10 +34,18 @@ Còn một mục chưa tick thì chưa bật.
 
 - [ ] hero chiếm ≥90% khung
 - [ ] video ngay sau hero
-- [ ] mỗi ảnh một tên tệp khác nhau, tên theo nội dung
-- [ ] mỗi ảnh một alt khác nhau
+- [ ] mỗi ảnh một tên tệp khác nhau
+- [ ] **tên tệp mang tên loại hàng và thương hiệu**, không còn tên của xưởng
+      (`a06.jpg`, `O1CN01…jpg`) và không có mã nội bộ của xưởng
+- [ ] **tên tệp tả ĐÚNG tấm đó** — đặt tên "khoen-gap" cho ảnh tay cầm còn tệ
+      hơn để nguyên tên gốc, vì nó dạy Google một điều sai
+- [ ] slug sản phẩm mang từ khoá chính, không nhét mã SKU
+- [ ] sửa sản phẩm đã đăng thì slug GIỮ NGUYÊN
+- [ ] mỗi ảnh một alt khác nhau, tả được tấm đó bằng câu đọc xuôi
 - [ ] biến thể có ảnh riêng
-- [ ] mọi URL ảnh và video trả 200
+- [ ] mọi URL ảnh và video trả 200 **và đúng kiểu** — ảnh `.webp` / `image/*`,
+      video `video/mp4`. Còn đuôi `.jpg` là đã lọt khâu chuyển đổi
+- [ ] thư viện Media không còn tệp `application/octet-stream` nào mới
 
 ## E · Đánh giá
 

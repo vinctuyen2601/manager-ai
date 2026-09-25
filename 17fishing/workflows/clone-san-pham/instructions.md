@@ -212,15 +212,48 @@ Ba chỗ hay lệch nghĩa, kiểm trước khi gửi:
 - trạng thái kho nói ngược với hỏi đáp
 - block bật mà rỗng, hoặc block tắt bỏ lại ảnh mồ côi
 
-**Cổng:** `--thu` không báo lỗi nào.
+### Đặt tên ảnh và đường dẫn theo SẢN PHẨM
 
----
+Ảnh xưởng mang tên vô nghĩa: `a06.jpg`, `O1CN01jekhrw2HNGOL0Q0w3.jpg`. Tải
+nguyên tên đó lên là vứt đi một trong số ít tín hiệu SEO mà mình toàn quyền
+điều khiển. Google đọc tên tệp trong URL ảnh, và ảnh sản phẩm là đường vào
+qua Google Images.
 
-**Ảnh tải lên phải khai kiểu MIME.** `new Blob([buf])` không có `type` thì
-backend BỎ HẲN khâu chuyển sang WebP, S3 lưu `application/octet-stream`, và
-thư viện Media của CMS lọc theo mimeType nên không thấy tấm nào. `curl` vẫn
-trả 200 đủ byte nên mọi phép kiểm "ảnh sống" đều đạt — đã để lọt 19 ảnh đúng
-kiểu này, chủ shop phát hiện trước.
+**Công thức tên:** `<loại hàng>-<thương hiệu>-<đặc điểm hoặc cỡ>`
+
+```
+can-lang-xe-bennuo-3m6              biến thể
+can-luc-bennuo-khoen-dinh-8-2-mm    chi tiết
+can-lang-xe-vs-can-luc-bennuo-so-sanh
+```
+
+Không dấu, chữ thường, nối bằng gạch ngang, không có mã nội bộ của xưởng.
+Mỗi tấm một tên riêng — script dừng hẳn nếu hai tấm trùng tên.
+
+**Tên phải tả ĐÚNG tấm đó.** Đặt `can-lang-xe-bennuo-khoen-gap` cho tấm chụp
+tay cầm thì tệ hơn là để `a41.jpg`: nó dạy Google một điều sai.
+
+**Backend tự thêm phần còn lại của đường dẫn** — `17fishing/<tên>-<dấu thời
+gian>.webp`. Thư mục và dấu thời gian không đổi được, nên phần duy nhất mình
+điều khiển là cái tên. Đừng cố nhét đường dẫn vào tham số `name`.
+
+**Ba chỗ khác cũng phải mang từ khoá của sản phẩm:**
+
+| chỗ | quy tắc |
+|---|---|
+| `slug` sản phẩm | từ khoá chính + đặc điểm, không nhét mã SKU của xưởng |
+| `alt` của mọi `<img>` trong mô tả | tả đúng tấm đó bằng câu người đọc được, không nhồi từ khoá |
+| `alt` ảnh biến thể | web tự sinh `<tên sản phẩm> — ảnh N`, không phải đặt tay |
+
+**Sửa ảnh của sản phẩm đã đăng thì GIỮ NGUYÊN `slug`.** Slug đổi là URL đổi,
+là mất hết thứ hạng đã có. Ảnh thay thoải mái, slug thì không.
+
+### Ảnh tải lên phải khai kiểu MIME
+
+`new Blob([buf])` không có `type` thì backend BỎ HẲN khâu chuyển sang WebP,
+S3 lưu `application/octet-stream`, và thư viện Media của CMS lọc theo mimeType
+nên không thấy tấm nào. `curl` vẫn trả 200 đủ byte nên mọi phép kiểm "ảnh
+sống" đều đạt — đã để lọt 19 ảnh đúng kiểu này, chủ shop phát hiện trước.
 
 Dấu hiệu nhận ra trong một giây: **URL trả về còn đuôi `.jpg`**. Ảnh đi đúng
 đường ở shop này luôn ra `.webp`. Kiểm sau khi tải:
@@ -228,6 +261,10 @@ Dấu hiệu nhận ra trong một giây: **URL trả về còn đuôi `.jpg`**.
 ```bash
 curl -s -o /dev/null -w '%{http_code}|%{content_type}|%{size_download}' "$url"
 ```
+
+**Cổng:** `--thu` không báo lỗi nào, và mọi URL ảnh trả về đều là `.webp`.
+
+---
 
 ## Bước 5 · Đánh giá
 
