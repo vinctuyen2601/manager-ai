@@ -128,6 +128,60 @@ Bốn mục hay bị bỏ sót nhất, kiểm lại trước khi sang bước 4:
 
 ---
 
+## Bước 3c · Việt hoá CHỮ TRÊN ẢNH
+
+Ảnh xưởng đầy chữ Trung. Đăng nguyên là hỏng hai chỗ cùng lúc: khách không đọc
+được phần đáng giá nhất (bảng thông số nằm trong ảnh), và trang trông như hàng
+xách tay chưa qua tay ai.
+
+Không dùng công cụ dịch ảnh tự động. Chữ viết lên ảnh là chữ **ta chọn**, lấy
+từ Bảng sự thật ở bước 3, chứ không phải bản dịch máy của một câu quảng cáo
+tiếng Trung. Khác biệt lớn nhất nằm ở chỗ: nhiều dải chữ **không được dịch mà
+phải bỏ hoặc thay** (xem dưới).
+
+```
+cd <thư mục ảnh của sản phẩm>
+python3 {script_path}/anh/do-dai-chu.py anh/a06.jpg --x 0 420   # dò toạ độ
+# ... viết ke-hoach-anh.json ...
+python3 {script_path}/anh/viet-hoa-anh.py ke-hoach-anh.json --soat   # xem khung đỏ
+python3 {script_path}/anh/viet-hoa-anh.py ke-hoach-anh.json         # làm thật
+```
+
+Ba thứ **cấm dịch sang tiếng Việt rồi đăng**, vì chúng là cam kết của XƯỞNG với
+người mua sỉ Trung Quốc, không phải của shop với khách Việt:
+
+- chính sách đổi trả và bảo hành (`15天无理由退换`, `180天免费配节`)
+- mốc giao hàng, phí vận chuyển
+- huy hiệu "hàng tự sản xuất", "giá xưởng"
+
+Những dải đó hoặc **bỏ** (`"bo": true`), hoặc thay bằng một **sự thật về sản
+phẩm** lấy từ Bảng sự thật. Ô huy hiệu là chỗ tốt nhất để đặt thông số mà khách
+hỏi nhiều: sức kéo, số đốt, độ dài thu gọn.
+
+Ba cách xoá chữ, chọn theo nền — chọn sai thì miếng vá lộ ra thành hình chữ nhật:
+
+| `nen` | dùng khi | cách làm |
+|---|---|---|
+| `trang` | nền trắng phẳng | tô trắng |
+| `phang` | ô màu phẳng (huy hiệu, thẻ) | tô bằng màu trung bình mép trái ô |
+| `toi` | nền chuyển màu (mặc định) | nhân bản một dải DỌC sạch cùng độ cao |
+| `anh` | nền là ảnh chụp | làm mờ rồi phủ tối |
+
+`toi` là mặc định vì nó đúng cho mọi nền chuyển màu theo chiều dọc. Trên ảnh
+chụp thì nó ra vệt sọc ngang, chỗ đó phải dùng `anh`.
+
+**Đặt `co` (cỡ chữ) cứng khi nhiều ô nằm cạnh nhau trên cùng hàng.** Để tự co
+cho vừa thì ô chữ ngắn phình to, ba ô cạnh nhau nhìn thành ba khối rời.
+
+**Luôn chạy `--soat` trước.** Nó chỉ vẽ khung đỏ lên ảnh, ghi ra thư mục riêng
+`<thuMucRa>-soat`. Khung không trùm hết chữ thì chạy thật sẽ để lại mảnh vụn
+nét chữ Trung quanh mép, và mảnh vụn đó trông giống nhiễu ảnh chứ không giống
+lỗi, nên rất dễ lọt.
+
+**Và phải MỞ XEM ảnh thành phẩm.** Script không biết miếng vá có lộ hay không.
+
+---
+
 ## Bước 4 · Tạo bản nháp
 
 ```

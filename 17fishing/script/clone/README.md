@@ -13,6 +13,9 @@ Sáu bước trong `../../QUY-TRINH-1688.md`. Đây là phần chạy được.
 | `tao-nhap.mjs` | 4+5 | tải ảnh + tạo nháp + chèn đánh giá, có bốn bộ chặn |
 | `doc-thi-giac.mjs` | 3 | đo BẢNG MÀU THẬT + bề mặt từ ảnh gốc |
 | `prompt-stitch.mjs` | 6 | sinh prompt năm khối |
+| `anh/do-dai-chu.py` | 3c | dò toạ độ dải chữ trên ảnh xưởng |
+| `anh/viet-hoa-anh.py` | 3c | thay chữ Trung bằng chữ Việt theo `ke-hoach-anh.json` |
+| `anh/viet.py` | 3c | bộ hàm nền: xoá, mờ, phủ, viết chữ có dấu |
 
 ## Chạy
 
@@ -26,6 +29,11 @@ node doc-danh-gia.mjs dg.html --dong HA2500,HA3500,HA4500,HA5500,HA6500,HA7500,H
 
 # 3 — chép mẫu rồi ĐIỀN TAY. Thông số nằm trong ảnh mô tả, phải đọc bằng mắt.
 cp bang-su-that.mau.json bang-su-that.json
+
+# 3c — Việt hoá chữ trên ảnh. LUÔN --soat trước, rồi MỞ ẢNH RA XEM.
+python3 anh/do-dai-chu.py anh/a06.jpg --x 0 420
+python3 anh/viet-hoa-anh.py ke-hoach-anh.json --soat
+python3 anh/viet-hoa-anh.py ke-hoach-anh.json
 
 # 4+5 — LUÔN chạy --thu trước
 node tao-nhap.mjs noi-dung.json --thu
