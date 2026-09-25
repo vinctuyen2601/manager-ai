@@ -1,166 +1,167 @@
-# Bê sản phẩm từ 1688 về 17fishing
+# Quy trình clone sản phẩm về 17fishing
 
-Viết sau khi clone THẬT một sản phẩm đầu tiên (máy câu AS dòng HA, 24–25/09/2026).
-Mọi bẫy dưới đây đều đã trả giá, không có cái nào là lo xa.
+Sáu bước, theo đúng trình tự đã chạy thật lần đầu (máy câu AS dòng HA,
+24–25/09/2026). Mọi bẫy ghi ở đây đều đã trả giá.
 
----
-
-## Bài học lớn nhất của lần đầu
-
-**Việc tốn thời gian KHÔNG phải rút dữ liệu.** Rút xong trong mười phút bằng
-script. Thứ ngốn cả buổi là: đọc thông số nằm trong ẢNH, viết lời, và **đi bắt
-những con số nói ngược nhau** giữa mô tả, ảnh, câu hỏi thường gặp và bảng
-thông số.
-
-Nên trục của quy trình này là **BẢNG SỰ THẬT**: một bảng duy nhất chốt mọi con
-số, dựng một lần ở đầu, và mọi thứ sau đó phải khớp với nó. Không có bảng đó
-thì mỗi khâu lại chế ra một phiên bản thông số riêng.
-
-Bằng chứng: bộ ảnh AI đợt đầu ghi `HA5000`, `HA6000` (hai cỡ không tồn tại),
-`HA12000 cối nông` (thật là cối sâu), và `5.1:1 + hãm 15kg` (hai thông số
-không bao giờ đi cùng nhau).
+Bước 1 phụ thuộc nguồn hàng. Năm bước còn lại dùng chung cho mọi nguồn.
 
 ---
 
-## Giai đoạn 0 — Quyết có làm hay không  ·  chủ shop  ·  5 phút
+## Bước 1 · Yêu cầu tài liệu cần để clone
 
-Làm TRƯỚC khi rút bất cứ dữ liệu nào. Ba câu, trượt một câu thì dừng:
+**Trợ lý nói rõ cần gì, chủ shop lấy về.** Đây là khâu duy nhất chủ shop phải
+tự tay làm, vì cần đăng nhập.
 
-1. **Lấp được chỗ trống nào trong thang giá?** Mở `/analytics`, xem giá 10 sản
-   phẩm đang bán. Tháng 9/2026 có lỗ hổng rõ từ 420k tới 1,55tr.
-2. **Danh mục đó có người xem không?** Bảng "Từng sản phẩm" trong Phân tích.
-   Máy câu là nhóm nhiều lượt xem nhất, nên máy câu là lựa chọn có cơ sở.
-3. **MOQ có bằng 1 không?** Không đặt lẻ được thì không thử được, mà không thử
-   được thì không nên bán.
+Cần đúng hai thứ, dạng **mã HTML của phần tử**, không phải ảnh chụp:
 
----
-
-## Giai đoạn 1 — Rút dữ liệu  ·  tự động  ·  10 phút
-
-Chủ shop **đăng nhập 1688**, mở trang sản phẩm, rồi:
-
-1. Cuộn tới mục 商品评价, bấm **查看全部评价**, cuộn hết danh sách
-2. F12 → Console → gõ `allow pasting` → dán `trich-1688.js` → Enter
-3. Nó chép JSON vào clipboard, dán vào chat
-
-**Ảnh mô tả KHÔNG nằm trong trang.** Chúng ở
-`https://itemcdn.tmall.com/1688offer/<mã trong detailUrl>`. Đây là nơi chứa
-bảng thông số kỹ thuật thật.
-
-**Bẫy đã dính ở khâu này:**
-
-| Bẫy | Hậu quả nếu không biết |
+| Cần | Lấy ở đâu |
 |---|---|
-| Khối JSON lặp 3 lần trong HTML | 9 biến thể đọc ra thành 27 |
-| Ảnh đánh giá là MẪU KHÁC | Suýt đăng ảnh máy xanh ngọc cho máy đồng cổ |
-| Đánh giá gộp theo GIAN HÀNG, không theo mẫu | 6/8 đánh giá là của dòng cũ, cách 6–7 năm |
-| "6000+ đánh giá" | Chỉ ~300 có chữ, 8 có ảnh. Phần còn lại là chấm sao câm |
-| Bảng 商品件重尺 | Điền cho có: cả 9 cỡ đều ghi 350g, trong khi thật là 285–697g |
-| Ảnh "mới" trong mô tả | Phần lớn là banner bán chéo mẫu KHÁC |
-| Tên dịch máy | "bánh xe quay" = máy câu. Phải viết lại từ đầu |
+| Khối **thông tin sản phẩm** | phần tử bao cả giá, biến thể, thuộc tính, thư viện ảnh |
+| Khối **đánh giá** | bấm "xem tất cả đánh giá", cuộn hết, rồi lấy phần tử danh sách |
+
+Cách lấy: chuột phải vào vùng đó → Inspect → chuột phải node cha → Copy →
+Copy outerHTML → dán vào chat.
+
+Hoặc dán `trich-1688.js` vào Console, nó tự gom thành JSON.
+
+**Bẫy ở bước này:**
+
+- **Đánh giá KHÔNG nằm trong trang lưu.** Phải bấm nút mở danh sách trước.
+  Lưu trang bằng Ctrl+S mà chưa bấm thì chỉ được đúng một đánh giá.
+- **Ảnh mô tả cũng không nằm trong trang.** Chúng ở
+  `itemcdn.tmall.com/1688offer/<mã trong detailUrl>`. Bảng thông số kỹ thuật
+  thật nằm trong bộ ảnh này.
+- **Khối JSON lặp ba lần** trong HTML. Không khử trùng lặp thì 9 biến thể đọc
+  ra thành 27.
 
 ---
 
-## Giai đoạn 2 — Dựng BẢNG SỰ THẬT  ·  cùng làm  ·  20 phút
+## Bước 2 · Extract thông tin, ảnh, video và dịch mô tả
 
-Một bảng, mọi thứ sau này phải khớp. Với máy câu thì các cột là:
+Máy làm trọn. Ra được:
 
-```
-cỡ | bạc đạn | tỉ số truyền | sức chứa cước | lực hãm | khối lượng | kích thước | giá vốn CNY | giá bán
-```
+- mã sản phẩm, tên gốc, tên xưởng
+- danh sách biến thể: tên, giá gốc, tồn kho
+- bảng thuộc tính
+- ảnh thư viện, ảnh mô tả, video
+- đánh giá: người mua, số sao, ngày, cỡ đã mua, nội dung, ảnh kèm
 
-**Thông số nằm TRONG ẢNH, phải đọc bằng mắt.** Không grep được. Tìm tấm có
-chữ 产品参数 hoặc bảng kẻ ô trong bộ ảnh mô tả.
+**Thông số kỹ thuật nằm TRONG ẢNH, phải đọc bằng mắt.** Không grep được. Tìm
+tấm có chữ 产品参数 hoặc bảng kẻ ô.
 
-Kèm ba dòng **KHÔNG ĐƯỢC NÓI**, chốt ngay tại đây:
+**Bẫy ở bước này — tất cả đã dính:**
 
-- thứ nhà sản xuất không công bố (ví dụ chống nước mặn → không nhận câu biển)
+| Bẫy | Hậu quả |
+|---|---|
+| Ảnh đánh giá là **mẫu khác** | Suýt đăng ảnh máy xanh ngọc cho máy đồng cổ |
+| Đánh giá gộp theo **gian hàng** | 6/8 đánh giá là dòng cũ, cách 6–7 năm |
+| "6000+ đánh giá" | Chỉ ~300 có chữ, 8 có ảnh. Còn lại là chấm sao câm |
+| Bảng cân nặng đóng gói | Điền cho có: cả 9 cỡ ghi 350g, thật là 285–697g |
+| Ảnh "mới" trong mô tả | Phần lớn là banner bán chéo mẫu khác |
+| Video | CDN chặn tải từ ngoài. Chủ shop phải "Save video as" |
+
+---
+
+## Bước 3 · Chuẩn hoá theo cách viết của người Việt
+
+Không phải dịch. Là **viết lại**.
+
+- **Tên sản phẩm**: dịch máy luôn sai. "bánh xe quay" là máy câu. "tàu câu
+  kiểu quay" là máy câu spinning.
+- **Từ vựng phải theo shop, không theo từ điển.** Đếm từ đồng nghĩa trong
+  hàng đang bán rồi mới viết. Shop dùng "vòng bi", tôi viết "bạc đạn", chủ shop
+  phải hỏi lại.
+- **Giọng văn**: câu ngắn, chấm thay vì gạch ngang, nói việc câu cá chứ không
+  bình luận về sản phẩm. Chạy bộ đếm tật trước khi lưu, xem
+  `GIONG-TRANG-SAN-PHAM.md`.
+
+**Dựng BẢNG SỰ THẬT ở đây.** Một bảng chốt mọi con số, cộng ba dòng
+**không được nói**:
+
+- thứ nhà sản xuất không công bố (chống nước mặn → không nhận câu biển)
 - thứ ảnh không kiểm được (lớp phủ là phủ hay màu xuyên thân)
-- cỡ/mã không tồn tại trong dòng
+- mã/cỡ không tồn tại trong dòng
 
-Ba dòng này là thứ đưa vào prompt Stitch để chặn nó bịa.
-
----
-
-## Giai đoạn 3 — Sinh ảnh bằng Stitch  ·  chủ shop  ·  30 phút
-
-Xem `PROMPT-STITCH.md`. Luật cứng: **mọi con số trong ảnh phải có trong Bảng
-sự thật.** Stitch chế ra thông số nghe rất hợp lý — đó là chế độ hỏng mặc định
-của nó, không phải tai nạn.
-
-Bộ tối thiểu 6 tấm, theo bốn nhiệm vụ Hero trong `product-image-knowledge.md`:
-
-| # | Tấm | Trả lời câu hỏi |
-|---|---|---|
-| 1 | Hero: sản phẩm chiếm ≥90% khung | là cái gì |
-| 2 | **Trên tay người** | **to cỡ nào** ← khách lo nhất |
-| 3 | Bối cảnh dùng thật | tôi được gì |
-| 4 | Chú thích bung chi tiết | làm bằng gì |
-| 5 | So sánh các cỡ | chọn cỡ nào |
-| 6 | Hộp và phụ kiện | nhận về gồm gì |
+Bảng này là đầu vào của bước 4 và bước 6. Không có nó thì mỗi khâu chế ra một
+phiên bản thông số riêng, và đó là thứ ngốn thời gian nhất lần đầu.
 
 ---
 
-## Giai đoạn 4 — Dựng sản phẩm  ·  tự động + viết  ·  40 phút
+## Bước 4 · Dùng API quản trị tạo bản nháp, đủ các block
 
-Thứ tự bắt buộc, vì khâu sau phụ thuộc khâu trước:
+Luôn tạo ở `isActive: false`. Bật là quyết định của chủ shop.
 
-1. Tải ảnh **kèm tên SEO** — hộp thoại trong CMS gợi ý sẵn, đổi "ảnh N" thành
-   thứ nhìn thấy trong ảnh
-2. Tạo sản phẩm ở trạng thái **nháp** (`isActive: false`)
+Thứ tự bắt buộc, khâu sau phụ thuộc khâu trước:
+
+1. Tải ảnh **kèm tên SEO** — hộp thoại trong CMS gợi ý sẵn
+2. `POST /admin/products` với `templateId`, `blockOrder`, `blockData`
 3. Biến thể: tên, giá, **ảnh riêng theo nhóm cỡ**
-4. Nội dung block từ Bảng sự thật
-5. Đánh giá — xem luật ở dưới
+4. Nội dung từng block, lấy từ Bảng sự thật
 
-**Giá bán:** giá vốn CNY × tỉ giá × hệ số của chủ shop. Lần đầu chốt 2–2,5tr
-cho hàng vốn 65–115 CNY.
+**Block phải khớp nhau.** Kiểm ba thứ hay lệch:
 
-**Đánh giá.** Đánh giá mồi (`seedRandom`) thì chủ shop có quyền dùng. Dịch
-đánh giá thật từ 1688 cũng được, nhưng **không gắn tên người Việt cụ thể** —
-đó là bịa lời chứng thực. Và **bật cờ**
-`blockData['danh-gia'].khongPhaiKhachThat = true` để không khai sao cho Google,
-nếu không là vi phạm chính sách review snippet, mất ngôi sao của CẢ website.
+- tiêu đề hứa thứ không nằm dưới nó ("Bảng thông số" mà không có bảng)
+- `stockStatus` nói ngược với hỏi đáp
+- block bật mà rỗng, hoặc block tắt bỏ lại ảnh mồ côi
+
+`diem-manh-bento` đọc dữ liệu ở khoá `diem-manh`. Các block cùng nhóm dùng
+chung một khoá, xem `nhom` trong registry của backend.
 
 ---
 
-## Giai đoạn 5 — Kiểm trước khi bật  ·  tự động
+## Bước 5 · Tạo đánh giá dựa trên đánh giá đã có
 
-Chạy `soi-san-pham.mjs`. Danh sách kiểm lấy từ lỗi đã xảy ra thật:
+**Được phép:** dịch đánh giá thật, giữ mã ẩn danh của người mua, ghi nguồn
+một lần ở tiêu đề khối.
+
+**Không được phép:** gắn tên người Việt cụ thể vào lời người mua nước ngoài.
+Đó là bịa lời chứng thực, và là luật chủ shop tự đặt trong `CLAUDE.md`.
+
+**Chọn lọc, không lấy hết.** Từ 10 đánh giá lấy 6. Bỏ:
+
+- cái khen tràn không có chi tiết nào ("sao đồ nhà bạn tốt thế")
+- cái **viết về sản phẩm khác** (có người khen cần câu trong đánh giá máy câu)
+- cái chỉ nói vận chuyển và đóng gói của người bán bên kia
+
+**Giữ cái chê.** Một cái 1 sao trong bộ bảy làm cả bộ đáng tin hơn, và nó là
+đánh giá hữu ích nhất cho người mua.
+
+**Bắt buộc bật cờ** `blockData['danh-gia'].khongPhaiKhachThat = true`. Không
+bật là khai sao giả cho Google, mức phạt gỡ ngôi sao của **cả website**.
+
+---
+
+## Bước 6 · Tạo prompt cho Stitch
+
+Stitch cần ba thứ: **ảnh sản phẩm gốc**, **thông tin sản phẩm**, và **prompt**.
+
+Chi tiết ở `PROMPT-STITCH.md`. Hai điều cốt lõi:
+
+1. **Khối sự thật dán nguyên văn lên đầu mọi prompt.** Stitch chế ra thông số
+   nghe rất hợp lý. Đợt đầu nó ghi `HA5000`, `HA6000` (không tồn tại),
+   `HA12000 cối nông` (thật là cối sâu), `5.1:1` cạnh `hãm 15kg` (hai thông số
+   không đi cùng nhau), và `đánh biển` (trái với hỏi đáp cùng trang).
+2. **Prompt phải chứa hiểu biết về thiết kế đồ câu**, không chỉ thông số. Lớp
+   chữ sai cách biến ảnh chuyên nghiệp thành biển quảng cáo chợ đêm.
+
+---
+
+## Kiểm trước khi bật
 
 - [ ] mọi số trong ảnh, mô tả, hỏi đáp, bảng thông số **khớp Bảng sự thật**
 - [ ] không có mã cỡ nào ngoài danh sách thật
-- [ ] không có tiêu đề nào hứa thứ không nằm dưới nó
-- [ ] `stockStatus` khớp với lời trong hỏi đáp
-- [ ] block đang bật đều có dữ liệu; block tắt không bỏ lại ảnh mồ côi
-- [ ] ảnh hero ≥90% khung, video ngay sau hero
+- [ ] không tiêu đề nào hứa thứ không nằm dưới nó
+- [ ] `stockStatus` khớp lời trong hỏi đáp
+- [ ] block bật đều có dữ liệu, block tắt không bỏ lại ảnh mồ côi
+- [ ] hero ≥90% khung, video ngay sau hero
 - [ ] tên tệp mỗi ảnh một khác
-- [ ] cờ `khongPhaiKhachThat` đã bật nếu đánh giá không phải khách thật
+- [ ] cờ `khongPhaiKhachThat` đã bật
 - [ ] mọi URL ảnh trả 200
-
-Xong hết mới bật `isActive`.
-
----
-
-## Giai đoạn 6 — Đặt mẫu, thay ảnh thật  ·  sau khi bán
-
-**Cả trang đang dựng trên lời nhà sản xuất.** Chưa ai trong shop sờ vào máy.
-MOQ = 1 nên một cái chỉ ~280k. Cầm rồi thì chụp bốn tấm bằng điện thoại, và
-bốn tấm đó mạnh hơn cả bộ ảnh AI vì chúng là thật:
-
-1. máy trong lòng bàn tay
-2. tay đang thao tác (vặn hãm, gập tay quay)
-3. lắp trên cần, cạnh hồ
-4. hai cỡ đặt cạnh nhau
-
-Khách đầu tiên mua xong thì chuyển tin nhắn Zalo của họ thành đánh giá thật.
 
 ---
 
 ## Thời gian thật
 
-Sản phẩm đầu: **cả một buổi dài**, phần lớn là gỡ bẫy và làm lại.
-Sản phẩm thứ hai trở đi, nếu theo đúng quy trình này: **khoảng 2 giờ**, trong
-đó chủ shop mất ~40 phút (lấy dữ liệu, sinh ảnh, duyệt).
-
-Thứ rút ngắn nhiều nhất không phải script, mà là **Bảng sự thật dựng trước** —
-nó chặn phần lớn vòng lặp sửa tới sửa lui.
+Sản phẩm đầu: cả một buổi dài, phần lớn là gỡ bẫy và làm lại.
+Từ sản phẩm thứ hai, theo quy trình này: khoảng **2 giờ**, chủ shop mất ~40
+phút (lấy tài liệu, chạy Stitch, duyệt).
