@@ -85,6 +85,40 @@ Ba phần bắt buộc:
 
 ---
 
+## Bước 3b · Phiếu thị giác — NHÌN, không đo
+
+Điền `phieu-thi-giac.md` bằng cách **xem từng ảnh sản phẩm**. Tám mục, dùng
+chung cho mọi loại hàng. Xem `vi-du-phieu-thi-giac.md` để biết mức chi tiết
+cần đạt.
+
+**Đây là bước không giao được cho script.** Đã thử và đo được giới hạn:
+
+`doc-thi-giac.mjs` đo bảng màu chỉ đúng với **ảnh studio nền trơn**. Chạy trên
+ảnh marketing thì nó trả về màu của banner:
+
+| Sản phẩm | Màu thật | Máy đo ra |
+|---|---|---|
+| Máy câu AS HA (ảnh nền trắng) | đồng cổ | **đồng cổ — đúng** |
+| Ghế AK Power (banner nền xanh) | vàng chanh + đen | "xanh lạnh" — sai |
+| Phao điện (banner nền xanh) | tím chuyển xanh ngọc | "xanh lạnh" — sai |
+
+Cắt đúng vùng sản phẩm cũng không cứu được khi vật thể không lấp đầy khung.
+Và ngay cả khi màu đo đúng, máy vẫn không nói được "đây là dải chuyển màu
+dọc" hay "có vòng cao su đỏ ở cuống" — mà đó mới là thứ công cụ sinh ảnh cần.
+
+Nên: **dùng script cho ảnh studio nền trơn, còn lại nhìn bằng mắt.** Script
+báo cảnh báo khi không được chỉ vùng.
+
+Bốn mục hay bị bỏ sót nhất, kiểm lại trước khi sang bước 4:
+
+- màu **phẳng hay chuyển màu** — chuyển màu mà vẽ thành phẳng là hỏng nhận dạng
+- **bề mặt** bóng hay mờ — quyết định cách chiếu sáng, và kim loại chiếu sai
+  ánh sáng thì trông như nhựa
+- **trạng thái kép** — gấp/mở, tắt/bật, thu/duỗi. Có thì phải có ảnh cả hai
+- **đặc điểm nhận dạng** — thứ bỏ đi là thành sản phẩm khác
+
+---
+
 ## Bước 4 · Tạo bản nháp
 
 ```
