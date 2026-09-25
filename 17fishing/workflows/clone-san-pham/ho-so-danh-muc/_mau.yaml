@@ -1,0 +1,37 @@
+# MẪU HỒ SƠ DANH MỤC
+#
+# Mỗi danh mục hàng một tệp. Instructions của workflow không chứa chữ nào
+# riêng của một loại hàng — mọi thứ khác nhau giữa máy câu và phao đều khai ở
+# đây. Thêm danh mục mới = thêm một tệp, không sửa workflow.
+#
+# Vì sao cần: lần clone đầu tôi viết thẳng đặc thù máy câu vào quy trình (cỡ
+# HA, tỉ số truyền, lực hãm). Sang cái phao thì quy trình đó vô dụng, vì phao
+# không có tỉ số truyền mà có độ nhạy, tải trọng, loại pin.
+
+ma: ten-khoa-khong-dau
+ten: Tên hiển thị
+danhMucId: uuid-trong-cms
+
+thongSo:
+  # Thiếu một mục batBuoc là DỪNG ở cổng sau bước 3. Không đoán, không bỏ qua.
+  batBuoc: []
+  tuyChon: []
+  # Mục nào mà giá trị thường nằm TRONG ẢNH chứ không trong HTML.
+  namTrongAnh: []
+
+tuVung:
+  dung: []     # từ shop đang dùng, phải theo
+  tranh: []    # từ đồng nghĩa dễ lỡ tay dùng
+
+bienThe:
+  theo: ""     # chia biến thể theo chiều nào
+  mauMa: ""    # dạng mã, để bộ kiểm bắt mã lạ
+  anhRieng: "" # ảnh biến thể nên thể hiện điều gì
+
+boAnh: []      # danh sách tấm cần, theo thứ tự ưu tiên
+
+cauHoiKhung: []  # khung câu hỏi thường gặp, {ngoặc} thay bằng số trong hồ sơ
+
+khongDuocNoiMacDinh: []  # điều cấm mặc định của loại hàng
+
+ruiRoHayGap: []  # điểm hỏng hay bị khiếu nại, đưa vào phần bảo quản

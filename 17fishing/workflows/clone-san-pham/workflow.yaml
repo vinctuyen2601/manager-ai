@@ -1,0 +1,64 @@
+name: clone-san-pham
+version: "1.0.0"
+description: "Bê một sản phẩm từ nguồn bên ngoài (1688, Taobao, catalogue nhà phân phối) về 17fishing thành bản nháp đã chuẩn hoá, kèm prompt sinh ảnh. Dùng được cho mọi danh mục hàng nhờ hồ sơ danh mục."
+author: "trợ lý quản lý 17fishing"
+
+# ── Nguồn cấu hình ──────────────────────────────────────────────────────────
+config_source: "~/my-project/manager-ai/17fishing/CLAUDE.md"
+giong_van:     "~/my-project/manager-ai/17fishing/GIONG-TRANG-SAN-PHAM.md"
+kien_thuc_anh: "~/Downloads/product-image-knowledge.md"
+
+installed_path: "~/my-project/manager-ai/17fishing/workflows/clone-san-pham"
+instructions:   "{installed_path}/instructions.md"
+template:       "{installed_path}/template-ho-so.md"
+validation:     "{installed_path}/checklist.md"
+script_path:    "~/my-project/manager-ai/17fishing/script/clone"
+
+# ── HỒ SƠ DANH MỤC — thứ làm workflow này dùng được cho mọi loại hàng ───────
+# Mỗi danh mục khai: thông số bắt buộc, từ vựng, cách chia biến thể, bộ ảnh,
+# khung câu hỏi, rủi ro hay gặp. Instructions KHÔNG chứa chữ nào riêng của
+# máy câu — tất cả đọc từ đây.
+ho_so_danh_muc: "{installed_path}/ho-so-danh-muc/{{ma_danh_muc}}.yaml"
+ho_so_mau:     "{installed_path}/ho-so-danh-muc/_mau.yaml"
+
+# ── VÀO ─────────────────────────────────────────────────────────────────────
+inputs:
+  element_san_pham:
+    mo_ta: "mã HTML khối thông tin sản phẩm (copy outerHTML)"
+    bat_buoc: true
+  link_san_pham:
+    mo_ta: "đường dẫn gốc, dùng để truy nguồn và lấy phần mô tả"
+    bat_buoc: true
+  element_danh_gia:
+    mo_ta: "mã HTML khối đánh giá, sau khi đã bấm xem tất cả và cuộn hết"
+    bat_buoc: false
+  ma_danh_muc:
+    mo_ta: "khoá hồ sơ danh mục: may-cau | phao | can-cau | ghe | cuoc | phu-kien"
+    bat_buoc: true
+
+# ── RA ──────────────────────────────────────────────────────────────────────
+outputs:
+  ho_so_san_pham:
+    duong_dan: "rut/{{ma}}/ho-so.json"
+    mo_ta: "Hồ sơ sản phẩm đã chuẩn hoá. Nguồn sự thật duy nhất cho mọi khâu sau."
+  san_pham_nhap:
+    mo_ta: "sản phẩm trên production, isActive=false"
+  prompt_stitch:
+    duong_dan: "rut/{{ma}}/prompt-stitch.md"
+    mo_ta: "prompt ba khối để sinh bộ ảnh"
+
+# ── Cổng chặn giữa các bước ─────────────────────────────────────────────────
+# Bước sau KHÔNG được chạy nếu cổng trước chưa qua.
+cong_chan:
+  sau_buoc_1: "có đủ element sản phẩm + link. Thiếu element đánh giá thì bỏ bước 5, không bịa."
+  sau_buoc_3: "Hồ sơ sản phẩm điền đủ THÔNG SỐ BẮT BUỘC của danh mục, và có mục khongDuocNoi."
+  sau_buoc_4: "tao-nhap.mjs chạy --thu không báo lỗi nào."
+  truoc_khi_bat: "checklist.md chạy ở ngữ cảnh SẠCH, không còn mục nào chưa tick."
+
+# ── Luật cứng, không workflow nào được phá ─────────────────────────────────
+luat_cung:
+  - "isActive luôn false. Bật là quyết định của chủ shop."
+  - "Mọi con số trong mô tả, ảnh, hỏi đáp phải có trong Hồ sơ sản phẩm."
+  - "Không gán tên người Việt cụ thể vào đánh giá dịch từ nguồn ngoài."
+  - "Có đánh giá không phải khách thật thì bật cờ khongPhaiKhachThat."
+  - "Không nói thứ nhà sản xuất không công bố."

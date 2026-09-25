@@ -1,0 +1,39 @@
+ma: phao
+ten: Phao câu cá
+danhMucId: 01237c0c-3dfc-48e8-91cf-d1b4eed037c6
+
+thongSo:
+  batBuoc: [chieuDai, taiTrong, vatLieuThan, loaiDuoi]
+  tuyChon: [nguonDien, thoiLuongPin, doNhay, soDot, mauDuoi]
+  namTrongAnh: [chieuDai, taiTrong, soDot]
+
+tuVung:
+  dung: [thân phao, đuôi phao, tải trọng, độ nhạy, nano, lông công, đớp, chìm]
+  tranh: [phao câu, float, sức nổi]
+
+bienThe:
+  theo: số hiệu hoặc tải trọng
+  mauMa: "số thứ tự hoặc gam, ví dụ 1.6g"
+  anhRieng: "hình dáng thân phao của số hiệu đó"
+
+boAnh:
+  - hero
+  - duoi-nuoc       # với phao thì "đứng trên mặt nước" quan trọng hơn "trên tay"
+  - ban-dem         # phao điện phải có tấm này, không có thì không bán được
+  - so-sanh-so      # các số hiệu cạnh nhau
+  - bung-chi-tiet
+  - hop
+
+cauHoiKhung:
+  - "Phao này chịu được mồi bao nhiêu gam?"
+  - "Dùng cho hồ nào, nước tĩnh hay nước chảy?"
+  - "Pin dùng được bao lâu, thay loại gì?"
+  - "Đuôi phao nhìn rõ ở khoảng cách bao xa?"
+
+khongDuocNoiMacDinh:
+  - "không chìm, không gãy — phao là hàng tiêu hao"
+  - "chống nước tuyệt đối với phao điện, trừ khi có chuẩn IP công bố"
+
+ruiRoHayGap:
+  - "đuôi phao gãy khi tháo lắp mạnh"
+  - "phao điện vào nước ở khe pin nếu vặn không chặt"

@@ -1,0 +1,38 @@
+ma: can-cau
+ten: Cần câu đài
+danhMucId: 6a4a2983-94ec-4905-9f81-5b6f57a73907
+
+thongSo:
+  batBuoc: [chieuDai, soDot, khoiLuong, vatLieu, congSuat]
+  tuyChon: [doThuonKhiXep, duongKinhGoc, duongKinhNgon, tiLeCarbon]
+  namTrongAnh: [chieuDai, soDot, khoiLuong, doThuonKhiXep]
+
+tuVung:
+  dung: [đốt, ngọn cần, gốc cần, độ cứng, carbon, thu gọn, vực]
+  tranh: [khúc, section, blank]
+
+bienThe:
+  theo: chiều dài
+  mauMa: "mét, ví dụ 4m5 hoặc 5m4"
+  anhRieng: "cần ở chiều dài đó, có vật tham chiếu để thấy độ dài"
+
+boAnh:
+  - hero
+  - do-dai-that     # cần dài nên phải có người hoặc vật làm thước
+  - do-cong         # thể hiện độ cứng khi có cá
+  - thu-gon         # dài bao nhiêu khi cất, câu hỏi hay gặp nhất
+  - bung-chi-tiet
+  - hop
+
+cauHoiKhung:
+  - "Cần này câu cá cỡ nào?"
+  - "Thu gọn còn bao nhiêu, xe máy chở được không?"
+  - "Cầm có nặng tay không khi câu cả buổi?"
+  - "Gãy ngọn thì mua đốt lẻ được không?"
+
+khongDuocNoiMacDinh:
+  - "không gãy, chịu mọi cỡ cá — cần câu có giới hạn công suất"
+
+ruiRoHayGap:
+  - "gãy ngọn do rút đốt sai cách"
+  - "kẹt đốt khi cát lọt vào khớp"

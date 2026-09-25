@@ -1,0 +1,41 @@
+ma: may-cau
+ten: Máy câu
+danhMucId: 328a9020-e3f3-4b3a-99f8-a8f3850d01aa
+
+thongSo:
+  batBuoc: [tiSoTruyen, soVongBi, lucHam, khoiLuong, sucChuaCuoc]
+  tuyChon: [kichThuocThan, vatLieuThan, loaiCoi, tayQuayDoiChieu]
+  namTrongAnh: [tiSoTruyen, soVongBi, lucHam, khoiLuong, sucChuaCuoc, kichThuocThan]
+
+tuVung:
+  dung: [vòng bi, ổ bi, cối, rotor, tay quay, chốt dẫn cước, lực hãm, tỉ số truyền, nhông]
+  tranh: [bạc đạn, lô, thắng, phanh, líp]
+
+bienThe:
+  theo: cỡ máy
+  mauMa: "chữ cái dòng + số, ví dụ HA2500"
+  anhRieng: "kích thước thật của nhóm cỡ, CÙNG TỈ LỆ giữa các nhóm để thấy chênh lệch"
+
+boAnh:
+  - hero            # sản phẩm ≥90% khung
+  - tren-tay        # trả lời "to cỡ nào" — câu khách lo nhất với máy câu
+  - dang-dung       # lắp trên cần, cạnh hồ
+  - bung-chi-tiet   # cối, nhông, vòng bi, hệ hãm
+  - so-sanh-co      # các cỡ cạnh nhau ĐÚNG TỈ LỆ
+  - hop
+
+cauHoiKhung:
+  - "Nên chọn cỡ nào?"
+  - "Máy có nặng tay không?"
+  - "Lực hãm {lucHam} nghĩa là kéo được cá {lucHam}?"
+  - "Thuận tay trái dùng được không?"
+  - "Bao lâu có hàng?"
+
+khongDuocNoiMacDinh:
+  - "chống nước mặn, câu biển — trừ khi nhà sản xuất công bố rõ"
+  - "chống nước, kín nước — máy câu spinning không kín nước"
+
+ruiRoHayGap:
+  - "lớp phủ màu là lớp phủ, không phải màu xuyên thân. Va đập có thể tróc."
+  - "tra dầu thiếu từ xưởng, nên nhắc khách kiểm khi nhận"
+  - "cát lọt quanh trục quay là chỗ rơ đầu tiên"

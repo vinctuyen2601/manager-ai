@@ -1,0 +1,38 @@
+ma: ghe
+ten: Ghế câu cá
+danhMucId: bda629b0-c2f2-46d4-96ca-04aa17306421
+
+thongSo:
+  batBuoc: [taiTrongToiDa, khoiLuong, kichThuocMo, kichThuocGap, vatLieuKhung]
+  tuyChon: [soNacChinh, chieuCaoNgoi, loaiChan, coTuaLung]
+  namTrongAnh: [kichThuocMo, kichThuocGap, chieuCaoNgoi, soNacChinh]
+
+tuVung:
+  dung: [khung, chân ghế, tựa lưng, gấp gọn, nấc chỉnh, chịu tải]
+  tranh: [sườn, xếp, tải trọng tối đa cho phép]
+
+bienThe:
+  theo: phiên bản hoặc màu
+  mauMa: "tên phiên bản"
+  anhRieng: "ghế ở phiên bản đó, mở ra"
+
+boAnh:
+  - hero
+  - dang-ngoi       # có người ngồi mới thấy tỉ lệ và độ vững
+  - gap-gon         # trạng thái kép mở/gấp trong một khung
+  - dia-hinh        # chân ghế trên đất dốc hoặc kè đá
+  - bung-chi-tiet
+  - hop
+
+cauHoiKhung:
+  - "Ghế chịu được bao nhiêu kg?"
+  - "Gấp lại to bằng gì, để cốp xe được không?"
+  - "Ngồi bờ dốc hoặc kè đá có vững không?"
+  - "Chỉnh được mấy nấc?"
+
+khongDuocNoiMacDinh:
+  - "chịu mọi địa hình — ghế có giới hạn độ dốc"
+
+ruiRoHayGap:
+  - "khớp gấp rơ sau thời gian dùng"
+  - "chân lún trên nền đất mềm nếu không có đế"
