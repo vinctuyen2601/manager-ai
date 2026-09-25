@@ -42,8 +42,24 @@ const loi = [];
 // ── LUẬT 3 · mọi cỡ nhắc tới phải có trong Bảng sự thật ────────────────────
 const moiCo = new Set(b.nhomCo.flatMap((x) => x.co));
 const van = JSON.stringify({ d: n.moTa, bd: n.blockData, v: n.bienThe });
-for (const m of van.matchAll(/\b([A-Z]{2,4}\d{3,5})\b/g)) {
-  if (!moiCo.has(m[1])) loi.push(`mã cỡ KHÔNG có trong Bảng sự thật: ${m[1]}`);
+// Mẫu mã cỡ lấy từ Bảng sự thật (`mauCo`), khai theo `bienThe.mauMa` của hồ sơ
+// danh mục. Bản đầu gõ cứng /[A-Z]{2,4}\d{3,5}/ — đúng với mã cỡ máy câu kiểu
+// HA2500, nhưng cần câu ghi cỡ là "3m6" nên phép kiểm thành vô hiệu: không
+// khớp gì, không báo gì, và cái bẫy nó sinh ra để chặn (đăng nhầm cỡ không có
+// thật) đi qua thoải mái. Đã đăng nhầm cỡ đúng một lần rồi, nên phép kiểm này
+// không được phép im lặng.
+const mauCo = new RegExp(b.mauCo || '\\b([A-Z]{2,4}\\d{3,5})\\b', 'gi');
+let daKhop = 0;
+for (const m of van.matchAll(mauCo)) {
+  daKhop += 1;
+  const co = (m[1] || m[0]).toLowerCase();
+  if (![...moiCo].some((x) => String(x).toLowerCase() === co)) {
+    loi.push(`mã cỡ KHÔNG có trong Bảng sự thật: ${m[1] || m[0]}`);
+  }
+}
+if (!daKhop) {
+  loi.push(`mẫu mã cỡ ${mauCo} không khớp chữ nào trong nội dung — `
+    + 'hoặc khai sai mauCo, hoặc nội dung không nhắc tới cỡ nào. Cả hai đều phải sửa.');
 }
 
 // ── LUẬT 3b · không nhắc thứ nằm trong danh sách cấm ───────────────────────
@@ -142,6 +158,12 @@ for (const d of [...(n.danhGia || [])].reverse()) {
   await new Promise((s) => setTimeout(s, 400));
 }
 
-console.log(`\nXem thử: https://17-fishing.com/san-pham/${sp.slug}/xem-truoc`);
-console.log(`Sửa    : CMS > Sản phẩm > ${sp.slug}`);
+// KHÔNG in link /xem-truoc của web. Route đó gọi `getProduct()` -> API công
+// khai `/products/:slug`, mà API công khai lọc `isActive`. Sản phẩm vừa tạo
+// luôn là nháp, nên link ấy LUÔN 404 — in ra chỉ tổ mất thời gian đi tìm xem
+// deploy hỏng hay dữ liệu hỏng. Đã mất một vòng đúng như thế.
+// Muốn xem trước thì mở trong CMS: CMS tự đẩy bản nháp vào route đó qua tham
+// số `draft`, kèm token, nên nó dựng được cả thứ chưa bật.
+console.log(`\nXem thử: CMS > Sản phẩm > ${sp.slug} > nút Xem trước`);
+console.log(`Kiểm API: GET /api/admin/products/${sp.id} (kèm token)`);
 console.log(`\nCHƯA BẬT. Chạy soi-san-pham.mjs rồi chủ shop tự bật.`);
