@@ -38,13 +38,35 @@ const goc = (u) => String(u || '').replace(/^\/\//, 'https://').replace(/_(b|sum
 const khoi = html.split('class="evaluation-content"').slice(1);
 
 const KHEN_SUONG = /(太完美|堪称完美|每一件都想|性价比超级高.*性价比超级高)/;
-// Nói tới giao hàng MÀ không có từ nào tả cái máy.
-// `质量` (chất lượng) KHÔNG tính là từ tả máy: nó chung tới mức câu thuần về
-// vận chuyển cũng có. Bản đầu xếp nó vào nhóm tả máy nên bỏ lọt đúng một ca
+
+// TỪ VỰNG THEO DANH MỤC — KHÔNG gõ cứng nữa.
+//
+// Bản đầu viết thẳng từ của máy câu vào đây, và nó sai ngay ở sản phẩm thứ hai:
+// `NHAM_HANG = /鱼竿|钓竿/` bắt đúng khi đang clone MÁY câu, nhưng khi clone
+// CẦN câu thì 钓竿 lại là tên của chính món hàng — cờ "nhầm hàng" sẽ bật cho
+// mọi đánh giá đúng chủ đề nhất. Sai ngược hẳn chiều.
+//
+// Nay hai tập từ lấy từ hồ sơ danh mục qua `--tu-ta` và `--tu-nham`; không
+// truyền thì rơi về tập của máy câu để các lần chạy cũ không đổi kết quả.
+const dsTu = (c, mac) => {
+  const v = lay(c);
+  return new RegExp(v ? v.split(',').map((x) => x.trim()).filter(Boolean).join('|') : mac);
+};
+// `质量` (chất lượng) KHÔNG tính là từ tả hàng: nó chung tới mức câu thuần về
+// vận chuyển cũng có. Bản đầu xếp nó vào nhóm tả hàng nên bỏ lọt đúng một ca
 // ("物流和包装都很好…东西质量有保证").
-const TU_TA_MAY = /轮|摇|线杯|刹车|出线|顺滑|做工|手感|齿|轴承/;
-const CHI_VAN_CHUYEN = (t) => /物流|包装|发货|快递/.test(t) && !TU_TA_MAY.test(t);
-const NHAM_HANG = /鱼竿|钓竿/;
+const TU_TA_HANG = dsTu('--tu-ta', '轮|摇|线杯|刹车|出线|顺滑|做工|手感|齿|轴承');
+const CHI_VAN_CHUYEN = (t) => /物流|包装|发货|快递/.test(t) && !TU_TA_HANG.test(t);
+const NHAM_HANG = dsTu('--tu-nham', '鱼竿|钓竿');
+
+// Khen NGƯỜI BÁN chứ không khen hàng. Lớp này riêng của 1688: quan hệ với
+// xưởng là thứ người mua sỉ quan tâm, nên "老板人也不错" là lời khen thật —
+// nhưng bê sang trang bán lẻ Việt Nam thì thành một dòng rỗng, khách đọc xong
+// không biết thêm gì về món hàng.
+//
+// Bắt được nhờ đúng ca này: 1051850891681 chỉ có một đánh giá,
+// "产品挺好的老板人也不错", và nó lọt sạch cả bốn cờ cũ.
+const KHEN_NGUOI_BAN = (t) => /老板|店家|卖家|客服|服务/.test(t) && !TU_TA_HANG.test(t);
 
 const ds = khoi.map((k) => {
   k = k.slice(0, 9000);
@@ -75,6 +97,7 @@ const ds = khoi.map((k) => {
       khenSuong: KHEN_SUONG.test(noi),
       nhamHang: NHAM_HANG.test(noi),
       chiVanChuyen: CHI_VAN_CHUYEN(noi),
+      khenNguoiBan: KHEN_NGUOI_BAN(noi),
     },
   };
 }).filter((x) => x.noiDung || x.anh.length);
@@ -89,6 +112,7 @@ console.log(`  cờ dongKhac      ${dem('dongKhac')}   (mua cỡ ngoài dòng đ
 console.log(`  cờ khenSuong     ${dem('khenSuong')}   (khen tràn, không chi tiết)`);
 console.log(`  cờ nhamHang      ${dem('nhamHang')}   (nói về sản phẩm khác)`);
 console.log(`  cờ chiVanChuyen  ${dem('chiVanChuyen')}   (chỉ nói giao hàng)`);
+console.log(`  cờ khenNguoiBan  ${dem('khenNguoiBan')}   (khen xưởng/ông chủ, không tả hàng)`);
 const sach = ds.filter((x) => !Object.values(x.co).some(Boolean));
 console.log(`\n  KHÔNG cờ nào: ${sach.length} — đây là nhóm nên xét trước`);
 for (const x of sach.slice(0, 8)) {

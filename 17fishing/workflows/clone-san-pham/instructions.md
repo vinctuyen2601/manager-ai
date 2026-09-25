@@ -46,8 +46,17 @@ thường ở máy chủ khác, và thông số kỹ thuật hay nằm trong đ�
 
 ```
 node {script_path}/doc-san-pham.mjs sp.html
-node {script_path}/doc-danh-gia.mjs dg.html --dong <danh sách mã biến thể thật>
+node {script_path}/doc-danh-gia.mjs dg.html --dong <danh sách mã biến thể thật> \
+  --tu-ta   <tuVungDanhGia.taHang của hồ sơ danh mục, ngăn bằng dấu phẩy> \
+  --tu-nham <tuVungDanhGia.nhamHang của hồ sơ danh mục>
 ```
+
+Hai cờ `--tu-ta` / `--tu-nham` là **bắt buộc**, không phải tuỳ chọn. Thiếu thì
+script rơi về từ vựng của máy câu, và với cần câu thì cờ `nhamHang` bật ngược:
+`钓竿` là tên của chính món hàng chứ không phải món khác.
+
+Nếu `doc-san-pham.mjs` báo `⚠ ... biến thể KHÔNG CÓ GIÁ` thì biến thể lấy từ
+thuộc tính chứ không từ `skuInfoMap` — **dừng, đi xin giá**, đừng đi tiếp.
 
 Rồi tải phần mô tả riêng và **xem từng ảnh bằng mắt** để tìm các mục
 `thongSo.namTrongAnh` của hồ sơ danh mục. Những mục đó không grep được.

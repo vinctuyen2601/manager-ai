@@ -11,6 +11,10 @@ tuVung:
   dung: [đốt, ngọn cần, gốc cần, độ cứng, carbon, thu gọn, vực]
   tranh: [khúc, section, blank]
 
+tuVungDanhGia:
+  taHang: [竿, 节, 调, 硬, 稍, 手感, 轻, 漆, 碳, 握把]
+  nhamHang: [渔轮, 线杯, 刹车, 浮漂, 鱼线]
+
 bienThe:
   theo: chiều dài
   mauMa: "mét, ví dụ 4m5 hoặc 5m4"

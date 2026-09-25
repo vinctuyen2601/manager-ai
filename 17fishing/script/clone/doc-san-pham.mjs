@@ -56,12 +56,33 @@ for (const m of html.matchAll(
   if (!bienThe.has(m[1])) bienThe.set(m[1], { ten: m[1], giaCNY: Number(m[2]), ton: Number(m[3]) });
 }
 
+// Dự phòng: có trang KHÔNG có skuInfoMap. Khi đó danh sách biến thể nằm trong
+// một THUỘC TÍNH (thường là 颜色 / 规格), các giá trị ngăn nhau bằng dấu phẩy.
+// Đo trên 1051850891681 (cần lăng xê Bennuo): 18 biến thể nằm hết ở 颜色, còn
+// skuInfoMap thì không có dòng nào -> bản cũ trả về 0 biến thể mà không báo gì.
+//
+// Biến thể lấy theo đường này KHÔNG CÓ GIÁ và KHÔNG CÓ TỒN. Phải đánh dấu
+// `nguon: 'thuoc-tinh'` để cổng ở bước 4 bắt được và đòi giá từ chỗ khác —
+// im lặng gán giá 0 là cách nhanh nhất để đăng nhầm một sản phẩm miễn phí.
+
 // ── thuộc tính ──────────────────────────────────────────────────────────────
 const thuocTinh = {};
 for (const m of html.matchAll(
   /<th class="ant-descriptions-item-label"[^>]*><span>(.*?)<\/span><\/th><td class="ant-descriptions-item-content"[^>]*><span><span class="field-value">(.*?)<\/span>/gs,
 )) {
   thuocTinh[chu(m[1])] = chu(m[2]);
+}
+
+if (bienThe.size === 0) {
+  const khoaBienThe = ['颜色', '规格', '型号', '尺码', '款式', '套餐'];
+  for (const k of khoaBienThe) {
+    const v = thuocTinh[k];
+    if (!v || !v.includes(',')) continue;
+    for (const ten of v.split(',').map((x) => x.trim()).filter(Boolean)) {
+      if (!bienThe.has(ten)) bienThe.set(ten, { ten, giaCNY: null, ton: null, nguon: 'thuoc-tinh' });
+    }
+    if (bienThe.size) break;
+  }
 }
 
 // ── ảnh ─────────────────────────────────────────────────────────────────────
@@ -106,8 +127,9 @@ console.log(`mã        ${ra.ma}`);
 console.log(`tên gốc   ${(ra.tenGoc || '').slice(0, 70)}`);
 console.log(`xưởng     ${ra.xuong || '(không thấy)'}`);
 console.log(`thuộc tính ${Object.keys(thuocTinh).length}`);
-console.log(`biến thể  ${ra.bienThe.length}`);
+const thieuGia = ra.bienThe.filter((b) => b.giaCNY == null).length;
+console.log(`biến thể  ${ra.bienThe.length}${thieuGia ? `  ⚠ ${thieuGia} biến thể KHÔNG CÓ GIÁ (lấy từ thuộc tính, không phải skuInfoMap)` : ''}`);
 console.log(`ảnh       ${ra.anh.length}  (mã shop ${maShop || '?'})`);
 console.log(`video     ${ra.video.length}`);
-console.log(`mô tả     ${ra.moTaUrl || 'KHÔNG THẤY — ảnh mô tả nằm ở máy chủ khác, thiếu link này là thiếu bảng thông số'}`);
+console.log(`mô tả     ${ra.moTaUrl || `KHÔNG THẤY link itemcdn — kiểm xem ${ra.anh.length} ảnh ở trên đã gồm ảnh mô tả chưa; chưa thì thiếu bảng thông số`}`);
 console.log(`\n-> ${path.join(thuMuc, 'san-pham.json')}`);

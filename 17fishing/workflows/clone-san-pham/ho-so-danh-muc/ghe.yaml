@@ -11,6 +11,10 @@ tuVung:
   dung: [khung, chân ghế, tựa lưng, gấp gọn, nấc chỉnh, chịu tải]
   tranh: [sườn, xếp, tải trọng tối đa cho phép]
 
+tuVungDanhGia:
+  taHang: [椅, 坐, 折叠, 支架, 靠背, 钓箱, 承重, 管, 脚, 收纳]
+  nhamHang: [渔轮, 鱼竿, 钓竿, 浮漂]
+
 bienThe:
   theo: phiên bản hoặc màu
   mauMa: "tên phiên bản"

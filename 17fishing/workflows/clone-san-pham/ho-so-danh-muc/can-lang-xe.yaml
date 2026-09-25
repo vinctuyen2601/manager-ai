@@ -1,0 +1,84 @@
+ma: can-lang-xe
+ten: Cần lăng xê / cần lục
+# CHƯA CÓ DANH MỤC TRONG CMS. Shop mới có "Cần Câu Đài" (cau-dai) — cần đài
+# KHÔNG có khoen dẫn và KHÔNG có chân máy, xếp vào đó là sai loại hàng ngay ở
+# mức danh mục. Phải hỏi chủ shop tạo danh mục mới rồi điền uuid vào đây.
+danhMucId: CHUA-CO
+
+# Vì sao tách khỏi can-cau.yaml: cần đài là cần tay, câu bằng chính cây cần.
+# Cần lăng xê có KHOEN DẪN, có CHÂN MÁY, và cước chạy trên cần — nên mọi thông
+# số đáng giá đều là thứ cần đài không có: trọng lượng chì ném được, số khoen,
+# đường kính khoen đỉnh. Ngược lại "tải chì" hay "độ cứng theo vực" của cần đài
+# thì cần lăng xê không nói tới.
+
+thongSo:
+  batBuoc: [chieuDai, soDot, doDaiThuGon, khoiLuong, taiTrongNem, soKhoen, sucKeo]
+  tuyChon: [vatLieu, tiLeCarbon, duongKinhNgon, duongKinhKhoenDinh, kieuChanMay, doCung]
+  # Xưởng 1688 hầu như KHÔNG khai mấy số này trong bảng thuộc tính — chúng nằm
+  # trong ảnh bảng thông số ở cuối bộ ảnh. Đo 1051850891681: 14 thuộc tính HTML
+  # không có lấy một con số nào trong batBuoc ngoài số đốt.
+  namTrongAnh: [doDaiThuGon, khoiLuong, taiTrongNem, soKhoen, duongKinhNgon, duongKinhKhoenDinh, sucKeo]
+
+tuVung:
+  # Từ shop ĐANG dùng — đếm trong 11 mô tả sản phẩm ngày 25/09/2026:
+  # "câu lăng xê" 5 lần, "câu xa" 7, "ném xa" 6, "chân máy" 4, "câu lục" 4.
+  dung: [cần lăng xê, cần lục, câu xa, ném xa, chân máy, khoen dẫn, đốt, thu gọn,
+         trục, thẻo, săn hàng, ngọn cần, gốc cần]
+  # "cần surf", "cần cast", "guide", "reel seat" — tiếng Anh, khách của shop
+  # không dùng. "cần rút" một mình thì thiếu: cần đài cũng rút.
+  tranh: [surf, casting rod, guide, reel seat, cần rút, bạc đạn, khoen chì]
+
+tuVungDanhGia:
+  taHang: [竿, 导环, 轮座, 节, 抛, 手把, 漆, 调性, 碳, 竿稍, 护帽]
+  nhamHang: [渔轮, 线杯, 刹车, 鱼线, 浮漂, 鱼钩]
+
+bienThe:
+  theo: "lối câu × chiều dài (× có kèm máy hay không)"
+  mauMa: "mét, ví dụ 3m6 · 4m5; lối câu ghi trước: 'Lăng xê 3m6', 'Lục 4m2'"
+  anhRieng: "cần ở chiều dài đó, thu gọn cạnh vật tham chiếu — chênh 3m6 với 4m5 chỉ thấy được khi thu gọn"
+
+boAnh:
+  - hero                # cần duỗi hết, chéo khung
+  - khoen-dan           # cụm khoen gấp, chỗ khác cần đài rõ nhất
+  - chan-may            # chân máy trượt + máy lắp vào
+  - do-cong             # cong khi có cá, chứng minh sức kéo
+  - thu-gon             # thu còn bao nhiêu, câu hỏi số 1 khi mua cần rút
+  - bang-thong-so       # bảng theo từng chiều dài
+  - ngon-va-goc         # đường kính hai đầu
+
+cauHoiKhung:
+  - "Cần này ném được cục chì bao nhiêu gam?"
+  - "Thu gọn còn bao nhiêu, cho vừa cốp xe không?"
+  - "Lắp máy cỡ mấy thì cân tay?"
+  - "Lăng xê với lục khác nhau chỗ nào, tôi nên lấy cây nào?"
+  - "Khoen có gãy khi ném nặng không?"
+  - "Câu nước mặn được không, về có phải rửa gì không?"
+
+khongDuocNoiMacDinh:
+  - "ném bao xa cũng được — tầm ném phụ thuộc chì, cước và tay người ném, không phải mỗi cây cần"
+  - "chịu mọi cỡ cá — cần có tải trọng ném và sức kéo ghi rõ, vượt là gãy"
+  - "câu biển thoải mái — xưởng ghi 海钓 nhưng khoen và chân máy nhiễm mặn vẫn rỉ nếu không rửa"
+
+ruiRoHayGap:
+  - "gãy ngọn do ném quá tải trọng chì cho phép"
+  - "khoen gấp bị tuột chốt, kẹt cước lúc ném"
+  - "chân máy trượt bị lỏng, máy xoay khi có cá"
+  - "cát lọt khớp đốt, rút vào không hết"
+  - "nước mặn ăn khoen nếu không tráng nước ngọt sau buổi câu"
+
+ngonNguThiGiac:
+  boiCanhHopLe:
+    - bờ kè đá hoặc bãi biển, cần duỗi hết chống lên giá, hướng ra nước
+    - cận cảnh cụm khoen dẫn đang gấp/mở, nền tối để ánh kim loại nổi
+    - cần cong khi có cá, chụp từ sau lưng người câu
+    - cần thu gọn đặt cạnh vật quen thuộc (cốp xe, cẳng tay) để so chiều dài
+  boiCanhCam:
+    - chụp cần lăng xê ở hồ dịch vụ nhỏ kiểu câu đài — sai lối câu
+    - cắt mất chân máy hoặc khoen ra khỏi khung, vì đó chính là chỗ khác cần đài
+    - cần duỗi nằm ngang hết khung ảnh, thành một sợi chỉ bé tí
+  daoCuChoPhep: [máy câu cỡ lớn, giá đỡ cần, chì lăng xê, bờ kè đá, sóng biển, lồng thính]
+  gioChup: "ngược nắng nhẹ cuối chiều cho thân cần bắt viền sáng; cận cảnh khoen thì đèn xiên"
+  loiThiGiacHayGap:
+    - "để cần duỗi nằm ngang kín khung: 4m5 trông y hệt 3m6. Chụp chéo, hoặc chụp lúc thu gọn."
+    - "dựng cần mà không có máy lắp vào — cần lăng xê không có máy thì vô nghĩa, khác hẳn cần đài."
+    - "khoen chụp quá xa nên không thấy nó gấp được. Chỗ đáng tiền mà lại mờ."

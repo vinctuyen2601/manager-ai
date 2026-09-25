@@ -8,7 +8,7 @@ Sáu bước trong `../../QUY-TRINH-1688.md`. Đây là phần chạy được.
 | tệp | bước | làm gì |
 |---|---|---|
 | `doc-san-pham.mjs` | 2a | HTML sản phẩm -> JSON: biến thể, giá, tồn, thuộc tính, ảnh, video, link mô tả |
-| `doc-danh-gia.mjs` | 2b | HTML đánh giá -> JSON, **gắn cờ** bốn loại cần loại bỏ |
+| `doc-danh-gia.mjs` | 2b | HTML đánh giá -> JSON, **gắn cờ** năm loại cần loại bỏ |
 | `bang-su-that.mau.json` | 3 | mẫu Bảng sự thật, điền tay |
 | `tao-nhap.mjs` | 4+5 | tải ảnh + tạo nháp + chèn đánh giá, có bốn bộ chặn |
 | `doc-thi-giac.mjs` | 3 | đo BẢNG MÀU THẬT + bề mặt từ ảnh gốc |
@@ -21,7 +21,8 @@ Sáu bước trong `../../QUY-TRINH-1688.md`. Đây là phần chạy được.
 node doc-san-pham.mjs sp.html
 
 # 2b — dán HTML đánh giá vào dg.html, kèm danh sách cỡ thật
-node doc-danh-gia.mjs dg.html --dong HA2500,HA3500,HA4500,HA5500,HA6500,HA7500,HA8000,HA10000,HA12000
+node doc-danh-gia.mjs dg.html --dong HA2500,HA3500,HA4500,HA5500,HA6500,HA7500,HA8000,HA10000,HA12000 \
+  --tu-ta 轮,摇,线杯,刹车,出线,顺滑,做工,手感,齿,轴承 --tu-nham 鱼竿,钓竿
 
 # 3 — chép mẫu rồi ĐIỀN TAY. Thông số nằm trong ảnh mô tả, phải đọc bằng mắt.
 cp bang-su-that.mau.json bang-su-that.json

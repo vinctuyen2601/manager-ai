@@ -23,6 +23,13 @@ tuVung:
   dung: []     # từ shop đang dùng, phải theo
   tranh: []    # từ đồng nghĩa dễ lỡ tay dùng
 
+# Từ tiếng Trung để LỌC đánh giá 1688, truyền cho doc-danh-gia.mjs.
+# Bắt buộc khai: bản đầu gõ cứng từ của máy câu vào script, sang cần câu thì
+# 钓竿 từ "nói về hàng khác" biến thành tên của chính món hàng — cờ bật ngược.
+tuVungDanhGia:
+  taHang: []   # --tu-ta   từ chứng tỏ người viết đang nói về CHÍNH món này
+  nhamHang: [] # --tu-nham từ của món KHÁC mà gian hàng cũng bán
+
 bienThe:
   theo: ""     # chia biến thể theo chiều nào
   mauMa: ""    # dạng mã, để bộ kiểm bắt mã lạ

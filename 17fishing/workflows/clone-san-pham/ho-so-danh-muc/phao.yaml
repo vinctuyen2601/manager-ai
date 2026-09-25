@@ -11,6 +11,10 @@ tuVung:
   dung: [thân phao, đuôi phao, tải trọng, độ nhạy, nano, lông công, đớp, chìm]
   tranh: [phao câu, float, sức nổi]
 
+tuVungDanhGia:
+  taHang: [漂, 漂尾, 漂身, 吃铅, 灵敏, 翻身, 目, 纳米, 芦苇, 电子]
+  nhamHang: [渔轮, 鱼竿, 钓竿, 鱼线, 鱼钩]
+
 bienThe:
   theo: số hiệu hoặc tải trọng
   mauMa: "số thứ tự hoặc gam, ví dụ 1.6g"

@@ -11,6 +11,10 @@ tuVung:
   dung: [vòng bi, ổ bi, cối, rotor, tay quay, chốt dẫn cước, lực hãm, tỉ số truyền, nhông]
   tranh: [bạc đạn, lô, thắng, phanh, líp]
 
+tuVungDanhGia:
+  taHang: [轮, 摇, 线杯, 刹车, 出线, 顺滑, 做工, 手感, 齿, 轴承]
+  nhamHang: [鱼竿, 钓竿]
+
 bienThe:
   theo: cỡ máy
   mauMa: "chữ cái dòng + số, ví dụ HA2500"
