@@ -82,9 +82,17 @@ for (const a of n.anh || []) {
 }
 
 // ── LUẬT 4 · có đánh giá thì phải có cờ ────────────────────────────────────
-if ((n.danhGia || []).length && !n.blockData?.['danh-gia']?.khongPhaiKhachThat) {
-  loi.push("có đánh giá nhưng THIẾU cờ blockData['danh-gia'].khongPhaiKhachThat = true");
-}
+// Cờ này bật LUÔN LUÔN, không phụ thuộc lần clone này có mang đánh giá về
+// hay không. Sản phẩm vừa clone thì theo định nghĩa chưa có một khách thật
+// nào của shop đánh giá, và đánh giá mồi có thể được gieo từ CMS BẤT CỨ LÚC
+// NÀO sau đó — lúc đó không ai quay lại bật cờ.
+//
+// Đã dính đúng thế với cần Bennuo: clone về 0 đánh giá nên bộ chặn cũ không
+// kêu; chủ shop gieo 9 đánh giá mồi lúc bật bán, và trang lập tức khai
+// aggregateRating 4,8 sao / 9 đánh giá cho Google. Tệ gấp đôi vì khối đánh
+// giá lúc đó đang TẮT: người không đọc được, mà máy vẫn được khai.
+n.blockData = n.blockData || {};
+n.blockData['danh-gia'] = { ...(n.blockData['danh-gia'] || {}), khongPhaiKhachThat: true };
 
 if (loi.length) {
   console.error(`DỪNG — ${loi.length} lỗi, không gửi gì cả:\n`);

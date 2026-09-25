@@ -321,6 +321,28 @@ Dấu hiệu nhận ra trong một giây: **URL trả về còn đuôi `.jpg`**.
 curl -s -o /dev/null -w '%{http_code}|%{content_type}|%{size_download}' "$url"
 ```
 
+### Ảnh mô tả phải LIỀN MẠCH, đừng bọc trong thẻ `<p>`
+
+Khối mô tả là một ảnh dài cắt ra, nên các mảnh phải khít nhau. Bọc mỗi ảnh
+trong `<p>` thì margin của thẻ chen vào giữa và bộ ảnh trông như 19 tấm rời.
+
+Ba thứ cùng gây hở, phải chặn cả ba:
+
+```html
+<div style="margin:20px 0;font-size:0;line-height:0">
+<img src="…" alt="…" style="display:block;width:100%;height:auto;margin:0;border-radius:0" />
+…
+</div>
+```
+
+- `display:block` bỏ khoảng trắng dòng cơ sở của ảnh inline
+- `margin:0` + bỏ thẻ `<p>` bỏ margin đoạn văn
+- `border-radius:0` đè lên `.prose img{border-radius:8px}` của web — góc bo
+  làm hở khía hình vòng cung giữa hai mảnh liền nhau
+
+`font-size:0;line-height:0` ở thẻ bọc chặn nốt khoảng trắng do xuống dòng
+giữa các thẻ.
+
 **Cổng:** `--thu` không báo lỗi nào, và mọi URL ảnh trả về đều là `.webp`.
 
 ---
@@ -339,6 +361,16 @@ Hai luật không được phá:
 
 - không gán tên người Việt cụ thể vào lời người mua nước ngoài
 - bật cờ `khongPhaiKhachThat`, nếu không là khai sao giả cho Google
+
+**Cờ đó bật LUÔN, kể cả khi bước này bị bỏ qua vì không có đánh giá nào.**
+Sản phẩm vừa clone thì chưa có khách thật nào của shop đánh giá, và đánh giá
+mồi có thể được gieo từ CMS bất cứ lúc nào sau đó — lúc ấy không ai quay lại
+bật cờ. `tao-nhap.mjs` nay tự ép, không hỏi.
+
+Đã dính với cần Bennuo: clone về 0 đánh giá nên bộ chặn cũ không kêu; chủ shop
+gieo 9 đánh giá mồi lúc bật bán, và trang khai ngay `aggregateRating` 4,8 sao
+cho Google. Tệ gấp đôi vì khối đánh giá lúc đó đang TẮT — người không đọc
+được, mà máy vẫn được khai.
 
 ---
 

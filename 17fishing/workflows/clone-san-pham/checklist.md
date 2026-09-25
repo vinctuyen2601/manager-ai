@@ -54,6 +54,11 @@ Còn một mục chưa tick thì chưa bật.
 - [ ] không gán tên người Việt cụ thể vào lời người mua nước ngoài
 - [ ] cờ `khongPhaiKhachThat` đã bật nếu đánh giá không phải khách thật
 - [ ] trang **không** khai `aggregateRating` khi cờ đã bật
+- [ ] cờ `blockData['danh-gia'].khongPhaiKhachThat` = true, **kể cả khi không
+      có đánh giá nào** — đánh giá mồi có thể gieo sau
+- [ ] mở trang thật, tìm `aggregateRating` trong JSON-LD: phải KHÔNG có
+- [ ] khối đánh giá bật hay tắt đều được, nhưng **tắt khối mà vẫn khai
+      aggregateRating là tổ hợp xấu nhất** — người không đọc được, máy vẫn tin
 
 ## F · Giọng văn
 
