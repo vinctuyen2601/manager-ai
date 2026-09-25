@@ -1,0 +1,43 @@
+{
+  "_doc": "BẢNG SỰ THẬT — điền ở BƯỚC 3. Mọi khâu sau phải khớp bảng này.",
+  "ma": "595621478470",
+  "ten": "Máy Câu AS Dòng HA – Thân Nhôm Nguyên Khối, Lực Hãm Tới 15kg",
+  "slug": "may-cau-as-ha-than-nhom-nguyen-khoi",
+  "thuongHieu": "AS",
+  "danhMuc": "328a9020-e3f3-4b3a-99f8-a8f3850d01aa",
+  "donVi": "cái",
+  "tongTon": "in_stock",
+
+  "vatLieu": {
+    "than": "hợp kim nhôm nguyên khối, phủ màu đồng cổ",
+    "thepKhongGi": "chỉ ở công tắc chống quay ngược và lá phát tiếng",
+    "truyenDong": "nhông hợp kim kẽm, trục vít đồng thau"
+  },
+
+  "nhomCo": [
+    { "nhan": "nhẹ", "co": ["HA2500", "HA3500", "HA4500"],
+      "bi": "5+1", "tiSo": "5.1:1", "ham": "8 kg", "nang": "285–295 g", "kichThuoc": "60×109 mm" },
+    { "nhan": "vừa", "co": ["HA5500", "HA6500", "HA7500"],
+      "bi": "5+1", "tiSo": "5.1:1", "ham": "10 kg", "nang": "390–400 g", "kichThuoc": "69×123 mm" },
+    { "nhan": "lớn", "co": ["HA8000", "HA10000", "HA12000"],
+      "bi": "4+1", "tiSo": "4.1:1", "ham": "15 kg", "nang": "685–697 g", "kichThuoc": "72×141 mm" }
+  ],
+
+  "ghiChuCo": "Độ sâu cối: HA8000 NÔNG · HA10000 VỪA · HA12000 SÂU",
+
+  "gia": {
+    "HA2500": 1990000, "HA3500": 2050000, "HA4500": 2110000,
+    "HA5500": 2190000, "HA6500": 2250000, "HA7500": 2310000,
+    "HA8000 · cối nông": 2450000, "HA10000 · cối vừa": 2490000, "HA12000 · cối sâu": 2500000
+  },
+
+  "khongDuocNoi": [
+    "câu biển, nước mặn, chống ăn mòn nước biển — nhà sản xuất không công bố",
+    "chính hãng, bảo hành, chống nước — không có căn cứ",
+    "bất kỳ cỡ nào ngoài chín cỡ trên, đặc biệt HA5000 và HA6000 KHÔNG tồn tại",
+    "lớp phủ đồng cổ là màu xuyên thân — nó là lớp phủ, có báo cáo tróc sơn"
+  ],
+
+  "tongMau": "đồng cổ",
+  "_tongMauGhiChu": "quyết màu nhấn của lớp chữ: đen/bạc/đồng -> vàng kim hoặc cam cháy; thể thao -> cyan hoặc lime"
+}
