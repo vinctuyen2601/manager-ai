@@ -1,9 +1,11 @@
 ma: can-lang-xe
 ten: Cần lăng xê / cần lục
-# CHƯA CÓ DANH MỤC TRONG CMS. Shop mới có "Cần Câu Đài" (cau-dai) — cần đài
-# KHÔNG có khoen dẫn và KHÔNG có chân máy, xếp vào đó là sai loại hàng ngay ở
-# mức danh mục. Phải hỏi chủ shop tạo danh mục mới rồi điền uuid vào đây.
-danhMucId: CHUA-CO
+# Tạo 25/09/2026 sau khi chủ shop duyệt. Tách khỏi "Cần Câu Đài" (cau-dai) vì
+# cần đài KHÔNG có khoen dẫn và KHÔNG có chân máy — xếp chung là sai loại hàng
+# ngay ở mức danh mục, và bộ lọc theo thông số sẽ lệch.
+# ĐANG ẨN (isActive=false) cho tới khi có sản phẩm đầu tiên lên: một danh mục
+# rỗng nằm trên menu chỉ dẫn khách vào chỗ không có gì.
+danhMucId: 95bda3a4-38f9-49e1-bcf7-3b9aae3cc311
 
 # Vì sao tách khỏi can-cau.yaml: cần đài là cần tay, câu bằng chính cây cần.
 # Cần lăng xê có KHOEN DẪN, có CHÂN MÁY, và cước chạy trên cần — nên mọi thông
