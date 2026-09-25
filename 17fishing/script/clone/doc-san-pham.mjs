@@ -94,8 +94,12 @@ for (const m of html.matchAll(/cbu01\.alicdn\.com\/img\/ibank\/[^"'\s\\]*?!!(\d+
 }
 const maShop = [...demMa.entries()].sort((a, b) => b[1] - a[1])[0]?.[0];
 
+// `gif` và `webp` KHÔNG được bỏ. Bản đầu chỉ nhận jpg|png, và khối mô tả của
+// cần Bennuo có đúng hai ảnh GIF động (cụm khoen gấp mở, chân máy trượt) —
+// hai tấm nói được thứ ảnh tĩnh không nói được, mà bị bỏ lặng lẽ. Không có
+// dấu hiệu nào: 66 ảnh rút ra trông thừa thãi nên không ai đi đếm lại.
 const anh = [...new Set(
-  [...html.matchAll(/https?:\\?\/\\?\/cbu01\.alicdn\.com\/img\/ibank\/[^"'\s\\]+?\.(?:jpg|png)/g)]
+  [...html.matchAll(/https?:\\?\/\\?\/cbu01\.alicdn\.com\/img\/ibank\/[^"'\s\\]+?\.(?:jpg|jpeg|png|gif|webp)/g)]
     .map((m) => goc(m[0].replace(/\\/g, '')))
     .filter((u) => !maShop || u.includes(`!!${maShop}-`)),
 )];

@@ -248,6 +248,29 @@ gian>.webp`. Thư mục và dấu thời gian không đổi được, nên phầ
 **Sửa ảnh của sản phẩm đã đăng thì GIỮ NGUYÊN `slug`.** Slug đổi là URL đổi,
 là mất hết thứ hạng đã có. Ảnh thay thoải mái, slug thì không.
 
+### Ảnh động (GIF) là thứ dễ mất nhất
+
+Khối mô tả 1688 hay chèn vài GIF động giữa các ảnh tĩnh, và đó thường là tấm
+nói được thứ ảnh tĩnh không nói được: khoen gấp vào, chân máy trượt, cần cong
+khi có cá. Ba chỗ làm mất chúng, cả ba đều im lặng:
+
+1. **Biểu thức lọc ảnh chỉ nhận `jpg|png`.** Bản đầu đúng như vậy, và hai GIF
+   của cần Bennuo bị bỏ qua. Không có dấu hiệu nào — 66 ảnh rút ra trông thừa
+   thãi nên không ai đếm lại. Nay nhận thêm `gif|webp|jpeg`.
+2. **`viet-hoa-anh.py` chỉ lấy khung đầu.** Nay tự nhận `n_frames > 1` rồi vẽ
+   lên từng khung và ghép lại; chữ quảng cáo trên GIF gần như luôn nằm yên nên
+   một kế hoạch dùng chung cho mọi khung là đúng.
+3. **Backend có thể ép sang WebP tĩnh.** Đo ngày 25/09/2026: nó GIỮ nguyên
+   `image/gif`, 7 khung còn đủ. Nhưng đừng tin vào lần đo cũ — kiểm lại:
+
+```bash
+curl -s -o /tmp/a "$url"
+python3 -c "from PIL import Image;im=Image.open('/tmp/a');print(im.format,im.n_frames)"
+```
+
+Đếm KHUNG, đừng đoán theo kiểu MIME. Lần đầu tôi đi tìm chunk `ANIM` của WebP
+trong một tệp GIF, và kết luận sai là "mất chuyển động".
+
 ### Ảnh tải lên phải khai kiểu MIME
 
 `new Blob([buf])` không có `type` thì backend BỎ HẲN khâu chuyển sang WebP,

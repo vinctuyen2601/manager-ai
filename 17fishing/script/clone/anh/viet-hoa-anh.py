@@ -43,8 +43,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from viet import mo, phu, to, nen, viet, xoa, xoa_ngang, cot_sach  # noqa: E402
 
 
-def mot_anh(vao, ra, dai_ds, soat=False):
-    im = Image.open(vao).convert('RGB')
+def _ve(im, dai_ds, soat=False):
     canh = ImageDraw.Draw(im) if soat else None
     for d in dai_ds:
         y0, y1 = d['y']
@@ -83,8 +82,37 @@ def mot_anh(vao, ra, dai_ds, soat=False):
                      mau=tuple(d.get('mau', [255, 255, 255])),
                      canh=d.get('canh', 'giua'),
                      co=d.get('co'))
+    return im
+
+
+def mot_anh(vao, ra, dai_ds, soat=False):
+    goc = Image.open(vao)
     os.makedirs(os.path.dirname(ra) or '.', exist_ok=True)
+
+    # ẢNH ĐỘNG: vẽ lên TỪNG KHUNG rồi ghép lại.
+    #
+    # Khối mô tả 1688 hay có GIF động, và đó thường là tấm nói được thứ ảnh
+    # tĩnh không nói được (khoen gấp vào, chân máy trượt). Bản đầu chỉ
+    # `Image.open(...).convert('RGB')` nên lấy đúng khung ĐẦU rồi lưu thành
+    # ảnh tĩnh — mất hẳn phần chuyển động mà không báo gì.
+    #
+    # Chữ trên GIF quảng cáo gần như luôn NẰM YÊN qua các khung, nên dùng
+    # chung một kế hoạch cho mọi khung là đúng.
+    khung = getattr(goc, 'n_frames', 1)
+    if khung > 1:
+        ds = []
+        for k in range(khung):
+            goc.seek(k)
+            ds.append(_ve(goc.convert('RGB'), dai_ds, soat))
+        thoi = goc.info.get('duration', 100)
+        ds[0].save(ra, save_all=True, append_images=ds[1:],
+                   duration=thoi, loop=goc.info.get('loop', 0),
+                   optimize=False)
+        return khung
+
+    im = _ve(goc.convert('RGB'), dai_ds, soat)
     im.save(ra, quality=94)
+    return 1
 
 
 def main():
@@ -136,10 +164,15 @@ def main():
         print("--thu: không ghi tệp nào")
         return
 
+    dong = 0
     for m in kh['anh']:
-        mot_anh(os.path.join(vao_tm, m['tep']),
-                os.path.join(ra_tm, m['tep']), m['dai'], soat=soat)
-    print(f"-> {ra_tm}/  ({len(kh['anh'])} tấm)")
+        n = mot_anh(os.path.join(vao_tm, m['tep']),
+                    os.path.join(ra_tm, m['tep']), m['dai'], soat=soat)
+        if n > 1:
+            dong += 1
+            print(f"  {m['tep']}: ảnh động, {n} khung")
+    print(f"-> {ra_tm}/  ({len(kh['anh'])} tấm"
+          f"{f', {dong} ảnh động' if dong else ''})")
     if soat:
         print("Ảnh chỉ vẽ KHUNG ĐỎ, chưa đổi chữ. Mở xem khung có trùm đúng chữ Trung không.")
     else:
