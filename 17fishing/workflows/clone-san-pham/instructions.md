@@ -248,6 +248,34 @@ gian>.webp`. Thư mục và dấu thời gian không đổi được, nên phầ
 **Sửa ảnh của sản phẩm đã đăng thì GIỮ NGUYÊN `slug`.** Slug đổi là URL đổi,
 là mất hết thứ hạng đã có. Ảnh thay thoải mái, slug thì không.
 
+### Khối mô tả là MỘT ảnh dài bị cắt ra — ghép lại trước khi sửa
+
+Người bán 1688 xuất một ảnh dài vài chục nghìn pixel rồi cắt thành nhiều lát
+và xếp bằng thẻ `<img>`. Cần Bennuo: 45 lát, tổng **790 × 26.578 px**.
+
+Sửa từng lát rời có ba cái hại, hai cái đầu im lặng:
+
+1. **Chỗ cắt của xưởng rơi tuỳ tiện.** Đo được 10/44 ranh giới cắt vào giữa
+   nội dung. Lần này cả 10 đều rơi vào ảnh chụp nên không hỏng gì, nhưng nếu
+   rơi đúng một dòng chữ thì xoá được nửa trên, nửa dưới nằm ở lát khác.
+2. **Không thấy được thứ chỉ hiện khi ghép.** Đúng ca này: nhãn "Lăng xê /
+   Cần lục" tôi viết ở lát d07 nằm ngay trên đúng hai chữ đó ở đầu lát d08 —
+   lặp hai lần, và chỉ lộ ra khi ghép.
+3. **Mất quyền chọn chỗ cắt.** Ghép rồi cắt lại ở HÀNG TRỐNG thì mảnh nào
+   cũng trọn vẹn một ý.
+
+**Cách làm:**
+
+```
+lát -> ghép thành ảnh dài -> Việt hoá -> cắt lại ở hàng trống -> tải lên
+```
+
+Ảnh động không ghép được vào ảnh tĩnh, nên ảnh dài tách thành nhiều ĐOẠN, ảnh
+động nằm xen giữa. Bennuo ra 3 đoạn + 2 ảnh động -> 17 mảnh ~1.200 px.
+
+Hàng để cắt là hàng ít đổi màu nhất theo chiều ngang trong khoảng ±140 px
+quanh mốc mong muốn. Script: `script/clone/anh/ghep-cat.py`.
+
 ### Ảnh động (GIF) là thứ dễ mất nhất
 
 Khối mô tả 1688 hay chèn vài GIF động giữa các ảnh tĩnh, và đó thường là tấm
@@ -260,8 +288,16 @@ khi có cá. Ba chỗ làm mất chúng, cả ba đều im lặng:
 2. **`viet-hoa-anh.py` chỉ lấy khung đầu.** Nay tự nhận `n_frames > 1` rồi vẽ
    lên từng khung và ghép lại; chữ quảng cáo trên GIF gần như luôn nằm yên nên
    một kế hoạch dùng chung cho mọi khung là đúng.
-3. **Backend có thể ép sang WebP tĩnh.** Đo ngày 25/09/2026: nó GIỮ nguyên
-   `image/gif`, 7 khung còn đủ. Nhưng đừng tin vào lần đo cũ — kiểm lại:
+3. **Định dạng: chỉ GIF sống sót.** Đo ngày 25/09/2026 trên chính backend
+   này: tải lên `image/gif` thì nó GIỮ nguyên, đủ khung. Tải lên **WebP động
+   thì nó nén lại và DẸP còn một khung** — 304 KB xuống 62 KB, hết chuyển
+   động. Nên đừng "tối ưu" GIF sang WebP động, mất trắng.
+
+   GIF không nén nổi ảnh chụp. Cách giảm cân hiệu quả: hạ bề ngang xuống
+   560 px, bớt còn 4 khung, 64 màu. Đo được: 2,4 MB -> 1,19 MB, nhìn vẫn tốt.
+   Đáng làm — hai ảnh động chiếm 65% trọng lượng trang trước khi nén.
+
+   Kiểm lại bằng cách ĐẾM KHUNG:
 
 ```bash
 curl -s -o /tmp/a "$url"
