@@ -1,0 +1,179 @@
+{
+ "ten": "Cần Lăng Xê Và Cần Lục Bennuo — rút carbon 4 đốt, khoen gấp",
+ "thuongHieu": "Bennuo",
+ "tongMau": "đen",
+ "chung": [
+  [
+   "Thân",
+   "carbon 30T pha 36T, quấn xoắn, lõi băng carbon dán dọc trong đốt"
+  ],
+  [
+   "Kiểu",
+   "cần rút, có khoen dẫn gấp được và chân máy kim loại trượt"
+  ],
+  [
+   "Chân máy",
+   "kim loại, khoá bằng hai chốt bọc silicon"
+  ],
+  [
+   "Phụ kiện",
+   "giá đỡ chữ A thép không gỉ, nắp chụp đầu cần"
+  ],
+  [
+   "Màu lăng xê",
+   "vàng ô-liu ánh kim"
+  ],
+  [
+   "Màu cần lục",
+   "bạc xám ánh kim"
+  ]
+ ],
+ "bang": [
+  {
+   "ten": "Lăng xê",
+   "nhan": "sức kéo 12,5 kg",
+   "cot": [
+    "Cỡ",
+    "Đốt",
+    "Thu gọn",
+    "Nặng",
+    "Ngọn",
+    "Gốc",
+    "Khoen đỉnh",
+    "Số khoen",
+    "Chì ném"
+   ],
+   "dong": [
+    [
+     "3m6",
+     4,
+     "107 cm",
+     "516 g",
+     "4 mm",
+     "23,5 mm",
+     "7 mm",
+     5,
+     "200-250 g"
+    ],
+    [
+     "3m9",
+     4,
+     "115 cm",
+     "538 g",
+     "4 mm",
+     "23,5 mm",
+     "7 mm",
+     5,
+     "200-250 g"
+    ],
+    [
+     "4m2",
+     4,
+     "122 cm",
+     "548 g",
+     "4 mm",
+     "23,5 mm",
+     "7 mm",
+     5,
+     "200-250 g"
+    ],
+    [
+     "4m5",
+     4,
+     "128 cm",
+     "566 g",
+     "4 mm",
+     "23,5 mm",
+     "7 mm",
+     5,
+     "200-250 g"
+    ]
+   ]
+  },
+  {
+   "ten": "Cần lục",
+   "nhan": "sức kéo 15 kg",
+   "cot": [
+    "Cỡ",
+    "Đốt",
+    "Thu gọn",
+    "Nặng",
+    "Ngọn",
+    "Gốc",
+    "Khoen đỉnh",
+    "Số khoen",
+    "Chì ném"
+   ],
+   "dong": [
+    [
+     "3m0",
+     3,
+     "115 cm",
+     "496 g",
+     "4,6 mm",
+     "21,2 mm",
+     "8,2 mm",
+     4,
+     "200-250 g"
+    ],
+    [
+     "3m6",
+     4,
+     "104 cm",
+     "727 g",
+     "4,6 mm",
+     "25,5 mm",
+     "8,2 mm",
+     5,
+     "200-250 g"
+    ],
+    [
+     "3m9",
+     4,
+     "112 cm",
+     "744 g",
+     "4,6 mm",
+     "25,5 mm",
+     "8,2 mm",
+     5,
+     "200-250 g"
+    ],
+    [
+     "4m2",
+     4,
+     "120 cm",
+     "790 g",
+     "4,6 mm",
+     "25,5 mm",
+     "8,2 mm",
+     5,
+     "200-250 g"
+    ],
+    [
+     "4m5",
+     4,
+     "126 cm",
+     "820 g",
+     "4,6 mm",
+     "25,5 mm",
+     "8,2 mm",
+     5,
+     "200-250 g"
+    ]
+   ]
+  }
+ ],
+ "ghiChuCo": "Độ dài thu gọn đo ĐÃ đóng nắp chụp. Khối lượng đo CHƯA có nắp.\nVành khoen gấp: 18 mm ở lăng xê và ở cỡ lục 3m0; 23,2 mm ở các cỡ lục còn lại.",
+ "badge": [
+  "icon cá + \"SỨC KÉO 15 KG\"",
+  "icon chì + \"CHÌ NÉM 200-250 G\"",
+  "icon thước + \"THU GỌN 104 CM\""
+ ],
+ "khongDuocNoi": [
+  "ném xa trăm mét, hay bất kỳ con số tầm ném nào — tầm ném phụ thuộc chì, cước và tay người ném",
+  "kéo năm chục ký, hay bất kỳ sức kéo nào vượt 12,5 kg với lăng xê và 15 kg với cần lục",
+  "chịu mọi cỡ cá, không bao giờ gãy",
+  "bảo hành đổi đốt miễn phí — đó là chính sách của xưởng với khách sỉ Trung Quốc",
+  "câu biển thoải mái không cần rửa — khoen và chân máy nhiễm mặn vẫn rỉ"
+ ]
+}

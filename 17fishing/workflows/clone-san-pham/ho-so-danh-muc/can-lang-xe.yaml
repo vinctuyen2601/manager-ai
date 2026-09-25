@@ -48,6 +48,39 @@ boAnh:
   - bang-thong-so       # bảng theo từng chiều dài
   - ngon-va-goc         # đường kính hai đầu
 
+boAnhMoTa:
+  hero: |
+    Cần duỗi hết, chụp CHÉO khung chứ không nằm ngang, chiếm ≥85% khung.
+    Nền tối, một nguồn sáng chếch làm nổi vân carbon và ánh sơn.
+    Lớp chữ: logo góc trên, một headline ≤7 từ, hai huy hiệu.
+  khoen-dan: |
+    Cận cảnh cụm khoen: MỘT khoen đang gấp, MỘT khoen đang mở, trong cùng
+    khung. Nền tối để vành kim loại bắt sáng. Đây là chỗ khác cần đài rõ
+    nhất, và là chỗ khách soi kỹ nhất. Đúng một huy hiệu: đường kính vành.
+  chan-may: |
+    Chân máy đã lắp máy câu vào, chụp nghiêng để thấy chân trượt dọc thân.
+    Có bàn tay đang siết chốt thì tốt. Không chữ đè lên cụm chân máy.
+  do-cong: |
+    Cần cong khi có cá, chụp từ phía sau người câu, hướng ra mặt nước.
+    Chỉ headline, không huy hiệu. Để ảnh tự nói.
+  thu-gon: |
+    Cần đã thu, đóng nắp chụp, đặt cạnh vật quen thuộc (cẳng tay, cốp xe)
+    để so chiều dài. Trả lời câu hỏi số 1 khi mua cần rút.
+    Đúng một huy hiệu: độ dài thu gọn.
+  bang-thong-so: |
+    Bảng theo từng chiều dài, nền tối, chữ trắng, cột thẳng hàng.
+    Đây là tấm DUY NHẤT được phép nhiều chữ. Mọi số phải lấy từ Khối A.
+  ngon-va-goc: |
+    Hai ảnh cận cạnh nhau: thước kẹp đo ngọn cần, thước kẹp đo gốc cần.
+    Số trên mặt thước phải trùng Khối A. Dưới mỗi ảnh một nhãn ngắn.
+
+badgeGoiY:
+  - "icon cá + SỨC KÉO {sucKeo}"
+  - "icon chì + CHÌ NÉM {chiNem}"
+  - "icon thước + THU GỌN {thuGon}"
+
+khongDeChuDeLen: [cụm khoen dẫn, chân máy, ngọn cần, chỗ nối giữa các đốt]
+
 cauHoiKhung:
   - "Cần này ném được cục chì bao nhiêu gam?"
   - "Thu gọn còn bao nhiêu, cho vừa cốp xe không?"

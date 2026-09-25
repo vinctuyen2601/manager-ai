@@ -1,0 +1,256 @@
+{
+ "nguon": {
+  "link": "https://detail.1688.com/offer/1051850891681.html",
+  "xuong": "威海市本诺贸易有限公司 (Weihai Bennuo)",
+  "thuongHieu": "本诺 / BENNUO",
+  "maHang": "BENNUOLRYTGMG26-5-22",
+  "ngayRut": "2026-09-25"
+ },
+ "chung": {
+  "loai": "cần rút (伸缩), có khoen dẫn và chân máy",
+  "vatLieu": "carbon 30T + 36T quấn xoắn (螺旋碳布加固), lõi 3D碳带内节",
+  "xuatXu": "Trung Quốc",
+  "doCung": "siêu cứng (超硬调)",
+  "chanMay": "kim loại, trượt lên xuống được, khoá bằng chốt silicon chống trượt",
+  "khoen": "gấp được, đường kính vành gấp 18mm (3m0) / 23.2mm (còn lại) — lăng xê 18mm",
+  "hoTro": "giá đỡ A bằng thép không gỉ; nắp chụp đầu cần chống bẹp khoen",
+  "bangSangChe": "外观设计专利 (kiểu dáng)",
+  "xuongNoiDungDuoc": [
+   "海钓 câu biển",
+   "海洋矶碓 câu ghềnh đá"
+  ]
+ },
+ "dong": {
+  "langXe": {
+   "tenGoc": "冷刃远投",
+   "mau": "vàng ô-liu ánh kim",
+   "sucKeo_can": 25,
+   "sucKeo_kg": 12.5,
+   "nguonBang": "a54.jpg (bảng tổng) + a06-a09 (bảng từng cỡ)",
+   "cot": [
+    "dai_m",
+    "dot",
+    "thuGon_coNap_cm",
+    "ngon_mm",
+    "goc_mm",
+    "khoenDinh_mm",
+    "khoenGap_mm",
+    "nang_g",
+    "chiNem_g",
+    "soKhoen"
+   ],
+   "dong": [
+    [
+     3.6,
+     4,
+     107,
+     4,
+     23.5,
+     7,
+     18,
+     516,
+     "200-250",
+     5
+    ],
+    [
+     3.9,
+     4,
+     115,
+     4,
+     23.5,
+     7,
+     18,
+     538,
+     "200-250",
+     5
+    ],
+    [
+     4.2,
+     4,
+     122,
+     4,
+     23.5,
+     7,
+     18,
+     548,
+     "200-250",
+     5
+    ],
+    [
+     4.5,
+     4,
+     128,
+     4,
+     23.5,
+     7,
+     18,
+     566,
+     "200-250",
+     5
+    ]
+   ]
+  },
+  "luc": {
+   "tenGoc": "冷刃锚竿",
+   "mau": "bạc xám ánh kim",
+   "sucKeo_can": 30,
+   "sucKeo_kg": 15,
+   "nguonBang": "a55.jpg (bảng tổng) + a14-a18 (bảng từng cỡ)",
+   "cot": [
+    "dai_m",
+    "dot",
+    "thuGon_coNap_cm",
+    "ngon_mm",
+    "goc_mm",
+    "khoenDinh_mm",
+    "khoenGap_mm",
+    "nang_g",
+    "chiNem_g",
+    "soKhoen"
+   ],
+   "dong": [
+    [
+     3.0,
+     3,
+     115,
+     4.6,
+     21.2,
+     8.2,
+     18.0,
+     496,
+     "200-250",
+     4
+    ],
+    [
+     3.6,
+     4,
+     104,
+     4.6,
+     25.5,
+     8.2,
+     23.2,
+     727,
+     "200-250",
+     5
+    ],
+    [
+     3.9,
+     4,
+     112,
+     4.6,
+     25.5,
+     8.2,
+     23.2,
+     744,
+     "200-250",
+     5
+    ],
+    [
+     4.2,
+     4,
+     120,
+     4.6,
+     25.5,
+     8.2,
+     23.2,
+     790,
+     "200-250",
+     5
+    ],
+    [
+     4.5,
+     4,
+     126,
+     4.6,
+     25.5,
+     8.2,
+     23.2,
+     820,
+     "200-250",
+     5
+    ]
+   ]
+  }
+ },
+ "mayCauKemTheo": {
+  "coTheoDong": {
+   "langXe": 12000,
+   "luc": 10000
+  },
+  "vongBi": "5+1",
+  "tiSoTruyen": "4.8:1",
+  "lucHam_kg": 25,
+  "tayQuay": "đổi trái/phải được",
+  "coi": "kim loại khoét lỗ, miệng vát",
+  "sucChuaCuoc_mm_m": {
+   "10000": {
+    "0.35": 550,
+    "0.4": 420,
+    "0.5": 270
+   },
+   "12000": {
+    "0.35": 750,
+    "0.4": 600,
+    "0.5": 390
+   }
+  },
+  "cuocTang_m": 150,
+  "nguon": "a56.jpg, a57.jpg, a58-a60.jpg"
+ },
+ "baoHanhXuong": {
+  "doiTra": "15 ngày không cần lý do (không áp dụng hàng đã bán lại)",
+  "trong90Ngay": "thay đốt miễn phí, xưởng chịu cước",
+  "sau90Ngay": "thay đốt miễn phí trừ đốt tay cầm, khách trả 10 tệ cước",
+  "sau365Ngay": "thay đốt tính phí 5 tệ/đốt",
+  "nguon": "a29.jpg",
+  "luuY": "Đây là chính sách của XƯỞNG với người mua sỉ Trung Quốc. KHÔNG được bê nguyên sang trang bán lẻ Việt Nam."
+ },
+ "mauThuan": [
+  {
+   "cho": "a18.jpg ghi cần lục 4m5 thu gọn 112cm",
+   "vande": "trùng đúng số của cỡ 3m9 và nhỏ hơn cỡ 4m2 (116). Bảng tổng a55 ghi 126.",
+   "xuLy": "lấy theo bảng tổng a55. Ảnh từng cỡ là bản chép tay, bảng tổng nhất quán."
+  },
+  {
+   "cho": "a37.jpg ghi 加粗竿稍先径 轻松抛投100G重饵",
+   "vande": "100g là MỒI NẶNG (重饵), còn bảng ghi 抛投重量 200-250g là tổng sức ném. Hai con số đo hai thứ khác nhau, không hẳn chọi nhau: 100g mồi + 100-150g chì vừa đúng 200-250g.",
+   "xuLy": "đăng con số của BẢNG (200-250g tổng) và ghi rõ 'gồm cả chì lẫn mồi'. Không đăng '100g' trần vì khách sẽ hiểu là trần của cả bộ."
+  },
+  {
+   "cho": "收缩长 có hai bộ số",
+   "vande": "bảng tổng ghi 带护帽 (có nắp), ảnh từng cỡ ghi không nắp. Chênh 5-6cm.",
+   "xuLy": "đã rõ, không phải lỗi. Đăng lên web phải ghi rõ đo có nắp hay không."
+  }
+ ],
+ "thieu": {
+  "gia": "xưởng chỉ báo dải ¥129-¥299, không báo giá từng biến thể; thang giá là do chia đều",
+  "video": "0 video trong element.",
+  "danhGia": "chỉ 2 đánh giá; đánh giá đọc được là lời khen người bán, không nói gì về sản phẩm."
+ },
+ "gia": {
+  "nguon": "khối giá chủ shop gửi 25/09/2026",
+  "daiGiaCNY": [
+   129,
+   299
+  ],
+  "ghiChuDai": "¥129–¥299 là DẢI giá theo biến thể của xưởng, không phải giá gạch",
+  "tiGiaDung": 3700,
+  "heSo": 2.5,
+  "cachChia": "chia đều dải ¥129–¥299 cho 9 biến thể, xếp theo CHIỀU DÀI; cùng chiều dài thì lăng xê đứng trước cần lục",
+  "giaDang": {
+   "Lục 3m0": 1190000,
+   "Lăng xê 3m6": 1390000,
+   "Lục 3m6": 1590000,
+   "Lăng xê 3m9": 1780000,
+   "Lục 3m9": 1980000,
+   "Lăng xê 4m2": 2180000,
+   "Lục 4m2": 2370000,
+   "Lăng xê 4m5": 2570000,
+   "Lục 4m5": 2770000
+  },
+  "canhBao": [
+   "¥129 là giá KHÁCH CŨ 60 ngày, khách mới có thể phải trả hơn",
+   "cước từ TQ về chưa nằm trong giá đó; cần thu gọn hơn 1m là hàng cồng kềnh"
+  ]
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "nguon": "đo từ ảnh gốc của xưởng 25/09/2026, lọc theo độ bão hoà (nền xưởng toàn xám, không lọc thì ra xám hết)",
+ "mauDinhDanh": [
+  {
+   "hex": "#A89000",
+   "ten": "vàng ô-liu ánh kim — thân dòng LĂNG XÊ",
+   "tiLe": 45
+  },
+  {
+   "hex": "#6C6000",
+   "ten": "ô-liu sẫm, phần thân trong bóng",
+   "tiLe": 25
+  },
+  {
+   "hex": "#242430",
+   "ten": "xanh than gần đen — thân dòng CẦN LỤC",
+   "tiLe": 40
+  },
+  {
+   "hex": "#8E8F97",
+   "ten": "bạc xám, phần thân cần lục bắt sáng",
+   "tiLe": 20
+  },
+  {
+   "hex": "#141414",
+   "ten": "đen nhám — tay cầm EVA, chân máy, nắp chụp",
+   "tiLe": 18
+  },
+  {
+   "hex": "#C0C1C3",
+   "ten": "thép sáng — khoen dẫn, giá đỡ chữ A",
+   "tiLe": 8
+  }
+ ],
+ "mauNen": [
+  {
+   "hex": "#EEEEEE",
+   "ten": "xám sáng, nền thẻ sản phẩm của xưởng"
+  },
+  {
+   "hex": "#505050",
+   "ten": "xám đậm, thanh tiêu đề"
+  },
+  {
+   "hex": "#0E0E0E",
+   "ten": "đen, nền các tấm khoe chi tiết"
+  }
+ ],
+ "beMat": "sơn nung bóng có vân lục giác chìm trên thân; kim loại xước mịn ở chân máy và khoen; EVA nhám ở tay cầm",
+ "doTuongPhan": "cao — thân bóng bắt viền sáng rõ, tách hẳn khỏi nền xám",
+ "anhSangCanDung": "một nguồn chếch trên, hơi ngược sáng để thân cần bắt một dải viền sáng chạy dọc; cận cảnh khoen thì thêm đèn xiên cho vành kim loại nảy lên"
+}

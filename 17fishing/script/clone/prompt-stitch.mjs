@@ -32,23 +32,42 @@ const hs = hsTep && fs.existsSync(hsTep)
 const NHAN = { 'đồng cổ': 'VÀNG KIM hoặc CAM CHÁY', 'đen': 'VÀNG KIM hoặc CAM CHÁY',
                'bạc': 'VÀNG KIM hoặc CAM CHÁY', 'thể thao': 'XANH CYAN hoặc LIME' };
 const mauNhan = NHAN[b.tongMau] || 'VÀNG KIM hoặc CAM CHÁY';
-const moiCo = b.nhomCo.flatMap((n) => n.co);
+// Mã cỡ = cột ĐẦU của mọi bảng. Không đoán tên cột, chỉ lấy vị trí — mỗi
+// ngành hàng gọi nó một kiểu ("Cỡ", "Chiều dài", "Tải chì").
+const moiCo = b.bang.flatMap((bg) => bg.dong.map((d) => `${bg.ten.split('·').pop().trim()} ${d[0]}`.trim()));
+
+// Khối A dựng từ một BẢNG tổng quát, không từ trường riêng của máy câu.
+//
+// Bản đầu đọc thẳng `b.vatLieu.truyenDong`, `n.bi`, `n.tiSo`, `n.ham` — đúng
+// với máy câu, nhưng cần câu không có tỉ số truyền mà có tải trọng ném, số
+// khoen, độ dài thu gọn. Sang sản phẩm thứ hai là script nổ ở dòng `.map`.
+//
+// Nay Bảng sự thật khai `bang`: mỗi phần tử là một nhóm, có `cot` và `dong`.
+// Script chỉ căn cột, không biết cột đó nghĩa là gì — và đó chính là điều
+// làm nó dùng được cho mọi ngành hàng.
+const rong = (bg) => bg.cot.map((c, k) =>
+  Math.max(String(c).length, ...bg.dong.map((d) => String(d[k]).length)));
+
+const veBang = (bg) => {
+  const w = rong(bg);
+  const hang = (d) => d.map((v, k) => String(v).padEnd(w[k])).join('  ').trimEnd();
+  return [hang(bg.cot), w.map((n) => '-'.repeat(n)).join('  '),
+          ...bg.dong.map(hang)].join('\n');
+};
 
 const khoiA = `DỮ LIỆU SẢN PHẨM (nguồn duy nhất, tuyệt đối không thêm bớt):
 
 Tên: ${b.ten}
-Thân: ${b.vatLieu.than}
-Thép không gỉ: ${b.vatLieu.thepKhongGi}
-Truyền động: ${b.vatLieu.truyenDong}
+Thương hiệu: ${b.thuongHieu}
+${(b.chung || []).map((x) => `${x[0]}: ${x[1]}`).join('\n')}
 
-${moiCo.length} CỠ — không có cỡ nào khác:
-${b.nhomCo.map((n) => `${n.co.join(' · ').padEnd(32)} ${n.bi} bi · ${n.tiSo} · hãm ${n.ham} · ${n.nang} · ${n.kichThuoc}`).join('\n')}
+${b.bang.map((bg) => `${bg.ten}${bg.nhan ? `  (${bg.nhan})` : ''}\n${veBang(bg)}`).join('\n\n')}
 
 ${b.ghiChuCo || ''}
 
 LUẬT CỨNG:
 1. Chỉ dùng số có trong khối trên. KHÔNG sinh thêm bất kỳ con số nào.
-2. Không ghép thông số của hai nhóm cỡ khác nhau vào cùng một khung.
+2. Không ghép thông số của hai nhóm khác nhau vào cùng một khung.
 3. Không được nhắc tới:
 ${b.khongDuocNoi.map((x) => `   · ${x}`).join('\n')}
 4. Chữ trong ảnh phải TIẾNG VIỆT CÓ DẤU, không lẫn tiếng Trung.
@@ -101,46 +120,36 @@ MÀU: headline và logo trắng #FFFFFF hoặc bạc ánh kim #E0E0E0.
   Màu nhấn chỉ chiếm ~10% diện tích ảnh.
 
 BỐ TRÍ: đặt chữ HOÀN TOÀN vào vùng không gian âm (trời mờ, mặt nước mờ, vách
-  đá tối). TUYỆT ĐỐI không đè lên thân máy, cối hay tay quay.
+  đá tối). TUYỆT ĐỐI không đè lên: ${(hs?.khongDeChuDeLen || ['thân sản phẩm']).join(', ')}.
   Nền sáng làm chìm chữ thì chèn gradient đen trong suốt opacity 30–50% ăn dần
   từ mép ảnh vào dưới chữ.
 
 BADGE: icon hình khối kết hợp số liệu, ví dụ
-  icon bọc thép + "${b.nhomCo[0].bi} VÒNG BI"
-  icon bánh răng + "TỈ SỐ ${b.nhomCo[0].tiSo}"
-  icon cân nặng + "${b.nhomCo[0].nang.split('–')[0].trim()} NHẸ TAY"
+${(b.badge || hs?.badgeGoiY || []).map((x) => `  ${x}`).join('\n')}
 
 BA LỖI TUYỆT ĐỐI TRÁNH:
 1. Bảng thông số kiểu Word, liệt kê gạch đầu dòng dài. Khách ngợp, không đọc.
 2. Badge đỏ chói kiểu flash sale. Hàng kỹ thuật đắt tiền mà dán sticker đỏ là
    kéo giá trị cảm nhận xuống hàng rẻ tiền.
-3. Chữ che chi tiết kim loại. Đè lên cối hay cần là hỏng cảm giác độ nét của
-   vật liệu, tức hỏng đúng thứ đang bán.`;
+3. Chữ che chi tiết kim loại. Đè lên ${(hs?.khongDeChuDeLen || ['thân sản phẩm'])[0]}
+   là hỏng cảm giác độ nét của vật liệu, tức hỏng đúng thứ đang bán.`;
 
-const TAM = {
-  1: ['HERO', `Sản phẩm chiếm ≥90% khung. Nền tối, một nguồn sáng chính từ trên chếch trái
-làm nổi vân và ánh kim. Không đạo cụ.
-Lớp chữ: logo góc trên trái, một headline ≤7 từ, hai badge.
-Đây là ảnh đại diện, tốn 60% công của cả bộ.`],
-  2: ['TRÊN TAY', `Bàn tay đàn ông cầm sản phẩm, chụp ngang tầm mắt, nền hồ mờ.
-Tấm quan trọng nhất sau hero: nó trả lời "to cỡ nào", nỗi lo lớn nhất khi mua
-đồ câu qua mạng. Đúng MỘT badge: khối lượng của cỡ đang chụp.`],
-  3: ['ĐANG DÙNG', `Sản phẩm đã lắp lên cần, cạnh hồ, ánh sáng cuối chiều. Chụp khoảnh khắc tay
-đang thao tác, không chụp vật nằm yên.
-Lớp chữ: chỉ headline, không badge. Để ảnh tự nói.`],
-  4: ['BUNG CHI TIẾT', `Sản phẩm ở giữa, 4–5 đường chú thích mảnh chỉ ra từng bộ phận. Mỗi chú thích
-tối đa 5 từ. Đây là tấm DUY NHẤT được phép có nhiều chữ.`],
-  5: ['SO SÁNH CỠ', `Ba sản phẩm cạnh nhau ĐÚNG TỈ LỆ THẬT theo kích thước trong Khối A, căn cùng
-một đường đáy. Dưới mỗi cái ghi tên cỡ và công dụng.
-CHỈ dùng tên cỡ có trong Khối A.`],
-  6: ['HỘP', `Sản phẩm cạnh hộp của hãng, nền tối. Cho thấy khách nhận về gồm những gì.
-Không chữ, hoặc chỉ logo.`],
-};
+// Danh sách tấm lấy từ `boAnhMoTa` của hồ sơ danh mục, KHÔNG gõ cứng.
+// Bản đầu gõ cứng sáu tấm của máy câu — "trên tay" vì khách lo kích thước,
+// "so sánh cỡ" theo tỉ số truyền. Sang cần câu thì tấm cần là "thu gọn" và
+// "độ cong", hoàn toàn khác. Thêm ngành hàng = thêm một tệp, không sửa script.
+const TAM = hs?.boAnhMoTa || {};
+if (!Object.keys(TAM).length) {
+  console.error('DỪNG — hồ sơ danh mục không có `boAnhMoTa`. Không có nó thì'
+    + ' prompt chỉ còn thông số, không nói được chụp cái gì.');
+  process.exit(1);
+}
 
-const chon = (lay('--tam') || '1,2,3,4,5,6').split(',').map((x) => x.trim());
+const chon = (lay('--tam') || Object.keys(TAM).join(',')).split(',').map((x) => x.trim());
 const khoiC = chon.map((n) => {
-  const t = TAM[n]; if (!t) return '';
-  return `### Tấm ${n} · ${t[0]}\n\n${t[1]}`;
+  const t = TAM[n];
+  if (!t) { console.error(`không có mô tả cho tấm "${n}" trong hồ sơ danh mục`); return ''; }
+  return `### ${n}\n\n${t.trim()}`;
 }).filter(Boolean).join('\n\n');
 
 const ra = `# Prompt Stitch — ${b.ten}
@@ -189,13 +198,13 @@ ${khoiC}
 ZOOM từng tấm, đọc mọi chữ và mọi con số, đối chiếu Khối A.
 Đọc ảnh thu nhỏ là không đủ — đã từng đọc nhầm 5.1:1 thành 5.3:1 ở cỡ nhỏ.
 
-Mã cỡ hợp lệ, không chấp nhận bất kỳ mã nào khác:
+Cỡ hợp lệ, không chấp nhận bất kỳ cỡ nào khác:
 ${moiCo.join(' · ')}
 
 - [ ] mọi con số có trong Khối A
 - [ ] không ghép thông số hai nhóm cỡ vào một khung
 - [ ] không nhắc thứ nằm trong danh sách cấm
-- [ ] chữ không đè lên thân máy, cối, tay quay
+- [ ] chữ không đè lên: ${(hs?.khongDeChuDeLen || ['thân sản phẩm']).join(', ')}
 - [ ] không quá ba tầng chữ, headline không quá 7 từ
 - [ ] không có badge đỏ kiểu giảm giá
 - [ ] không tấm nào thành bảng thông số liệt kê
@@ -203,7 +212,7 @@ ${moiCo.join(' · ')}
 
 const tepRa = lay('--ra') || 'prompt-stitch.md';
 fs.writeFileSync(tepRa, ra);
-console.log(`Bảng sự thật: ${moiCo.length} cỡ, ${b.nhomCo.length} nhóm, ${b.khongDuocNoi.length} điều cấm`);
+console.log(`Bảng sự thật: ${moiCo.length} dòng, ${b.bang.length} bảng, ${b.khongDuocNoi.length} điều cấm`);
 console.log(`Tấm sinh ra : ${chon.join(', ')}`);
 console.log(`Màu nhấn    : ${mauNhan} (tông ${b.tongMau})`);
 console.log(`Thị giác    : ${tg ? tg.mauDinhDanh.length + ' màu định danh, bề mặt ' + tg.beMat : 'CHƯA ĐO — prompt sẽ yếu, Stitch phải tự đoán màu'}`);

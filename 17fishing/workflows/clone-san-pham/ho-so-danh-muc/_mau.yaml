@@ -37,6 +37,20 @@ bienThe:
 
 boAnh: []      # danh sách tấm cần, theo thứ tự ưu tiên
 
+# Mô tả từng tấm cho công cụ sinh ảnh. Khoá phải trùng `boAnh`.
+# Bắt buộc khai: bản đầu gõ cứng sáu tấm của máy câu vào prompt-stitch.mjs
+# ("trên tay" vì khách lo kích thước, "so sánh cỡ" theo tỉ số truyền) — sang
+# cần câu thì tấm cần là "thu gọn" và "độ cong", hoàn toàn khác.
+boAnhMoTa: {}
+
+# Ba huy hiệu thông số đáng đưa lên ảnh nhất, mỗi cái một dòng ngắn.
+# Đây là chỗ khác nhau nhất giữa các ngành hàng: máy câu khoe lực hãm, cần câu
+# khoe sức kéo và độ dài thu gọn, phao khoe tải chì.
+badgeGoiY: []
+
+# Bộ phận KHÔNG được để chữ đè lên — chỗ khách nhìn để đánh giá chất lượng.
+khongDeChuDeLen: []
+
 cauHoiKhung: []  # khung câu hỏi thường gặp, {ngoặc} thay bằng số trong hồ sơ
 
 khongDuocNoiMacDinh: []  # điều cấm mặc định của loại hàng
