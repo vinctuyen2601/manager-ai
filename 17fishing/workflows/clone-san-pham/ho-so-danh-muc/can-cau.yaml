@@ -36,3 +36,17 @@ khongDuocNoiMacDinh:
 ruiRoHayGap:
   - "gãy ngọn do rút đốt sai cách"
   - "kẹt đốt khi cát lọt vào khớp"
+
+ngonNguThiGiac:
+  boiCanhHopLe:
+    - bờ hồ rộng, cần duỗi hết, có người cầm để thấy độ dài
+    - cần cong khi có cá, chụp từ phía sau người câu
+    - cần thu gọn đặt cạnh vật quen thuộc để so chiều dài
+  boiCanhCam:
+    - cắt cụt đầu cần ra khỏi khung (mất thông tin chiều dài)
+    - chụp trong nhà, không gian hẹp
+  daoCuChoPhep: [máy câu, người câu, giá đỡ cần, mặt hồ]
+  gioChup: "ánh sáng ngang để thấy độ thuôn của thân cần"
+  loiThiGiacHayGap:
+    - "cần quá dài nên ảnh ngang làm nó bé tí. Chụp chéo khung."
+    - "không có vật tham chiếu thì không ai hình dung được 5m4 là bao nhiêu."

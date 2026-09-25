@@ -35,3 +35,13 @@ cauHoiKhung: []  # khung câu hỏi thường gặp, {ngoặc} thay bằng số 
 khongDuocNoiMacDinh: []  # điều cấm mặc định của loại hàng
 
 ruiRoHayGap: []  # điểm hỏng hay bị khiếu nại, đưa vào phần bảo quản
+
+ngonNguThiGiac:
+  # Stitch không nhìn thấy bảng thông số. Nó cần biết vật thể ĐỂ ĐÂU thì hợp
+  # lý, cạnh cái gì, ánh sáng kiểu nào. Thiếu phần này thì ảnh đúng thông số
+  # mà sai ngữ cảnh: máy câu nằm trên bàn văn phòng, phao chụp giữa ban ngày.
+  boiCanhHopLe: []
+  boiCanhCam: []
+  daoCuChoPhep: []
+  gioChup: ""
+  loiThiGiacHayGap: []

@@ -39,3 +39,20 @@ ruiRoHayGap:
   - "lớp phủ màu là lớp phủ, không phải màu xuyên thân. Va đập có thể tróc."
   - "tra dầu thiếu từ xưởng, nên nhắc khách kiểm khi nhận"
   - "cát lọt quanh trục quay là chỗ rơ đầu tiên"
+
+ngonNguThiGiac:
+  boiCanhHopLe:
+    - mép hồ, cỏ ướt, ánh sáng cuối chiều
+    - kè đá, mặt nước phía sau mờ
+    - bàn gỗ sẫm, nền tối, chụp studio cho hero
+    - trên cần câu đã lắp, tay người cầm
+  boiCanhCam:
+    - bàn văn phòng, bàn phím, laptop
+    - nền studio trắng cho ảnh bối cảnh (chỉ dùng cho hero)
+    - cá đã chết bày cạnh sản phẩm
+  daoCuChoPhep: [cần câu, cuộn cước, hộp mồi, giỏ cá, bàn tay người]
+  gioChup: "cuối chiều hoặc sáng sớm, ánh vàng, tránh nắng gắt giữa trưa"
+  loiThiGiacHayGap:
+    - "chụp chính diện làm máy trông dẹt, mất khối. Luôn chụp chếch 3/4."
+    - "ánh sáng toả đều làm kim loại trông như nhựa. Cần nguồn định hướng."
+    - "cối quay bị làm mờ chuyển động quá đà thành ra như hỏng ảnh."

@@ -11,7 +11,8 @@ Sáu bước trong `../../QUY-TRINH-1688.md`. Đây là phần chạy được.
 | `doc-danh-gia.mjs` | 2b | HTML đánh giá -> JSON, **gắn cờ** bốn loại cần loại bỏ |
 | `bang-su-that.mau.json` | 3 | mẫu Bảng sự thật, điền tay |
 | `tao-nhap.mjs` | 4+5 | tải ảnh + tạo nháp + chèn đánh giá, có bốn bộ chặn |
-| `prompt-stitch.mjs` | 6 | sinh prompt ba khối từ Bảng sự thật |
+| `doc-thi-giac.mjs` | 3 | đo BẢNG MÀU THẬT + bề mặt từ ảnh gốc |
+| `prompt-stitch.mjs` | 6 | sinh prompt năm khối |
 
 ## Chạy
 
@@ -29,9 +30,28 @@ cp bang-su-that.mau.json bang-su-that.json
 node tao-nhap.mjs noi-dung.json --thu
 node tao-nhap.mjs noi-dung.json
 
+# 3b — đo màu thật từ ảnh gốc của nhà sản xuất
+node doc-thi-giac.mjs anh/*.jpg --ra thi-giac.json
+
 # 6
-node prompt-stitch.mjs bang-su-that.json
+node prompt-stitch.mjs bang-su-that.json \
+  --thi-giac thi-giac.json \
+  --ho-so-danh-muc ../../workflows/clone-san-pham/ho-so-danh-muc/may-cau.yaml
 ```
+
+## Năm khối của prompt
+
+| Khối | Nguồn | Trả lời câu hỏi |
+|---|---|---|
+| A · sự thật sản phẩm | Bảng sự thật | số nào được phép xuất hiện |
+| **A2 · hồ sơ thị giác** | `doc-thi-giac.mjs` | **màu gì, bề mặt nào, ánh sáng ra sao** |
+| **A3 · ngôn ngữ ngành hàng** | hồ sơ danh mục | **đặt ở đâu, cạnh cái gì, lỗi nào hay gặp** |
+| B · quy chuẩn lớp chữ | cố định | chữ đặt thế nào |
+| C · mô tả từng tấm | `boAnh` của danh mục | chụp cái gì |
+
+A2 và A3 là phần bù cho chỗ hổng lớn nhất: công cụ sinh ảnh **không nhìn thấy
+bảng thông số**. Đưa "285g, hãm 8kg" rồi mong nó vẽ đúng màu đồng cổ có vân
+xoáy là nhầm vai của dữ liệu.
 
 ## Bảng sự thật là trục
 

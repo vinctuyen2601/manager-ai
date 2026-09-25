@@ -36,3 +36,17 @@ khongDuocNoiMacDinh:
 ruiRoHayGap:
   - "khớp gấp rơ sau thời gian dùng"
   - "chân lún trên nền đất mềm nếu không có đế"
+
+ngonNguThiGiac:
+  boiCanhHopLe:
+    - ghế mở trên bờ kè, có người ngồi câu
+    - ghế trên đất dốc, thấy chân chỉnh khác độ cao
+    - hai trạng thái mở và gấp trong cùng một khung
+  boiCanhCam:
+    - ghế trong phòng khách, trên thảm
+    - chụp từ trên xuống (mất thông tin chiều cao ngồi)
+  daoCuChoPhep: [cần câu, thùng đồ, người ngồi, nền đất hoặc kè đá]
+  gioChup: "ban ngày, đủ sáng để thấy kết cấu khung"
+  loiThiGiacHayGap:
+    - "ghế không người ngồi thì không ai đoán được nó to bằng nào."
+    - "chụp trên nền phẳng lý tưởng, trong khi khách mua để ngồi bờ dốc."

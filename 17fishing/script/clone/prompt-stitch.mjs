@@ -12,11 +12,22 @@
  * Khối A sinh TỪ DỮ LIỆU, không gõ tay. Gõ tay là lại có hai bản thông số.
  */
 import fs from 'node:fs';
+import { execSync } from 'node:child_process';
 
 const args = process.argv.slice(2);
 const tep = args.find((a) => !a.startsWith('--')) || 'bang-su-that.json';
 const lay = (c) => { const i = args.indexOf(c); return i >= 0 ? args[i + 1] : null; };
 const b = JSON.parse(fs.readFileSync(tep, 'utf8'));
+// Hai nguồn phụ, thiếu thì prompt vẫn chạy nhưng yếu hẳn.
+const tgTep = lay('--thi-giac');
+const tg = tgTep && fs.existsSync(tgTep) ? JSON.parse(fs.readFileSync(tgTep, 'utf8')) : null;
+const hsTep = lay('--ho-so-danh-muc');
+// Đọc YAML bằng python3 + PyYAML thay vì tự viết. Bản tự viết không phân
+// biệt được khoá có giá trị rỗng là object hay mảng, nên `boiCanhHopLe:` theo
+// sau bởi các dòng `- ...` bị đọc thành object và `.map` nổ.
+const hs = hsTep && fs.existsSync(hsTep)
+  ? JSON.parse(execSync(`python3 -c 'import sys,yaml,json;json.dump(yaml.safe_load(open(sys.argv[1],encoding="utf-8")),sys.stdout)' ${JSON.stringify(hsTep)}`).toString())
+  : null;
 
 const NHAN = { 'đồng cổ': 'VÀNG KIM hoặc CAM CHÁY', 'đen': 'VÀNG KIM hoặc CAM CHÁY',
                'bạc': 'VÀNG KIM hoặc CAM CHÁY', 'thể thao': 'XANH CYAN hoặc LIME' };
@@ -42,6 +53,35 @@ LUẬT CỨNG:
 ${b.khongDuocNoi.map((x) => `   · ${x}`).join('\n')}
 4. Chữ trong ảnh phải TIẾNG VIỆT CÓ DẤU, không lẫn tiếng Trung.
 5. Không hiện logo hay tên thương hiệu nào ngoài "${b.thuongHieu}".`;
+
+const tgKhoi = !tg ? '' : `HỒ SƠ THỊ GIÁC (đo từ ảnh thật của sản phẩm, KHÔNG được đổi):
+
+Màu định danh — đây là màu phải vẽ đúng:
+${tg.mauDinhDanh.map((m) => `  ${m.hex}  ${m.ten}  (chiếm ${m.tiLe}% thân sản phẩm)`).join('\n')}
+
+Màu nền và bóng đổ trong ảnh gốc:
+${tg.mauNen.map((m) => `  ${m.hex}  ${m.ten}`).join('\n')}
+
+Bề mặt: ${tg.beMat} (độ tương phản đo được ${tg.doTuongPhan}).
+Ánh sáng: ${tg.anhSangCanDung}.
+
+Giữ nguyên mọi đặc điểm hình dáng thấy trong ảnh gốc: hoa văn trên thân, các
+lỗ khoét, hình dạng chân và tay cầm. Đây là thứ khách nhận ra sản phẩm, đổi đi
+là thành sản phẩm khác.`;
+
+const dmKhoi = !hs ? '' : `NGÔN NGỮ THỊ GIÁC CỦA NGÀNH HÀNG "${hs.ten || ''}":
+
+Bối cảnh hợp lệ:
+${(hs.ngonNguThiGiac?.boiCanhHopLe || []).map((x) => `  · ${x}`).join('\n')}
+
+Bối cảnh CẤM:
+${(hs.ngonNguThiGiac?.boiCanhCam || []).map((x) => `  · ${x}`).join('\n')}
+
+Đạo cụ cho phép: ${(hs.ngonNguThiGiac?.daoCuChoPhep || []).join(', ')}
+Giờ chụp: ${hs.ngonNguThiGiac?.gioChup || ''}
+
+Lỗi thị giác hay gặp với loại hàng này, tránh bằng mọi giá:
+${(hs.ngonNguThiGiac?.loiThiGiacHayGap || []).map((x) => `  · ${x}`).join('\n')}`;
 
 const khoiB = `QUY CHUẨN LỚP CHỮ (Text & Badge Overlay):
 
@@ -106,7 +146,7 @@ const khoiC = chon.map((n) => {
 const ra = `# Prompt Stitch — ${b.ten}
 
 Stitch cần BA thứ: ảnh sản phẩm gốc · thông tin sản phẩm · prompt này.
-Dán Khối A và B vào MỌI tấm. Khối C chọn theo tấm đang làm.
+Dán Khối A, A2, A3 và B vào MỌI tấm. Khối C chọn theo tấm đang làm.
 
 ---
 
@@ -115,6 +155,18 @@ Dán Khối A và B vào MỌI tấm. Khối C chọn theo tấm đang làm.
 \`\`\`
 ${khoiA}
 \`\`\`
+
+---
+
+## KHỐI A2 · Hồ sơ thị giác
+
+${tgKhoi ? '```\n' + tgKhoi + '\n```' : '_chưa đo — chạy `doc-thi-giac.mjs` trên ảnh gốc rồi truyền `--thi-giac`_'}
+
+---
+
+## KHỐI A3 · Ngôn ngữ thị giác của ngành hàng
+
+${dmKhoi ? '```\n' + dmKhoi + '\n```' : '_chưa nạp — truyền `--ho-so-danh-muc`_'}
 
 ---
 
@@ -154,4 +206,6 @@ fs.writeFileSync(tepRa, ra);
 console.log(`Bảng sự thật: ${moiCo.length} cỡ, ${b.nhomCo.length} nhóm, ${b.khongDuocNoi.length} điều cấm`);
 console.log(`Tấm sinh ra : ${chon.join(', ')}`);
 console.log(`Màu nhấn    : ${mauNhan} (tông ${b.tongMau})`);
+console.log(`Thị giác    : ${tg ? tg.mauDinhDanh.length + ' màu định danh, bề mặt ' + tg.beMat : 'CHƯA ĐO — prompt sẽ yếu, Stitch phải tự đoán màu'}`);
+console.log(`Ngành hàng  : ${hs ? (hs.ngonNguThiGiac?.boiCanhHopLe || []).length + ' bối cảnh hợp lệ, ' + (hs.ngonNguThiGiac?.boiCanhCam || []).length + ' bối cảnh cấm' : 'CHƯA NẠP hồ sơ danh mục'}`);
 console.log(`\n-> ${tepRa}`);

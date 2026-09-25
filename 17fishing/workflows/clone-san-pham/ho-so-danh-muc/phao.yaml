@@ -37,3 +37,17 @@ khongDuocNoiMacDinh:
 ruiRoHayGap:
   - "đuôi phao gãy khi tháo lắp mạnh"
   - "phao điện vào nước ở khe pin nếu vặn không chặt"
+
+ngonNguThiGiac:
+  boiCanhHopLe:
+    - phao đứng trên mặt nước tĩnh, chỉ nổi phần đuôi
+    - cận cảnh đuôi phao phát sáng trong đêm, mặt nước đen
+    - bộ phao xếp trên hộp đựng
+  boiCanhCam:
+    - phao nằm ngang trên bàn cho ảnh bối cảnh (phao phải ĐỨNG mới đúng)
+    - nền sáng cho ảnh ban đêm
+  daoCuChoPhep: [cần câu, dây cước, hộp phao, mặt nước]
+  gioChup: "hai tấm bắt buộc ở hai thời điểm: ban ngày và ban đêm"
+  loiThiGiacHayGap:
+    - "phao quá nhỏ trong khung nên không thấy được đuôi. Phải chụp cận."
+    - "ánh đèn đuôi phao bị thổi cháy trắng, mất màu thật của đuôi."
