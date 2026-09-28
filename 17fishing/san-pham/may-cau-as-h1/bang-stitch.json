@@ -1,0 +1,182 @@
+{
+ "ten": "Máy Câu AS H1 Lôi Đình — 9+1 vòng bi, bánh răng đồng phay tinh, truyền động trục kép",
+ "thuongHieu": "AS",
+ "tongMau": "đen",
+ "chung": [
+  [
+   "Loại",
+   "máy đứng (spinning) cỡ lớn, cho câu xa và câu lục"
+  ],
+  [
+   "Thân",
+   "nhôm hợp kim toàn phần, cối nhôm nguyên khối"
+  ],
+  [
+   "Bánh răng",
+   "đồng thau mangan phay tinh"
+  ],
+  [
+   "Truyền động",
+   "hai trục dẫn thép không gỉ kết hợp trục xoắn"
+  ],
+  [
+   "Tay quay",
+   "nhôm liền khối, bắt ren vào thân, đổi được tay trái phải"
+  ],
+  [
+   "Chống nước",
+   "vòng bi kín, nắp ren chống nước ở trục quay"
+  ],
+  [
+   "Thu một vòng tay quay",
+   "70 đến 75 cm"
+  ],
+  [
+   "Cùng xưởng với",
+   "dòng AS HA shop đang bán — đây là bản nâng cấp"
+  ]
+ ],
+ "bang": [
+  {
+   "ten": "AS H1",
+   "nhan": "lực hãm từ 15 kg · 9+1 vòng bi · tỉ số 4.1:1 ở mọi cỡ",
+   "cot": [
+    "Cỡ",
+    "Cối",
+    "Cổ cối",
+    "Nặng",
+    "Cước 0.370",
+    "Cước 0.405",
+    "Cước 0.435"
+   ],
+   "dong": [
+    [
+     "12000",
+     "S nông",
+     "59 mm",
+     "640 g",
+     "300 m",
+     "250 m",
+     "210 m"
+    ],
+    [
+     "12000",
+     "M vừa",
+     "50 mm",
+     "630 g",
+     "480 m",
+     "400 m",
+     "350 m"
+    ],
+    [
+     "12000",
+     "D sâu",
+     "41 mm",
+     "620 g",
+     "640 m",
+     "530 m",
+     "460 m"
+    ],
+    [
+     "16000",
+     "S nông",
+     "66 mm",
+     "670 g",
+     "290 m",
+     "240 m",
+     "210 m"
+    ],
+    [
+     "16000",
+     "M vừa",
+     "55 mm",
+     "660 g",
+     "540 m",
+     "450 m",
+     "390 m"
+    ],
+    [
+     "16000",
+     "D sâu",
+     "44 mm",
+     "650 g",
+     "740 m",
+     "620 m",
+     "540 m"
+    ]
+   ]
+  }
+ ],
+ "ghiChuCo": "Kích thước xưởng đo tay, có sai số nhỏ.\nLỰC HÃM: xưởng chỉ công bố \"từ 15 kg trở lên\", KHÔNG có số chính xác cho từng cỡ. Đừng sinh ra một con số đẹp hơn.\nHai cỡ thân 12000 và 16000, mỗi cỡ ba mức cối. Thân máy của cùng một cỡ thì giống nhau, chỉ khác độ sâu cối.",
+ "badge": [
+  "icon bọc thép + \"9+1 VÒNG BI\"",
+  "icon bánh răng + \"BÁNH RĂNG ĐỒNG PHAY TINH\"",
+  "icon trục + \"TRUYỀN ĐỘNG TRỤC KÉP\""
+ ],
+ "chuTrenAnh": {
+  "hero": {
+   "tieuDe": "9+1 VÒNG BI KÍN",
+   "badge": [
+    "BÁNH RĂNG ĐỒNG PHAY TINH",
+    "TRUYỀN ĐỘNG TRỤC KÉP"
+   ],
+   "nhan": [
+    "AS",
+    "H1 LÔI ĐÌNH"
+   ]
+  },
+  "tren-tay": {
+   "tieuDe": "CỐI LỚN, CẦM CHẮC TAY",
+   "badge": [
+    "NẶNG 640 G"
+   ]
+  },
+  "dang-dung": {
+   "tieuDe": "LẮP LÊN CẦN LĂNG XÊ CỠ DÀI"
+  },
+  "bung-chi-tiet": {
+   "tieuDe": "BÊN TRONG CÓ GÌ",
+   "nhan": [
+    "Bánh răng đồng thau phay tinh",
+    "Hai trục dẫn thép không gỉ",
+    "9+1 vòng bi kín",
+    "Cối nhôm nguyên khối",
+    "Tay quay vặn ren",
+    "Nắp ren chống nước"
+   ]
+  },
+  "so-sanh-co": {
+   "tieuDe": "SÁU CỠ CỐI, CHỌN ĐÚNG SỐ MÉT CƯỚC",
+   "nhan": [
+    "12000 S nông",
+    "12000 M vừa",
+    "12000 D sâu",
+    "16000 S nông",
+    "16000 M vừa",
+    "16000 D sâu",
+    "300 m",
+    "480 m",
+    "640 m",
+    "290 m",
+    "540 m",
+    "740 m",
+    "cước 0.370 mm"
+   ]
+  },
+  "hop": {
+   "tieuDe": "AS H1 LÔI ĐÌNH"
+  }
+ },
+ "moTaAnhThem": {
+  "so-sanh-co": "KHÔNG vẽ sáu cỡ to nhỏ dần. Chỉ có HAI cỡ thân (12000 và 16000);\nba mức S/M/D là ĐỘ SÂU CỐI, không phải cỡ thân.\nVẽ hai hàng: hàng trên ba cái cối của thân 12000 (cổ cối 59 / 50 / 41 mm),\nhàng dưới ba cái cối của thân 16000 (66 / 55 / 44 mm). Cùng đường kính vành,\nkhác nhau ở chiều sâu lòng cối.",
+  "tren-tay": "Chụp cỡ 12000 cối S. Ghi 640 g.",
+  "hop": "Hộp thật của xưởng có chữ Trung in trên vỏ. Nếu dựng lại thì để hộp\nTRỐNG chữ, tuyệt đối không bịa chữ Trung cũng không bịa nhãn tiếng Việt.",
+  "hero": "Thân máy màu XANH LAM ĐẬM ngả xám, KHÔNG phải đen. Vành cối, rotor và\nnúm quay ánh vàng đồng. Tương phản giữa hai màu đó là thứ nhận ra sản phẩm."
+ },
+ "khongDuocNoi": [
+  "lực hãm 20 kg, 25 kg, hay bất kỳ con số nào — xưởng chỉ nói \"từ 15 kg trở lên\"",
+  "kéo được cá bao nhiêu ký",
+  "chống nước tuyệt đối, kín nước, không bao giờ gỉ",
+  "cỡ 16000 khoẻ hơn cỡ 12000 — hai cỡ cùng lực hãm, cùng vòng bi, cùng tỉ số"
+ ]
+}

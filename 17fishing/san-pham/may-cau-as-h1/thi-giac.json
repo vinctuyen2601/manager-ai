@@ -1,0 +1,52 @@
+{
+ "nguon": "đo từ ảnh gốc của xưởng 28/09/2026, lọc theo sắc độ và độ bão hoà",
+ "mauDinhDanh": [
+  {
+   "hex": "#243030",
+   "ten": "xanh lam đậm ngả xám — thân máy và rotor, đây là màu nhận dạng",
+   "tiLe": 36
+  },
+  {
+   "hex": "#182424",
+   "ten": "xanh lam gần đen, phần thân trong bóng",
+   "tiLe": 24
+  },
+  {
+   "hex": "#F0CC90",
+   "ten": "vàng đồng sáng — vành cối, hoa văn rotor, núm quay",
+   "tiLe": 16
+  },
+  {
+   "hex": "#906C24",
+   "ten": "vàng đồng sẫm, phần ánh kim trong bóng",
+   "tiLe": 10
+  },
+  {
+   "hex": "#304848",
+   "ten": "xanh lam bắt sáng ở gờ và cạnh vát",
+   "tiLe": 8
+  },
+  {
+   "hex": "#C8CCD0",
+   "ten": "bạc sáng — cần tay quay, càng đảo cước",
+   "tiLe": 6
+  }
+ ],
+ "mauNen": [
+  {
+   "hex": "#FFFFFF",
+   "ten": "trắng, nền ảnh gallery"
+  },
+  {
+   "hex": "#12181C",
+   "ten": "gần đen, nền các tấm khoe chi tiết"
+  },
+  {
+   "hex": "#7FA8C8",
+   "ten": "xanh trời nhạt, nền tấm banner"
+  }
+ ],
+ "beMat": "nhôm phủ mờ màu xanh lam ở thân, ánh vàng đồng bóng ở vành cối và rotor, bạc xước mịn ở cần tay quay. Tương phản XANH LAM / VÀNG ĐỒNG là thứ nhận ra sản phẩm, vẽ thành đen-vàng là thành máy khác.",
+ "doTuongPhan": "cao — vật tối trên nền trắng hoặc nền tối, tách bằng viền sáng",
+ "anhSangCanDung": "MỘT nguồn định hướng chếch trên, đủ gắt để vàng đồng bắt sáng rõ và thân xanh lam giữ được sắc. Ánh sáng toả đều làm nhôm trông như nhựa và làm màu xanh lam chuyển thành xám chết."
+}
