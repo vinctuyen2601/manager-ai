@@ -145,7 +145,13 @@ const thay = (o) => JSON.parse(
 // ── tạo sản phẩm ───────────────────────────────────────────────────────────
 const than = thay({
   name: n.ten, slug: n.slug, description: n.moTa, price: n.gia, salePrice: 0,
-  images: (n.thuVien || []).map((k) => `{{anh:${k}}}`),
+  // `thuVien` nhận KHOÁ ảnh (script tự tải lên rồi thay bằng URL), nhưng
+  // cũng phải nhận được URL sẵn có — khi ảnh đã lên từ trước thì không có
+  // khoá nào để tra. Bản đầu bọc mọi mục thành `{{anh:...}}` vô điều kiện, và
+  // với URL thì `thay()` không tìm thấy khoá nên để nguyên chuỗi
+  // `{{anh:https://...}}` vào cột images. Ảnh vẫn "có" trong bản ghi nên
+  // không có lỗi nào, chỉ là tám ảnh thư viện không hiện.
+  images: (n.thuVien || []).map((k) => (String(k).startsWith('http') ? k : `{{anh:${k}}}`)),
   videos: n.video || [],
   categoryId: b.danhMuc, brand: b.thuongHieu, unit: b.donVi,
   weightPerUnit: n.trongLuong || null, stockStatus: b.tongTon || 'in_stock',

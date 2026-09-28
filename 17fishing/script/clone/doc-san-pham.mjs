@@ -25,7 +25,7 @@ if (!tep) {
   console.error('Dùng: node doc-san-pham.mjs <tệp.html> [--ra thu-muc]');
   process.exit(1);
 }
-const html = fs.readFileSync(tep, 'utf8');
+let html = fs.readFileSync(tep, 'utf8');
 
 const goc = (u) =>
   String(u || '')
@@ -42,6 +42,25 @@ const chu = (s) =>
     .replace(/&#39;/g, "'")
     .replace(/\s+/g, ' ')
     .trim();
+
+// ── cắt bỏ khối BÁN CHÉO trước khi làm gì khác ──────────────────────────────
+//
+// 1688 chèn khối "店铺推荐" vào giữa mô tả: 7 sản phẩm KHÁC của cùng gian
+// hàng, mỗi cái một ảnh. Lọc theo mã shop KHÔNG bắt được, vì chúng cùng shop.
+//
+// Đã suýt lọt với offer 884883929396: bảy ảnh máy câu khác giá 19,8 tệ nằm
+// lẫn giữa ảnh mô tả, và nếu đăng lên thì khách xem trang máy này lại thấy
+// ảnh máy khác. Cắt theo THẺ BỌC, không theo mã.
+const CAT_BO = [
+  /<div class="sdmap-dynamic-offer-list"[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/g,
+  /<div class="[^"]*offer-list-wapper[^"]*"[\s\S]*?<\/ul>\s*<\/div>/g,
+  /<img[^>]*class="dynamic-backup-img"[^>]*>/g,
+];
+const truocKhiCat = html.length;
+for (const re of CAT_BO) html = html.replace(re, '');
+if (html.length !== truocKhiCat) {
+  console.log(`  (đã cắt ${truocKhiCat - html.length} ký tự khối bán chéo)`);
+}
 
 // ── mã sản phẩm ──────────────────────────────────────────────────────────────
 const maKhop = html.match(/detail\.1688\.com\/offer\/(\d+)/) || html.match(/offerId"?\s*[:=]\s*"?(\d+)/);
