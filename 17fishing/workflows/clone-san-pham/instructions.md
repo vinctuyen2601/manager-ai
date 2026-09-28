@@ -384,8 +384,30 @@ Danh sách tấm lấy từ `boAnh` của hồ sơ danh mục, **không dùng b�
 Máy câu cần "trên tay" vì khách lo kích thước. Phao cần "ban đêm" vì đó là thứ
 quyết định mua. Cần câu cần "thu gọn". Ghế cần "đang ngồi".
 
-Prompt gồm ba khối: sự thật sản phẩm · quy chuẩn lớp chữ · mô tả từng tấm.
-Khối sự thật sinh **từ hồ sơ**, không gõ tay, để không có hai bản thông số.
+Prompt gồm năm khối nền + một khối tấm. Khối sự thật sinh **từ hồ sơ**, không
+gõ tay, để không có hai bản thông số.
+
+### Ép chữ trên ảnh ra TIẾNG VIỆT
+
+Công cụ sinh ảnh đọc tiếng Anh là chính, nên nó sinh chữ tiếng Anh. Một dòng
+luật "chữ phải tiếng Việt có dấu" nằm ở mục 4 của một khối viết toàn tiếng
+Việt thì **không ăn thua** — đã thử, ảnh vẫn ra chữ tiếng Anh.
+
+Ba thứ phải làm cùng lúc, thiếu một là hỏng:
+
+1. **Khối 0 dán ĐẦU TIÊN**, viết SONG NGỮ. Mệnh lệnh chỉ viết bằng tiếng Việt
+   thì chính nó là thứ dễ bị bỏ qua nhất.
+2. **Đưa sẵn CHUỖI CHỮ chính xác**, trong ngoặc kép, khai ở `chuTrenAnh` của
+   Bảng sự thật theo từng tấm. Bảo "hãy dùng tiếng Việt" là để nó tự dịch, và
+   nó dịch sang tiếng Anh. Đưa sẵn chuỗi thì nó chỉ còn việc chép.
+3. **Lặp lại chuỗi ngay trong khối tấm.** Công cụ bám vào phần gần cuối prompt
+   nhất; để chuỗi ở xa là nó tự nghĩ câu khác.
+
+Và chặn phông: Bebas Neue, Oswald **vẽ thiếu dấu tiếng Việt**. Montserrat
+Bold/Black và Be Vietnam Pro Bold vẽ đủ — chỉ định hai phông đó.
+
+Chưa khai `chuTrenAnh` thì script cảnh báo, vì thiếu nó là chắc chắn ra chữ
+tiếng Anh.
 
 Ảnh trả về thì **zoom từng tấm đọc mọi chữ và mọi số**, đối chiếu hồ sơ. Công
 cụ sinh ảnh chế ra thông số nghe rất hợp lý, và không tấm nào sai kiểu nhìn là

@@ -175,5 +175,62 @@
   "chịu mọi cỡ cá, không bao giờ gãy",
   "bảo hành đổi đốt miễn phí — đó là chính sách của xưởng với khách sỉ Trung Quốc",
   "câu biển thoải mái không cần rửa — khoen và chân máy nhiễm mặn vẫn rỉ"
- ]
+ ],
+ "chuTrenAnh": {
+  "hero": {
+   "tieuDe": "CẦN LĂNG XÊ VÀ CẦN LỤC",
+   "badge": [
+    "SỨC KÉO TỚI 15 KG",
+    "KHOEN GẤP ĐƯỢC"
+   ],
+   "nhan": [
+    "BENNUO"
+   ]
+  },
+  "khoen-dan": {
+   "tieuDe": "KHOEN GẤP SÁT THÂN",
+   "badge": [
+    "VÀNH 18 VÀ 23,2 MM"
+   ]
+  },
+  "chan-may": {
+   "tieuDe": "CHÂN MÁY TRƯỢT LÊN XUỐNG",
+   "badge": [
+    "KHOÁ CHỐT SILICON"
+   ]
+  },
+  "do-cong": {
+   "tieuDe": "CONG ĐỀU KHI CÓ CÁ"
+  },
+  "thu-gon": {
+   "tieuDe": "THU GỌN VỪA CỐP XE",
+   "badge": [
+    "104 ĐẾN 128 CM"
+   ]
+  },
+  "bang-thong-so": {
+   "tieuDe": "THÔNG SỐ TỪNG CỠ",
+   "nhan": [
+    "Cỡ",
+    "Đốt",
+    "Thu gọn",
+    "Nặng",
+    "Ngọn cần",
+    "Gốc cần",
+    "Khoen đỉnh",
+    "Số khoen",
+    "Chì ném",
+    "Sức kéo",
+    "Lăng xê",
+    "Cần lục"
+   ]
+  },
+  "ngon-va-goc": {
+   "tieuDe": "NGỌN CẦN DÀY, NÉM ĐƯỢC MỒI NẶNG",
+   "nhan": [
+    "Lăng xê",
+    "Cần lục"
+   ]
+  }
+ }
 }

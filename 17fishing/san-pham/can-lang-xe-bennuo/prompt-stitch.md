@@ -1,7 +1,63 @@
 # Prompt Stitch — Cần Lăng Xê Và Cần Lục Bennuo — rút carbon 4 đốt, khoen gấp
 
 Stitch cần BA thứ: ảnh sản phẩm gốc · thông tin sản phẩm · prompt này.
-Dán Khối A, A2, A3 và B vào MỌI tấm. Khối C chọn theo tấm đang làm.
+Dán Khối 0, A, A2, A3 và B vào MỌI tấm. Khối C chọn theo tấm đang làm.
+
+**Khối 0 phải dán ĐẦU TIÊN.** Để nó xuống dưới là chữ ra tiếng Anh.
+
+---
+
+## KHỐI 0 · Khoá ngôn ngữ
+
+```
+LANGUAGE LOCK — READ THIS BEFORE ANYTHING ELSE
+KHOÁ NGÔN NGỮ — ĐỌC TRƯỚC MỌI THỨ KHÁC
+
+ALL text rendered inside the image MUST be VIETNAMESE WITH FULL DIACRITICS.
+Do NOT translate, transliterate, or "clean up" any string into English.
+Do NOT drop diacritical marks. "SUC KEO" is WRONG, "SỨC KÉO" is correct.
+There must be ZERO English words and ZERO Chinese characters in the image.
+
+MỌI chữ hiện trong ảnh PHẢI là TIẾNG VIỆT CÓ DẤU ĐẦY ĐỦ.
+Không dịch sang tiếng Anh, không bỏ dấu, không "viết lại cho gọn".
+
+Copy the strings below EXACTLY, character for character, including every
+diacritic. These are the only strings allowed to appear as text:
+Chép NGUYÊN VĂN các chuỗi dưới đây, đúng từng ký tự và từng dấu:
+
+  "CẦN LĂNG XÊ VÀ CẦN LỤC"
+  "SỨC KÉO TỚI 15 KG"
+  "KHOEN GẤP ĐƯỢC"
+  "BENNUO"
+  "KHOEN GẤP SÁT THÂN"
+  "VÀNH 18 VÀ 23,2 MM"
+  "CHÂN MÁY TRƯỢT LÊN XUỐNG"
+  "KHOÁ CHỐT SILICON"
+  "CONG ĐỀU KHI CÓ CÁ"
+  "THU GỌN VỪA CỐP XE"
+  "104 ĐẾN 128 CM"
+  "THÔNG SỐ TỪNG CỠ"
+  "Cỡ"
+  "Đốt"
+  "Thu gọn"
+  "Nặng"
+  "Ngọn cần"
+  "Gốc cần"
+  "Khoen đỉnh"
+  "Số khoen"
+  "Chì ném"
+  "Sức kéo"
+  "Lăng xê"
+  "Cần lục"
+  "NGỌN CẦN DÀY, NÉM ĐƯỢC MỒI NẶNG"
+
+Vietnamese letters that are most often rendered wrong — render them correctly:
+Ă Â Đ Ê Ô Ơ Ư  ·  ă â đ ê ô ơ ư  ·  à á ả ã ạ  ·  ề ế ể ễ ệ  ·  ồ ố ổ ỗ ộ
+ờ ớ ở ỡ ợ  ·  ừ ứ ử ữ ự  ·  ỳ ý ỷ ỹ ỵ
+
+If a font cannot draw a Vietnamese diacritic, CHANGE THE FONT. Never drop the
+mark. Nếu phông không vẽ được dấu thì ĐỔI PHÔNG, tuyệt đối không bỏ dấu.
+```
 
 ---
 
@@ -48,7 +104,8 @@ LUẬT CỨNG:
    · chịu mọi cỡ cá, không bao giờ gãy
    · bảo hành đổi đốt miễn phí — đó là chính sách của xưởng với khách sỉ Trung Quốc
    · câu biển thoải mái không cần rửa — khoen và chân máy nhiễm mặn vẫn rỉ
-4. Chữ trong ảnh phải TIẾNG VIỆT CÓ DẤU, không lẫn tiếng Trung.
+4. Chữ trong ảnh phải TIẾNG VIỆT CÓ DẤU — xem KHỐI 0. Không tiếng Anh,
+   không tiếng Trung, không bỏ dấu.
 5. Không hiện logo hay tên thương hiệu nào ngoài "Bennuo".
 ```
 
@@ -122,7 +179,10 @@ Tối đa ba tầng:
   Tầng 3 · 2 đến 3 badge thông số "ăn tiền" nhất
 
 PHÔNG CHỮ: dày, cứng cáp, góc cạnh, sans-serif hình khối gợi cơ khí chính xác.
-  Dùng Montserrat Bold/Black, Bebas Neue, Oswald, Kinetic.
+  Phông PHẢI vẽ được đủ dấu tiếng Việt (Ă Â Đ Ê Ô Ơ Ư và dấu thanh chồng).
+  The font MUST support full Vietnamese diacritics.
+  Montserrat Bold/Black và Be Vietnam Pro Bold vẽ đủ dấu — dùng hai phông này.
+  Bebas Neue và Oswald vẽ THIẾU dấu tiếng Việt, ĐỪNG dùng cho chữ có dấu.
   TUYỆT ĐỐI KHÔNG font viết tay hoặc font mềm mại.
 
 MÀU: headline và logo trắng #FFFFFF hoặc bạc ánh kim #E0E0E0.
@@ -157,21 +217,46 @@ Cần duỗi hết, chụp CHÉO khung chứ không nằm ngang, chiếm ≥85% 
 Nền tối, một nguồn sáng chếch làm nổi vân carbon và ánh sơn.
 Lớp chữ: logo góc trên, một headline ≤7 từ, hai huy hiệu.
 
+CHỮ PHẢI IN LÊN TẤM NÀY — chép nguyên văn, đủ dấu:
+Text to render on this image, copy verbatim with all diacritics:
+  Tiêu đề / headline: "CẦN LĂNG XÊ VÀ CẦN LỤC"
+  Huy hiệu / badge:   "SỨC KÉO TỚI 15 KG"
+  Huy hiệu / badge:   "KHOEN GẤP ĐƯỢC"
+  Nhãn / label:       "BENNUO"
+Không thêm chữ nào khác. No other text anywhere in the image.
+
 ### khoen-dan
 
 Cận cảnh cụm khoen: MỘT khoen đang gấp, MỘT khoen đang mở, trong cùng
 khung. Nền tối để vành kim loại bắt sáng. Đây là chỗ khác cần đài rõ
 nhất, và là chỗ khách soi kỹ nhất. Đúng một huy hiệu: đường kính vành.
 
+CHỮ PHẢI IN LÊN TẤM NÀY — chép nguyên văn, đủ dấu:
+Text to render on this image, copy verbatim with all diacritics:
+  Tiêu đề / headline: "KHOEN GẤP SÁT THÂN"
+  Huy hiệu / badge:   "VÀNH 18 VÀ 23,2 MM"
+Không thêm chữ nào khác. No other text anywhere in the image.
+
 ### chan-may
 
 Chân máy đã lắp máy câu vào, chụp nghiêng để thấy chân trượt dọc thân.
 Có bàn tay đang siết chốt thì tốt. Không chữ đè lên cụm chân máy.
 
+CHỮ PHẢI IN LÊN TẤM NÀY — chép nguyên văn, đủ dấu:
+Text to render on this image, copy verbatim with all diacritics:
+  Tiêu đề / headline: "CHÂN MÁY TRƯỢT LÊN XUỐNG"
+  Huy hiệu / badge:   "KHOÁ CHỐT SILICON"
+Không thêm chữ nào khác. No other text anywhere in the image.
+
 ### do-cong
 
 Cần cong khi có cá, chụp từ phía sau người câu, hướng ra mặt nước.
 Chỉ headline, không huy hiệu. Để ảnh tự nói.
+
+CHỮ PHẢI IN LÊN TẤM NÀY — chép nguyên văn, đủ dấu:
+Text to render on this image, copy verbatim with all diacritics:
+  Tiêu đề / headline: "CONG ĐỀU KHI CÓ CÁ"
+Không thêm chữ nào khác. No other text anywhere in the image.
 
 ### thu-gon
 
@@ -179,15 +264,45 @@ Cần đã thu, đóng nắp chụp, đặt cạnh vật quen thuộc (cẳng ta
 để so chiều dài. Trả lời câu hỏi số 1 khi mua cần rút.
 Đúng một huy hiệu: độ dài thu gọn.
 
+CHỮ PHẢI IN LÊN TẤM NÀY — chép nguyên văn, đủ dấu:
+Text to render on this image, copy verbatim with all diacritics:
+  Tiêu đề / headline: "THU GỌN VỪA CỐP XE"
+  Huy hiệu / badge:   "104 ĐẾN 128 CM"
+Không thêm chữ nào khác. No other text anywhere in the image.
+
 ### bang-thong-so
 
 Bảng theo từng chiều dài, nền tối, chữ trắng, cột thẳng hàng.
 Đây là tấm DUY NHẤT được phép nhiều chữ. Mọi số phải lấy từ Khối A.
 
+CHỮ PHẢI IN LÊN TẤM NÀY — chép nguyên văn, đủ dấu:
+Text to render on this image, copy verbatim with all diacritics:
+  Tiêu đề / headline: "THÔNG SỐ TỪNG CỠ"
+  Nhãn / label:       "Cỡ"
+  Nhãn / label:       "Đốt"
+  Nhãn / label:       "Thu gọn"
+  Nhãn / label:       "Nặng"
+  Nhãn / label:       "Ngọn cần"
+  Nhãn / label:       "Gốc cần"
+  Nhãn / label:       "Khoen đỉnh"
+  Nhãn / label:       "Số khoen"
+  Nhãn / label:       "Chì ném"
+  Nhãn / label:       "Sức kéo"
+  Nhãn / label:       "Lăng xê"
+  Nhãn / label:       "Cần lục"
+Không thêm chữ nào khác. No other text anywhere in the image.
+
 ### ngon-va-goc
 
 Hai ảnh cận cạnh nhau: thước kẹp đo ngọn cần, thước kẹp đo gốc cần.
 Số trên mặt thước phải trùng Khối A. Dưới mỗi ảnh một nhãn ngắn.
+
+CHỮ PHẢI IN LÊN TẤM NÀY — chép nguyên văn, đủ dấu:
+Text to render on this image, copy verbatim with all diacritics:
+  Tiêu đề / headline: "NGỌN CẦN DÀY, NÉM ĐƯỢC MỒI NẶNG"
+  Nhãn / label:       "Lăng xê"
+  Nhãn / label:       "Cần lục"
+Không thêm chữ nào khác. No other text anywhere in the image.
 
 ---
 
@@ -199,6 +314,8 @@ ZOOM từng tấm, đọc mọi chữ và mọi con số, đối chiếu Khối 
 Cỡ hợp lệ, không chấp nhận bất kỳ cỡ nào khác:
 Lăng xê 3m6 · Lăng xê 3m9 · Lăng xê 4m2 · Lăng xê 4m5 · Cần lục 3m0 · Cần lục 3m6 · Cần lục 3m9 · Cần lục 4m2 · Cần lục 4m5
 
+- [ ] **không một chữ tiếng Anh nào trong ảnh**
+- [ ] **mọi dấu tiếng Việt vẽ đủ** — soi kỹ Ă Â Đ Ê Ô Ơ Ư và dấu thanh chồng
 - [ ] mọi con số có trong Khối A
 - [ ] không ghép thông số hai nhóm cỡ vào một khung
 - [ ] không nhắc thứ nằm trong danh sách cấm

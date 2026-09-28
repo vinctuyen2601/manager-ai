@@ -70,7 +70,8 @@ LUẬT CỨNG:
 2. Không ghép thông số của hai nhóm khác nhau vào cùng một khung.
 3. Không được nhắc tới:
 ${b.khongDuocNoi.map((x) => `   · ${x}`).join('\n')}
-4. Chữ trong ảnh phải TIẾNG VIỆT CÓ DẤU, không lẫn tiếng Trung.
+4. Chữ trong ảnh phải TIẾNG VIỆT CÓ DẤU — xem KHỐI 0. Không tiếng Anh,
+   không tiếng Trung, không bỏ dấu.
 5. Không hiện logo hay tên thương hiệu nào ngoài "${b.thuongHieu}".`;
 
 const tgKhoi = !tg ? '' : `HỒ SƠ THỊ GIÁC (đo từ ảnh thật của sản phẩm, KHÔNG được đổi):
@@ -102,6 +103,46 @@ Giờ chụp: ${hs.ngonNguThiGiac?.gioChup || ''}
 Lỗi thị giác hay gặp với loại hàng này, tránh bằng mọi giá:
 ${(hs.ngonNguThiGiac?.loiThiGiacHayGap || []).map((x) => `  · ${x}`).join('\n')}`;
 
+// Khối khoá ngôn ngữ. Ba điều làm nó khác với một dòng luật bình thường:
+//
+// 1. Đặt TRƯỚC mọi khối khác. Luật số 4 nằm giữa một khối toàn thông số thì
+//    bị bỏ qua — đã dính đúng thế: prompt ghi "chữ phải tiếng Việt có dấu"
+//    ở mục 4 của Khối A, Stitch vẫn sinh ra chữ tiếng Anh.
+// 2. Viết SONG NGỮ. Công cụ sinh ảnh đọc tiếng Anh là chính; một mệnh lệnh
+//    chỉ viết bằng tiếng Việt thì chính nó cũng là thứ dễ bị hiểu sai nhất.
+// 3. Đưa CHUỖI CHỮ CHÍNH XÁC phải in lên ảnh, trong ngoặc kép. Bảo "hãy dùng
+//    tiếng Việt" là để nó tự dịch — và nó dịch sang tiếng Anh. Đưa sẵn chuỗi
+//    thì nó chỉ còn việc chép.
+// Chuỗi chữ khai THEO TẤM, vì mỗi tấm một bộ chữ khác nhau. Khối 0 gom
+// phẳng để khoá ngôn ngữ, Khối C in lại đúng bộ của tấm đang làm.
+const chuTam = b.chuTrenAnh || {};
+const moiChu = [...new Set(Object.values(chuTam).flatMap(
+  (v) => [v.tieuDe, ...(v.badge || []), ...(v.nhan || [])].filter(Boolean)))];
+
+const khoi0 = `LANGUAGE LOCK — READ THIS BEFORE ANYTHING ELSE
+KHOÁ NGÔN NGỮ — ĐỌC TRƯỚC MỌI THỨ KHÁC
+
+ALL text rendered inside the image MUST be VIETNAMESE WITH FULL DIACRITICS.
+Do NOT translate, transliterate, or "clean up" any string into English.
+Do NOT drop diacritical marks. "SUC KEO" is WRONG, "SỨC KÉO" is correct.
+There must be ZERO English words and ZERO Chinese characters in the image.
+
+MỌI chữ hiện trong ảnh PHẢI là TIẾNG VIỆT CÓ DẤU ĐẦY ĐỦ.
+Không dịch sang tiếng Anh, không bỏ dấu, không "viết lại cho gọn".
+
+Copy the strings below EXACTLY, character for character, including every
+diacritic. These are the only strings allowed to appear as text:
+Chép NGUYÊN VĂN các chuỗi dưới đây, đúng từng ký tự và từng dấu:
+
+${moiChu.map((x) => `  "${x}"`).join('\n')}
+
+Vietnamese letters that are most often rendered wrong — render them correctly:
+Ă Â Đ Ê Ô Ơ Ư  ·  ă â đ ê ô ơ ư  ·  à á ả ã ạ  ·  ề ế ể ễ ệ  ·  ồ ố ổ ỗ ộ
+ờ ớ ở ỡ ợ  ·  ừ ứ ử ữ ự  ·  ỳ ý ỷ ỹ ỵ
+
+If a font cannot draw a Vietnamese diacritic, CHANGE THE FONT. Never drop the
+mark. Nếu phông không vẽ được dấu thì ĐỔI PHÔNG, tuyệt đối không bỏ dấu.`;
+
 const khoiB = `QUY CHUẨN LỚP CHỮ (Text & Badge Overlay):
 
 PHÂN CẤP — mắt đọc theo thứ tự: SẢN PHẨM → LOGO/HEADLINE → BADGE.
@@ -112,7 +153,10 @@ Tối đa ba tầng:
   Tầng 3 · 2 đến 3 badge thông số "ăn tiền" nhất
 
 PHÔNG CHỮ: dày, cứng cáp, góc cạnh, sans-serif hình khối gợi cơ khí chính xác.
-  Dùng Montserrat Bold/Black, Bebas Neue, Oswald, Kinetic.
+  Phông PHẢI vẽ được đủ dấu tiếng Việt (Ă Â Đ Ê Ô Ơ Ư và dấu thanh chồng).
+  The font MUST support full Vietnamese diacritics.
+  Montserrat Bold/Black và Be Vietnam Pro Bold vẽ đủ dấu — dùng hai phông này.
+  Bebas Neue và Oswald vẽ THIẾU dấu tiếng Việt, ĐỪNG dùng cho chữ có dấu.
   TUYỆT ĐỐI KHÔNG font viết tay hoặc font mềm mại.
 
 MÀU: headline và logo trắng #FFFFFF hoặc bạc ánh kim #E0E0E0.
@@ -149,13 +193,34 @@ const chon = (lay('--tam') || Object.keys(TAM).join(',')).split(',').map((x) => 
 const khoiC = chon.map((n) => {
   const t = TAM[n];
   if (!t) { console.error(`không có mô tả cho tấm "${n}" trong hồ sơ danh mục`); return ''; }
-  return `### ${n}\n\n${t.trim()}`;
+  const c = chuTam[n];
+  // In lại chuỗi chữ ngay trong khối tấm. Khối 0 đã liệt kê hết, nhưng công
+  // cụ sinh ảnh bám vào phần GẦN cuối prompt nhất — để chuỗi ở xa là nó tự
+  // nghĩ ra câu khác, và câu nó nghĩ ra luôn bằng tiếng Anh.
+  const chu = !c ? '' : `\n\nCHỮ PHẢI IN LÊN TẤM NÀY — chép nguyên văn, đủ dấu:`
+    + `\nText to render on this image, copy verbatim with all diacritics:\n`
+    + [c.tieuDe && `  Tiêu đề / headline: "${c.tieuDe}"`,
+       ...(c.badge || []).map((x) => `  Huy hiệu / badge:   "${x}"`),
+       ...(c.nhan || []).map((x) => `  Nhãn / label:       "${x}"`),
+      ].filter(Boolean).join('\n')
+    + `\nKhông thêm chữ nào khác. No other text anywhere in the image.`;
+  return `### ${n}\n\n${t.trim()}${chu}`;
 }).filter(Boolean).join('\n\n');
 
 const ra = `# Prompt Stitch — ${b.ten}
 
 Stitch cần BA thứ: ảnh sản phẩm gốc · thông tin sản phẩm · prompt này.
-Dán Khối A, A2, A3 và B vào MỌI tấm. Khối C chọn theo tấm đang làm.
+Dán Khối 0, A, A2, A3 và B vào MỌI tấm. Khối C chọn theo tấm đang làm.
+
+**Khối 0 phải dán ĐẦU TIÊN.** Để nó xuống dưới là chữ ra tiếng Anh.
+
+---
+
+## KHỐI 0 · Khoá ngôn ngữ
+
+\`\`\`
+${khoi0}
+\`\`\`
 
 ---
 
@@ -201,6 +266,8 @@ ZOOM từng tấm, đọc mọi chữ và mọi con số, đối chiếu Khối 
 Cỡ hợp lệ, không chấp nhận bất kỳ cỡ nào khác:
 ${moiCo.join(' · ')}
 
+- [ ] **không một chữ tiếng Anh nào trong ảnh**
+- [ ] **mọi dấu tiếng Việt vẽ đủ** — soi kỹ Ă Â Đ Ê Ô Ơ Ư và dấu thanh chồng
 - [ ] mọi con số có trong Khối A
 - [ ] không ghép thông số hai nhóm cỡ vào một khung
 - [ ] không nhắc thứ nằm trong danh sách cấm
@@ -215,6 +282,12 @@ fs.writeFileSync(tepRa, ra);
 console.log(`Bảng sự thật: ${moiCo.length} dòng, ${b.bang.length} bảng, ${b.khongDuocNoi.length} điều cấm`);
 console.log(`Tấm sinh ra : ${chon.join(', ')}`);
 console.log(`Màu nhấn    : ${mauNhan} (tông ${b.tongMau})`);
+if (!moiChu.length) {
+  console.log('Chữ trên ảnh: CHƯA KHAI `chuTrenAnh` — Stitch sẽ TỰ NGHĨ CÂU,'
+    + ' và câu nó nghĩ ra bằng tiếng Anh. Đã dính đúng thế.');
+} else {
+  console.log(`Chữ trên ảnh: ${moiChu.length} chuỗi khai sẵn, ${Object.keys(chuTam).length} tấm`);
+}
 console.log(`Thị giác    : ${tg ? tg.mauDinhDanh.length + ' màu định danh, bề mặt ' + tg.beMat : 'CHƯA ĐO — prompt sẽ yếu, Stitch phải tự đoán màu'}`);
 console.log(`Ngành hàng  : ${hs ? (hs.ngonNguThiGiac?.boiCanhHopLe || []).length + ' bối cảnh hợp lệ, ' + (hs.ngonNguThiGiac?.boiCanhCam || []).length + ' bối cảnh cấm' : 'CHƯA NẠP hồ sơ danh mục'}`);
 console.log(`\n-> ${tepRa}`);
