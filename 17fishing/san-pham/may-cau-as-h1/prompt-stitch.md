@@ -1,4 +1,4 @@
-# Prompt Stitch — Máy Câu AS H1 Lôi Đình — 9+1 vòng bi, bánh răng đồng phay tinh, truyền động trục kép
+# Prompt Stitch — Máy Câu AS H1 Aosha — 9+1 vòng bi, bánh răng đồng phay tinh, truyền động trục kép
 
 Stitch cần BA thứ: ảnh sản phẩm gốc · thông tin sản phẩm · prompt này.
 Dán Khối 0, A, A2, A3 và B vào MỌI tấm. Khối C chọn theo tấm đang làm.
@@ -29,7 +29,7 @@ Chép NGUYÊN VĂN các chuỗi dưới đây, đúng từng ký tự và từng
   "BÁNH RĂNG ĐỒNG PHAY TINH"
   "TRUYỀN ĐỘNG TRỤC KÉP"
   "AS"
-  "H1 LÔI ĐÌNH"
+  "H1 AOSHA"
   "CỐI LỚN, CẦM CHẮC TAY"
   "NẶNG 640 G"
   "LẮP LÊN CẦN LĂNG XÊ CỠ DÀI"
@@ -54,7 +54,7 @@ Chép NGUYÊN VĂN các chuỗi dưới đây, đúng từng ký tự và từng
   "540 m"
   "740 m"
   "cước 0.370 mm"
-  "AS H1 LÔI ĐÌNH"
+  "AS H1 AOSHA"
 
 Vietnamese letters that are most often rendered wrong — render them correctly:
 Ă Â Đ Ê Ô Ơ Ư  ·  ă â đ ê ô ơ ư  ·  à á ả ã ạ  ·  ề ế ể ễ ệ  ·  ồ ố ổ ỗ ộ
@@ -71,7 +71,7 @@ mark. Nếu phông không vẽ được dấu thì ĐỔI PHÔNG, tuyệt đối
 ```
 DỮ LIỆU SẢN PHẨM (nguồn duy nhất, tuyệt đối không thêm bớt):
 
-Tên: Máy Câu AS H1 Lôi Đình — 9+1 vòng bi, bánh răng đồng phay tinh, truyền động trục kép
+Tên: Máy Câu AS H1 Aosha — 9+1 vòng bi, bánh răng đồng phay tinh, truyền động trục kép
 Thương hiệu: AS
 Loại: máy đứng (spinning) cỡ lớn, cho câu xa và câu lục
 Thân: nhôm hợp kim toàn phần, cối nhôm nguyên khối
@@ -228,7 +228,7 @@ Text to render on this image, copy verbatim with all diacritics:
   Huy hiệu / badge:   "BÁNH RĂNG ĐỒNG PHAY TINH"
   Huy hiệu / badge:   "TRUYỀN ĐỘNG TRỤC KÉP"
   Nhãn / label:       "AS"
-  Nhãn / label:       "H1 LÔI ĐÌNH"
+  Nhãn / label:       "H1 AOSHA"
 Không thêm chữ nào khác. No other text anywhere in the image.
 
 ### tren-tay
@@ -316,7 +316,7 @@ TRỐNG chữ, tuyệt đối không bịa chữ Trung cũng không bịa nhãn 
 
 CHỮ PHẢI IN LÊN TẤM NÀY — chép nguyên văn, đủ dấu:
 Text to render on this image, copy verbatim with all diacritics:
-  Tiêu đề / headline: "AS H1 LÔI ĐÌNH"
+  Tiêu đề / headline: "AS H1 AOSHA"
 Không thêm chữ nào khác. No other text anywhere in the image.
 
 ---
