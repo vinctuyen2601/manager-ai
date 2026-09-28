@@ -94,6 +94,41 @@ Ba phần bắt buộc:
 
 ---
 
+
+### Giọng văn: giọng người BÁN, không phải giọng người ĐÁNH GIÁ
+
+Chủ shop chê giọng AI **bốn lần**, và cả bốn lần tôi tự chấm là đạt. Lần thứ
+tư mới lòi ra là tôi hiểu ngược: suốt ba vòng tôi gọt cho câu ngắn lại, bỏ từ
+hoa mỹ, thêm lời rào. Đó là giọng người đánh giá sản phẩm. Chủ shop muốn giọng
+người bán.
+
+Văn mẫu chủ shop đưa nằm ở `../../van-mau-quang-cao.txt`. **Đọc nó trước khi
+viết chữ**, đừng tự nghĩ ra "giọng tự nhiên".
+
+Khuôn đo được từ mẫu:
+
+| | mẫu |
+|---|---|
+| độ dài câu trung bình | **32 từ** |
+| "vượt trội / hiệu năng" | 10,4‰ |
+| "cực kỳ / vô cùng" · "hoàn hảo / tối ưu" · "mang đến / mang lại" | 7,8‰ |
+| "thiết kế / thiết bị" · "anh em cần thủ" | 7,8‰ |
+| "đảm bảo" · "bền bỉ / đáng nể" | 5,2‰ |
+
+Cấu trúc bám theo: mở bài `"<Tên> là một trong những dòng … đáng sở hữu nhất
+hiện nay, mang đến sự kết hợp hoàn hảo giữa A và B"` · tiêu đề mục `"Đặc điểm
+vượt trội của <sản phẩm>"` và `"<Lợi ích> với công nghệ <Tên>"` · **đặt TÊN
+cho tính năng rồi bán cái tên đó** · hỏi đáp **đánh số**, mỗi câu hỏi nhắc lại
+tên sản phẩm.
+
+```
+python3 {script_path}/do-giong.py --san-pham <uuid>
+```
+
+**Ranh giới:** đánh bóng CHỮ thì thoải mái, chủ shop đã cho phép. **SỐ thì
+không.** Bộ đếm dừng hẳn nếu bắt được lời hứa vượt thông số (kéo được cá bao
+nhiêu ký, ném xa bao nhiêu mét, chống nước tuyệt đối). Đó là chỗ sinh đơn trả
+hàng, không phải chỗ để bay bổng.
 ## Bước 3b · Phiếu thị giác — NHÌN, không đo
 
 Điền `phieu-thi-giac.md` bằng cách **xem từng ảnh sản phẩm**. Tám mục, dùng

@@ -62,9 +62,13 @@ Còn một mục chưa tick thì chưa bật.
 
 ## F · Giọng văn
 
-- [ ] chạy bộ đếm tật, các tật về 0
-- [ ] không câu nào lên lớp khách cách tiêu tiền
-- [ ] không chi tiết nào bịa cho câu văn có nhịp
+- [ ] đã chạy `do-giong.py --san-pham <uuid>` và dán bảng cho chủ shop
+- [ ] độ dài câu trung bình **≥ 24 từ** (mẫu 32; dưới 24 là đang viết giọng
+      đánh giá chứ không phải giọng bán)
+- [ ] không quá 3 dấu hiệu bị đánh dấu ↓
+- [ ] bộ đếm KHÔNG báo đỏ chỗ nào hứa vượt thông số
+- [ ] mọi con số khớp Bảng sự thật
+- [ ] grep các câu chủ shop đã từng gạch ở sản phẩm cũ, chưa dùng lại câu nào
 
 ## G · Cuối cùng
 
