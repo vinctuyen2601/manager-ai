@@ -28,6 +28,39 @@ boAnh:
   - so-sanh-co      # các cỡ cạnh nhau ĐÚNG TỈ LỆ
   - hop
 
+boAnhMoTa:
+  hero: |
+    Máy chiếm ≥90% khung, chụp CHẾCH 3/4 chứ không chính diện.
+    Nền tối, một nguồn sáng định hướng từ trên chếch trái để kim loại bắt
+    viền sáng và thấy rõ khối. Không đạo cụ.
+    Lớp chữ: logo góc trên, một headline ≤7 từ, hai huy hiệu.
+  tren-tay: |
+    Bàn tay đàn ông cầm máy, chụp ngang tầm mắt, nền hồ mờ.
+    Tấm quan trọng nhất sau hero: nó trả lời "to cỡ nào", nỗi lo lớn nhất
+    khi mua đồ câu qua mạng. Đúng MỘT huy hiệu: khối lượng của cỡ đang chụp.
+  dang-dung: |
+    Máy đã lắp lên cần, cạnh hồ hoặc bờ kè, ánh sáng cuối chiều.
+    Chụp khoảnh khắc tay đang thao tác, không chụp vật nằm yên.
+    Chỉ headline, không huy hiệu. Để ảnh tự nói.
+  bung-chi-tiet: |
+    Máy ở giữa, 4-5 đường chú thích mảnh chỉ ra cối, rotor, chân máy, núm
+    quay, cụm hãm. Mỗi chú thích tối đa 5 từ.
+    Đây là tấm DUY NHẤT được phép nhiều chữ.
+  so-sanh-co: |
+    Các cỡ cạnh nhau ĐÚNG TỈ LỆ THẬT theo kích thước trong Khối A, căn cùng
+    một đường đáy. Dưới mỗi cái ghi tên cỡ và công dụng.
+    CHỈ dùng tên cỡ có trong Khối A.
+  hop: |
+    Máy cạnh hộp của hãng, nền tối. Cho thấy khách nhận về gồm những gì.
+    Không chữ, hoặc chỉ logo.
+
+badgeGoiY:
+  - "icon bọc thép + {soVongBi} VÒNG BI"
+  - "icon bánh răng + TỈ SỐ {tiSoTruyen}"
+  - "icon cân + {khoiLuong} NHẸ TAY"
+
+khongDeChuDeLen: [cối, rotor, tay quay, núm quay, chân máy]
+
 cauHoiKhung:
   - "Nên chọn cỡ nào?"
   - "Máy có nặng tay không?"

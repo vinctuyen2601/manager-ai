@@ -1,0 +1,175 @@
+{
+ "ten": "Máy Câu NAG — thân nhôm toàn phần, lực hãm 20 kg, trục vít dẫn cước",
+ "thuongHieu": "NAG",
+ "tongMau": "bạc",
+ "chung": [
+  [
+   "Loại",
+   "máy đứng (spinning), cỡ lớn, cho câu xa và câu lục"
+  ],
+  [
+   "Thân",
+   "nhôm hợp kim toàn phần, nắp hông kim loại"
+  ],
+  [
+   "Cối",
+   "kim loại"
+  ],
+  [
+   "Rải cước",
+   "trục vít — trục chính thép không gỉ, trục vít đồng thau"
+  ],
+  [
+   "Tay quay",
+   "phay CNC, bắt ren vào thân, đổi được tay trái phải"
+  ],
+  [
+   "Núm quay",
+   "kim loại bản to"
+  ],
+  [
+   "Bề mặt",
+   "xử lý thụ động hoá; xưởng công bố thử phun muối 240 giờ"
+  ],
+  [
+   "Kích thước thân",
+   "72 mm ngang · 150 mm cao (giống nhau ở cả năm cỡ)"
+  ]
+ ],
+ "bang": [
+  {
+   "ten": "NAG",
+   "nhan": "cả năm cỡ chung một bộ máy, chỉ khác độ sâu cối",
+   "cot": [
+    "Cỡ",
+    "Nặng",
+    "Lực hãm",
+    "Vòng bi",
+    "Tỉ số",
+    "Cước 0.35",
+    "Cước 0.4",
+    "Cước 0.5"
+   ],
+   "dong": [
+    [
+     "8000",
+     "608 g",
+     "20 kg",
+     "6+1",
+     "4.8:1",
+     "230 m",
+     "170 m",
+     "120 m"
+    ],
+    [
+     "9000",
+     "599 g",
+     "20 kg",
+     "6+1",
+     "4.8:1",
+     "310 m",
+     "240 m",
+     "180 m"
+    ],
+    [
+     "10000",
+     "610 g",
+     "20 kg",
+     "6+1",
+     "4.8:1",
+     "550 m",
+     "420 m",
+     "270 m"
+    ],
+    [
+     "12000",
+     "608 g",
+     "20 kg",
+     "6+1",
+     "4.8:1",
+     "750 m",
+     "600 m",
+     "390 m"
+    ],
+    [
+     "14000",
+     "604 g",
+     "20 kg",
+     "6+1",
+     "4.8:1",
+     "950 m",
+     "790 m",
+     "590 m"
+    ]
+   ]
+  }
+ ],
+ "ghiChuCo": "Khối lượng sai số ±2 g. Sức chứa cước đổi theo đường kính cước thật, chỉ để tham khảo.\nNăm cỡ KHÔNG khác nhau về lực: cùng 20 kg, cùng 6+1 vòng bi, cùng tỉ số 4.8:1, cùng thân 72×150 mm.\nThứ khác nhau duy nhất là ĐỘ SÂU CỐI, tức số mét cước quấn được.",
+ "badge": [
+  "icon bọc thép + \"6+1 VÒNG BI\"",
+  "icon bánh răng + \"TỈ SỐ 4.8:1\"",
+  "icon cá + \"LỰC HÃM 20 KG\""
+ ],
+ "chuTrenAnh": {
+  "hero": {
+   "tieuDe": "LỰC HÃM 20 KG",
+   "badge": [
+    "THÂN NHÔM TOÀN PHẦN",
+    "6+1 VÒNG BI"
+   ],
+   "nhan": [
+    "NAG"
+   ]
+  },
+  "tren-tay": {
+   "tieuDe": "THÂN 72 × 150 MM",
+   "badge": [
+    "NẶNG 608 G"
+   ]
+  },
+  "dang-dung": {
+   "tieuDe": "LẮP LÊN CẦN LĂNG XÊ"
+  },
+  "bung-chi-tiet": {
+   "tieuDe": "BÊN TRONG CÓ GÌ",
+   "nhan": [
+    "Cối kim loại",
+    "Trục vít dẫn cước",
+    "Tay quay phay CNC",
+    "Núm quay kim loại",
+    "Nắp hông kim loại"
+   ]
+  },
+  "so-sanh-co": {
+   "tieuDe": "NĂM CỠ, KHÁC NHAU Ở ĐỘ SÂU CỐI",
+   "nhan": [
+    "NAG 8000",
+    "NAG 9000",
+    "NAG 10000",
+    "NAG 12000",
+    "NAG 14000",
+    "230 m",
+    "310 m",
+    "550 m",
+    "750 m",
+    "950 m",
+    "cước 0.35 mm"
+   ]
+  },
+  "hop": {
+   "tieuDe": "NAG"
+  }
+ },
+ "khongDuocNoi": [
+  "kéo được cá trăm cân, hay bất kỳ cỡ cá nào vượt mức hãm 20 kg",
+  "chống nước tuyệt đối, kín nước — máy đứng không kín nước",
+  "không bao giờ gỉ, thụ động hoá chỉ làm chậm ăn mòn chứ không chặn được",
+  "cỡ to hơn thì khoẻ hơn — năm cỡ cùng một bộ máy, chỉ khác độ sâu cối",
+  "tên thương hiệu nào ngoài NAG; hàng này mang bốn tên hãng khác nhau trên ảnh xưởng"
+ ],
+ "moTaAnhThem": {
+  "so-sanh-co": "KHÔNG vẽ năm cỡ to nhỏ khác nhau. Năm thân máy GIỐNG HỆT nhau,\ncùng 72 × 150 mm. Thứ khác nhau là ĐỘ SÂU CỐI.\nVẽ năm cái CỐI rời cạnh nhau, cùng đường kính vành, khác nhau ở chiều sâu\nlòng cối; dưới mỗi cái ghi tên cỡ và số mét cước 0.35.",
+  "tren-tay": "Cỡ nào cũng nặng khoảng 600 g và thân 72 × 150 mm, nên chụp cỡ nào\ncũng đúng. Ghi 608 g cho cỡ 8000.",
+  "hop": "Không có ảnh hộp thật từ xưởng. Nếu không dựng được thì BỎ tấm này,\nđừng bịa một cái hộp có logo."
+ }
+}

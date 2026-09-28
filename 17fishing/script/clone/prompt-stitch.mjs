@@ -193,6 +193,14 @@ const chon = (lay('--tam') || Object.keys(TAM).join(',')).split(',').map((x) => 
 const khoiC = chon.map((n) => {
   const t = TAM[n];
   if (!t) { console.error(`không có mô tả cho tấm "${n}" trong hồ sơ danh mục`); return ''; }
+  // Hồ sơ danh mục mô tả tấm cho CẢ NGÀNH HÀNG, nên có lúc nó sai với một
+  // sản phẩm cụ thể. Đúng ca này: khuôn máy câu bảo tấm "so-sanh-co" phải vẽ
+  // các cỡ ĐÚNG TỈ LỆ THẬT — nhưng máy NAG có năm cỡ CHUNG MỘT THÂN, chỉ
+  // khác độ sâu cối. Vẽ theo khuôn là vẽ ra một điều không có thật.
+  //
+  // `moTaAnhThem` trong Bảng sự thật nối thêm vào cuối, không thay khuôn:
+  // phần chung vẫn giữ, phần riêng nói rõ chỗ khác.
+  const them = (b.moTaAnhThem || {})[n];
   const c = chuTam[n];
   // In lại chuỗi chữ ngay trong khối tấm. Khối 0 đã liệt kê hết, nhưng công
   // cụ sinh ảnh bám vào phần GẦN cuối prompt nhất — để chuỗi ở xa là nó tự
@@ -204,7 +212,9 @@ const khoiC = chon.map((n) => {
        ...(c.nhan || []).map((x) => `  Nhãn / label:       "${x}"`),
       ].filter(Boolean).join('\n')
     + `\nKhông thêm chữ nào khác. No other text anywhere in the image.`;
-  return `### ${n}\n\n${t.trim()}${chu}`;
+  return `### ${n}\n\n${t.trim()}`
+    + (them ? `\n\nRIÊNG SẢN PHẨM NÀY:\n${them.trim()}` : '')
+    + chu;
 }).filter(Boolean).join('\n\n');
 
 const ra = `# Prompt Stitch — ${b.ten}

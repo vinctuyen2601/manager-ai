@@ -1,0 +1,47 @@
+{
+ "nguon": "đo từ ảnh gốc của xưởng 28/09/2026, lọc theo độ bão hoà",
+ "mauDinhDanh": [
+  {
+   "hex": "#2A2A2A",
+   "ten": "xám than — thân máy và rotor, bề mặt phủ mờ",
+   "tiLe": 38
+  },
+  {
+   "hex": "#1C1C1C",
+   "ten": "gần đen, phần thân trong bóng",
+   "tiLe": 22
+  },
+  {
+   "hex": "#8C7E70",
+   "ten": "vàng đồng ánh kim — núm quay, vành cối, chi tiết nhấn",
+   "tiLe": 16
+  },
+  {
+   "hex": "#E0E0E0",
+   "ten": "bạc sáng — cần tay quay, càng đảo cước, viền bắt sáng",
+   "tiLe": 14
+  },
+  {
+   "hex": "#7E7E70",
+   "ten": "xám nhôm xước mịn — thành cối kim loại",
+   "tiLe": 10
+  }
+ ],
+ "mauNen": [
+  {
+   "hex": "#0E0E0E",
+   "ten": "đen, nền phần lớn ảnh chi tiết"
+  },
+  {
+   "hex": "#EDEDED",
+   "ten": "xám sáng, nền thẻ thông số"
+  },
+  {
+   "hex": "#3A2A20",
+   "ten": "nâu ấm, ánh hắt trên nền tối"
+  }
+ ],
+ "beMat": "nhôm phủ mờ ở thân, kim loại xước mịn ở cối, ánh đồng bóng ở núm quay và vành cối; tương phản giữa mảng mờ và mảng bóng chính là thứ nhận ra sản phẩm",
+ "doTuongPhan": "cao — vật tối trên nền tối, tách nhau bằng viền sáng chứ không bằng độ sáng nền",
+ "anhSangCanDung": "MỘT nguồn định hướng từ trên chếch trái, đủ gắt để kim loại bắt viền sáng rõ. Ánh sáng toả đều làm nhôm trông như nhựa — đó là lỗi hay gặp nhất với món này."
+}
