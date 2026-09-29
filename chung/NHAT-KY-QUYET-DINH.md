@@ -371,6 +371,66 @@ bảng. 17fishing có `SOURCE_EXPR` làm việc này, GaRutin thì không.
 
 ---
 
+### QĐ-14 · Chiến dịch sale theo mùa — chỉ 17fishing
+
+**Ngày:** 29/09/2026 · **Chủ shop chốt phạm vi và mọi lựa chọn dưới đây.**
+
+Làm khung chiến dịch cho các đợt sale lớn trong năm, thứ đổi cả giao diện web
+chứ không chỉ đổi giá: Black Friday, Noel, Tết, 30/4.
+
+**Chỉ 17fishing.** GaRutinWeb có đúng **1 token màu** trong `:root` (17fishing
+có 40), GaRutinBE không có bảng `banners` lẫn trường `gifts`. Làm song song
+hai bên nghĩa là một nửa công sức đổ vào dựng nền cho GaRutin chứ không vào
+tính năng.
+
+**Đợt đầu: Black Friday 27/11/2026, giao diện mức 1** (màu, banner, dải trên
+đầu trang, huy hiệu — không đụng bố cục). Chọn đợt nhỏ làm đợt chạy thử vì
+sai ở đó rẻ hơn sai vào Tết.
+
+**Quyết định kiến trúc quan trọng nhất:** chiến dịch chỉ chứa LUẬT, không ghi
+giá vào sản phẩm. Yêu cầu của chủ shop là "giá trước và sau khi hết sale phải
+giống nhau"; cách ghi đè rồi hoàn nguyên cần một tác vụ hẹn giờ chạy đúng một
+lần, và tác vụ đó lỡ nhịp là bán giá sale vô thời hạn không ai biết.
+
+**Đã bỏ khỏi phạm vi, theo yêu cầu chủ shop:**
+
+- quà tặng theo chiến dịch — combo đã làm bằng chính sản phẩm
+- báo cáo lượt bấm Zalo/gọi điện — "không quan trọng bằng lượt mua hàng"
+- giá sàn cho từng món
+
+**Luật đụng độ đã chốt:** một món đang giảm sẵn mà chiến dịch giảm ít hơn thì
+**giá thấp hơn thắng**. Không có luật này thì có món **tăng giá đúng hôm
+Black Friday**. Cùng triết lý `gia.ts` đã ghi: nghiêng về phía có lợi cho khách.
+
+**Số nền trước chiến dịch, 30 ngày tính tới 29/09/2026** (`admin/analytics/funnel`):
+
+| bước | lượt |
+|---|---|
+| xem sản phẩm | 276 |
+| thêm giỏ | 29 |
+| vào trang đặt hàng | 20 |
+| đặt xong | **2** |
+
+**Dự đoán, kiểm ngày 01/12/2026** — so 27–30/11 với bốn ngày cùng thứ tuần trước:
+
+1. Lượt **xem sản phẩm** tăng ít nhất **50%**. Đây là dự đoán chính, vì nó là
+   chỉ số duy nhất có đủ mẫu để nói được gì.
+2. Lượt **thêm giỏ** tăng, nhưng tôi **không đặt ngưỡng** — 29 lượt/30 ngày là
+   quá mỏng.
+3. Lượt **mua** tôi **không dự đoán**. Nền là 2 đơn/30 ngày; mọi con số ra ở
+   đây đều không kết luận được gì, và hứa doanh số ở quy mô này là hứa liều.
+4. **Không có sản phẩm nào bị tăng giá** trong khoảng chạy. Đây là chốt an
+   toàn: sai ở đây nghĩa là luật đụng độ cài sai.
+5. Sau 30/11, giá mọi sản phẩm **bằng đúng giá ngày 26/11**. Chốt an toàn thứ
+   hai, và là toàn bộ lý do chọn kiến trúc "chỉ chứa luật".
+
+**Kiểm ngày:** 01/12/2026 · **Trạng thái:** ⏳ chờ kiểm
+
+**Tiến độ:** bước 1 xong 29/09 (bảng, module, màn CMS, luật chặn trùng ngày).
+Còn bước 2 giá, bước 3 banner + đồng hồ, bước 4 giao diện.
+
+---
+
 ## Dự đoán đã rút lại
 
 ### 15/09/2026 · "Kéo `gà rutin` về hạng 5 được ~100 nhấp"
