@@ -82,25 +82,32 @@ Mục 4 là mục phân biệt người bán thật với tờ rơi quảng cáo
 
 ---
 
-## 4. Luật "phải chê"
+## 4. Luật "nói rõ hợp với ai"
 
-Mỗi mô tả phải có ít nhất một câu nói món này KHÔNG hợp với ai, hoặc dở ở đâu.
+Sửa 30/09/2026, theo chủ shop: **câu chê chỉ đưa vào khi nó giúp ích, và không
+được đánh vào điểm yếu của sản phẩm.** Bản trước bắt buộc mỗi mô tả phải có một
+câu chê; luật đó nay bỏ.
 
-Mẫu có thật của đối thủ:
+Phân biệt hai thứ trước giờ bị gộp làm một:
 
-> "Nhược điểm là cần rất nặng, nhanh mỏi tay khi bạn ra mồi liên tục."
+| Không dùng | Dùng được |
+|---|---|
+| Hạ sản phẩm: "máy nặng, nhanh mỏi tay" | Chỉ đúng người: "cỡ nhỏ nhất đã là 12000, câu tay thì quá to" |
+| Nêu khuyết điểm không lối ra | Nêu điều kiện dùng: "máy spinning không kín nước, câu biển về phải tráng nước ngọt" |
 
-Và chất liệu tốt nhất cho mục này là **nhận xét thật của khách**. Ví dụ khách
-viết cho phao điện của shop, 3 sao:
+Tiêu chí nhận: câu đó **giúp khách chọn đúng hoặc dùng đúng** thì giữ. Chỉ làm
+sản phẩm xấu đi mà khách không làm gì được với thông tin đó thì bỏ.
 
-> "Nhạy quá khó bắt nhịp"
+Ba việc câu loại này làm được:
 
-Câu đó đáng giá hơn cả trăm từ tán tụng, và tính tới 22/09/2026 nó **không nằm
-trong mô tả**. Cùng khách đó còn nói "pin bền câu được chục buổi" và "đổi màu
-khi có tín hiệu cá ăn" — cả ba đều không có trong mô tả tôi viết.
+- **Chặn đơn sai.** Người câu tay mua nhầm cỡ 16000 thì trả hàng, mất phí ship
+  và ăn đánh giá xấu.
+- **Tạo tin cho phần còn lại.** Trang nào cũng toàn lời khen thì không câu nào
+  đáng tin.
+- **Đúng giọng người bán** (mục 2). Người bán thật nói "món này không hợp với
+  anh"; chuyên viên nội dung thì không.
 
-**Quy tắc:** trước khi viết mô tả cho một sản phẩm, ĐỌC hết nhận xét thật của nó
-và lấy đúng chữ khách dùng.
+Chất liệu tốt nhất vẫn là nhận xét thật của khách, lấy đúng chữ khách dùng.
 
 ⚠ Cảnh báo về kho nhận xét: đo 22/09/2026, trong 40 nhận xét đọc được có 6 đoạn
 chữ **lặp nguyên văn dưới nhiều tên khác nhau** (có đoạn lặp 4 lần). Chỉ khoảng
@@ -143,6 +150,35 @@ xương, và đó là cảm giác "máy viết" rõ nhất sau dấu gạch ngan
 > nghĩa là · chọn theo · cỡ nào trong ba cỡ · đây là thứ · đổi lại
 
 ---
+
+## 6b. KHÔNG khai xuất xứ Trung Quốc
+
+**Chủ shop chốt 30/09/2026.** Không viết "Sản xuất tại Trung Quốc", "Made in
+China", "hàng Trung Quốc", "xuất xứ Trung Quốc" ở bất cứ đâu: mô tả, bảng
+thông số, tiêu đề, thẻ meta, ảnh.
+
+Thay bằng **tên thương hiệu**, và thêm định vị **"xuất khẩu châu Âu"** hoặc
+**"xuất Mỹ"** khi phù hợp.
+
+```
+KHÔNG   Thương hiệu: Bennuo · Sản xuất tại Trung Quốc
+CÓ      Thương hiệu: Bennuo
+CÓ      Thương hiệu: Bennuo · Hàng xuất khẩu châu Âu
+```
+
+Tên sản phẩm đang bán đã theo lối này sẵn: "Máy Câu **Xuất khẩu** NAG",
+"MÁY CÂU **XUẤT ÂU** DG TOKUSHIMA".
+
+**Một ranh giới phải giữ.** Bỏ dòng xuất xứ là quyền của shop, không ai bắt
+phải khai. Nhưng "xuất khẩu châu Âu / xuất Mỹ" là một lời KHẲNG ĐỊNH về hàng,
+nên chỉ viết khi trang 1688 gốc có nói (`出口欧美`, `外贸`, `出口`) — chép lại
+thì đúng, tự thêm vào cho đẹp thì thành nói sai về hàng.
+
+Trang nguồn không nói gì thì chỉ ghi tên thương hiệu, đừng thêm gì.
+
+**Cách kiểm:** trước khi đăng, tìm trong toàn bộ nội dung sản phẩm các chữ
+`Trung Quốc`, `Trung Quoc`, `China`, `xuất xứ`. Rà ngày 30/09/2026 trên 14 sản
+phẩm đang bán: 1 sản phẩm dính (Bennuo, ở bảng thông số trong `blockData`).
 
 ## 7. Thứ tôi KHÔNG tự tạo ra được
 

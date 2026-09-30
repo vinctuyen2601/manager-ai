@@ -24,9 +24,11 @@ export function kiemGiongSanPham(html, { tenH2DaDung = new Set(), coBienThe = fa
   // 2. Tiếng người trong nghề.
   if (!/anh em|cần thủ/i.test(t)) loi.push('không có tiếng nghề: thiếu "anh em" hoặc "cần thủ"');
 
-  // 3. Phải chê. Nhận diện rộng vì cách diễn đạt nhiều kiểu.
-  const che = /nhược điểm|hạn chế|điểm trừ|không hợp|chưa hợp|không dành cho|đừng (mua|lấy|chọn)|nặng tay|khó (dùng|bắt nhịp|làm quen)|đổi lại thì/i;
-  if (!che.test(t)) loi.push('KHÔNG có câu nào nói món này dở hoặc không hợp với ai');
+  // 3. Nói rõ hợp với ai. Sửa 30/09: KHÔNG còn bắt buộc, chỉ nhắc.
+  // Chủ shop chốt: câu chê chỉ đưa vào khi giúp khách chọn đúng hoặc dùng đúng,
+  // không đưa câu chỉ hạ sản phẩm. Nên đây là nhắc, không phải lỗi chặn.
+  const hopVoiAi = /không hợp|chưa hợp|không dành cho|quá to|quá nặng|chỉ hợp|hợp phần lớn|đừng (mua|lấy|chọn)|phải (tráng|lót|rửa)|không kín nước/i;
+  if (!hopVoiAi.test(t)) nhac.push('chưa có câu nào chỉ rõ món này hợp hoặc không hợp với ai');
 
   // 4. Độ dài. Hàng có phân loại cần chỗ để dạy chọn.
   const min = coBienThe ? 600 : 350;
@@ -39,10 +41,28 @@ export function kiemGiongSanPham(html, { tenH2DaDung = new Set(), coBienThe = fa
   if (trung.length) loi.push(`H2 trùng sản phẩm khác: ${trung.join(' · ')}`);
 
   // 6. Giọng phân tích — chính là văn cũ của tôi.
-  const PHAN_TICH = [/\bnghĩa là\b/gi, /cỡ nào trong (ba|bốn|năm|sáu|tám) (cỡ|mức|bản)/gi,
-                     /\bđây là thứ\b/gi, /\bđổi lại\b/gi, /\bchọn theo\b/gi];
+  // \b của JS chỉ hiểu [A-Za-z0-9_], nên "\bđổi lại\b" KHÔNG BAO GIỜ khớp: chữ
+  // "đ" không phải ký tự từ nên ranh giới tính sai. Cả nhóm này im lặng suốt.
+  // Dùng lookaround theo lớp chữ cái Unicode (\p{L}) thay cho \b.
+  const bien = (t) => new RegExp(`(?<!\\p{L})${t}(?!\\p{L})`, 'giu');
+  const PHAN_TICH = ['nghĩa là', 'cỡ nào trong (ba|bốn|năm|sáu|tám) (cỡ|mức|bản)',
+                     'đây là thứ', 'đổi lại', 'chọn theo'].map(bien);
   PHAN_TICH.forEach((re) => { const n = (t.match(re) || []).length;
-    if (n) nhac.push(`giọng phân tích "${re.source.replace(/\\b|\(|\)|\|/g, '').slice(0, 26)}" ×${n}`); });
+    if (n) nhac.push(`giọng phân tích "${re.source
+      .replace(/\(\?<!\\p\{L\}\)|\(\?!\\p\{L\}\)/g, '').slice(0, 26)}" ×${n}`); });
+
+  // 6b. Từ thổi phồng (mục 6 của chuẩn). Trước đây chỉ `kiemGiong` blog bắt phần
+  // này, mà nó import hỏng nên không chạy — 28 từ cấm lọt vào một trang sản phẩm.
+  const TU_CAM = ['vượt trội', 'lý tưởng', 'hoàn hảo', 'đỉnh cao', 'tối ưu', 'nâng cao',
+    'đáng kể', 'vô cùng', 'hàng đầu', 'thế hệ mới', 'một cách', 'không chỉ',
+    'đáng nể', 'tuyệt đối', 'cực kỳ', 'hơn bao giờ hết'];
+  const dinh = TU_CAM.map((w) => [w, (low.match(new RegExp(w, 'g')) || []).length])
+    .filter(([, n]) => n > 0);
+  if (dinh.length) {
+    const tong = dinh.reduce((a, [, n]) => a + n, 0);
+    loi.push(`từ thổi phồng ×${tong}: ${dinh.sort((a, b) => b[1] - a[1])
+      .map(([w, n]) => `${w}×${n}`).join(' · ')}`);
+  }
 
   // 7. Câu quá đều nhau: văn người có nhịp lên xuống, văn máy thì phẳng.
   const cau = t.split(/(?<=[.!?:])\s+/).filter((c) => c.trim().split(' ').length > 3);
@@ -51,6 +71,10 @@ export function kiemGiongSanPham(html, { tenH2DaDung = new Set(), coBienThe = fa
   const lech = Math.sqrt(dai.reduce((a, b) => a + (b - tb) ** 2, 0) / Math.max(1, dai.length));
   if (dai.length >= 8 && lech < 4.5) nhac.push(`độ dài câu quá đều (lệch chuẩn ${lech.toFixed(1)}, nên >4,5)`);
   if (tb > 22) loi.push(`câu trung bình ${tb.toFixed(1)} từ (nên 12–18)`);
+  // Trung bình đạt vẫn có thể lẫn câu rất dài: chuẩn mục 5 cấm câu quá 34 từ.
+  const quaDai = cau.filter((c) => c.split(' ').length > 34);
+  if (quaDai.length) loi.push(`${quaDai.length} câu quá 34 từ (dài nhất ${
+    Math.max(...quaDai.map((c) => c.split(' ').length))} từ)`);
 
   return { loi, nhac, soTu, cauTB: +tb.toFixed(1), lechCau: +lech.toFixed(1), gach, h2 };
 }

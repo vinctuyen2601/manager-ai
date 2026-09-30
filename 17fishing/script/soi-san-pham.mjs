@@ -16,7 +16,7 @@
  *  8. gạch chéo trong thông số → đọc thành "hoặc" khi ý là "kèm cả hai"
  */
 import { readFileSync } from 'node:fs';
-import { kiemGiong } from './_kiemgiong.mjs';
+import { kiemGiongSanPham } from './kiem-giong-san-pham.mjs';
 
 const API = 'https://api.17-fishing.com/api';
 const TOKEN = readFileSync(process.env.HOME + '/.17fishing-admin-token', 'utf8').trim();
@@ -105,9 +105,19 @@ for (const p0 of ds) {
   if (!p.seoDescription) loi.push('thiếu seoDescription');
 
   // 7. giọng
-  const g = kiemGiong(String(p.description || '') + ' ' + vb.replace(/\\n/g, '. '));
+  // Cho cổng ăn văn bản người đọc thấy, không phải JSON thô: khoá, dấu ngoặc và
+  // dấu phẩy của JSON làm sai cả số từ lẫn phép tách câu (một "câu" 65 từ toàn
+  // cú pháp). Đo sai thì bài sạch trông như bài bẩn, và ngược lại.
+  // Nối bằng '. ' chứ không phải ' ': tiêu đề và nội dung của cùng một mục là hai
+  // câu khác nhau. Nối bằng dấu cách thì chúng dính lại thành một câu dài giả.
+  const chuTrongKhoi = (o) => Array.isArray(o) ? o.map(chuTrongKhoi).join('. ')
+    : o && typeof o === 'object' ? Object.values(o).map(chuTrongKhoi).join('. ')
+    : typeof o === 'string' ? o : '';
+  const g = kiemGiongSanPham(String(p.description || '') + ' ' + chuTrongKhoi(bd));
   if (g.loi.length) loi.push('giọng: ' + g.loi.join('; '));
-  if (/anh em/i.test(vb + mt)) loi.push('còn "anh em"');
+  // Bỏ 30/09: chỗ này từng bắt lỗi khi CÒN "anh em", trong khi chuẩn mục 2
+  // (22/09) BẮT BUỘC gọi người đọc là "anh em". Hai phép kiểm ngược nhau nên
+  // bài nào cũng fail một bên. Việc kiểm tiếng nghề nay do kiemGiongSanPham lo.
 
   // 8. gạch chéo trong thông số
   const ts = JSON.stringify(bd['thong-so'] || {});
