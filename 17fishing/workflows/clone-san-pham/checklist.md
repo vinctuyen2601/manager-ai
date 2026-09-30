@@ -21,9 +21,11 @@ Còn một mục chưa tick thì chưa bật.
 - [ ] không nhắc thứ nào trong mục **không được nói**
 - [ ] không dùng "chính hãng", "bảo hành", "chống nước" nếu không có căn cứ
 - [ ] rủi ro hay gặp đã có trong phần bảo quản
-- [ ] **không chỗ nào khai xuất xứ Trung Quốc** — grep cả `Trung Quốc`,
-      `Trung Quoc`, `China`, `xuất xứ` trong mô tả, bảng thông số, tiêu đề,
-      thẻ meta VÀ `blockData`. Xem mục 6b của GIONG-TRANG-SAN-PHAM.md
+- [ ] **không chỗ nào khai xuất xứ Trung Quốc** — grep `Trung Quốc`,
+      `Trung Quoc`, `China`, `xuất xứ` trên **TOÀN BỘ bản ghi sản phẩm**, đừng
+      liệt kê tên trường. Rà ngày 30/09/2026 tôi chỉ quét 5 trường và báo
+      "1/14 dính"; quét cả đối tượng thì ra 2 — chỗ sót nằm ở `blockOrder`,
+      trường tôi không nghĩ tới. Xem mục 6b của GIONG-TRANG-SAN-PHAM.md
 - [ ] "xuất khẩu châu Âu / xuất Mỹ" chỉ viết khi trang 1688 gốc có nói
       (`出口欧美`, `外贸`, `出口`) — tự thêm vào là nói sai về hàng
 
