@@ -4,6 +4,26 @@
 
 ---
 
+## 0. TẠM DỪNG — chủ shop chốt 01/10/2026
+
+> **GaRutin tạm thời KHÔNG cập nhật gì thêm.** Mọi công sức đang dồn cho
+> 17fishing. Đừng tự khởi động việc gì ở đây, kể cả việc "chỉ mất năm phút".
+
+Những thứ cố ý **không** mang sang, để lần sau khỏi tưởng là bỏ sót:
+
+| việc làm ở 17fishing | trạng thái bên GaRutin |
+|---|---|
+| Chiến dịch sale theo mùa (bảng `chien_dich`, chủ đề, banner, đồng hồ) | **không có**. Chốt 30/09: chỉ làm 17fishing, vì GaRutinWeb có đúng 1 token màu trong `:root` còn GaRutinBE không có bảng `banners` lẫn trường `gifts` |
+| Trường `kieuCau` và lối vào theo kiểu câu | **không có**, và cũng không hợp — GaRutin bán gà, không có trục "kiểu câu" |
+| Dựng lại khối danh mục, dải cuộn ngang, ảnh danh mục từ ảnh thật | **không có** |
+| `REVALIDATE_SECRET` | **chưa đặt**. Mã đã có sẵn ở cả `GaRutinWeb/src/app/api/revalidate/route.ts` lẫn `GaRutinBE/src/common/lam-moi-web.service.ts`, nhưng thiếu biến nên nó im lặng không làm gì. Muốn bật thì làm y hệt 17fishing và dùng CHUỖI KHÁC |
+| Hạ lề lồng nhau ở khổ điện thoại, thẻ tràn lề | **chưa đo bên này**. Rất có thể cũng dính vì cùng một khuôn dựng |
+
+Việc duy nhất vẫn chạy: hai web đều đã trả cửa sổ ISR về mức cũ (60–3600
+giây) hôm 29/09, nên GaRutin không còn rủi ro cạn hạn mức.
+
+Khi nào chủ shop mở lại GaRutin thì đọc mục 4 "Việc còn treo" bên dưới trước.
+
 ## 1. Cửa hàng này bán gì
 
 Trang trại **gà rutin** — tên khác của chim cút Nhật Bản, nuôi làm cảnh và lấy

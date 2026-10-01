@@ -431,6 +431,30 @@ Còn bước 2 giá, bước 3 banner + đồng hồ, bước 4 giao diện.
 
 ---
 
+### QĐ-15 · GaRutin tạm dừng, dồn sức cho 17fishing
+
+**Ngày:** 01/10/2026 · **Chủ shop chốt.**
+
+> "gà rutin tạm thời không cần cập nhật gì thêm"
+
+Đây là quyết định về PHÂN BỔ CÔNG SỨC, không phải về chất lượng GaRutin.
+Trước đó ngày 30/09 chủ shop đã chốt làm chiến dịch sale chỉ cho 17fishing
+(xem QĐ-14), nay mở rộng ra mọi việc.
+
+**Hệ quả cần nhớ:** từ 29/09 tới 01/10 có một loạt thay đổi chỉ chạy ở
+17fishing — chiến dịch sale, trường kiểu câu, dựng lại trang chủ, ảnh danh mục
+từ ảnh thật, hạ lề ở khổ điện thoại, `REVALIDATE_SECRET`. Danh sách đầy đủ và
+lý do từng mục nằm ở mục 0 của `garutin/CLAUDE.md`.
+
+**Không có dự đoán để kiểm.** Đây là quyết định phạm vi, không phải một phép
+thử. Ghi lại để phiên sau không tự ý mang việc sang GaRutin rồi tưởng là đang
+làm đúng.
+
+**Thứ KHÔNG bị dừng:** sự cố thật. Nếu GaRutin hỏng — trang chết, giá sai, mất
+dữ liệu — thì vẫn xử lý ngay, tạm dừng ở đây là tạm dừng việc PHÁT TRIỂN.
+
+---
+
 ## Dự đoán đã rút lại
 
 ### 15/09/2026 · "Kéo `gà rutin` về hạng 5 được ~100 nhấp"
