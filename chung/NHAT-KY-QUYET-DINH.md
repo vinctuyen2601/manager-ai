@@ -314,7 +314,59 @@ gptbot, claudebot, facebookexternalhit. Nay dùng chung một danh sách.
 
 Dấu hiệu số 3 là chốt an toàn. Sai ở đó thì cả thay đổi này là sai.
 
-**Kiểm ngày:** 29/09/2026 · **Trạng thái:** ⏳ chờ kiểm
+**Kiểm ngày:** 29/09/2026 · **Trạng thái:** ✅ đã kiểm 07/10/2026 (muộn 8 ngày)
+
+#### Kết quả — một đúng, một SAI, một không kết luận được
+
+**1. Nhóm iOS 13.2.3 — ĐÚNG, gần như tuyệt đối.**
+`soi-truc-tiep` không lọc theo ngày nên nó đếm toàn bộ lịch sử — và chính điều
+đó làm phép đo sạch: lúc ra quyết định 222 lượt / 212 khách, hôm nay 223 / 213.
+**Mười lăm ngày thêm đúng một lượt.** Nhóm đó đã tắt.
+
+**2. Tổng lượt trực tiếp — SAI, và sai ngược chiều.**
+
+| | lượt | khách | trang/khách |
+|---|---:|---:|---:|
+| 15–21/09 (trước) | 92 | 48 | 1,9 |
+| 22–28/09 (sau) | **181** | **12** | **15,1** |
+| 29/09–05/10 | 60 | 23 | 2,6 |
+
+Dự đoán giảm 50–75% **lượt**; thực tế lượt **tăng 97%**. Nhưng **khách** giảm
+đúng 75% — rơi trúng dải đã đoán, chỉ sai đơn vị.
+
+**3. Chốt an toàn — KHÔNG kết luận được, và phải nói thẳng là vậy.**
+
+```
+addToCart   8 → 5 → 2
+purchase    1 → 0 → 0
+viewProduct 43 → 32 → 38
+```
+
+Theo đúng luật tự đặt ("nếu chúng cũng giảm thì đã chặn nhầm người thật") thì
+chốt này đã kêu. Nhưng 8 so với 5 **không phải bằng chứng của bất cứ điều gì** —
+ở cỡ mẫu này nhiễu lớn hơn hiệu ứng. Tôi không được phép dùng nó để kết luận
+theo chiều nào. Luật đó đáng ra phải kèm một ngưỡng cỡ mẫu tối thiểu ngay từ
+lúc viết.
+
+#### Thứ học được, đắt hơn cả ba dự đoán
+
+**Bộ lọc gỡ đúng nửa SAI của đám rác.** Nó giết sạch 212 danh tính-một-trang —
+thứ thổi phồng số KHÁCH — nhưng để nguyên nhóm 13 máy quét sâu, thứ thổi phồng
+số LƯỢT. Số trang trên mỗi khách nhảy từ 1,9 lên 15,1 chính là dấu vân tay đó.
+
+Nói cách khác: điều kiện "có tương tác hoặc ở lại 15 giây" là hàng rào **đúng
+với bot lười, vô dụng với bot siêng**. Máy quét sâu đọc 42 trang thì đương
+nhiên vượt cả hai ngưỡng.
+
+Dự đoán 2 sai vì tôi gộp hai đám rác khác hẳn nhau vào một con số.
+
+**⚠ Nhiễu khi đọc lại các số trên:** bộ lọc Chrome-trên-Linux thêm ngày
+01/10/2026 áp NGƯỢC lên mọi khoảng ngày, nên con số hôm nay không bằng con số
+nhìn thấy nếu kiểm đúng hạn 29/09. Hai cột trước/sau chịu cùng một bộ lọc nên
+so sánh giữa chúng vẫn công bằng.
+
+**Việc đáng làm tiếp, CHƯA làm:** chặn nhóm quét sâu. Chưa đề xuất thành quyết
+định vì chưa đo được nó chiếm bao nhiêu phần trăm và có đụng khách thật không.
 
 **⚠ Mọi so sánh lưu lượng bắc qua ngày 22/09/2026 đều khập khiễng.** Định nghĩa
 "một lượt xem" đã đổi từ "trang được tải" sang "trang có người xem".
@@ -362,7 +414,18 @@ facebookexternalhit…), nay dùng chung một danh sách và thêm
 3. `purchase`, `add_to_cart`, `zalo_click` **KHÔNG đổi**. Đây là chốt an toàn:
    sai ở đây nghĩa là đã chặn nhầm người thật.
 
-**Kiểm ngày:** 29/09/2026 · **Trạng thái:** ⏳ chờ kiểm
+**Kiểm ngày:** 29/09/2026 · **Trạng thái:** ❌ KHÔNG kiểm được — 07/10/2026
+
+Thử kiểm cùng ngày với QĐ-12 nhưng tắc ở hai chỗ:
+
+- token quản trị GaRutin **hết hạn** (401)
+- endpoint `admin/analytics/funnel` **không tồn tại** bên GaRutin (404) — hai
+  backend đã trôi dạt, đúng cái hồ sơ vẫn cảnh báo. 17fishing có, GaRutin không.
+
+GaRutin đang tạm dừng (QĐ-15) nên không đáng mở lại chỉ để đóng một dự đoán.
+**Ghi là không kiểm được, KHÔNG ghi là đạt.** Nếu sau này mở lại shop thì bài
+học của QĐ-12 áp thẳng sang: đừng đo "tổng lượt", đo **trang trên mỗi khách** —
+đó mới là thứ tách bot lười khỏi bot siêng.
 
 **Việc còn treo, chưa làm:** bảng nguồn GaRutin không gom tên miền —
 `google.com` / `google` / `google.com.vn` nằm ba dòng riêng, `tiktok.com` và
