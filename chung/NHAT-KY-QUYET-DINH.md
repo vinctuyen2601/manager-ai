@@ -526,3 +526,75 @@ dữ liệu — thì vẫn xử lý ngay, tạm dừng ở đây là tạm dừn
 video, ảnh, mua sắm. Hạng 9,5 là trang hai, nơi CTR gần bằng không.
 **Bài học:** đừng đọc `position` của Search Console như thứ hạng trên trang một.
 Với ngách hẹp nó thường là trang hai.
+
+---
+
+### QĐ-16 · Phép thử một khối: vách rơi là do VỊ TRÍ hay do NỘI DUNG — 17fishing
+
+**Vì sao:** công cụ đo độ đọc chạy từ 01/10, tới 08/10 được 37 lượt trên 12
+sản phẩm. Bảng báo **10/12 sản phẩm rơi mạnh nhất ở `diem-manh`** — đọc qua
+thì tưởng khối đó viết dở và phải sửa nội dung cho cả mười trang.
+
+**Kiểm trước khi tin, và nó lật ngược:**
+
+```
+vị trí khối rơi mạnh nhất:  khối thứ 2 → 9 sản phẩm
+                            khối thứ 3 → 1
+                            khối thứ 4 → 1
+                            khối thứ 6 → 1
+```
+
+`diem-manh` là khối **thứ 2** ở 9/12 sản phẩm. Nó không bị bỏ vì dở — nó bị bỏ
+vì đứng ngay sau đầu trang. Đổ lỗi cho nội dung là sửa nhầm: khối mới sẽ ngồi
+đúng chỗ cũ và rơi y hệt.
+
+Đường cong trung bình theo VỊ TRÍ, không theo tên khối:
+
+```
+khối 1  95%   khối 4  26%   khối 7   7%
+khối 2  32%   khối 5  16%   khối 8   5%
+khối 3  38%   khối 6  17%
+```
+
+Hai phần ba người đọc biến mất ngay sau khối đầu. Và khối 3 **cao hơn** khối 2
+— người ta không rụng dần, họ **nhảy qua**.
+
+**Sản phẩm đem thử:** Phao điện cảm biến (9 lượt, nhiều nhất). Đường cong của
+riêng nó là một cái VÁCH chứ không phải dốc:
+
+```
+1 hero 100% · 2 qua-tang 78% · 3 combo 78% · 4 diem-manh 0% · 5–11 đều 0%
+```
+
+Bảy trong chín người qua khối 2–3 rồi **không một ai** tới khối 4. Hai khối
+78% bằng nhau và nằm cạnh nhau, trung vị 15 giây — nhiều khả năng chúng lọt
+CHUNG MỘT MÀN HÌNH ngay dưới đầu trang, còn khối 4 là chỗ đầu tiên đòi cuộn
+thật.
+
+**Đã làm:** hoán vị `thong-so` lên vị trí 4, đẩy `diem-manh` xuống vị trí 6.
+Chỉ một sản phẩm, chỉ một hoán vị, lùi lại được.
+
+Chọn Bảng thông số vì ngách này mua theo thông số — nếu có khối nào giữ được
+người qua vách thì là nó.
+
+**Vì sao KHÔNG đảo lên vị trí 2 như đề xuất ban đầu:** vị trí 2 là chỗ "miễn
+phí", nó nằm trong cùng màn hình với đầu trang nên khối nào đặt vào cũng được
+đọc. Thử ở đó không tách được gì.
+
+**Dự đoán, kiểm ngày 22/10/2026** (14 ngày, ~1,3 lượt/ngày nên sẽ có thêm
+chừng 18 lượt, tổng ~27 — mỏng, nhưng dự đoán là nhị phân nên đủ):
+
+1. `thong-so` ở vị trí 4 **đọc > 0%** → vách là do NỘI DUNG; `diem-manh` thật
+   sự là khâu yếu, và việc đáng làm là viết lại nó ở 10 trang.
+2. `thong-so` ở vị trí 4 vẫn **~0%** → vách là do VỊ TRÍ; không khối nào cứu
+   được chỗ đó, và việc đáng làm là **rút ngắn phần trên** chứ không phải sửa
+   khối nào.
+
+Dự đoán 2 là kết quả tôi cho là dễ xảy ra hơn. Nếu đúng thì nó bác luôn cách
+đọc hiển nhiên của bảng, và tiết kiệm công viết lại mười khối.
+
+**⚠ Nhiễu đã biết:** chỉ một sản phẩm, ~27 lượt. Không suy ra cho 11 sản phẩm
+còn lại từ một phép thử này — nó chỉ tách được hai giả thuyết, không đo được
+độ lớn.
+
+**Kiểm ngày:** 22/10/2026 · **Trạng thái:** ⏳ chờ kiểm
