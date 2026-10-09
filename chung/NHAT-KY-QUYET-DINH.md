@@ -632,3 +632,102 @@ Thứ còn lại là lời khách kể qua Zalo — "thấy trên web ghi có gi
 bằng chứng của con người, không phải của bảng, và chỉ chủ shop mới nghe được.
 
 **Kiểm ngày:** — · **Trạng thái:** ⚪ không có chỉ số để kiểm
+
+---
+
+## QĐ-18 · 09/10/2026 · 17fishing: hai bài cho máy câu và ghế câu
+
+**Chủ shop yêu cầu "viết 1,2 bài để gg biết site vẫn hoạt động".** Bài mới nhất
+lúc đó là 21/09, cách 18 ngày.
+
+**Chọn 17fishing chứ không GaRutin:** token admin GaRutin vẫn 401, và hồ sơ
+hàng đợi đã chốt "GaRutin không viết mới" sau hai lần thí nghiệm bài theo tỉnh
+thất bại.
+
+### Phát hiện khi chọn chủ đề: blog lệch hẳn so với kho hàng
+
+Đếm bài theo danh mục bằng so khớp TẬP TỪ trên 94 bài:
+
+| danh mục | sản phẩm | khoảng giá | số bài |
+|---|---|---|---|
+| phao | 3 | 80–120k | **19** |
+| máy câu | **4** | 750k–1,75tr | 3 (chỉ 1 nói đúng về máy) |
+| ghế câu | 2 | 1,55–3,85tr | **0** |
+| cước, cần lăng xê, túi | 3 | 150k–1,19tr | 0 |
+
+Blog dày nhất ở món rẻ nhất và trống ở món đắt nhất. Ba năm viết bài đã đi
+theo chủ đề kỹ thuật, không theo kho hàng.
+
+### Đã BỎ cụm từ khoá lớn nhất, có lý do
+
+`vung-trang` xếp cụm `cần câu tay ... giá rẻ` cao nhất (7 truy vấn, điểm 13).
+Bỏ hẳn: **trong 14 sản phẩm không có cái nào là cần câu tay.** Shop bán cần
+lăng xê, cần lục, cần săn hàng. Đây đúng là bẫy "trứng gà rutin" đã ghi ở
+`HANG-DOI-BAI-Y-DINH-MUA.md`.
+
+### Phép kiểm trước khi viết
+
+`POST /admin/keywords/doi-thu`, cả ba đều `voi-toi-duoc`:
+
+- `máy câu cá loại nào tốt` — 8/10 trang shop và blog, **0 sàn**
+- `cách chọn máy câu cá` — 6 blog, **0 sàn**
+- `ghế câu cá loại nào tốt` — 6 shop, 1 sàn
+
+Khác hẳn cụm "mua X" đo ngày 18/09 (1/35 kết quả là blog). Ba truy vấn này
+Google TRẢ bài viết, nên định dạng blog đúng chỗ.
+
+### Hai bài đã đăng
+
+- `may-cau-ca-loai-nao-tot-co-may-luc-ham-khoi-luong` — 796 từ
+- `ghe-cau-ca-loai-nao-tot-chon-theo-bo-cau` — 593 từ
+
+Số đo lúc đăng: 15/15 liên kết nội bộ sống · **0 tật giọng AI** trên cả hai
+(nền 6 bài gần nhất: 8,1–24,9 tật/1000 từ) · câu TB 18,5 và 16,0 từ · mọi
+thông số lấy từ bảng `thong-so` của sản phẩm trên production.
+
+Đã thêm liên kết VÀO từ 3 bài cũ theo luật "mỗi bài mới phải có bài cũ trỏ
+tới": `can-cau-may-khac-can-cau-tay-the-nao`,
+`bi-quyet-cau-ca-lon-san-hang-o-ho-rong`,
+`mot-so-thong-tin-huu-ich-ve-may-cau-ikada`.
+
+### Dự đoán, kiểm ngày 08/11/2026
+
+Đo bằng **`gsc-trang`**, không bằng bảng từ khoá (bảng từ khoá chỉ thấy ~8%).
+
+1. **Ít nhất một trong hai bài có hiển thị > 0.** Nếu đúng, định dạng blog
+   dùng được cho truy vấn "X loại nào tốt", khác với "mua X".
+2. **Cả hai = 0 sau 30 ngày** → củng cố kết luận 18/09: dồn sức vào nội dung
+   TRANG DANH MỤC, thôi viết bài mới cho truy vấn có ý định mua.
+
+Tôi cho khả năng 1 cao hơn, vì SERP của ba truy vấn này không có sàn chiếm
+chỗ, khác hẳn cụm "mua X".
+
+**⚠ Nhiễu đã biết:** bài mới thường cần hơn 30 ngày để có thứ hạng ổn định.
+Hiển thị 0 ở mốc 30 ngày chưa chứng minh bài hỏng, nó chỉ chưa chứng minh bài
+chạy. Nếu kết quả là 0 thì gia hạn tới 08/12 trước khi kết luận.
+
+**Kiểm ngày:** 08/11/2026 · **Trạng thái:** ⏳ chờ kiểm
+
+---
+
+## Việc đáng làm hơn, phát hiện cùng ngày — giá cũ trong bài
+
+Dò chuỗi giá trong 94 bài rồi đối chiếu với giá hiện tại trên production:
+
+| bài đang ghi | giá thật | số bài dính |
+|---|---|---|
+| Chuanze X Master 99.000đ | **120.000đ** | **24** |
+| Phao điện LED 85.000đ | **110.000đ** | 9 |
+| DG Tokushima 2.350.000đ | **1.750.000đ** | 3 |
+| Ngọc Liên Sơn 70.000đ | 80.000đ | 1 |
+
+Đã mở 6 chỗ ghi "99.000đ" để xác minh: cả 6 đều đang nói về Chuanze X Master,
+không phải món khác trùng số.
+
+Khách đọc bài thấy 99.000đ rồi bấm sang trang sản phẩm thấy 120.000đ. Một
+phần tư số bài đang làm việc đó. Đã nêu với chủ shop 09/10, **chưa được duyệt
+sửa.**
+
+Bài học hệ thống: **giá viết cứng trong bài là nợ.** Mỗi lần đổi giá sản phẩm
+là một lần cả blog nói sai. Cân nhắc một khối giá động cho bài viết, hoặc một
+phép kiểm định kỳ như phép dò này trong `NHIP-LAM-VIEC.md`.
