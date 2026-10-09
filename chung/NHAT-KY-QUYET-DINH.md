@@ -598,3 +598,37 @@ còn lại từ một phép thử này — nó chỉ tách được hai giả th
 độ lớn.
 
 **Kiểm ngày:** 22/10/2026 · **Trạng thái:** ⏳ chờ kiểm
+
+---
+
+## QĐ-17 · 09/10/2026 · GaRutin: lối liên hệ lấy sỉ ở trang chủ và trang sản phẩm
+
+**Chủ shop yêu cầu trực tiếp.** Lý do nêu ra: "nếu như có người muốn mua nhiều
+hơn thì không có lựa chọn".
+
+Đúng — trang chỉ bày combo cố định (cặp, bộ ba…). Khách muốn lấy chục con hay
+lấy buôn thì không có ô nào chọn, và cũng không có chữ nào nói trại bán được.
+Họ im lặng rời đi và trại không bao giờ biết đã mất ai.
+
+**Đã làm:** một component dùng chung `MuaSiCTA` (GaRutinWeb), đặt ngay dưới
+danh sách combo ở `/san-pham` và ngay dưới lưới sản phẩm ở trang chủ. Hai nút
+`tel:` và `zalo.me` lấy số thật từ `layLienHe()`. Đẩy xuống chân trang thì
+khách đã rời đi trước khi thấy.
+
+Một chỗ dùng chung chứ không viết hai bản: lời chào mua sỉ viết hai nơi thì
+sớm muộn hai trang hứa hai kiểu.
+
+**Việc này mở lại GaRutin, vốn đã tạm dừng theo QĐ-15 (01/10).** Mở lại theo
+yêu cầu của chủ shop, không phải sáng kiến của tôi. Phạm vi hẹp: một khối chữ,
+không phải quay lại làm nội dung.
+
+**KHÔNG CÓ DỰ ĐOÁN KIỂM ĐƯỢC — ghi rõ ở đây thay vì giả vờ có.**
+
+Số duy nhất đo được việc này là lượt bấm Zalo/điện thoại. Chủ shop đã **gạt
+chỉ số đó ngày 01/10** ở 17fishing; sự kiện vẫn được ghi nhưng không dựng báo
+cáo trên nó. Tôi không đề xuất lại.
+
+Thứ còn lại là lời khách kể qua Zalo — "thấy trên web ghi có giá sỉ". Đó là
+bằng chứng của con người, không phải của bảng, và chỉ chủ shop mới nghe được.
+
+**Kiểm ngày:** — · **Trạng thái:** ⚪ không có chỉ số để kiểm
