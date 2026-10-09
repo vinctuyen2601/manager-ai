@@ -4,10 +4,18 @@
 
 ---
 
-## 0. TẠM DỪNG — chủ shop chốt 01/10/2026
+## 0. ĐÃ MỞ LẠI — 09/10/2026
 
-> **GaRutin tạm thời KHÔNG cập nhật gì thêm.** Mọi công sức đang dồn cho
-> 17fishing. Đừng tự khởi động việc gì ở đây, kể cả việc "chỉ mất năm phút".
+> Lệnh tạm dừng ngày 01/10 **đã hết hiệu lực**. Trong ngày 09/10 chủ shop giao
+> hai việc cho GaRutin: thêm lối liên hệ mua sỉ (QĐ-17), rồi viết bài mới
+> (QĐ-19). Token admin cũng được cấp lại, hết hạn **06/11/2026**.
+>
+> Vẫn giữ tinh thần cũ: **đừng tự khởi động việc gì ở đây.** Trọng tâm vẫn là
+> 17fishing. GaRutin chỉ làm khi chủ shop giao.
+
+Nguyên văn lệnh tạm dừng cũ, giữ lại để hiểu vì sao bảng dưới trống:
+*"GaRutin tạm thời KHÔNG cập nhật gì thêm. Mọi công sức đang dồn cho
+17fishing."*
 
 Những thứ cố ý **không** mang sang, để lần sau khỏi tưởng là bỏ sót:
 

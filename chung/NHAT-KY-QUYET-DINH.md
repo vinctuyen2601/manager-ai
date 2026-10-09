@@ -731,3 +731,91 @@ sửa.**
 Bài học hệ thống: **giá viết cứng trong bài là nợ.** Mỗi lần đổi giá sản phẩm
 là một lần cả blog nói sai. Cân nhắc một khối giá động cho bài viết, hoặc một
 phép kiểm định kỳ như phép dò này trong `NHIP-LAM-VIEC.md`.
+
+---
+
+## QĐ-19 · 09/10/2026 · GaRutin: hai bài, và một phát hiện lớn hơn hai bài
+
+Chủ shop cấp lại token GaRutin (hết hạn 06/11/2026) và giao viết bài cho
+những vùng trắng.
+
+### 🔴 PHÁT HIỆN QUAN TRỌNG NHẤT: ngách gà rutin là ngách VIDEO
+
+Chạy `doi-thu` trên 12 truy vấn thuộc 6 cụm vùng trắng. Kết quả:
+
+| truy vấn | kết luận | ai chiếm trang một |
+|---|---|---|
+| cách ấp trứng gà rutin | kho-voi-toi | 5 mạng xã hội |
+| chuồng gà rutin tự chế | kho-voi-toi | 5 mạng xã hội |
+| gà rutin có bay được không | kho-voi-toi | 6 mạng xã hội |
+| gà rutin ngũ sắc giá bao nhiêu | kho-voi-toi | 5 mạng xã hội |
+| kích thước chuồng nuôi gà rutin | kho-voi-toi | 4 mxh + 2 sàn |
+| lót chuồng gà rutin bằng gì | kho-voi-toi | 5 mxh + 2 sàn |
+| gà rutin gáy là trống hay mái | kho-voi-toi | **7 mạng xã hội** |
+| gà rutin có ăn rau không | kho-voi-toi | 5 mạng xã hội |
+| nuôi gà rutin thả vườn | kho-voi-toi | 6 mạng xã hội |
+| gà rutin mổ đầu nhau | kho-voi-toi | 6 mạng xã hội |
+| **tại sao gà rutin mổ nhau** | **voi-toi-duoc** | 5 shop/thú y |
+| **gà rutin có các màu gì** | **voi-toi-duoc** | 6 trang web |
+
+**9 trên 12 truy vấn do TikTok, YouTube và Facebook chiếm trang một.**
+
+Đây là lời giải thích cho một câu hỏi cũ: vì sao GaRutin có 52 bài mà phần
+lớn không ai đọc. Không phải vì bài dở. Người tìm "gà rutin ..." muốn xem
+VIDEO, và Google đưa đúng thứ họ muốn.
+
+**Hệ quả cho chiến lược:** viết thêm bài blog cho GaRutin là đánh sai định
+dạng, giống hệt bài học "mua X" ở 17fishing ngày 18/09 nhưng nặng hơn. Nếu
+muốn giành lại các cụm này thì phải quay video, không phải viết bài.
+
+Đây là việc của chủ shop, không phải của tôi. Tôi chỉ ghi lại bằng chứng.
+
+### Blog GaRutin đã DÀY, không phải trống
+
+Bài `ga-rutin-50-cau-hoi-thuong-gap` (15/06/2026, 2.577 từ) đã phủ 50 câu,
+gồm kích thước chuồng, chất độn, thức ăn, nhiệt độ, giá, mua ở đâu. Nhiều
+"vùng trắng" trong bảng thật ra đã được trả lời ở đó bằng một dòng.
+
+**Quy tắc rút ra:** trước khi đẻ bài mới cho GaRutin, đọc bài 50 câu hỏi
+trước. Thiếu câu nào thì **bổ sung vào bài đó**, đừng tách bài mới rồi tự
+cạnh tranh với chính mình.
+
+### Hai bài đã đăng — đúng hai truy vấn qua được phép kiểm
+
+- `tai-sao-ga-rutin-mo-nhau` — 740 từ. Trang một không có bài nào riêng cho
+  gà rutin, toàn trang thú y nói về gà nói chung (mebipha, hoinuoiga,
+  vemedim). Trại viết bản riêng cho rutin thì thắng được.
+- `ga-rutin-co-nhung-mau-nao` — 486 từ, **14 màu đang bán kèm giá thật**, 27
+  liên kết sản phẩm. Truy vấn `Gà rutin có các màu gì` đã có hiển thị thật
+  trong `hang-dau`. Đối thủ không chép được vì đây là kho hàng thật của trại.
+
+Số đo lúc đăng: 29/29 liên kết nội bộ sống · **0 tật giọng AI** cả hai (nền 6
+bài GaRutin gần nhất: 0–10,9) · câu TB 18,0 và 20,2 từ.
+
+Thêm liên kết VÀO từ 5 bài cũ: `ga-rutin-rung-long`,
+`mai-mo-ga-rutin-an-toan`, `ga-rutin-mau-trang`, `ga-rutin-mau-den-…`,
+`ga-rutin-50-cau-hoi-thuong-gap`.
+
+**Ghi chú kỹ thuật:** backend GaRutin tự chạy `noiNoiBo` khi lưu, nên nội
+dung trả về DÀI HƠN nội dung gửi lên (thêm thẻ `<a>`). Đã kiểm bằng diff:
+không mất chữ nào. Đừng tưởng là hỏng.
+
+### Dự đoán, kiểm ngày 08/11/2026
+
+1. `ga-rutin-co-nhung-mau-nao` **có hiển thị > 0** (đo bằng `gsc-trang`). Truy
+   vấn gốc đã có hiển thị sẵn, nên bài này chỉ cần nhận lại phần đang có.
+2. `tai-sao-ga-rutin-mo-nhau` là phép thử thật: cụm này hoàn toàn mới.
+
+Nếu cả hai đều 0 thì cộng với bảng 9/12 ở trên là đủ bằng chứng để **ngừng
+viết blog cho GaRutin** và nói thẳng với chủ shop rằng ngách này phải đánh
+bằng video.
+
+**Kiểm ngày:** 08/11/2026 · **Trạng thái:** ⏳ chờ kiểm
+
+### Hai lỗi dữ liệu thấy khi làm, chưa sửa
+
+- **Hai sản phẩm trùng tên "Mái vàng"**, cùng giá 100.000đ, hai slug khác
+  nhau (`mai-vang-ga-rutin` và `mai-vang-ga-rutin-cho-trung`). Bài mới chỉ
+  dẫn tới một cái. Cần chủ shop nói cái kia là gì.
+- **Slug sai nghĩa:** sản phẩm "Trống đen" nằm ở `/san-pham/trung-cut-trong-den`.
+  Đổi slug là mất thứ hạng cũ, nên để nguyên, chỉ ghi lại.
