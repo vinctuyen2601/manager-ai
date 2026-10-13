@@ -219,3 +219,30 @@ bước thanh toán.
 của cả ba thanh. Nhớ `scrollIntoView` rồi **chờ ~1,2 giây mới lấy toạ độ**;
 lấy toạ độ ngay sau lệnh cuộn thì bấm trượt và trạng thái không đổi, trông y
 như trang bị liệt.
+
+---
+
+## Ẩn nút mua của theme thì nhớ THANH DÍNH vẫn dùng ô số lượng đó
+
+Cùng ngày 13/10/2026, ngay sau khi vá giá món bán kèm. Khối bundle ẩn ô số
+lượng và nút mua của theme, nhưng **thanh dính ở đáy màn hình thì vẫn hiện**
+— và nó đọc số lượng từ đúng ô vừa bị ẩn.
+
+Đo: chọn **Buy 3**, thanh dính vẫn ghi `Add to cart (1)`, bấm vào chỉ thêm
+**1 cái** vào giỏ. Khách tưởng đã mua ba.
+
+Hỏng lặng lẽ và ở chỗ khó thấy nhất: lúc dựng thì cuộn quanh khối bundle, mà
+thanh dính chỉ hiện khi đã cuộn qua nút mua. Không có lỗi, không có cảnh báo,
+chỉ có đơn ít hơn khách định mua.
+
+Cách vá: khi chọn gói thì đẩy số lượng sang ô của theme **và bắn sự kiện**
+`quantity-selector:update`. Thanh dính nghe sự kiện chứ không đọc lại ô nhập,
+nên đặt `value` thôi là chưa đủ.
+
+Và phải dùng `Event` trần rồi gán `.detail`, đúng như `assets/events.js` của
+Horizon làm. `CustomEvent` để `detail` ở chỗ khác, thanh dính đọc ra
+`undefined`.
+
+**Quy tắc:** ẩn một điều khiển của theme thì đi tìm xem **còn ai đang đọc
+nó**. `grep` tên trường (`quantity`) trong `assets/` trước khi tin là đã ẩn
+xong.
