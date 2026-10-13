@@ -35,6 +35,11 @@ bash ~/.shopify-lam-moi-token.sh     # ghi vào ~/.shopify-store-admin-token
 | `kiemchay.mjs <url>` | ba dải trượt có tự chạy không |
 | `taifile.mjs <tệp...>` | tải ảnh lên Shopify Files |
 | `taivideo.mjs` | tải video lên Files để Shopify tự chuyển mã H.264 |
+| `soLive.sh <repo> <tệp...>` | **chạy trước MỌI push**: so tệp trên theme live với repo, dừng nếu chủ shop đã sửa trong trình soạn theme |
+
+Trên Windows: Chrome chạy bằng
+`"/c/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --remote-debugging-port=9333 --user-data-dir=<thư mục tạm>`
+thay cho `google-chrome` + `setsid`.
 
 ## Hai phép kiểm phải chạy sau MỌI thay đổi trong hộp mua
 

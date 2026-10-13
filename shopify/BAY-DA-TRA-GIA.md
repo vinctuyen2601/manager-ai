@@ -398,6 +398,39 @@ lấy toạ độ để bấm".
 
 ---
 
+## 🔴 Kéo-so trước khi push mà KHÔNG dừng khi thấy khác = vẫn ghi đè
+
+Trả giá 14/10/2026. Chuỗi lệnh đã dùng cả ngày:
+
+```
+git stash → theme pull --only X → git diff --stat → git checkout -- . → stash pop → push
+```
+
+`git diff --stat` **có in** `header-group.json | 7 ++++---` — chủ shop đã sửa
+header trong trình soạn theme. Nhưng chuỗi lệnh vẫn chạy tiếp: `git checkout`
+xoá bản live vừa kéo về, rồi push đè lên. Thay đổi đó mất, không đọc lại
+được (chỉ còn **Admin → Edit code → Older versions**). Phép kiểm có báo, chỉ
+là không ai dừng lại nghe.
+
+Ngay sau đó dùng cách mới thì bắt được thêm một ca thật: chủ shop sửa
+`product.json` ("Loved by 1000+" → "500+") — lần này kịp đưa vào repo.
+
+**Luật: trước MỌI push, chạy `do/soLive.sh`:**
+
+```bash
+bash shopify/do/soLive.sh "<repo theme>" <tệp> [tệp...]
+```
+
+Nó kéo bản live vào thư mục TẠM riêng, bỏ khối chú thích "auto-generated"
+mà Shopify tự gắn, so với repo, và **exit 1** nếu khác — in diff, giữ nguyên
+bản live để đọc. Khác thì đưa thay đổi của chủ shop vào repo TRƯỚC, push SAU.
+
+Trình soạn theme hay "chuẩn hoá" tệp khi lưu (thêm `blocks: {}` rỗng, thêm
+giá trị mặc định cho mọi thiết lập) — vài trăm dòng khác mà chỉ một dòng là
+sửa thật. Lọc riêng `DOI` (đổi giá trị) và `BO` (bỏ) để thấy thay đổi thật.
+
+---
+
 ## Chèn thành phần dùng chung thì dò xem chỗ đó đã có bản riêng chưa
 
 13/10/2026: `tu-truot.js` được dạy tự chèn hàng chấm `.truot-cham` cho mọi

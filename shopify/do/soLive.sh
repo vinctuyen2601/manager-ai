@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+# So tep tren theme LIVE voi ban trong repo TRUOC khi push. Dung lai (exit 1)
+# neu khac — KHONG bao gio tu bo ban live.
+#
+#   bash soLive.sh <thu-muc-repo-theme> <tep> [tep...]
+#   vd: bash soLive.sh "/d/my project/shop-christmasspin" sections/header-group.json assets/custom.css
+#
+# VI SAO CO TEP NAY: ngay 14/10/2026 cach lam cu la
+#   git stash -> theme pull -> git diff --stat -> git checkout -- . -> stash pop
+# Lenh `git diff --stat` CO in ra "header-group.json | 7 ++++---" — tuc la chu
+# shop da sua header trong trinh soan theme — nhung chuoi lenh van chay tiep,
+# `git checkout` xoa ban live vua keo ve, roi push de len. Mat thay doi do,
+# khong doc lai duoc. Phep kiem co bao, chi la khong ai dung lai nghe.
+#
+# Keo vao thu muc TAM rieng nen ban live con nguyen de doc, va so sanh bo qua
+# CRLF (git tren Windows doi dau dong, khong phai thay doi that).
+set -u
+REPO="$1"; shift
+TAM="$(mktemp -d)"
+cp "$REPO/shopify.theme.toml" "$TAM/" 2>/dev/null
+# Shopify CLI ban Windows khong doc duoc duong dan /tmp cua Git Bash — doi
+# sang dang Windows neu co cygpath. `--force` vi pull vao thu muc rong thi
+# CLI khong nhan ra la thu muc theme (bay da ghi trong BAY-DA-TRA-GIA.md).
+DICH="$TAM"; command -v cygpath >/dev/null && DICH="$(cygpath -w "$TAM")"
+ARGS=(); for f in "$@"; do ARGS+=(--only "$f"); done
+( cd "$TAM" && shopify theme pull -e live --no-input --force "${ARGS[@]}" --path "$DICH" >/dev/null 2>&1 )
+# Shopify tu gan khoi chu thich "IMPORTANT: ... auto-generated" vao dau tep
+# JSON sau moi lan ghi. Khong phai thay doi cua ai — bo no o CA HAI ve truoc
+# khi so, neu khong lan nao cung bao do gia.
+boChuThich() { sed '1{/^\/\*/!b};1,/\*\//{/^\/\*/,/\*\//d}' "$1" | tr -d '\r'; }
+KHAC=0
+for f in "$@"; do
+  if [ ! -f "$TAM/$f" ]; then echo "?? $f: khong keo duoc tu live"; KHAC=1; continue; fi
+  if ! diff -q <(boChuThich "$REPO/$f") <(boChuThich "$TAM/$f") >/dev/null 2>&1; then
+    echo "!! $f KHAC tren live:"
+    diff <(boChuThich "$REPO/$f") <(boChuThich "$TAM/$f") | head -40
+    KHAC=1
+  else
+    echo "ok $f"
+  fi
+done
+if [ "$KHAC" = 1 ]; then
+  echo
+  echo "DUNG LAI. Ban live giu o: $TAM"
+  echo "Doc diff o tren, dua thay doi cua chu shop vao repo, roi moi push."
+  exit 1
+fi
+rm -rf "$TAM"
