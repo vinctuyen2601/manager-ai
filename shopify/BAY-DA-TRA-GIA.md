@@ -246,3 +246,47 @@ Horizon làm. `CustomEvent` để `detail` ở chỗ khác, thanh dính đọc r
 **Quy tắc:** ẩn một điều khiển của theme thì đi tìm xem **còn ai đang đọc
 nó**. `grep` tên trường (`quantity`) trong `assets/` trước khi tin là đã ẩn
 xong.
+
+---
+
+## Horizon: `group` không in id ra class, và `mobile-column` đổi panel sang `display: grid`
+
+Ngày 13/10/2026, khi biến ba khối thành dải trượt ngang. Hai bẫy nối nhau.
+
+**Bẫy 1 — không có selector để trỏ vào một nhóm.** Text block in id ra class
+(`text-block--AdFRTVkpvTkV6clR0a__eb1`), nên `[class*="__eb1"]` bắt được.
+Nhưng `group` thì **không**: nó chỉ có
+`group-block group-block--height-fit group-block--width-fill …`. Id của nhóm
+cũng không nằm trong HTML dưới bất kỳ dạng nào — đã `grep` cả trang.
+
+Cách đi vòng: bắt qua text block con bằng `:has()`.
+
+```css
+.group-block-content:has(> .group-block [class*="__s1n"]) { … }
+```
+
+Đừng bắt theo `:nth-child` — vỡ ngay lần đầu chủ shop kéo thả lại thứ tự.
+
+**Bẫy 2 — `flex-direction` đúng mà vẫn xếp dọc.** Lớp `mobile-column` chuyển
+panel sang **`display: grid`** một cột ở màn hình nhỏ. Lúc đó:
+
+- biến `--flex-direction` là `row` ✓
+- `flex-direction` tính ra `row` ✓
+- mỗi thẻ nhận `flex: 0 0 86%` ✓
+- **ba thẻ vẫn xếp dọc**, vì trong lưới thì cả hai thuộc tính đó vô nghĩa
+
+Soi computed style từng thuộc tính thì không thấy gì sai cả — mọi thứ đều
+đúng như mình đặt. Phải nhìn `display` trước mới vỡ ra.
+
+**Quy tắc:** trước khi chỉnh `flex-*`, in `display` ra trước. Và khi một thuộc
+tính "đã đặt đúng mà không có tác dụng", hỏi xem **mô hình bố cục có còn là
+cái mình tưởng không**, đừng tăng độ ưu tiên selector.
+
+**Bẫy 3 — hộp cuộn được mà căn giữa thì mở ra đã nằm giữa dải.** Nhóm đang
+`justify-content: center`; nội dung tràn thì tràn **đều hai bên**, nên
+`scrollLeft` ban đầu nằm ở giữa. Khách mở trang thấy thẻ thứ hai và hai mảnh
+cắt hai bên — trông như vỡ giao diện. Đo được: thẻ đầu ở `x = -277`.
+Phải ép `justify-content: flex-start`.
+
+Nhớ thêm: biến `--flex-direction` nằm **thẳng trong thuộc tính `style`** của
+thẻ, nên mọi thứ đè lên nó đều cần `!important`.
