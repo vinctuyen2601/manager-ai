@@ -160,3 +160,62 @@ những thứ phép đo không với tới — cơ chế dựng, tên biến, gi
 
 `getComputedStyle` vẫn cần, nhưng để **kiểm lại sau khi áp**, không phải để
 dò từ đầu.
+
+---
+
+## Trong Liquid, `assign` KHÔNG đè được biến của vòng `for`
+
+Ngày 13/10/2026, dòng quà tặng trong `bundle-picker.liquid`:
+
+```liquid
+{%- for g in qua -%}
+  {%- liquid
+    assign dau = g | slice: 0
+    if dau == '*'
+      assign nhan_qua = true
+      assign g = g | remove_first: '*' | strip   # KHÔNG ăn
+    endif
+  -%}
+  {{ g }}   {# vẫn in ra "*Christmas Music Disc Set" #}
+```
+
+Biến vòng lặp nằm ở **phạm vi con** và che biến cùng tên do `assign` tạo ra,
+nên `assign g` ghi một chỗ mà `{{ g }}` đọc một chỗ khác.
+
+Độc ở chỗ **hỏng một nửa**: `nhan_qua` là tên mới nên chạy đúng, dấu `*` vẫn
+còn. Ra kết quả `+ 1x *Christmas Music Disc Set` — logic đúng, chữ sai, không
+có lỗi nào được ném.
+
+**Quy tắc:** trong thân `for`, muốn sửa giá trị thì gán sang **tên khác**.
+
+---
+
+## Giá món bán kèm trong bundle phải nhân theo gói — và không phải món nào cũng nhân
+
+Ngày 13/10/2026 chủ shop báo "chọn bundle thì giá không được cập nhật". Đo
+cả hai trang bằng CDP, chọn lần lượt ba gói rồi đọc `innerText` của từng
+thanh — chênh lệch hiện ra ngay:
+
+| Buy 2 | mẫu | của tôi (lúc lỗi) |
+|---|---|---|
+| Priority Shipping | `+ Priority Shipping` · 159.000₫ | `+ 2x` · $6.00 |
+| Christmas Mystery Gift | `+ 2x` · 1.058.000₫ (=529×2) | `+ 2x` · $20.00 |
+| Lifetime Warranty | `+ 2x` · 528.000₫ (=264×2) | `+ 2x` · $10.00 |
+
+Hai điều học được:
+
+1. **Nhãn ghi "2x" mà giá là giá một cái** — khách cộng nhẩm ra số khác số
+   trên nút. Giá phải nhân cùng lúc với nhãn, cùng một biến.
+2. **Không nhân đều.** Mẫu để Priority Shipping luôn 1 suất (một đơn giao một
+   lần), còn quà và bảo hành thì nhân. Dòng quà cũng thế: `+ 2x Christmas
+   Music Disc Set (FREE)` nhưng `+ 180 Day Warranty (FREE)` không có "2x".
+
+Nay mỗi món bán kèm có ô `upsellN_nhan`, dòng quà đánh dấu bằng `*` đầu dòng.
+Số lượng gửi lên `/cart/add.js` đọc từ `data-sl` do Liquid tính sẵn, **không
+tính lại trong JS** — tính hai nơi thì sớm muộn lệch, và khách chỉ thấy ở
+bước thanh toán.
+
+**Cách đo lại:** `scratchpad/dochu.mjs` — chọn từng gói rồi in `innerText`
+của cả ba thanh. Nhớ `scrollIntoView` rồi **chờ ~1,2 giây mới lấy toạ độ**;
+lấy toạ độ ngay sau lệnh cuộn thì bấm trượt và trạng thái không đổi, trông y
+như trang bị liệt.
