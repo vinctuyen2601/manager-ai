@@ -27,13 +27,17 @@ ARGS=(); for f in "$@"; do ARGS+=(--only "$f"); done
 # Shopify tu gan khoi chu thich "IMPORTANT: ... auto-generated" vao dau tep
 # JSON sau moi lan ghi. Khong phai thay doi cua ai — bo no o CA HAI ve truoc
 # khi so, neu khong lan nao cung bao do gia.
-boChuThich() { sed '1{/^\/\*/!b};1,/\*\//{/^\/\*/,/\*\//d}' "$1" | tr -d '\r'; }
+boChuThich() { sed '1{/^\/\*/!b};1,/\*\//{/^\/\*/,/\*\//d}' | tr -d '\r'; }
+# So voi ban DA COMMIT (HEAD), khong phai thu muc lam viec: thu muc lam viec
+# dang chua chinh sua sap push, so voi no thi lan nao cung bao do — chinh
+# minh tu bao dong gia ve viec minh dang lam (do 14/10/2026).
+banRepo() { git -C "$REPO" show "HEAD:$1" 2>/dev/null | boChuThich; }
 KHAC=0
 for f in "$@"; do
   if [ ! -f "$TAM/$f" ]; then echo "?? $f: khong keo duoc tu live"; KHAC=1; continue; fi
-  if ! diff -q <(boChuThich "$REPO/$f") <(boChuThich "$TAM/$f") >/dev/null 2>&1; then
-    echo "!! $f KHAC tren live:"
-    diff <(boChuThich "$REPO/$f") <(boChuThich "$TAM/$f") | head -40
+  if ! diff -q <(banRepo "$f") <(boChuThich < "$TAM/$f") >/dev/null 2>&1; then
+    echo "!! $f KHAC tren live (so voi HEAD):"
+    diff <(banRepo "$f") <(boChuThich < "$TAM/$f") | head -40
     KHAC=1
   else
     echo "ok $f"
