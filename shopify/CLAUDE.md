@@ -8,34 +8,32 @@ Tài sản thứ ba, bắt đầu 13/10/2026. Hai tệp cùng thư mục:
 
 ---
 
-## 0. QUYỀN PUBLISH — chủ shop chốt 13/10/2026
+## 0. QUYỀN PUBLISH — chủ shop nới rộng 13/10/2026
 
-> **Store còn khoá mật khẩu → publish thẳng, KHÔNG hỏi.**
-> **Store đã mở bán → đẩy lên theme chưa xuất bản, đưa link xem trước, chờ
-> chủ shop gật rồi mới publish.**
+> **Store chưa bán thật → publish thẳng, KHÔNG hỏi.**
+> **Store đã bán thật → đẩy lên theme chưa xuất bản, đưa link xem trước,
+> chờ chủ shop gật rồi mới publish.**
 
-Nguyên văn chủ shop: *"Khi store còn khoá mật khẩu — tôi publish thẳng,
-không hỏi. Không ai thấy, hỏi chỉ tốn thời gian của anh. OK nhé"*
+Nguyên văn: *"bạn tự publish đi nhé, chưa lên online thì cứ thoải mái mà
+host nhé"*
 
-**Vì sao:** đây là ngoại lệ có chủ đích cho luật "mọi thứ gửi ra ngoài phải
-hỏi trước" ở `CLAUDE.md` gốc. Khoá mật khẩu bật thì mặt tiền trả 302 về
-`/password`, không một người lạ nào xem được, nên publish lúc đó không phải
-là "gửi ra ngoài" — nó chỉ là đổi bản dựng mà chính chủ shop đang xem.
+**Mốc này đã đổi một lần trong cùng ngày, đọc kỹ.** Bản đầu tôi ghi mốc là
+"còn khoá mật khẩu". Vài giờ sau chủ shop tắt khoá, phép kiểm của tôi bắt
+được và tôi dừng lại hỏi — chủ shop nói cứ publish. Nên **mốc thật không
+phải khoá mật khẩu, mà là CÓ KHÁCH THẬT CHƯA.**
 
-**Cách kiểm trước khi publish — bắt buộc, một lệnh:**
+Hiện trạng 13/10/2026: store mở công khai (trả 200), nhưng chưa chạy quảng
+cáo, chưa có sản phẩm, chưa có đơn nào. Tức là chưa ai vào.
 
-```bash
-curl -s -o /dev/null -w '%{http_code} %{redirect_url}\n' https://<store>.myshopify.com
-# 302 -> /password  = còn khoá  -> publish thẳng
-# 200               = đã mở bán -> PHẢI hỏi
-```
+**Dấu hiệu phải quay lại hỏi trước khi publish — bất kỳ cái nào:**
 
-Đừng nhớ theo trí nhớ phiên trước. Chủ shop tắt khoá lúc nào không báo.
+- đã chạy quảng cáo, hoặc đang có lưu lượng thật
+- đã có đơn hàng
+- chủ shop nói store đã mở bán
 
-**Luôn giữ đường lùi:** theme cũ sau khi bị thay vẫn nằm ở trạng thái
-`unpublished`. Ghi lại id của nó trong câu trả lời để lùi được ngay.
-
----
+Chưa thấy dấu hiệu nào thì cứ publish, báo lại sau. **Luôn ghi id theme cũ**
+trong câu trả lời — nó chuyển sang `unpublished` chứ không mất, nên lùi lại
+được ngay.
 
 ## 1. Cửa hàng
 
