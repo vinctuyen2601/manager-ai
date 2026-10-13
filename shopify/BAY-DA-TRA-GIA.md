@@ -398,6 +398,19 @@ lấy toạ độ để bấm".
 
 ---
 
+## Chèn thành phần dùng chung thì dò xem chỗ đó đã có bản riêng chưa
+
+13/10/2026: `tu-truot.js` được dạy tự chèn hàng chấm `.truot-cham` cho mọi
+dải trượt. Dải review lớn đã có chấm riêng nên đã loại trừ — nhưng **khối
+review ngắn cũng có** (`.mrv__cham`, gõ tay trong `blocks/mini-reviews.liquid`)
+mà không ai dò. Lên trang là hai hàng chấm chồng nhau, chủ shop thấy trước.
+
+**Quy tắc:** trước khi bật một thành phần chung cho N chỗ, `grep -rn` tên
+lớp gần nghĩa (`dot`, `cham`, `nav`…) trong **chính tệp của từng chỗ đó**,
+và đo trên trang số hàng thành phần đó sau khi đẩy — phải ra đúng 1 mỗi chỗ.
+
+---
+
 ## `:where()` của Horizon KHÔNG có nghĩa là độ ưu tiên bằng 0
 
 Trả giá 13/10/2026, hai lần trên cùng một ô tick tự vẽ (`.bp__tick`).
