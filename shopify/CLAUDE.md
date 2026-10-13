@@ -44,7 +44,7 @@ trong câu trả lời — nó chuyển sang `unpublished` chứ không mất, n
 ```
 store      5jxr9j-bp.myshopify.com
 admin      https://5jxr9j-bp.myshopify.com/admin
-repo       ~/my-project/shop-christmasspin   (máy Windows: D:my projectshop-christmasspin)
+repo       ~/my-project/shop-christmasspin   (máy Windows: D:/my project/shop-christmasspin)
            git@github-personal:vinctuyen2601/shop-christmasspin
            (máy Windows KHÔNG có alias github-personal — dùng github.com-vinctuyen2601)
 theme nền  Horizon (theme mặc định mới của Shopify, dùng theme blocks)
