@@ -341,3 +341,57 @@ Mất một vòng đi tìm lỗi không tồn tại trong mã vừa sửa.
 **Quy tắc:** trước khi bấm bằng toạ độ, khẳng định phần tử **nằm trong khung
 nhìn**: `r.y >= 0 && r.bottom <= innerHeight`. Và khi một phép kiểm chuyển từ
 xanh sang đỏ ngay sau một thay đổi CSS thuần, nghi phép kiểm trước, nghi mã sau.
+
+---
+
+## Video: bốn bẫy liên tiếp trong một lần thêm một đoạn 10 giây
+
+Ngày 13/10/2026, thêm video vào khối "SEE IT IN ACTION".
+
+**1. Tệp gốc là HEVC — Chrome và Firefox không phát được.** Dò hộp MP4 thì ra
+`stsd/hvc1`, 1080×1920, brand `qt`: quay thẳng từ iPhone, chưa mã hoá cho web.
+Dấu hiệu nhận ra: `<video>` đọc được `duration` nhưng `videoWidth = 0`.
+
+Đừng dán thẳng URL. **Đẩy lên Shopify Files dạng `VIDEO`** thì Shopify tự
+chuyển mã sang H.264 ở 480p/720p/1080p kèm HLS. Dạng `FILE` thì nó giữ nguyên
+tệp, tức giữ nguyên cả lỗi codec lẫn dung lượng.
+
+**2. Storefront Liquid KHÔNG thấy hết các bản đã chuyển mã.** Admin API liệt
+kê ba MP4 (480p/720p/1080p), nhưng `video.sources` trong Liquid chỉ có **hai**
+và **cả hai đều 1080p** (một m3u8, một mp4). Bộ lọc `video_tag` vì thế chỉ
+phát ra bản lớn nhất.
+
+Hậu quả đo được ở khung 390px: **9,44 MB video trên trang 11,11 MB — 85%** cho
+một đoạn trang trí 10,6 giây. Điện thoại dùng 4G cũng phải tải bằng đó.
+
+Cách chữa: lấy URL bản 480p từ Admin API rồi khai thẳng vào một thiết lập
+`nguon_nho`, đặt nó làm `<source>` ĐẦU TIÊN. Sau khi sửa: **3,72 MB**.
+Nhược điểm phải nhớ: URL đó gắn với lần tải lên; tải lại video thì phải cập
+nhật.
+
+**3. Thuộc tính `media` trên `<source>` không dùng được trong `<video>`.**
+Chrome và Firefox đã bỏ hỗ trợ; nó chỉ còn tác dụng trong `<picture>`. Viết
+truy vấn vào đó thì trình duyệt lấy nguồn đầu tiên bất kể truy vấn — sai lặng
+lẽ. Muốn chọn theo bề rộng thì phải làm bằng JS.
+
+**4. Liquid không cho chèn thẻ vào giữa danh sách tham số của `render`.**
+Viết `{% comment %}` giữa các tham số thì báo `Expected end_of_string`. Chú
+thích phải nằm ngoài thẻ.
+
+**Định dạng giá trị cho thiết lập kiểu `video`:**
+`shopify://files/videos/<tên tệp>` — **không** phải `shopify://videos/...`
+hay `shopify://shop_videos/...`. Hai cái kia đều bị từ chối với
+"Setting 'video' value must be a valid video shopify url."
+
+---
+
+## Chụp màn hình: `scrollIntoView` rồi chụp ngay là ra nhầm chỗ
+
+Cùng ngày. Gọi `scrollIntoView` trên thẻ `<video>` rồi chụp, ảnh ra **đầu
+trang** chứ không phải video. Nguyên nhân: ảnh `loading="lazy"` phía trên vẫn
+đang tải, tải xong thì bố cục dài ra và đẩy vị trí đã cuộn đi mất.
+
+**Cách làm đúng:** cuộn hết trang xuống đáy cho mọi ảnh tải xong, cuộn về 0,
+rồi mới lấy toạ độ tuyệt đối (`getBoundingClientRect().top + scrollY`) và
+`scrollTo` tới đó. Cùng họ với bẫy "chờ 1,2 giây sau `scrollIntoView` rồi mới
+lấy toạ độ để bấm".
