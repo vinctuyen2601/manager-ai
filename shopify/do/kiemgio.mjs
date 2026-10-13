@@ -12,7 +12,8 @@ await goi('Page.navigate', { url: 'https://5jxr9j-bp.myshopify.com/products/sant
 await new Promise((r) => setTimeout(r, 9000));
 await js(`fetch('/cart/clear.js',{method:'POST'}).then(r=>r.text())`);
 
-// Chon Buy 2 roi tick ca ba mon ban kem
+// Chon Buy 2 roi tick moi mon ban kem con lai. Tu 14/10/2026 chi con Priority
+// Shipping (Mystery Gift thanh qua ebook gui email) -> TONG phai la 2x80 + 6 = 166.
 await js(`(()=>{const g=document.querySelectorAll('.bp__goi')[1];g.querySelector('input[name=bp-goi]').checked=true;g.querySelector('input[name=bp-goi]').dispatchEvent(new Event('change',{bubbles:true}));return 1})()`);
 await new Promise((r) => setTimeout(r, 600));
 console.log('tick:', await js(`(()=>{const g=document.querySelectorAll('.bp__goi')[1];const t=[...g.querySelectorAll('.bp__tick')];t.forEach(x=>{x.checked=true;x.dispatchEvent(new Event('change',{bubbles:true}))});return t.map(x=>x.dataset.vid+' sl='+x.dataset.sl).join(' | ')})()`));

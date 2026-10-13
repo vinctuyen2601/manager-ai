@@ -44,7 +44,7 @@ thay cho `google-chrome` + `setsid`.
 ## Hai phép kiểm phải chạy sau MỌI thay đổi trong hộp mua
 
 ```bash
-node kiemgio.mjs      # phải ra TONG: 226
+node kiemgio.mjs      # phải ra TONG: 166
 node thanhdinh.mjs    # phải ra "Add to cart (3)" -> 3 x Santa Spins
 ```
 
