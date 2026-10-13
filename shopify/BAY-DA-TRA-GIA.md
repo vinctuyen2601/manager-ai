@@ -395,3 +395,33 @@ trang** chứ không phải video. Nguyên nhân: ảnh `loading="lazy"` phía t
 rồi mới lấy toạ độ tuyệt đối (`getBoundingClientRect().top + scrollY`) và
 `scrollTo` tới đó. Cùng họ với bẫy "chờ 1,2 giây sau `scrollIntoView` rồi mới
 lấy toạ độ để bấm".
+
+---
+
+## Tôi đã báo "xong" một việc chưa hề chạy — vì xem ảnh thay cho đo
+
+Ngày 13/10/2026. Chủ shop xin thêm đệm dọc cho header. Tôi sửa biến
+`--header-padding` trong `custom.css`, chụp một ảnh thấy header "thoáng hơn",
+rồi báo **"thêm 14px trên dưới"**.
+
+Mười mấy lượt sau, đo vì một việc khác mới lòi ra:
+
+- `--header-padding` tính ra `0.7rem` của Horizon, không phải 14px của tôi
+  (lại `compiled_assets/styles.css` nạp sau `custom.css`)
+- `.header__columns` vẫn `padding: 0px`
+- header vẫn cao **đúng 72px** như trước khi sửa
+
+Ảnh trông thoáng hơn thật — nhưng vì các thay đổi KHÁC trong cùng lượt (logo,
+icon mới). Tôi đã gán công cho đúng thứ không chạy.
+
+**Quy tắc:** thay đổi nào phát biểu được bằng một con số thì phải **đo lại
+con số đó sau khi đẩy**, không được thay bằng ảnh chụp. Ảnh chỉ dùng để bắt
+lỗi bố cục mà số không nói được (như huy hiệu đè lên giá), không dùng để xác
+nhận một giá trị.
+
+Dấu hiệu cảnh báo cho chính mình: khi một lượt sửa nhiều thứ cùng lúc rồi
+nhìn ảnh để nghiệm thu, mọi thay đổi đều "trông như đã chạy".
+
+**Cách sửa đúng:** `.header__columns { padding-block: 10px !important; }` —
+đặt thẳng lên thuộc tính. Header 72px -> 92px (mẫu 120px, nhưng logo họ cao
+100px còn mình 72px).
