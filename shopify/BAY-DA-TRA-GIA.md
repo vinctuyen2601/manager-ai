@@ -398,6 +398,25 @@ lấy toạ độ để bấm".
 
 ---
 
+## `:where()` của Horizon KHÔNG có nghĩa là độ ưu tiên bằng 0
+
+Trả giá 13/10/2026, hai lần trên cùng một ô tick tự vẽ (`.bp__tick`).
+`base.css` viết `:where(input[type='checkbox']):not(:disabled):hover:checked`
+— `:where()` chỉ bọc phần `input[...]`, còn `:not(:disabled):hover:checked`
+nằm ngoài nên vẫn tính **(0,3,0)**, cao hơn `.bp__tick:checked` (0,2,0).
+
+1. `:checked::after` của theme mang `mask-image` + `position: absolute` →
+   dấu tick tự vẽ bị cắt còn một chấm, `checked=true` mà ô trông trống
+2. `:hover:checked` → ô đã tick chuyển **nền đen**. Trên điện thoại `:hover`
+   dính lại sau khi chạm, nên ô đen luôn
+
+**Quy tắc:** tự vẽ lại một điều khiển form thì `grep -n "input\[type='<loại>'\])"
+assets/base.css` và đè **từng trạng thái** theme có (`:checked`, `::after`,
+`:hover`, `:hover:checked`, `:disabled`). Đo bằng hover thật qua
+`Input.dispatchMouseEvent`, đừng chỉ đặt `.checked = true`.
+
+---
+
 ## Chữ trên CHECKOUT sửa được bằng theme — màu và logo thì không
 
 Đo ngày 13/10/2026. Checkout không đọc chữ thường của theme, nhưng **có đọc
