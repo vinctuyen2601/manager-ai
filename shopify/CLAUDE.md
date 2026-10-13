@@ -1,5 +1,9 @@
 # Shopify — chỉ dẫn cho trợ lý
 
+> **Mở phiên mới thì đọc `HIEN-TRANG-13-10-2026.md` TRƯỚC.** Tệp này là chỉ
+> dẫn nền; tệp kia là trạng thái thật của cửa hàng sau ngày dựng 13/10/2026,
+> kèm việc còn treo và cách bắt máy khác làm tiếp.
+
 Đọc `~/my-project/CLAUDE.md` trước (vai trò, quyền hạn, bẫy chung), rồi tệp này.
 
 Tài sản thứ ba, bắt đầu 13/10/2026. Hai tệp cùng thư mục:
@@ -77,22 +81,20 @@ section và 94 block, phủ gần hết cơ chế của mẫu — kể cả `pro
 (đếm tồn kho), `accordion`, `comparison-slider`, `marquee`. Thiếu đúng đồng
 hồ đếm ngược và đồng hồ giữ chỗ giỏ hàng, cả hai đã tự viết xong.
 
-**Đồng hồ đếm ngược mặc định đếm tới MỐC CÓ THẬT** (hạn gửi hàng), không
-quay vòng mỗi ngày, và hết hạn thì tự ẩn. Chủ shop vẫn bật được chế độ quay
-vòng bằng một ô chọn trong trình soạn theme nếu muốn.
+**Đồng hồ đếm ngược — ĐÃ ĐỔI 13/10/2026.** Trước đây đếm tới mốc có thật
+(hạn gửi hàng). Nay chạy chế độ `daily` theo mẫu: đếm lùi trong ngày rồi tự
+đặt lại mỗi đêm. Chủ shop biết và đã chọn như vậy. Vẫn đổi lại được bằng ô
+`mode` trong trình soạn theme.
 
 ---
 
-## 4. Việc còn treo — chỉ chủ shop làm được
+## 4. Việc còn treo
 
-- Tạo sản phẩm. **Chưa có sản phẩm nào**, nên trang sản phẩm 14 khối chưa
-  xem được
-- Menu điều hướng: Home / Contact / Track Your Order
-- Chính sách đổi trả và vận chuyển ở Settings › Policies
-- Trang `/pages/contact`
-- App: Judge.me (đánh giá) + một app bảo hiểm vận chuyển
-- Ảnh và logo
-- Đổi tên store, đang còn là mặc định **"My Store"**
+**Danh sách này đã cũ — xem `HIEN-TRANG-13-10-2026.md` mục 5.**
+
+Tính tới 13/10/2026 thì sản phẩm, menu, ảnh, logo, Judge.me đều đã xong. Thứ
+còn chặn là **nâng gói Shopify**: dev store không nhận được thanh toán, nên
+mọi việc giao diện đã làm vẫn chưa bán ra được đồng nào.
 
 ---
 
