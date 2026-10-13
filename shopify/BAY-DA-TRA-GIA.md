@@ -79,3 +79,29 @@ CLI không nhận ra thư mục rỗng là thư mục theme. Báo
 
 Tôi tải Dawn về trước rồi mới phát hiện store chạy **Horizon**. Mất một vòng.
 Thứ tự đúng: `auth login` → `theme list` → `theme pull`.
+
+---
+
+## 🔴 `theme push` XOÁ app embed mà không cảnh báo
+
+Trả giá 13/10/2026. Chủ shop bật App Embed cho Judge.me và Kaching trong
+theme editor. Shopify ghi lựa chọn đó vào `config/settings_data.json`
+**trên máy chủ**, mục `current.blocks`. Bản ở máy không có mục đó, và
+`theme push` ghi đè toàn bộ tệp.
+
+Đo được: trước khi push `kaching=21 judge=50` dấu vết trong HTML; sau khi
+push còn `0` và `1`. Hai app vẫn hiện "đã cài" trong admin, chỉ là không
+còn chạy trên mặt tiền. **Không có cảnh báo nào.**
+
+**Luật: trước MỌI `theme push`, kéo tệp đó về trước.**
+
+```bash
+shopify theme pull --only config/settings_data.json -e live
+```
+
+Cùng họ với bẫy `git pull` trên máy chủ deploy của 17fishing: hỏng âm thầm,
+nằm im cho tới đúng lần nó cắn.
+
+**Khôi phục nếu lỡ mất:** mã block nằm trong HTML đã chụp trước đó, dạng
+`<!-- BEGIN app block: shopify://apps/<app>/blocks/<block>/<uuid> -->`.
+Thêm lại vào `current.blocks` với khoá chính là uuid đó, `disabled: false`.
