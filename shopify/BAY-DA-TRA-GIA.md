@@ -290,3 +290,54 @@ Phải ép `justify-content: flex-start`.
 
 Nhớ thêm: biến `--flex-direction` nằm **thẳng trong thuộc tính `style`** của
 thẻ, nên mọi thứ đè lên nó đều cần `!important`.
+
+---
+
+## `custom.css` từng bị dán TRÙNG cả một vùng — bản cũ nằm sau nên thắng
+
+Ngày 13/10/2026, khi chủ shop bảo "bundle thiết kế hơi xấu". Mở `custom.css`
+ra thì ba section `TRANG SAN PHAM / BANG SO SANH / KHOI CHON GOI` có **hai bản**:
+dòng 392–794 và dòng 795–1178. Cùng bộ selector y hệt nhau.
+
+Bản sau dùng token cũ (`--x-do`, `--x-muc`), bản trước dùng token đo được từ
+Kaching (`--bar-bo`, `--bar-vien`). CSS thì **bản nào nằm sau thắng**, nên
+toàn bộ công đo đạc ở bản trước đang bị bản cũ đè một phần.
+
+Hỏng lặng lẽ tuyệt đối: trùng selector không sinh lỗi, không cảnh báo, chỉ có
+giao diện sai một cách khó giải thích.
+
+**Dấu hiệu nhận ra:** sửa một thuộc tính trong CSS mà trang không đổi gì, hoặc
+đổi ít hơn mong đợi. Lúc đó `grep -n` tên selector xem nó được khai mấy lần.
+
+---
+
+## Khai `display` một kiểu, trình duyệt tính ra kiểu khác — hai lần trong một ngày
+
+Cùng ngày 13/10/2026, hai lần, hai nguyên nhân khác nhau:
+
+1. **`.group-block-content`**: khai `flex-direction: row`, computed cũng là
+   `row`, nhưng `display` là **`grid`** (do lớp `mobile-column` của Horizon).
+   Mọi thuộc tính flex thành vô nghĩa.
+2. **`.bp__them`**: khai `display: grid`, computed ra **`inline-flex`**. Thẻ
+   này là `<label>`, và Horizon đặt kiểu cho `label` trong
+   `compiled_assets/styles.css` — tệp đó **nạp SAU `custom.css`** nên thắng.
+   `grid-template-columns` vô nghĩa, bố cục đang là ngẫu nhiên.
+
+**Quy tắc:** mọi lần chỉnh `flex-*` hay `grid-*`, in `display` ra trước. Và
+nhớ thứ tự nạp: `custom.css` → rồi mới `compiled_assets/styles.css`, nên style
+của theme thắng trừ khi dùng `!important`.
+
+---
+
+## "Có chiều cao" KHÔNG phải là "nhìn thấy được"
+
+Phép kiểm thanh dính dùng `r.height > 0` để kết luận thanh đang hiện, rồi bấm
+vào tâm nó. Ngày 13/10/2026 sau khi bố cục đổi, thanh nằm ở `y = 895` trên
+khung nhìn cao **844** — tức là dưới mép màn hình. Cú bấm rơi ra ngoài, giỏ
+hàng rỗng, và báo cáo trông y như "trang vừa hỏng".
+
+Mất một vòng đi tìm lỗi không tồn tại trong mã vừa sửa.
+
+**Quy tắc:** trước khi bấm bằng toạ độ, khẳng định phần tử **nằm trong khung
+nhìn**: `r.y >= 0 && r.bottom <= innerHeight`. Và khi một phép kiểm chuyển từ
+xanh sang đỏ ngay sau một thay đổi CSS thuần, nghi phép kiểm trước, nghi mã sau.
