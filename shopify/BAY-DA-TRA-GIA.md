@@ -136,3 +136,27 @@ mình  1270 × 2420 px
 
 Thiếu hẳn sáu khối ở nửa dưới. **Phép kiểm rẻ nhất là so CHIỀU CAO trang.**
 Lệch quá 1,5 lần thì chắc chắn thiếu khối, khỏi cần soi từng chỗ.
+
+---
+
+## Khi cần sao giao diện: xin bản "Save page as", đừng đo bằng ảnh
+
+Ngày 13/10/2026 tôi đo giao diện cửa hàng mẫu bằng `getComputedStyle` qua
+CDP — mất bốn vòng mới lên 93%, và vẫn sót lỗi huy hiệu đè lên giá.
+
+Rồi chủ shop tải **toàn bộ trang bằng "Save page as"**. Tệp đó:
+
+- lưu **DOM sau khi JS đã chạy**, nên có nguyên mã của widget do app dựng
+- **nhúng cả CSS ngoài vào trong** — 164 KB CSS của Kaching nằm trong
+  `<style>`, đọc được từng biến thiết kế
+
+Đọc ra ngay bộ token chính xác: `--bar-border-radius: 8px`,
+`--bar-label-font-weight: normal`, `--bar-most-popular top: -8px`, nút radio
+làm bằng `box-shadow` chứ không bằng `border`…
+
+**Quy tắc:** cần sao giao diện của một trang thì việc ĐẦU TIÊN là xin bản
+lưu đầy đủ. Ba phút đọc tệp bằng cả buổi đo computed style, và nó cho cả
+những thứ phép đo không với tới — cơ chế dựng, tên biến, giá trị mặc định.
+
+`getComputedStyle` vẫn cần, nhưng để **kiểm lại sau khi áp**, không phải để
+dò từ đầu.
