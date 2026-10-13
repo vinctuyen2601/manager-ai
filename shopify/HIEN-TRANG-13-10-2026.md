@@ -130,7 +130,7 @@ Rồi chạy hai phép kiểm hồi quy trong `shopify/do/` — nếu một tron
 có thứ gì đó đã hỏng kể từ 13/10:
 
 ```bash
-node shopify/do/kiemgio.mjs      # phải ra TONG: 166
+node shopify/do/kiemgio.mjs      # phải ra TONG: 142
 node shopify/do/thanhdinh.mjs    # phải ra "Add to cart (3)" -> 3 món
 ```
 
