@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Đồng bộ tài liệu quản lý giữa repo này, ~/.claude và sáu repo mã nguồn.
+# Đồng bộ tài liệu quản lý giữa repo này, ~/.claude và các repo mã nguồn.
 #
 # Ba việc tách bạch, không có chế độ "tự đoán":
 #   cai   — repo  → ~/.claude   (dựng máy mới, hoặc lấy lại bản đã commit)
@@ -17,6 +17,7 @@ MA="$HOME/my-project"
 declare -A DUAN=(
   [GaRutinBE]=garutin      [GaRutinWeb]=garutin      [GaRutinCMS]=garutin
   [17fishing-BE]=17fishing [17fishing-Web]=17fishing [17fishing-CMS]=17fishing
+  [shop-christmasspin]=shopify
 )
 
 case "${1:-}" in
@@ -58,7 +59,7 @@ case "${1:-}" in
       if [[ -n "$ket" ]]; then printf '   ✗ %-16s %s\n' "$repo" "$ket"
       else                     printf '   ✓ %-16s → %s\n' "$repo" "$duan"; fi
     done
-    [[ $loi -eq 0 ]] && echo "→ Sáu repo đều trỏ đúng hồ sơ dự án." \
+    [[ $loi -eq 0 ]] && echo "→ ${#DUAN[@]} repo đều trỏ đúng hồ sơ dự án." \
                      || { echo "→ Có repo đứt dây nối, sửa CLAUDE.md của nó." >&2; exit 1; }
     ;;
 
