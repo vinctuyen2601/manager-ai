@@ -105,3 +105,34 @@ nằm im cho tới đúng lần nó cắn.
 **Khôi phục nếu lỡ mất:** mã block nằm trong HTML đã chụp trước đó, dạng
 `<!-- BEGIN app block: shopify://apps/<app>/blocks/<block>/<uuid> -->`.
 Thêm lại vào `current.blocks` với khoá chính là uuid đó, `disabled: false`.
+
+---
+
+## `richtext` của Horizon chỉ nhận năm loại thẻ
+
+Thiết lập `text` của block `text` là kiểu `richtext`. Nó **chỉ cho**
+`<p> <ul> <ol> <h1>`–`<h6>`. Đẩy lên bằng `<table>` bị từ chối thẳng:
+
+```
+Setting 'text' is invalid. All top level nodes must be '<p>', '<ul>', '<ol>'
+or '<h1>'-'<h6>' tags, Tag '<table>' is not permitted
+```
+
+Cùng họ với bẫy `richtext` chỉ cho **một** bộ lọc Liquid. **Quy tắc:** cần
+bảng, cần tính toán, hay cần thẻ lạ thì tách thành block riêng trong
+`blocks/`, đừng cố nhét vào `text`.
+
+---
+
+## So sánh trang phải chụp TOÀN TRANG, đừng nhìn phần đầu
+
+Ngày 13/10 tôi báo trang sản phẩm "đã bám mẫu" sau khi soi ảnh chụp phần
+trên. Chủ shop nói không giống. Chụp lại toàn trang thì lộ ra:
+
+```
+mẫu   1618 × 9307 px
+mình  1270 × 2420 px
+```
+
+Thiếu hẳn sáu khối ở nửa dưới. **Phép kiểm rẻ nhất là so CHIỀU CAO trang.**
+Lệch quá 1,5 lần thì chắc chắn thiếu khối, khỏi cần soi từng chỗ.
