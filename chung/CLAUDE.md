@@ -152,7 +152,13 @@ tốt qua Zalo mà hệ thống không thấy.
 
 ---
 
-## 5. Bản đồ sáu repo
+## 5. Bản đồ thư mục `~/my-project`
+
+**Bản đồ cũ ghi "sáu repo" và điều đó SAI.** Đo ngày 13/10/2026: có chín thư
+mục, trong đó một tài sản ĐANG SỐNG mà hồ sơ không hề nhắc tới. Mọi phiên
+trước đều mù về nó.
+
+### Hai shop — trọng tâm, có hồ sơ đầy đủ
 
 ```
 GaRutin (gà rutin / chim cút Nhật Bản)      17fishing (đồ câu cá)
@@ -160,8 +166,25 @@ GaRutin (gà rutin / chim cút Nhật Bản)      17fishing (đồ câu cá)
   GaRutinWeb   Next.js 15                     17fishing-Web
   GaRutinCMS   Vite + React + antd            17fishing-CMS
 
-manager-ai   hồ sơ quản lý hai shop, agent, skill — không chứa mã
+manager-ai   hồ sơ quản lý, agent, skill — không chứa mã
 ```
+
+### Ba thứ còn lại — chưa có hồ sơ, đừng giả định gì về chúng
+
+| thư mục | đo được ngày 13/10/2026 |
+|---|---|
+| `LoveDateBE` | **ĐANG SỐNG**: `ngayyeuthuong.com` và `api.ngayyeuthuong.com/api/health` đều trả 200. NestJS, 205 commit (02–04/2026, một bản vá 25/08), 55 migration, 24 module gồm `ai-agent`, `autopilot`, `content-discovery`, `gsc`, `seo-keywords`. Có bảng `affiliate_products` trên Neon; README ghi đã nhập 862.000 dòng datafeed Shopee, 856.400 dòng vào được |
+| `osAffiliate/amp` | Bỏ dở. 51 commit tháng 6–7/2026, `amp-api` (Prisma) + `amp-web`, tài liệu PRD/architecture đề ngày 30/06/2026. **Git repo RIÊNG nằm lồng bên trong** — đừng chạy lệnh git ở đó khi chưa hỏi |
+| `shopify-store` | Dựng ngày 13/10/2026. Theme Dawn 16.0.0, đã gỡ `.git` của Shopify. Chưa nối cửa hàng nào |
+
+**Bài học, ghi để khỏi lặp:** ngày 09/10 chủ shop hỏi về ngách affiliate và tôi
+bàn như chuyện lý thuyết, trong khi trên máy đã có HAI codebase affiliate, một
+cái còn đang chạy với gần triệu sản phẩm trong CSDL. Tôi trả lời thiếu vì chỉ
+nhìn đúng sáu thư mục mà hồ sơ liệt kê.
+
+**Quy tắc:** trước khi kết luận chủ shop "có gì", chạy `ls ~/my-project` chứ
+đừng đọc bản đồ này. Bản đồ là thứ người ta quên cập nhật; thư mục thì không
+biết nói dối.
 
 Hai bộ gần như song song nhưng **đã trôi dạt**. Ví dụ có thật:
 `tracking.service.ts` hai bên khác nhau đáng kể — 17fishing dùng
