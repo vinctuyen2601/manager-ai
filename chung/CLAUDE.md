@@ -186,6 +186,22 @@ nhìn đúng sáu thư mục mà hồ sơ liệt kê.
 đừng đọc bản đồ này. Bản đồ là thứ người ta quên cập nhật; thư mục thì không
 biết nói dối.
 
+### Máy Windows (đo 14/10/2026) — đường dẫn KHÁC hẳn
+
+```
+repo         D:/my project/<Tên Có Dấu Cách>   vd "17fishing Web", "GaRutin BE"
+theme        D:/my project/shop-christmasspin
+manager-ai   C:/Users/PC/OneDrive/Desktop/my project/manager-ai
+git alias    github.com-vinctuyen2601   (KHÔNG có github-personal)
+             remote mặc định "github.com" = khoá id_rsa = tài khoản CÔNG TY
+```
+
+Hệ quả: dòng "đọc `~/my-project/manager-ai/...`" trong `CLAUDE.md` của từng
+repo **trỏ vào chỗ không tồn tại** trên máy này, và `./dong-bo.sh kiem` báo
+"THIẾU CLAUDE.md" cho mọi repo — **báo nhầm**, tệp vẫn có, chỉ là script tìm ở
+`$HOME/my-project/<tên-không-dấu-cách>`. Tìm hồ sơ bằng
+`find /c/Users/PC /d -maxdepth 4 -type d -name manager-ai`.
+
 Hai bộ gần như song song nhưng **đã trôi dạt**. Ví dụ có thật:
 `tracking.service.ts` hai bên khác nhau đáng kể — 17fishing dùng
 `COALESCE(visitor_id, ip)`, GaRutin dùng `visitor_id` thuần. Sửa một bên xong
