@@ -819,3 +819,30 @@ bằng video.
   dẫn tới một cái. Cần chủ shop nói cái kia là gì.
 - **Slug sai nghĩa:** sản phẩm "Trống đen" nằm ở `/san-pham/trung-cut-trong-den`.
   Đổi slug là mất thứ hạng cũ, nên để nguyên, chỉ ghi lại.
+
+---
+
+## QĐ-20 · 14/10/2026 · Shopify (Santa Spins): giá gói 1 / 2 / 3
+
+**Làm gì:** Buy 1 $80 · Buy 2 $136 (giảm $24) · Buy 3 $189 (giảm $51), bằng hai
+giảm giá tự động trong Admin. Gói 2 gắn "MOST POPULAR". Trước đó gói 2 và 3 chỉ
+là phép nhân — mua 2 không rẻ hơn mua lẻ đồng nào.
+
+**Vì sao:** chi phí kéo một khách (quảng cáo) chỉ tốn một lần, nên lãi/ĐƠN mới
+là con số quyết định, không phải lãi/cái. Lãi trước quảng cáo: $36.92 · $58.18
+· $79.81. Chủ shop muốn gói 3 lãi nhất vì ship ba cái rủi ro hơn — bác phương
+án "mua 2 tặng 1" ($160, lãi $51.65) vì nó lãi KÉM gói 2.
+
+**Dự đoán** (đo khi đủ 30 đơn đầu tiên, hoặc 15/12/2026 nếu chưa đủ):
+1. **Gói 2 + gói 3 chiếm ≥ 40% số đơn.** Dưới 25% nghĩa là nấc giảm không đủ
+   hút — mở lại bảng giá.
+2. **Giá trị đơn trung bình ≥ $105** (không tính Priority Shipping). Bằng 1,3
+   lần đơn lẻ.
+3. Gói 3 **dưới 15%** số đơn — nó là mồi để gói 2 trông hợp lý, không phải
+   gói bán chính. Nếu gói 3 vượt gói 2 thì dự đoán vai trò của nó sai.
+
+**Giả định chưa kiểm, có thể lật cả bảng:** "+ Nx Christmas Music Disc Set
+(FREE)" là 9 đĩa vốn có trong hộp. Nếu là bộ tặng THÊM ($15/bộ) thì lãi thật
+$21.92 · $28.18 · $34.81 — phải tính lại ngay.
+
+**Kiểm ngày:** 30 đơn đầu hoặc 15/12/2026 · **Trạng thái:** ⏳ chờ kiểm

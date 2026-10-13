@@ -1,6 +1,6 @@
 # Shopify — chỉ dẫn cho trợ lý
 
-> **Mở phiên mới thì đọc `HIEN-TRANG-13-10-2026.md` TRƯỚC.** Tệp này là chỉ
+> **Mở phiên mới thì đọc `HIEN-TRANG-14-10-2026.md` TRƯỚC** (bản 13/10 giữ làm lịch sử). Tệp này là chỉ
 > dẫn nền; tệp kia là trạng thái thật của cửa hàng sau ngày dựng 13/10/2026,
 > kèm việc còn treo và cách bắt máy khác làm tiếp.
 
@@ -44,8 +44,9 @@ trong câu trả lời — nó chuyển sang `unpublished` chứ không mất, n
 ```
 store      5jxr9j-bp.myshopify.com
 admin      https://5jxr9j-bp.myshopify.com/admin
-repo       ~/my-project/shop-christmasspin
+repo       ~/my-project/shop-christmasspin   (máy Windows: D:my projectshop-christmasspin)
            git@github-personal:vinctuyen2601/shop-christmasspin
+           (máy Windows KHÔNG có alias github-personal — dùng github.com-vinctuyen2601)
 theme nền  Horizon (theme mặc định mới của Shopify, dùng theme blocks)
 ```
 
@@ -90,7 +91,7 @@ hồ đếm ngược và đồng hồ giữ chỗ giỏ hàng, cả hai đã t�
 
 ## 4. Việc còn treo
 
-**Danh sách này đã cũ — xem `HIEN-TRANG-13-10-2026.md` mục 5.**
+**Danh sách này đã cũ — xem `HIEN-TRANG-14-10-2026.md` mục 5.**
 
 Tính tới 13/10/2026 thì sản phẩm, menu, ảnh, logo, Judge.me đều đã xong. Thứ
 còn chặn là **nâng gói Shopify**: dev store không nhận được thanh toán, nên
