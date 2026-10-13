@@ -398,6 +398,33 @@ lấy toạ độ để bấm".
 
 ---
 
+## Chữ trên CHECKOUT sửa được bằng theme — màu và logo thì không
+
+Đo ngày 13/10/2026. Checkout không đọc chữ thường của theme, nhưng **có đọc
+khoá `shopify.checkout.*` trong `locales/en.default.json` của theme đang
+live**. Thêm nhánh `"shopify": {"checkout": {...}}` vào cuối tệp rồi push là
+checkout đổi chữ ngay, đã đo bằng CDP. Đang dùng:
+
+```
+contact.contact_method_title      Email or Phone
+payment.title                     Secure Checkout
+payment.card_security_notice      ...30-day money-back guarantee.
+general.pay_now_button_label      Complete Purchase
+```
+
+Tra tên khoá: `index.html` của repo GitHub
+`chiragramjibhaipatel/shopify-default-theme-content` (tiền tố
+`shopify.checkout.` cộng khoá ngắn).
+
+**Ngược lại, màu, logo và nút KHÔNG đi qua theme hay API được** khi store ở
+gói thường. `checkoutBrandingUpsert` chỉ chạy trên Plus/dev store và đã bị
+khai tử ở 2026-04; chỉ còn trình soạn checkout trong Admin.
+
+Khoá chỉ ăn ở theme ĐANG LIVE. Publish theme khác thì phải chép nhánh
+`shopify.checkout` sang, nếu không checkout quay về chữ mặc định, không báo gì.
+
+---
+
 ## Tôi đã báo "xong" một việc chưa hề chạy — vì xem ảnh thay cho đo
 
 Ngày 13/10/2026. Chủ shop xin thêm đệm dọc cho header. Tôi sửa biến
