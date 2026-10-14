@@ -77,8 +77,13 @@ thì tính lại cả hai phần trăm VÀ hai giảm giá trong Admin.
    Đã đo: trang áo ngực Home + logo → `/pages/shop` (bấm logo thật ra đúng);
    trang Santa + trang chủ vẫn → `/`. Lần đầu chủ shop tạo nhưng 404 — Page
    để **Hidden** thì Shopify ẩn khỏi khách và sitemap, không báo gì.
-2. **Shipping profile free** cho Santa Spins + món phụ — chưa kiểm được (checkout
-   chỉ hiện phí sau khi nhập địa chỉ).
+2. ~~Shipping profile free~~ ✅ **xong 15/10/2026**. Đo checkout giao New York:
+   chỉ hộp nhạc / hộp nhạc + Priority Shipping / hộp nhạc + áo ngực — cả ba
+   **một dòng duy nhất "6 to 12 business days · FREE"**, hết "Expedited 3–5
+   days $9.99" (lời hứa không giao được với hàng Santa). Muốn ship nhanh thì
+   khách tick món Priority Shipping; chủ shop dựa vào món đó khi đặt với nhà
+   cung cấp. Trước đó đơn Santa lấy bảng phí chung: Standard "5 to 8 days"
+   (ngắn hơn thật) + Expedited $9.99.
 3. **9 Extra Discs bán $13 dưới giá vốn $15** — chưa chốt giá mới.
 4. Bộ đĩa tặng trong gói: 9 đĩa có sẵn trong hộp, hay bộ tặng THÊM? Chưa trả lời
    — đổi cả bảng lãi.
