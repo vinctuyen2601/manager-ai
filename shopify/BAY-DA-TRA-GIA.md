@@ -607,3 +607,28 @@ mở `?preview_theme_id=` trước đó**. Khách thật không có cookie đó.
 xoá cookie (`Network.clearBrowserCookies` + `Storage.clearDataForOrigin`) rồi
 chạy lại TRƯỚC khi nghi mã. Và luôn in `elementFromPoint` ở điểm bấm — nó trả
 lời ngay "cú bấm rơi vào đâu".
+
+---
+
+## Bảy bẫy ngày 15/10/2026 — đưa theme một-sản-phẩm sang store nhiều sản phẩm
+
+1. **CSS viết cho một trang lọt sang MỌI trang.** Rule ẩn nút mua của theme
+   (`[class*="__buy_buttons"]`, vì Santa Spins mua qua khối chọn gói) áp cho cả
+   20 sản phẩm cũ → **khách không có nút mua**. Phép kiểm bằng JS `.click()`
+   vẫn qua vì nút có trong DOM. Sửa: khoanh `:is(.product-information,
+   .product-details):has(.bp)`. **Quy tắc:** kiểm nút mua bằng ảnh chụp hoặc
+   `elementFromPoint`, đừng bằng `.click()`.
+2. **Hiển thị số đô trên store đổi tiền tệ.** Trừ 2400 xu vào giá đã đổi sang
+   VND → khách VN thấy gói gần như không giảm. Tính giảm theo PHẦN TRĂM tổng gói.
+3. **Ô "Theme template" của sản phẩm chỉ liệt kê template của theme ĐANG LIVE.**
+   Template mới trong theme chưa xuất bản → chủ shop không chọn được. Xem trước
+   bằng `?view=<hậu tố>`; gán sau khi publish.
+4. **App đánh giá tự gắn block vào theme** (AReviews: block sao + section) ở cả
+   hai template, sau khi chủ shop cài. Kéo bản live về trước mọi lần push.
+5. **`paginate` cắt cả `collections.all.products`** về đúng số trang (4). Lọc
+   trước khối `{% paginate %}`, không lọc bên trong.
+6. **`mix-blend-mode: difference`** Horizon đặt cho điều khiển nằm trên ảnh: đổi
+   chấm sang đỏ thì ảnh chụp ra XANH LÁ, computed style vẫn báo đỏ. Phải nhìn
+   ảnh, số đo không bắt được.
+7. **Push lên theme LIVE thiếu `--allow-live` thì CLI không đẩy và không báo
+   lỗi** — grep `"errors"` ra rỗng, tưởng xong. Luôn grep cả `"role"`.

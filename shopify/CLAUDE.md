@@ -1,6 +1,6 @@
 # Shopify — chỉ dẫn cho trợ lý
 
-> **Mở phiên mới thì đọc `HIEN-TRANG-14-10-2026.md` TRƯỚC** (bản 13/10 giữ làm lịch sử). Tệp này là chỉ
+> **Mở phiên mới thì đọc `HIEN-TRANG-15-10-2026.md` TRƯỚC** — Santa Spins đã dời sang store Skin Solutions (bản 13/10, 14/10 giữ làm lịch sử). Tệp này là chỉ
 > dẫn nền; tệp kia là trạng thái thật của cửa hàng sau ngày dựng 13/10/2026,
 > kèm việc còn treo và cách bắt máy khác làm tiếp.
 

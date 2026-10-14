@@ -846,3 +846,28 @@ là con số quyết định, không phải lãi/cái. Lãi trước quảng cá
 $21.92 · $28.18 · $34.81 — phải tính lại ngay.
 
 **Kiểm ngày:** 30 đơn đầu hoặc 15/12/2026 · **Trạng thái:** ⏳ chờ kiểm
+
+---
+
+## QĐ-21 · 14–15/10/2026 · Shopify: dời Santa Spins sang store Skin Solutions
+
+**Làm gì:** publish theme Santa Spins (nhánh `skinsolutions`) lên store Skin
+Solutions (`skinsolutions.online`), giữ 20 món cũ đang bán, tách header /
+footer / template theo nhóm trang (`snippets/la-santa.liquid`). Domain không
+đổi — "Santa Spins" là tên sản phẩm.
+
+**Vì sao:** store Santa Spins cũ chưa bật được cổng thanh toán; Skin Solutions
+có Shopify Payments chạy sẵn. Mùa Giáng sinh còn ~8 tuần, chờ LLC/EIN là mất mùa.
+
+**Rủi ro đã nói với chủ shop, chủ shop chấp nhận:** tranh chấp / chargeback hàng
+Giáng sinh tính vào tài khoản thanh toán của store chính; tên store và domain
+khác tên sản phẩm (đã đề nghị statement descriptor `SKINSOL* SANTASPINS`).
+
+**Dự đoán** (kiểm 15/12/2026 hoặc khi đủ 30 đơn Santa Spins):
+1. Tỉ lệ tranh chấp đơn Santa Spins **< 1%**. Từ 1% trở lên là tín hiệu Shopify
+   Payments sẽ giữ tiền — cân nhắc tách store lại.
+2. Đơn hàng cũ (áo ngực…) **không giảm quá 20%** so với 30 ngày trước 14/10 —
+   nếu giảm mạnh, việc đổi trang chủ sang Santa Spins đang làm mất khách cũ
+   (khi đó ưu tiên tạo Page `shop` và đưa link vào quảng cáo cũ).
+
+**Kiểm ngày:** 15/12/2026 · **Trạng thái:** ⏳ chờ kiểm
