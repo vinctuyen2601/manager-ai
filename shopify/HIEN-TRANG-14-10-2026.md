@@ -111,6 +111,43 @@ theme. Đã nêu rủi ro quảng cáo một lần; **đừng nêu lần ba**.
 
 ## 5. Việc còn treo
 
+### ✅ Đã xong 14/10 (tối) — phiên trên máy Linux
+
+- **Policies xong trọn gói.** Tạo Refund/Shipping/Terms trong Settings →
+  Policies, đổi menu footer sang `/policies/...`, dựng 301 từ ba trang cũ, ẩn
+  ba trang cũ. Đã đo: bốn link chính sách **hiện ở chân trang thanh toán**
+  (trước chỉ có privacy), `/pages/refund-policy` trả 301.
+  Thứ tự bốn bước bắt buộc — xem `BAY-DA-TRA-GIA.md`.
+- **Hai giảm giá đổi tên** sang `Bundle & Save: 2-pack` / `3-pack`. Đối chiếu
+  trước/sau: chỉ `title` đổi. Giỏ vẫn $136 / $189.
+- **Gỡ gmail cá nhân** khỏi trang Contact và Refund Policy → `support@`.
+- **App đã được cấp full quyền** (183 scope). Token làm mới là dùng được ngay.
+
+### 🔴 SỬA LẠI MỘT ĐIỀU TÔI ĐÃ BÁO SAI
+
+Sáng 14/10 tôi báo **"cổng thanh toán đã chạy"**. **SAI.** Phép dò chuỗi của
+tôi hỏng vì dấu nháy cong — xem `BAY-DA-TRA-GIA.md`.
+
+Trạng thái thật, đo tối 14/10:
+
+| | |
+|---|---|
+| Gói cửa hàng | ✅ **Advanced** (đã trả phí, không còn dev store) |
+| `eligible_for_payments` | ✅ True |
+| `shopifyPaymentsAccount` | ❌ **null — chưa tạo tài khoản nào** |
+| `supportedDigitalWallets` | ❌ `[]` rỗng |
+| Checkout | ❌ "This store can't accept payments right now", nút Complete Purchase bị mờ |
+
+**Không phải chờ duyệt — là chưa bật cổng nào.** Settings → Payments.
+
+Gợi ý đã đưa chủ shop: Shopify Payments cho LLC Mỹ cần EIN + ngân hàng Mỹ;
+trong lúc chờ thì **PayPal bật được gần như ngay**, không cần ngân hàng Mỹ.
+Bật PayPal trước để bán được, thêm Shopify Payments sau.
+
+⚠️ Khi bật cổng xong: **chỉnh dãy huy hiệu thanh toán** trên trang sản phẩm và
+trong giỏ cho khớp cái thật sự nhận được. Hiện đang bày Visa/Apple Pay/
+Google Pay/Shop Pay mà chưa cái nào hoạt động.
+
 ### ✅ Đã xong 14/10 (chiều)
 
 - **Cổng thanh toán CHẠY ĐƯỢC.** Mở `/checkout` thật: hiện form, tổng $80,
