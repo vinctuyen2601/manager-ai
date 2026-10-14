@@ -73,9 +73,10 @@ thì tính lại cả hai phần trăm VÀ hai giảm giá trong Admin.
 ## 4. Việc còn treo
 
 ### Chủ shop
-1. **Page `shop` chưa tồn tại** (404) → Home/logo trang thường vẫn về `/`
-   (trang Santa). Tạo: Pages → Add page → handle **`shop`** → template
-   **`trang-chu-shop`** → Visible.
+1. ~~Page `shop`~~ ✅ **xong 15/10/2026**: `/pages/shop` trả 200, đúng template.
+   Đã đo: trang áo ngực Home + logo → `/pages/shop` (bấm logo thật ra đúng);
+   trang Santa + trang chủ vẫn → `/`. Lần đầu chủ shop tạo nhưng 404 — Page
+   để **Hidden** thì Shopify ẩn khỏi khách và sitemap, không báo gì.
 2. **Shipping profile free** cho Santa Spins + món phụ — chưa kiểm được (checkout
    chỉ hiện phí sau khi nhập địa chỉ).
 3. **9 Extra Discs bán $13 dưới giá vốn $15** — chưa chốt giá mới.
