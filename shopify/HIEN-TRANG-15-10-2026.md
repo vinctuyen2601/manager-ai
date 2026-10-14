@@ -43,6 +43,11 @@ store**. Mọi thứ dưới đây đọc từ đó:
 **Vì sao:** dùng chung thì khách mua áo ngực thấy logo hộp nhạc và "Free
 worldwide shipping" — hàng thường TÍNH phí ship. Chủ shop: "làm khách nghi ngờ".
 
+**Giỏ hàng** (sửa cuối 15/10): "Continue shopping" khi giỏ trống về đúng nơi
+khách đến — nhóm Santa → trang Santa Spins, nhóm store → `/pages/shop` (trước
+trỏ `/collections/all` = cả 20 món cũ). Trang `/cart` có hộp nhạc trong giỏ
+được tính là nhóm Santa (logo Santa, ẩn gợi ý áo ngực) — `body.la-santa`.
+
 Template:
 - `product.santa-spins.json` — trang Santa Spins (khối chọn gói, quà…)
 - `product.json` — **trang sản phẩm thường**: giá đỏ 24px, chọn biến thể kiểu
