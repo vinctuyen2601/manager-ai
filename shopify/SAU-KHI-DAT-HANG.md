@@ -20,24 +20,59 @@ lập xong thì sửa nhãn này cho khớp, nếu không chữ hứa một đ�
 
 ---
 
-## 1. Hai trang hướng dẫn — ĐÃ TẠO, đang sống
+## 1. Hai trang hướng dẫn
 
-| trang | nội dung |
+| trang | trạng thái |
 |---|---|
-| `/pages/setup-guide` | mở hộp → thả đĩa → dán lên tủ lạnh → sạc → xử lý khi không lên đèn |
-| `/pages/change-the-songs` | cắm vào máy tính → sao lưu 9 bài gốc → kéo MP3 của mình vào → tháo an toàn → cách phục hồi |
+| `/pages/setup-guide` | **đang sống** — mở hộp → thả đĩa → dán lên tủ lạnh → sạc → đổi bài → xử lý sự cố |
+| `/pages/change-the-songs` | **ĐÃ GỠ XUỐNG** (draft) — xem bên dưới |
+
+### Vì sao gỡ `/pages/change-the-songs`
+
+Bản đầu tôi viết chi tiết từng bước: máy hiện ra như USB, mở ra thấy chín tệp
+nhạc, sao lưu cả thư mục, giữ nguyên tên và vị trí tệp, tháo an toàn, cách
+phục hồi.
+
+**Không câu nào trong đó có cơ sở.** Trang sản phẩm chỉ hứa đúng một việc:
+
+> *"plug into any laptop via USB-C, drag your MP3s on, done"*
+
+Còn lại là tôi suy ra một quy trình nghe hợp lý rồi đăng nó thành hướng dẫn
+cho khách làm theo. Khách làm theo mà máy không hoạt động như vậy thì họ mất
+chín bài gốc — và họ mất vì tin vào trang của shop.
+
+Nay trang chỉ còn đúng câu trang sản phẩm đã nói, và để ở chế độ nháp.
+
+**Cần gì để hoàn thiện:** hỏi nhà cung cấp bốn câu —
+1. Cắm vào máy tính thì nó hiện ra như ổ USB, hay cần phần mềm riêng?
+2. Chín bài có sẵn có nhìn thấy dưới dạng tệp không? Xoá/thay được không?
+3. Mỗi đĩa nhận bài theo **tên tệp**, theo **thứ tự**, hay theo **mã ghi trong
+   đĩa**?
+4. Thay sai thì phục hồi kiểu gì?
+
+Có bốn câu trả lời đó là tôi viết lại trong mười phút.
+
+### Bài học, ghi để khỏi lặp
+
+Tôi đã **nêu đúng rủi ro này** cho riêng câu về đĩa NFC, rồi ngay trong cùng
+tài liệu lại viết năm khẳng định khác không kiểm chứng. Nêu được rủi ro không
+có nghĩa là đã tránh được nó.
+
+Hướng dẫn 1 cũng dính ba câu bịa, đã gỡ: *"arrives charged enough to test"*,
+*"charge it for thirty minutes"*, và *"lift the disc off to stop it — that is
+the whole control scheme"*. Câu cuối còn **mâu thuẫn với chính ảnh sản phẩm
+của shop**: trên mặt máy có nút ◀ ❚❚ ▶.
+
+**Quy tắc:** viết hướng dẫn sử dụng thì mỗi câu phải chỉ ra được nguồn — trang
+sản phẩm, lời nhà cung cấp, hoặc tự cầm máy thử. Không có nguồn thì không viết,
+dù câu đó nghe hiển nhiên đến đâu.
 
 Để là **trang web, không phải PDF**: khách mở trên điện thoại được ngay, không
 phải tải, và sửa nội dung không cần gửi lại email cho ai.
 
-### 🔴 Hai chỗ trong hướng dẫn cần chủ shop xác nhận
+### 🔴 Còn một chỗ nữa cần chủ shop quyết
 
-1. **Cơ chế đĩa NFC khớp với tệp nhạc.** Tôi KHÔNG biết mỗi đĩa nhận bài theo
-   tên tệp, theo thứ tự, hay theo mã ghi trong đĩa. Bản hiện tại viết an toàn:
-   *"thay một bài rồi thử trước khi thay hết, giữ nguyên tên và vị trí tệp"*.
-   Hỏi nhà cung cấp cho chính xác rồi tôi viết lại cho dứt khoát — hướng dẫn
-   sai ở bước này thì khách làm theo và hỏng, tệ hơn là không có hướng dẫn.
-2. **Trang sản phẩm đang hứa "video guide" ở BA chỗ** (Everything Included ·
+1. **Trang sản phẩm đang hứa "video guide" ở BA chỗ** (Everything Included ·
    Can I Change the Songs? · FAQ). Chưa có video nào. Hoặc anh quay/xin nhà
    cung cấp, hoặc đổi chữ thành "step-by-step guide" — sửa mất một phút, nói
    tôi là làm.
@@ -137,11 +172,12 @@ rồi thay `pages/CHUA-CO` trong email.
 |---|---|---|
 | chủ shop | kiểm *Customer contact method* đặt về **Email** | trước đơn đầu tiên |
 | chủ shop | xác nhận DSers còn bật đồng bộ tracking | trước đơn đầu tiên |
-| chủ shop | hỏi nhà cung cấp cơ chế đĩa ↔ tệp nhạc | trước khi quảng cáo |
+| chủ shop | hỏi nhà cung cấp 4 câu về cách nạp nhạc (mục 1) | trước khi quảng cáo |
 | chủ shop | chốt "video guide" hay "step-by-step guide" | một phút |
 | chủ shop | chọn hướng ebook | khi rảnh |
 | trợ lý | dán khối vào Order confirmation | khi cổng thông |
 | trợ lý | khối tải nhanh ở trang cảm ơn | khi cổng thông |
+| trợ lý | viết lại /pages/change-the-songs | sau khi có 4 câu trả lời từ nhà cung cấp |
 | trợ lý | viết ebook | sau khi chốt hướng |
 
 **Không việc nào ở đây chạy được trước khi có cổng thanh toán** — chưa có đơn
