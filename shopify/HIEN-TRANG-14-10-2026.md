@@ -111,10 +111,43 @@ theme. Đã nêu rủi ro quảng cáo một lần; **đừng nêu lần ba**.
 
 ## 5. Việc còn treo
 
+### ✅ Đã xong 14/10 (chiều)
+
+- **Cổng thanh toán CHẠY ĐƯỢC.** Mở `/checkout` thật: hiện form, tổng $80,
+  **không còn** câu "This store can't accept payments right now".
+  ⚠️ Đừng dùng `shop.checkout_api_supported` làm căn cứ — cờ đó nói về
+  Checkout API cũ, vẫn `false` dù thanh toán đã chạy. Tôi đã kết luận sai một
+  lần vì nó. **Đo đúng là mở thẳng `/checkout`.**
+- **Sender email** đã đổi sang `support@santaspinshop.com`.
+- **Hai giảm giá tự động đổi tên sang tiếng Anh**: `Bundle & Save: 2-pack`
+  và `Bundle & Save: 3-pack`. Đã đối chiếu trước/sau: chỉ `title` đổi, ngưỡng
+  số lượng / số tiền / sản phẩm áp dụng / `combinesWith` y nguyên.
+- **Domain `santaspinshop.com`** đã chạy, TLS cấp 14/10 06:41 UTC, apex + www,
+  `http→https` và `www→apex` đều 301, myshopify cũ chuyển về domain mới.
+- Gỡ gmail cá nhân khỏi trang Contact và Refund Policy.
+
 ### Chỉ chủ shop làm được
-1. **Cổng thanh toán qua LLC** — việc chặn bán duy nhất.
-2. Đổi tên hai giảm giá sang tiếng Anh.
-3. Chốt giá bán bộ "9 Extra Discs" (đang lỗ) và trả lời câu hỏi bộ đĩa tặng.
+
+1. 🔴 **XÁC THỰC GỬI MAIL — chưa làm, và nó vô hiệu hoá cả kế hoạch gửi quà.**
+   Đổi địa chỉ sender thôi là chưa đủ. Đo ngày 14/10:
+   - SPF vẫn là `v=spf1 include:_spf.mx.cloudflare.net ~all` — chỉ cho NHẬN,
+     không cho Shopify GỬI hộ
+   - DKIM `shopifyemail._domainkey` : **không có**
+   - DMARC : **không có**
+
+   Gmail và Outlook sẽ cho email xác nhận đơn vào spam. Mà ebook, hai hướng
+   dẫn và mã vận đơn đều đi bằng email đó. Vào Settings → Notifications, làm
+   theo các bản ghi Shopify yêu cầu, thêm vào Cloudflare DNS.
+
+2. ⚠️ **Checkout vẫn cho dùng SỐ ĐIỆN THOẠI thay email.** Mở `/checkout` thấy
+   "Email or mobile phone number". Đơn đặt bằng số điện thoại sẽ **không có
+   email** — không gửi quà được. Settings → Checkout → *Customer contact
+   method* → **Email**.
+
+3. **Hai scope cho app** `read_legal_policies` + `write_legal_policies` để tôi
+   tạo được Refund/Shipping/Terms trong Settings → Policies. Nội dung đã soạn
+   sẵn ở `POLICIES.md`.
+4. Chốt giá bán bộ "9 Extra Discs" (đang lỗ $2/lần) và trả lời câu hỏi bộ đĩa tặng.
 4. Nhập nốt 9 link AliExpress có nội dung vào Judge.me.
 5. Admin → Content → Menus: đổi link "Shop" (`/collections/all`) thành sản phẩm.
 6. Kiểm Admin → Edit code → `sections/header-group.json` → Older versions —
