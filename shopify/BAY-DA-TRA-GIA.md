@@ -517,3 +517,78 @@ nhìn ảnh để nghiệm thu, mọi thay đổi đều "trông như đã chạ
 **Cách sửa đúng:** `.header__columns { padding-block: 10px !important; }` —
 đặt thẳng lên thuộc tính. Header 72px -> 92px (mẫu 120px, nhưng logo họ cao
 100px còn mình 72px).
+
+---
+
+## Dấu nháy cong `’` làm tôi báo ngược hẳn sự thật
+
+Ngày 14/10/2026. Tôi mở checkout thật, dò chuỗi `can't accept payments`, không
+thấy, và báo với chủ shop: **"cổng thanh toán đã chạy"**.
+
+Sai hoàn toàn. Trang viết `can’t` với **U+2019** (nháy cong), chuỗi tôi tìm
+dùng **U+0027** (nháy thẳng). Hai ký tự khác nhau, không bao giờ khớp.
+
+```
+CHUỖI THẬT : "This store can’t accept payments right now."
+MÃ KÝ TỰ   : c(U+0063) a(U+0061) n(U+006E) ’(U+2019) t(U+0074)
+```
+
+Chủ shop tin theo và chuyển sang việc khác. Phải đến khi đọc đoạn cuối trang
+vì một lý do khác mới lòi ra câu đó vẫn còn.
+
+**Đây đúng họ lỗi đã ghi sẵn trong tệp này** — "trước khi viết biểu thức phân
+loại trên dữ liệu API, in ra tập giá trị CÓ THẬT rồi mới viết". Tôi đã ghi nó,
+rồi vẫn dính, chỉ vì lần này dữ liệu là chữ trên trang chứ không phải JSON.
+
+**Quy tắc:** dò chuỗi người-đọc-được thì **chuẩn hoá trước khi so** —
+`’‘ʼ` → `'`, gộp khoảng trắng, `toLowerCase`. Và khi một phép dò trả về
+"không tìm thấy", **in thử đoạn văn bản quanh đó ra** trước khi kết luận là
+không có. Không tìm thấy ≠ không tồn tại.
+
+```js
+const t = raw.replace(/[‘’ʼ]/g, "'").toLowerCase();
+```
+
+---
+
+## Scope KHAI BÁO của app ≠ scope cửa hàng ĐÃ CẤP
+
+Cùng ngày. Thêm `read_legal_policies` vào app, Release phiên bản mới, lấy token
+mới — vẫn bị từ chối. Ba lần như vậy.
+
+Nguyên nhân: token `client_credentials` chỉ nhận scope mà **cửa hàng đã chấp
+thuận**, không phải scope app khai báo. Thêm scope xong còn phải **cài lại app
+lên cửa hàng** để nó hiện màn hình xin quyền mới. Release thôi chưa đủ.
+
+**Cách chẩn đoán nhanh** — so hai danh sách, chênh lệch chính là thứ còn thiếu:
+
+```bash
+# app khai bao: lay tu Dev Dashboard > Versions > ban Active
+curl -s https://$SHOP/admin/oauth/access_scopes.json -H "X-Shopify-Access-Token: $T"
+```
+
+Lần đó ra: khai báo 66, đã cấp 64, thiếu đúng hai cái vừa thêm. Con số nói
+ngay vấn đề nằm ở bước cài đặt, không phải ở cấu hình.
+
+---
+
+## Tạo policy: thứ tự bốn bước, làm sai thứ tự là tự tạo trang 404
+
+Ngày 14/10/2026, đưa Refund/Shipping/Terms từ `/pages/` sang Settings → Policies.
+
+Thứ tự **bắt buộc**:
+
+1. `shopPolicyUpdate` tạo ba policy (lấy nội dung từ ba trang đang có)
+2. Đổi menu `footer` sang `/policies/...`
+3. Tạo 301 từ `/pages/...`
+4. **Ẩn** ba trang cũ
+
+Hai điều đã đo được, không phải suy đoán:
+
+- **Chuyển hướng KHÔNG ăn khi trang còn sống.** Tạo 301 xong mà trang vẫn
+  published thì `/pages/refund-policy` trả **200**, trang thắng. Ẩn trang đi
+  mới thành **301**.
+- Nên **ẩn chứ đừng xoá**: hoàn tác tức thì nếu cần, và nội dung vẫn nằm đó
+  để đối chiếu.
+
+Làm bước 3-4 trước bước 1 thì có ba trang 404 trong lúc chờ.
