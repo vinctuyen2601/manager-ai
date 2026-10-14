@@ -592,3 +592,18 @@ Hai điều đã đo được, không phải suy đoán:
   để đối chiếu.
 
 Làm bước 3-4 trước bước 1 thì có ba trang 404 trong lúc chờ.
+
+---
+
+## Thanh xem trước của Shopify đè lên nút — trông y như nút mua hỏng
+
+14/10/2026, store Skin Solutions. `thanhdinh` báo **giỏ rỗng** sau khi bấm
+"Add to cart (3)", không request nào gửi đi, không lỗi nào. Dò
+`elementFromPoint` tại điểm bấm: trúng **`IFRAME#PBarNextFrame`** — thanh
+"preview" của Shopify, nằm đè đáy trang vì Chrome đo vẫn giữ **cookie của lần
+mở `?preview_theme_id=` trước đó**. Khách thật không có cookie đó.
+
+**Quy tắc:** phép kiểm bấm bằng toạ độ mà đỏ trên store vừa xem trước theme →
+xoá cookie (`Network.clearBrowserCookies` + `Storage.clearDataForOrigin`) rồi
+chạy lại TRƯỚC khi nghi mã. Và luôn in `elementFromPoint` ở điểm bấm — nó trả
+lời ngay "cú bấm rơi vào đâu".
