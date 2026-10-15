@@ -41,6 +41,25 @@ Trên Windows: Chrome chạy bằng
 `"/c/Program Files/Google/Chrome/Application/chrome.exe" --headless=new --remote-debugging-port=9333 --user-data-dir=<thư mục tạm>`
 thay cho `google-chrome` + `setsid`.
 
+## 🔴 Từ 15/10/2026: mặc định là store Skin Solutions
+
+Santa Spins đã dời sang `skinsolutions.online` (store cũ chưa bật được cổng
+thanh toán). Mọi script ở đây **mặc định trỏ store đang bán**; thêm tham số
+`cu` để đo store cũ.
+
+```bash
+node kiemgio.mjs          # skinsolutions.online  (mặc định)
+node kiemgio.mjs cu       # 5jxr9j-bp (store cũ)
+
+bash soLive.sh "$HOME/my-project/shop-christmasspin" templates/product.json
+MT=live bash soLive.sh "$HOME/my-project/shop-christmasspin" assets/custom.css
+```
+
+Để mặc định trỏ store cũ thì phép kiểm vẫn chạy, vẫn in "ok" — nhưng nó so
+với một store không ai dùng nữa. **Báo an toàn giả nguy hiểm hơn báo lỗi.**
+
+Nhánh git của theme store mới là `skinsolutions`, không phải `main`.
+
 ## Hai phép kiểm phải chạy sau MỌI thay đổi trong hộp mua
 
 ```bash

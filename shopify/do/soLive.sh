@@ -2,8 +2,18 @@
 # So tep tren theme LIVE voi ban trong repo TRUOC khi push. Dung lai (exit 1)
 # neu khac — KHONG bao gio tu bo ban live.
 #
-#   bash soLive.sh <thu-muc-repo-theme> <tep> [tep...]
-#   vd: bash soLive.sh "/d/my project/shop-christmasspin" sections/header-group.json assets/custom.css
+#   MT=<moi-truong> bash soLive.sh <thu-muc-repo-theme> <tep> [tep...]
+#
+#   MT=ss   (mac dinh) -> store Skin Solutions, noi Santa Spins DANG BAN
+#   MT=live            -> store Santa Spins cu
+#
+#   vd: bash soLive.sh "$HOME/my-project/shop-christmasspin" templates/product.json
+#       MT=live bash soLive.sh "$HOME/my-project/shop-christmasspin" assets/custom.css
+#
+# Mac dinh la `ss` chu KHONG phai `live`: tu 15/10/2026 store dang ban la Skin
+# Solutions. De mac dinh tro store cu thi phep kiem van chay, van in "ok" —
+# nhung no so sanh voi mot store khong ai dung nua. Bao an toan gia con nguy
+# hiem hon bao loi.
 #
 # VI SAO CO TEP NAY: ngay 14/10/2026 cach lam cu la
 #   git stash -> theme pull -> git diff --stat -> git checkout -- . -> stash pop
@@ -23,7 +33,14 @@ cp "$REPO/shopify.theme.toml" "$TAM/" 2>/dev/null
 # CLI khong nhan ra la thu muc theme (bay da ghi trong BAY-DA-TRA-GIA.md).
 DICH="$TAM"; command -v cygpath >/dev/null && DICH="$(cygpath -w "$TAM")"
 ARGS=(); for f in "$@"; do ARGS+=(--only "$f"); done
-( cd "$TAM" && shopify theme pull -e live --no-input --force "${ARGS[@]}" --path "$DICH" >/dev/null 2>&1 )
+# Moi truong `ss` CO Y khong khai `theme` trong shopify.theme.toml (de khong
+# lo push nham sang store kia), nen pull phai chi dinh id ro rang. Thieu no thi
+# CLI doi hoi chon theme, ma `--no-input` lam no chet im — ra "KHONG KEO DUOC"
+# cho moi tep ma khong noi vi sao. Da dinh 15/10/2026.
+THEME_ID="${THEME:-}"
+if [ -z "$THEME_ID" ] && [ "${MT:-ss}" = "ss" ]; then THEME_ID=167861190891; fi
+TARG=(); [ -n "$THEME_ID" ] && TARG=(--theme "$THEME_ID")
+( cd "$TAM" && shopify theme pull -e "${MT:-ss}" "${TARG[@]}" --no-input --force "${ARGS[@]}" --path "$DICH" >/dev/null 2>&1 )
 # Shopify tu gan khoi chu thich "IMPORTANT: ... auto-generated" vao dau tep
 # JSON sau moi lan ghi. Khong phai thay doi cua ai — bo no o CA HAI ve truoc
 # khi so, neu khong lan nao cung bao do gia.
@@ -55,7 +72,7 @@ except Exception: sys.stdout.write(s)
 banRepo() { git -C "$REPO" show "HEAD:$1" 2>/dev/null | boChuThich; }
 KHAC=0
 for f in "$@"; do
-  if [ ! -f "$TAM/$f" ]; then echo "?? $f: khong keo duoc tu live"; KHAC=1; continue; fi
+  if [ ! -f "$TAM/$f" ]; then echo "?? $f: KHONG KEO DUOC (moi truong MT=${MT:-ss}) — kiem shopify.theme.toml"; KHAC=1; continue; fi
   if ! diff -q <(banRepo "$f" | chuanHoa "$f") <(boChuThich < "$TAM/$f" | chuanHoa "$f") >/dev/null 2>&1; then
     echo "!! $f KHAC tren live (so voi HEAD):"
     echo "   < repo    > live"

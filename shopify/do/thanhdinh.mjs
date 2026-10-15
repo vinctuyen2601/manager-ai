@@ -1,3 +1,18 @@
+// Store nao: tham so dau tien, mac dinh la store DANG BAN (Skin Solutions).
+//   node thanhdinh.mjs            -> skinsolutions.online   (mac dinh)
+//   node thanhdinh.mjs cu         -> 5jxr9j-bp (store Santa Spins cu)
+// Tu 15/10/2026 Santa Spins ban tren Skin Solutions; store cu chua bat duoc
+// cong thanh toan. Gan cung URL mot store la lan sau do nham cho, va so lieu
+// trong van dung nen khong ai phat hien.
+const STORE = (process.argv[2] || 'ss');
+const TRANG = STORE === 'cu'
+  ? 'https://5jxr9j-bp.myshopify.com/products/santa-spins-music-box'
+  : 'https://skinsolutions.online/products/santa-spins-music-box?country=US';
+// Noi tham so pha cache bang dung dau: URL store moi DA co `?country=US`, nen
+// `?x=` nua se thanh `?country=US?x=...` — Shopify bo qua ca hai, va phep do
+// chay tren ban cache cu.
+const PHA = (u) => u + (u.includes('?') ? '&' : '?') + 'x=' + Date.now();
+
 const CDP = 'http://127.0.0.1:9333';
 const tab = await (await fetch(`${CDP}/json/new?about:blank`, { method: 'PUT' })).json();
 const ws = new WebSocket(tab.webSocketDebuggerUrl);
@@ -8,7 +23,7 @@ const goi = (m, p = {}) => new Promise((res) => { const i = ++id; cho.set(i, res
 const js = async (e) => (await goi('Runtime.evaluate', { expression: e, returnByValue: true, awaitPromise: true })).result?.result?.value;
 await goi('Page.enable');
 await goi('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 1, mobile: true });
-await goi('Page.navigate', { url: 'https://5jxr9j-bp.myshopify.com/products/santa-spins-music-box?x=' + Date.now() });
+await goi('Page.navigate', { url: PHA(TRANG) });
 await new Promise((r) => setTimeout(r, 9000));
 await js(`fetch('/cart/clear.js',{method:'POST'}).then(r=>r.text())`);
 // chon Buy 3
