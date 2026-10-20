@@ -131,9 +131,12 @@ phải **cài lại app lên cửa hàng**, Release thôi chưa đủ.
 11. Đo lại: trang = giỏ = checkout ở cả US và VN (bẫy đổi tiền tệ 15/10).
 
 ### ✅ Đã dựng 20/10/2026 (theme `db05af0`, nhánh `skinsolutions`, đã đẩy live)
-- `templates/product.memory-orb.json`: cùng bố cục Santa, chữ viết mới. **Bỏ**
-  đếm ngược, "Loved by 500+ / 200+ this week", review mẫu Santa, mini-review,
-  thanh tồn kho "Only 17 left". Muốn bật cái nào thì hỏi chủ shop từng cái.
+- `templates/product.memory-orb.json`: chủ shop yêu cầu **giống hệt Santa**
+  (20/10) → đủ bộ khối, cùng thứ tự, chữ viết mới. Đếm ngược daily, thanh tồn
+  kho, ghi chú tồn kho: BẬT như Santa. Bằng chứng xã hội ("Loved by ___"),
+  mini-review, slider review, khối video: **có khối nhưng TẮT, nội dung để
+  trống**. Orb chưa có đơn, đánh giá hay video; chủ shop điền số thật rồi
+  bật trong trình soạn.
 - Khối chọn gói có ô `so_goi` mới: Orb = **2 gói**, `giam2_pt = 9.985` → Buy 2
   = $108.00 đúng. Nhãn 36% / 43% OFF (làm tròn xuống), badge "BEST VALUE".
 - Trang hướng dẫn `templates/page.orb-setup.json`: cắt vuông → đổi 480×480 →
