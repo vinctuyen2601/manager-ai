@@ -177,6 +177,16 @@ Có hai giá trị trở lên (China / US) thì để nguyên: giá và tồn kh
 Chưa đo được trên Orb (sản phẩm chưa hiện ra storefront); đã đo hồi quy trên
 áo ngực 2 tuỳ chọn: chọn biến thể chạy, giỏ ghi "Black, S".
 
+### Chỉ bán màu White (21/10/2026)
+Chủ shop: "chỉ làm 1 màu… chỉ có màu trắng". Theme: khối chọn màu TẮT trên
+template Orb; khối chọn gói có ô mới `mau_mac_dinh = White` — luôn bán biến
+thể có giá trị "White" (còn hàng), kể cả khi khách vào bằng `?variant=<Black>`.
+Đã đo bằng template thử trên áo ngực: vào bằng Beige → khối gói bán Black
+(ô đặt "Black"). Santa không đổi: TONG 142, thanh dính 3 x Santa Spins.
+⬜ **Chủ shop xoá biến thể Black trong Admin** — còn nó thì vẫn mua được qua
+Shop app / Google Shopping / link cũ, theme không chặn được những đường đó.
+Mục "Biến thể" ở bảng mục 1 giờ là **White**.
+
 ### ⬜ Chủ shop làm để trang chạy thật
 1. Tạo sản phẩm, gán **Theme template = `memory-orb`**.
 2. Tạo Page **"Memory Orb setup guide"**, handle **`orb-setup`**, template
