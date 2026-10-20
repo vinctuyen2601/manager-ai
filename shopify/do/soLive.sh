@@ -55,17 +55,24 @@ boChuThich() { sed '1{/^\/\*/!b};1,/\*\//{/^\/\*/,/\*\//d}' | tr -d '\r'; }
 # nam o dong khac. Mat mot vong soi moi loai duoc.
 #
 # Bao dong gia nguy hiem dung bang bo sot: ai cung se hoc cach lo phep kiem.
+#
+# Chuan hoa bang NODE, khong phai python3. Ngay 20/10/2026 tren may Windows,
+# `python3` la loi tat cua Microsoft Store: in "Python was not found" ra
+# stderr, stdout RONG. Ca hai ve rong thi bang nhau -> moi tep .json deu in
+# "ok", ke ca khi chu shop da sua tren live. Node thi may nao lam theme cung
+# co (Shopify CLI chay tren node). Loi parse thi in nguyen van — khong bao gio
+# in rong.
 chuanHoa() {
   case "$1" in
-    *.json) python3 -c "
-import json,re,sys
-s=re.sub(r'^\s*/\*.*?\*/','',sys.stdin.read(),flags=re.S)
-try: print(json.dumps(json.loads(s), indent=2, sort_keys=True, ensure_ascii=False))
-except Exception: sys.stdout.write(s)
-" ;;
+    *.json) node -e '
+let s=require("fs").readFileSync(0,"utf8").replace(/^﻿?\s*\/\*[\s\S]*?\*\//,"");
+const srt=x=>Array.isArray(x)?x.map(srt):x&&typeof x=="object"?Object.fromEntries(Object.keys(x).sort().map(k=>[k,srt(x[k])])):x;
+try{process.stdout.write(JSON.stringify(srt(JSON.parse(s)),null,2)+"\n")}catch(e){process.stdout.write(s)}
+' ;;
     *) cat ;;
   esac
 }
+command -v node >/dev/null || { echo "!! khong co node — phep so .json se bao ok gia. Dung lai."; exit 1; }
 # So voi ban DA COMMIT (HEAD), khong phai thu muc lam viec: thu muc lam viec
 # dang chua chinh sua sap push, so voi no thi lan nao cung bao do — chinh
 # minh tu bao dong gia ve viec minh dang lam (do 14/10/2026).

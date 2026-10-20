@@ -130,9 +130,40 @@ phải **cài lại app lên cửa hàng**, Release thôi chưa đủ.
     chốt 13/10: lấy cấu trúc phễu và cơ chế, viết lại lời.
 11. Đo lại: trang = giỏ = checkout ở cả US và VN (bẫy đổi tiền tệ 15/10).
 
-### Không phải làm
-- `snippets/la-santa.liquid` **giữ nguyên**. Orb cùng tệp khách với Santa
-  Spins (quà Giáng sinh, kỷ niệm) nên dùng chung header/footer nhóm Santa.
+### ✅ Đã dựng 20/10/2026 (theme `db05af0`, nhánh `skinsolutions`, đã đẩy live)
+- `templates/product.memory-orb.json`: cùng bố cục Santa, chữ viết mới. **Bỏ**
+  đếm ngược, "Loved by 500+ / 200+ this week", review mẫu Santa, mini-review,
+  thanh tồn kho "Only 17 left". Muốn bật cái nào thì hỏi chủ shop từng cái.
+- Khối chọn gói có ô `so_goi` mới: Orb = **2 gói**, `giam2_pt = 9.985` → Buy 2
+  = $108.00 đúng. Nhãn 36% / 43% OFF (làm tròn xuống), badge "BEST VALUE".
+- Trang hướng dẫn `templates/page.orb-setup.json`: cắt vuông → đổi 480×480 →
+  cắm USB-C → kéo thả, kèm mục gỡ lỗi. Trang sản phẩm link `/pages/orb-setup`
+  ở 3 chỗ.
+- Xem trước: `skinsolutions.online/products/santa-spins-music-box?view=memory-orb`
+  (giá hiện là giá Santa $80 vì mượn sản phẩm Santa để xem).
+- Đã đo: Orb 2 gói, Santa vẫn 3 gói $80/$136/$189, `kiemgio` TONG 142,
+  `thanhdinh` 3 x Santa Spins.
+
+### ⬜ Chủ shop làm để trang chạy thật
+1. Tạo sản phẩm, gán **Theme template = `memory-orb`**.
+2. Tạo Page **"Memory Orb setup guide"**, handle **`orb-setup`**, template
+   `orb-setup`, để **Visible** (Hidden là 404, đã dính với Page `shop`).
+3. Giảm giá tự động $11.98 (mục 7 trên).
+4. Thêm Orb vào **shipping profile free** — trang ghi "FREE Shipping" và
+   "Shipping is free worldwide".
+5. 🔴 **Xác nhận thời gian giao.** Trang đang ghi **8–15 ngày làm việc,
+   "Order by 1 December"** — lấy theo đối thủ, CHƯA kiểm với nhà cung cấp.
+6. Có video thật thì thêm khối video vào section "buoc" (đã bỏ khối video
+   Santa; ô video trỏ tệp không tồn tại thì Shopify từ chối cả template).
+
+### Đính chính: `la-santa` PHẢI sửa, không giữ nguyên
+Bản trước ghi "giữ nguyên `snippets/la-santa.liquid`" với ý Orb dùng chung
+nhóm Santa. Nhưng điều kiện chỉ bắt suffix `santa-spins` — giữ nguyên thì
+trang Orb rơi vào **nhóm store** (logo Skin Solutions, không tuyết/nhạc). Đã
+thêm `memory-orb` + `orb-setup`, và giỏ có sản phẩm template `memory-orb`.
+
+Còn lệch, chưa sửa: footer nhóm Santa có câu về hộp nhạc ("The fridge
+plays…"); giỏ chỉ có Orb mà trống thì "Continue shopping" về trang Santa.
 
 ---
 

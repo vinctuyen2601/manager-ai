@@ -425,6 +425,13 @@ Nó kéo bản live vào thư mục TẠM riêng, bỏ khối chú thích "auto-
 mà Shopify tự gắn, so với repo, và **exit 1** nếu khác — in diff, giữ nguyên
 bản live để đọc. Khác thì đưa thay đổi của chủ shop vào repo TRƯỚC, push SAU.
 
+🔴 **20/10/2026: phép so `.json` báo "ok" GIẢ trên máy Windows.** Bản cũ
+chuẩn hoá JSON bằng `python3` — trên Windows đó là lối tắt Microsoft Store,
+in "Python was not found" ra stderr, stdout **rỗng**. Rỗng = rỗng → mọi tệp
+JSON đều "ok", kể cả khi live đã bị sửa. Mọi lần chạy `soLive` trên máy
+Windows trước ngày này **không bảo vệ được tệp `.json` nào**. Đã đổi sang
+node. Thấy dòng "Python was not found" lẫn giữa các dòng "ok" là dấu hiệu.
+
 Trình soạn theme hay "chuẩn hoá" tệp khi lưu (thêm `blocks: {}` rỗng, thêm
 giá trị mặc định cho mọi thiết lập) — vài trăm dòng khác mà chỉ một dòng là
 sửa thật. Lọc riêng `DOI` (đổi giá trị) và `BO` (bỏ) để thấy thay đổi thật.
