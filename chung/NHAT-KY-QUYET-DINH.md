@@ -871,3 +871,38 @@ khác tên sản phẩm (đã đề nghị statement descriptor `SKINSOL* SANTAS
    (khi đó ưu tiên tạo Page `shop` và đưa link vào quảng cáo cũ).
 
 **Kiểm ngày:** 15/12/2026 · **Trạng thái:** ⏳ chờ kiểm
+
+---
+
+## QĐ-22 · 20/10/2026 · Shopify: nhận Memory Orb, loại người tuyết biết hát
+
+**Làm gì:** sản phẩm thứ hai là **Memory Orb™** — $59.99, Buy 2 = $108, vốn
+$36/cái cả ship. **Loại** món người tuyết biết hát đã cân nhắc trước đó.
+
+**Vì sao loại người tuyết:** Sharper Image bán cùng món **$55.99, giao 3–5
+ngày, đổi trả 60 ngày**; dropship bán $45.99 ship 16 ngày chỉ rẻ hơn $10. Nó
+là **mặt hàng bán lẻ phổ thông** (Sharper Image, QVC, Walmart đều có) nên
+biên bị kẹp. Listing nguồn chỉ **16 đơn, 1 đánh giá**, nội dung đánh giá duy
+nhất là *"everything arrived broken"*, hàng 30cm nhựa rỗng có điện.
+
+**Vì sao nhận Orb:** cá nhân hoá (khách bỏ video của chính họ vào) nên Walmart
+khó cạnh tranh bằng giá; nhỏ nhẹ 350g nên ít vỡ; cùng tệp khách Santa Spins
+nên dùng chung header/footer và cả bộ khối — dựng nửa ngày thay vì ba ngày.
+
+**Rủi ro đã nêu, chủ shop vẫn chốt:** biên mỏng. Tỉ lệ bán/vốn **1,67×**
+(Santa Spins 1,98×; chuẩn dropship 2,5–3×). Lãi Buy 1 **$21.95** chính là
+trần CPA. Walmart đã neo giá công khai ở **$49.66–59.29** cho cùng loại.
+
+**Dự đoán** (kiểm khi đủ 30 đơn Orb, hoặc 15/12/2026):
+1. **CPA trung bình ≤ $18.** Vượt $22 là lỗ trên từng đơn — lúc đó phải tăng
+   giá hoặc đổi nguồn, không phải tăng ngân sách.
+2. **Buy 2 chiếm ≥ 25% số đơn.** Dưới 15% nghĩa là nấc $108 không đủ hút;
+   bỏ gói hoặc giảm sâu hơn.
+3. **Tỉ lệ hoàn/khiếu nại ≤ 5%**, và lý do chính KHÔNG phải bước đổi video
+   480×480. Nếu bước đó là lý do số một thì trang bán đã giấu nó quá kỹ.
+
+**Giả định chưa kiểm:** giá vốn 2–3 cái ($65.47 / $92.01) là **suy ra** từ tỉ
+lệ gộp ship của Santa Spins, chưa hỏi nhà cung cấp. Và chưa biết số đơn đã
+bán của listing nguồn — đúng con số đã loại món người tuyết.
+
+**Kiểm ngày:** 30 đơn đầu hoặc 15/12/2026 · **Trạng thái:** ⏳ chờ kiểm
