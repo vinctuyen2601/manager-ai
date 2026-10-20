@@ -8,7 +8,9 @@ Chốt ngày 20/10/2026. Đọc tệp này là làm tiếp được ngay.
 
 | | |
 |---|---|
-| Sản phẩm | **Memory Orb™** — quả cầu trưng bày video của chính khách |
+| Sản phẩm | **Santa's Memory Globe™** (đổi tên 21/10/2026, trước là "Memory Orb™") — quả cầu trưng bày video của chính khách |
+| Vì sao đổi | "Memory Orb" là tên chung cả chục shop dùng (Walmart: "Christmas Memory Orb", "3D Memory Orb"…) → khách không phân biệt được shop. Chủ shop muốn có không khí Giáng sinh; tên cùng họ với Santa Spins™. Tránh "Loop" (không tự lặp), "Ornament/Bauble" (nặng, không treo được), "Snow Globe" trần (khách tưởng có nước/tuyết). Web search 21/10 chưa thấy ai dùng — **chưa tra USPTO**. |
+| Tên NỘI BỘ giữ nguyên | template `memory-orb`, Page `orb-setup`, tệp ảnh `memory-orb-…`, tệp này — khách không thấy, đổi là gãy chỗ chủ shop đã gán |
 | Giá bán | **$59.99** (gạch **$94.99**) — chủ shop chốt |
 | **Buy 2** | **$108.00** — chủ shop chốt (giảm 9,98%, tức $54/cái) |
 | Buy 3 | ⬜ **CHƯA CHỐT** — xem mục 4 |
