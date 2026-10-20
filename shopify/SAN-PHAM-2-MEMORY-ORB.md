@@ -161,8 +161,9 @@ tệp không tồn tại là Shopify từ chối cả template).
 | `orb-guide-1` … `orb-guide-3` | ảnh minh hoạ 3 bước trên `/pages/orb-setup` |
 
 Thư viện ảnh đầu trang = ảnh của sản phẩm trong Admin, không theo tên.
-🔴 Tải lên trùng tên tệp đã có thì Shopify tự thêm đuôi lạ (`orb-intro_a1b2`)
-→ không khớp. Xoá tệp cũ trước rồi tải lại.
+🔴 Tải lên trùng tên tệp đã có: chọn **Replace**, đừng chọn giữ cả hai — giữ
+cả hai thì tệp mới mang tên khác, không khớp nữa. (Chưa đo; suy từ cách
+Files xử lý trùng tên.)
 
 ### ⬜ Chủ shop làm để trang chạy thật
 1. Tạo sản phẩm, gán **Theme template = `memory-orb`**.
