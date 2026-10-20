@@ -147,6 +147,23 @@ phải **cài lại app lên cửa hàng**, Release thôi chưa đủ.
 - Đã đo: Orb 2 gói, Santa vẫn 3 gói $80/$136/$189, `kiemgio` TONG 142,
   `thanhdinh` 3 x Santa Spins.
 
+### Ảnh đặt sẵn theo TÊN TỆP (theme `def68c9`)
+Chủ shop tải lên **Content → Files** đúng tên là ảnh tự hiện, không cần mở
+trình soạn. Đuôi `.jpg/.jpeg/.png/.webp` đều được. Chưa có tệp thì chỗ đó
+trống, trang không vỡ (`images['tên']` trả rỗng; khác với ô chọn ảnh, trỏ
+tệp không tồn tại là Shopify từ chối cả template).
+
+| tên tệp | hiện ở |
+|---|---|
+| `orb-intro` | khối "A photo shows the moment" (chưa có → ảnh đầu của sản phẩm) |
+| `orb-review-1` … `orb-review-6` | slider review (khối đang TẮT) |
+| `orb-avatar-1` … `orb-avatar-3` | mini-review cạnh nút mua (khối đang TẮT) |
+| `orb-guide-1` … `orb-guide-3` | ảnh minh hoạ 3 bước trên `/pages/orb-setup` |
+
+Thư viện ảnh đầu trang = ảnh của sản phẩm trong Admin, không theo tên.
+🔴 Tải lên trùng tên tệp đã có thì Shopify tự thêm đuôi lạ (`orb-intro_a1b2`)
+→ không khớp. Xoá tệp cũ trước rồi tải lại.
+
 ### ⬜ Chủ shop làm để trang chạy thật
 1. Tạo sản phẩm, gán **Theme template = `memory-orb`**.
 2. Tạo Page **"Memory Orb setup guide"**, handle **`orb-setup`**, template
