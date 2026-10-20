@@ -169,6 +169,14 @@ Thư viện ảnh đầu trang = ảnh của sản phẩm trong Admin, không th
 cả hai thì tệp mới mang tên khác, không khớp nữa. (Chưa đo; suy từ cách
 Files xử lý trùng tên.)
 
+### Ẩn "Ships From" của DSers (theme `336419f`, 21/10/2026)
+Chủ shop: "bỏ ship from". Theme ẩn tuỳ chọn tên `Ships From` / `Ship From`
+ở trang sản phẩm và dòng biến thể trong giỏ — **chỉ khi nó có MỘT giá trị**.
+Có hai giá trị trở lên (China / US) thì để nguyên: giá và tồn kho có thể khác,
+ẩn đi khách mất quyền chọn → trường hợp đó xoá option trong Admin/DSers.
+Chưa đo được trên Orb (sản phẩm chưa hiện ra storefront); đã đo hồi quy trên
+áo ngực 2 tuỳ chọn: chọn biến thể chạy, giỏ ghi "Black, S".
+
 ### ⬜ Chủ shop làm để trang chạy thật
 1. Tạo sản phẩm, gán **Theme template = `memory-orb`**.
 2. Tạo Page **"Memory Orb setup guide"**, handle **`orb-setup`**, template
