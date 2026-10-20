@@ -187,6 +187,33 @@ thể có giá trị "White" (còn hàng), kể cả khi khách vào bằng `?va
 Shop app / Google Shopping / link cũ, theme không chặn được những đường đó.
 Mục "Biến thể" ở bảng mục 1 giờ là **White**.
 
+### Listing nguồn + 415 đánh giá thật (21/10/2026)
+Chủ shop gửi: `aliexpress.us/item/3256809531652901.html` (API đánh giá nhận
+NGUYÊN id `3256…`, đổi sang `1005…` thì ra 0). **415 đánh giá, 4,4 sao**:
+5★ 316 · 4★ 41 · 3★ 18 · 2★ 5 · **1★ 35 (8,3%)**; 189 có chữ, 54 có ảnh.
+Mục 4.2 "số đơn" coi như đã có câu trả lời: vài trăm đánh giá → đủ tiêu chí 3.
+
+Tệp nhập Judge.me: `D:/my project/judgeme-import-memory-orb.csv` — đủ 415,
+không lọc, cùng cột với tệp Santa. `product_handle` = `memory-orb` **đoán**
+(sản phẩm chưa hiện storefront) — sai handle thì Judge.me không gắn được.
+10 đánh giá nhắc "AliExpress / seller / store" — để nguyên, chủ shop tự ẩn
+trong Judge.me nếu muốn. KHÔNG sửa chữ đánh giá.
+
+🔴 **Rủi ro thật đọc từ đánh giá — đổi cả trang lẫn bảng lãi:**
+- **Hàng lỗi/vỡ cao**: ~24/189 đánh giá có chữ nói vỡ kính, màn chết, không
+  nhận máy, tắt sau 2 giây. Mỗi cái là một lần hoàn tiền/gửi lại ($36 vốn).
+  Nên **đặt 1–2 cái mẫu trước khi chạy quảng cáo**.
+- **Khó nạp video** là phàn nàn số một (MP4 H.264 480×480, tiếng MP3
+  128 kbps theo sách hướng dẫn; phần mềm hãng gợi ý là trả phí).
+- **Nặng, không treo cây được** — hộp có **đế**.
+- **Video tự nạp không tự lặp** như video mẫu; **một video mỗi lần**, bấm chuyển.
+- Mac tạo tệp ẩn làm máy không phát; clip > 1 phút dễ đứng hình; phải sạc đầy
+  trước; dây điện thoại thường chỉ sạc, không truyền dữ liệu.
+Đã sửa trang (theme `3b32ac9`): bỏ "Made to Hang on the Tree" / "loops" /
+"sturdy branch", thêm đế, có tiếng, một clip một lúc; trang hướng dẫn thành
+4 bước + mục Mac + gỡ lỗi đứng hình. **Mô tả sản phẩm mình đưa trước đó có
+"plays on a loop" và "Light enough to hang" — SAI, chủ shop phải sửa.**
+
 ### ⬜ Chủ shop làm để trang chạy thật
 1. Tạo sản phẩm, gán **Theme template = `memory-orb`**.
 2. Tạo Page **"Memory Orb setup guide"**, handle **`orb-setup`**, template
