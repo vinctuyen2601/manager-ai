@@ -147,7 +147,7 @@ phải **cài lại app lên cửa hàng**, Release thôi chưa đủ.
 - Đã đo: Orb 2 gói, Santa vẫn 3 gói $80/$136/$189, `kiemgio` TONG 142,
   `thanhdinh` 3 x Santa Spins.
 
-### Ảnh đặt sẵn theo TÊN TỆP (theme `def68c9`)
+### Ảnh/video đặt sẵn theo TÊN TỆP (theme `bf63ed9`)
 Chủ shop tải lên **Content → Files** đúng tên là ảnh tự hiện, không cần mở
 trình soạn. Đuôi `.jpg/.jpeg/.png/.webp` đều được. Chưa có tệp thì chỗ đó
 trống, trang không vỡ (`images['tên']` trả rỗng; khác với ô chọn ảnh, trỏ
@@ -155,10 +155,14 @@ tệp không tồn tại là Shopify từ chối cả template).
 
 | tên tệp | hiện ở |
 |---|---|
-| `orb-intro` | khối "A photo shows the moment" (chưa có → ảnh đầu của sản phẩm) |
-| `orb-review-1` … `orb-review-6` | slider review (khối đang TẮT) |
-| `orb-avatar-1` … `orb-avatar-3` | mini-review cạnh nút mua (khối đang TẮT) |
-| `orb-guide-1` … `orb-guide-3` | ảnh minh hoạ 3 bước trên `/pages/orb-setup` |
+| `memory-orb-intro` | khối "A photo shows the moment" (chưa có → ảnh đầu của sản phẩm) |
+| `memory-orb-review-1` … `-6` | slider review (khối đang TẮT) |
+| `memory-orb-avatar-1` … `-3` | mini-review cạnh nút mua (khối đang TẮT) |
+| `memory-orb-guide-1` … `-3` | ảnh minh hoạ 3 bước trên `/pages/orb-setup` |
+
+| `memory-orb-how-it-works.mp4` | video phần "How it works" — **KHÔNG tự hiện**: ô video trỏ tệp chưa có là Shopify từ chối cả template, nên tải lên xong trợ lý mới trỏ vào và bật khối |
+
+Tiền tố đủ `memory-orb-` (chủ shop 21/10: "dễ bị lẫn"): Files xếp theo chữ cái nên mọi tệp Orb đứng một cụm, tách khỏi tệp Santa.
 
 Thư viện ảnh đầu trang = ảnh của sản phẩm trong Admin, không theo tên.
 🔴 Tải lên trùng tên tệp đã có: chọn **Replace**, đừng chọn giữ cả hai — giữ
