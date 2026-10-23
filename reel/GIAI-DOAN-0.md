@@ -126,7 +126,9 @@ giữ hình thật — đứng yên một góc thì model nào cũng giữ đư�
 - [ ] Làm M0 bằng tay cho 3 sản phẩm đó: kiểm ảnh, sơ chế, ra tờ sản phẩm + bản tóm tắt
 - [ ] Chọn 3 reel viral tiếng Anh (TikTok, Facebook Reels, Top Ads), khác ngách và khác format; ghi lượt xem, ngày đăng
 - [ ] Thử Muse: 3 clip dọc, ghi lại sản phẩm và mặt người mẫu có giữ được không
-- [ ] Cài skill Hypit vào Claude Code, chạy 1 video qua Seedance
+- [ ] **Chủ dự án:** tài khoản BytePlus (bản quốc tế), bật ModelArk + model Seedance, nạp ít tiền, tạo API key → để vào `reel/thu-nghiem/.env` (KHÔNG dán vào chat); chụp trang giá Seedance chính thức
+- [ ] **Trợ lý:** tạo project Hypit trong `reel/thu-nghiem/hypit-santa/`, viết provider BytePlus từ mẫu `provider-videos`, chạy test vòng đời không tốn tiền
+- [ ] Chạy 1 video Santa Spins qua Seedance, cùng 2 prompt Muse, `firstFrame` = khung cuối cảnh trước; so cùng tiêu chí
 - [ ] Ghi chi phí thật và số lần sinh lại mỗi cảnh vào bảng dưới
 - [ ] Quyết Cửa 0: đi tiếp, đổi model, hay dừng
 
