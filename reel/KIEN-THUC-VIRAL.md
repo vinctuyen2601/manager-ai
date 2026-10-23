@@ -174,9 +174,12 @@ thống kê; tên cửa hàng thì không).
 **Luật:**
 1. **Logo thật, luôn luôn** — trên mọi thứ thuộc về sản phẩm có trong khung hình (hộp, bao bì, thẻ quà…).
    Không thay bằng biểu tượng chung chung "cho đẹp".
-2. **Logo không bao giờ để AI vẽ.** AI vẽ sai chữ (đo 23/10). Cách làm: **ghép logo thật bằng máy** vào
-   ảnh tham chiếu và vào **khung đầu** của clip (Muse giữ thứ có sẵn trong khung đầu tốt hơn tự vẽ); chỗ nào
-   logo lộ rõ mà bị méo → ghép lại khi dựng.
+2. **AI được vẽ lại logo cho đẹp và hợp cảnh — nhưng phải tham chiếu và dựa trên logo thật** (chủ dự án sửa
+   luật 23/10). Ví dụ: in vàng lá, dập nổi, hoà vào ánh sáng và chất liệu của hộp. Luôn đưa **logo thật** (hoặc
+   ảnh đã có logo thật) vào ảnh tham chiếu/khung đầu. **Phải giữ được nhận diện:** hình dáng (huy hiệu tròn),
+   **chữ đúng từng ký tự**, hình chính (đĩa than đỏ nhãn vàng), màu nhận ra được. **Kiểm chữ** ở chỗ logo lộ rõ
+   (cận cảnh, khung đầu): méo / sai chữ → sinh lại, hoặc ghép logo thật khi dựng. Ảnh S 23/10 là mẫu đúng: Muse
+   vẽ lại logo từ tham chiếu, hợp ánh sáng, **đúng từng chữ**.
 3. **Một slogan, dùng nhất quán** ở mọi video của một thương hiệu — lấy từ hồ sơ sản phẩm, không mỗi video
    viết một câu. Slogan khác với chữ hook: hook đổi theo khung/lô test; **slogan cố định**.
 4. **Đặt ở đâu:** logo **trong cảnh** (trên hộp, trên sản phẩm) ở mọi bản. Bản **quảng cáo** thêm **1 s cuối**:
