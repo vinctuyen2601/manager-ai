@@ -54,6 +54,63 @@ Câu hỏi duy nhất: **Muse có giữ đúng hình sản phẩm qua 2 clip n�
    - Hạn mức tuần giảm bao nhiêu % sau 2 clip?
 4. Nếu còn thời gian, thử thêm 1 clip có ảnh người mẫu thật, để xem mặt giữ được tới đâu.
 
+### Bộ ảnh + prompt đã chuẩn bị (23/10/2026)
+
+Ảnh ở `reel/thu-nghiem/muse/` (gitignore — **chỉ có trên máy `David-PC`**;
+máy khác chạy lại: tải 5 ảnh từ `skinsolutions.online/products/santa-spins-music-box.js`).
+
+| Tệp | Từ ảnh store | Dùng |
+|---|---|---|
+| `santa-spins-hand-disc-9x16.jpg` | ảnh 2 (1600², cắt 900×1600) | **khung đầu clip 1** |
+| `santa-spins-hand-disc.jpg` | ảnh 2 nguyên | tham chiếu |
+| `santa-spins-real-photo.jpg` | ảnh 4 = ảnh khách thật (720²) | tham chiếu: đúng hàng thật |
+| `du-phong-santa-spins-merry-design.jpg` | ảnh 3 | **KHÔNG dùng chung** — xem 🔴 dưới |
+
+Bỏ: ảnh 1 (chữ + icon in đè, ghép đĩa) và ảnh 5 (chỉ có chữ).
+
+🔴 **M0 bắt được lỗi nguyên liệu ngay ca đầu:** store có **hai mẫu mặt máy
+khác nhau** — ảnh 2 + ảnh khách là bìa album ghép ("THIS IS THE SHINING
+STAR…"), ảnh 1 + ảnh 3 là "Merry Christmas" hộp quà. Đưa cả hai vào thì model
+trộn, không đo được "giữ hình". Chọn bản ghép bìa vì ảnh khách thật là bản đó.
+
+🔴 **Mặt máy in bìa album thật** (Mariah Carey, Wham!, Frank Sinatra, Bobby
+Helms, Decca) — đem vào video quảng cáo là rủi ro bản quyền / hình người nổi
+tiếng; chính ảnh store cũng vậy. Chủ dự án quyết; M0 sau này nên có mục dò
+"mặt người thật / logo hãng khác trên sản phẩm".
+
+**Clip 1** — khung đầu `santa-spins-hand-disc-9x16.jpg`, tham chiếu thêm `santa-spins-real-photo.jpg`:
+
+```
+media-generation, type video, --orientation vertical, --image-file santa-spins-hand-disc-9x16.jpg
+
+Vertical 9:16 close-up. A hand gently presses the round black music disc onto the
+centre of the square clear-acrylic music player mounted on a white fridge door,
+then lets go. The white LED ring around the centre lights up softly and the disc
+starts to spin slowly. Static camera with a very slow push-in. Warm indoor light,
+soft out-of-focus Christmas lights in the background.
+Keep the player exactly as in the reference: square clear acrylic frame, four
+silver corner screws, printed album-art panel, progress bar and play controls along
+the bottom, glowing ring in the centre. Do not change its shape, proportions or
+printed artwork. Do not add any new text, logos or faces. Natural hand, five fingers.
+```
+
+**Clip 2** — khung đầu = **khung cuối của clip 1** (tải clip 1, lấy khung cuối:
+`ffmpeg -sseof -0.1 -i clip1.mp4 -frames:v 1 clip1-last.jpg`):
+
+```
+media-generation, type video, --orientation vertical, --image-file clip1-last.jpg
+
+Continue the same shot. The disc keeps spinning and the ring keeps glowing. The
+camera slowly arcs about 20 degrees to the right and pulls back, revealing the
+side edge and thickness of the acrylic player on the fridge door and a cosy
+kitchen with a decorated Christmas tree and warm string lights behind it.
+Same player, same artwork, same lighting as the first frame. Do not change the
+player's shape, size or printed artwork. No new text, logos or people.
+```
+
+Clip 2 cố ý **đổi góc nhìn** (vòng sang bên, lộ độ dày): đó mới là phép thử
+giữ hình thật — đứng yên một góc thì model nào cũng giữ được.
+
 **Đọc kết quả:**
 - Sản phẩm giữ đúng ở cả 2 clip → viết skill "Máy làm Reel" chạy trong Muse làm đường chính.
 - Sản phẩm méo hoặc sai logo → chuyển sang BytePlus Seedance (khoảng $2–3/video), Muse chỉ để thử.
