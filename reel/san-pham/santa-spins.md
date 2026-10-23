@@ -37,7 +37,7 @@ sĩ (Andy Williams, Mariah Carey, Bobby Helms…). Đĩa thật in gì? Bài tr�
 | Đĩa | Tròn, viền đen, nhãn tròn in hình giữa; đặt vào **nằm trong vòng LED**. **9 đĩa, 9 nhãn khác nhau** — thấy trong ảnh vali: Mariah Carey "Merry Christmas" · Frank Sinatra Christmas · White Christmas · Ariana Grande "Christmas & Chill" · Andy Williams Christmas Album · Michael Bublé Christmas · "A Christmas for You" · Bobby Helms "Jingle Bell Rock" · "Christmas with Nat King Cole" | ✅ **tỉ lệ đo từ VIDEO THẬT** (mục 3b): **đĩa ≈ 40–45 % bề rộng máy**, **vòng LED ≈ 50 %** (số 1/4–1/3 đo từ ảnh hero trước đó là SAI — ảnh hero gần như render) · ⬜ cm thật (không bắt buộc — máy dùng tỉ lệ) |
 | Mặt sau | ⬜ nam châm ở đâu, cổng USB-C ở đâu, công tắc? | ⬜ |
 | Độ dày | ⬜ | ⬜ |
-| Hộp đóng | **Vali da đỏ thẫm, viền vàng lá quanh nắp, biểu tượng vàng lá cành thông + quả mọng + bông tuyết giữa nắp, không chữ, hai khoá cài vàng mặt trước, bản lề vàng** | ⚠ **máy suy ra 23/10** theo yêu cầu chủ dự án ("tự suy ra cho đẹp, sang trọng mùa Giáng sinh") — bám ngôn ngữ thiết kế nội thất vali; mép đỏ + hai khoá vàng thấy trong ảnh |
+| Hộp đóng | **Bản 2 (ảnh H1, chủ dự án chọn hướng 1, 23/10):** vali da đỏ thẫm bóng nhẹ; **cành thông + quả mọng vàng lá ở 4 góc nắp**; giữa nắp **vòng hạt vàng có bông tuyết** (= hình vòng LED của máy); **nơ satin vàng** ở một góc; hai khoá vàng ở **cạnh dài phía trước**; không chữ. Ảnh: `thu-nghiem/muse/anh-H1-lan1.jpg` — ⚠ ảnh dựng hộp **đứng dọc**, vali thật **nằm ngang, rộng hơn cao** → prompt luôn ghi "lying flat, wider than it is tall" | ⚠ **máy suy ra 23/10** theo yêu cầu chủ dự án ("tự suy ra cho đẹp, sang trọng mùa Giáng sinh") — bám ngôn ngữ thiết kế nội thất vali; mép đỏ + hai khoá vàng thấy trong ảnh |
 | Hộp mở | Lót kem; nắp trong in chữ vàng "Timeless Christmas Memories / The soundtrack of every special moment"; máy giữa, 9 đĩa quanh | ✅ (ảnh render store `giftbox.webp` — ⚠ render, chưa biết có đúng hộp thật) |
 
 ## 3b. Sự thật từ VIDEO THẬT trên trang (crawl 23/10)
@@ -101,11 +101,12 @@ no two alike. NOT round, NOT a vinyl record, NOT a speaker, NO screen.
 ## 5b. Khối mô tả HỘP — dán nguyên văn vào mọi prompt có hộp
 
 ```
-GIFT CASE CLOSED (keep exactly): a luxury Christmas keepsake case, rectangular, in deep
-crimson red textured leatherette. A thin gold-foil border line runs around the lid, and a
-small gold-foil emblem of a pine sprig with red berries and a snowflake sits in the centre
-of the lid. No words on the outside. Two polished gold latches on the front edge, gold
-hinges at the back. Looks like a premium jewellery-style gift case, not a cardboard box.
+GIFT CASE CLOSED (keep exactly): a luxury Christmas keepsake case lying flat, wider than it
+is tall, in deep crimson leatherette with a soft satin sheen. On the lid: elegant gold-foil pine
+branches with small red berries curling into the four corners, and in the centre a gold-foil
+emblem shaped like a ring of tiny dots with a small snowflake inside. A wide champagne-gold satin
+ribbon wraps one corner and ties into a full soft bow. Two polished gold latches on the long
+front edge. No words, no logos, no text. Premium jewellery-style gift case, not a cardboard box.
 ```
 
 ```
