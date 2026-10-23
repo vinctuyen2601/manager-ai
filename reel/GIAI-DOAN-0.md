@@ -119,7 +119,7 @@ giữ hình thật — đứng yên một góc thì model nào cũng giữ đư�
 
 - [x] Chốt trần chi phí, người mẫu, độ dài (23/10: $10 · ảnh thật, thiếu thì AI tạo · 15 giây)
 - [x] Chốt nhà cung cấp giai đoạn 0: ~~HypiHub~~ → Muse trước, BytePlus dự phòng (23/10)
-- [ ] **Phép thử Muse 10 phút** (mục trên)
+- [x] **Phép thử Muse** (23/10, 5 clip Santa Spins — kết quả và phán quyết ở bảng cuối: giữ dáng khi nhìn thẳng, chữ in trôi, đổi góc méo, nối cảnh 0/3)
 - [x] Cài ffmpeg trên máy chạy (máy `David-PC` có sẵn)
 - [x] Cài skill Hypit + chương trình 0.3.1 (chủ dự án cho cài 23/10)
 - [x] Chọn 3 sản phẩm ở 3 ngách khác nhau, có cả ảnh đẹp lẫn ảnh xấu (23/10, bảng dưới)
@@ -156,8 +156,21 @@ Mỗi lần chạy một dòng. Không xoá dòng hỏng — dòng hỏng là d�
 | 23/10 | Santa Spins | — | Muse | 1 (clip 2, lần 1) | 1 | ❌ **méo**: khung vuông → **đĩa tròn** in ghép bìa; vòng đèn trắng → **RGB đổi màu**; rồi lia sang cây thông, máy còn bé ở mép | — | $0 | không | Chủ dự án chạy **không** có `clip1-last.jpg` → khung đầu clip 2 = ảnh gốc, không nối với clip 1. Tiếng to hơn (TB −19,6 dB, đỉnh −3,2). Kết luận tạm: nhìn thẳng thì giữ, **đổi góc thì méo** |
 | 23/10 | Santa Spins | — | Muse | 1 (clip 2, lần 2: lùi thẳng, nói rõ "SQUARE, not round", đèn trắng) | 2 | ⚠ **hình dáng giữ** (vuông, 4 ốc, lưới bìa, thanh điều khiển, đèn trắng ấm, 10 s không méo) — **chữ in bị vẽ lại**: tiêu đề "THIS IS THE SHINING STAR…" → "ANDY WILLIAMS CHRISTMAS ALBUM / It's the Most Wonderful Time of the Year", "MARIAH CHERRY CHRISTMAS", bìa Bobby Helms lặp, logo "BELMS" bịa | — | $0 | không (chữ sai) | **960×960 VUÔNG** dù có `--orientation vertical`; khung đầu **không phải** `clip1-last.jpg` mà là ảnh tham chiếu vuông `santa-spins-hand-disc.jpg` → Muse lấy ảnh tải lên làm khung đầu và theo tỉ lệ của nó. **Bài học: mỗi clip chỉ tải MỘT ảnh, đúng tỉ lệ 9:16.** Phép nối clip 1 → clip 2 vẫn **chưa thử được** lần nào |
 
-**Đọc tới đây (3 clip):**
+| 23/10 | Santa Spins | — | Muse | 1 (clip 1, lần 2) | 3 | ✅ hình dáng + tiêu đề "THIS IS THE SHINING STAR…" giữ; lại đẩy vào tới cận sát đĩa; ánh sáng trắng → đỏ ấm | — | $0 | gần được | 720×1280 (khác lần 1: 704×1248), 24 fps, 10 s, tiếng TB −24 dB |
+| 23/10 | Santa Spins | — | Muse | 1 (clip 2, lần 3) | 4 | ⚠ hình dáng giữ; chữ trôi nhẹ: "JINGLE BELL ROCK" → "JINGLE **BELK**"; **bàn tay biến mất đột ngột** ở giây 1 (không rút ra) | — | $0 | không | 704×1248. Khung đầu lại là **ảnh gốc có tay**, không phải `clip1-last.jpg` — đo SSIM khung đầu clip 2 với khung cuối clip 1 (cả hai bản): **0,34** (trùng khung phải > 0,9). **3/3 lần nối thất bại** |
+
+**Đọc tới đây (5 clip, 23/10):**
 1. Hình dáng sản phẩm: giữ khi nhìn thẳng / lùi thẳng; **méo khi đổi góc**.
 2. **Chữ nhỏ in trên sản phẩm trôi** khi cảnh rộng ra — sản phẩm có nhiều chữ/bìa in là ca khó.
    M0 nên có cờ "sản phẩm có chữ in nhỏ" → ưu tiên cảnh cận hoặc chèn ảnh thật (B-roll) thay vì sinh.
-3. Muse: 704×1248 khi đúng dọc; cần phóng lên 1080×1920.
+3. Muse: 704×1248 hoặc 720×1280 khi đúng dọc; cần phóng lên 1080×1920.
+4. **Nối khung cuối → khung đầu: 0/3.** Không rõ lỗi ở đâu — Muse bỏ qua ảnh,
+   hay agent của Muse chọn nhầm tệp. Phải mở lại lệnh `media-generation` trong
+   lịch sử Muse xem `--image-file` thật sự là tệp nào trước khi kết luận.
+5. Clip cố định **10 s** → reel 15 s = 2 clip, nên phép nối là bắt buộc, không phải tuỳ chọn.
+
+**Phán quyết Muse theo Cửa 0** (tiêu chí 1: giữ hình dáng, màu, logo): **chưa qua.**
+Dùng được làm nguồn miễn phí cho **cảnh nhìn thẳng / cận** (4/5 clip giữ dáng),
+không dùng được cho cảnh đổi góc, cảnh rộng có chữ in, và chưa nối được cảnh.
+Đúng nhánh "sản phẩm méo hoặc sai logo" ở trên → **bước tiếp: thử Seedance qua Hypit**
+(khoảng $2–3/video, chưa kiểm giá) với cùng 2 prompt, so cùng tiêu chí.
