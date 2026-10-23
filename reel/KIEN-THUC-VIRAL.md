@@ -143,6 +143,27 @@ kem…) — không ghi thì AI vẽ cảnh chung chung, mặc định "trung bì
 ấn tượng). **Lợi thế AI:** đẩy đẹp và quy mô lên rất xa với giá rẻ. **Bẫy AI:** quá bóng bẩy →
 prompt luôn giữ *handheld, POV, natural light*.
 
+## 0e. Nguyên tắc quảng cáo — tô điểm sự thật, không bịa sự thật
+
+Chủ dự án 23/10: *"nguyên tắc của quảng cáo: phóng đại sự thật lên một chút, đánh giá cao một chút,
+làm đẹp hơn một chút, đề cao tính năng của sản phẩm"*. Trong nghề gọi là **puffery** — được phép và
+mọi quảng cáo đều làm. Ranh giới: **tô điểm cái có thật** thì được; **bịa cái không có** thì không.
+
+| ĐƯỢC — tô điểm | KHÔNG — bịa |
+|---|---|
+| **Làm đẹp hơn**: ánh sáng đẹp, bối cảnh sang, nhà Giáng sinh hoàn hảo, góc quay đẹp nhất | Cho thấy thứ khách **không nhận được** (hộp khác hộp thật, phụ kiện không có trong hộp) |
+| **Đề cao tính năng**: đèn **rực hơn**, cận đĩa quay, nhạc vang, cả phòng đổi không khí | Gán **tính năng không có** (Bluetooth, app, loa to cả nhà) |
+| **Phóng đại cảm xúc** (lời chủ quan): "the Christmas gift they'll never forget" | **Con số bịa**: số đã bán, đánh giá giả, "chỉ còn 3" khi không đúng |
+| **Quay cận** cho sản phẩm trông nổi bật | **Vẽ sản phẩm to hơn thật** so với đồ vật quanh nó |
+
+Vì sao giữ ranh giới (lý do làm ăn, không phải đạo đức suông): khách nhận hàng khác quảng cáo → **hoàn tiền
++ đánh giá xấu** (hàng $80, giao 6–12 ngày); nền tảng **gỡ quảng cáo / khoá tài khoản** khi phát hiện sai sự thật.
+
+**Cho máy:** mỗi prompt được (và nên) **đẩy đẹp, đẩy cảm xúc, đẩy tính năng có thật** lên một bậc — ánh sáng,
+bối cảnh, cường độ cú bật. Kiểm hai thứ không được vượt: **tỉ lệ sản phẩm so với đồ vật quanh nó** và
+**thứ khách thật sự nhận** (theo hồ sơ sản phẩm). Lời và chữ trên hình: cảm xúc chủ quan thoải mái; **khẳng
+định đo được** (số, tính năng, thời gian giao) phải đúng hồ sơ.
+
 ## 0d. Nền khoa học của triết lý (research 23/10/2026)
 
 Chủ dự án: *"dựa vào những keyword tôi cung cấp để tiếp tục tìm thêm và làm dày thêm triết học"*.
