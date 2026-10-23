@@ -136,3 +136,150 @@ Một dấu hiệu khác cho video **quảng cáo**: hãng chạy **nhiều hook
   lượt xem thật (chủ dự án tự đăng) để sửa sổ tay bằng số của chính mình.
 - STEPPS không có trọng số; điểm 1–5 ở mục 3 là **phán đoán của trợ lý**, không phải số đo.
 - Cập nhật tệp này mỗi khi một video của máy thắng hoặc thua rõ ràng.
+
+---
+
+## 7. Thư viện dạng hook (research 23/10/2026)
+
+Đọc thêm theo yêu cầu chủ dự án "học thêm về các dạng hook viral". Nguồn ở cuối mục.
+Mục 2C ở trên là bản rút gọn; **bóc khung thì dùng mục này.**
+
+### 7.1 Hook không phải một câu — là bốn lớp cùng lúc
+
+Hook = **toàn bộ hệ thống bắt sự chú ý ở đầu video** (Motion), gồm:
+
+| Lớp | Là gì | Ở video của mình |
+|---|---|---|
+| **Hình** | Thứ trên màn hình 1–3 s đầu | Quyết định nhiều nhất — chạy trước chữ và tiếng |
+| **Chữ trên hình** | Dòng chữ mắt chạm đầu tiên | 6–10 chữ, câu nói thường |
+| **Lời** | Câu nói / giọng đọc đầu tiên | Có thể không có (khung 01) hoặc rất ngắn ("3, 2, 1") |
+| **Âm** | Nhạc, tiếng động, khoảng lặng | Beat, tiếng "tách", im bặt rồi nhạc vào |
+
+Chấm **độ khớp** giữa các lớp: *Khớp* (hình củng cố lời) · *Bổ sung* (mỗi lớp thêm một ý) ·
+*Lệch* (hình hứa một đằng, chữ nói một nẻo → người xem bỏ đi). Ví dụ lệch: chữ "3am" trên
+cảnh bếp sáng trưng.
+
+### 7.2 Mốc chính thức của nền tảng
+
+- **TikTok** ([Ads Help Center](https://ads.tiktok.com/help/article/creative-best-practices?lang=en)):
+  nói **nội dung chính trong 3 s đầu** (để nhớ), đặt **hook trong 6 s đầu** (để xem lâu); đòn
+  bẩy hook là *hồi hộp, bất ngờ, cảm xúc*; có **người thật** (creator, nhân viên, khách);
+  kiểu **tự quay, không bóng bẩy**; dùng nhạc như phần cơ bản; chuyển cảnh/sticker để giữ
+  chân; **9:16, ≥ 720p**, trong vùng an toàn; **kết bằng CTA rõ**.
+- **Meta** (theo [Social Media Today](https://socialmediatoday.com/news/meta-shares-tips-on-reels-hooks-creative-diversification-in-ads-and-threa/808182)):
+  "Great Reels nail the hook within the first few seconds". Ba loại hook Meta nêu: **hứa
+  giá trị** (lợi ích của người xem đi đầu) · **nói trước điều sắp thấy** · **câu hỏi / lời mời**.
+  Meta nói Reels có nhạc hoặc giọng đọc cho **"up to 13% higher incremental conversions"**
+  (số của Meta, chưa kiểm). Khuyên **A/B test hook** ("small changes in your hook can yield
+  significant improvements") và đưa **nhiều biến thể** cho hệ thống tự ghép.
+- Số hay được trích ("71% quyết định trong 3 s", "63% quảng cáo tốt nói thông điệp trong 3 s")
+  **không tìm thấy trong trang chính thức** → không dùng như sự thật.
+
+### 7.3 Phép kiểm 1–3 giây (Motion)
+
+Khung đầu phải bật **ít nhất một** trong bốn: **vòng mở** (câu hỏi chưa trả lời) · **"là tôi"**
+(người xem nhận ra mình) · **ngắt nhịp** (khác hẳn video trước đó trên feed) · **lời hứa rõ**
+về điều sắp tới. Không bật cái nào = hook chết, khỏi bàn tiếp.
+
+Rồi đặt hook trên **thước rõ ràng ↔ tò mò**: rõ quá thì hết lý do xem; tò mò quá thì thành
+câu view rẻ. Đích: **đủ rõ để thấy liên quan, đủ tò mò để thấy chưa xong**.
+
+Và đặt theo **mức hiểu biết của người xem** (qua Motion): *chưa biết mình cần* → *biết vấn đề*
+→ *biết có giải pháp* → *biết sản phẩm* → *sắp mua*. Quảng cáo cho người lạ phải mở ở hai mức
+đầu; quảng cáo nhắc lại (retarget) mới mở bằng tên sản phẩm, giá. Santa Spins chạy cho người
+lạ → mở bằng **cảm xúc / tò mò / "quà cho ai"**, không mở bằng "Santa Spins Music Box $80".
+
+**Tám cò tâm lý** (có thể bật nhiều cái cùng lúc): ngắt nhịp · xoáy vào nỗi đau · khoảng trống
+tò mò · gọi đúng danh tính · bằng chứng xã hội/uy tín · khát khao · gấp gáp/được-mất ·
+ngược đời/phá ngộ nhận.
+
+### 7.4 Danh mục dạng hook
+
+Mỗi dạng: **cơ chế** (vì sao dừng lướt) · **nhận ra bằng** · **ví dụ Santa Spins** (chỉ dùng
+sự thật đã có trên trang) · **rủi ro**.
+
+**A. Hook bằng HÌNH — hợp video không lời, như cả 3 khung đã bóc**
+
+| Dạng | Cơ chế · nhận ra | Ví dụ Santa Spins | Rủi ro |
+|---|---|---|---|
+| **Vật bí ẩn / che phủ** | Vòng mở bằng hình: vải, hộp, tay che → "dưới đó là gì" | Vật phủ vải trên kệ (khung 03) | Lộ quá muộn → bỏ đi |
+| **Lộ hàng / unboxing POV** | Cảm giác tự tay mở; TikTok ghi unboxing thường quay góc thứ nhất | Mở vali quà đỏ, 9 đĩa xếp quanh | Hộp xấu là hỏng cả cảnh |
+| **"Store find"** | Hàng thật, đang bán, ai cũng mua được | Rút hộp từ kệ (khung 01) | Ngụ ý nơi bán — chủ dự án quyết |
+| **Kết quả trước** | Cho xem cái đẹp nhất trước, giải thích sau | Mở bằng **bếp tối, vòng đèn sáng, đĩa quay** rồi mới tua "how" | Mất khoảng trống tò mò |
+| **Trước / sau trong một khung** | Biến đổi không cắt = thoả mãn | Tủ lạnh trơn → bật → bếp rực Giáng sinh | Phải là **một cảnh liền** |
+| **Đồ vật sai chỗ** | Não dừng vì thấy "lạ": vật ở nơi không ngờ | Máy nghe nhạc đĩa **trên cửa tủ lạnh** — bản thân sản phẩm đã là "sai chỗ" | Lạ mà không liên quan sản phẩm = view rẻ |
+| **Chuyển động bất ngờ** | Thả rơi, zoom nhanh, "tách" một cú | Đĩa được "búng" vào giữa máy, nam châm hít "tách" | Lạm dụng thành rẻ |
+| **Cận chất liệu / đã mắt** | Satisfying, ASMR | Cận đĩa quay, vòng đèn LED từng hạt; lưới 9 đĩa 3×3 | Ít thông tin — cần chữ đi kèm |
+| **Khung đầu tĩnh + chữ** | Một khung dừng có chữ buộc nhìn lại trước khi chạy | — | Dễ thành "quảng cáo" |
+| **Thô có chủ đích** | Khung hơi lệch, cầm tay → trông như video thường, không phải quảng cáo | POV tay áo len, máy rung nhẹ | Thô thật (mờ, tối) thì hỏng |
+
+**B. Hook bằng CHỮ / LỜI**
+
+| Dạng | Cơ chế · nhận ra | Ví dụ Santa Spins | Rủi ro |
+|---|---|---|---|
+| **Khoảng trống tò mò** | Nói *có* điều gì mà không nói *là gì* | `Christmas people, you NEED this.. 🤫🎄` | Câu này đã có ≥ 2 hãng dùng (bão hoà) |
+| **Gọi đích danh, hẹp** | Đúng người thấy "nói mình" | `If your fridge door is already full of magnets…` | Hẹp quá → ít người |
+| **Hứa giá trị** (Meta) | Lợi ích đi đầu | `The Christmas gift that plays their song` | Dễ thành giọng quảng cáo |
+| **Nói trước điều sắp thấy** (Meta) | Đặt kỳ vọng → chờ | `Watch what happens when she drops the disc` | Thành "hook giải thích" nếu nhạt |
+| **Câu hỏi / mời** (Meta) | Kéo người xem tự trả lời / bình luận | `Which song would you play first?` | Câu hỏi không ai hỏi = chết |
+| **Câu hỏi hai lựa chọn** | Mâu thuẫn nhận thức buộc dừng | `Fridge magnet or record player?` | — |
+| **POV:** | Đặt người xem vào một khoảnh khắc | `POV: your mum opens this on Christmas morning` | Cảnh phải khớp chữ |
+| **Đảo kỳ vọng / cảnh báo** | "Đừng mua…" mà thật ra là khen | `Don't buy this if you hate Christmas music` | Bị coi là câu view nếu dùng hoài |
+| **"Không ai nói với bạn"** | Thông tin nội bộ | — (cần sự thật không hào nhoáng) | Đã cũ (2024) |
+| **Con số cụ thể** | Số đọc như ký ức, không như quảng cáo | `9 songs. Zero apps.` | **Số phải thật** — 9 đĩa, 9 bài là thật |
+| **Cảnh có giờ** | Mốc giờ = cụ thể rẻ nhất | `6am Christmas morning and the kitchen is already singing` | Hình phải đúng giờ đó |
+| **So sánh không ai so** | Hai thứ cạnh nhau | `A Bluetooth speaker needs a phone. This needs a disc.` | Khoảng cách phải thật |
+| **Trước → sau bằng lời** | Biến đổi nói thẳng | `Plain fridge → Christmas jukebox` | — |
+| **Xoáy nỗi đau** | Người xem nhận ra vấn đề của mình | `Every year I panic about what to get my mum` | Nỗi đau giả = lộ |
+| **Cho phép** | Bỏ một việc người ta tưởng phải làm | `You don't need a smart speaker for Christmas music` | — |
+
+**C. Hook bằng ÂM**
+
+| Dạng | Cơ chế | Ví dụ | Rủi ro |
+|---|---|---|---|
+| **Đếm ngược** | Hứa một khoảnh khắc → chờ hết | "Three, two, one" (khung 02, 03) | Không có cú lộ thật → phản tác dụng |
+| **Im bặt rồi vào** | Khoảng lặng đột ngột giữa feed ồn | Bếp im → đặt đĩa → nhạc vào | Mất 1 s đầu nếu im quá lâu |
+| **Tiếng động bất ngờ** | "Tách", "whoosh" trên chuyển cảnh | Tiếng nam châm hít, tiếng đĩa chạm | — |
+| **Cú chốt khớp beat** | Hình và tiếng cùng "nổ" một lúc | Đèn sáng đúng chỗ nhạc vào (khung 01: 6,8 → 7,9 s) | Lệch beat trông rẻ |
+
+### 7.5 Công thức ghép hay gặp ở video bán hàng (từ 3 khung + nguồn)
+
+1. **Gọi tên + vật bí ẩn + đếm ngược → lộ hộp** (khung 03): tò mò + chờ + mở quà.
+2. **Gọi tên + store find → hành trình → bật** (khung 01): tò mò kéo dài tới 7,9 s.
+3. **Mặt người + đếm ngược + mở quà** (khung 02): mặt người dừng lướt + chờ.
+4. **POV + kết quả trước** (nguồn): chữ đặt người xem vào khoảnh khắc, hình là kết quả.
+5. **Cảnh báo / đảo kỳ vọng + demo** (nguồn): "đừng mua nếu…" rồi cho xem lý do thật ra là khen.
+
+### 7.6 Đo hook khi chủ dự án chạy quảng cáo
+
+- **Hook rate / thumbstop** = lượt xem 3 s ÷ lượt hiển thị (Motion). Motion tự đưa hai bậc
+  khác nhau: "20–40% là tốt" (glossary) và "< 25% cần sửa · 25–35% được · > 35% tốt" (blog) —
+  **lấy trung bình của chính tài khoản làm mốc**, đừng tin một con số chung.
+- **Hold rate** = phần giữ từ giây 4 tới hết (Motion không cho công thức cố định); **ThruPlay**
+  = xem ≥ 15 s (Meta).
+- Test hook đúng cách: **giữ nguyên thân + CTA, chỉ đổi phần mở** — đúng như FrostGlow làm, và
+  đúng quyết định tách HOOK/THÂN.
+
+### 7.7 Lô hook thử cho Santa Spins — cùng một thân (khung 03), đổi trên MỘT trục
+
+Trục: **ai được gọi tên** (giữ nguyên hình: vật phủ vải + đếm 3-2-1). Mọi câu chỉ dùng sự thật
+trên trang (9 bài có sẵn, gắn tủ lạnh, không cần app).
+
+1. `Christmas people, you NEED this.. 🤫🎄` (gốc, đã bão hoà — làm mốc so)
+2. `Moms who start Christmas in November, this is for you 🎄`
+3. `For the dad who already has everything 🎁`
+4. `If your fridge is already full of magnets… 🧲`
+5. `Grandma can't work the TV remote. She can work this 🎄`
+6. `Kids who fight over the Christmas playlist 👀`
+
+Lô thứ hai (khi lô 1 có câu thắng) đổi trục **độ cụ thể**: `9 songs. Zero apps.` ·
+`One disc, one song, no phone` · `Plays the second the disc touches it`.
+
+### Nguồn mục 7
+
+- TikTok, [Creative best practices for performance ads](https://ads.tiktok.com/help/article/creative-best-practices?lang=en) (chính thức)
+- Social Media Today, [Meta shares tips on Reels hooks](https://socialmediatoday.com/news/meta-shares-tips-on-reels-hooks-creative-diversification-in-ads-and-threa/808182) (trích Meta)
+- Motion, [Hook analysis framework](https://motionapp.com/library/frameworks/hook-analysis) · [Thumbstop rate / hook rate](https://motionapp.com/library/glossary/thumbstop-rate-hook-rate) · [Key creative performance metrics](https://motionapp.com/blog/key-creative-performance-metrics)
+- geethikaisuru, [archetypes.md + anti-patterns.md](https://github.com/geethikaisuru/viral-hook-writer-for-textheavy-formats) (12 dạng hook chữ, 14 kiểu hook chết)
+- Blog thực hành (ý kiến người làm, không phải số đo): [sovran.ai — pattern interrupt](https://sovran.ai/blog/pattern-interrupt-techniques), [zeely.ai — scroll-stopping hooks](https://zeely.ai/blog/7-scroll-stopping-hooks/), [gethookd.ai — TikTok in-feed ads](https://www.gethookd.ai/learn/6-effective-tiktok-in-feed-ads-examples-to-try-in-2026/), [imagine.art — TikTok ad hooks](https://www.imagine.art/blogs/tiktok-ad-hooks)
+- Brendan Kane, *Hook Point* — chỉ đọc được bản tóm tắt ([Blinkist](https://www.blinkist.com/en/books/hook-point-en)); không có danh mục dạng hook đáng tin → không dùng
