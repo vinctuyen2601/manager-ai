@@ -11,7 +11,7 @@ hạn mức tuần); 2 clip đã sinh và đạt hôm nay được dùng lại.
 
 | # | Giây | Vai trò (khung) | Hình | Nguồn | Cắt từ |
 |---|---|---|---|---|---|
-| 1 | 0–2,5 | Hook (cảnh 1–2) | Hộp giao hàng trơn trên hiên nhà phủ tuyết, tay nhặt lên | **Sinh mới** — clip A | 0–2,5 s |
+| 1 | 0–3,6 | Hook (cảnh 1a, 1b, 2) | ⬜ **Kệ siêu thị đầy hộp sản phẩm**, rút một hộp, giơ mặt hộp vào máy, thả vào xe đẩy — chờ ảnh mặt ngoài hộp | **Sinh mới** — clip A (viết lại) | — |
 | 2 | 2,5–5,0 | Khoe hàng (cảnh 3) | Máy đứng trên bàn cạnh túi đĩa, hai tay nhấc lên, xoay mặt về máy quay | **Sinh mới** — clip B | 0–2,5 s |
 | 3 | 5,0–7,0 | Lắp + căng (cảnh 4–5) | Máy trên cửa tủ lạnh, tay ấn đĩa vào giữa | `clip1c.mp4` (đã đạt) | 0–2,0 s |
 | 4 | 7,0–9,5 | **Reveal** (cảnh 6) | Vòng đèn bừng sáng, đĩa quay, đẩy cận | `clip1c.mp4` | 2,0–4,5 s |
@@ -29,7 +29,11 @@ có nhạc có giấy phép thì canh lại mốc cảnh 4.
 
 `This fridge plays Christmas 🎄` — cố định 0–12 s, trắng viền đen, giữa trên như khung.
 
-## Clip A — sinh mới, KHÔNG tải ảnh nào
+## ~~Clip A — hộp giao trước cửa~~ — BỎ (23/10)
+
+> 🔴 **Sai khung:** chủ dự án chỉ ra hook gốc là **kệ siêu thị đầy hộp sản phẩm đẹp**, không phải nhặt hộp ngoài cửa. Viết lại clip A (cảnh 1a kệ + 1b giơ mặt hộp + 2 xe đẩy) khi có **ảnh mặt ngoài hộp đóng**. Prompt dưới đây giữ làm lịch sử, KHÔNG dùng.
+
+### (cũ) Clip A — sinh mới, KHÔNG tải ảnh nào
 
 ```
 media-generation, type video, --orientation vertical
