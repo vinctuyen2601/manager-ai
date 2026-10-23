@@ -124,7 +124,7 @@ giữ hình thật — đứng yên một góc thì model nào cũng giữ đư�
 - [x] Cài skill Hypit + chương trình 0.3.1 (chủ dự án cho cài 23/10)
 - [x] Chọn 3 sản phẩm ở 3 ngách khác nhau, có cả ảnh đẹp lẫn ảnh xấu (23/10, bảng dưới)
 - [ ] Làm M0 bằng tay cho 3 sản phẩm đó: kiểm ảnh, sơ chế, ra tờ sản phẩm + bản tóm tắt
-- [ ] Chọn 3 reel viral tiếng Anh (1/3: FrostGlow, 23/10 — thiếu link, lượt xem, ngày đăng) (TikTok, Facebook Reels, Top Ads), khác ngách và khác format; ghi lượt xem, ngày đăng
+- [ ] Chọn 3 reel viral tiếng Anh (3/3 ngày 23/10: FrostGlow ×2, MerrySpin) (TikTok, Facebook Reels, Top Ads), khác ngách và khác format; ghi lượt xem, ngày đăng
 - [ ] Thử Muse: 3 clip dọc, ghi lại sản phẩm và mặt người mẫu có giữ được không
 - [ ] **Chủ dự án:** tài khoản BytePlus (bản quốc tế), bật ModelArk + model Seedance, nạp ít tiền, tạo API key → để vào `reel/thu-nghiem/.env` (KHÔNG dán vào chat); chụp trang giá Seedance chính thức
 - [ ] **Trợ lý:** tạo project Hypit trong `reel/thu-nghiem/hypit-santa/`, viết provider BytePlus từ mẫu `provider-videos`, chạy test vòng đời không tốn tiền
@@ -146,7 +146,7 @@ giữ hình thật — đứng yên một góc thì model nào cũng giữ đư�
 |---|---|---|---|---|---|---|
 | 1 | ⬜ chưa có link (tệp tải tay, @frostglowofficial) — `khung/reel-01-frostglow.md` | TikTok | Demo POV "mua → mở → lắp → bật", không lời, nhạc + 1 dòng chữ; 9 cảnh / 11,8 s | ⬜ | ⬜ | ✅ đổi cảnh siêu thị → hộp giao tận nhà; reveal hợp Santa Spins + Globe |
 | 2 | tệp tải tay, @frostglowofficial — `khung/reel-02-frostglow-hook-me.md` | TikTok | **Cùng thân khung 01, khác hook**: người thật đếm 3-2-1, giật vải lộ hộp; chữ "Christmas Moms don't walk, RUN to TARGET" | — | — | ⚠ vướng mặt người (chưa đo) + "to TARGET" sai sự thật với shop online |
-| 3 | | | | | | |
+| 3 | tệp tải tay, @merryspin — `khung/reel-03-merryspin-tu-lanh.md` | TikTok | **Đối thủ cùng loại Santa Spins**: siêu thị Target + vải + đếm 3-2-1 → hộp cửa sổ → tủ lạnh lưới 9 đĩa, đặt đĩa đèn sáng; chữ thứ 2 "Comment MERRY" | — | — | ✅ gần 1:1; ❓ biển Target; ⬜ ảnh hộp đóng |
 
 ## Kết quả đo
 
