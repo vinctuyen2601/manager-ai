@@ -61,6 +61,53 @@ thấy ngay, đừng mở bằng ảnh nền trắng · liên quan = gọi đún
 câu hỏi = "đặt đĩa vào thì sao?" giữ tới ~8 s · trả lời = **vòng đèn sáng + nhạc vang cùng
 lúc** (đèn nhỏ, một mình chưa đủ "oà") · để lại = "Comment SANTA" / "tag người xứng đáng".
 
+## 0b. Giữ người xem ở lại — mỗi giây phải có một lý do
+
+Bàn với chủ dự án 23/10. Hook chỉ làm người ta **dừng**; ở lại là việc khác. Năm nhóm lý do ở lại:
+
+| Nhóm | Dạng | Bẫy |
+|---|---|---|
+| **Chưa xong** — não muốn khép thứ dở dang (mạnh nhất) | Vòng mở · **vòng lồng vòng** (mở câu mới trước khi khép câu cũ) · che một nửa · đếm/liệt kê/số bước | Khép vòng cuối là họ đi ngay |
+| **Đang tiến** — thấy mình đi tới đâu đó | Hành trình có bước · biến đổi đang diễn ra · **leo thang** (cảnh sau ấn tượng hơn cảnh trước) · nhịp đổi đều 1–3 s | Đổi mà không tiến = rối |
+| **Đáng giá** — mỗi giây nhận một thứ | Xếp chồng giá trị · đã mắt/đã tai · chữ chạy theo nhịp đọc | Lặp lại cái đã thấy |
+| **Có gì đó đang bị đặt cược** | Liệu có thành không · gấp/sát giờ · gương mặt người đang chờ | Căng mà không có gì xảy ra = phản bội |
+| **Đừng để họ đi sau cú trả lời** | Kết sớm (3 khung: 3,7–4 s sau cú bật) · **mở vòng hai đúng lúc khép vòng một** (khung 03 đổi chữ "Comment MERRY" đúng giây đèn sáng) · leo thang · **vòng lặp liền** (cuối nối đầu → xem lại) | — |
+
+**Làm người ta đi:** khoảng chết > ~2 s · mở đầu dài/giải thích trước khi cho xem · trả lời quá sớm ·
+hình và tiếng lệch · video dài hơn nội dung có.
+
+> **Mỗi giây phải có ít nhất một lý do để xem giây tiếp theo. Giây nào không có, giây đó họ đi.**
+
+**Bước bắt buộc khi bóc:** bảng **"lý do ở lại theo từng giây"** (giây → lý do). Ô trống = chỗ
+video yếu. Ví dụ khung 03: 0–3,8 chưa xong + căng (vải, đếm) · 3,8–6 chưa xong + đang tiến (mở
+hộp) · 6–7,8 đang tiến + căng (đặt đĩa) · 7,8–9 trả lời + vòng mới (Comment) · **9–11,6 chỉ còn
+đã mắt → đoạn yếu nhất**, và video kết ngay. Santa Spins: sau cú bật phải có **leo thang** (đổi
+đĩa, cả nhà xúm lại) hoặc **vòng lặp liền** (cảnh cuối = tay cầm đĩa tiếp theo đưa về máy).
+
+## 0c. Cường độ hình ảnh — trung bình là vô hình
+
+Chủ dự án 23/10: *"hình ảnh phải đẹp ấn tượng hoặc gây sốc"*. Feed đầy video "tạm được"; não
+đã quen mức trung bình nên **lướt qua mà không thấy**. Mỗi khung hình của hook phải **lệch hẳn
+khỏi trung bình trên ít nhất MỘT trục**:
+
+| Trục | Mức "cực" | Ví dụ |
+|---|---|---|
+| **Đẹp** | Ánh sáng ấm, màu hài hoà, bố cục gọn, vật đẹp | Hộp FrostGlow cao cấp · vali quà đỏ khoá vàng của Santa Spins |
+| **Ấn tượng** (quy mô, số lượng) | Rất nhiều, rất to, rất kín | Kệ **hàng trăm** hộp giống hệt · **cả bức tường** bông tuyết sáng |
+| **Sốc / bất ngờ** | Điều không ngờ, trái dự đoán | Máy nghe đĩa **trên tủ lạnh** · bếp tối om bừng sáng |
+| **Lạ** | Chưa thấy bao giờ | Đĩa nhạc gắn nam châm |
+| **Đã mắt** | Gọn tuyệt đối, chuyển động mượt | Lưới 9 đĩa 3×3 · đĩa quay trong vòng đèn |
+| **Khao khát** | "Muốn sống trong khung đó" | Bếp Giáng sinh ấm, đèn dây, cây thông |
+
+**Giữ đồng thời:** (1) **vật và cảnh "cực", cách quay tự nhiên** — đẹp ở thứ được quay; máy vẫn
+POV cầm tay (TikTok: DIY, không bóng bẩy). Đẹp kiểu quảng cáo TV = bị nhận ra là quảng cáo.
+(2) **Sốc phải thật và dẫn về sản phẩm** — cái sốc tốt nhất là **chức năng thật** gây bất ngờ.
+
+**Cho máy:** M0 hỏi thêm *"nguyên liệu này 'cực' trên trục nào?"* — ảnh trung bình thì sơ chế
+(ánh sáng, bối cảnh) hoặc đổi khung (vì vậy hộp xấu làm hỏng khung 01, khung cần trục đẹp +
+ấn tượng). **Lợi thế AI:** đẩy đẹp và quy mô lên rất xa với giá rẻ. **Bẫy AI:** quá bóng bẩy →
+prompt luôn giữ *handheld, POV, natural light*.
+
 ## Nguồn đã đọc (23/10/2026)
 
 Điểm vào: GitHub topic [viral-marketing](https://github.com/topics/viral-marketing)
