@@ -128,6 +128,12 @@ Bối cảnh còn nói **video dành cho ai** (bếp rộng + cây thông lớn 
 **Ngoại lệ:** kiểu "không ngờ mua ở Dollar Tree!" dùng cửa hàng bình dân rất hiệu quả — nhưng
 chỉ cho **hàng rẻ thật** (trông đắt mà giá bèo mới là cú sốc). Với hàng $80 thì phản tác dụng.
 
+⚠ **Sửa sau khi đọc nghiên cứu (mục 0d.10):** riêng **tên cửa hàng** ảnh hưởng **yếu, không có ý
+nghĩa thống kê** tới chất lượng cảm nhận (tổng hợp Rao & Monroe 1989); **giá** và **thương hiệu**
+mạnh hơn. Nên đọc nguyên lý trên là: *thứ định giá mạnh nhất là cách sản phẩm và thương hiệu hiện
+ra (hộp, thiết kế, độ hoàn thiện); bối cảnh đi kèm phải **không kéo ngược** mức giá đó*. "Bối cảnh rẻ
+làm vỡ cú chốt đơn" vẫn là **giả thuyết của trợ lý** — chưa có số đo, test được bằng hook/thân.
+
 **Cho máy:** prompt mọi cảnh phải **ghi rõ tín hiệu giá trị** (chuỗi lớn, bếp rộng gọn ấm, áo len
 kem…) — không ghi thì AI vẽ cảnh chung chung, mặc định "trung bình". M0/kiểm cảnh thêm câu:
 *"mọi chi tiết trong khung có cùng nói một mức giá với giá bán không?"*
@@ -136,6 +142,111 @@ kem…) — không ghi thì AI vẽ cảnh chung chung, mặc định "trung bì
 (ánh sáng, bối cảnh) hoặc đổi khung (vì vậy hộp xấu làm hỏng khung 01, khung cần trục đẹp +
 ấn tượng). **Lợi thế AI:** đẩy đẹp và quy mô lên rất xa với giá rẻ. **Bẫy AI:** quá bóng bẩy →
 prompt luôn giữ *handheld, POV, natural light*.
+
+## 0d. Nền khoa học của triết lý (research 23/10/2026)
+
+Chủ dự án: *"dựa vào những keyword tôi cung cấp để tiếp tục tìm thêm và làm dày thêm triết học"*.
+Từ khoá: **thu hút con người · đẹp / ấn tượng / gây sốc · bối cảnh định giá · ở lại xem · lan truyền**.
+Mỗi mục: nghiên cứu nói gì → nghĩa là gì cho video của máy. Ghi rõ chỗ **chưa chắc**.
+Phần lớn đọc qua tóm tắt/bài báo thứ cấp, **chưa đọc toàn văn** — đánh dấu theo từng mục.
+
+**1. Người ta chấm "đẹp hay không" trước khi kịp hiểu.**
+Lindgaard và cộng sự (2006, *Behaviour & Information Technology*): trang web hiện **50 mili giây**
+đã được chấm độ hấp dẫn thị giác **khớp với chấm sau khi xem lâu** ([Nature](https://www.nature.com/news/2006/060109/full/news060109-13.html));
+có nghiên cứu sau cho rằng còn ngắn hơn. Facebook (dẫn nghiên cứu Fors Marsh) nói nhớ được nội dung
+trong feed sau **0,25 s**; thời gian dừng trung bình trên một nội dung ở điện thoại **1,7 s**
+([Marketing Dive](https://www.marketingdive.com/news/facebook-why-mobile-video-ads-must-work-fast/446217/)) — phương pháp
+chưa công bố, coi là chỉ báo.
+→ **Khung hình đầu được chấm như một tấm ảnh tĩnh.** Nó phải đẹp/ấn tượng *ngay cả khi đứng yên*,
+trước mọi chuyển động và chữ.
+
+**2. "Đẹp" = dễ xử lý.**
+Reber, Schwarz & Winkielman (2004, *PSPR*): cảm giác đẹp đến từ việc **não xử lý trơn tru**; các yếu tố
+làm đẹp đã biết — đối xứng, **tương phản vật–nền**, rõ ràng, lặp lại, **đúng hình mẫu quen** — đều làm
+xử lý dễ hơn ([toàn văn](https://pages.ucsd.edu/~pwinkielman/reber-schwarz-winkielman-beauty-PSPR-2004.pdf)).
+Schwarz còn cho rằng cùng các yếu tố đó làm thông tin **trông đáng tin hơn**.
+→ "Cực đẹp" **không phải nhiều chi tiết**: là **một vật chính rõ ràng, tách khỏi nền, bố cục gọn**.
+Kệ hàng trăm hộp giống hệt nhau (lặp lại) và lưới 9 đĩa 3×3 (đối xứng) đẹp **vì dễ đọc**.
+Khung rối = khó xử lý = không đẹp = lướt.
+
+**3. Lạ — nhưng vẫn nhận ra được.**
+Nguyên lý **MAYA** của Raymond Loewy (1951): "Most Advanced Yet Acceptable". Hekkert và cộng sự
+kiểm trên sản phẩm: thiết kế hấp dẫn nhất là cái **vừa quen (đúng kiểu) vừa mới** cùng lúc; Berlyne
+đề xuất đường **chữ U ngược** — mới vừa phải được ưa hơn quá quen hoặc quá lạ ([tổng hợp](https://opus.lib.uts.edu.au/bitstream/10453/36796/4/The%20joint%20effect%20of%20typicality%20and%20novelty%20on%20aesthetic%20pleasure%20for%20product%20designs.pdf)).
+Có tranh luận về mức áp dụng chung.
+→ Cái "sốc" tốt nhất là **ghép hai thứ quen thành một thứ lạ**: *máy nghe đĩa* (quen) + *cửa tủ
+lạnh* (quen) = lạ mà hiểu ngay. Lạ đến mức không nhận ra là gì → không xử lý được → lướt.
+Đây là thước đo cho mục 0c: "cực" nhưng **vẫn đọc được trong một cái liếc**.
+
+**4. Khuôn mặt kéo mắt — và ánh mắt dẫn mắt người xem.**
+Nghiên cứu theo dõi mắt trên quảng cáo: khuôn mặt thắng sự chú ý nhanh hơn vật vô tri; **mặt nhìn về
+phía sản phẩm** làm người xem nhìn **sản phẩm và chữ** lâu hơn so với mặt nhìn thẳng ([Palcu et al. 2017, *Frontiers in Psychology*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5454066/));
+chuyển động cũng là đặc điểm nổi bật bắt mắt. Việc mặt có bắt chú ý **tự động** hay không vẫn đang tranh luận.
+Nghiên cứu nhỏ, trong phòng thí nghiệm.
+→ Hook có người: **nhìn thẳng máy để dừng lướt**, rồi **quay mắt sang sản phẩm để dẫn mắt người xem
+tới nó** (khung 02 đúng như vậy khi cô giật vải và nhìn hộp).
+
+**5. Tò mò là cơn "đói" vì một khoảng trống — cần biết một chút trước.**
+Loewenstein (1994, *Psychological Bulletin*): tò mò là cảm giác thiếu thốn sinh ra khi **chú ý dồn
+vào một khoảng trống trong hiểu biết**; cần **có sẵn một ít hiểu biết**; theo các bài tổng thuật,
+tò mò **mạnh lên khi thấy mình gần có câu trả lời** ([tóm tắt](https://stafforini.com/works/loewenstein-1994-psychology-curiosity-review/)).
+→ Hai luật: (a) cho biết **đủ để có khoảng trống** ("có một thứ mọi người yêu Giáng sinh cần" — biết
+có thứ đó, chưa biết là gì); (b) **càng gần cú trả lời càng phải cho thấy "sắp rồi"** — tay đưa đĩa
+lại gần, phòng tối dần — để cơn tò mò tăng chứ không tắt.
+
+**6. Vòng mở: người ta có xu hướng quay lại làm cho xong — nhưng không phải "nhớ việc dở" hơn.**
+Tổng hợp 2025 (Ghibellini & Meier, *Humanities and Social Sciences Communications*): **không có lợi thế
+trí nhớ** cho việc dở dang (hiệu ứng Zeigarnik **không phổ quát**), nhưng có **xu hướng đáng tin là quay
+lại làm tiếp** việc bị ngắt (hiệu ứng Ovsiankina) ([IDEAS/RePEc](https://ideas.repec.org/a/pal/palcom/v12y2025i1d10.1057_s41599-025-05000-w.html)).
+→ Đừng dựa vào "người xem sẽ nhớ câu hỏi". Dựa vào **cơn tò mò đang có mặt ngay lúc đó** (mục 5) và
+**giữ câu hỏi luôn hiện trên màn hình** (chữ cố định, vật che phủ còn trong khung).
+
+**7. Lúc chờ — khi chưa chắc — não "đếm ngược" theo.**
+Fiorillo, Tobler & Schultz (2003, *Science*): ngoài phản ứng với phần thưởng, nơ-ron dopamine có hoạt
+động **tăng dần tới thời điểm phần thưởng có thể đến**, mạnh nhất khi **không chắc** có thưởng hay
+không ([PMC](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1182345/)). Cách giải thích **còn tranh cãi**.
+→ Đếm ngược hiệu quả khi **kết quả chưa chắc** ("dưới vải là gì?") chứ không phải khi đã biết trước.
+Chỉ là gợi ý cơ chế, không phải bằng chứng cho video.
+
+**8. Lan truyền nhờ cảm xúc kích thích cao.**
+Berger & Milkman (2012, *Journal of Marketing Research*), phân tích mọi bài New York Times trong 3
+tháng: nội dung gợi cảm xúc **kích thích cao** — tích cực (**kinh ngạc/awe**) hay tiêu cực (**giận,
+lo**) — được chia sẻ nhiều hơn; cảm xúc **kích thích thấp** (buồn) ít hơn; riêng tích cực/tiêu cực
+không giải thích đủ ([toàn văn](https://faculty.wharton.upenn.edu/wp-content/uploads/2011/11/Virality.pdf)).
+Lưu ý: dữ liệu là **bài báo chữ**, không phải video ngắn.
+→ Đích của cú trả lời: **kinh ngạc / phấn khích / buồn cười**, không phải "dễ chịu". Với hàng quà tặng
+mình không dùng giận/lo.
+
+**9. "Ấn tượng" có tên khoa học: kinh ngạc (awe) = bao la + phải nghĩ lại.**
+Keltner & Haidt (2003): mọi trải nghiệm kinh ngạc có hai thành phần — **cảm nhận sự bao la** (lớn hơn
+bản thân hay mức thường ngày) và **nhu cầu điều chỉnh lại hiểu biết** để hiểu nó; có các nhánh kinh
+ngạc trước vẻ đẹp, tài năng, đe doạ… ([Templeton](https://www.templeton.org/discoveries/the-science-of-awe)).
+→ Trục "ấn tượng" ở mục 0c = **bao la** (hàng trăm hộp, *cả* bức tường sáng). Cú bật tốt = **bao la + phải
+nghĩ lại** ("một cái đĩa mà làm cả căn bếp thành Giáng sinh?"). Vòng đèn Santa Spins nhỏ → phải bù
+"bao la" bằng **cả căn bếp đổi không khí** (tối → ánh đèn + nhạc lan khắp phòng), không chỉ cận cái máy.
+
+**10. Giá, thương hiệu, cửa hàng định chất lượng cảm nhận — mạnh yếu khác nhau.**
+Tổng hợp Rao & Monroe (1989): **giá → chất lượng** và **thương hiệu → chất lượng** dương và có ý nghĩa;
+**tên cửa hàng → chất lượng** nhỏ, **không có ý nghĩa** ([PDF](https://carlsonschool.umn.edu/sites/carlsonschool.umn.edu/files/2024-06/Rao%20and%20Monroe%201989.pdf)).
+Dodds, Monroe & Grewal (1991, *JMR*) nghiên cứu giá + thương hiệu + cửa hàng cùng lúc; được trích là: với
+**hàng giá cao, ít khi mua**, tín hiệu giá yếu đi khi có tín hiệu quen thuộc khác. Baker, Grewal &
+Parasuraman (1994) liên hệ **môi trường cửa hàng** với suy luận chất lượng — **chưa đọc được nội dung**.
+→ Đã sửa mục 0c: thứ định giá mạnh nhất là **sản phẩm + thương hiệu hiện ra thế nào**; bối cảnh là phụ,
+nhưng **không được kéo ngược**. Santa Spins là hàng quà ít khi mua → tín hiệu **thương hiệu/hộp/độ hoàn
+thiện** quan trọng hơn con số $80.
+
+**11. Người ta nhớ một trải nghiệm bằng đỉnh và kết.**
+Quy tắc **đỉnh–kết** (Fredrickson & Kahneman; Kahneman et al. 1993): đánh giá lại một trải nghiệm chủ yếu
+theo **khoảnh khắc mạnh nhất** và **đoạn cuối**; **độ dài gần như không tính**; chỉ áp dụng khi trải nghiệm
+có đầu cuối rõ ([tổng quan](https://en.wikipedia.org/wiki/Peak%E2%80%93end_rule)).
+Bằng chứng gốc về đau đớn / thủ thuật y khoa, **chưa có nghiên cứu trên video ngắn**.
+→ Video của máy có **một đỉnh rõ** (cú bật) và **kết ngay sau đỉnh** hoặc **kết bằng một cảnh còn đẹp
+hơn** — đúng như 3 khung mẫu (kết 3,7–4 s sau cú bật). Không kéo dài đoạn đuôi nhạt: nó làm hỏng cả
+trí nhớ về video (và về thương hiệu).
+
+**Tóm lại, triết lý mục 0 giờ có nền:** đánh thức (1, 3, 4) → mở khoảng trống (5, 6) → chờ khi chưa chắc (7)
+→ trả lời bằng kinh ngạc (8, 9) ở đỉnh, kết ngay sau đỉnh (11) — trong một khung hình **dễ xử lý** (2) và
+**không kéo ngược giá trị** (10).
 
 ## Nguồn đã đọc (23/10/2026)
 
