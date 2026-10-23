@@ -43,8 +43,12 @@ nude-pink nails and one thin gold ring on the ring finger, no watch. Real, relat
 not a glossy model.
 ```
 
-POV (chỉ thấy tay): dùng câu cuối khối: *"Only her hands are visible: cream cable-knit sweater sleeves, short nude-pink
-nails, one thin gold ring."*
+POV (chỉ thấy tay) — dán khối này thay khối trên:
+
+```
+CHARACTER HANDS (keep exactly): Only her hands are visible: cream cable-knit sweater sleeves,
+short nude-pink nails, one thin gold ring.
+```
 
 ## 5. Tờ nhân vật (làm sau khi duyệt)
 
