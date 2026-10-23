@@ -79,7 +79,7 @@ kem thắt nút (thấp thoáng logo Santa Spins), nói "Three, two, one".
 **Cảnh 3 → 8 — 3,4 → ~11,6 s.** Thân video 01 (mở vali quà đỏ → gắn tủ lạnh → TỐI đặt đĩa,
 vòng đèn sáng → đổi đĩa → cả nhà → bếp tối chỉ còn đèn). Xem `../video/v01-santa-spins-x-khung01/KICH-BAN.md`.
 
-Chữ cố định: ⬜ chờ chủ dự án chọn (mục tầng 3, dòng 4).
+Chữ cố định (trợ lý chọn, chủ dự án giao 23/10 "câu nào cũng được miễn phù hợp và viral"): **`Christmas Moms, don't wait. ORDER before Dec 12 🎄👀`** — giữ đủ ba vế LÕI (gọi tên người xem · thúc giục · hành động mua); sự gấp gáp là **thật**: "Order by 12 December for Christmas delivery" là hạn đang ghi trên trang Santa Spins. Không nói bán ở cửa hàng, không nói sắp hết hàng.
 
 ## Không lấy
 

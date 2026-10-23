@@ -1,6 +1,6 @@
 # Máy làm Reel — Kế hoạch sản phẩm
 
-> Bản chép từ tài liệu gốc ngày 23/10/2026, vá lại cùng ngày theo bản gốc rev 59 (quyết định Muse / độ dài). **Bản gốc sống ở Claude Docs:**
+> Bản chép từ tài liệu gốc ngày 23/10/2026, vá lại cùng ngày theo bản gốc rev 62 (quyết định Muse / độ dài). **Bản gốc sống ở Claude Docs:**
 > https://claude.ai/artifact/AMhN1DQDB32o14HAAmA1da — có sơ đồ vẽ, cột ưu
 > tiên chọn được, bình luận. Sửa thì sửa ở bản gốc rồi chép lại đây, đừng để
 > hai bản lệch nhau. Bốn sơ đồ không chép được sang markdown; bản tĩnh của
@@ -71,7 +71,7 @@ Có 32 yêu cầu chức năng, 26 cái bắt buộc cho v1. FR-25 đến FR-31 
 | FR-30 | Trạm kiểm dừng cho xem tờ sản phẩm trước khi tiêu tiền; chế độ duyệt hoặc tự chạy | Sơ chế | Bắt buộc |
 | FR-06 | Nhận reel mẫu từ tệp tải lên | Thư viện khung | Bắt buộc |
 | FR-07 | Nhận reel mẫu từ link TikTok, Facebook Reels, TikTok Creative Center, Meta Ad Library | Thư viện khung | Bắt buộc |
-| FR-08 | Bóc khung ba tầng: format; cảnh theo giây kèm vai trò và lý do hiệu quả; phán quyết chuyển sang AI từng cảnh và loại sản phẩm hợp | Thư viện khung | Bắt buộc |
+| FR-08 | Bóc khung ba tầng: format; cảnh theo giây kèm vai trò và lý do hiệu quả; phán quyết chuyển sang AI từng cảnh và loại sản phẩm hợp; tách khung thành HOOK và THÂN ghép được, nhận ra hai reel dùng chung một thân | Thư viện khung | Bắt buộc |
 | FR-09 | Lưu khung, kèm bằng chứng viral nếu có (link, lượt xem, ngày; không bắt buộc vì reel đưa vào đã được chọn lọc); xem, sửa tay, lọc theo format và loại sản phẩm | Thư viện khung | Bắt buộc |
 | FR-29 | Kiểm reel mẫu: kỹ thuật (dọc, phân giải, độ dài) và có chuyển được sang sản phẩm khác không | Thư viện khung | Bắt buộc |
 | FR-31 | Gợi ý khung hợp cho một sản phẩm; loại khung có cảnh bất khả thi với sản phẩm đó | Thư viện khung | Nên có |
@@ -85,7 +85,7 @@ Có 32 yêu cầu chức năng, 26 cái bắt buộc cho v1. FR-25 đến FR-31 
 | FR-17 | Dựng MP4 1080×1920, phụ đề cháy hình, logo, khung kêu gọi (CTA) | Dựng | Bắt buộc |
 | FR-18 | Lưu thư mục đầu ra: video, bản không phụ đề, ảnh bìa, lời thoại, kịch bản, báo cáo chi phí | Đầu ra | Bắt buộc |
 | FR-19 | Chạy hàng loạt: một khung cho nhiều sản phẩm | Đầu ra | Nên có |
-| FR-20 | Nhiều biến thể một sản phẩm: đổi hook, người mẫu, giọng | Đầu ra | Nên có |
+| FR-20 | Nhiều biến thể một sản phẩm: đổi hook, người mẫu, giọng; một thân ghép nhiều hook, chỉ sinh lại phần hook | Đầu ra | Nên có |
 | FR-32 | Một job xuất nhiều bản cắt theo loại đầu ra: bản đầy đủ theo khung, bản ≤ 15 giây cho quảng cáo Meta, bản 6 giây tuỳ chọn; chỉ dựng lại từ cảnh đã sinh, không sinh thêm | Đầu ra | Bắt buộc |
 | FR-21 | Ước tính chi phí trước khi chạy, ghi chi phí thật, dừng khi vượt trần ngân sách; với đường Muse, ước tính hạn mức tuần theo số cảnh của khung (mỗi cảnh một clip) | Chi phí | Bắt buộc |
 | FR-22 | Chọn đường sinh video theo từng job: Muse (chạy bên trong Muse, mỗi cảnh một clip \~10 giây cắt đúng mốc của khung) hoặc Hypit + Seedance. Làm đường Muse trước | Sinh cảnh | Bắt buộc |
@@ -281,7 +281,7 @@ Trạng thái nằm trong SQLite; tệp nặng (video, ảnh, tiếng) nằm tr�
 | `store` | id, loại nguồn, tên miền, tham chiếu tới khoá | Khoá không lưu trong bảng, chỉ tên biến môi trường |
 | `product` | id, store_id, id gốc, tên, mô tả, giá, biến thể (JSON), ảnh gốc (JSON), tờ sản phẩm (đường dẫn), bản tóm tắt (JSON), kích thước thật, đồng bộ lúc | Bản chụp tại lúc chạy, để video tái lập được |
 | `talent` | id, tên, ảnh gốc, tờ nhiều góc nhìn, vector khuôn mặt, đã đồng ý, ghi chú nguồn | Người mẫu |
-| `template` | id, tên, format, nền tảng và link gốc, tệp reel, bằng chứng viral (lượt xem, theo dõi, ngày đăng), cảnh (JSON, kèm phán quyết AI), loại sản phẩm hợp, chuyển được hay không, BPM, tổng giây, đã duyệt | Khung bóc từ reel viral |
+| `template` | id, tên, format, nền tảng và link gốc, tệp reel, bằng chứng viral (lượt xem, theo dõi, ngày đăng), cảnh (JSON, kèm phán quyết AI), loại sản phẩm hợp, chuyển được hay không, BPM, tổng giây, đã duyệt | Khung bóc từ reel viral; cảnh gắn nhãn phần HOOK hoặc THÂN, hai khung có thể trỏ chung một thân (chốt 23/10) |
 | `job` | id, loại (đơn, hàng loạt), trạng thái, trần chi phí, tạo lúc | Một lần bấm chạy |
 | `variant` | id, job_id, product_id, template_id, talent_id, giọng, tệp .svml, trạng thái, thư mục đầu ra | Một video đầu ra |
 | `shot` | id, variant_id, thứ tự, mốc giây, prompt, id job của nhà cung cấp, trạng thái, số lần sinh, kết quả kiểm | `provider_task_id` để nối tiếp sau khởi động lại |

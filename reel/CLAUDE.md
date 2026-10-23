@@ -42,6 +42,8 @@ Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên
 | 23/10 | **Muse cắt clip theo cảnh** (agent Muse xác nhận): sinh ~10 s rồi cắt đúng 3 s / 5 s…, giữ dọc, hình, tiếng, kiểm lại thời lượng. Hệ quả: **mỗi cảnh của khung = một clip Muse**, nên hạn mức tính theo **số cảnh**, không theo số giây — khung 15 s có 5 cảnh × 3 s = 5 clip ≈ **15 % hạn mức tuần** (~3 %/clip, đo 23/10). Khung nhiều cảnh ngắn tốn hạn mức nhất; bước ước tính phải đếm cảnh |
 | 23/10 | **Bằng chứng viral KHÔNG bắt buộc** (link, lượt xem, ngày): "input vào là viral chọn lọc rồi". Có thì ghi, thiếu không chặn lưu khung. FR-09 và M3 trong kế hoạch phải sửa theo |
 | 23/10 | **Một video trọn luồng trước**, rồi mới thêm khung mới, **lần lượt từng dạng** (không gom 3 reel một lúc). Video đầu: Santa Spins × khung 01 FrostGlow, qua Muse |
+| 23/10 | **Tách HOOK và THÂN** trong mỗi khung (chủ dự án: "Ok tách nhé"), sau khi đo khung 02 = thân khung 01 + hook khác (hãng A/B test hook). Một thân ghép nhiều hook = nhiều biến thể, chỉ sinh lại phần hook. Sửa FR-08, FR-20 và thực thể `template` trong kế hoạch |
+| 23/10 | Chữ trên hình: chủ dự án giao trợ lý chọn "miễn phù hợp và viral" — nhưng vẫn theo luật: không nói điều sai sự thật (nơi bán, hết hàng) |
 | 23/10 | Muse (muse.ai) chỉ là nhánh thử, chạy **bên trong** Muse. Không dùng useapi.net, AutoMuse (giao mật khẩu, cookie Meta cho bên thứ ba) |
 
 ## Quy tắc bóc khung (M3) — rút ra từ lỗi khung 01, 23/10
