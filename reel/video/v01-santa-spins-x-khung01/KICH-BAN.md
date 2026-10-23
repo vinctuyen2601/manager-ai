@@ -1,82 +1,74 @@
 # Video 01 — Santa Spins × khung 01 (FrostGlow)
 
-Video đầu tiên đi trọn luồng (23/10/2026). Đường sinh: **Muse**. Khung:
-`../../khung/reel-01-frostglow.md`. Tệp media ở `thu-nghiem/muse/` (gitignore).
+Video đầu tiên đi trọn luồng. Đường sinh: **Muse**. Khung:
+`../../khung/reel-01-frostglow.md` (đọc mục "Kịch bản mô tả — video gốc" và "Vì sao
+viral" trước). Media ở `thu-nghiem/muse/` (gitignore).
 
-## Bản đồ cảnh: khung gốc → video này
+**Viết lại 23/10** theo đúng từng cảnh của video gốc, sau khi chủ dự án chỉ ra bản
+trước sai khung (thay kệ siêu thị bằng hộp trước cửa, gộp mất đoạn dồn cảnh). Bản cũ
+nằm trong lịch sử git.
 
-Khung gốc 9 cảnh / 11,8 s. Gộp còn **5 cảnh / ~12 s**: bỏ xe đẩy (gộp vào hook),
-gộp ba cảnh "nhiều phòng" thành một cảnh lùi máy. **Chỉ 2 clip sinh mới** (~6 %
-hạn mức tuần); 2 clip đã sinh và đạt hôm nay được dùng lại.
+## Giữ nguyên từ video gốc (yếu tố LÕI — không đổi)
 
-| # | Giây | Vai trò (khung) | Hình | Nguồn | Cắt từ |
-|---|---|---|---|---|---|
-| 1 | 0–3,6 | Hook (cảnh 1a, 1b, 2) | ⬜ **Kệ siêu thị đầy hộp sản phẩm**, rút một hộp, giơ mặt hộp vào máy, thả vào xe đẩy — chờ ảnh mặt ngoài hộp | **Sinh mới** — clip A (viết lại) | — |
-| 2 | 2,5–5,0 | Khoe hàng (cảnh 3) | Máy đứng trên bàn cạnh túi đĩa, hai tay nhấc lên, xoay mặt về máy quay | **Sinh mới** — clip B | 0–2,5 s |
-| 3 | 5,0–7,0 | Lắp + căng (cảnh 4–5) | Máy trên cửa tủ lạnh, tay ấn đĩa vào giữa | `clip1c.mp4` (đã đạt) | 0–2,0 s |
-| 4 | 7,0–9,5 | **Reveal** (cảnh 6) | Vòng đèn bừng sáng, đĩa quay, đẩy cận | `clip1c.mp4` | 2,0–4,5 s |
-| 5 | 9,5–12,0 | Chứng minh / kết (cảnh 7–9) | Lùi máy: cả máy trên tủ lạnh + cây thông | `clip2d.mp4` (đã đạt, nối liền clip1c bản 2) | 6,5–9,0 s |
+- Góc nhìn POV, chỉ thấy tay, **áo len đan kem**; điện thoại cầm tay.
+- **Một dòng chữ cố định** trên cùng, gọi tên người xem, **không nói sản phẩm làm gì**.
+- Thứ tự **siêu thị → xe đẩy → mở hộp ở nhà → lắp → TỐI bật lên → dồn cảnh chứng minh**.
+- **Ngày → tối**: cảnh 1–4 ban ngày, cảnh 5 trở đi buổi tối.
+- **Cú bật trong một cảnh liền**, ngay sau chỗ nhạc vào.
+- Chỉ nhạc, không lời dẫn. ~12 s. Không CTA.
 
-⚠ Cảnh 3–4 lấy **đầu** clip1c, cảnh 5 lấy **cuối** clip2d — clip2d nối liền với
-**cuối** clip1c, nên cắt bỏ giữa làm mất mạch nối liền đó. Ở đây là hai cảnh khác
-nhau (cắt cứng theo khung), chấp nhận được. Xem bản dựng rồi quyết.
+## Đổi cho Santa Spins (chỉ đổi đồ vật, không đổi cấu trúc)
 
-**Reveal phải rơi đúng chỗ nhạc "vào"** (khung gốc: lời hát vào 6,8 s → đèn 7,9 s).
-Nhạc chưa chọn (mục 13 kế hoạch) → bản thử 1 để tiếng gốc của clip Muse, bản thử 2 khi
-có nhạc có giấy phép thì canh lại mốc cảnh 4.
+| Video gốc | Santa Spins | Vì sao |
+|---|---|---|
+| Hộp vuông trắng, logo bông tuyết | **Hộp Santa Spins đóng** | ⬜ cần ảnh thật mặt ngoài hộp |
+| Bông tuyết gắn tường | **Máy nghe nhạc gắn cửa tủ lạnh** (nam châm) | Sản phẩm gắn ở tủ lạnh |
+| Remote bấm → tường sáng | **Đặt đĩa vào giữa máy → vòng đèn sáng, đĩa quay, nhạc phát** | Cú "bật" thật của sản phẩm |
+| Nhiều phòng sáng | **Nhiều đĩa, nhiều khoảnh khắc** quanh tủ lạnh | Máy chỉ ở một chỗ, nhưng có 9 đĩa = 9 bài |
 
-## Chữ trên hình (viết mới, không chép "Every CHRISTMAS lover NEEDS this")
+## Kịch bản mô tả — Santa Spins
 
-`This fridge plays Christmas 🎄` — cố định 0–12 s, trắng viền đen, giữa trên như khung.
+**Chữ cố định (viết mới, cùng vai trò):** `Christmas people, you NEED to see this... 🎄😍`
 
-## ~~Clip A — hộp giao trước cửa~~ — BỎ (23/10)
+**Cảnh 1 — 0 → 2,7 s · Siêu thị: lấy hộp từ kệ.** ⬜ *chờ ảnh hộp đóng*
+Lối đi siêu thị lớn kiểu kho: kệ kim loại trắng, trần cao đèn huỳnh quang, hai bên kệ
+xếp kín **hộp Santa Spins giống hệt nhau**. 0–1,6 s: tay áo len với vào kệ, rút một hộp.
+1,6–2,7 s: giơ **thẳng mặt hộp** sát máy quay — thấy rõ logo Santa Spins và hình máy.
 
-> 🔴 **Sai khung:** chủ dự án chỉ ra hook gốc là **kệ siêu thị đầy hộp sản phẩm đẹp**, không phải nhặt hộp ngoài cửa. Viết lại clip A (cảnh 1a kệ + 1b giơ mặt hộp + 2 xe đẩy) khi có **ảnh mặt ngoài hộp đóng**. Prompt dưới đây giữ làm lịch sử, KHÔNG dùng.
+**Cảnh 2 — 2,7 → 3,6 s · Bỏ vào xe đẩy.** Thả hộp vào xe đẩy tay cầm xanh đã có vài món
+đồ Giáng sinh.
 
-### (cũ) Clip A — sinh mới, KHÔNG tải ảnh nào
+**Cảnh 3 — 3,6 → 6,2 s · Mở hộp ở phòng khách, ban ngày.** Bàn trà mặt đá sáng, sau lưng
+cây thông đèn vàng ấm, lò sưởi treo tất. 3,6–4,6 s: đặt hộp lên bàn. 4,6–6,2 s: mở nắp →
+bên trong là **vali quà đỏ khoá vàng**, máy nằm giữa, **9 đĩa** xếp quanh, nắp trong in
+chữ vàng (đúng ảnh `giftbox.webp` của store).
 
-```
-media-generation, type video, --orientation vertical
+**Cảnh 4 — 6,2 → 7,4 s · Gắn lên tủ lạnh, hai nhịp.** Bếp ban ngày, cửa tủ lạnh trắng.
+6,2–7,0 s: tay áp **máy** lên cửa tủ lạnh (nam châm hít vào). 7,0–7,4 s: cận — gắn thêm
+vài **đĩa nam châm** quanh máy.
 
-Vertical 9:16, handheld first-person view. A plain brown cardboard delivery box with
-no logos or writing sits on a snowy front porch next to a doormat and a small
-wreath. A hand in a cream knit sweater reaches down and picks the box up, lifting it
-toward the camera. Soft winter daylight, warm light from the front door.
-No text, no logos, no brand names anywhere.
-```
+**Cảnh 5 — 7,4 → 8,5 s · TỐI. Bật — một cảnh liền, không cắt.** Bếp đã tối, chỉ còn đèn
+cây thông ấm phía sau. Máy trên tủ lạnh **còn tắt**. Tay cầm một đĩa đưa vào giữa máy.
+**7,9 s: đặt đĩa → vòng đèn trắng ấm bừng sáng, đĩa bắt đầu quay**, nhạc đúng lúc vào.
 
-Không có sản phẩm trong cảnh → không cần ảnh, không có gì để méo. Hộp **trơn** cố ý:
-hộp có chữ là chỗ Muse vẽ sai (đo 23/10).
+**Cảnh 6 — 8,5 → 9,5 s · Đổi đĩa.** Cận: tay rút đĩa ra, đặt đĩa khác (nhãn đỏ) — đèn vẫn
+sáng, đĩa quay.
 
-## Clip B — chỉ tải MỘT ảnh: `v1-canh2-mo-hop-9x16.jpg`
+**Cảnh 7 — 9,5 → 10,7 s · Cả nhà.** ⬜ *có người — chưa đo giữ mặt; chủ dự án chọn*
+Một bé gái mặc đồ ngủ Giáng sinh đứng trước tủ lạnh, nhún nhảy theo nhạc, quay lưng
+hoặc nghiêng (tránh mặt chính diện).
 
-```
-media-generation, type video, --orientation vertical, --image-file v1-canh2-mo-hop-9x16.jpg
+**Cảnh 8 — 10,7 → 11,8 s · Kết.** Lùi rộng: cả bếp tối, chỉ có vòng đèn máy và đèn cây
+thông, đĩa quay.
 
-Use only this image as the first frame. Vertical 9:16 close-up on a kitchen table.
-Two hands in a cream knit sweater lift the square clear-acrylic music player from
-the table and slowly turn it to face the camera, a small bag of round music discs
-beside it. A decorated Christmas tree glows softly out of focus behind.
-Keep the player exactly as in the image: square clear acrylic frame, four silver
-corner screws, printed album-art panel, warm-white LED ring around the black disc,
-progress bar and play controls at the bottom. Do not change its shape, size or
-printed artwork. No new text or logos.
-```
+## Nguyên liệu — trạng thái
 
-Ảnh khung đầu là **ảnh khách thật** cắt dọc và phóng ×1,8 (720×720 → 720×1280) →
-hơi mềm; đúng loại "ảnh xấu" M0 phải cảnh báo. Ghi lại chất lượng clip ra.
+| Cần | Có? | Ghi chú |
+|---|---|---|
+| Ảnh **mặt ngoài hộp đóng** | ❌ **chặn cảnh 1** | Chủ dự án lấy từ nhà cung cấp, hoặc quyết cách khác |
+| Ảnh **hộp mở** (vali đỏ, máy + 9 đĩa) | ✅ `santa-spins-giftbox.jpg` | Ảnh render của store, 1600² |
+| Ảnh máy trên tủ lạnh | ✅ `santa-spins-hand-disc-9x16.jpg` | |
+| Clip bật đèn + đĩa quay | ✅ một phần: `clip1c.mp4` (ban ngày) | Video gốc bật lúc **TỐI** → có thể phải sinh lại bản tối |
+| Nhạc có giấy phép, chỗ "vào" ~6,8 s | ❌ | Chưa chọn kho nhạc |
 
-## Dựng (trợ lý làm bằng ffmpeg sau khi có clip A, B)
-
-Cắt theo bảng trên → đưa về 720×1280 · 30 fps → nối → chữ trên hình → xuất
-`v01-santa-spins.mp4` (bản đầy đủ). Bản ≤ 15 s cho quảng cáo Meta = chính nó (12 s).
-Bản 6 s: cảnh 1 (1 s) + cảnh 4 + cảnh 5 (đầu).
-
-Chưa có: nhạc có giấy phép, CTA (khung gốc không có CTA — giữ đúng khung).
-
-## Kết quả
-
-| Clip | Lần sinh | Giữ đúng sản phẩm? | Ghi chú |
-|---|---|---|---|
-| A | | — (không có sản phẩm) | |
-| B | | | |
+Prompt từng cảnh viết sau khi chốt kịch bản này và có ảnh hộp đóng.

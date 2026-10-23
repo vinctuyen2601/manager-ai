@@ -49,6 +49,48 @@ nhạc và cú "bật đèn" gánh.
 
 Nhịp: 9 cảnh / 11,8 s, **cảnh dài nhất 2,6 s, ngắn nhất 0,5 s**; nửa sau (6–9) mỗi cảnh ~1 s.
 
+## Kịch bản mô tả — video gốc (soát ở 4 khung/giây + ảnh độ phân giải gốc, 23/10)
+
+Toàn bài quay **góc nhìn người cầm máy (POV)**, điện thoại cầm tay, ngang tầm mắt; chỉ
+thấy tay (áo len đan kem). Chữ `Every CHRISTMAS lover NEEDS this...❄️😍` cố định trên
+cùng từ đầu tới cuối. Tiếng: chỉ nhạc *Rockin' Around the Christmas Tree*.
+**Thời gian trong ngày đi từ NGÀY (cảnh 1–5) sang TỐI (cảnh 6–9).**
+
+**Cảnh 1 — 0 → 2,7 s · Siêu thị: lấy hộp từ kệ.**
+Lối đi của một siêu thị lớn kiểu kho (kệ kim loại trắng, trần cao đèn huỳnh quang),
+hai bên kệ xếp kín hàng trăm **hộp vuông trắng giống hệt nhau**. 0–1,6 s: tay với vào
+kệ, rút một hộp ra. 1,6–2,7 s: giơ **thẳng mặt hộp** sát máy quay — logo tròn nền đen
+có bông tuyết phát sáng, chữ vàng **FROSTGLOW**, dòng nhỏ "LIGHT UP YOUR SEASON", hàng
+**4 biểu tượng tính năng** (Dual color modes · Easy installation · Perfect for any space ·
+Bright LED lights).
+
+**Cảnh 2 — 2,7 → 3,6 s · Bỏ vào xe đẩy.** Hạ hộp, thả vào **xe đẩy tay cầm xanh** đã có
+vài món khác.
+
+**Cảnh 3 — 3,6 → 6,2 s · Mở hộp ở phòng khách, ban ngày.** Cắt về nhà: bàn trà mặt đá
+sáng, sau lưng là **cây thông đèn vàng ấm**, lò sưởi treo tất, ghế bành đỏ. 3,6–4,6 s:
+đặt hộp lên bàn (nắp hộp cũng in logo + biểu tượng). 4,6–6,2 s: mở nắp → bên trong xếp
+gọn: bông tuyết trắng, dây điện quấn, bộ sạc, remote.
+
+**Cảnh 4 — 6,2 → 7,4 s · Lắp lên tường, hai lần.** 6,2–7,0 s: phòng khách ban ngày,
+tường be đã có vài bông tuyết nhỏ; tay áp một **bông tuyết lớn kim tuyến trắng** lên
+tường (dưới là tủ gỗ, cây thông). 7,0–7,4 s: góc tường khác, áp bông thứ hai (dưới có
+vòng lá thông, quả thông).
+
+**Cảnh 5 — 7,4 → 8,5 s · TỐI. Bật đèn — một cảnh liền, không cắt.** Trời đã tối. Bức
+tường giờ phủ ~12 bông tuyết đủ cỡ, **còn tắt** (trắng xám). Tay giơ **remote nhỏ màu
+trắng** về phía tường. **7,9 s: bấm → cả tường bừng sáng xen kẽ xanh dương và trắng**,
+căn phòng chìm vào ánh đèn. Ngay sau chỗ lời hát vào (6,8 s).
+
+**Cảnh 6 — 8,5 → 9,5 s · Phòng ngủ.** Trần dốc, chăn trắng, gối "Farm Fresh Christmas
+Trees" xe tải đỏ, gối kẹo gậy, chăn đỏ cuối giường; tường đầu giường bông tuyết xanh/trắng.
+
+**Cảnh 7 — 9,5 → 10,7 s · Cầu thang.** Tay vịn quấn vòng lá thông + vòng hoa; bông tuyết
+sáng chạy dọc tường theo bậc thang; ánh xanh hắt xuống sàn gỗ.
+
+**Cảnh 8 — 10,7 → 11,8 s · Nhà tắm.** Gương bồn rửa viền một vòng bông tuyết sáng, cây
+thông nhỏ trên mặt đá. Hết (sau đó là màn kết TikTok).
+
 ## Vì sao viral — xếp hạng (viết lại 23/10, TRƯỚC tầng 3)
 
 Bản đầu bỏ qua bước này → tầng 3 thay mất cú hook. Từ khung này trở đi, mục này
@@ -58,8 +100,9 @@ là bắt buộc và **tầng 3 không được thay yếu tố LÕI**.
 |---|---|---|---|---|
 | 1 | **Khoảng trống tò mò**: "this" là gì? Chữ hook gọi tên người xem ("Every CHRISTMAS lover") mà không nói sản phẩm làm gì; **câu trả lời chỉ đến ở 7,9 s** | chữ 0–11,8 s + toàn mạch | **LÕI** | Giữ người xem tới reveal → thời gian xem cao. Nói sớm sản phẩm làm gì là mất lý do xem tiếp |
 | 2 | **"Store find" — thấy ở siêu thị**: kệ đầy hộp, tự tay lấy | 1a | **LÕI** | Hàng thật, đang bán chạy (kệ đầy), "cuối tuần tôi cũng mua được". Đúng trend #walmartfinds/#costcofinds |
-| 3 | **Hộp sản phẩm đẹp**, giơ thẳng vào máy | 1b | **LÕI** | Hộp đẹp = quà tặng được (mùa Giáng sinh); nhãn hàng in vào mắt người xem |
+| 3 | **Hộp sản phẩm đẹp, mặt hộp tự kể điểm bán** (logo + 4 biểu tượng tính năng), giơ thẳng vào máy | 1b | **LÕI** | Hộp đẹp = quà tặng được (mùa Giáng sinh); nhãn hàng in vào mắt; **mặt hộp thay lời dẫn** — video không cần nói mà người xem vẫn biết sản phẩm có gì |
 | 4 | **Biến đổi tối → sáng trong một cảnh liền**, khớp chỗ nhạc vào | 5–6 | **LÕI** | Trước/sau trong một khung, không cắt → thoả mãn, muốn xem lại |
+| 4b | **Ngày → tối**: mua, mở, lắp đều ban ngày; bật đèn lúc trời đã tối | 1–4 → 5 | **LÕI** (đi cùng 4) | Tối thì đèn mới rực; cũng là dấu "thời gian trôi" — mua về, lắp xong, tối bật |
 | 5 | **Hành trình mua → mở → lắp → bật** | 1–6 | **LÕI** (thứ tự) | Mỗi bước trả lời dần "đây là gì"; thiếu bước nào là đứt mạch tò mò |
 | 6 | **Dồn cảnh chứng minh**: nhiều phòng, ~1 s mỗi cảnh | 7–9 | Phụ (mạnh) | "Nhà tôi cũng làm được" + nhịp nhanh cuối video → xem lại |
 | 7 | **Chỉ nhạc, không lời** | toàn bài | Phụ | Hiểu không cần tiếng/ngôn ngữ, lướt tắt tiếng vẫn hiểu |
