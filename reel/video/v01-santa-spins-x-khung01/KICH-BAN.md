@@ -139,6 +139,104 @@ còn "cực" không (kệ có **đầy** không, phòng khách có **ấm** khô
 
 | Thứ | Lần sinh | Đạt? | Ghi chú |
 |---|---|---|---|
-| Clip A | | | |
-| Ảnh K | | | |
-| Clip B | | | |
+| Ảnh K | 1 | ❌ một phần | Máy giữ dáng tốt; **mất vòng LED** ("OFF" bị hiểu là không có đèn); **9 đĩa lặp nhãn** (Andy Williams ×5); đĩa nhỏ so với mâm; chép cả băng cassette từ ảnh tham chiếu — **vì prompt không có hồ sơ sản phẩm** |
+| Clip A | 1 | ✅ 0–4,6 s · ❌ phần còn lại | **Muse cắt cảnh đúng thứ tự** trong một clip (4,58 s, 7,33 s; lệch ~1 s so với prompt). Siêu thị kệ kín vali đỏ khoá vàng: **rất đẹp, dùng được**. Phòng khách đẹp, đặt vali lên bàn 4,6–5,9 s dùng được. **Bên trong vali: tấm vuông trắng + chục đĩa than → SAI**; tủ lạnh: hộp trắng trơn như bộ phát wifi + đĩa than 45 vòng → **SAI**. Cảnh không có sản phẩm = đẹp; có sản phẩm mà không có ảnh = bịa |
+
+## Bản 3.1 — sau clip A, có hồ sơ sản phẩm + video thật (23/10)
+
+**Luật mới:** mọi cảnh có sản phẩm **bắt đầu từ ảnh có sản phẩm thật** (Muse lấy ảnh tải lên làm khung đầu) + dán **khối
+mô tả chuẩn** từ `../../san-pham/santa-spins.md` và `../../nhan-vat/me-giang-sinh-01.md`. Tủ lạnh = **inox** (đúng video thật).
+
+| Đoạn video cuối | Giây | Nguồn |
+|---|---|---|
+| Siêu thị → xe đẩy | 0 → 4,2 | **Clip A lần 1**, 0 → 4,2 s ✅ |
+| Đặt vali đóng lên bàn phòng khách | 4,2 → 5,2 | **Clip A lần 1**, 4,6 → 5,6 s ✅ |
+| Vali đã mở, nhấc máy ra → gắn tủ lạnh inox | 5,2 → 7,4 | **Clip M** (mới, từ **ảnh M**) |
+| TỐI: đặt đĩa → bật → cận → đổi đĩa → toàn cảnh | 7,4 → ~12 | **Clip B** (mới, từ **ảnh K bản 2**) |
+
+### Ảnh M — vali mở trên bàn phòng khách · tải **`santa-spins-giftbox.jpg`**
+
+```
+media-generation, type image, --orientation vertical
+Reference: santa-spins-giftbox.jpg (this is the exact open gift case and its contents)
+
+Vertical 9:16 handheld phone photo, first-person view looking down at a light marble
+coffee table in a cozy living room in daylight; a decorated Christmas tree with warm white
+lights and a fireplace with red stockings softly out of focus behind. On the table: the
+exact open gift case from the reference, seen from slightly above.
+GIFT CASE OPEN (keep exactly): cream lining inside. The inside of the lid is cream with
+gold-foil pine branches in the corners and an elegant gold script title. The square
+acrylic player sits in the centre, and the nine round discs with nine different labels sit
+in round slots arranged around it, with the crimson case edge and the two gold latches at
+the front.
+Two hands rest on the front edge of the case: cream cable-knit sweater sleeves, short
+nude-pink nails, one thin gold ring. No text added, no other objects in the case.
+```
+
+### Clip M — 10 s · CHỈ tải **ảnh M**
+
+```
+media-generation, type video, --orientation vertical, 10 seconds, --image-file <ảnh M>
+
+Use only this image as the first frame. Vertical 9:16, handheld first-person POV, natural
+daylight, slightly shaky. No text, no logos added, no faces.
+PRODUCT (keep exactly): the square music player in the centre of the case: a white-bordered
+acrylic frame with four small silver corner screws, a printed 3×3 grid of Christmas album
+covers, a thin line of text at the top, a printed progress bar and play controls at the
+bottom; in the centre a round black platter with a thin grey LED ring around it (OFF).
+It is small, about one and a half hands wide. NOT round, NOT a vinyl record, NOT a speaker.
+Only her hands are visible: cream cable-knit sweater sleeves, short nude-pink nails, one
+thin gold ring.
+
+0.0–2.0s: Slow push-in over the open case, showing the player and the nine discs.
+2.0–4.0s: Both hands lift the player out of the case and turn it toward the camera.
+4.0–4.5s: Cut to a modern kitchen in daylight: a stainless steel fridge door with a few
+cute Christmas magnets (a red bow, a candy cane, a gingerbread man).
+4.5–6.5s: A hand presses the same player flat onto the fridge door; it holds by magnet.
+6.5–9.0s: The hand sticks three of the round discs onto the door beside the player, each
+with a different label.
+9.0–10.0s: The hand moves away; hold on the fridge door.
+```
+
+### Ảnh K bản 2 — cảnh tối · tải **`that-vong-den-tat-dang-dat-dia.jpg`** (khung thật 6,0 s của video store)
+
+```
+media-generation, type image, --orientation vertical
+Reference: that-vong-den-tat-dang-dat-dia.jpg (real photo of the exact product)
+
+The same shot as the reference, same player, same disc, same hand position, same stainless
+steel fridge door and magnets, but at NIGHT: the kitchen lights are off and the room is dark,
+lit only by the warm glow of a decorated Christmas tree and string lights softly out of focus
+behind. The LED ring on the player is OFF: a thin grey ring around the black platter. A hand
+in a cream cable-knit sweater sleeve, short nude-pink nails, one thin gold ring, holds one
+disc just in front of the centre of the player. Keep the player small (about one and a half
+hands wide), white-bordered, square, with its printed album-cover panel. Handheld phone photo,
+natural, no text added.
+```
+
+Kiểm ảnh K2 trước khi làm clip B: **vòng đèn còn thấy (xám mảnh)**, máy **nhỏ, vuông, viền trắng**, cảnh **tối thật**.
+
+### Clip B bản 2 — 10 s · CHỈ tải **ảnh K2**
+
+```
+media-generation, type video, --orientation vertical, 10 seconds, --image-file <ảnh K2>
+
+Use only this image as the first frame. Vertical 9:16, handheld POV, dark kitchen at night lit
+by Christmas tree lights. Same small square white-bordered player with its printed album-cover
+panel; NOT round, NOT a vinyl record. When OFF the LED ring is a thin grey ring; when a disc is
+placed it instantly glows warm white. No text added. No people except the hand.
+
+0.0–1.0s: The hand slowly brings the disc to the centre of the player; the ring is still off.
+1.0s: The disc touches the centre and clicks into place: the LED ring instantly glows warm white,
+the disc starts spinning, warm light spills onto the fingers and the fridge door, and cheerful
+Christmas music starts playing from the player.
+1.0–2.2s: Hold, the hand pulls away, the camera pushes in slightly.
+2.2–3.2s: Close-up of the spinning disc inside the glowing ring.
+3.2–4.2s: The hand swaps the disc for another disc with a different label; the ring stays lit.
+4.2–10.0s: The camera slowly pulls back to reveal the dark kitchen: the glowing player on the
+stainless steel fridge, discs with different labels stuck beside it, the Christmas tree and
+string lights glowing warm in the background.
+```
+
+**Thứ tự:** ảnh M và ảnh K2 làm song song (không phụ thuộc nhau) → gửi trợ lý kiểm → clip M (từ M) và clip B (từ K2).
+**Hạn mức:** 2 ảnh + 2 clip ≈ 6–7 %.
