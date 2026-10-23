@@ -163,6 +163,8 @@ Mỗi lần chạy một dòng. Không xoá dòng hỏng — dòng hỏng là d�
 
 | 23/10 | Santa Spins | — | Muse | 1 (clip 2, lần 4: **chỉ tải `clip1-v2-last.jpg`**, dặn agent chỉ dùng tệp đó) | 5 | ✅ **nối khớp** (khung đầu = khung cuối clip 1 bản 2; SSIM 0,55 do đĩa quay + nén, mắt thấy trùng); lùi thẳng giữ **vuông**, đèn trắng ấm, **giữ cả tiêu đề "THIS IS THE SHINING STAR IN MY ORDINARY LIFE"**; lộ cây thông | — | $0 | **gần được** (chủ dự án: "rất khớp và đẹp") | 704×1248, 10 s. Sót: ô bìa nhỏ xếp lại ("MAST CHRISTMAS", Sinatra lặp); máy hơi dài ra cuối clip (rộng/cao ≈ 0,74 so với 0,82 ảnh gốc). Bản ghép 20 s: `thu-nghiem/muse/santa-spins-noi-thu.mp4` (clip1c + clip2d) |
 
+| 23–24/10 | Santa Spins | khung 01 FrostGlow | Muse | **video 01 trọn luồng**: 4 ảnh (H1, S, M, K lần 1) + 4 clip (A, A2, M, B) | 8 | A2 ✅ · M ✅ · B ✅ cú bật đẹp nhưng sai chỗ (kệ bếp) · A ❌ (sản phẩm bịa) | — | $0 | **bản 1 xong** (`v01-ban1.mp4` 11,7 s · bản QC 13,0 s) | Bài học: cảnh có sản phẩm phải từ ảnh có sản phẩm thật; nhịp do dựng; logo qua tham chiếu |
+
 **Hạn mức Muse (chủ dự án đo):** 6 clip = **18 %** hạn mức tuần → ~3 %/clip →
 ~33 clip/tuần ≈ **~16 video 2 clip/tuần** nếu không sinh lại. Sinh lại làm giảm thẳng số này.
 

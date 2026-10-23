@@ -311,3 +311,20 @@ rút khỏi kệ (1a); kệ kín phía sau vẫn giữ "store find". Hộp đứ
 khách ở 2,79 s, đặt hộp lên bàn; 5,5–10 s đẩy chậm (dư). Chỉ 1 lần cắt → nhịp do dựng. Dùng: **0 → 2,8 s** (tăng tốc 1,1×) + **3,6 → 4,8 s**.
 **Bản dựng nháp nhịp** `v01-nhap-nhip.mp4` (10 s, cắt 2,5 · 3,8 · 6,4 · 7,4): A2 + clip1c + clip2d (clip tủ lạnh ban ngày cũ, có băng
 cassette — chỉ để thử nhịp). Bản thật thay bằng clip M + clip B.
+
+## ✅ Bản 1 hoàn chỉnh (24/10/2026)
+
+| Tệp (`thu-nghiem/muse/`) | Dài | Ghi chú |
+|---|---|---|
+| `v01-ban1.mp4` | **11,7 s** (mẫu 11,8) | Reel tự đăng. Cắt 2,5 · 3,6 · 5,2 · 6,4 · 10,1 s; **cú bật 7,85 s**; chữ 1 → chữ 2 (mồi "Comment SANTA") đúng lúc bật |
+| `v01-ban1-quangcao.mp4` | **13,0 s** | = bản 1 + **1,3 s thẻ kết**: logo Santa Spins + slogan chính "Some gifts get opened. / This one gets played." (sổ tay 0f) |
+
+Ghép: A2 0–2,8 (×1,1) · A2 3,6–4,6 · **clip M** (`v01-vid1-0005.mp4`) 0–1,6 + 5,0–6,2 · **clip B** (`v01-vid2-0013.mp4`) 0,5–4,2 + 8,0–9,6.
+Tiếng: tiếng gốc các clip Muse (A2 −33,8 dB, M −36,9, B −23,9) — **chưa có nhạc có giấy phép**.
+
+**Chỗ chưa đạt (để bản 2):**
+1. **Clip B đặt máy trên KỆ BẾP** ở cú bật (0–4,5 s), rồi mới lên tủ lạnh (5 s+) — lệch với clip M vừa gắn lên tủ lạnh. Nguyên nhân: không có
+   ảnh K2 làm khung đầu (thư mục tải về không có K2). Sửa: làm **ảnh K2** từ khung thật `that-vong-den-tat-dang-dat-dia.jpg` rồi sinh lại clip B.
+2. **Clip M: vòng quanh mâm trông vàng/sáng** trước cú bật → làm nhẹ cú "tắt → sáng". Sửa cùng lúc nếu sinh lại M từ ảnh M bản sửa.
+3. **Nhạc**: cần một bài có giấy phép, chỗ "vào" canh 7,85 s.
+4. Cảnh đổi đĩa + "cả nhà" (nhịp leo thang) chưa có — bản 1 kết bằng lùi rộng bếp tối.
