@@ -1,0 +1,20 @@
+# Repo hồ sơ — chỉ commit ghi chép và số đo, không commit nguyên liệu.
+# Media làm phình lịch sử git mãi mãi; ảnh người mẫu là dữ liệu cá nhân.
+*.mp4
+*.mov
+*.webm
+*.mkv
+*.mp3
+*.wav
+*.m4a
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+thu-nghiem/
+output/
+
+# Khoá API
+.env
+.env.*

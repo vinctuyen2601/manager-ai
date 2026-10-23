@@ -906,3 +906,28 @@ lệ gộp ship của Santa Spins, chưa hỏi nhà cung cấp. Và chưa biết
 bán của listing nguồn — đúng con số đã loại món người tuyết.
 
 **Kiểm ngày:** 30 đơn đầu hoặc 15/12/2026 · **Trạng thái:** ⏳ chờ kiểm
+
+## QĐ-23 · 23/10/2026 · Máy làm Reel: dựng trên Hypit, M0 sơ chế đứng trước, trần $10 / video 15 giây
+
+**Làm gì:** tài sản AI độc lập tự sinh video Reel tiếng Anh từ sản phẩm (Shopify
+hoặc nhập tay) + reel viral mẫu. Khung là skill Hypit; tự viết M0 (sơ chế
+nguyên liệu), M3 (thư viện khung ba tầng), M7 (viết lại lời theo video thật).
+Trần $10 / video, mặc định 15 giây. Hồ sơ: `reel/CLAUDE.md`.
+
+**Vì sao Hypit:** đọc mã bốn dự án Trung Quốc. ClipForge dán link thì trả 6 cảnh
+gõ cứng, font phụ đề thiếu 53/70 ký tự tiếng Việt; ai-video-studio 2 commit và
+mặc định đẩy ảnh sản phẩm lên uguu.se; ArcReel không có nhân bản viral. Hypit
+24.984 sao, TypeScript, có sẵn công cụ đo reel (`boundaries`, `tiles`,
+`transcribe`) và provider Seedance/Kling/ElevenLabs.
+
+**Vì sao M0 đứng trước:** rủi ro số một là AI làm méo sản phẩm. Sinh video là
+bước đắt nhất; nguyên liệu xấu thì tiền đi vào sinh lại.
+
+**Dự đoán** (kiểm khi xong 3 video đầu ở giai đoạn 0, hoặc 30/11/2026):
+1. **Chi phí thật một video 15 giây qua Seedance ≤ $5**, tức dưới nửa trần.
+   Hypit tự ghi khoảng $1,15 — nếu thật ra trên $5 thì con số quảng cáo đó
+   sai gấp bốn, phải tính lại cả lộ trình.
+2. **≥ 2/3 số cảnh có sản phẩm giữ đúng hình ngay lần sinh đầu** khi dùng tờ
+   sản phẩm đã sơ chế. Dưới 1/2 thì M0 chưa đủ, hoặc model video không hợp.
+
+**Kiểm ngày:** 3 video đầu hoặc 30/11/2026 · **Trạng thái:** ⏳ chờ kiểm
