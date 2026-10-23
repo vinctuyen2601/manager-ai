@@ -59,6 +59,13 @@ Bản bóc đầu của khung 01 sai ở khâu đánh giá: thay cú hook "kệ 
 4. **Soi ≥ 4 khung/giây** và tự xác nhận từng điểm cắt: máy dò `scene` báo nhầm khi
    độ sáng đổi (đèn bật ở khung 01 bị đếm là "cắt").
 5. Mỗi khung ghi **"nguyên liệu khung này đòi"** → thành mục M0 phải CHẶN khi thiếu.
+6. **Thứ tự đầu ra** (chủ dự án chốt 23/10): **(a) kịch bản mô tả video gốc** — từng cảnh
+   bằng lời thường: giây, bối cảnh, đồ vật, hành động, ánh sáng/thời gian trong ngày, chữ,
+   tiếng ("Cảnh 1, 0–2,7 s: lấy hộp từ kệ siêu thị, bỏ vào xe đẩy → Cảnh 3: mở hộp ở phòng
+   khách ban ngày…"); **(b) vì sao viral, xếp hạng**; **(c) kịch bản mô tả cho sản phẩm**,
+   cùng cảnh, chỉ đổi đồ vật; **(d) prompt** từng cảnh — sau cùng, khi (c) đã chốt và đủ
+   nguyên liệu. Không nhảy thẳng tới prompt. Mẫu: `khung/reel-01-frostglow.md` +
+   `video/v01-santa-spins-x-khung01/KICH-BAN.md`.
 
 ## Luật riêng của thư mục này
 
