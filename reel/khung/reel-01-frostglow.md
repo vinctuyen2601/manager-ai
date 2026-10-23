@@ -34,15 +34,18 @@ nhạc và cú "bật đèn" gánh.
 
 | # | Giây | Cỡ cảnh · máy | Vai trò | Hình | Vì sao hiệu quả |
 |---|---|---|---|---|---|
-| 1 | 0–2,7 | POV trung, cầm tay | **Hook** | Lối kệ siêu thị đầy hộp FrostGlow; tay rút một hộp, giơ mặt hộp vào máy | "Thấy ngoài đời" → hàng thật, đang bán chạy (kệ đầy). Logo đọc được ở 1,5–2,5 s |
+| 1a | 0–1,6 | POV trung, cầm tay | **Hook** | Lối **kệ siêu thị** xếp đầy **hộp sản phẩm** (hộp bán lẻ đẹp, in logo + hình bông tuyết); tay với, rút một hộp | "Thấy ngoài đời" → hàng thật, đang bán chạy (kệ đầy) |
+| 1b | 1,6–2,6 | POV cận | **Khoe hộp** | Giơ thẳng **mặt hộp** vào máy quay, logo đọc rõ | Hộp đẹp = quà tặng được; nhãn hàng in vào mắt |
 | 2 | 2,7–3,6 | POV trung | Quyết định mua | Thả hộp vào xe đẩy | Hành động mua — khán giả "mua theo" |
 | 3 | 3,6–6,2 | POV cận, bàn | Khoe hàng | Ở nhà, cạnh cây thông: đặt hộp, mở nắp, thấy đèn + dây trong hộp | Đổi bối cảnh = về nhà; mở hộp thoả tò mò |
-| 4 | 6,2–7,4 | POV trung, tường | Lắp | Cầm bông tuyết áp lên tường, tường đã có nhiều bông | Cho thấy **dễ lắp** mà không cần nói |
-| 5 | 7,4–7,9 | POV rộng | Căng | Lùi lại, giơ remote về phía tường (đèn tắt) | 0,5 s chờ trước reveal; lời hát vừa vào |
-| 6 | 7,9–8,5 | Rộng | **Reveal** | Bấm → cả tường sáng xanh/trắng | Cao trào, khớp nhạc |
+| 4a | 6,2–6,97 | POV trung, tường phòng khách | Lắp | Cầm bông tuyết lớn áp lên tường (cạnh tủ, cây thông) | Cho thấy **dễ lắp** mà không cần nói |
+| 4b | 6,97–7,4 | POV trung, **tường khác** | Lắp | Bông tuyết thứ hai, góc khác (dưới có quả thông) | Nhịp: hai lần lắp liền nhau |
+| 5–6 | 7,4–8,5 | POV rộng, **một cảnh liền** | Căng → **Reveal** | Tường phủ kín bông tuyết (tắt), giơ remote; ở **7,9 s** bấm → cả tường sáng xanh/trắng, cùng góc máy | Chờ 0,5 s rồi bật, khớp nhạc. *(Máy dò cắt cảnh báo nhầm "cắt" ở 7,9 s do độ sáng đổi đột ngột — không phải chuyển cảnh)* |
 | 7 | 8,5–9,5 | Rộng, tĩnh | Chứng minh | Phòng ngủ, tường đầu giường sáng | Dùng được nhiều chỗ |
 | 8 | 9,5–10,7 | Rộng, lia nhẹ | Chứng minh | Cầu thang sáng | — |
 | 9 | 10,7–11,8 | Trung, tĩnh | Chứng minh / kết | Gương nhà tắm viền bông tuyết sáng | Kết bằng hình đẹp nhất, không CTA |
+
+*Sửa 23/10 sau khi soát 4 khung/giây + chủ dự án chỉ ra:* cảnh 1 tách 1a/1b, cảnh 4 là hai tường, cảnh 5–6 một cảnh liền.
 
 Nhịp: 9 cảnh / 11,8 s, **cảnh dài nhất 2,6 s, ngắn nhất 0,5 s**; nửa sau (6–9) mỗi cảnh ~1 s.
 
@@ -50,8 +53,8 @@ Nhịp: 9 cảnh / 11,8 s, **cảnh dài nhất 2,6 s, ngắn nhất 0,5 s**; n�
 
 | # | Phán quyết | Lý do · cách làm |
 |---|---|---|
-| 1 | 🔁 **Đổi cách thể hiện** | Sinh kệ siêu thị đầy hộp sản phẩm của mình = **ngụ ý bán ở cửa hàng bán lẻ** trong khi shop chỉ bán online → dễ thành quảng cáo sai sự thật (rủi ro mục 10 kế hoạch). Thêm nữa, AI phải vẽ hàng chục hộp có logo/chữ — đúng điểm yếu đã đo ở Muse (chữ in trôi). Thay bằng **hộp giao hàng trước cửa / trên hiên**, tay nhặt lên |
-| 2 | 🔁 Đổi | Xe đẩy → **mang hộp vào nhà**, hoặc bỏ cảnh, gộp vào cảnh 1 |
+| 1a–1b | ✅ **Dùng thẳng** (chủ dự án chốt 23/10: giữ **kệ siêu thị** + **hộp sản phẩm đẹp**; bản trước đổi thành "hộp giao trước cửa" là SAI — làm mất cú hook) | Cần **ảnh mặt ngoài hộp đóng** làm tham chiếu (chưa có — `giftbox.webp` của store là hộp ĐANG MỞ). Rủi ro: hàng chục hộp có chữ trên kệ = chỗ Muse vẽ sai chữ; mặt hộp ở 1b phải đúng. Lưu ý: cảnh kệ siêu thị ngụ ý hàng có bán ở cửa hàng — chủ dự án quyết |
+| 2 | ✅ Dùng thẳng | Thả hộp vào xe đẩy |
 | 3 | ✅ Dùng thẳng | Mở hộp trên bàn cạnh cây thông: cảnh cận, nhìn thẳng — loại Muse giữ hình tốt nhất. Cần **ảnh bên trong hộp thật** làm tham chiếu (chưa có) |
 | 4 | ✅ Dùng thẳng | Lắp sản phẩm: Santa Spins = gắn máy lên cửa tủ lạnh; Memory Globe = đặt quả cầu lên đế |
 | 5 | ✅ Dùng thẳng | Khoảnh khắc chờ: Santa Spins = cầm đĩa đưa về phía máy; Globe = ngón tay chạm nút |
