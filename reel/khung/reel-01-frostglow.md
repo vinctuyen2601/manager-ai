@@ -91,6 +91,50 @@ sáng chạy dọc tường theo bậc thang; ánh xanh hắt xuống sàn gỗ.
 **Cảnh 8 — 10,7 → 11,8 s · Nhà tắm.** Gương bồn rửa viền một vòng bông tuyết sáng, cây
 thông nhỏ trên mặt đá. Hết (sau đó là màn kết TikTok).
 
+## Phân tích lại theo sổ tay (23/10, sau mục 0–0d của `../KIEN-THUC-VIRAL.md`)
+
+### Bốn câu của triết lý (mục 0), kèm giây
+
+| Câu | Trả lời |
+|---|---|
+| **Đánh thức bằng gì?** | *Khung đầu, đứng yên* (0d.1): lối kệ xếp **hàng trăm hộp giống hệt** = **lặp lại → dễ xử lý → đẹp** (0d.2) + **bao la** (0d.9). *Dưới lên*: tay chuyển động vào khung. *Trên xuống*: chữ gọi **danh tính** "Every CHRISTMAS lover". Không có mặt người → POV: người xem **là** người cầm máy |
+| **Câu hỏi mở là gì?** | "**this** là gì?" — biết *có* một thứ người yêu Giáng sinh cần, chưa biết là gì (khoảng trống Loewenstein, 0d.5). Câu hỏi **luôn hiện** (chữ cố định suốt bài, 0d.6) |
+| **Trả lời ở giây nào, bằng gì?** | **7,9 s**: cả bức tường bừng sáng xanh/trắng — **kinh ngạc = bao la (cả tường) + phải nghĩ lại** (bông tuyết trắng hoá đèn) (0d.9); ngay sau chỗ nhạc vào 6,8 s; trong **một cảnh liền** |
+| **Để lại gì?** | Kinh ngạc (cảm xúc kích thích cao, 0d.8) → **leo thang** 3 phòng → **kết bằng cảnh đẹp nhất** 3,9 s sau đỉnh (đỉnh–kết, 0d.11). Lý do chia sẻ: ý tưởng trang trí (thực dụng) + "tôi biết món hot". **Không có mồi bình luận** |
+
+### Lý do ở lại theo từng giây (mục 0b) — không có ô trống
+
+| Giây | Lý do ở lại |
+|---|---|
+| 0–1,6 | Chưa xong ("this?") · đang tiến (rút hộp) |
+| 1,6–2,6 | Đáng giá (mặt hộp đẹp, 4 tính năng) · chưa xong |
+| 2,6–3,6 | Đang tiến (mua — bỏ xe đẩy) |
+| 3,6–6,2 | **Vòng lồng vòng**: "trong hộp có gì?" mở trước khi "this?" khép · đang tiến (mở) |
+| 6,2–7,4 | Đang tiến (lắp, hai lần) · chưa xong ("lắp để làm gì?") |
+| 7,4–7,9 | **Căng**: trời tối, remote giơ lên, tường còn tắt |
+| 7,9–8,5 | Trả lời + kinh ngạc |
+| 8,5–11,8 | **Leo thang**, ~1 s một phòng, mỗi phòng một kiểu |
+
+### Cường độ hình ảnh (mục 0c) — mỗi nhịp "cực" trên trục nào
+
+| Nhịp | Trục |
+|---|---|
+| Kệ siêu thị | **Ấn tượng** (bao la, hàng trăm hộp) + đẹp (lặp lại gọn) |
+| Mặt hộp | **Đẹp** (logo phát sáng, chữ vàng, hộp trắng cao cấp) |
+| Phòng khách mở hộp | **Khao khát** (cây thông đèn vàng, lò sưởi treo tất, bàn đá) |
+| Bật đèn | **Sốc + kinh ngạc** (tối → cả tường sáng) |
+| Ba phòng | **Khao khát** + leo thang |
+
+**Bối cảnh định giá (0c, đã sửa ở 0d.10):** chuỗi lớn kiểu kho · nhà rộng, gọn, ấm · áo len kem —
+**mọi chi tiết cùng một mức giá**; thứ định giá mạnh nhất là **hộp đẹp**.
+
+### Điểm yếu (để bản của mình làm tốt hơn)
+
+1. **Không có mồi bình luận** (khung 03 có "Comment MERRY") → thêm vào bản của mình.
+2. **Câu chữ đã bão hoà** ("Every Christmas lover NEEDS this" ≥ 2 hãng dùng).
+3. Với Santa Spins: cú bật **nhỏ hơn** (vòng đèn vs cả bức tường) → phải bù **bao la** bằng **cả căn bếp
+   đổi không khí** + **nhạc bắt đầu phát** đúng lúc đèn sáng.
+
 ## Vì sao viral — xếp hạng (viết lại 23/10, TRƯỚC tầng 3)
 
 Bản đầu bỏ qua bước này → tầng 3 thay mất cú hook. Từ khung này trở đi, mục này
