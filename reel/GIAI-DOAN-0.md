@@ -21,15 +21,34 @@ Việc đầu tiên ở máy mới:
 
 1. `cd ~/my-project/manager-ai && git pull`
 2. Kiểm công cụ: `node -v` (cần ≥ 22.15), `ffmpeg -version`, `python3 --version`. Thiếu ffmpeg thì cài.
-3. Chủ dự án tạo tài khoản HypiHub; khoá để ở `reel/.env` hoặc kho khoá của Hypit, **không dán vào cuộc trò chuyện**.
+3. ~~Tạo tài khoản HypiHub~~ — bỏ, đắt. Làm **phép thử Muse** bên dưới trước.
 4. Chủ dự án tự cài skill Hypit khi sẵn sàng (chưa cho phép tự cài).
+
+## Phép thử Muse — 10 phút, không tốn tiền
+
+Câu hỏi duy nhất: **Muse có giữ đúng hình sản phẩm qua 2 clip nối nhau không?**
+
+1. Vào muse.ai, tải lên 2–3 ảnh Santa Spins. Đặt tên tệp bằng chữ ASCII, ví dụ `santa-spins-front.jpg`; tên có dấu hay chữ Trung bị từ chối.
+2. Nhờ agent chạy `media-generation` dạng video, `--orientation vertical`, ảnh sản phẩm làm `--image-file`:
+   - **Clip 1:** cận cảnh tay cầm xoay sản phẩm chậm, nền sạch.
+   - **Clip 2:** sản phẩm được dùng thật. Lấy khung cuối clip 1 làm khung đầu để nối liền.
+3. Tải 2 clip về, xem và ghi vào bảng kết quả bên dưới:
+   - Logo, chữ, màu, hình dáng có đúng ảnh gốc không? Cảnh nào sai?
+   - Tỉ lệ kích thước có hợp lý không?
+   - Clip dài bao nhiêu giây, độ phân giải bao nhiêu, có tiếng gốc không?
+   - Hạn mức tuần giảm bao nhiêu % sau 2 clip?
+4. Nếu còn thời gian, thử thêm 1 clip có ảnh người mẫu thật, để xem mặt giữ được tới đâu.
+
+**Đọc kết quả:**
+- Sản phẩm giữ đúng ở cả 2 clip → viết skill "Máy làm Reel" chạy trong Muse làm đường chính.
+- Sản phẩm méo hoặc sai logo → chuyển sang BytePlus Seedance (khoảng $2–3/video), Muse chỉ để thử.
 
 ## Việc
 
 - [x] Chốt trần chi phí, người mẫu, độ dài (23/10: $10 · ảnh thật, thiếu thì AI tạo · 15 giây)
-- [x] Chốt nhà cung cấp giai đoạn 0: HypiHub (23/10)
+- [x] Chốt nhà cung cấp giai đoạn 0: ~~HypiHub~~ → Muse trước, BytePlus dự phòng (23/10)
+- [ ] **Phép thử Muse 10 phút** (mục trên)
 - [ ] Cài ffmpeg trên máy chạy
-- [ ] Tạo tài khoản HypiHub, cất khoá
 - [ ] Cài skill Hypit (chủ dự án tự làm)
 - [x] Chọn 3 sản phẩm ở 3 ngách khác nhau, có cả ảnh đẹp lẫn ảnh xấu (23/10, bảng dưới)
 - [ ] Làm M0 bằng tay cho 3 sản phẩm đó: kiểm ảnh, sơ chế, ra tờ sản phẩm + bản tóm tắt
