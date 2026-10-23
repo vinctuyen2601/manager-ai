@@ -328,3 +328,22 @@ Tiếng: tiếng gốc các clip Muse (A2 −33,8 dB, M −36,9, B −23,9) — 
 2. **Clip M: vòng quanh mâm trông vàng/sáng** trước cú bật → làm nhẹ cú "tắt → sáng". Sửa cùng lúc nếu sinh lại M từ ảnh M bản sửa.
 3. **Nhạc**: cần một bài có giấy phép, chỗ "vào" canh 7,85 s.
 4. Cảnh đổi đĩa + "cả nhà" (nhịp leo thang) chưa có — bản 1 kết bằng lùi rộng bếp tối.
+
+## Bản 2 — chạy qua máy `gen-video-viral` (24/10/2026)
+
+Video đầu tiên đi trọn qua máy: kịch bản cảnh `gen-video-viral/vi-du/v01-ban2-kich-ban.json` → `gvv prompt` →
+`vi-du/v01-ban2-prompt.md` (dán vào Muse) → tải về `thu-nghiem/muse/M2.mp4`, `B2.mp4` → `gvv cat vi-du/v01-ban2-ke-hoach-cat.json --dung`.
+Sinh lại **2 ảnh (M2, K2) + 2 clip (M2, B2)** ≈ 7 % hạn mức; clip A2 giữ nguyên.
+
+**Nguyên nhân gốc lỗi 2 tìm ra khi chuẩn bị bản 2:** ảnh render hộp mở của store (`santa-spins-giftbox.jpg`) vẽ **sai máy** — đĩa than
+to có **cần đọc**, không có vòng LED. Ảnh M lần 1 chép y nguyên → clip M không phải "vòng trông vàng" mà là **một máy khác**. Sửa:
+ảnh M2 tải **thêm** khung thật `that-dia-quay-den-sang.jpg` và ghi "copy the player from the second image"; hồ sơ thêm "NO tonearm"
+vào khối PRODUCT + GIFT CASE OPEN và mục "không được vẽ". Cùng ngày `gvv prompt` lộ ra khối PRODUCT tự mâu thuẫn (vòng tắt
+"frosted white" vs "thin grey") — đã sửa.
+
+| Sửa lỗi bản 1 | Cách |
+|---|---|
+| 1. Cú bật trên kệ bếp | Ảnh **K2** từ khung thật trên tủ lạnh inox làm khung đầu clip B2; phong cách ghi "stays on the fridge door for the whole clip" |
+| 2. Máy trong hộp sai / vòng sáng sẵn | Ảnh **M2** hai tham chiếu (vali từ render + máy từ ảnh thật), "switched OFF … never glows" suốt clip M2 |
+| 3. Nhạc có giấy phép | ⬜ chưa — vẫn tiếng gốc clip |
+| 4. Nhịp leo thang sau cú bật | ⬜ chưa — giữ như bản 1 (cần người/nhiều phòng → rủi ro mặt người, để khung sau) |

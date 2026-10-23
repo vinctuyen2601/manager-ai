@@ -51,7 +51,7 @@ sĩ (Andy Williams, Mariah Carey, Bobby Helms…). Đĩa thật in gì? Bài tr�
 | Mặt sau | ⚠ có nam châm (FAQ trang), có cổng USB-C (trang) — chỗ đặt chưa biết. Chưa cảnh nào quay mặt sau → chưa cần hỏi | ⬜ ảnh mặt sau (hỏi khi khung cần) |
 | Độ dày | ⚠ mỏng, cỡ một khung ảnh để bàn (suy từ video thật — khối mô tả mục 5 đã ghi vậy) | ⬜ cm |
 | Hộp đóng | **Bản 2 (ảnh H1, chủ dự án chọn hướng 1, 23/10):** vali da đỏ thẫm bóng nhẹ; **cành thông + quả mọng vàng lá ở 4 góc nắp**; giữa nắp **logo Santa Spins thật** (chủ dự án 23/10: "rõ ràng có thể lấy logo của santa spin"; logo = `thu-nghiem/san-pham/santa-spins/logo-santa-spins.png`, 979², tải từ header store) — AI vẽ lại được nhưng phải tham chiếu logo thật (sổ tay 0f.2); ảnh hộp chuẩn: `thu-nghiem/muse/anh-H1-logo.jpg`; **nơ satin vàng** ở một góc; hai khoá vàng ở **cạnh dài phía trước**; không chữ. Ảnh: `thu-nghiem/muse/anh-H1-lan1.jpg` — ⚠ ảnh dựng hộp **đứng dọc**, vali thật **nằm ngang, rộng hơn cao** → prompt luôn ghi "lying flat, wider than it is tall" | ⚠ **máy suy ra 23/10** theo yêu cầu chủ dự án ("tự suy ra cho đẹp, sang trọng mùa Giáng sinh") — bám ngôn ngữ thiết kế nội thất vali; mép đỏ + hai khoá vàng thấy trong ảnh |
-| Hộp mở | Lót kem; nắp trong in chữ vàng "Timeless Christmas Memories / The soundtrack of every special moment"; máy giữa, 9 đĩa quanh | ✅ (ảnh render store `giftbox.webp` — ⚠ render, chưa biết có đúng hộp thật) |
+| Hộp mở | Lót kem; nắp trong in chữ vàng "Timeless Christmas Memories / The soundtrack of every special moment"; máy giữa, 9 đĩa quanh | ✅ vali, lót, nắp (render store `giftbox.webp`) · ❌ **máy trong render SAI** (đĩa than to + cần đọc) — xem mục 5b |
 
 ## 3b. Sự thật từ VIDEO THẬT trên trang (crawl 23/10)
 
@@ -106,7 +106,7 @@ whole player is small, about one and a half hands wide (roughly 15 cm); the LED 
 about half the player's width; a disc is a little smaller than the ring, about two fingers
 wide when held between thumb and fingers. When OFF the ring is a thin grey ring around a
 black platter; when a disc is placed it instantly glows warm white. There are nine discs, each with a DIFFERENT colorful album-style label,
-no two alike. NOT round, NOT a vinyl record, NOT a speaker, NO screen.
+no two alike. NOT round, NOT a vinyl record, NO tonearm or needle arm, NOT a speaker, NO screen.
 ```
 
 ⬜ Thêm **kích thước thật** vào khối này khi có (ví dụ "about 20 × 20 cm, a disc the size of a coaster") — AI hay vẽ sai tỉ lệ.
@@ -124,20 +124,26 @@ front edge. No other words or logos. Premium jewellery-style gift case, not a ca
 
 ```
 GIFT CASE OPEN (keep exactly): cream lining inside. The inside of the lid is cream with
-gold-foil pine branches in the corners and an elegant gold script title. The square
-acrylic player sits in the centre, and the nine round discs with nine different labels sit
+gold-foil pine branches in the corners and an elegant gold script title. The small square
+white-bordered player lies flat in the centre: an empty round black platter with a thin grey
+LED ring (off), no disc on it, NO tonearm, NO large vinyl record. The nine small round discs with nine different labels sit
 in round slots arranged around it, with the crimson case edge and the two gold latches at
 the front.
 ```
 
-Ảnh tham chiếu hộp mở: `thu-nghiem/muse/santa-spins-giftbox.jpg` (render của store, 1600²). Hộp đóng: chưa có ảnh —
-sinh **ảnh H** (prompt trong kịch bản v01) rồi dùng làm tham chiếu.
+Ảnh tham chiếu hộp mở: `thu-nghiem/muse/santa-spins-giftbox.jpg` (render của store, 1600²) — **CHỈ cho vali, lót, nắp,
+cách xếp 9 đĩa. Máy trong render SAI** (24/10, đối chiếu video thật): vẽ một **đĩa than to có cần đọc (tonearm)** đè lên mặt in,
+không có vòng LED. Ảnh M lần 1 chép y nguyên → clip M "vòng trông vàng/sáng" thật ra là máy khác. Mọi ảnh có máy trong hộp
+phải kèm **thêm** tham chiếu máy thật (`that-dia-quay-den-sang.jpg` — mặt trước đủ, đèn sáng; ghi rõ "ring OFF").
+Hộp đóng: ảnh H1 (`thu-nghiem/muse/anh-H1-logo.jpg`).
 
 ## 6. Điều KHÔNG được nói / vẽ
 
 - Không nói có Bluetooth, có app, phát nhạc từ điện thoại (trang ghi "No app, no pairing").
 - Không nói giao trong X ngày nếu không đúng shipping profile (Santa: "6 to 12 business days").
 - Không vẽ logo hãng khác lên sản phẩm (ngoài mặt in sẵn của sản phẩm).
+- **Không vẽ cần đọc (tonearm), không vẽ đĩa than to** — máy thật chỉ có mâm tròn lõm + vòng LED, đĩa nhỏ cỡ hai ngón tay
+  (render store vẽ sai, 24/10).
 - 🔴 Mặt in có **bìa album + hình người nổi tiếng thật** — chủ dự án quyết có dùng trong quảng cáo không (đã nêu 23/10).
 
 ## 7. Cần chủ dự án / nhà cung cấp
