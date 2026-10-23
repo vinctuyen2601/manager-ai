@@ -5,6 +5,62 @@ Trợ lý tự chắt lọc ngày 23/10/2026, sau khi chủ dự án chỉ ra kh
 nào.** Không chép tài liệu nguồn — chỉ giữ cái dùng được cho việc của máy: **video ngắn bán
 sản phẩm** (reel tự đăng + quảng cáo), không phải video giải trí hay nói chuyện.
 
+## 0. Triết lý làm video viral — nguyên lý gốc
+
+Chủ dự án chốt 23/10/2026: *"Tất cả hook đều xuất phát từ việc làm sao để thu hút con người"*
+— và gọi phần dưới đây là **"triết học của việc làm video viral"**. **Bản khởi đầu: còn
+thiếu, sẽ bổ sung** khi có số đo từ video thật của máy. Mọi mục sau (dạng hook, STEPPS,
+khung) chỉ là cách thực hiện phần này; gặp dạng hook chưa có trong danh mục thì quay về đây.
+
+Phần tâm lý học ở đây là **hiểu biết chung của trợ lý** (sự chú ý, khoảng trống thông tin,
+dự đoán sai), không lấy từ các nguồn đã đọc ở dưới.
+
+### Người lướt đang ở chế độ tự động
+
+Ngón tay vuốt nhanh hơn não kịp nghĩ; cái gì **giống video vừa qua** bị gạt trước khi được
+hiểu. Câu hỏi đúng không phải "làm sao cho hay" mà là **"làm sao đánh thức não trong chưa đầy
+một giây"**.
+
+### Bốn việc, theo thứ tự
+
+**1. Đánh thức — trong giây đầu.** Não chỉ thức vì hai loại tín hiệu; hook mạnh bắn cả hai:
+
+| | Tín hiệu | Ví dụ |
+|---|---|---|
+| **Từ dưới lên** — mắt, tai tự bắt, chưa cần hiểu | Chuyển động bất ngờ · **mặt người nhìn thẳng** · tương phản (tối/sáng, im/ồn) · **điều sai chỗ, trái dự đoán** | Vải tung, cú "tách", máy nghe đĩa **trên tủ lạnh** |
+| **Từ trên xuống** — "cái này là về MÌNH" | **Danh tính** · **vấn đề** · **mong muốn** của người xem | "Christmas Moms", "năm nào cũng lo quà cho mẹ", bếp Giáng sinh ấm |
+
+**2. Giữ lại — mở một câu hỏi.**
+- **Khoảng trống tò mò:** biết *một chút*, chưa biết *hết* → não muốn lấp. Biết hết thì đi,
+  không biết gì thì không quan tâm; chỗ vàng ở giữa.
+- **Chờ đợi phần thưởng:** hứa một khoảnh khắc cụ thể ("3, 2, 1") — lúc chờ kéo người hơn lúc nhận.
+- **Đường đi phải đang tiến:** vài giây có một cái mới (cảnh, chữ, bước). Đứng yên > ~3 s là mất.
+
+**3. Trả lời — muộn nhất có thể, nhưng xứng đáng.** Cả 3 khung đã bóc trả ở **7,8–7,9 s**.
+Muộn hơn: hết kiên nhẫn. Sớm hơn: hết lý do xem. Phần thưởng phải **thật** (không câu view)
+và bắn **cả hình lẫn tiếng** cùng lúc.
+
+**4. Để lại — cảm xúc đủ mạnh + một lý do hành động.** Cảm xúc **kích thích cao** (thích thú,
+kinh ngạc, buồn cười) mới lan; "dễ chịu" thì không. Lý do: chia sẻ làm mình trông tốt
+("tìm được món quà hay") · có ích cho người khác ("gửi mẹ xem") · lời mời cụ thể ("Comment SANTA").
+
+### Một câu
+
+> **Làm não giật mình (bất ngờ) hoặc làm người ta thấy "đây là mình" (liên quan) — tốt nhất
+> cả hai — trong giây đầu → mở một câu hỏi họ muốn biết đáp án → trả lời muộn nhất có thể
+> nhưng xứng đáng → để lại một cảm xúc mạnh và một lý do để làm gì đó.**
+
+### Dùng thế nào khi bóc / làm video
+
+Với mỗi video, trả lời đủ bốn câu, kèm **giây**: *Giây đầu đánh thức bằng gì (dưới lên? trên
+xuống?)* · *Câu hỏi mở là gì* · *Trả lời ở giây nào, bằng hình + tiếng gì* · *Để lại cảm xúc
+nào, lý do hành động nào*. Câu nào trống = chỗ video yếu.
+
+**Áp vào Santa Spins:** đánh thức = sản phẩm tự nó "sai chỗ" (máy đĩa trên tủ lạnh) → cho
+thấy ngay, đừng mở bằng ảnh nền trắng · liên quan = gọi đúng **người tặng** (mẹ, bố, bà) ·
+câu hỏi = "đặt đĩa vào thì sao?" giữ tới ~8 s · trả lời = **vòng đèn sáng + nhạc vang cùng
+lúc** (đèn nhỏ, một mình chưa đủ "oà") · để lại = "Comment SANTA" / "tag người xứng đáng".
+
 ## Nguồn đã đọc (23/10/2026)
 
 Điểm vào: GitHub topic [viral-marketing](https://github.com/topics/viral-marketing)
