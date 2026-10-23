@@ -103,6 +103,35 @@ khỏi trung bình trên ít nhất MỘT trục**:
 POV cầm tay (TikTok: DIY, không bóng bẩy). Đẹp kiểu quảng cáo TV = bị nhận ra là quảng cáo.
 (2) **Sốc phải thật và dẫn về sản phẩm** — cái sốc tốt nhất là **chức năng thật** gây bất ngờ.
 
+### Bối cảnh định giá sản phẩm — mọi chi tiết phải nói CÙNG một mức giá
+
+Chủ dự án 23/10: *"nếu thay kệ siêu thị bằng kệ hàng bình dân liệu người ta có mua đồ giá cao
+ở cửa hàng bé không?"* — **Không.** Người xem ước giá trị bằng **những gì bao quanh** món hàng,
+trước cả khi thấy giá. Siêu thị lớn (sáng, rộng, kệ đầy, gọn) = "một chuỗi lớn đã chọn bán →
+tin được, đang bán chạy, giá tầm trung–cao hợp lý". Tiệm nhỏ/bình dân = "hàng rẻ, hàng chợ".
+
+Hỏng ở **sau cú bấm**: bối cảnh rẻ làm người xem ngầm đoán $10–15 → vào trang thấy **$80** →
+"đắt, bị lừa" → thoát. Số người dừng có thể không đổi, nhưng **cú chốt đơn vỡ**.
+
+| Chi tiết | Hợp hàng $80 làm quà | Làm tụt giá trị |
+|---|---|---|
+| Cửa hàng | Chuỗi lớn: trần cao, đèn sáng, lối rộng, kệ đầy gọn | Tiệm nhỏ, chật, lộn xộn |
+| Nhà | Bếp rộng, gọn, ấm; cây thông đẹp; tủ lạnh xịn (retro kem) | Bếp chật, bừa, đèn xấu |
+| Tay, quần áo | Áo len đan kem, móng gọn (cả 3 khung mẫu) | Áo nhàu, đồ tạp |
+| Hộp | Vali quà đỏ khoá vàng | Carton trơn |
+| Ánh sáng | Ấm, mềm, đèn dây | Huỳnh quang trắng gắt trong nhà |
+
+Một chi tiết lệch là cả video tụt hạng — người xem không phân tích, chỉ thấy "có gì đó rẻ rẻ".
+Bối cảnh còn nói **video dành cho ai** (bếp rộng + cây thông lớn + áo len kem = mẹ Mỹ trung lưu,
+đúng tệp chi $80 cho quà) — khớp với chữ gọi tên trên hình.
+
+**Ngoại lệ:** kiểu "không ngờ mua ở Dollar Tree!" dùng cửa hàng bình dân rất hiệu quả — nhưng
+chỉ cho **hàng rẻ thật** (trông đắt mà giá bèo mới là cú sốc). Với hàng $80 thì phản tác dụng.
+
+**Cho máy:** prompt mọi cảnh phải **ghi rõ tín hiệu giá trị** (chuỗi lớn, bếp rộng gọn ấm, áo len
+kem…) — không ghi thì AI vẽ cảnh chung chung, mặc định "trung bình". M0/kiểm cảnh thêm câu:
+*"mọi chi tiết trong khung có cùng nói một mức giá với giá bán không?"*
+
 **Cho máy:** M0 hỏi thêm *"nguyên liệu này 'cực' trên trục nào?"* — ảnh trung bình thì sơ chế
 (ánh sáng, bối cảnh) hoặc đổi khung (vì vậy hộp xấu làm hỏng khung 01, khung cần trục đẹp +
 ấn tượng). **Lợi thế AI:** đẩy đẹp và quy mô lên rất xa với giá rẻ. **Bẫy AI:** quá bóng bẩy →
