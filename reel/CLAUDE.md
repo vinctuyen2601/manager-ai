@@ -26,7 +26,7 @@ Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên
 | 23/10 | Khung là **skill Hypit** (hypit-ai/hypit) chạy trong Claude Code. Đã đọc mã và loại ClipForge (nhân bản viral gần như giả, dán link trả 6 cảnh gõ cứng), ai-video-studio (2 commit, đẩy ảnh lên uguu.se công khai), ArcReel (không có nhân bản viral, AGPL), Pixelle-Video |
 | 23/10 | **Tiếng Anh (Mỹ) trước.** Tiếng Việt là gói tuỳ chọn làm sau |
 | 23/10 | **Không tự đăng mạng xã hội.** Đầu ra là thư mục video + đường dẫn; chủ dự án tự đăng |
-| 23/10 | **Mọi ngách sản phẩm.** Nguồn sản phẩm chính là Shopify Admin API, phụ là nhập tay |
+| 23/10 | **Mọi ngách sản phẩm.** ~~Nguồn sản phẩm chính là Shopify Admin API, phụ là nhập tay~~ → thay 24/10, xem dưới |
 | 23/10 | **Reel mẫu** lấy từ TikTok, Facebook Reels, kho quảng cáo (TikTok Creative Center, Meta Ad Library) và tải tay. **Chưa dùng công cụ trả phí** (PipiAds, Foreplay) |
 | 23/10 | **Khung ba tầng:** format (playbook Hypit) → cảnh theo giây → phán quyết chuyển sang AI + loại sản phẩm hợp. Kèm bằng chứng viral |
 | 23/10 | **M0 sơ chế nguyên liệu** đứng trước mọi bước tốn tiền |
@@ -48,6 +48,8 @@ Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên
 | 23/10 | Chữ trên hình: chủ dự án giao trợ lý chọn "miễn phù hợp và viral" — nhưng vẫn theo luật: không nói điều sai sự thật (nơi bán, hết hàng) |
 | 24/10 | **Cửa 0 QUA** (chủ dự án: video 01 "cũng tạm tạm… sang step tiếp"). Giữ hình sản phẩm: qua **khi mọi cảnh có sản phẩm bắt đầu từ ảnh sản phẩm thật**; chi phí $0 (Muse), ~25 % hạn mức tuần cho video 01. **Sang giai đoạn 1** |
 | 24/10 | **Tên máy: `gen-video-viral`** (lệnh `gvv`), repo mã riêng. Thứ tự giai đoạn 1: **dựng** (✅ 24/10, tái tạo đúng video 01) → **bóc khung — phần đo** (✅ 24/10, `gvv boc`) → **`gvv cat` tự đề xuất danh sách cắt** (chủ dự án hỏi "danh sách cắt dựa vào gì": khung + kịch bản + đo clip thật + hồ sơ thương hiệu; mốc neo = cú bật đo bằng độ sáng; ✅ 24/10, video 01: 6/6 nhịp lệch ≤ 0,25 s so với dựng tay. Bài học: đèn LED sáng DẦN ~0,5 s (+7–10 độ sáng), không nhảy — đo đoạn tăng trong cửa sổ prompt và đòi sáng hơn mức cũ, vì sáng lại sau cú máy đẩy vào dễ bị nhận nhầm) → hồ sơ sản phẩm từ link → ghép prompt. Muse vẫn do người chạy tay |
+| 24/10 | **Nguồn sản phẩm = link trang chủ dự án gửi**, không kết nối Shopify ("Tạm thời chỉ lấy sản phẩm tôi gửi link thôi, sau tôi cũng sẽ share như thế không cần kết nối với shopify"). `gvv san-pham <link>` chỉ đọc trang công khai (`<link>.js` / JSON-LD / og:), không token. Ép thị trường Mỹ `?country=US` — không ép thì máy ở VN nhận giá VND. M1 "Admin GraphQL API" trong kế hoạch bị thay: sửa ở bản gốc Claude Docs rồi chép lại |
+| 24/10 | **Cổng kiểm nguyên liệu sản phẩm: ĐỦ mới xong bước sơ chế** ("phải đạt đủ thì mới xong bước xử lý thô, nếu không đạt thì hãy nói rõ yêu cầu đến user cần cung cấp thêm"). Chặn: mô tả rỗng · < 3 ảnh cạnh ngắn ≥ 800px · không cỡ thật VÀ không video để đo tỉ lệ · không logo · hồ sơ còn ⬜ ở mục 1/1b/3/5/6. Cảnh báo: không video · không giá · chỉ có tỉ lệ từ video. Mỗi mục chặn của người dùng phải đi kèm **câu yêu cầu cụ thể** (gửi gì, cỡ nào, góc nào) — ghi `CAN-BO-SUNG.md`, trợ lý chuyển nguyên văn cho chủ dự án. Ngưỡng là điểm khởi đầu, chỉnh theo kết quả thật |
 | 23/10 | Muse (muse.ai) chỉ là nhánh thử, chạy **bên trong** Muse. Không dùng useapi.net, AutoMuse (giao mật khẩu, cookie Meta cho bên thứ ba) |
 
 ## Quy tắc bóc khung (M3) — rút ra từ lỗi khung 01, 23/10
