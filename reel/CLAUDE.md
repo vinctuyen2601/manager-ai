@@ -51,6 +51,8 @@ Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên
 
 **Bước 0: đọc `KIEN-THUC-VIRAL.md` và đi đủ bộ câu hỏi A–H trong đó.**
 
+**Cửa chặn trước MỌI prompt** (chủ dự án 23/10: "một sản phẩm mù thì sao AI biết mà tạo ra được"): phải có **hồ sơ sản phẩm** (`san-pham/<sp>.md`, mục "Hình dáng" không còn ⬜, có **khối mô tả chuẩn** dán nguyên văn vào prompt) và, nếu cảnh có người, **hồ sơ nhân vật** (`nhan-vat/<ten>.md`, có khối mô tả chuẩn). Thiếu thì làm M0/M2 trước, không viết prompt. Ảnh K lần 1 (23/10) sai đúng vì thiếu hai thứ này: mất vòng LED, 9 đĩa lặp nhãn, sai tỉ lệ đĩa/máy.
+
 Bản bóc đầu của khung 01 sai ở khâu đánh giá: thay cú hook "kệ siêu thị + hộp
 đẹp" bằng "hộp giao trước cửa" vì lo Muse vẽ sai chữ và lo "ngụ ý bán lẻ". Chủ dự
 án bắt được. Từ đó:
