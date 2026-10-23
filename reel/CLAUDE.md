@@ -13,6 +13,7 @@ ra video dọc 9:16 tiếng Anh (Mỹ) trong một thư mục.
 | Kế hoạch sản phẩm (yêu cầu FR/NFR, module M0–M9, UI, kiến trúc, lộ trình) | Bản gốc: https://claude.ai/artifact/AMhN1DQDB32o14HAAmA1da · bản chép: `KE-HOACH.md` | Mọi quyết định về phạm vi và thứ tự làm. Sửa ở bản gốc rồi chép lại |
 | Bản thiết kế sơ đồ (bản 6) | https://claude.ai/artifact/Poxf3b8AzDytHAyMC7HhTG | Nhìn nhanh luồng và lý do loại các repo khác |
 | Việc giai đoạn 0 và kết quả đo | `GIAI-DOAN-0.md` cùng thư mục | Đang làm giai đoạn 0 |
+| **Sổ tay viral** — vì sao video ngắn viral, bộ câu hỏi bóc (A–H), STEPPS, dạng hook, hook chết, quy tắc outlier | `KIEN-THUC-VIRAL.md` | **Trước khi bóc BẤT KỲ khung nào.** Cập nhật khi một video của máy thắng/thua rõ |
 
 Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên mới cần để không
 đi lạc, và những quyết định đã chốt với chủ dự án.
@@ -47,6 +48,8 @@ Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên
 | 23/10 | Muse (muse.ai) chỉ là nhánh thử, chạy **bên trong** Muse. Không dùng useapi.net, AutoMuse (giao mật khẩu, cookie Meta cho bên thứ ba) |
 
 ## Quy tắc bóc khung (M3) — rút ra từ lỗi khung 01, 23/10
+
+**Bước 0: đọc `KIEN-THUC-VIRAL.md` và đi đủ bộ câu hỏi A–H trong đó.**
 
 Bản bóc đầu của khung 01 sai ở khâu đánh giá: thay cú hook "kệ siêu thị + hộp
 đẹp" bằng "hộp giao trước cửa" vì lo Muse vẽ sai chữ và lo "ngụ ý bán lẻ". Chủ dự
