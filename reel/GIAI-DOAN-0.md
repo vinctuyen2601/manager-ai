@@ -161,7 +161,20 @@ Mỗi lần chạy một dòng. Không xoá dòng hỏng — dòng hỏng là d�
 | 23/10 | Santa Spins | — | Muse | 1 (clip 1, lần 2) | 3 | ✅ hình dáng + tiêu đề "THIS IS THE SHINING STAR…" giữ; lại đẩy vào tới cận sát đĩa; ánh sáng trắng → đỏ ấm | — | $0 | gần được | 720×1280 (khác lần 1: 704×1248), 24 fps, 10 s, tiếng TB −24 dB |
 | 23/10 | Santa Spins | — | Muse | 1 (clip 2, lần 3) | 4 | ⚠ hình dáng giữ; chữ trôi nhẹ: "JINGLE BELL ROCK" → "JINGLE **BELK**"; **bàn tay biến mất đột ngột** ở giây 1 (không rút ra) | — | $0 | không | 704×1248. Khung đầu lại là **ảnh gốc có tay**, không phải `clip1-last.jpg` — đo SSIM khung đầu clip 2 với khung cuối clip 1 (cả hai bản): **0,34** (trùng khung phải > 0,9). **3/3 lần nối thất bại** |
 
-**Đọc tới đây (5 clip, 23/10):**
+| 23/10 | Santa Spins | — | Muse | 1 (clip 2, lần 4: **chỉ tải `clip1-v2-last.jpg`**, dặn agent chỉ dùng tệp đó) | 5 | ✅ **nối khớp** (khung đầu = khung cuối clip 1 bản 2; SSIM 0,55 do đĩa quay + nén, mắt thấy trùng); lùi thẳng giữ **vuông**, đèn trắng ấm, **giữ cả tiêu đề "THIS IS THE SHINING STAR IN MY ORDINARY LIFE"**; lộ cây thông | — | $0 | **gần được** (chủ dự án: "rất khớp và đẹp") | 704×1248, 10 s. Sót: ô bìa nhỏ xếp lại ("MAST CHRISTMAS", Sinatra lặp); máy hơi dài ra cuối clip (rộng/cao ≈ 0,74 so với 0,82 ảnh gốc). Bản ghép 20 s: `thu-nghiem/muse/santa-spins-noi-thu.mp4` (clip1c + clip2d) |
+
+**Hạn mức Muse (chủ dự án đo):** 6 clip = **18 %** hạn mức tuần → ~3 %/clip →
+~33 clip/tuần ≈ **~16 video 2 clip/tuần** nếu không sinh lại. Sinh lại làm giảm thẳng số này.
+
+**Muse tự gộp 2 clip** thành một tệp: `santa-spins-joined-v3-20s.mp4` → bản chép
+`thu-nghiem/muse/muse-gop-20s.mp4`: **20,05 s · 720×1280 · 24 fps · H.264 + AAC**.
+Dò chuyển cảnh (ffmpeg `scene > 0,25`): **0 vết cắt** — chỗ nối liền. Reel mặc định
+15 s → cắt bớt 5 s, hoặc đổi mặc định 20 s (chủ dự án quyết).
+
+**Sửa phán quyết sau clip 6:** lỗi nối 0/3 trước đó là do **tải lên nhiều ảnh**
+(Muse lấy ảnh khác làm khung đầu), không phải Muse không nối được. Một ảnh = nối được (1/1).
+
+**Đọc tới đây (5 clip đầu, 23/10 — một phần đã sửa ở trên):**
 1. Hình dáng sản phẩm: giữ khi nhìn thẳng / lùi thẳng; **méo khi đổi góc**.
 2. **Chữ nhỏ in trên sản phẩm trôi** khi cảnh rộng ra — sản phẩm có nhiều chữ/bìa in là ca khó.
    M0 nên có cờ "sản phẩm có chữ in nhỏ" → ưu tiên cảnh cận hoặc chèn ảnh thật (B-roll) thay vì sinh.
@@ -171,8 +184,7 @@ Mỗi lần chạy một dòng. Không xoá dòng hỏng — dòng hỏng là d�
    lịch sử Muse xem `--image-file` thật sự là tệp nào trước khi kết luận.
 5. Clip cố định **10 s** → reel 15 s = 2 clip, nên phép nối là bắt buộc, không phải tuỳ chọn.
 
-**Phán quyết Muse theo Cửa 0** (tiêu chí 1: giữ hình dáng, màu, logo): **chưa qua.**
-Dùng được làm nguồn miễn phí cho **cảnh nhìn thẳng / cận** (4/5 clip giữ dáng),
-không dùng được cho cảnh đổi góc, cảnh rộng có chữ in, và chưa nối được cảnh.
-Đúng nhánh "sản phẩm méo hoặc sai logo" ở trên → **bước tiếp: thử Seedance qua Hypit**
-(khoảng $2–3/video, chưa kiểm giá) với cùng 2 prompt, so cùng tiêu chí.
+**Phán quyết Muse theo Cửa 0** (tiêu chí 1: giữ hình dáng, màu, logo) — sửa sau clip 6:
+**qua cho cảnh nhìn thẳng / lùi thẳng, nối được khi tải một ảnh.** Vẫn chưa qua: cảnh
+đổi góc (1 lần thử, méo), chữ in nhỏ trôi ở cảnh rộng. Chi phí $0 nhưng bị **hạn mức
+tuần** (chủ dự án chưa đo %) và clip cố định 10 s ~720p. Chưa chốt đường chính.
