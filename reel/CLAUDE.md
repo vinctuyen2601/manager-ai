@@ -51,7 +51,26 @@ Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên
 
 **Bước 0: đọc `KIEN-THUC-VIRAL.md` và đi đủ bộ câu hỏi A–H trong đó.**
 
-**Cửa chặn trước MỌI prompt** (chủ dự án 23/10: "một sản phẩm mù thì sao AI biết mà tạo ra được"): phải có **hồ sơ sản phẩm** (`san-pham/<sp>.md`, mục "Hình dáng" không còn ⬜, có **khối mô tả chuẩn** dán nguyên văn vào prompt) và, nếu cảnh có người, **hồ sơ nhân vật** (`nhan-vat/<ten>.md`, có khối mô tả chuẩn). Thiếu thì làm M0/M2 trước, không viết prompt. Ảnh K lần 1 (23/10) sai đúng vì thiếu hai thứ này: mất vòng LED, 9 đĩa lặp nhãn, sai tỉ lệ đĩa/máy.
+**Đầu vào từ người dùng — CHỈ 5 thứ** (chủ dự án chốt 23/10: "nhiều quá, có những thứ là kiến thức của bạn tự quyết và tự định hình được"):
+
+1. **Video mẫu** — người dùng đưa, hoặc máy lấy từ **thư viện khung** của mình.
+2. **Thông tin sản phẩm** và các đặc điểm.
+3. **Hình ảnh sản phẩm.**
+4. **Hình ảnh người mẫu**, nếu có.
+5. **Yêu cầu, mô tả thêm, lưu ý, hướng dẫn** của người dùng.
+
+**Mọi thứ khác máy TỰ QUYẾT, không hỏi:** bóc khung + vì sao viral · hồ sơ sản phẩm (tự gom từ 2 và 3) ·
+**nhân vật** (tự thiết kế theo tệp khách và mức giá khi không có 4) · **bối cảnh** · thông điệp, chữ trên hình,
+mồi bình luận · nhạc · chia clip, khung đầu, prompt · dựng. Căn cứ: `KIEN-THUC-VIRAL.md`.
+
+**Chỉ hỏi người dùng khi:** thiếu thứ mà **chỉ người dùng mới biết** trong 2 và 3 (kích thước thật, mặt sau, phụ kiện
+thật, bao bì thật) **và** thứ đó cần cho cảnh đang làm; hoặc có điều có thể **sai sự thật / rủi ro pháp lý** (nêu một
+lần, người dùng chốt). Không thì tự suy, đánh dấu ⚠ "suy ra", làm tiếp.
+
+**Cửa chặn trước MỌI prompt:** máy phải tự dựng xong **hồ sơ sản phẩm** (`san-pham/<sp>.md`, có **khối mô tả chuẩn**
+dán nguyên văn vào prompt) và — nếu cảnh có người — **hồ sơ nhân vật** (`nhan-vat/<ten>.md`). Mọi cảnh có sản phẩm
+phải bắt đầu từ **ảnh khung đầu có sản phẩm thật** (Muse lấy ảnh tải lên làm khung đầu). Đo 23/10: clip A — cảnh không
+có sản phẩm Muse làm rất đẹp; cảnh có sản phẩm mà không có ảnh thì Muse **bịa** (vali chứa tấm vuông trắng + đĩa than).
 
 Bản bóc đầu của khung 01 sai ở khâu đánh giá: thay cú hook "kệ siêu thị + hộp
 đẹp" bằng "hộp giao trước cửa" vì lo Muse vẽ sai chữ và lo "ngụ ý bán lẻ". Chủ dự

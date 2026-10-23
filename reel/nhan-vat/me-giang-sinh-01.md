@@ -1,11 +1,11 @@
-# Hồ sơ nhân vật — "Christmas Mom" 01 (M2, bản nháp 23/10/2026 — CHỜ CHỦ DỰ ÁN DUYỆT)
+# Hồ sơ nhân vật — "Christmas Mom" 01 (M2, 23/10/2026 — máy tự thiết kế)
 
 Chủ dự án 23/10: *"một nhân vật không mô tả xinh như thế nào, ăn mặc ra làm sao thì không biết
 được nhân vật đó thế nào"*. Tệp này mô tả **một** người, dùng lại ở mọi cảnh và mọi video có người
 (kể cả cảnh POV chỉ thấy tay). Sửa ở đây, không sửa trong từng prompt.
 
 Nguồn người mẫu theo kế hoạch: **ảnh người thật chủ dự án đưa, có đồng ý**; không có thì **AI tạo
-theo mô tả này**. Bản dưới là **đề xuất của trợ lý** — mọi ô chủ dự án đổi được.
+theo mô tả này**. Không có ảnh người mẫu (đầu vào 4) → **máy tự thiết kế** theo tệp khách và mức giá (quy tắc 5 đầu vào, `../CLAUDE.md`). Người dùng muốn khác thì nói ở đầu vào 5.
 
 ## 1. Vì sao người này (nối với sổ tay)
 
@@ -22,7 +22,7 @@ theo mô tả này**. Bản dưới là **đề xuất của trợ lý** — m�
 | Gương mặt | ấm, cười dễ, trang điểm tự nhiên (da sáng khoẻ, má hồng nhẹ, son hồng đất) |
 | Tóc | nâu, dài ngang vai, **búi rối** có vài lọn rơi |
 | Dáng | mảnh, thoải mái |
-| ⬜ Sắc tộc, màu da, màu mắt | **chủ dự án chọn** (ảnh hưởng tệp khách nhắm tới) |
+| Sắc tộc, màu da, màu mắt | máy chọn theo tệp khách Mỹ của shop: da trắng sáng, mắt nâu (khối mô tả ghi "American woman") — đổi được qua đầu vào 5 |
 
 ## 3. Trang phục và tay (dùng cả trong cảnh POV)
 
