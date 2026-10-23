@@ -1,0 +1,250 @@
+<title>Máy làm Reel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Bố cục: một cột đọc, sơ đồ được tràn rộng hơn chữ; bảng cuộn ngang trong khung riêng */
+:root {
+  --bg: #f6f7f6;
+  --surface: #ffffff;
+  --fg: #1b2420;
+  --muted: #5d6b64;
+  --line: #dde3df;
+  --accent: #0f7a5c;
+  --warn: #a35b00;
+  --warn-bg: #fff4e2;
+  --bad: #b3261e;
+  --bad-bg: #fdecea;
+  --font-display: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-body: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121715; --surface: #1a211e; --fg: #e4ebe7; --muted: #9aa9a1; --line: #2c3632;
+    --accent: #4cc79f; --warn: #f0b45c; --warn-bg: #2e2412; --bad: #f08c84; --bad-bg: #331a18;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121715; --surface: #1a211e; --fg: #e4ebe7; --muted: #9aa9a1; --line: #2c3632;
+  --accent: #4cc79f; --warn: #f0b45c; --warn-bg: #2e2412; --bad: #f08c84; --bad-bg: #331a18;
+  color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 15px; line-height: 1.6;
+}
+.wrap {
+  max-width: 1080px; margin: 0 auto;
+  padding-block: 40px 72px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 48px;
+}
+.prose { max-width: 68ch; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.25; }
+h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: 22px; font-weight: 700; }
+h3 { font-size: 16px; font-weight: 700; }
+p { margin: 0; }
+section { display: grid; gap: 16px; min-width: 0; }
+.eyebrow {
+  font-family: var(--font-mono); font-size: 12px; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--accent);
+}
+.lede { color: var(--muted); font-size: 17px; }
+header { display: grid; gap: 12px; }
+
+.diagram {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 20px; overflow-x: auto;
+}
+.diagram pre.mermaid { margin: 0; display: flex; justify-content: center; min-width: 680px; background: none; }
+.caption { color: var(--muted); font-size: 13px; }
+
+.tbl { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 780px; font-size: 14px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 500; }
+tr:last-child td { border-bottom: 0; }
+td:first-child { font-family: var(--font-mono); color: var(--accent); white-space: nowrap; }
+code, .mono { font-family: var(--font-mono); font-size: 0.9em; }
+.chip {
+  display: inline-block; font-family: var(--font-mono); font-size: 12px; line-height: 1.4;
+  padding: 1px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); white-space: nowrap;
+}
+.chip.self { border-style: dashed; border-color: var(--accent); color: var(--accent); }
+
+.flags { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.flag { border-radius: 10px; padding: 14px 16px; display: grid; gap: 6px; min-width: 0; align-content: start; }
+.flag.bad { background: var(--bad-bg); }
+.flag.bad h3 { color: var(--bad); }
+.flag.warn { background: var(--warn-bg); }
+.flag.warn h3 { color: var(--warn); }
+
+ol.mvp { margin: 0; padding-left: 22px; display: grid; gap: 10px; max-width: 72ch; }
+ol.mvp li::marker { font-family: var(--font-mono); color: var(--accent); }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">Bản thiết kế · bản 6 · 23/10/2026</span>
+    <h1>Máy làm Reel</h1>
+    <p class="prose"><b>Một tài sản AI độc lập</b>, không gắn với cửa hàng nào. Nguồn sản phẩm chính là các cửa hàng Shopify, ngoài ra nhập tay hoặc dán link sản phẩm.</p>
+    <p class="lede prose">Đưa vào một sản phẩm, ảnh người mẫu và một reel viral làm mẫu. Máy bóc khung reel mẫu, sinh từng cảnh bằng AI, viết lại lời theo video thật, lồng tiếng, dựng thành video dọc 9:16 rồi lưu vào thư mục đầu ra và trả về đường dẫn. Máy không tự đăng lên mạng xã hội: chủ shop xem video trong thư mục rồi tự đăng. Xong thì quay lại với sản phẩm kế tiếp.</p>
+    <p class="prose">Bản 3 dựng trên <b>Hypit</b>, sau khi đọc mã bốn dự án Trung Quốc. Bản 2 đề xuất fork ClipForge, nhưng phần nhân bản viral của nó mỏng hơn README nói nhiều, nên đã bỏ.</p>
+    <p class="prose"><b>Ngôn ngữ: tiếng Anh (Mỹ) trước.</b> Lời thoại, giọng đọc, phụ đề đều en-US. Tiếng Việt là gói tuỳ chọn làm sau.</p>
+  </header>
+
+  <section>
+    <span class="eyebrow">Sơ đồ 1</span>
+    <h2>Kiến trúc: Hypit làm khung, ghép ý tưởng từ hai repo khác</h2>
+    <div class="diagram">
+<pre class="mermaid">
+flowchart TB
+  REF["Reel viral mẫu<br/>tệp mp4"]
+  SHOP["Nguồn sản phẩm<br/>Shopify Admin API: chính<br/>nhập tay · link sản phẩm"]:::tu
+  subgraph CC["Claude Code trên máy bạn"]
+    direction TB
+    BOC["Bóc khung reel mẫu<br/>ffmpeg đo điểm cắt → LLM xem ảnh lưới<br/>→ hỏi lại từng cảnh với khung gốc"]:::tu
+    TS["Tài sản đặt tên @[tên]<br/>người mẫu · cần câu · máy câu"]:::tu
+    SK["Skill Hypit<br/>agent viết kịch bản"]
+    SVML[("Tệp .svml cho mỗi biến thể<br/>lời gắn theo từ · cảnh · tiếng")]
+    RT["Runtime Hypit<br/>gửi → chờ → lấy về<br/>dùng lại phần không đổi"]
+    XEM["Xem lại video đã sinh<br/>bảng ảnh có cờ CUT / BLACK<br/>LLM viết lại lời cho khớp hình"]:::tu
+    DUNG["Dựng<br/>Chromium headless + ffmpeg<br/>phụ đề tiếng Anh"]
+  end
+  REF --> BOC --> SK
+  SHOP --> TS --> SK
+  SK --> SVML --> RT
+  RT --> VID["Video qua API<br/>Seedance · Kling · Wan<br/>đường chính"]
+  RT --> TTS["Giọng đọc en-US<br/>ElevenLabs · FishAudio"]
+  VI["Gói tiếng Việt<br/>giọng vi-VN · font có dấu<br/>tuỳ chọn, làm sau"]:::tu
+  VI -.-> TTS
+  VID --> XEM
+  TTS --> XEM
+  XEM -- "lời mới, chỉ sinh lại tiếng" --> SVML
+  XEM --> DUNG
+  DUNG --> OUT[("Thư mục đầu ra<br/>output/&lt;sản phẩm&gt;/&lt;biến thể&gt;/<br/>MP4 9:16 · ảnh bìa · lời thoại.txt")]
+  OUT --> LINK["Trả về đường dẫn thư mục<br/>chủ shop xem rồi tự đăng"]
+  LINK -- "chưa đạt, sửa" --> SVML
+  OUT -. "sản phẩm kế tiếp: chỉ tạo .svml mới" .-> TS
+
+  subgraph MU["Nhánh thử riêng: chạy BÊN TRONG Muse"]
+    direction TB
+    MSK["Skill trong Muse<br/>gọi media-generation<br/>clip có sẵn tiếng Anh · ffmpeg trong máy ảo"]
+    MACC[("Tài khoản Muse<br/>clip 10 giây · khoảng 720p<br/>hạn mức theo tuần")]
+    MSK --> MACC
+  end
+  MACC -. "clip đạt thì tải về làm tài sản" .-> RT
+  classDef tu stroke-dasharray: 6 4, stroke-width: 2px
+</pre>
+    </div>
+    <p class="caption prose">Ô viền nét đứt là phần tự viết. Phần còn lại Hypit đã có sẵn. Muse nằm riêng ra vì chưa chứng minh được là giữ đúng hình sản phẩm và mặt người mẫu. Nó chạy bên trong máy ảo của chính Muse, không điều khiển muse.ai từ bên ngoài, nên không phải giao cookie cho ai.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Sơ đồ 2</span>
+    <h2>Luồng xử lý chín bước</h2>
+    <div class="diagram">
+<pre class="mermaid">
+flowchart TD
+  subgraph IN["① Đầu vào"]
+    P["Thông tin sản phẩm<br/>tên · giá · điểm bán"]
+    M["Ảnh người mẫu<br/>+ ảnh sản phẩm"]
+    R["Reel viral mẫu"]
+  end
+  R --> KHUNG[("② Khung reel mẫu<br/>cảnh · mốc cắt · kiểu quay<br/>vì sao giữ chân người xem")]
+  P & M & KHUNG --> PR["③ Kịch bản + prompt từng cảnh<br/>mốc cắt ép bằng mã, không chỉ dặn"]
+  PR --> GEN["④ Sinh video từng cảnh<br/>khung cuối cảnh trước làm khung đầu cảnh sau"]
+  GEN --> QC{"Kiểm tự động<br/>đủ giây? thấy sản phẩm?"}
+  QC -- "hỏng, sinh lại cảnh đó" --> GEN
+  QC -- "đạt" --> GHEP["⑤ Ghép cảnh"]
+  GHEP --> TXT["⑥ Viết lại lời<br/>nhìn bảng ảnh của video THẬT"]
+  TXT --> TTS["⑦ Đọc lời en-US + trộn nhạc có giấy phép"]
+  TTS -- "dài hơn cảnh" --> TXT
+  TTS --> REN["⑧ Dựng bản cuối"]
+  REN --> OUT["⑨ Lưu vào thư mục đầu ra<br/>trả về đường dẫn"]
+  OUT --> XEM{"Chủ shop xem"}
+  XEM -- "sửa lời" --> TXT
+  XEM -- "làm lại cảnh" --> PR
+  XEM -- "đạt: tự đăng tay" --> DONE["Xong"]
+  OUT -. "sản phẩm kế tiếp" .-> P
+</pre>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Chi tiết</span>
+    <h2>Mỗi phần lấy từ đâu</h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Bước</th><th>Làm gì</th><th>Nguồn</th><th>Ghi chú</th></tr></thead>
+        <tbody>
+          <tr><td>① Đầu vào</td><td>Kéo tên, mô tả, ảnh, giá, biến thể của sản phẩm. Một giao diện nguồn chung, mỗi nguồn một adapter</td><td><span class="chip self">tự viết</span></td><td>Chính: Shopify Admin API (GraphQL), dùng token của app tạo bằng Shopify CLI. Phụ: nhập tay, dán link sản phẩm</td></tr>
+          <tr><td>② Bóc khung</td><td>ffmpeg đo điểm cắt bằng độ lệch sáng giữa các khung. LLM xem ảnh lưới khung hình, rồi xem lại từng cảnh ở độ phân giải gốc</td><td><span class="chip self">tự viết</span> <span class="chip">ý tưởng ai-video-studio (MIT)</span></td><td>Hypit chỉ để agent "xem rồi viết". Đo ở máy trước thì mốc cắt chắc hơn. Không lấy nhạc gốc</td></tr>
+          <tr><td>③ Kịch bản</td><td>Agent viết tệp <span class="mono">.svml</span>: lời trong <span class="mono">&lt;script&gt;</span>, cảnh và tiếng gắn theo từ</td><td><span class="chip">Hypit</span></td><td>Mỗi biến thể một tệp. Đổi sản phẩm thì chỉ sinh lại phần đổi</td></tr>
+          <tr><td>③ Tài sản</td><td>Người mẫu, cần câu, máy câu đặt tên <span class="mono">@[tên]</span>, luôn gửi kèm ảnh tham chiếu</td><td><span class="chip self">tự viết</span> <span class="chip">ý tưởng ArcReel</span></td><td>Cách chống "đổi mặt" giữa các cảnh</td></tr>
+          <tr><td>④ Sinh video</td><td>Gửi, chờ, lấy về. Không tự thử lại lệnh gửi để khỏi trả tiền hai lần</td><td><span class="chip">Hypit</span></td><td>Seedance, Wan, Pixverse, MiniMax có sẵn. Muse chỉ ở nhánh thử</td></tr>
+          <tr><td>⑤ Ghép</td><td>Đưa về 1080×1920, nối cảnh</td><td><span class="chip">Hypit</span></td><td>Dựng bằng Chromium headless + ffmpeg</td></tr>
+          <tr><td>⑥ Viết lại lời</td><td>Tạo bảng ảnh có nhãn giờ của video đã ghép, LLM xem rồi viết lời khớp từng đoạn</td><td><span class="chip self">tự viết</span> <span class="chip">ý tưởng ArcReel</span></td><td>Không repo nào có bước này. Đây là phần khác biệt của máy</td></tr>
+          <tr><td>⑦ Âm thanh</td><td>Đọc lời, căn từ bằng whisperx, trộn nhạc</td><td><span class="chip">Hypit</span></td><td>Giọng en-US là thế mạnh của ElevenLabs / FishAudio, không cần kiểm gì thêm. Tiếng Việt để sau</td></tr>
+          <tr><td>⑧ Dựng</td><td>Phụ đề tiếng Anh, logo, khung kêu gọi (CTA)</td><td><span class="chip">Hypit</span></td><td>Font mặc định đủ dùng cho tiếng Anh</td></tr>
+          <tr><td>⑨ Đầu ra</td><td>Lưu MP4, ảnh bìa và lời thoại vào <span class="mono">output/&lt;sản phẩm&gt;/&lt;biến thể&gt;/</span>, in ra đường dẫn thư mục</td><td><span class="chip self">tự viết</span></td><td>Không nối API mạng xã hội. Chủ shop tự đăng tay</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Đã đọc mã</span>
+    <h2>Vì sao không chọn các repo khác</h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Repo</th><th>Lý do không làm khung</th><th>Lấy gì</th></tr></thead>
+        <tbody>
+          <tr><td>ClipForge</td><td>Nhân bản viral chỉ cắt cảnh bằng ffmpeg. Dán link thì trả về sáu cảnh gõ sẵn. Chờ đồng bộ tới 16 phút trong một request. Font phụ đề thiếu 53/70 ký tự tiếng Việt. AGPL</td><td>Chỉ ý tưởng: không tự thử lại lệnh gửi tốn tiền</td></tr>
+          <tr><td>ai-video-studio</td><td>2 commit, không có test, gõ cứng cho nước hoa. Mặc định đẩy ảnh sản phẩm lên dịch vụ chứa tệp công khai uguu.se</td><td>Cách bóc khung reel mẫu</td></tr>
+          <tr><td>ArcReel</td><td>Không có nhân bản viral, thiên về phim truyện, nặng. AGPL</td><td>Tài sản <span class="mono">@[tên]</span>, bảng ảnh xem lại, ý xuất bản nháp CapCut</td></tr>
+          <tr><td>Pixelle-Video</td><td>Không có nhân bản viral, bốn tháng không cập nhật</td><td>Khung chữ trên hình bằng template HTML</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Trước khi xây</span>
+    <h2>Những chỗ dễ gãy</h2>
+    <div class="flags">
+      <div class="flag bad">
+        <h3>Đừng giao tài khoản Muse cho bên thứ ba</h3>
+        <p>useapi.net bắt nộp email và mật khẩu, rồi giữ phiên đăng nhập trên máy chủ họ. AutoMuse bắt dán cookie. Tiện ích Muse Automation tải selector từ máy chủ tác giả, nên tác giả đổi được hành vi từ xa. Nếu dùng thì cài vào hồ sơ Chrome riêng.</p>
+      </div>
+      <div class="flag bad">
+        <h3>Nhạc bản quyền và nhãn AI</h3>
+        <p>Chỉ bóc nhịp và cấu trúc của reel mẫu. Nhạc lấy từ kho có giấy phép, hoặc chọn nhạc thịnh hành ngay trong app lúc đăng. Instagram và TikTok yêu cầu gắn nhãn cho video AI trông như thật, nên khi tự đăng nhớ bật nhãn "AI-generated".</p>
+      </div>
+      <div class="flag warn">
+        <h3>Muse giữ mặt người mẫu yếu</h3>
+        <p>Theo ghi chép đo của người dùng: clip cố định khoảng 10 giây, không nhận âm thanh đầu vào, giữ mặt theo ảnh tham chiếu kém. Một video ăn khoảng 2–3% hạn mức tuần ở gói miễn phí. Làm tiếng Anh thì Muse có lợi hơn: lời thoại tiếng Anh trong clip là thế mạnh của nó.</p>
+      </div>
+      <div class="flag warn">
+        <h3>Giấy phép Hypit</h3>
+        <p>Shop tự dùng thì được. Cấm đem ra chạy thành dịch vụ cho nhiều khách và cấm bán lại. Không được gỡ logo Hypit khỏi giao diện dòng lệnh và báo cáo chạy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Thứ tự làm</span>
+    <h2>Hai phép thử rẻ, rồi mới xây</h2>
+    <ol class="mvp">
+      <li><b>30 phút trong Muse:</b> tải ảnh một máy câu cùng ảnh người mẫu lên, xin 3 clip dọc có lời tiếng Anh. Logo và hình sản phẩm không giữ đúng thì gạch Muse khỏi lõi.</li>
+      <li><b>Một video bằng Hypit:</b> cài skill vào Claude Code, nhân bản một reel mẫu tiếng Anh với một sản phẩm lấy tay từ một cửa hàng Shopify, qua Seedance, giọng en-US.</li>
+      <li>Hai phép thử đạt thì viết bước ② (bóc khung đo ở máy) và bước ⑥ (viết lại lời theo video thật). Đây là hai phần làm máy này khác các tool có sẵn.</li>
+      <li>Rồi mới viết adapter Shopify và chạy hàng loạt: chọn nhiều sản phẩm, mỗi sản phẩm một thư mục đầu ra.</li>
+      <li>Khi cần thì thêm gói tiếng Việt: giọng vi-VN, font phụ đề có dấu, lời thoại tiếng Việt.</li>
+    </ol>
+  </section>
+</div>
