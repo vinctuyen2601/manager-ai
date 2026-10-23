@@ -145,7 +145,7 @@ giữ hình thật — đứng yên một góc thì model nào cũng giữ đư�
 | # | Link | Nền tảng | Format | Lượt xem | Ngày đăng | Chuyển được? |
 |---|---|---|---|---|---|---|
 | 1 | ⬜ chưa có link (tệp tải tay, @frostglowofficial) — `khung/reel-01-frostglow.md` | TikTok | Demo POV "mua → mở → lắp → bật", không lời, nhạc + 1 dòng chữ; 9 cảnh / 11,8 s | ⬜ | ⬜ | ✅ đổi cảnh siêu thị → hộp giao tận nhà; reveal hợp Santa Spins + Globe |
-| 2 | | | | | | |
+| 2 | tệp tải tay, @frostglowofficial — `khung/reel-02-frostglow-hook-me.md` | TikTok | **Cùng thân khung 01, khác hook**: người thật đếm 3-2-1, giật vải lộ hộp; chữ "Christmas Moms don't walk, RUN to TARGET" | — | — | ⚠ vướng mặt người (chưa đo) + "to TARGET" sai sự thật với shop online |
 | 3 | | | | | | |
 
 ## Kết quả đo
