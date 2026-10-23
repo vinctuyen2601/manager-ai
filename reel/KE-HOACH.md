@@ -1,6 +1,6 @@
 # Máy làm Reel — Kế hoạch sản phẩm
 
-> Bản chép từ tài liệu gốc ngày 23/10/2026, vá lại cùng ngày theo bản gốc rev 58 (quyết định Muse / độ dài). **Bản gốc sống ở Claude Docs:**
+> Bản chép từ tài liệu gốc ngày 23/10/2026, vá lại cùng ngày theo bản gốc rev 59 (quyết định Muse / độ dài). **Bản gốc sống ở Claude Docs:**
 > https://claude.ai/artifact/AMhN1DQDB32o14HAAmA1da — có sơ đồ vẽ, cột ưu
 > tiên chọn được, bình luận. Sửa thì sửa ở bản gốc rồi chép lại đây, đừng để
 > hai bản lệch nhau. Bốn sơ đồ không chép được sang markdown; bản tĩnh của
@@ -159,6 +159,14 @@ Trạm kiểm đứng trước mọi bước tốn tiền. Mỗi lỗi xử lý 
 - **Không lấy:** bản nhạc gốc, lời gốc nguyên văn, hình gốc.
 - **Người duyệt:** chủ dự án xem và sửa khung trước khi lưu. Khung tốt dùng lại cho mọi sản phẩm cùng loại nên đáng một lần xem tay.
 - **Việc nặng nhất là nội dung, không phải công cụ:** xây vài chục khung đầu tiên, trải nhiều format và loại sản phẩm.
+
+**Quy tắc bóc khung** (chốt 23/10, sau lỗi ở khung đầu: trợ lý thay mất cú hook "kệ siêu thị + hộp đẹp" vì lo AI vẽ sai chữ):
+
+1. Bước **"Vì sao viral"** viết trước tầng 3: mỗi yếu tố gắn mức **Lõi** (bỏ là mất viral) hoặc **Phụ**.
+2. Tầng 3 không được thay yếu tố Lõi. Làm không được thì đánh dấu "không chuyển được cho sản phẩm này" hoặc hỏi chủ dự án.
+3. Lo ngại kỹ thuật, pháp lý là câu hỏi cho chủ dự án, không phải quyết định của máy.
+4. Soi từ 4 khung mỗi giây và xác nhận từng điểm cắt: máy dò cắt cảnh báo nhầm khi độ sáng đổi đột ngột.
+5. Mỗi khung ghi "nguyên liệu khung này đòi" (ví dụ ảnh mặt ngoài hộp đóng); thiếu thì M0 chặn.
 
 ### M4. Kịch bản (FR-10)
 
