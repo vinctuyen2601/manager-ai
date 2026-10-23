@@ -154,3 +154,10 @@ Mỗi lần chạy một dòng. Không xoá dòng hỏng — dòng hỏng là d�
 |---|---|---|---|---|---|---|---|---|---|---|
 | 23/10 | Santa Spins | — (phép thử Muse) | Muse `media-generation` | 1 (clip 1) | 1 | ✅ **giữ đúng**: khung vuông, 4 ốc, ô bìa album, thanh điều khiển, chữ "THIS IS THE SHINING STAR…", nhãn đĩa đọc được kể cả khi quay | — (không có người) | $0 (Muse; % hạn mức tuần: chủ dự án chưa ghi) | gần được | 10,0 s · **704×1248** (dưới 1080×1920, phải phóng) · 24 fps · có tiếng AAC mono 24 kHz, nhỏ (TB −30 dB). Đẩy máy vào **mạnh hơn "very slow"**: kết thúc cận sát đĩa, mất khung máy |
 | 23/10 | Santa Spins | — | Muse | 1 (clip 2, lần 1) | 1 | ❌ **méo**: khung vuông → **đĩa tròn** in ghép bìa; vòng đèn trắng → **RGB đổi màu**; rồi lia sang cây thông, máy còn bé ở mép | — | $0 | không | Chủ dự án chạy **không** có `clip1-last.jpg` → khung đầu clip 2 = ảnh gốc, không nối với clip 1. Tiếng to hơn (TB −19,6 dB, đỉnh −3,2). Kết luận tạm: nhìn thẳng thì giữ, **đổi góc thì méo** |
+| 23/10 | Santa Spins | — | Muse | 1 (clip 2, lần 2: lùi thẳng, nói rõ "SQUARE, not round", đèn trắng) | 2 | ⚠ **hình dáng giữ** (vuông, 4 ốc, lưới bìa, thanh điều khiển, đèn trắng ấm, 10 s không méo) — **chữ in bị vẽ lại**: tiêu đề "THIS IS THE SHINING STAR…" → "ANDY WILLIAMS CHRISTMAS ALBUM / It's the Most Wonderful Time of the Year", "MARIAH CHERRY CHRISTMAS", bìa Bobby Helms lặp, logo "BELMS" bịa | — | $0 | không (chữ sai) | **960×960 VUÔNG** dù có `--orientation vertical`; khung đầu **không phải** `clip1-last.jpg` mà là ảnh tham chiếu vuông `santa-spins-hand-disc.jpg` → Muse lấy ảnh tải lên làm khung đầu và theo tỉ lệ của nó. **Bài học: mỗi clip chỉ tải MỘT ảnh, đúng tỉ lệ 9:16.** Phép nối clip 1 → clip 2 vẫn **chưa thử được** lần nào |
+
+**Đọc tới đây (3 clip):**
+1. Hình dáng sản phẩm: giữ khi nhìn thẳng / lùi thẳng; **méo khi đổi góc**.
+2. **Chữ nhỏ in trên sản phẩm trôi** khi cảnh rộng ra — sản phẩm có nhiều chữ/bìa in là ca khó.
+   M0 nên có cờ "sản phẩm có chữ in nhỏ" → ưu tiên cảnh cận hoặc chèn ảnh thật (B-roll) thay vì sinh.
+3. Muse: 704×1248 khi đúng dọc; cần phóng lên 1080×1920.
