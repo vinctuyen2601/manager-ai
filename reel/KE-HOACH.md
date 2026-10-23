@@ -1,6 +1,6 @@
 # Máy làm Reel — Kế hoạch sản phẩm
 
-> Bản chép từ tài liệu gốc ngày 23/10/2026, vá lại cùng ngày theo bản gốc rev 56 (quyết định Muse / độ dài). **Bản gốc sống ở Claude Docs:**
+> Bản chép từ tài liệu gốc ngày 23/10/2026, vá lại cùng ngày theo bản gốc rev 58 (quyết định Muse / độ dài). **Bản gốc sống ở Claude Docs:**
 > https://claude.ai/artifact/AMhN1DQDB32o14HAAmA1da — có sơ đồ vẽ, cột ưu
 > tiên chọn được, bình luận. Sửa thì sửa ở bản gốc rồi chép lại đây, đừng để
 > hai bản lệch nhau. Bốn sơ đồ không chép được sang markdown; bản tĩnh của
@@ -72,7 +72,7 @@ Có 32 yêu cầu chức năng, 26 cái bắt buộc cho v1. FR-25 đến FR-31 
 | FR-06 | Nhận reel mẫu từ tệp tải lên | Thư viện khung | Bắt buộc |
 | FR-07 | Nhận reel mẫu từ link TikTok, Facebook Reels, TikTok Creative Center, Meta Ad Library | Thư viện khung | Bắt buộc |
 | FR-08 | Bóc khung ba tầng: format; cảnh theo giây kèm vai trò và lý do hiệu quả; phán quyết chuyển sang AI từng cảnh và loại sản phẩm hợp | Thư viện khung | Bắt buộc |
-| FR-09 | Lưu khung kèm bằng chứng viral (link, lượt xem, ngày); xem, sửa tay, lọc theo format và loại sản phẩm | Thư viện khung | Bắt buộc |
+| FR-09 | Lưu khung, kèm bằng chứng viral nếu có (link, lượt xem, ngày; không bắt buộc vì reel đưa vào đã được chọn lọc); xem, sửa tay, lọc theo format và loại sản phẩm | Thư viện khung | Bắt buộc |
 | FR-29 | Kiểm reel mẫu: kỹ thuật (dọc, phân giải, độ dài) và có chuyển được sang sản phẩm khác không | Thư viện khung | Bắt buộc |
 | FR-31 | Gợi ý khung hợp cho một sản phẩm; loại khung có cảnh bất khả thi với sản phẩm đó | Thư viện khung | Nên có |
 | FR-10 | Sinh kịch bản .svml từ bản tóm tắt sản phẩm, tờ người mẫu, khung; số cảnh và mốc cắt khớp khung | Kịch bản | Bắt buộc |
@@ -149,7 +149,7 @@ Trạm kiểm đứng trước mọi bước tốn tiền. Mỗi lỗi xử lý 
     1. **Format**, theo các playbook của Hypit: lời dẫn kèm demo, UGC người nói vào máy, xếp hạng, người dẫn giải thích, phim ngắn, phỏng vấn đường phố.
     2. **Cảnh theo giây:** mốc bắt đầu và kết thúc, cỡ cảnh, chuyển động máy, vai trò (hook, nỗi đau, khoe, chứng minh, kêu gọi), lời gốc, chữ trên hình, vì sao hiệu quả (giữ chân, thuyết phục, nhịp, chuyển đổi); cộng BPM và điểm beat.
     3. **Phán quyết chuyển sang AI** cho từng cảnh: dùng thẳng, đổi cách thể hiện, hoặc không làm được, kèm lý do; và loại sản phẩm hợp (vật nhỏ cầm tay, vật dài, đồ mặc, đồ dùng trong nhà, đồ điện tử…). Reel viral do người thật quay, nhiều động tác AI chưa làm được trong một cảnh.
-- **Bằng chứng viral:** link gốc, nền tảng, lượt xem, số người theo dõi kênh, ngày đăng. Máy không lấy được thì nhập tay.
+- **Bằng chứng viral:** link gốc, nền tảng, lượt xem, số người theo dõi kênh, ngày đăng. Máy không lấy được thì nhập tay; thiếu cũng không chặn lưu khung (chốt 23/10).
 - **Cách bóc:**
     1. Đo ở máy bằng công cụ có sẵn của Hypit: `boundaries` dò điểm cắt, `tiles` lưới khung có nhãn giờ, `transcribe` lời theo từng từ. Không phải tự viết phần này.
     2. LLM thị giác xem lưới khung kèm số liệu đo, điền ba tầng theo schema.
