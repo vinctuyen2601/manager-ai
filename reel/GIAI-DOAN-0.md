@@ -152,3 +152,5 @@ Mỗi lần chạy một dòng. Không xoá dòng hỏng — dòng hỏng là d�
 
 | Ngày | Sản phẩm | Reel | Model video | Số cảnh | Lần sinh tổng | Cảnh giữ đúng SP lần đầu | Mặt người mẫu giữ? | Chi phí USD | Đăng được? | Ghi chú |
 |---|---|---|---|---|---|---|---|---|---|---|
+| 23/10 | Santa Spins | — (phép thử Muse) | Muse `media-generation` | 1 (clip 1) | 1 | ✅ **giữ đúng**: khung vuông, 4 ốc, ô bìa album, thanh điều khiển, chữ "THIS IS THE SHINING STAR…", nhãn đĩa đọc được kể cả khi quay | — (không có người) | $0 (Muse; % hạn mức tuần: chủ dự án chưa ghi) | gần được | 10,0 s · **704×1248** (dưới 1080×1920, phải phóng) · 24 fps · có tiếng AAC mono 24 kHz, nhỏ (TB −30 dB). Đẩy máy vào **mạnh hơn "very slow"**: kết thúc cận sát đĩa, mất khung máy |
+| 23/10 | Santa Spins | — | Muse | 1 (clip 2, lần 1) | 1 | ❌ **méo**: khung vuông → **đĩa tròn** in ghép bìa; vòng đèn trắng → **RGB đổi màu**; rồi lia sang cây thông, máy còn bé ở mép | — | $0 | không | Chủ dự án chạy **không** có `clip1-last.jpg` → khung đầu clip 2 = ảnh gốc, không nối với clip 1. Tiếng to hơn (TB −19,6 dB, đỉnh −3,2). Kết luận tạm: nhìn thẳng thì giữ, **đổi góc thì méo** |
