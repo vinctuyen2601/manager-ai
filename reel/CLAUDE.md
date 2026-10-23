@@ -13,6 +13,7 @@ ra video dọc 9:16 tiếng Anh (Mỹ) trong một thư mục.
 | Kế hoạch sản phẩm (yêu cầu FR/NFR, module M0–M9, UI, kiến trúc, lộ trình) | Bản gốc: https://claude.ai/artifact/AMhN1DQDB32o14HAAmA1da · bản chép: `KE-HOACH.md` | Mọi quyết định về phạm vi và thứ tự làm. Sửa ở bản gốc rồi chép lại |
 | Bản thiết kế sơ đồ (bản 6) | https://claude.ai/artifact/Poxf3b8AzDytHAyMC7HhTG | Nhìn nhanh luồng và lý do loại các repo khác |
 | Việc giai đoạn 0 và kết quả đo | `GIAI-DOAN-0.md` cùng thư mục | Đang làm giai đoạn 0 |
+| **Mã của máy: repo `gen-video-viral`** | `D:/my project/gen-video-viral` · remote `github.com/vinctuyen2601/gen-video-viral` (máy Windows: alias `github.com-vinctuyen2601`) | Mọi việc viết mã. Repo đó **chỉ chứa mã**; hiểu biết ghi ở đây |
 | **Sổ tay viral** — vì sao video ngắn viral, bộ câu hỏi bóc (A–H), STEPPS, dạng hook, hook chết, quy tắc outlier | `KIEN-THUC-VIRAL.md` | **Trước khi bóc BẤT KỲ khung nào.** Cập nhật khi một video của máy thắng/thua rõ |
 
 Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên mới cần để không
@@ -45,6 +46,8 @@ Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên
 | 23/10 | **Một video trọn luồng trước**, rồi mới thêm khung mới, **lần lượt từng dạng** (không gom 3 reel một lúc). Video đầu: Santa Spins × khung 01 FrostGlow, qua Muse |
 | 23/10 | **Tách HOOK và THÂN** trong mỗi khung (chủ dự án: "Ok tách nhé"), sau khi đo khung 02 = thân khung 01 + hook khác (hãng A/B test hook). Một thân ghép nhiều hook = nhiều biến thể, chỉ sinh lại phần hook. Sửa FR-08, FR-20 và thực thể `template` trong kế hoạch |
 | 23/10 | Chữ trên hình: chủ dự án giao trợ lý chọn "miễn phù hợp và viral" — nhưng vẫn theo luật: không nói điều sai sự thật (nơi bán, hết hàng) |
+| 24/10 | **Cửa 0 QUA** (chủ dự án: video 01 "cũng tạm tạm… sang step tiếp"). Giữ hình sản phẩm: qua **khi mọi cảnh có sản phẩm bắt đầu từ ảnh sản phẩm thật**; chi phí $0 (Muse), ~25 % hạn mức tuần cho video 01. **Sang giai đoạn 1** |
+| 24/10 | **Tên máy: `gen-video-viral`** (lệnh `gvv`), repo mã riêng. Thứ tự giai đoạn 1: **dựng** (✅ 24/10, tái tạo đúng video 01) → bóc khung → hồ sơ sản phẩm từ link → ghép prompt. Muse vẫn do người chạy tay |
 | 23/10 | Muse (muse.ai) chỉ là nhánh thử, chạy **bên trong** Muse. Không dùng useapi.net, AutoMuse (giao mật khẩu, cookie Meta cho bên thứ ba) |
 
 ## Quy tắc bóc khung (M3) — rút ra từ lỗi khung 01, 23/10

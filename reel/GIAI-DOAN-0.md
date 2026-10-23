@@ -130,7 +130,7 @@ giữ hình thật — đứng yên một góc thì model nào cũng giữ đư�
 - [ ] **Trợ lý:** tạo project Hypit trong `reel/thu-nghiem/hypit-santa/`, viết provider BytePlus từ mẫu `provider-videos`, chạy test vòng đời không tốn tiền
 - [ ] Chạy 1 video Santa Spins qua Seedance, cùng 2 prompt Muse, `firstFrame` = khung cuối cảnh trước; so cùng tiêu chí
 - [ ] Ghi chi phí thật và số lần sinh lại mỗi cảnh vào bảng dưới
-- [ ] Quyết Cửa 0: đi tiếp, đổi model, hay dừng
+- [x] Quyết Cửa 0: **QUA** (24/10) — điều kiện: cảnh có sản phẩm bắt đầu từ ảnh thật; nhịp do dựng. Sang giai đoạn 1, repo `gen-video-viral`
 
 ## Sản phẩm thử
 
