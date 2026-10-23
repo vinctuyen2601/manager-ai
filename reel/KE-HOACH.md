@@ -1,6 +1,6 @@
 # Máy làm Reel — Kế hoạch sản phẩm
 
-> Bản chép từ tài liệu gốc ngày 23/10/2026. **Bản gốc sống ở Claude Docs:**
+> Bản chép từ tài liệu gốc ngày 23/10/2026, vá lại cùng ngày theo bản gốc rev 55 (quyết định Muse / độ dài). **Bản gốc sống ở Claude Docs:**
 > https://claude.ai/artifact/AMhN1DQDB32o14HAAmA1da — có sơ đồ vẽ, cột ưu
 > tiên chọn được, bình luận. Sửa thì sửa ở bản gốc rồi chép lại đây, đừng để
 > hai bản lệch nhau. Bốn sơ đồ không chép được sang markdown; bản tĩnh của
@@ -22,8 +22,8 @@ Máy làm Reel là một tài sản AI độc lập: đưa vào một sản ph�
 
 - Ngôn ngữ en-US: lời thoại, giọng đọc, phụ đề.
 - Mọi ngách sản phẩm. Nguồn sản phẩm: Shopify Admin API, nhập tay. Nguồn reel mẫu: TikTok, Facebook Reels, kho quảng cáo, tải tay.
-- Đầu ra: thư mục video kèm đường dẫn.
-- Khung là skill Hypit chạy trong Claude Code.
+- Đầu ra: thư mục video kèm đường dẫn, gồm cả reel tự đăng lẫn video quảng cáo; một job xuất nhiều bản cắt.
+- Khung là skill Hypit chạy trong Claude Code. Sinh video có hai đường ngang hàng, người dùng chọn theo từng job: Muse (miễn phí, hạn mức tuần) hoặc Hypit + Seedance (trả tiền, chạy tự động). Làm trọn luồng bằng Muse trước.
 
 **Không làm**
 
@@ -53,7 +53,7 @@ Người dùng v1 là chính chủ dự án, nên công cụ ưu tiên dòng l�
 
 ## 3. Yêu cầu
 
-Có 31 yêu cầu chức năng, 24 cái bắt buộc cho v1. FR-25 đến FR-31 thêm sau, cho phần sơ chế và thư viện khung.
+Có 32 yêu cầu chức năng, 26 cái bắt buộc cho v1. FR-25 đến FR-31 thêm sau, cho phần sơ chế và thư viện khung; ngày 23/10 FR-22 (đường Muse) lên bắt buộc và thêm FR-32 (nhiều bản cắt). Cột ưu tiên chọn lại được ngay trong bảng.
 
 ### Yêu cầu chức năng
 
@@ -86,8 +86,9 @@ Có 31 yêu cầu chức năng, 24 cái bắt buộc cho v1. FR-25 đến FR-31 
 | FR-18 | Lưu thư mục đầu ra: video, bản không phụ đề, ảnh bìa, lời thoại, kịch bản, báo cáo chi phí | Đầu ra | Bắt buộc |
 | FR-19 | Chạy hàng loạt: một khung cho nhiều sản phẩm | Đầu ra | Nên có |
 | FR-20 | Nhiều biến thể một sản phẩm: đổi hook, người mẫu, giọng | Đầu ra | Nên có |
-| FR-21 | Ước tính chi phí trước khi chạy, ghi chi phí thật, dừng khi vượt trần ngân sách | Chi phí | Bắt buộc |
-| FR-22 | Nguồn video Muse qua skill chạy bên trong Muse | Mở rộng | Để sau |
+| FR-32 | Một job xuất nhiều bản cắt theo loại đầu ra: bản đầy đủ theo khung, bản ≤ 15 giây cho quảng cáo Meta, bản 6 giây tuỳ chọn; chỉ dựng lại từ cảnh đã sinh, không sinh thêm | Đầu ra | Bắt buộc |
+| FR-21 | Ước tính chi phí trước khi chạy, ghi chi phí thật, dừng khi vượt trần ngân sách; với đường Muse, ước tính hạn mức tuần theo số cảnh của khung (mỗi cảnh một clip) | Chi phí | Bắt buộc |
+| FR-22 | Chọn đường sinh video theo từng job: Muse (chạy bên trong Muse, mỗi cảnh một clip \~10 giây cắt đúng mốc của khung) hoặc Hypit + Seedance. Làm đường Muse trước | Sinh cảnh | Bắt buộc |
 | FR-23 | Gói tiếng Việt: giọng vi-VN, font có dấu, lời tiếng Việt | Mở rộng | Để sau |
 | FR-24 | Xuất bản nháp CapCut để sửa tay | Mở rộng | Để sau |
 
@@ -238,7 +239,7 @@ Máy là một ứng dụng chạy trên một máy, dựng quanh skill Hypit tr
 
 *(Sơ đồ kiến trúc — bản tĩnh ở `thiet-ke/so-do-ban-6.html`: đầu vào Shopify / ảnh người mẫu / reel viral → M0 Kiểm và sơ chế nguyên liệu → M1, M2, M3 → M4 Claude Code + skill Hypit → Runtime Hypit (M5, M6) cạnh Job + SQLite → M7 → M8 → M9 → thư mục output. Runtime gọi API nhà cung cấp bên ngoài.)*
 
-M0 được tô nổi vì mọi nguyên liệu phải qua đó trước khi máy tiêu tiền. M7 ghi lời mới ngược vào tệp .svml của M4, nên sửa lời chỉ sinh lại tiếng và dựng. Muse không có trong sơ đồ vì là nhánh thử chạy bên trong Muse; clip đạt thì tải về làm tài sản.
+M0 được tô nổi vì mọi nguyên liệu phải qua đó trước khi máy tiêu tiền. M7 ghi lời mới ngược vào tệp .svml của M4, nên sửa lời chỉ sinh lại tiếng và dựng. Muse chưa vẽ trong sơ đồ: nó là đường sinh video thứ hai, ngang hàng với runtime Hypit, chạy bên trong Muse; mỗi cảnh một clip, cắt đúng mốc của khung rồi tải về cho M6 ghép.
 
 ### Công nghệ
 
@@ -304,15 +305,13 @@ Không có khoá API hay token nào trong thư mục này, vì nó sẽ được
 
 Chi phí thật mỗi video chưa ai đo; giai đoạn 0 phải đo ra số này trước khi cam kết gì. Hai con số đang có đều do dự án tự công bố: Hypit ghi khoảng 1,15 USD mỗi video, video-clone-lite ghi khoảng 5 tệ cho 15 giây.
 
-**Giai đoạn 0 đi qua HypiHub** (chốt 23/10): một tài khoản của chính Hypit cho video, ảnh, giọng, căn từ. Bảng giá HypiHub chưa kiểm.
-
 | Vai trò | Lựa chọn đầu | Dự phòng | Ghi chú |
 | --- | --- | --- | --- |
 | Tác tử viết kịch bản | Claude trong Claude Code, qua skill Hypit | — | Đã có sẵn, không tốn thêm API |
 | LLM thị giác (bóc khung, kiểm cảnh, viết lại lời) | Claude Sonnet 5.5 qua API | Claude Opus 5.5 cho ca khó | Ghim tên model trong biến môi trường |
 | Ảnh khung tĩnh, giữ hình sản phẩm | gpt-image, nano-banana, Seedream (Hypit có sẵn) | — | Dùng bản image-to-image |
-| Video từng cảnh | Seedance | Kling, Wan, MiniMax, Pixverse | Chọn sau phép thử giữ sản phẩm |
-| Video, nhánh thử | Muse, chạy bên trong Muse | — | Clip cố định khoảng 10 giây, giữ mặt yếu, hạn mức theo tuần |
+| Video từng cảnh, đường Hypit | Seedance | Kling, Wan, MiniMax, Pixverse | Trả tiền, chạy tự động, làm sau. Gọi thẳng BytePlus ModelArk; Hypit chưa có provider BytePlus nên phải tự viết |
+| Video từng cảnh, đường Muse | Muse, chạy bên trong Muse | — | Miễn phí, làm trước. Sinh khoảng 10 giây rồi cắt đúng mốc cảnh; khoảng 720p; khoảng 3% hạn mức tuần mỗi clip (đo 23/10) |
 | Giọng đọc en-US | ElevenLabs | FishAudio | Cả hai có trong Hypit |
 | Bóc lời, căn từ | whisperx chạy ở máy | — | Không tốn tiền, cần máy đủ mạnh |
 | Nhạc nền | Kho nhạc có giấy phép | Openverse CC | Chưa chọn kho, xem mục 13 |
@@ -364,7 +363,7 @@ Rủi ro lớn nhất là kỹ thuật, không phải pháp lý: AI video có th
 | Gương mặt người mẫu dùng khi chưa đồng ý | Tranh chấp về hình ảnh cá nhân | Bắt buộc đánh dấu đồng ý trước khi chọn được (M2) |
 | Video AI không gắn nhãn | Instagram, TikTok hạ hoặc gỡ bài | `caption.txt` nhắc bật nhãn AI-generated khi tự đăng |
 | Lời hứa điều sản phẩm không có | Quảng cáo sai sự thật theo luật Mỹ (FTC) | LLM đối chiếu lời với mô tả sản phẩm; không bịa lời chứng thực của khách |
-| Tài khoản Muse bị khoá | Mất nhánh thử | Muse không nằm trong lõi; không dùng useapi.net, AutoMuse |
+| Tài khoản Muse bị khoá | Mất đường sinh video miễn phí | Còn đường Hypit + Seedance thay thế; không dùng useapi.net, AutoMuse (giao mật khẩu, cookie cho bên thứ ba) |
 | Giấy phép Hypit | Mất quyền dùng khung nếu chạy SaaS nhiều khách | Dùng nội bộ hoặc làm hộ khách bằng máy của mình; hỏi lại nếu định mở cho khách tự dùng |
 | Hypit đổi hướng hoặc ngừng | Khung không còn được vá | Ghim phiên bản; giữ M3, M7 độc lập với Hypit để thay khung được |
 | Model video bị khai tử | Job đang chạy hỏng | Ghim tên model trong cấu hình, có model dự phòng |
@@ -381,6 +380,8 @@ Việc đầu tiên là hai phép thử rẻ, chưa viết dòng mã sản phẩ
 | 3 · Mở rộng | Nhiều biến thể mỗi sản phẩm, nguồn video Muse, xuất bản nháp CapCut, dán link sản phẩm. Gói tiếng Việt khi cần. | — |
 
 Không qua Cửa 0 thì đổi model video rồi thử lại, chứ không sang giai đoạn 1.
+
+**Đổi ngày 23/10, hình trên chưa vẽ lại:** đường sinh video Muse chuyển lên giai đoạn 1 và làm trước; đường Hypit + Seedance thành việc để sau (TODO). Cửa 0 đo trên Muse trước.
 
 Việc cụ thể của giai đoạn 0 và bảng ghi kết quả: `GIAI-DOAN-0.md`.
 
@@ -405,7 +406,7 @@ Bốn câu đã chốt ngày 23/10, bốn câu còn mở. Chưa dùng công cụ
 
 - [x] Trần chi phí mỗi video là bao nhiêu USD? → $10 / video (23/10)
 - [x] Người mẫu là người thật hay do AI tạo? → Ảnh người thật do chủ dự án đưa vào; không đưa thì AI tạo theo mô tả cho hợp sản phẩm và ngữ cảnh video (23/10)
-- [x] Độ dài video mặc định? → 15 giây (23/10)
+- [x] Độ dài video mặc định? → không cố định: theo cảnh của khung viral; mỗi job xuất nhiều bản cắt (FR-32) (23/10)
 - [ ] Dùng kho nhạc có giấy phép nào?
 - [ ] Máy chạy ở đâu: máy cá nhân hay máy chủ riêng? whisperx cần máy đủ mạnh.
 - [ ] v1 dòng lệnh cùng Claude Code có đủ không, hay cần giao diện web ngay?
