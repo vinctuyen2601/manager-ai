@@ -24,6 +24,20 @@ Việc đầu tiên ở máy mới:
 3. ~~Tạo tài khoản HypiHub~~ — bỏ, đắt. Làm **phép thử Muse** bên dưới trước.
 4. Chủ dự án tự cài skill Hypit khi sẵn sàng (chưa cho phép tự cài).
 
+### Máy Windows `David-PC` — kiểm 23/10/2026
+
+| | có | đủ? |
+|---|---|---|
+| Node | v23.11.1 | ✅ (cần ≥ 22.15) |
+| ffmpeg / ffprobe | bản 2026-08-27 (gyan.dev essentials) | ✅ |
+| Python | 3.10.10 — gọi bằng **`python`**, KHÔNG phải `python3` (`python3` là lối tắt Microsoft Store, in "Python was not found") | ✅ cho rembg, Real-ESRGAN; whisperx cần ≥ 3.9 |
+| GPU | **NVIDIA GTX 1660 SUPER 6 GB** + Intel UHD 730 | đủ chạy whisperx model `small`/`medium`, rembg, Real-ESRGAN ở máy; không đủ chạy model video ở máy (không cần) |
+| RAM | 32 GB | ✅ |
+| pnpm | ❌ chưa có | Hypit cần — cài khi chủ dự án cài Hypit |
+| yt-dlp | ❌ chưa có | M3 tải reel mẫu cần |
+
+Máy này cũng là máy làm theme Shopify (`D:/my project/shop-christmasspin`).
+
 ## Phép thử Muse — 10 phút, không tốn tiền
 
 Câu hỏi duy nhất: **Muse có giữ đúng hình sản phẩm qua 2 clip nối nhau không?**
