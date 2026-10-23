@@ -278,23 +278,23 @@ pine branches with red berries in the lid corners, the round Santa Spins logo ba
 centre of the lid, a champagne-gold satin bow on one corner, two gold latches on the long front edge, lying
 flat, wider than it is tall.
 
-0.0–1.6s: The hand pulls one case out of the full shelf.
-1.6–2.6s: Both hands lift the case close to the camera and tilt it so the lid faces the camera: the
-gold pine corners, the Santa Spins logo badge and the bow catch the light.
-2.6–3.6s: The hands lower the case into a shopping cart with a blue handle.
-3.6–4.0s: Cut to a cozy living room in daylight: a light marble coffee table, a decorated Christmas
+0.0–1.2s: The hand holds the case up close to the camera and tilts it slightly: light glints on the
+gold pine branches, the Santa Spins logo badge and the satin bow, the full shelves behind.
+1.2–2.0s: The hand lowers the case a little, revealing more of the long aisle full of identical cases.
+2.0–3.0s: The hand lowers the case into a shopping cart with a blue handle.
+3.0–3.4s: Cut to a cozy living room in daylight: a light marble coffee table, a decorated Christmas
 tree with warm white lights, a fireplace with red stockings.
-4.0–6.0s: Both hands set the same case down on the coffee table, lid up, and rest on the two latches.
-6.0–10.0s: Slow push-in on the closed case on the table, the bow and gold details glowing warmly.
+3.4–5.5s: Both hands set the same case down on the coffee table and rest on the two gold latches.
+5.5–10.0s: Slow push-in on the case on the table, the logo, bow and gold details glowing warmly.
 ```
 
 ### Ghép video cuối (cập nhật)
 
 | Giây | Nguồn |
 |---|---|
-| 0 → 3,6 | Clip A2 0 → 3,6 (siêu thị → xe đẩy) |
-| 3,6 → 5,2 | Clip A2 3,6 → 5,2 (đặt vali đóng lên bàn) |
-| 5,2 → 7,4 | Clip M (vali mở → nhấc máy → tủ lạnh inox) |
+| 0 → 3,0 | Clip A2 0 → 3,0 (khoe hộp → lối kệ → xe đẩy) |
+| 3,0 → 4,6 | Clip A2 3,0 → 4,6 (đặt vali đóng lên bàn) |
+| 4,6 → 7,4 | Clip M (vali mở → nhấc máy → tủ lạnh inox) |
 | 7,4 → ~12 | Clip B bản 2 (tối → bật) |
 
 Ảnh M (vali mở) giữ nguyên: mép đỏ + hai khoá vàng của vali mở khớp hộp mới.
@@ -302,3 +302,7 @@ tree with warm white lights, a fireplace with red stockings.
 **Logo (23/10):** hộp mang **logo Santa Spins thật** ở giữa nắp. Sau khi có **ảnh S**, trợ lý **ghép lại logo thật** lên nắp chiếc hộp
 trên tay (khung đầu) trước khi đưa vào clip A2 — Muse giữ thứ có sẵn trong khung đầu tốt hơn tự vẽ chữ. Logo trên các hộp xa trên
 kệ nhỏ, có méo cũng không đọc được nên chấp nhận.
+
+**Ảnh S lần 1 (23/10): ✅ ĐẠT** (`anh-S-lan1.jpg`, 1152×2048) — kệ kín hàng trăm hộp có logo + nơ (bao la), hộp trên tay đẹp, **logo đúng
+từng chữ** (không cần ghép lại), tay đúng hồ sơ nhân vật. Khung đầu đã là **hộp trên tay** → clip A2 mở bằng nhịp **khoe hộp** (1b) thay vì
+rút khỏi kệ (1a); kệ kín phía sau vẫn giữ "store find". Hộp đứng dọc như ảnh H1 — nhất quán trong cả video, chấp nhận.
