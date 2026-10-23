@@ -164,6 +164,26 @@ bối cảnh, cường độ cú bật. Kiểm hai thứ không được vượt
 **thứ khách thật sự nhận** (theo hồ sơ sản phẩm). Lời và chữ trên hình: cảm xúc chủ quan thoải mái; **khẳng
 định đo được** (số, tính năng, thời gian giao) phải đúng hồ sơ.
 
+## 0f. Thương hiệu — logo và slogan làm nên thương hiệu
+
+Chủ dự án 23/10: *"Logo và slogan nó là làm nên thương hiệu"* — sau khi trợ lý đặt **bông tuyết chung chung**
+lên nắp hộp thay vì logo Santa Spins. Video bán được hàng hôm nay; **logo + slogan** làm người xem **nhớ ra
+mình** ở lần thấy sau, và là tín hiệu định giá mạnh (0d.10: thương hiệu → chất lượng cảm nhận, có ý nghĩa
+thống kê; tên cửa hàng thì không).
+
+**Luật:**
+1. **Logo thật, luôn luôn** — trên mọi thứ thuộc về sản phẩm có trong khung hình (hộp, bao bì, thẻ quà…).
+   Không thay bằng biểu tượng chung chung "cho đẹp".
+2. **Logo không bao giờ để AI vẽ.** AI vẽ sai chữ (đo 23/10). Cách làm: **ghép logo thật bằng máy** vào
+   ảnh tham chiếu và vào **khung đầu** của clip (Muse giữ thứ có sẵn trong khung đầu tốt hơn tự vẽ); chỗ nào
+   logo lộ rõ mà bị méo → ghép lại khi dựng.
+3. **Một slogan, dùng nhất quán** ở mọi video của một thương hiệu — lấy từ hồ sơ sản phẩm, không mỗi video
+   viết một câu. Slogan khác với chữ hook: hook đổi theo khung/lô test; **slogan cố định**.
+4. **Đặt ở đâu:** logo **trong cảnh** (trên hộp, trên sản phẩm) ở mọi bản. Bản **quảng cáo** thêm **1 s cuối**:
+   logo + slogan (đỉnh–kết, 0d.11: cảnh cuối là thứ được nhớ). Bản **reel tự đăng** giữ tự nhiên — logo trong
+   cảnh, slogan trong caption — vì màn kết kiểu quảng cáo làm video "trông như quảng cáo" (TikTok khuyên tự nhiên).
+5. Hồ sơ mỗi sản phẩm phải có mục **Thương hiệu**: tệp logo, màu chủ đạo, slogan chính + phụ.
+
 ## 0d. Nền khoa học của triết lý (research 23/10/2026)
 
 Chủ dự án: *"dựa vào những keyword tôi cung cấp để tiếp tục tìm thêm và làm dày thêm triết học"*.

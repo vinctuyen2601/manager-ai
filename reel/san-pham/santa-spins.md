@@ -15,6 +15,19 @@ Ký hiệu: ✅ đã kiểm (nguồn ghi bên cạnh) · ⚠ suy ra từ ảnh, 
 | Giá | Buy 1 **$80** · Buy 2 $136 · Buy 3 $189 ✅ (`../../shopify/HIEN-TRANG-15-10-2026.md`) |
 | Cửa hàng | skinsolutions.online/products/santa-spins-music-box ✅ |
 
+## 1b. Thương hiệu (sổ tay 0f)
+
+| | |
+|---|---|
+| Tên | **Santa Spins™ Music Box** |
+| Logo | Huy hiệu tròn: vòng kem, chữ **xanh đậm "SANTA SPINS™"** trên, **"MUSIC BOX"** dưới, **đĩa than đỏ nhãn vàng** ở giữa, cành nhựa ruồi + bông tuyết vàng hai bên. Tệp: `thu-nghiem/san-pham/santa-spins/logo-santa-spins.png` (979², nền trong suốt, tải từ header store `santa-spins-logo-tron.png`). **Chỉ ghép bằng máy, không để AI vẽ** |
+| Màu | đỏ thẫm (crimson) · vàng ánh kim · kem · xanh thông đậm |
+| **Slogan chính** | **"Some gifts get opened. This one gets played."** — đã có trên trang (khối giới thiệu), độc nhất, nói đúng sản phẩm (máy phát nhạc) và đúng dịp (quà) |
+| Slogan phụ (ngắn, cho màn kết 1 s / chữ nhỏ) | **"Drop a disc. It plays."** — cũng có trên trang |
+| Dùng | Logo trên hộp trong mọi bản. Bản quảng cáo: 1 s cuối logo + slogan chính. Reel tự đăng: slogan trong caption |
+
+Máy chọn slogan chính theo quy tắc 5 đầu vào (tự quyết từ chữ đã có trên trang); chủ dự án đổi qua đầu vào 5.
+
 ## 2. Cơ chế (chỉ những gì đã có trên trang — lời thoại chỉ được hứa những thứ này)
 
 - Đặt đĩa lên máy → **bắt đầu phát**: **đĩa quay, vòng đèn sáng** ✅ ("Place a disc on the frame and it starts — the record turns, the ring lights up")
