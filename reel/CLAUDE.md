@@ -93,6 +93,18 @@ Bản bóc đầu của khung 01 sai ở khâu đánh giá: thay cú hook "kệ 
    nguyên liệu. Không nhảy thẳng tới prompt. Mẫu: `khung/reel-01-frostglow.md` +
    `video/v01-santa-spins-x-khung01/KICH-BAN.md`.
 
+## Nhịp video do DỰNG, không do sinh (23/10)
+
+Chủ dự án: *"tốc độ khung hình cũng như nội dung video không thể giống video mẫu"*. Đo clip A2: chuyển động TB **10,6**
+(mẫu 8,6) — hình không chậm; 24 vs 30 fps mắt không thấy. Cái khác là **nhịp cắt**: A2 có **1 lần cắt / 10 s**, mẫu ~8. Muse ra
+**tư liệu thô**: mỗi nhịp dài hơn cần, cuối clip hay kéo một đoạn chậm dài (A2: phòng khách 7 s).
+
+1. **Clip Muse = tư liệu, không phải cảnh cuối.** Prompt cho mỗi nhịp **dài hơn cần ~1,5×** để có chỗ cắt.
+2. **Máy dựng làm nhịp:** cắt từng nhịp về đúng độ dài của khung (0,5–2,6 s), tăng tốc nhẹ 1,05–1,2× nếu cần, xuất 30 fps.
+   Bản nháp `thu-nghiem/muse/v01-nhap-nhip.mp4` (23/10): chỉ từ clip có sẵn đã cắt được ở 2,5 · 3,8 · 6,4 · 7,4 s.
+3. **Giống khung = giống CẤU TRÚC** (thứ tự nhịp, vai trò, mốc cú bật, độ dài cảnh), **không** giống từng hình. Đồ vật,
+   bối cảnh, sản phẩm là của mình.
+
 ## Luật riêng của thư mục này
 
 - **Không commit video, ảnh, âm thanh.** `manager-ai` là repo hồ sơ, đẩy lên

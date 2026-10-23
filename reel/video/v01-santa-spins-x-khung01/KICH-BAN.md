@@ -306,3 +306,8 @@ kệ nhỏ, có méo cũng không đọc được nên chấp nhận.
 **Ảnh S lần 1 (23/10): ✅ ĐẠT** (`anh-S-lan1.jpg`, 1152×2048) — kệ kín hàng trăm hộp có logo + nơ (bao la), hộp trên tay đẹp, **logo đúng
 từng chữ** (không cần ghép lại), tay đúng hồ sơ nhân vật. Khung đầu đã là **hộp trên tay** → clip A2 mở bằng nhịp **khoe hộp** (1b) thay vì
 rút khỏi kệ (1a); kệ kín phía sau vẫn giữ "store find". Hộp đứng dọc như ảnh H1 — nhất quán trong cả video, chấp nhận.
+
+**Clip A2 lần 1 (23/10): ✅ dùng được** (`v01-clipA2-lan1.mp4`) — khoe hộp, logo rõ, hạ xuống xe đẩy (thấy xe ở 2,5 s), **cắt** sang phòng
+khách ở 2,79 s, đặt hộp lên bàn; 5,5–10 s đẩy chậm (dư). Chỉ 1 lần cắt → nhịp do dựng. Dùng: **0 → 2,8 s** (tăng tốc 1,1×) + **3,6 → 4,8 s**.
+**Bản dựng nháp nhịp** `v01-nhap-nhip.mp4` (10 s, cắt 2,5 · 3,8 · 6,4 · 7,4): A2 + clip1c + clip2d (clip tủ lạnh ban ngày cũ, có băng
+cassette — chỉ để thử nhịp). Bản thật thay bằng clip M + clip B.
