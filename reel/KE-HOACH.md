@@ -1,6 +1,6 @@
 # Máy làm Reel — Kế hoạch sản phẩm
 
-> Bản chép từ tài liệu gốc ngày 23/10/2026, vá lại cùng ngày theo bản gốc rev 55 (quyết định Muse / độ dài). **Bản gốc sống ở Claude Docs:**
+> Bản chép từ tài liệu gốc ngày 23/10/2026, vá lại cùng ngày theo bản gốc rev 56 (quyết định Muse / độ dài). **Bản gốc sống ở Claude Docs:**
 > https://claude.ai/artifact/AMhN1DQDB32o14HAAmA1da — có sơ đồ vẽ, cột ưu
 > tiên chọn được, bình luận. Sửa thì sửa ở bản gốc rồi chép lại đây, đừng để
 > hai bản lệch nhau. Bốn sơ đồ không chép được sang markdown; bản tĩnh của
