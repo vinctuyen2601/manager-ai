@@ -49,6 +49,30 @@ nhạc và cú "bật đèn" gánh.
 
 Nhịp: 9 cảnh / 11,8 s, **cảnh dài nhất 2,6 s, ngắn nhất 0,5 s**; nửa sau (6–9) mỗi cảnh ~1 s.
 
+## Vì sao viral — xếp hạng (viết lại 23/10, TRƯỚC tầng 3)
+
+Bản đầu bỏ qua bước này → tầng 3 thay mất cú hook. Từ khung này trở đi, mục này
+là bắt buộc và **tầng 3 không được thay yếu tố LÕI**.
+
+| # | Yếu tố | Ở đâu | Mức | Vì sao |
+|---|---|---|---|---|
+| 1 | **Khoảng trống tò mò**: "this" là gì? Chữ hook gọi tên người xem ("Every CHRISTMAS lover") mà không nói sản phẩm làm gì; **câu trả lời chỉ đến ở 7,9 s** | chữ 0–11,8 s + toàn mạch | **LÕI** | Giữ người xem tới reveal → thời gian xem cao. Nói sớm sản phẩm làm gì là mất lý do xem tiếp |
+| 2 | **"Store find" — thấy ở siêu thị**: kệ đầy hộp, tự tay lấy | 1a | **LÕI** | Hàng thật, đang bán chạy (kệ đầy), "cuối tuần tôi cũng mua được". Đúng trend #walmartfinds/#costcofinds |
+| 3 | **Hộp sản phẩm đẹp**, giơ thẳng vào máy | 1b | **LÕI** | Hộp đẹp = quà tặng được (mùa Giáng sinh); nhãn hàng in vào mắt người xem |
+| 4 | **Biến đổi tối → sáng trong một cảnh liền**, khớp chỗ nhạc vào | 5–6 | **LÕI** | Trước/sau trong một khung, không cắt → thoả mãn, muốn xem lại |
+| 5 | **Hành trình mua → mở → lắp → bật** | 1–6 | **LÕI** (thứ tự) | Mỗi bước trả lời dần "đây là gì"; thiếu bước nào là đứt mạch tò mò |
+| 6 | **Dồn cảnh chứng minh**: nhiều phòng, ~1 s mỗi cảnh | 7–9 | Phụ (mạnh) | "Nhà tôi cũng làm được" + nhịp nhanh cuối video → xem lại |
+| 7 | **Chỉ nhạc, không lời** | toàn bài | Phụ | Hiểu không cần tiếng/ngôn ngữ, lướt tắt tiếng vẫn hiểu |
+| 8 | Thẩm mỹ ấm: tay áo len kem, cây thông, đèn vàng | toàn bài | Phụ | Khát khao "Giáng sinh ấm cúng"; tệp khách nữ |
+| 9 | Ngắn 11,8 s, không CTA | — | Phụ | Xem hết + lặp lại; quảng cáo trông như video thường |
+
+**Nguyên liệu khung này đòi** (thiếu thì M0 phải CHẶN, không thay bừa): ảnh **mặt
+ngoài hộp sản phẩm đóng** (cho 2, 3); sản phẩm có **trạng thái tắt → bật** nhìn thấy
+được (cho 4).
+
+**Soát lại kịch bản v01 theo bảng này:** v01 đã gộp 3 cảnh "nhiều phòng" thành một
+cảnh lùi máy → làm yếu yếu tố 6 (Phụ, mạnh) — cần hỏi chủ dự án có giữ nhịp dồn cảnh không.
+
 ## Tầng 3 — Phán quyết chuyển sang AI
 
 | # | Phán quyết | Lý do · cách làm |

@@ -44,6 +44,22 @@ Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên
 | 23/10 | **Một video trọn luồng trước**, rồi mới thêm khung mới, **lần lượt từng dạng** (không gom 3 reel một lúc). Video đầu: Santa Spins × khung 01 FrostGlow, qua Muse |
 | 23/10 | Muse (muse.ai) chỉ là nhánh thử, chạy **bên trong** Muse. Không dùng useapi.net, AutoMuse (giao mật khẩu, cookie Meta cho bên thứ ba) |
 
+## Quy tắc bóc khung (M3) — rút ra từ lỗi khung 01, 23/10
+
+Bản bóc đầu của khung 01 sai ở khâu đánh giá: thay cú hook "kệ siêu thị + hộp
+đẹp" bằng "hộp giao trước cửa" vì lo Muse vẽ sai chữ và lo "ngụ ý bán lẻ". Chủ dự
+án bắt được. Từ đó:
+
+1. **Mục "Vì sao viral — xếp hạng" là bắt buộc, viết TRƯỚC tầng 3.** Mỗi yếu tố
+   gắn mức **LÕI** (bỏ là mất viral) hoặc **Phụ**.
+2. **Tầng 3 không được thay yếu tố LÕI.** Làm không được thì ghi "không chuyển
+   được cho sản phẩm này" hoặc hỏi chủ dự án — không tự thay rồi viết vào kịch bản.
+3. **Lo ngại của trợ lý (kỹ thuật, pháp lý) là CÂU HỎI cho chủ dự án**, không phải
+   quyết định. Nêu một lần, chủ dự án chốt.
+4. **Soi ≥ 4 khung/giây** và tự xác nhận từng điểm cắt: máy dò `scene` báo nhầm khi
+   độ sáng đổi (đèn bật ở khung 01 bị đếm là "cắt").
+5. Mỗi khung ghi **"nguyên liệu khung này đòi"** → thành mục M0 phải CHẶN khi thiếu.
+
 ## Luật riêng của thư mục này
 
 - **Không commit video, ảnh, âm thanh.** `manager-ai` là repo hồ sơ, đẩy lên
