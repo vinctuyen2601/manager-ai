@@ -248,19 +248,20 @@ Chủ dự án: hộp clip A "sang trọng nhưng không đẹp" (đỏ phẳng,
 xì gà; trượt trục **đẹp** và **khao khát**, sổ tay 0c). Chọn **hướng 1**: ảnh **H1** (`anh-H1-lan1.jpg`) đạt → hộp chuẩn trong hồ sơ.
 Đoạn siêu thị + đặt lên bàn của clip A **bỏ** (hộp cũ). Bối cảnh, tay, xe đẩy, phòng khách của clip A đẹp → giữ nguyên mô tả.
 
-### Ảnh S — khung đầu siêu thị · tải **`anh-H1-lan1.jpg`**
+### Ảnh S — khung đầu siêu thị · tải **`anh-H1-logo.jpg`** (H1 đã ghép logo thật)
 
 ```
 media-generation, type image, --orientation vertical
-Reference: anh-H1-lan1.jpg (the exact gift case design to repeat on the shelves)
+Reference: anh-H1-logo.jpg (the exact gift case design to repeat on the shelves)
 
 Vertical 9:16 handheld phone photo, first-person view in a wide aisle of a large bright big-box
 store: high ceiling with bright lights, tall white metal shelves on both sides stacked full with
 hundreds of identical copies of the reference gift case, each lying flat, wider than it is tall,
-lids slightly angled toward the camera so the gold pine corners, the gold ring-of-dots emblem and
-the champagne-gold satin bows are visible, two gold latches on each long front edge. A rich, warm,
+lids slightly angled toward the camera so the gold pine corners, the round Santa Spins logo badge
+in the centre of each lid and the champagne-gold satin bows are visible, two gold latches on each long front edge. A rich, warm,
 festive wall of red and gold. A hand in a cream cable-knit sweater sleeve, short nude-pink nails,
-one thin gold ring, reaches toward one case at chest height. No words, no logos, no text anywhere.
+one thin gold ring, grips one case at chest height, its lid facing the camera, close enough that its Santa Spins logo
+badge is large and sharp. No other words, logos or text anywhere.
 ```
 
 ### Clip A2 — 10 s · CHỈ tải **ảnh S**
@@ -270,15 +271,16 @@ media-generation, type video, --orientation vertical, 10 seconds, --image-file <
 
 Use only this image as the first frame. Vertical 9:16, handheld first-person POV, phone camera,
 natural light, slightly shaky. Only her hands are visible: cream cable-knit sweater sleeves, short
-nude-pink nails, one thin gold ring. No faces. No text, no logos anywhere. Ambient sound only.
+nude-pink nails, one thin gold ring. No faces. No text or logos except the Santa Spins badge already
+on the cases. Ambient sound only.
 GIFT CASE (keep exactly as in the first frame): deep crimson leatherette with a soft sheen, gold-foil
-pine branches with red berries in the lid corners, a gold ring-of-dots emblem with a snowflake in the
-centre, a champagne-gold satin bow on one corner, two gold latches on the long front edge, lying
+pine branches with red berries in the lid corners, the round Santa Spins logo badge (a cream ring with dark green lettering "SANTA SPINS" on top and "MUSIC BOX" below, a red vinyl record with a gold centre in the middle, small holly sprigs on the sides) in the
+centre of the lid, a champagne-gold satin bow on one corner, two gold latches on the long front edge, lying
 flat, wider than it is tall.
 
 0.0–1.6s: The hand pulls one case out of the full shelf.
 1.6–2.6s: Both hands lift the case close to the camera and tilt it so the lid faces the camera: the
-gold pine corners, the ring-of-dots emblem and the bow catch the light.
+gold pine corners, the Santa Spins logo badge and the bow catch the light.
 2.6–3.6s: The hands lower the case into a shopping cart with a blue handle.
 3.6–4.0s: Cut to a cozy living room in daylight: a light marble coffee table, a decorated Christmas
 tree with warm white lights, a fireplace with red stockings.
@@ -296,3 +298,7 @@ tree with warm white lights, a fireplace with red stockings.
 | 7,4 → ~12 | Clip B bản 2 (tối → bật) |
 
 Ảnh M (vali mở) giữ nguyên: mép đỏ + hai khoá vàng của vali mở khớp hộp mới.
+
+**Logo (23/10):** hộp mang **logo Santa Spins thật** ở giữa nắp. Sau khi có **ảnh S**, trợ lý **ghép lại logo thật** lên nắp chiếc hộp
+trên tay (khung đầu) trước khi đưa vào clip A2 — Muse giữ thứ có sẵn trong khung đầu tốt hơn tự vẽ chữ. Logo trên các hộp xa trên
+kệ nhỏ, có méo cũng không đọc được nên chấp nhận.

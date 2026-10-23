@@ -37,7 +37,7 @@ sĩ (Andy Williams, Mariah Carey, Bobby Helms…). Đĩa thật in gì? Bài tr�
 | Đĩa | Tròn, viền đen, nhãn tròn in hình giữa; đặt vào **nằm trong vòng LED**. **9 đĩa, 9 nhãn khác nhau** — thấy trong ảnh vali: Mariah Carey "Merry Christmas" · Frank Sinatra Christmas · White Christmas · Ariana Grande "Christmas & Chill" · Andy Williams Christmas Album · Michael Bublé Christmas · "A Christmas for You" · Bobby Helms "Jingle Bell Rock" · "Christmas with Nat King Cole" | ✅ **tỉ lệ đo từ VIDEO THẬT** (mục 3b): **đĩa ≈ 40–45 % bề rộng máy**, **vòng LED ≈ 50 %** (số 1/4–1/3 đo từ ảnh hero trước đó là SAI — ảnh hero gần như render) · ⬜ cm thật (không bắt buộc — máy dùng tỉ lệ) |
 | Mặt sau | ⬜ nam châm ở đâu, cổng USB-C ở đâu, công tắc? | ⬜ |
 | Độ dày | ⬜ | ⬜ |
-| Hộp đóng | **Bản 2 (ảnh H1, chủ dự án chọn hướng 1, 23/10):** vali da đỏ thẫm bóng nhẹ; **cành thông + quả mọng vàng lá ở 4 góc nắp**; giữa nắp **vòng hạt vàng có bông tuyết** (= hình vòng LED của máy); **nơ satin vàng** ở một góc; hai khoá vàng ở **cạnh dài phía trước**; không chữ. Ảnh: `thu-nghiem/muse/anh-H1-lan1.jpg` — ⚠ ảnh dựng hộp **đứng dọc**, vali thật **nằm ngang, rộng hơn cao** → prompt luôn ghi "lying flat, wider than it is tall" | ⚠ **máy suy ra 23/10** theo yêu cầu chủ dự án ("tự suy ra cho đẹp, sang trọng mùa Giáng sinh") — bám ngôn ngữ thiết kế nội thất vali; mép đỏ + hai khoá vàng thấy trong ảnh |
+| Hộp đóng | **Bản 2 (ảnh H1, chủ dự án chọn hướng 1, 23/10):** vali da đỏ thẫm bóng nhẹ; **cành thông + quả mọng vàng lá ở 4 góc nắp**; giữa nắp **logo Santa Spins thật** (chủ dự án 23/10: "rõ ràng có thể lấy logo của santa spin"; logo = `thu-nghiem/san-pham/santa-spins/logo-santa-spins.png`, 979², tải từ header store) — **ghép bằng máy**, không để AI vẽ; ảnh hộp chuẩn: `thu-nghiem/muse/anh-H1-logo.jpg`; **nơ satin vàng** ở một góc; hai khoá vàng ở **cạnh dài phía trước**; không chữ. Ảnh: `thu-nghiem/muse/anh-H1-lan1.jpg` — ⚠ ảnh dựng hộp **đứng dọc**, vali thật **nằm ngang, rộng hơn cao** → prompt luôn ghi "lying flat, wider than it is tall" | ⚠ **máy suy ra 23/10** theo yêu cầu chủ dự án ("tự suy ra cho đẹp, sang trọng mùa Giáng sinh") — bám ngôn ngữ thiết kế nội thất vali; mép đỏ + hai khoá vàng thấy trong ảnh |
 | Hộp mở | Lót kem; nắp trong in chữ vàng "Timeless Christmas Memories / The soundtrack of every special moment"; máy giữa, 9 đĩa quanh | ✅ (ảnh render store `giftbox.webp` — ⚠ render, chưa biết có đúng hộp thật) |
 
 ## 3b. Sự thật từ VIDEO THẬT trên trang (crawl 23/10)
@@ -103,10 +103,10 @@ no two alike. NOT round, NOT a vinyl record, NOT a speaker, NO screen.
 ```
 GIFT CASE CLOSED (keep exactly): a luxury Christmas keepsake case lying flat, wider than it
 is tall, in deep crimson leatherette with a soft satin sheen. On the lid: elegant gold-foil pine
-branches with small red berries curling into the four corners, and in the centre a gold-foil
-emblem shaped like a ring of tiny dots with a small snowflake inside. A wide champagne-gold satin
+branches with small red berries curling into the four corners, and in the centre
+the round Santa Spins logo badge (a cream ring with dark green lettering "SANTA SPINS" on top and "MUSIC BOX" below, a red vinyl record with a gold centre in the middle, small holly sprigs on the sides). A wide champagne-gold satin
 ribbon wraps one corner and ties into a full soft bow. Two polished gold latches on the long
-front edge. No words, no logos, no text. Premium jewellery-style gift case, not a cardboard box.
+front edge. No other words or logos. Premium jewellery-style gift case, not a cardboard box.
 ```
 
 ```
