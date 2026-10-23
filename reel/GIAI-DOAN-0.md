@@ -33,8 +33,9 @@ Việc đầu tiên ở máy mới:
 | Python | 3.10.10 — gọi bằng **`python`**, KHÔNG phải `python3` (`python3` là lối tắt Microsoft Store, in "Python was not found") | ✅ cho rembg, Real-ESRGAN; whisperx cần ≥ 3.9 |
 | GPU | **NVIDIA GTX 1660 SUPER 6 GB** + Intel UHD 730 | đủ chạy whisperx model `small`/`medium`, rembg, Real-ESRGAN ở máy; không đủ chạy model video ở máy (không cần) |
 | RAM | 32 GB | ✅ |
-| pnpm | ❌ chưa có | Hypit cần — cài khi chủ dự án cài Hypit |
-| yt-dlp | ❌ chưa có | M3 tải reel mẫu cần |
+| pnpm | ✅ 12.15.0 (cài 23/10, `npm i -g pnpm`) | |
+| yt-dlp | ✅ 2026.10.21 (cài 23/10, `python -m pip install -U yt-dlp`) | M3 tải reel mẫu |
+| Hypit | ✅ skill + chương trình **0.3.1** (cài 23/10) | `hypit doctor` chỉ chạy TRONG một project Hypit (`package.json` có `hypit.project: true`) — chưa tạo; tạo khi thử Seedance, đặt trong `thu-nghiem/` (đã gitignore) |
 
 Máy này cũng là máy làm theme Shopify (`D:/my project/shop-christmasspin`).
 
@@ -62,8 +63,8 @@ Câu hỏi duy nhất: **Muse có giữ đúng hình sản phẩm qua 2 clip n�
 - [x] Chốt trần chi phí, người mẫu, độ dài (23/10: $10 · ảnh thật, thiếu thì AI tạo · 15 giây)
 - [x] Chốt nhà cung cấp giai đoạn 0: ~~HypiHub~~ → Muse trước, BytePlus dự phòng (23/10)
 - [ ] **Phép thử Muse 10 phút** (mục trên)
-- [ ] Cài ffmpeg trên máy chạy
-- [ ] Cài skill Hypit (chủ dự án tự làm)
+- [x] Cài ffmpeg trên máy chạy (máy `David-PC` có sẵn)
+- [x] Cài skill Hypit + chương trình 0.3.1 (chủ dự án cho cài 23/10)
 - [x] Chọn 3 sản phẩm ở 3 ngách khác nhau, có cả ảnh đẹp lẫn ảnh xấu (23/10, bảng dưới)
 - [ ] Làm M0 bằng tay cho 3 sản phẩm đó: kiểm ảnh, sơ chế, ra tờ sản phẩm + bản tóm tắt
 - [ ] Chọn 3 reel viral tiếng Anh (TikTok, Facebook Reels, Top Ads), khác ngách và khác format; ghi lượt xem, ngày đăng

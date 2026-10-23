@@ -34,7 +34,7 @@ Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên
 | 23/10 | Thư mục làm việc ở đây, `manager-ai/reel` |
 | 23/10 | ~~Giai đoạn 0 gọi model qua HypiHub~~ → **bỏ HypiHub vì đắt** (chủ dự án xem giá, cùng ngày). Đường thử chính: **Muse, chạy bằng skill bên trong Muse** (miễn phí, 1 tỉ token). Dự phòng: BytePlus ModelArk trực tiếp, Seedance 720p khoảng $0,15/giây ≈ $2–3/video 15 giây (số quy đổi của bên thứ ba, chưa kiểm). Giọng: TTS chạy ở máy hoặc CLI `tts` của Muse thay ElevenLabs |
 | 23/10 | Chủ dự án sẽ tự làm **phép thử 10 phút trong Muse** ở máy nhà trước khi mình viết skill hay sửa kế hoạch. Cách làm ở `GIAI-DOAN-0.md` |
-| 23/10 | **Chưa cài skill Hypit.** Chủ dự án sẽ tự cài; đừng tự chạy `npx skills add` |
+| 23/10 | ~~Chưa cài skill Hypit~~ → **chủ dự án cho cài cùng ngày** ("ok cài đi"), máy `David-PC`: skill `npx skills add hypit-ai/hypit -g -a claude-code -y` → `~/.claude/skills/hypit` (Gen/Socket/Snyk: Safe / 0 alerts / Low Risk); chương trình `npm i -g @hypit/hypit` → **0.3.1** (ghim bản này cho giai đoạn 0). Chưa nối nhà cung cấp nào, chưa có khoá, chưa tốn tiền. Máy khác thì phải cài lại |
 | 23/10 | **3 sản phẩm thử:** Santa Spins, Santa's Memory Globe (store Shopify, thị trường Mỹ) và một món 17fishing có ảnh 1688 dính chữ Trung (ca ảnh xấu để thử M0) |
 | 23/10 | Muse (muse.ai) chỉ là nhánh thử, chạy **bên trong** Muse. Không dùng useapi.net, AutoMuse (giao mật khẩu, cookie Meta cho bên thứ ba) |
 
