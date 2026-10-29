@@ -86,7 +86,92 @@ cũng trùng vietnam-fishing. Thiếu liên kết: mồ côi 66% so với 57%, c
 nhỏ. Nhóm bị từ chối còn **dài hơn** nhóm được nhận (1.158 từ so với 912).
 **Dự đoán:** không có. Đây là quyết định KHÔNG hành động vì chưa biết nguyên
 nhân — gộp bừa thì mất bài mà không sửa được gốc.
-**Kiểm ngày:** 15/10/2026, xem có manh mối mới không · **Trạng thái:** ⏳
+**Kiểm ngày:** 15/10/2026, xem có manh mối mới không · **Trạng thái:** ✅ có manh mối mới, và nó bác cả cách đặt câu hỏi (kiểm muộn 29/10/2026)
+
+#### Kết quả kiểm 29/10/2026 — Google không "từ chối" bản hiện tại; nó chưa hề đọc bản hiện tại
+
+Nguồn: `node chung/kiem-chi-muc.mjs 17fishing` (119 URL, lô 4; một lô 504 vì
+trần CloudFront, quét lại riêng 4 URL đó). Tập `trangThai` có thật: `Đã được
+gửi và lập chỉ mục` 85 · `Đã thu thập dữ liệu – hiện chưa được lập chỉ mục` 30
+· `Đã phát hiện thấy – hiện chưa được lập chỉ mục` 4.
+
+| | 15/09 | 21/09 | **29/10** |
+|---|---|---|---|
+| bài KHÔNG vào chỉ mục | 23 | 18/92 | **32/96** |
+| bài vào chỉ mục | — | 74/92 (80%) | **64/96 (67%)** |
+| toàn site | 64% | 92/111 (82%) | **85/119 (71%)** |
+
+Sản phẩm 14/14 vẫn đủ. Danh mục 4/6 — `cau-dai` và `can-lang-xe` "đã phát
+hiện" nhưng chưa bò. Tỉ lệ bài **tệ đi**, không tốt lên.
+
+**Manh mối — cột `lanCuoiThuThap`, trước giờ chưa ai nhìn:**
+
+| | lần Google bò cuối, theo tháng | bò TRƯỚC lần sửa cuối |
+|---|---|---|
+| 64 bài vào chỉ mục | 07: 5 · **09: 41 · 10: 18** | 23/64 |
+| 32 bài không vào | **05: 24** · 06: 1 · 07: 1 · 09: 4 · chưa bò: 2 | **32/32** |
+
+**Cả 32/32 bài không vào chỉ mục được Google bò lần cuối TRƯỚC lần sửa gần
+nhất, và 30/30 bài có ngày bò thì đều bò trước 17/09** — 24 bài dừng ở tháng
+5/2026. Tức phán quyết "chưa lập chỉ mục" là phán cho bản **trước khi viết
+lại**. 12/32 bài trong nhóm này là bài nháp đăng lại 17/09 (QĐ-09), phần lớn
+còn lại được sửa 15–21/09 — Google chưa đọc bản mới của bài nào trong số đó.
+
+Đó cũng là lý do hai giả thuyết ở trên (sao chép, thiếu liên kết) không tách
+được nhóm: thứ tách được là **Google có còn quay lại URL đó không**. Đây là
+vấn đề tần suất bò / ưu tiên thu thập, giống GaRutin, không phải chất lượng
+bài — nhóm không vào có trung vị 564 từ, nhóm vào 534.
+
+**Suy đoán, CHƯA kiểm:** bài đã bị chấm "thu thập – không lập chỉ mục" một lần
+thì bị hạ ưu tiên bò lại; sitemap đã khai `lastmod` (vd. `top-5-can-cau-tay…`
+ghi 17/09) mà 6 tuần Google vẫn chưa quay lại, nên `lastmod` một mình không đủ.
+
+**Hai thứ phát hiện kèm:**
+- **4 bài chỉ 10–14 từ** đang `published`: `bai-moi-cau-diec-…-vietnam-fishing-tv`,
+  `cau-ro-phi-dam-chay-…`, `cau-ca-diec-tai-ho-doi-luu-…`,
+  `qua-mat-chu-ho-keo-tram-den-…` — trang nhúng video của vietnam-fishing TV,
+  gần như không có chữ. Cả 4 đều không vào chỉ mục. Đây là trang mỏng thật,
+  khác 28 bài kia.
+- Hai bài QĐ-18 (đăng 09/10) sau 20 ngày vẫn **chưa được bò lần nào**.
+
+**Việc đáng làm — của chủ shop, không phải của mã:** trong Search Console bấm
+"Yêu cầu lập chỉ mục" cho 26 bài dưới đây, cộng 2 bài QĐ-18 (giới hạn ~10
+URL/ngày → 3 ngày). 4 bài video thì quyết riêng: gỡ về nháp hoặc thêm chữ.
+
+```
+ngày bò cuối  /blog/...
+2026-05-06  thong-tin-huu-ich-ve-do-dai-cua-can-cau-tay
+2026-05-06  muc-nuoc-cau-ca-tram-co-vao-cuoi-thu-va-dau-dong
+2026-05-07  moi-gia-spinnerbaits
+2026-05-12  top-3-phao-cau-ca-chep-ma-can-thu-khong-the-bo-qua-2022
+2026-05-13  mot-so-loai-mui-vi-moi-cau-ca-diec-co-ban
+2026-05-13  4-buoc-de-chinh-phao-mot-cach-chinh-xac
+2026-05-16  7-vi-tri-cau-xau-can-phai-tranh
+2026-05-23  cach-su-dung-ngo-de-lam-moi-cau
+2026-05-24  top-5-sieu-pham-can-cau-ca-hua-khong-the-bo-qua-2022
+2026-05-25  cac-dang-phao-cau-dai-co-ban-va-ung-dung-khi-di-cau
+2026-05-26  chieu-dai-cua-can-cau-tay-anh-huong-the-nao-den-luong-ca-khi-cau
+2026-05-27  tin-hieu-phao-khi-cau-dai-va-khi-cau-lut-truyen-thong
+2026-05-27  ca-quan-o-bao-tam-nhung-khong-can-cau
+2026-05-27  bi-quyet-su-dung-moi-cau-ca-lon-tu-nhien
+2026-05-27  ky-thuat-cau-ca-ro-phi-cach-giu-o-va-de-phao-lien-tuc
+2026-05-27  5-kinh-nghiem-lua-chon-can-cau-don-phu-hop
+2026-05-28  moi-ngo-u-san-hang
+2026-05-28  4-cau-hoi-thuong-gap-khi-lua-chon-day-cau-tot
+2026-05-29  04-nguyen-nhan-ca-khong-an-moi-va-bi-quyet-khac-phuc-cuc-de-cho-nguoi-moi-cau
+2026-05-29  mot-so-thong-tin-huu-ich-ve-may-cau-ikada
+2026-06-21  top-5-can-cau-tay-ua-thich-nhat
+2026-07-02  cach-cau-lung-va-cau-day-trong-cau-don-cau-dai
+2026-09-01  mot-so-thong-tin-huu-ich-ve-can-cau-ikada
+2026-09-06  cach-ket-hop-day-cau-va-ung-dung-cua-day-theo
+2026-09-08  lua-chon-can-cau-ca-chep-phu-hop
+2026-09-11  kinh-nghiem-cau-ca-o-vung-nuoc-co-nhieu-tao-vao-mua-xuan
+```
+
+**Dự đoán nếu làm, kiểm 30 ngày sau ngày bấm:** ≥ 50% số bài được yêu cầu
+chuyển sang `Đã được gửi và lập chỉ mục`. Nếu sau khi Google đã bò lại (ngày
+bò mới hơn ngày sửa) mà vẫn bị chấm không lập chỉ mục, thì manh mối này sai và
+quay về giả thuyết chất lượng.
 
 ### QĐ-09 · Viết lại 30/35 bài nháp, bỏ hẳn 5 bài — 17fishing
 **Vì sao:** chủ shop yêu cầu tăng số lượng bài. Đo trước khi viết cho thấy
@@ -143,7 +228,44 @@ người tới từ tìm kiếm vốn chỉ cần một câu trả lời rồi �
 - 17fishing: 1.341 lượt / 663 khách · bài top `huong-dan-cach-buoc-luoi-cau` 135/135 = **1,00**
 - GaRutin: 983 lượt / 379 khách · bài top `mua-ga-rutin-tp-hcm` 103/69 = **1,49**
 
-**Kiểm ngày:** 16/10/2026 · **Trạng thái:** ⏳ chờ kiểm
+**Kiểm ngày:** 16/10/2026 · **Trạng thái:** 🔀 không kiểm được — phép đo không đo đúng giả thuyết (kiểm muộn 29/10/2026)
+
+#### Kết quả kiểm 29/10/2026 — con số rơi vào dải dự đoán, nhưng nó không nói gì
+
+Nguồn: `GET /admin/analytics/table?from&to`, lọc `/blog/`, 4 bài nhiều lượt
+nhất, gộp `Σvisits / ΣuniqueVisitors`.
+
+| | 4 tuần sau QĐ (18/09–16/10) | 30 ngày gần nhất (30/09–29/10) |
+|---|---|---|
+| 17fishing | 63/56 = **1,12** (từng bài 1,05 · 1,23 · 1,14 · 1,11) | 52/46 = **1,13** |
+| GaRutin | 127/107 = **1,19** (bài top `mua-ga-rutin-tp-hcm` 59/49 = 1,20) | 121/101 = **1,20** |
+
+Đọc lướt thì 17fishing "đạt" (1,00 → 1,12, giữa dải 1,05–1,20). **Tôi không
+ghi đúng, vì cả mẫu số nền lẫn chính thước đo đều hỏng:**
+
+1. **Thước đo sai từ lúc đặt ra.** `visits / uniqueVisitors` của MỘT trang là
+   số lần một người mở lại CHÍNH trang đó — không phải số bài khác người đó đọc
+   tiếp. Bảng `table` gom theo `path`, không có cột nào nối một khách qua hai
+   đường dẫn. Giả thuyết "khối bài liên quan bị chôn" cần đúng con số mà API
+   này không trả được.
+2. **Nền 1,00 là dấu vân tay bot.** 135 lượt / 135 khách trên một bài — mỗi
+   khách đúng một trang — chính là nhóm iOS 13.2.3 mà QĐ-12 tìm ra bốn ngày
+   sau. Bài đó (`huong-dan-cach-buoc-luoi-cau-…`) nay chỉ còn **7 lượt / 6
+   khách** trong 30 ngày. Định nghĩa "một lượt xem" đổi ngày 22/09 nên mọi so
+   sánh bắc qua mốc đó khập khiễng (đã cảnh báo ở QĐ-12).
+3. GaRutin **đi xuống** từ 1,49 về 1,19–1,20 mà không ai sửa gì bên đó ngoài
+   khối cuộn ngang — cùng một bộ lọc bot (QĐ-13) giải thích được, nên chiều
+   giảm cũng không nói gì về bố cục.
+
+**Ý nghĩa:** chưa biết khối cuộn ngang có giữ người đọc hay không. Muốn biết
+phải có một truy vấn "số bài `/blog/` KHÁC NHAU trên mỗi `visitor_id`" — chưa
+có endpoint, và đây là việc ĐỌC nên có thể thêm vào BE khi nào cần. Trước khi
+thêm, cân xem có đáng không: blog 17fishing chỉ còn ~118 lượt người thật / 30
+ngày, nên kể cả có số thì mẫu vẫn mỏng.
+
+**Bài học đo:** trước khi đặt dự đoán, kiểm xem thước đo có tách được giả
+thuyết không — ở đây chỉ cần hỏi "con số này đổi thế nào nếu một người đọc hai
+bài khác nhau?" là thấy nó không đổi.
 
 ### QĐ-11 · Trang chủ 17fishing: nối ô tìm kiếm, gộp hai khối sản phẩm
 **Vì sao:** chủ shop muốn trang chủ "chuyên nghiệp hơn". Đo trước khi thiết kế
@@ -231,7 +353,50 @@ và `/san-pham?search=` khi vào thẳng.
 - Trên Google trang chủ chỉ có **48 hiển thị / 1 nhấp** — trang chủ **không**
   phải cửa vào từ tìm kiếm, khách tới từ Facebook và link trực tiếp
 
-**Kiểm ngày:** 16/10/2026 · **Trạng thái:** ⏳ chờ kiểm
+**Kiểm ngày:** 16/10/2026 · **Trạng thái:** ❌ sai phần tìm kiếm (6 lượt, dưới ngưỡng 10) · 🔀 phần trang chủ không đo được — kiểm muộn 29/10/2026
+
+#### Kết quả kiểm 29/10/2026
+
+Ô tìm kiếm **đang bật** trên production (`HIEN_O_TIM_KIEM = true`, trang chủ có
+ô `Tìm cần câu, máy câu, phao câu...`).
+
+**Tìm kiếm — SAI, rơi đúng vào nhánh tự đặt "dưới 10 lượt".**
+`GET /admin/analytics/searches?from&to` (lưu ý: tham số là **`empty=1`**, không
+phải `onlyEmpty=1` như "Cách đo lại" ở trên ghi — đã đối chiếu
+`tracking.controller.ts`):
+
+| khoảng | lượt tìm thật | 0 kết quả |
+|---|---|---|
+| 4 tuần đúng hạn (19/09–16/10) | **2** (`phao` ×2, 3 kết quả) | 0 |
+| 17/10–29/10 | 4 | **4**: `mồi lure`, `mồi lủe`, `mồi lure]` (một người gõ lại 3 lần), `phao tieu ngu nhi` |
+| cộng 41 ngày | **6** | 4 |
+
+Dự đoán ≥ 30 lượt, ≥ 5 từ khoá 0 kết quả. Thực tế 2 lượt trong 4 tuần hẹn. Số
+nền ghi "6 dòng thử" nhưng thật ra là **7** — `zz123` (18/09) cũng là của tôi.
+Không loại được khả năng 4 lượt gần đây có lượt thử của phiên khác: endpoint
+gộp theo chữ, không trả `visitor_id`.
+
+Theo luật tự đặt: **khách duyệt theo danh mục chứ không tìm — thôi đầu tư vào
+tìm kiếm.** Giữ ô vì nó không tốn gì; đừng xây thêm gì cho nó. Điều duy nhất ô
+này cho được là danh sách hàng shop không có: "mồi lure" (một người, ba lần
+gõ) và "phao tiểu ngư nhi". Hai dòng — không phải tín hiệu nhập hàng.
+
+**Trang chủ → sản phẩm — không đo được như đã viết.** `table` gom theo đường
+dẫn, không nối được "khách vào `/` RỒI mở `/san-pham/...`". Số gần nhất có được
+là tỉ lệ lượt `/san-pham/*` trên lượt `/`:
+
+| khoảng | `/` | `/san-pham/*` | tỉ lệ |
+|---|---|---|---|
+| 19/08–17/09 (trước) | 254 / 129 khách | 192 / 116 | 0,76 |
+| 23/09–22/10 | 217 / 124 | 254 / 150 | 1,17 |
+| 30/09–29/10 | 183 / 118 | 174 / 128 | 0,95 |
+
+Có nhích, nhưng khoảng "trước" đếm theo định nghĩa lượt xem cũ (trước 22/09,
+còn bot một-trang), nên không tách được phần của trang chủ mới khỏi phần của bộ
+lọc bot. **Và số nền ghi ở trên (604 lượt / 184 khách) nay không tái tạo được** —
+cùng khoảng ngày giờ chỉ còn 254 / 129, vì bộ lọc Chrome-trên-Linux và lệnh dọn
+`rac-cong-cu` áp ngược lên dữ liệu cũ. Số nền phân tích lưu lượng ở site này
+**phải ghi kèm ngày đo**, và không được so với số đo lại sau một lần đổi bộ lọc.
 
 
 ### Số nền CHỈ MỤC — đo 21/09/2026
@@ -597,7 +762,50 @@ Dự đoán 2 là kết quả tôi cho là dễ xảy ra hơn. Nếu đúng thì
 còn lại từ một phép thử này — nó chỉ tách được hai giả thuyết, không đo được
 độ lớn.
 
-**Kiểm ngày:** 22/10/2026 · **Trạng thái:** ⏳ chờ kiểm
+**Kiểm ngày:** 22/10/2026 · **Trạng thái:** 🔀 không tách được hai giả thuyết — tại hạn nghiêng về dự đoán 2, thêm 7 ngày thì lật (kiểm 29/10/2026)
+
+#### Kết quả kiểm 29/10/2026 — phép thử không tách được gì, vì cái vách tự di chuyển
+
+Nguồn: `GET /admin/analytics/do-doc?from&to` (bảng `do_doc_san_pham`, đã lọc
+bot), riêng `phao-dien-cam-bien-duoi-led-chuyen-chep`. Đã kiểm `blockOrder`
+trên production: thứ tự đang bật là hero · qua-tang · combo · **thong-so (4)**
+· cau-kien · **diem-manh (6)**, `updatedAt` 08/10 15:05 — đúng lúc hoán vị.
+Khoảng "trước" lấy 01–07/10 và "sau" từ 09/10, bỏ trọn ngày 08/10 để không lẫn
+hai bố cục. Dòng thử 01/10 của tôi nằm ở `ghe-dia-hinh-ak-power`, không dính
+sản phẩm này.
+
+| khoảng | lượt | khối 2 qua-tang | khối 3 combo | khối 4 | khối 6 |
+|---|---|---|---|---|---|
+| 01–07/10 (trước) | 8 | 88% | 88% | diem-manh **0%** | thong-so 0% |
+| 09–22/10 (tới hạn) | 9 | 22% | 11% | thong-so **0/9** | diem-manh 0% |
+| 23–29/10 | 8 | 38% | 63% | thong-so **2/8** | diem-manh 13% |
+| 09–29/10 gộp | 17 | 29% | 35% | thong-so **2/17 = 12%** | 6% |
+
+**Đúng hạn 22/10:** thong-so ở vị trí 4 đọc 0/9 → đúng dự đoán 2 ("vách do VỊ
+TRÍ"). Nếu chốt hôm đó tôi đã ghi ✅ và đề xuất rút ngắn phần trên.
+
+**Thêm một tuần thì thành 2/17 > 0%** — đúng chữ của dự đoán 1. Một phép thử
+"nhị phân" mà 2 lượt đọc lật được kết luận thì nó không phải nhị phân; ngưỡng
+"> 0%" là ngưỡng đặt sai ở cỡ mẫu này, đáng ra phải là "≥ x% trên ≥ 30 lượt".
+
+**Điều đáng chú ý hơn cả:** tiền đề của phép thử đã sụp. Phép thử dựa trên
+"7/9 người qua khối 2–3 rồi rơi ở khối 4". Ở khoảng sau, khối 2–3 tự rơi từ
+88% xuống 11–35% — **mà không có thay đổi mã nào** (commit web cuối 02/10,
+sản phẩm chỉ đổi đúng lần hoán vị). Tức "cái vách sau khối 3" ngày 08/10 là
+hình dạng của 8–9 lượt, không phải đặc tính của trang.
+
+**Đối chứng từ sản phẩm khác, cùng khoảng 09–29/10:** `thong-so` ở vị trí 4
+của máy câu DG Tokushima (28 lượt) đọc **54%**, ISENI 60%, Chuanze cước 50%.
+Vị trí 4 tự nó không phải chỗ chết. Phao điện là sản phẩm duy nhất có
+qua-tang + combo đứng trên — nghi vấn (CHƯA đo) là hai khối đó dài, đẩy mọi
+thứ phía dưới xa khỏi màn hình đầu.
+
+**Ý nghĩa:** không viết lại `diem-manh` ở 10 trang (dự đoán 1 chưa được chứng
+minh), cũng chưa có bằng chứng để rút ngắn phần trên (dự đoán 2 lật sau một
+tuần). Giữ nguyên hoán vị — nó không làm gì xấu đi. Ở ~1 lượt/ngày, muốn có 30
+lượt sau hoán vị thì phải tới khoảng giữa 11/2026. Nếu đo lại: đo **chiều cao
+pixel** của qua-tang + combo trên điện thoại trước, rồi mới đổ lỗi cho vị trí
+hay nội dung.
 
 ---
 

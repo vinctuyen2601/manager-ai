@@ -106,6 +106,33 @@ tới"): `top-5-can-cau-tay-ua-thich-nhat`, `chon-phao-cau-dai-chuan-nhat`,
 có bài nào kéo được nhấp vào `/san-pham` không. Nếu hiển thị gần 0 thì càng
 củng cố kết luận ở trên — dồn sức vào trang danh mục, thôi viết bài cho "mua X".
 
+### Kết quả kiểm 29/10/2026 (muộn 11 ngày) — gần 0, kết luận "thôi viết bài mua X" được củng cố
+
+Nguồn GSC: `GET /admin/keywords/gsc-trang?soNgay=N` (cửa sổ tính tới 28/10, đã
+gộp www/không www — không có dòng www nào). Nguồn lượt xem:
+`GET /admin/analytics/table?from=2026-09-18&to=2026-10-29&path=/blog/mua-`.
+
+| bài | 28 ngày (01–28/10) | 42 ngày (17/09–28/10) | lượt xem thật 18/09–29/10 |
+|---|---|---|---|
+| `mua-do-cau-ca-o-ha-noi` | 5 hiển thị · 0 nhấp · hạng 6,8 | 9 · 0 · 6,2 | 0 |
+| `mua-phao-cau-chep-ba-loai-dang-ban` | 11 · 0 · 9,2 | 14 · 0 · 9,3 | 0 |
+| `mua-bo-do-cau-dai-dau-tien-het-bao-nhieu` | 18 · 0 · 5,2 | 24 · **1** · 4,5 | **1 lượt / 1 khách** |
+| **cộng** | **34 · 0** | **47 · 1** | **1** |
+
+Đối chiếu: cả blog 17fishing được 5.814 hiển thị trong 28 ngày đó — ba bài
+chiếm 0,6%. Cả ba đã vào chỉ mục (quét `kiem-chi-muc` 29/10), nên không phải
+lỗi kỹ thuật: Google đọc, xếp hạng 5–9, nhưng gần như không ai gõ truy vấn đó.
+
+**"Có kéo được lượt sang `/san-pham` không" — không đo được, và cũng không cần
+đo:** `table` gom theo đường dẫn, không nối được một khách qua hai trang; mà
+cả ba bài cộng lại chỉ có MỘT lượt xem người thật trong 6 tuần, nên con số tối
+đa có thể là 1.
+
+**Ý nghĩa:** đúng nhánh đã hẹn — "hiển thị gần 0 thì dồn sức vào trang danh
+mục, thôi viết bài cho 'mua X'". Đối lập đáng chú ý: `cau-dai-la-gi`, một bài
+nháp đăng lại cùng đợt 17/09 (QĐ-09), đi từ 0 lên **278 hiển thị / 3 nhấp**
+trong cùng 28 ngày. Bài trả lời câu hỏi kéo được hiển thị; bài "mua X" thì không.
+
 ---
 
 ## 17fishing — kế hoạch cũ (giữ để đối chiếu)
