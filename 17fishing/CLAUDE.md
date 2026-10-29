@@ -116,6 +116,32 @@ Viết hay sửa mô tả sản phẩm mà chưa đọc tệp đó thì sẽ l�
 chính repo đó — mở repo nào thì tệp đó nạp theo, không cần tìm.
 
 
+### Chứng chỉ `api.17-fishing.com` chỉ tự gia hạn khi CNAME xác thực còn trong Cloudflare
+
+Chứng chỉ của API là ACM (**vùng us-east-1**, vì gắn vào CloudFront), xác thực
+bằng DNS. DNS của shop nằm ở **Cloudflare**, không phải Route 53, nên ACM không
+tự thêm được bản ghi. Ngày 26/10/2026 AWS gửi email "không tự gia hạn được"; đo
+ra bản ghi `_aaf918d2….api` **không còn trong DNS**, ACM báo *Failed*, còn 6 ngày
+là API chết. Thêm lại ngày 29/10 (CNAME, **đám mây xám — DNS only**, Name chỉ ghi
+phần trước `.17-fishing.com`) thì khoảng 1 giờ sau CloudFront đã phục vụ chứng
+chỉ mới, hạn **14/05/2027**.
+
+```
+CNAME  _aaf918d299ff0b66c9f92386454e2f63.api
+    →  _895ee9cfd1a0af199a757f6085a18260.jkddzztszm.acm-validations.aws
+```
+
+Đừng xoá bản ghi này khi dọn DNS — nó trông như rác. Phép kiểm:
+`dig +short CNAME _aaf918d299ff0b66c9f92386454e2f63.api.17-fishing.com` phải ra
+giá trị trên; hạn chứng chỉ: `echo | openssl s_client -connect
+api.17-fishing.com:443 -servername api.17-fishing.com 2>/dev/null | openssl x509
+-noout -enddate`.
+
+Trong ACM còn một chứng chỉ `*.17fishing.com` (**không gạch nối**, tên miền
+không phải của shop, DNS ở HiChina) trạng thái *Failed* — gõ nhầm từ trước, không
+liên quan; xoá được nếu mục "In use?" là No.
+
+
 ### Bỏ dấu chập từ khác nghĩa
 
 Với vốn từ của shop này: **`mồi` và `mới` đều thành `moi`** — nguy nhất, vì hàng
