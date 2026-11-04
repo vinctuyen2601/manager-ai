@@ -6,11 +6,13 @@
 > dẫn nền; tệp kia là trạng thái thật của cửa hàng sau ngày dựng 13/10/2026,
 > kèm việc còn treo và cách bắt máy khác làm tiếp.
 
-> **🔴 Bàn tới CHỌN SẢN PHẨM MỚI thì BẮT BUỘC mở
-> `TIEU-CHI-CHON-SAN-PHAM.md` và chấm đủ TỪNG mục trong 17 index trước khi
-> nói bất cứ ý kiến nào.** Chủ shop chốt 04/11/2026: hai bộ index là cố định,
-> phải check từng cái, in bảng đầy đủ, không được tóm tắt hay bỏ qua mục nào.
-> Chưa đo được một mục thì ghi `⬜ chưa đo` — im lặng bỏ qua là vi phạm.
+> **🔴 Chủ shop đưa một sản phẩm mới thì việc ĐẦU TIÊN là CHÉP BẢNG
+> CHECKLIST ra, trước khi bình luận bất cứ điều gì.** Bảng trống nằm ở đầu
+> `TIEU-CHI-CHON-SAN-PHAM.md` — 26 mục, bốn cổng. Chốt 04/11/2026: hai bộ
+> index của chủ shop là **cố định**, đi **từng dòng một** kèm bằng chứng,
+> không tóm tắt, không gộp dòng. Chưa tra được thì để `⬜` và **nói ra** —
+> im lặng bỏ qua là vi phạm. Dòng nào mơ hồ thì **hỏi ngay tại dòng đó**:
+> bảng này để TRÒ CHUYỆN, không phải để nộp báo cáo.
 
 Đọc `~/my-project/CLAUDE.md` trước (vai trò, quyền hạn, bẫy chung), rồi tệp này.
 

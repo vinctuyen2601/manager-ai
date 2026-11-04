@@ -1,4 +1,4 @@
-# Tiêu chí chọn sản phẩm dropship — bảng chấm bốn cổng
+# Checklist chốt sản phẩm dropship — 26 mục, bốn cổng
 
 Lập 04/11/2026. **Chấm TRƯỚC khi chốt sản phẩm, không phải sau khi loại.**
 
@@ -28,6 +28,86 @@ Cổng 1 (tiền) và cổng 2 (cung/rủi ro) là **phần trợ lý đề xu�
 trong đó là khuyến nghị, chủ shop gạt được. Hai bộ của chủ shop thì không.
 
 ---
+
+## 📋 BẢNG CHECKLIST — chép nguyên khối này ra mỗi lần bàn sản phẩm
+
+Ký hiệu: `✅` đạt · `❌` trượt · `⚠️` đạt nhưng có cảnh báo · `⬜` chưa đo
+
+```
+SẢN PHẨM: ................................  NGÀY: ..........
+LINK NGUỒN: .............................  GIÁ VỐN CẢ SHIP: ......
+```
+
+### CỔNG 1 — TIỀN · trượt là DỪNG, không chấm tiếp
+
+| # | mục | kết | bằng chứng |
+|---|---|---|---|
+| T1 | Tỉ lệ bán/vốn ≥ 2,5× | ⬜ | |
+| T2 | Trần CPA (lãi đơn 1) ≥ $30 | ⬜ | |
+
+### CỔNG 2 — CUNG / RỦI RO
+
+| # | mục | kết | bằng chứng |
+|---|---|---|---|
+| C1 | Không bị **thương hiệu** kẹp giá | ⬜ | |
+| C2 | Đánh giá nhắc hỏng < 10% | ⬜ | |
+| C3 | Listing nguồn ≥ vài trăm đơn | ⬜ | |
+| C4 | Kịp cửa sổ mùa vụ | ⬜ | |
+| C5 | Không cần trang hướng dẫn riêng | ⬜ | |
+| C6 | Mô tả nguồn khớp hàng thật | ⬜ | |
+| C7 | Dùng lại bộ khối sẵn — nửa ngày | ⬜ | |
+
+### CỔNG 3 — PRODUCT INDEX · bộ của chủ shop · cần ≥ 3/9
+
+| # | mục | kết | bằng chứng |
+|---|---|---|---|
+| P1 | Improves Confidence | ⬜ | |
+| P2 | Improves Convenience | ⬜ | |
+| P3 | Fills a Void / Solves a Problem | ⬜ | |
+| P4 | Saves People Money | ⬜ | |
+| P5 | Saves People Time | ⬜ | |
+| P6 | EXTREMELY Unique `*` | ⬜ | |
+| P7 | Improves Quality of Life | ⬜ | |
+| P8 | High Perceived Value | ⬜ | |
+| P9 | Woman Dominated `*` | ⬜ | |
+
+### CỔNG 4 — TÍN HIỆU WINNER · bộ của chủ shop
+
+| # | mục | kết | bằng chứng |
+|---|---|---|---|
+| W1 | Cải tiến của một SP WIN cũ | ⬜ | |
+| W2 | Bán tốt Amazon/eBay từ traffic tự nhiên | ⬜ | |
+| W3 | Có hơi hướng "tương lai" | ⬜ | |
+| W4 | Dùng đi dùng lại được | ⬜ | |
+| W5 | Target khắp thế giới → mass targeting | ⬜ | |
+| W6 | Mang hơi hướng "brand" | ⬜ | |
+| W7 | Trending → Google Trends | ⬜ | |
+| W8 | Có video/ảnh xịn để chạy ads | ⬜ | |
+
+```
+TỔNG: cổng 1 ..../2   cổng 2 ..../7   cổng 3 ..../9   cổng 4 ..../8
+Ô CÒN ⬜: ..........................................
+KẾT LUẬN: ⬜ chốt   ⬜ loại   ⬜ chờ đo nốt
+```
+
+---
+
+## Cách dùng trong lúc trò chuyện
+
+1. Chủ shop đưa một sản phẩm → **trợ lý chép ngay bảng trống này ra**, không
+   bình luận gì trước.
+2. **Đi từng dòng một**, điền kết quả kèm bằng chứng. Dòng nào không tra được
+   thì để `⬜` và nói ra — **không bỏ qua, không gộp dòng.**
+3. Dòng nào còn mơ hồ thì **dừng lại hỏi chủ shop ngay dòng đó**, đừng để dồn
+   tới cuối. Bảng này sinh ra để *nói chuyện*, không phải để nộp báo cáo.
+4. Điền xong mới bàn chốt hay loại. **Cổng 1 trượt thì dừng luôn** — không có
+   góc quảng cáo nào cứu được hàng không đủ biên.
+
+Ngưỡng và lý do của từng mục: xem phần tham chiếu bên dưới.
+
+---
+
+# ───── THAM CHIẾU ─────
 
 ## Vì sao có tệp này
 
