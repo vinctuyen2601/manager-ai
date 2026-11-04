@@ -59,6 +59,20 @@ LINK NGUỒN: .............................  GIÁ VỐN CẢ SHIP: ......
 
 ### CỔNG 3 — PRODUCT INDEX · bộ của chủ shop · cần ≥ 3/9
 
+> 🔴 **Cổng 3 và 4 chấm Ý TƯỞNG SẢN PHẨM, không chấm con hàng của nhà cung
+> cấp này.** Lỗi đã dính 04/11/2026: chấm P2 "Improves Convenience" là ❌ với
+> lý do *"phàn nàn số 1 là khó nạp video"* — đó là phàn nàn về **chất lượng
+> con hàng**, thuộc cổng 2 mục C5, và đã bị đếm hai lần ở hai cổng. Chủ shop
+> bắt được.
+>
+> **Vì sao phân biệt này quan trọng:** trộn hai thứ thì một **ý tưởng tốt gặp
+> nhà cung cấp tồi** sẽ bị loại oan — trong khi cách sửa đúng là **đổi nhà
+> cung cấp**, không phải bỏ sản phẩm. Ngược lại, lỗi nhà cung cấp bị giấu vào
+> cổng cầu thì nó thoát khỏi chỗ đáng lẽ phải chặn nó.
+>
+> Hỏi đúng ở cổng 3: *"nếu con hàng này hoàn hảo thì nó có làm được điều đó
+> cho khách không?"*
+
 | # | mục | kết | bằng chứng |
 |---|---|---|---|
 | P1 | Improves Confidence | ⬜ | |
