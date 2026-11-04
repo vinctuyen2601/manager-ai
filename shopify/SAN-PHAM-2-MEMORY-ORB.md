@@ -202,9 +202,16 @@ không lọc, cùng cột với tệp Santa. `product_handle` = `memory-orb` **�
 trong Judge.me nếu muốn. KHÔNG sửa chữ đánh giá.
 
 🔴 **Rủi ro thật đọc từ đánh giá — đổi cả trang lẫn bảng lãi:**
-- **Hàng lỗi/vỡ cao**: ~24/189 đánh giá có chữ nói vỡ kính, màn chết, không
-  nhận máy, tắt sau 2 giây. Mỗi cái là một lần hoàn tiền/gửi lại ($36 vốn).
-  Nên **đặt 1–2 cái mẫu trước khi chạy quảng cáo**.
+- 🔴 **ĐÍNH CHÍNH 04/11/2026 — con số "~24/189 ≈ 13%" dưới đây SAI.** Đo lại
+  trên 383 bản ghi (176 có chữ) và đọc tay từng ca: **14/176 ≈ 8,0%**, trong đó
+  **vỡ vật lý chỉ 3 ca ≈ 1,7%**, còn 11 ca là **máy không chạy**. Bản cũ lấy
+  mẫu nhỏ hơn thực có và gộp cả phàn nàn khó dùng vào thành hàng hỏng. Chi
+  tiết và cách đo: `TIEU-CHI-CHON-SAN-PHAM.md` mục "Kết quả đo 04/11/2026".
+  Mối nguy thật **không nằm ở đóng gói** mà ở tỉ lệ máy lỗi + khách không nạp
+  nổi video — bọc kỹ hơn không cứu được.
+- **Hàng lỗi/vỡ cao** *(số cũ, giữ làm lịch sử)*: ~24/189 đánh giá có chữ nói
+  vỡ kính, màn chết, không nhận máy, tắt sau 2 giây. Mỗi cái là một lần hoàn
+  tiền/gửi lại ($36 vốn). Nên **đặt 1–2 cái mẫu trước khi chạy quảng cáo**.
 - **Khó nạp video** là phàn nàn số một (MP4 H.264 480×480, tiếng MP3
   128 kbps theo sách hướng dẫn; phần mềm hãng gợi ý là trả phí).
 - **Nặng, không treo cây được** — hộp có **đế**.
