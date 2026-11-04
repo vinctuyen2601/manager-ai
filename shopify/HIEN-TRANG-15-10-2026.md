@@ -77,6 +77,22 @@ thì tính lại cả hai phần trăm VÀ hai giảm giá trong Admin.
 
 ## 4. Việc còn treo
 
+### 🟢 CẬP NHẬT 04/11/2026 — CỔNG THANH TOÁN ĐÃ CHẠY
+
+Chủ shop xác nhận: *"ok đã thanh toán được nhé"*. Đây là thứ chặn lớn nhất kể
+từ 13/10 (`shopifyPaymentsAccount` từng là `null`, rồi
+`{activated: false, onboardable: true}`). **Store nay nhận được tiền.**
+
+🔴 **Hệ quả cho QUYỀN PUBLISH — đọc mục 0 của `CLAUDE.md`.** Mốc phải hỏi
+trước khi publish **không phải** khoá mật khẩu và **không phải** cổng thanh
+toán, mà là **CÓ KHÁCH THẬT CHƯA**. Hiện vẫn chưa chạy quảng cáo nên vẫn
+publish thẳng được. **Nhưng ngày chạy quảng cáo đầu tiên là ngày mốc đó lật** —
+từ lúc đó phải đẩy lên theme chưa xuất bản, đưa link xem trước, chờ gật.
+
+Nút thắt nay **chỉ còn một**: chưa có khách. Chưa chạy một đồng quảng cáo nào.
+
+---
+
 ### Chủ shop
 1. ~~Page `shop`~~ ✅ **xong 15/10/2026**: `/pages/shop` trả 200, đúng template.
    Đã đo: trang áo ngực Home + logo → `/pages/shop` (bấm logo thật ra đúng);
