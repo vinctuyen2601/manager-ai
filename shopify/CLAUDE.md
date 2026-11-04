@@ -6,6 +6,12 @@
 > dẫn nền; tệp kia là trạng thái thật của cửa hàng sau ngày dựng 13/10/2026,
 > kèm việc còn treo và cách bắt máy khác làm tiếp.
 
+> **🔴 Bàn tới CHỌN SẢN PHẨM MỚI thì BẮT BUỘC mở
+> `TIEU-CHI-CHON-SAN-PHAM.md` và chấm đủ TỪNG mục trong 17 index trước khi
+> nói bất cứ ý kiến nào.** Chủ shop chốt 04/11/2026: hai bộ index là cố định,
+> phải check từng cái, in bảng đầy đủ, không được tóm tắt hay bỏ qua mục nào.
+> Chưa đo được một mục thì ghi `⬜ chưa đo` — im lặng bỏ qua là vi phạm.
+
 Đọc `~/my-project/CLAUDE.md` trước (vai trò, quyền hạn, bẫy chung), rồi tệp này.
 
 Tài sản thứ ba, bắt đầu 13/10/2026. Hai tệp cùng thư mục:
