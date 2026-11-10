@@ -417,6 +417,28 @@ Chủ dự án đã chốt bằng chứng viral không bắt buộc (reel đưa 
 Một dấu hiệu khác cho video **quảng cáo**: hãng chạy **nhiều hook trên cùng thân** (khung
 01 vs 02) = họ đang trả tiền cho nó → thân đó bán được.
 
+## 5b. Khung không quyết định view — cái ở TRONG clip mới quyết định (research 10/11/2026)
+
+Nguồn: AutoClip Research Note #1, ["Pick the moment, not the effect"](https://github.com/zhouxiaoka/autoclip/blob/main/docs/research/2026-10-what-drives-views/article-en.md),
+09/10/2026. Đội AutoClip ghi 158 clip công khai thuộc 6 nhóm nội dung, **chỉ so trong cùng một tài khoản**. Mức bằng chứng
+do họ tự chấm: **Cao** = ≥ 3 tài khoản cùng chiều, **Trung bình** = so cùng tài khoản hoặc 2 tài khoản, **Thấp** = một ví dụ.
+Họ chưa có số liệu từ tài khoản của chính họ. Nội dung họ phân tích là clip phỏng vấn, tin, game; **không có video bán hàng**.
+
+| # | Phát hiện | Bằng chứng | Hệ quả cho máy |
+|---|---|---|---|
+| 1 | **Cùng một khung, view chênh 8–450×.** GQ "10 Essentials" y hệt bố cục: 2.823.259 vs 6.261 view. Thứ quyết định là **ai/cái gì trong clip và chủ đề** | Cao | Chép đúng cấu trúc khung là **điều kiện cần, không đủ**. Đừng hứa "đúng khung = viral". Thứ đổi được là **sản phẩm, khoảnh khắc, hook** → đúng hướng tách HOOK/THÂN và thử nhiều hook trên một thân (mục 7.7) |
+| 2 | **1,5 giây đầu có mặt người biểu cảm hoặc một hành động thấy được** thắng. Veritasium: mở bằng thí nghiệm 25,8K–200K view; mở bằng người nói 3,3K–6,3K, dù có zoom 1,27×. Nhóm giải trí: 7/8 clip view cao có mặt biểu cảm trong 1,6 s, nhóm thấp 2/6 | Trung bình | Khung đầu clip 1 phải **đã có chuyện đang xảy ra** (tay đang làm, sản phẩm đang biến đổi, mặt đang phản ứng), không mở bằng cảnh tĩnh. Cùng chiều với mục 0 (Lindgaard 50 ms) và phép kiểm 1–3 giây mục 7.3. Ủng hộ khung 02 (mặt người đếm ngược) |
+| 3 | **Hiệu ứng dựng không quyết định view.** Tốc độ cắt, zoom, chữ hoa mỹ, sticker, tiếng động, chỉnh màu có ở cả clip trúng lẫn clip trượt | Cao (với vai trò "không phải đòn bẩy") | Dựng là **mức chất lượng tối thiểu** (sạch, đúng nhịp, đúng −14 LUFS), không phải chỗ đổ công để tăng view. Ưu tiên công vào nguyên liệu và hook |
+| 4 | **Cùng video, cùng caption, khác tài khoản: chênh ~367×** (141.835 vs 386 lượt hiển thị trên X) | Một ca rõ | Lượt xem của video mẫu **nói rất ít về bản thân khung** (thêm lý do cho việc bằng chứng viral không bắt buộc, mục 5). Muốn biết khung/hook nào tốt thì so **trên tài khoản của mình** |
+| 5 | Tiêu đề cụ thể (tên người + hành động hoặc con số cụ thể) có xu hướng thắng | Thấp–Trung bình | Chữ trên hình nên cụ thể ("ORDER before Dec 12") hơn là chung chung |
+
+**Cách họ đo** trùng cách `gvv boc` đo: điểm cắt bằng ffmpeg scene (ngưỡng 0,30), độ to `ebur128`, khoảng lặng `silencedetect`
+(−45 dB, 0,25 s); họ cũng ghi rằng cắt cùng góc máy bị đếm thiếu và zoom tự đo quá nhiễu, phải soát từng khung — đúng bài học
+"soi ≥ 4 khung/giây" của mình.
+
+**Giới hạn khi áp cho mình:** không có video bán hàng hay quảng cáo trả tiền trong mẫu; số đo là ảnh chụp một thời điểm; phát
+hiện 2 có nhiễu (chủ đề khác nhau). Coi là **giả thuyết mạnh để thử**, kiểm lại bằng view thật của video máy làm (mục 6).
+
 ## 6. Giới hạn của chính sổ tay này
 
 - Viết từ ca thành công → thiếu ca thất bại để đối chứng. Mỗi video mình làm ra nên ghi lại
