@@ -7,7 +7,7 @@ Luồng trả lời **ai làm trước ai sau, giao gì cho ai, chặn ở đâu
 |---|---|---|---|
 | **Quảng cáo** | Ra đơn | Tạo mới · Lai | [quang-cao.md](quang-cao.md) |
 | **Nuôi page** | Lượt thích/theo dõi page | Bản địa hoá (reup) | [nuoi-page.md](nuoi-page.md) |
-| Đúc kết | Học từ lô vừa làm | — | ⬜ chưa viết |
+| Đúc kết | Học từ lô vừa làm | — | tạm dùng việc [`tp-duc-ket`](../chuyen-vien/viec/tp-duc-ket.md) |
 
 ## Cách chạy (chung mọi luồng)
 1. **Phiên chính đội mũ Trưởng phòng**, đọc tệp luồng, đi từng bước.
@@ -16,15 +16,17 @@ Luồng trả lời **ai làm trước ai sau, giao gì cho ai, chặn ở đâu
 4. Mỗi lần chạy một thư mục, phiếu đánh số theo thứ tự → dừng giữa chừng chạy tiếp được, Đúc kết đọc lại được:
    ```
    reel/viec-dang-chay/<YYYY-MM-DD>-<sản phẩm|page>-<qc|page>/
-     01-tp-nhan-viec.md · 02-sp-ho-so.md · 03-sxh-khung.md · …
+     00-dieu-phoi.md (nhật ký Trưởng phòng) · 01-tp-nhan-viec.md · 02-sp-ho-so.md · 03-sxh-khung.md · …
+   reel/viec-dang-chay/tuan-<ngày thứ Hai>.md            (kế hoạch tuần)
+   reel/viec-dang-chay/tuan-<ngày>-hop-<loại>.md          (biên bản họp)
    ```
 5. **Một lúc chỉ một luồng Quảng cáo** (nút Muse là chỗ nghẽn chung). Nuôi page chạy song song được.
 6. **Chỉ Chuyên viên SP lấy dữ liệu từ web** về sản phẩm; vai khác đọc hồ sơ (thi 11/11: nhiều agent cùng gọi một shop → bị chặn hàng loạt).
 7. **Báo sếp:** chỉ khi **chặn** và khi **xong** (mặc định, chờ sếp chốt — câu hỏi 2 bên dưới). Báo bằng ô "Cần sếp" của phiếu, lời thường.
 
 ## Việc chưa qua bộ thi
-Luồng chỉ được gọi việc đã qua bộ thi (`../chuyen-vien/viec/README.md`). Khi chạy thử lần đầu, việc chưa thi được dùng
-nhưng đánh dấu ⚠ trong phiếu và Trưởng phòng mở kiểm kỹ đầu ra.
+Sếp chốt 11/11: chỉ Biên kịch đã thi; các vai khác viết mới, chưa thi. Việc chưa thi (🟡) vẫn được gọi, phiếu đánh dấu ⚠
+và Trưởng phòng mở kiểm kỹ đầu ra (`tp-dieu-phoi`).
 
 ## Câu hỏi chờ sếp chốt
 | # | Câu hỏi | Mặc định đang dùng |

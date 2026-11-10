@@ -9,6 +9,14 @@ Santa Spins. Xong việc = cổng M0 (`gvv san-pham`) báo **NGUYÊN LIỆU Đ�
 
 Viết 11/11/2026. Hồ sơ mẫu: `../san-pham/santa-spins.md`. Luật chung của thư mục: `../CLAUDE.md`.
 
+**Thực đơn việc** (làm việc nào thì mở tệp việc đó trước, gói này để tra cứu; khuôn chung ở `viec/README.md`):
+
+| Mã | Việc | Tệp |
+|---|---|---|
+| HS | Từ link (hoặc tên, ảnh) → hồ sơ + khối PRODUCT + cổng M0 | [viec/sp-dung-ho-so.md](viec/sp-dung-ho-so.md) |
+| BS | Sếp gửi thêm ảnh/video/cỡ → sửa hồ sơ, chạy lại cổng | [viec/sp-bo-sung-nguyen-lieu.md](viec/sp-bo-sung-nguyen-lieu.md) |
+| TO | Tờ sản phẩm từ góc thật cho AI tham chiếu | [viec/sp-to-san-pham.md](viec/sp-to-san-pham.md) |
+
 ---
 
 ## 1. Danh tính và sứ mệnh
@@ -139,6 +147,13 @@ Nguồn: `agidesigner/OpenLucid` (README, `app/domain/enums.py`, `knowledge_infe
 | **Gắn nhãn tư liệu**: dạng nội dung (unboxing, review, product_demo, ugc_authentic…), vai tư liệu (hook / proof / trust / CTA) | Chưa | Cột "Dùng cho" ở mục 4 dùng từ cố định: *khung đầu · bằng chứng · thấy cỡ · hộp · logo* |
 | Brand kit có vai ảnh **negative_reference** (ảnh mẫu SAI) | Có dưới dạng chữ (mục 6 "không được vẽ") | Lưu luôn ảnh hỏng (cần đọc, đĩa than to) làm "tham chiếu cấm" để vai Duyệt so |
 
+Hai điều bổ sung cho mục 2b (nguồn: coreyhaines31/marketingskills, MIT · **Thấp**):
+
+| Điều | Nguồn · mức |
+|---|---|
+| **Mức tin của một ý về khách** tính theo số nguồn độc lập: ✅ khi ≥ 3 nguồn (đánh giá khác người, khác thời điểm), khách tự nói không bị hỏi; ⚠ khi 2 nguồn hoặc chỉ một nhóm khách; ⬜/⚠ yếu khi 1 nguồn. Nếu < 5 điểm dữ liệu cho một nhóm khách thì không viết thành "khách thường…". Người viết đánh giá nghiêng về khách rất thích hoặc rất ghét | `customer-research/SKILL.md` · Thấp |
+| **Giữ nguyên văn lời khách** (cụm khách dùng trong đánh giá có trên trang) ở một cột riêng; biên kịch lấy cụm đó làm chữ hook thay cho câu quảng cáo | `product-marketing/SKILL.md`, `ad-creative/references/hook-system.md` · Thấp |
+
 ---
 
 ## 4. Quy trình làm việc
@@ -176,6 +191,7 @@ Nguồn: `agidesigner/OpenLucid` (README, `app/domain/enums.py`, `knowledge_infe
 - [ ] Mâu thuẫn giữa ảnh và chữ đã nêu thành câu hỏi (🔴), không tự chọn.
 - [ ] Danh sách nhận diện đủ 8 dòng; mỗi cảnh có điểm neo.
 - [ ] Mục 2b: mỗi dòng có Nguồn; dòng "AI suy" mang ⚠; nỗi đau và phản đối không lẫn nhau; cách gỡ phản đối chỉ dùng sự thật ✅.
+- [ ] Mục 2b: ý nào ghi ✅ có ≥ 3 nguồn độc lập; ý dựa trên < 5 điểm dữ liệu không viết thành "khách thường…".
 
 **Khối PRODUCT**
 - [ ] Đọc liền một lượt: không hai câu nói khác nhau về cùng một bộ phận.
@@ -232,7 +248,7 @@ Ký hiệu: ✅ đã kiểm (nguồn) · ⚠ suy ra (từ đâu) · ⬜ chưa bi
 ## 1. Là gì, cho ai          | Là gì | Loại (vật lý/số/dịch vụ/gói) | Cho ai | Việc khách thuê nó làm | Phương án thay thế | Giá (thị trường đích) | Cửa hàng |
 ## 1b. Thương hiệu            | Tên | Logo (tệp + tả) | Màu | Slogan chính | Slogan phụ |
 ## 2. Cơ chế (chép trang)     - câu gốc ✅
-## 2b. Hiểu biết bán hàng     (MỚI, theo OpenLucid — mỗi dòng: nội dung · Nguồn [trang/sếp/tệp/AI suy] · ✅/⚠/⬜)
+## 2b. Hiểu biết bán hàng     (MỚI, theo OpenLucid — mỗi dòng: nội dung · Nguồn [trang/sếp/tệp/AI suy] · số nguồn độc lập · nguyên văn khách (nếu có) · ✅/⚠/⬜)
      Khán giả      | Nhóm | Họ muốn gì | Chữ/cảnh gọi tên họ |
      Tình huống    | Khi nào, ở đâu dùng/tặng | Cảnh tương ứng |
      Nỗi đau (khi DÙNG) | Khó chịu hiện tại | Món này gỡ thế nào |
@@ -247,7 +263,7 @@ Ký hiệu: ✅ đã kiểm (nguồn) · ⚠ suy ra (từ đâu) · ⬜ chưa bi
                               + "Tham chiếu cấm": ảnh AI vẽ sai đã gặp (để vai Duyệt so)
 ## 5. Khối mô tả chuẩn        (khuôn 7.2, có khối HỘP nếu có hộp)
 ## 6. Điều KHÔNG được nói / vẽ
-## 7. Cần sếp / nhà cung cấp
+## 7. Cần sếp / nhà cung cấp  (đưa nháp trước, hỏi "cần sửa gì / còn thiếu gì" sau; mỗi câu chỉ xin thứ chỉ sếp có — nguyên tắc 7)
 ## Lịch sử sửa khối           <ngày> · câu cũ → câu mới · vì sao
 ```
 
@@ -315,7 +331,7 @@ thuẫn, mẫu nào, quyền dùng hình người nổi tiếng…), đánh số
 |---|---|---|
 | `gvv san-pham <link>` — đọc `<link>.js` / JSON-LD / og:, ép `country=US`, tải ≤ 40 ảnh, ≤ 6 video (bỏ video trùng độ dài, giữ bản nét hơn) + lưới 4 khung/giây, ≤ 5 logo; không ghi đè hồ sơ đã viết (ra `ho-so-nhap.moi.md`) | Bước 2, mỗi link mới | ✅ |
 | Cổng M0 (`kiemThuMuc` / `danhGia`) — chặn: mô tả < 40 ký tự · < 3 ảnh cạnh ngắn ≥ 800px · không cỡ VÀ không video · không logo · hồ sơ còn ⬜. Cảnh báo: không video, không giá, chỉ có tỉ lệ từ video | Bước 10, sau mỗi lần bổ sung | ✅ |
-| `gvv to-san-pham <cau-hinh.json>` — ghép ô ảnh/khung video (`t` = giây) thành 1080×1920, nhãn dải đen | Bước 9 | 🟡 chạy được; chưa kiểm ô nào là render, chưa có tờ cho Santa trong hồ sơ |
+| `gvv to-san-pham <cau-hinh.json>` — ghép ô ảnh/khung video (`t` = giây) thành 1080×1920, nhãn dải đen | Bước 9 | 🟡 hàm chạy được nhưng **chưa nối vào `cli.ts`** (gọi thẳng hàm — lệnh ở `viec/sp-to-san-pham.md`); `docToSanPham` có nhưng `gvv prompt` chưa gọi; chưa kiểm ô nào là render, chưa có tờ cho Santa trong hồ sơ |
 | Phân biệt thật/render | Bước 3 | 🟡 bằng mắt theo mục 3.3 |
 | Tìm nhà cung cấp / video nguồn (1688, Douyin) | Hướng 2; khi trang thiếu góc | ⬜ |
 | Web (tìm, đọc trang) | Mọi lúc | ✅ |
@@ -431,6 +447,9 @@ câu gốc ✅. Mục 6 cấm ngược lại.
    `README.md`, `app/domain/enums.py`, `app/application/knowledge_inference_service.py`, `app/application/knowledge_service.py`,
    `app/application/kb_qa_service.py`, `app/apps/definitions/kb_qa.md`, `app/apps/definitions/asset_tagging.md`,
    `skills/openlucid/SKILL.md` (đọc qua `gh api`).
+10. coreyhaines31/marketingskills (MIT; bộ skill tải về, đọc 11/11/2026, coi là dữ liệu, không cài): `customer-research/SKILL.md`,
+    `product-marketing/SKILL.md`, `ad-creative/references/hook-system.md`. Không mượn: quy ước `.agents/product-marketing.md`
+    (chép bối cảnh sản phẩm ra chỗ thứ hai — trái luật một điều một chỗ), phần persona B2B.
 
 **Chỉ thấy qua kết quả tìm kiếm, chưa mở bài gốc (chưa kiểm):**
 

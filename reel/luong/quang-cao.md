@@ -7,19 +7,22 @@
 
 | # | Việc (vai.việc) | Nhận | Giao | Cổng | Nếu chặn |
 |---|---|---|---|---|---|
-| 1 | `tp.nhan-viec` ⬜ | Tin nhắn sếp | Phiếu nhận việc: sản phẩm, thị trường, kênh, hạn | Có link + thị trường | Hỏi sếp, kèm "Ý sếp là <tên gần nhất>?" |
-| 2 | `sp.dung-ho-so` ⬜ | Link | Hồ sơ `san-pham/<tên>.md` + tờ sản phẩm + phiếu M0 | M0 = ĐẠT | **Dừng luồng.** Báo sếp danh sách cần bổ sung (một lần) |
-| 3 | `sxh.chuyen-khung` ⬜ | Hồ sơ · thư viện khung | Khung đã chọn + lý do + phần phải đổi | Có khung chuyển được | Chạy `sxh.boc-khung` trên video mẫu sếp gửi; không có thì hỏi |
-| 4 | `tp.brief` ⬜ | Phiếu 1–3 | Brief + ước hạn mức Muse | ≤ 40 % hạn mức tuần | Hỏi sếp (kèm bản rút gọn rẻ hơn) |
-| 5 | `bk.kich-ban-qc` ✅ thi | Brief · hồ sơ · khung | Kịch bản + 3 hook | Mọi câu khẳng định có nguồn; cú lộ cụ thể | Quay lại bước 5 (tối đa 1 lần), rồi báo |
-| 6 | `bk.chu-tren-hinh` | Kịch bản | Bảng chữ cho Thợ dựng | Mọi dòng đạt mốc đọc | Quay lại bước 6 |
-| 7 | `dd.ke-hoach-hinh` → `dd.viet-prompt` ⬜ | Kịch bản · hồ sơ · tờ sản phẩm | Bảng cảnh (cột "Bề mặt hiển thị") + `gvv prompt` | `gvv prompt` không báo chặn | Quay lại bước 7 |
+| 1 | `tp.nhan-viec` 🟡 | Tin nhắn sếp | Phiếu nhận việc: sản phẩm, thị trường, kênh, hạn | Có link + thị trường | Hỏi sếp, kèm "Ý sếp là <tên gần nhất>?" |
+| 2 | `sp.dung-ho-so` 🟡 | Link | Hồ sơ `san-pham/<tên>.md` + tờ sản phẩm + phiếu M0 | M0 = ĐẠT | **Dừng luồng.** Báo sếp danh sách cần bổ sung (một lần) |
+| 3 | `sxh.chuyen-khung` 🟡 | Hồ sơ · thư viện khung | Khung đã chọn + lý do + phần phải đổi | Có khung chuyển được | Chạy `sxh.boc-khung` trên video mẫu sếp gửi; không có thì hỏi |
+| 4 | `tp.brief` 🟡 | Phiếu 1–3 | Brief + ước hạn mức Muse | ≤ 40 % hạn mức tuần | Hỏi sếp (kèm bản rút gọn rẻ hơn) |
+| 5 | `bk.kich-ban-qc` ✅ | Brief · hồ sơ · khung | Kịch bản + 3 hook | Mọi câu khẳng định có nguồn; cú lộ cụ thể | Quay lại bước 5 (tối đa 1 lần), rồi báo |
+| 6 | `bk.chu-tren-hinh` ✅ | Kịch bản | Bảng chữ cho Thợ dựng | Mọi dòng đạt mốc đọc | Quay lại bước 6 |
+| 7 | `dd.ke-hoach-hinh` → `dd.viet-prompt` 🟡 | Kịch bản · hồ sơ · tờ sản phẩm | Bảng cảnh (cột "Bề mặt hiển thị") + `gvv prompt` | `gvv prompt` không báo chặn | Quay lại bước 7 |
 | 8 | **[Sếp bấm Muse]** | Tệp prompt | Ảnh/clip trong thư mục video | — | — |
-| 9 | `dd.kiem-clip` ⬜ (nội dung hình) | Clip · tờ sản phẩm | Clip đạt / danh sách sinh lại | Giống sản phẩm thật, không vật lạ | Sinh lại ≤ 2 lần/cảnh, rồi báo sếp |
-| 10 | `td.dung-qc` → `td.do-qc` ⬜ (kỹ thuật) | Clip đạt · kế hoạch cắt · bảng chữ | Video thân + 3 bản hook | −14 LUFS, không khung đen, chữ trong vùng an toàn | Quay lại bước 10 |
+| 9 | `dd.kiem-clip` 🟡 (nội dung hình) | Clip · tờ sản phẩm | Clip đạt / danh sách sinh lại | Giống sản phẩm thật, không vật lạ | Sinh lại ≤ 2 lần/cảnh, rồi báo sếp |
+| 10 | `td.dung-qc` → `td.xuat-bien-the` → `td.do-qc` 🟡 (kỹ thuật) | Clip đạt · kế hoạch cắt · bảng chữ | Video thân + 3 bản hook | −14 LUFS, không khung đen, chữ trong vùng an toàn | Quay lại bước 10 |
 | 11 | `tp.bao-cao` (khuôn báo cáo, không phải việc riêng) | Mọi phiếu | Báo cáo sếp: tệp video, đã tự quyết, cần sếp | — | — |
 
-✅ = đã có tệp việc · ⬜ = chưa có tệp việc (vai làm theo mục "Quy trình" trong gói của mình).
+✅ = có tệp việc, đã thi · 🟡 = có tệp việc, chưa thi (gọi kèm ⚠, Trưởng phòng mở kiểm kỹ).
+
+**Giữa mọi bước** Trưởng phòng chạy `tp.dieu-phoi` (đọc phiếu → mở tệp kiểm → rẽ nhánh → giao bước kế; nhật ký `00-dieu-phoi.md`).
+**Sau bước 11:** `tp.hop` (cuối lô) → `tp.duc-ket`.
 
 **Hướng Lai:** bước 3 chọn video nhà cung cấp làm thân; bước 7 chỉ lập cảnh **còn thiếu**; bước 8 chỉ sinh cảnh đó.
 Video nhà cung cấp phải có quyền dùng cho quảng cáo trả phí (câu hỏi mở cho sếp, chưa chốt).

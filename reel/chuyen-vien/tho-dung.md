@@ -9,6 +9,15 @@ công cho nguyên liệu và hook.
 Viết 11/11/2026. Hiểu biết gốc nằm ở `../CLAUDE.md` (mục "Nhịp video do DỰNG"), `../KIEN-THUC-VIRAL.md` (0b, 5b) và README
 của `gen-video-viral`. Tệp này chỉ dẫn tới các nơi đó, không chép lại.
 
+**Thực đơn việc** (làm việc nào thì mở tệp việc đó trước, gói này để tra cứu; khuôn chung ở `viec/README.md`):
+
+| Mã | Việc | Tệp |
+|---|---|---|
+| DQ | Dựng video thân quảng cáo từ clip + kế hoạch cắt + bảng chữ | [viec/td-dung-qc.md](viec/td-dung-qc.md) |
+| BD | Bản địa hoá video có sẵn: che chữ/logo, lồng giọng CapCut, nhạc hợp lệ | [viec/td-ban-dia-hoa.md](viec/td-ban-dia-hoa.md) |
+| ĐQ | Đo kỹ thuật một tệp video (không kiểm nội dung hình — việc Đạo diễn) | [viec/td-do-qc.md](viec/td-do-qc.md) |
+| XB | Xuất 1 thân × N hook thành N tệp, đặt tên, đo lại từng tệp | [viec/td-xuat-bien-the.md](viec/td-xuat-bien-the.md) |
+
 ---
 
 ## 1. Danh tính và sứ mệnh
@@ -159,7 +168,7 @@ Tham số mặc định đọc từ `ffmpeg -h filter=…` (bản 2026-08-27, m�
 
 | Lọc | Mặc định | Đặt cho video ngắn (đề xuất) |
 |---|---|---|
-| `blackdetect` | d = 2 s, pic_th 0,98, pix_th 0,10 | d = 0,1 (khung đen 0,1 s ở đầu/giữa video ngắn đã là lỗi) |
+| `blackdetect` | d = 2 s, pic_th 0,98, pix_th 0,10 | d = 0,03 (một khung ở 30 fps; d = 0,1 bỏ sót khung đen đơn — thi 11/11) |
 | `freezedetect` | n = 0,001, d = 2 s | n = 0,003, d = 0,5 (đứng hình > 0,5 s phải là chủ ý) |
 | `silencedetect` | n = 0,001 (≈ −60 dB), d = 2 s | đo −45 dB, d = 0,25 (như AutoClip, sổ tay 5b). Chặn khi > 2 s (skill reup) |
 | `ebur128` | không đo đỉnh | `peak=true` → I, LRA, True peak |
@@ -213,7 +222,7 @@ Lệnh `gvv` chạy trong `D:/my project/gen-video-viral` dưới dạng `node s
 - [ ] Tổng thời lượng = khung ± 0,1 s (bản quảng cáo = reel + `the_ket.dai`)
 
 **Hình**
-- [ ] Không khung đen: `ffmpeg -i $V -vf blackdetect=d=0.1:pix_th=0.10 -an -f null - 2>&1 | grep black_start` → rỗng
+- [ ] Không khung đen: `ffmpeg -i $V -vf blackdetect=d=0.03:pix_th=0.10 -an -f null - 2>&1 | grep black_start` → rỗng
 - [ ] Không đứng hình ngoài ý: `ffmpeg -i $V -vf freezedetect=n=0.003:d=0.5 -an -f null - 2>&1 | grep freeze_start` → rỗng, hoặc mỗi dòng có lý do
 - [ ] Cú bật rơi đúng `neo_luc` ± 0,1 s (dòng quyết định của `gvv cat` + dải khung bước 4)
 - [ ] Không lấy lẫn cảnh kế bên ở đầu/cuối đoạn (soi khung đầu và cuối mỗi đoạn theo `moc_cat`)
@@ -408,7 +417,7 @@ Ghép lại riêng từng id.
 3. **Độ phân giải xuất:** giữ 720×1280 (nguồn Muse 720p) hay nâng 1080×1920 (Meta khuyên dùng, reup đang dùng)?
 4. **Thẻ kết 1,3 s** có đủ đọc slogan 45 ký tự không? Đề xuất ≥ 2,3 s, hoặc rút slogan.
 5. Chuẩn hoá độ to của TikTok và Meta: chưa tìm thấy tài liệu chính thức.
-6. Ngưỡng "nhảy âm lượng 6 dB", `freezedetect` 0,5 s, `blackdetect` 0,1 s là đề xuất. Cần chạy thử trên v01 và lô reup để chỉnh.
+6. Ngưỡng "nhảy âm lượng 6 dB", `freezedetect` 0,5 s, `blackdetect` 0,03 s (đã chỉnh sau thi 11/11) là đề xuất. Cần chạy thử trên v01 và lô reup để chỉnh.
 7. TikTok "5–10 words per second": đọc lại nguyên văn và ngữ cảnh.
 8. Giọng TTS CapCut thuộc loại Dual Use hay Non-commercial? Nếu Non-commercial thì cả video mất quyền dùng thương mại.
 

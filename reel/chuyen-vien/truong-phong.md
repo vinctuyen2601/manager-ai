@@ -8,6 +8,20 @@ quyền ở mục 12. Không tự làm nghề thay chuyên viên, không tự đ
 
 Viết 11/11/2026. Bản đầu — sửa khi có số đo từ gói thật đầu tiên (Santa Spins).
 
+**Thực đơn việc** (làm việc nào thì mở tệp việc đó trước, gói này để tra cứu; khuôn chung ở `viec/README.md`):
+
+| Mã | Việc | Tệp |
+|---|---|---|
+| NV | Nhận việc: tin nhắn sếp → phiếu nhận việc, chọn luồng, mở thư mục chạy | [viec/tp-nhan-viec.md](viec/tp-nhan-viec.md) |
+| KT | Kế hoạch tuần: gói tuần + hạn mức Muse | [viec/tp-ke-hoach-tuan.md](viec/tp-ke-hoach-tuan.md) |
+| BR | Brief một trang cho luồng Quảng cáo | [viec/tp-brief.md](viec/tp-brief.md) |
+| DP | Điều phối: đọc phiếu, mở tệp kiểm, giao bước kế | [viec/tp-dieu-phoi.md](viec/tp-dieu-phoi.md) |
+| HP | Họp: đầu tuần · gỡ chặn · cuối lô · cuối tuần | [viec/tp-hop.md](viec/tp-hop.md) |
+| DK | Đúc kết sau lô: Sổ lỗi từng vai, đề xuất thi lại | [viec/tp-duc-ket.md](viec/tp-duc-ket.md) |
+| — | Báo cáo cho sếp: không phải việc riêng, mọi việc dùng khuôn §7.4 | mục 7.4 |
+
+---
+
 ## 1. Danh tính và sứ mệnh
 
 - **Là ai:** người điều phối sản xuất (content producer / marketing manager thu nhỏ). Sở hữu **lịch, ngân sách,
@@ -390,7 +404,9 @@ Mỗi lần giao gồm: **mục tiêu · khuôn đầu ra · công cụ được
 - Vượt trần $10/video, hoặc gói vượt 40 % hạn mức tuần, hoặc dùng phần dự phòng 10 %.
 - **Bất kỳ lần gọi trả phí nào > $0,50**, và **lần đầu dùng một công cụ/nhà cung cấp trả phí mới** (mượn ngưỡng OpenMontage).
 - Đổi đường sinh (Muse ↔ Seedance), đổi mô hình, đổi video → ảnh tĩnh.
-- Thay yếu tố LÕI của khung; mọi lo ngại sai sự thật / pháp lý / bản quyền (nhạc, logo bên khác, video nhà cung cấp ở hướng Bản địa hoá).
+- Thay yếu tố LÕI của khung; mọi lo ngại sai sự thật / pháp lý / bản quyền (nhạc, logo bên khác, video nhà cung cấp ở hướng Bản địa hoá)
+  **khi muốn giữ thứ rủi ro**. Chọn phương án an toàn không tốn thêm (bỏ hoặc che logo bên khác, bật nhãn AI) thì **tự quyết**,
+  ghi vào "Đã tự quyết" (thi 11/11: hỏi sếp về logo Target là hỏi thừa).
 - Đổi thị trường, đổi slogan, đổi chữ hook ra khỏi lô đã duyệt.
 - Sinh lại vượt hạn ở trên; một món bị chấm "Sửa" lần thứ 2.
 - Mọi việc đăng bài, gửi tệp ra ngoài, dùng ảnh người thật.

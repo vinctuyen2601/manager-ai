@@ -9,18 +9,22 @@ Chốt 11/11/2026 (party mode): giải phẫu agent = danh tính + kiến thức
 - Luật nằm trong **ô bắt buộc của khuôn đầu ra** thì agent không bỏ qua được. Ô trống = việc chưa xong.
 - Bước nào gói đã tả thì **dẫn tới mục gói**, không chép lại.
 - Mỗi việc có **bộ thi** cạnh nó (`<việc>.thi/`). Sửa tệp việc hoặc mục gói nó dẫn tới → thi lại bộ đó.
-  Việc chưa qua bộ thi thì chưa được gọi trong luồng.
+  Việc chưa qua bộ thi được gọi kèm ⚠ (xem bảng dưới).
 
 **Khuôn chung:** [_khuon-viec.md](_khuon-viec.md) · **Phiếu giao chung:** [_phieu-giao.md](_phieu-giao.md)
 
 | Vai | Việc | Trạng thái |
 |---|---|---|
-| Biên kịch | [bk-kich-ban-qc](bk-kich-ban-qc.md) · [bk-loi-ban-dia](bk-loi-ban-dia.md) · [bk-chu-tren-hinh](bk-chu-tren-hinh.md) | bản mẫu, đang thi |
-| Trưởng phòng | nhận-việc · kế-hoạch-tuần · brief · họp · đúc-kết | ⬜ |
-| Chuyên viên SP | dựng-hồ-sơ · bổ-sung-nguyên-liệu · tờ-sản-phẩm | ⬜ |
-| Săn xu hướng | tìm-nguồn · bóc-khung · chuyển-khung · theo-dõi-đối-thủ | ⬜ |
-| Đạo diễn | kế-hoạch-hình · viết-prompt · kiểm-clip (nội dung hình) | ⬜ |
-| Thợ dựng | dựng-QC · bản-địa-hoá · đo-QC (kỹ thuật) · xuất-biến-thể | ⬜ |
+| Biên kịch | [bk-kich-ban-qc](bk-kich-ban-qc.md) · [bk-loi-ban-dia](bk-loi-ban-dia.md) · [bk-chu-tren-hinh](bk-chu-tren-hinh.md) | ✅ đã thi (23/24 vs đối chứng 18/24) |
+| Trưởng phòng | [tp-nhan-viec](tp-nhan-viec.md) · [tp-dieu-phoi](tp-dieu-phoi.md) · [tp-ke-hoach-tuan](tp-ke-hoach-tuan.md) · [tp-brief](tp-brief.md) · [tp-hop](tp-hop.md) · [tp-duc-ket](tp-duc-ket.md) | 🟡 có tệp, chưa thi |
+| Chuyên viên SP | [sp-dung-ho-so](sp-dung-ho-so.md) · [sp-bo-sung-nguyen-lieu](sp-bo-sung-nguyen-lieu.md) · [sp-to-san-pham](sp-to-san-pham.md) | 🟡 có tệp, chưa thi |
+| Săn xu hướng | [sxh-tim-nguon](sxh-tim-nguon.md) · [sxh-boc-khung](sxh-boc-khung.md) · [sxh-chuyen-khung](sxh-chuyen-khung.md) · [sxh-theo-doi-doi-thu](sxh-theo-doi-doi-thu.md) | 🟡 có tệp, chưa thi |
+| Đạo diễn | [dd-ke-hoach-hinh](dd-ke-hoach-hinh.md) · [dd-viet-prompt](dd-viet-prompt.md) · [dd-kiem-clip](dd-kiem-clip.md) (nội dung hình) | 🟡 có tệp, chưa thi |
+| Thợ dựng | [td-dung-qc](td-dung-qc.md) · [td-ban-dia-hoa](td-ban-dia-hoa.md) · [td-do-qc](td-do-qc.md) (kỹ thuật) · [td-xuat-bien-the](td-xuat-bien-the.md) | 🟡 có tệp, chưa thi |
+
+**Sếp chốt 11/11:** mẫu Biên kịch đã chứng minh cách viết này tốt hơn, nên các vai còn lại **viết mới, tạm chưa thi**.
+Việc 🟡 được gọi trong luồng, phiếu giao đánh dấu ⚠ và Trưởng phòng mở kiểm kỹ đầu ra (`tp-dieu-phoi`).
+Lỗi lộ ra khi chạy thật → `tp-duc-ket` ghi vào "Thất bại khi" và thành đề thi khi lập bộ thi.
 
 Chia việc kiểm (đã bỏ vai Kiểm duyệt): **Đạo diễn kiểm nội dung hình** (giống sản phẩm thật, vật lạ),
 **Thợ dựng kiểm kỹ thuật** (độ to, khung đen, vùng an toàn). Không vai nào kiểm phần của vai kia.

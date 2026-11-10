@@ -8,6 +8,15 @@ nghiên cứu: kho quảng cáo, swipe file, lọc outlier, mùa vụ, pháp lý
 Điều quan trọng nhất cần nhớ: **khung đúng chỉ là điều kiện cần, chưa đủ để viral**
 (sổ tay 5b). Vì vậy mỗi khung phải bóc **đủ chi tiết để thử được**, chứ không hứa là sẽ viral.
 
+**Thực đơn việc** (làm việc nào thì mở tệp việc đó trước, gói này để tra cứu; khuôn chung ở `viec/README.md`):
+
+| Mã | Việc | Tệp |
+|---|---|---|
+| TN | Lọc video nguồn cho nuôi page (mặc định sếp gửi link) | [viec/sxh-tim-nguon.md](viec/sxh-tim-nguon.md) |
+| BK | Bóc video mẫu thành khung (thư viện hoặc nuôi page) | [viec/sxh-boc-khung.md](viec/sxh-boc-khung.md) |
+| CK | Chọn khung trong thư viện cho một sản phẩm, đối chiếu LÕI | [viec/sxh-chuyen-khung.md](viec/sxh-chuyen-khung.md) |
+| DT | Theo dõi quảng cáo của shop khác cho món tương tự (nguồn công khai) | [viec/sxh-theo-doi-doi-thu.md](viec/sxh-theo-doi-doi-thu.md) |
+
 ---
 
 ## 1. Danh tính và sứ mệnh

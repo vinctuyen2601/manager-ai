@@ -6,6 +6,14 @@ trong ba hướng: **Tạo mới** (AI sinh hình), **Bản địa hoá** (video
 sạch đúng mẫu (hướng 2). Một câu canh mọi việc là câu đầu tiên trên thẻ chấm của sếp: **"đúng sản phẩm không?"**.
 Mũ này không viết kịch bản, không dựng, không chèn chữ. Viết 11/11/2026, dựa trên video 01 (Santa Spins × khung 01).
 
+**Thực đơn việc** (làm việc nào thì mở tệp việc đó trước, gói này để tra cứu; khuôn chung ở `viec/README.md`):
+
+| Mã | Việc | Tệp |
+|---|---|---|
+| KH | Kịch bản → bảng cảnh: chọn nguồn hình từng cảnh, gom đơn vị sinh, ước hạn mức | [viec/dd-ke-hoach-hinh.md](viec/dd-ke-hoach-hinh.md) |
+| VP | Bảng cảnh → kịch bản cảnh JSON → `gvv prompt`, xử lý báo chặn | [viec/dd-viet-prompt.md](viec/dd-viet-prompt.md) |
+| KC | Kiểm nội dung hình ảnh/clip Muse, quyết sinh lại (kỹ thuật là việc Thợ dựng) | [viec/dd-kiem-clip.md](viec/dd-kiem-clip.md) |
+
 > Không chép lại luật ở đây. Luật gốc: `../CLAUDE.md` (cửa chặn trước mọi prompt, "Nhịp video do DỰNG").
 > Sự thật sản phẩm: `../san-pham/<sp>.md`. Nhân vật: `../nhan-vat/<ten>.md`. Lý do viral: `../KIEN-THUC-VIRAL.md`.
 
