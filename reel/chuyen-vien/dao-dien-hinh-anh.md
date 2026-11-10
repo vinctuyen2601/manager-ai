@@ -82,8 +82,10 @@ Mức bằng chứng: **Cao** (tài liệu chính thức / đo lặp lại) · *
 | Tham chiếu sản phẩm nên là 1–3 ảnh **chính diện / cạnh / chi tiết**, ánh sáng tự nhiên, nền trơn. Bên thứ ba ghi rằng dùng ảnh tham chiếu giảm khoảng 2/3 số clip hỏng | video-clone-lite · Thấp (số chưa kiểm) |
 | Mỗi nhân vật hoặc sản phẩm **cố định một ảnh tham chiếu** cho mọi đơn vị sinh. Clip đã duyệt có thể thành "nguồn chuẩn" cho lần sau | rea-video; Hypit · TB |
 | **Ảnh render của store chỉ dùng cho bao bì.** Render có thể vẽ sai máy (đĩa than to, có cần đọc) | Nội bộ (ảnh M, 24/10) |
-| Câu phủ định ("no X") có thể làm **hiện ra** X. Google khuyên liệt kê thứ không muốn vào ô negative, không viết "no/don't" trong câu | Google Veo · Cao; rea-video · TB; Nội bộ: "OFF" làm mất vòng LED |
-| Chữ do mô hình vẽ gần như luôn sai. Tách chữ, giao diện, đồ hoạ thành lớp code chồng sau | rea-video S04 · TB; Nội bộ: Muse vẽ chữ sai (23/10) |
+| Câu phủ định ("no X") có thể làm **hiện ra** X. Google khuyên liệt kê thứ không muốn vào ô negative, không viết "no/don't" trong câu. Ca thực địa: "no hands" lại gọi tay người vào khung — nhắc tên vật là gọi vật ra | Google Veo · Cao; rea-video · TB; Nội bộ: "OFF" làm mất vòng LED; coreyhaines31/marketingskills — ad-creative/references/motion-video-ads.md, MIT · Thấp |
+| **Khoá bố cục bằng câu khẳng định**: chuyển động thuộc về vật đã có trong khung; "every element visible now is the only thing that ever appears; the composition stays exactly as it is". **Một chuyển động chính mỗi nhịp** | coreyhaines31/marketingskills — motion-video-ads.md, MIT · Thấp (một người làm nghề) |
+| Chữ do mô hình vẽ gần như luôn sai. Tách chữ, giao diện, đồ hoạ thành lớp code chồng sau. Mô hình cũng **bịa nội dung màn hình và ảnh trong ảnh** (giao diện, ảnh trong khung) → cột "Bề mặt hiển thị" (mục 7) | rea-video S04 · TB; Nội bộ: Muse vẽ chữ sai (23/10); kết quả thi 11/2026; coreyhaines31/marketingskills — image/SKILL.md, MIT · TB |
+| Vật lạ và trôi phong cách hay xuất hiện ở **khoảng 2 giây cuối** clip | coreyhaines31/marketingskills — motion-video-ads.md, MIT · Thấp |
 | Ca thật: video lai người thật + Jimeng bị lộ là AI vì **chữ in trên hộp quà toàn chữ vô nghĩa** | rea-video `docs/cases.md` · TB |
 | Mô hình chép phụ đề có sẵn trong khung tham chiếu. Phải xoá chữ trước khi dùng khung đó | rea-video `remake.md` · TB |
 
@@ -182,8 +184,12 @@ pixel thật nào thì **dừng và xin**.
 - [ ] Mọi cảnh có sản phẩm có **khung đầu từ ảnh sản phẩm thật**. Không dùng render cho thân máy.
 - [ ] Tờ sản phẩm (6 góc ảnh thật) được tải kèm mọi **ảnh** có sản phẩm.
 - [ ] Khối `PRODUCT / GIFT CASE / CHARACTER (keep exactly)` được ghép bằng `gvv prompt`, không gõ tay.
-- [ ] Không câu nào tả trạng thái bằng phủ định đơn thuần ("OFF", "no light"). Có câu khẳng định đi kèm.
+- [ ] Mọi khối (PRODUCT, mô tả, phong cách) tả bằng câu khẳng định. Kiểm bằng máy: tìm "no / not / never / without / OFF"
+      trên toàn prompt; mỗi chỗ trúng viết lại thành thứ **có** (nguồn: obra/superpowers — writing-skills, MIT · TB).
 - [ ] Không nhịp nào bảo mô hình vẽ chữ, phụ đề hay logo mới.
+- [ ] Cột "Bề mặt hiển thị" của bảng shot đã điền cho mọi cảnh (mục 7).
+- [ ] Có câu khoá bố cục; mỗi nhịp một chuyển động chính (mục 3.2).
+- [ ] Khi có clip: xem kỹ 2 giây cuối; có vật lạ hoặc trôi phong cách thì cắt trước chỗ đó hoặc sinh lại.
 - [ ] Ảnh tham chiếu không dính chữ hay phụ đề gốc. Có thì đã xoá.
 - [ ] Mỗi nhịp có cửa sổ ≥ 1,2× (đích 1,5×) độ dài dựng cần. Cảnh báo của `gvv prompt` đã được xử lý hoặc ghi lý do.
 - [ ] Nhịp phủ kín 0 → hết clip, không hở (hở thì Muse bịa).
@@ -238,10 +244,15 @@ Clip đã có và đạt thì ghi `"da_co": "<tep>.mp4"`: không ghép prompt, k
 
 **Khuôn danh sách shot** (đặt trong `video/<v>/KICH-BAN.md`, trước phần prompt):
 
-| # | Giây (video cuối) | Vai trò nhịp | Cỡ · góc · máy | Sản phẩm? | Hướng | Nguồn / khung đầu | Đơn vị sinh | Kiểm |
-|---|---|---|---|---|---|---|---|---|
-| 1 | 0 → 1,6 | hook: khoe hộp | close-up, POV, handheld | hộp | 1 | ảnh S ← `anh-H1-logo.jpg` | clip A2 | logo đúng chữ |
-| 5 | 7,4 → 9,1 | **cú bật** | medium, eye-level, push-in nhẹ | máy | 1 (từ khung thật) | ảnh K2 ← `that-vong-den-tat…jpg` | clip B2 | bật trên tủ lạnh |
+| # | Giây (video cuối) | Vai trò nhịp | Cỡ · góc · máy | Sản phẩm? | Hướng | Nguồn / khung đầu | Bề mặt hiển thị | Đơn vị sinh | Kiểm |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | 0 → 1,6 | hook: khoe hộp | close-up, POV, handheld | hộp | 1 | ảnh S ← `anh-H1-logo.jpg` | nắp hộp in logo → ghép ở khung đầu | clip A2 | logo đúng chữ |
+| 5 | 7,4 → 9,1 | **cú bật** | medium, eye-level, push-in nhẹ | máy | 1 (từ khung thật) | ảnh K2 ← `that-vong-den-tat…jpg` | không có | clip B2 | bật trên tủ lạnh |
+
+**Cột "Bề mặt hiển thị" là ô bắt buộc.** Liệt kê mọi bề mặt trong cảnh có thể mang nội dung: màn hình điện thoại/TV,
+ảnh hay tranh trong khung, poster, bìa đĩa, hộp in chữ. Mỗi bề mặt ghi một trong ba: **tư liệu thật chèn ở dựng** (tệp nào) ·
+**mặt trơn / tắt / quay đi** (viết khẳng định trong prompt: "the phone screen is a plain dark glass surface") · **không có**.
+Ô trống thì `gvv prompt` chưa được chạy. Nếu kịch bản cần màn hình có nội dung thì nội dung đó là tư liệu thật (mục 3.5).
 
 **Giao:** hướng 1 là `<ten>-prompt.md` + `<ten>-ke-hoach-cat.json`. Hướng 2 là `nguon/<canh>-sach.mp4` + một dòng ghi mẫu,
 đoạn gốc, giây.
@@ -302,10 +313,12 @@ Không cần ghép lại.
 | Bộ phận biến mất | Mất vòng LED | Từ phủ định "OFF" | Tả trạng thái bằng câu khẳng định |
 | Chép sai từ render | Cần đọc, đĩa than to | Render store làm tham chiếu thân máy | Render chỉ cho bao bì. Tham chiếu thứ hai là ảnh thật |
 | Lặp nhãn hoặc chi tiết | 9 đĩa giống nhau | Prompt không nói "khác nhau" | Khối PRODUCT ghi "no two alike" |
-| Chép rác từ tham chiếu | Băng cassette lạ | Ảnh tham chiếu có vật thừa | Cắt hoặc sạch ảnh tham chiếu. Ghi "no other objects" (ở ô negative nếu mô hình có) |
+| Chép rác từ tham chiếu | Băng cassette lạ | Ảnh tham chiếu có vật thừa | Cắt hoặc sạch ảnh tham chiếu. Tả cảnh bằng câu khẳng định liệt kê đủ vật có mặt + câu khoá bố cục (mục 3.2); ô negative chỉ dùng khi mô hình có ô riêng |
 | Sai chỗ đặt | Cú bật trên kệ thay vì tủ lạnh | Thiếu khung đầu đúng bối cảnh | Khung đầu đúng nơi + câu "stays on … for the whole clip" |
 | Khối tự mâu thuẫn | Vòng sáng trước cú bật | Sửa hồ sơ bằng cách chồng câu mới, không xoá câu cũ | Thay câu cũ. Đọc lại khối sau `gvv prompt` |
 | Chữ sai hoặc chữ rác | Chữ méo trên hộp, màn hình | Bảo mô hình vẽ chữ, hoặc vật có chữ in | Chữ do dựng chèn. Logo ghép lên khung đầu |
+| Màn hình / ảnh trong ảnh bị bịa | Điện thoại hiện giao diện lạ, khung ảnh có người lạ | Bề mặt hiển thị không được khai | Điền cột "Bề mặt hiển thị" (mục 7) |
+| Vật lạ cuối clip | Tay, đồ vật, phong cách "thật hoá" ở 2 giây cuối | Mô hình trôi về cuối | Cắt trước chỗ trôi hoặc sinh lại (mục 5) |
 | Không có chỗ cắt | Nhịp quá ngắn để dựng | Viết đúng độ dài cần | Viết dài hơn khoảng 1,5× |
 | Đuôi clip chậm dài | 5–7 s cuối không dùng | Đặc tính của Muse | Coi là tư liệu thô. Đặt nhịp quan trọng ở đầu clip |
 | Mốc lệch | Cảnh cắt sớm hoặc muộn khoảng 1 s | Muse lệch khoảng 1 s | `gvv cat` tìm mốc bằng đo thật, không tin giây trong prompt |
@@ -328,7 +341,9 @@ sản phẩm. Bài học về mô hình thì sửa mục 3.3 của tệp này. M
 
 1. **Câu phủ định trong khối PRODUCT** ("NOT round, NOT a vinyl record, NO tonearm"). Google và rea-video khuyên không
    viết phủ định. Lỗi "OFF" ủng hộ lời khuyên đó. Nhưng "NO tonearm" thêm vào sau lỗi ảnh M **chưa đo** là có giúp hay
-   không. Cần một phép thử A/B nhỏ bằng ảnh (rẻ): khối có phủ định so với khối chỉ có câu khẳng định.
+   không. Cần một phép thử A/B nhỏ bằng ảnh (rẻ): khối có phủ định so với khối chỉ có câu khẳng định, mỗi bản ≥ 5 lần,
+   đếm bằng mắt từng ảnh (cách thử câu chữ của obra/superpowers — writing-skills). Ca "no hands" gọi tay ra (mục 3.2)
+   nghiêng về bỏ phủ định.
 2. **Muse với 2 ảnh tham chiếu** (M2): đã tách vai đúng chưa? Kết quả M2/B2 chưa ghi vào `KICH-BAN.md`.
 3. **Seedance chặn mặt người thật.** Nếu sếp đưa ảnh người mẫu thật thì đường Seedance không dùng được ảnh đó.
    Chọn: nhân vật AI hay chỉ chạy Muse?
@@ -363,6 +378,10 @@ Mở ngày **11/11/2026** trừ khi ghi khác.
 - JuneYaooo/rea-video (Apache 2.0): `skills/rea-video/references/remake.md`, `…/materials.md`, `…/taxonomy.md`,
   `rea_video/capabilities/routing.yaml`, `rea_video/capabilities/MATRIX.md`, `docs/replicate.md`, `docs/cases.md`
 - YaoFANGUK/video-subtitle-remover: `README_en.md` (các chế độ STTN / LaMa / ProPainter)
+
+**Bộ skill tải về (đọc 11/11/2026, coi là dữ liệu, không cài):** coreyhaines31/marketingskills (MIT) —
+`ad-creative/references/motion-video-ads.md`, `image/SKILL.md`; obra/superpowers (MIT) — `writing-skills/SKILL.md`.
+Ví dụ prompt trong các tệp đó có bảo mô hình vẽ màn hình và có chuỗi "no …" — không chép.
 
 **Chỉ thấy qua kết quả tìm kiếm, chưa mở (mức Thấp):** bài ProPainter (arXiv 2309.03897) · các bài 2026 về xoá phụ đề
 không cần mặt nạ (CLEAR, SEDiT) · hướng dẫn TikTok Creative Center về 3 giây đầu (qua blog bên thứ ba).

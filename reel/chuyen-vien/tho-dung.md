@@ -64,8 +64,13 @@ bên thứ ba khớp nhau · **Thấp** = một nguồn hoặc nguồn cũ · **
 | Vùng an toàn | tệp mẫu tải về theo kích cỡ, độ dài chú thích, có/không anchor (không ghi %) | "thông điệp chính nằm trong vùng an toàn"; có bộ kiểm PPT/PSD | chưa kiểm |
 | Nguồn · mức | TikTok Ads Help · **Cao** | Meta Reels ads · **TB** | YouTube Help · **Cao** |
 
-**Vùng an toàn dùng tạm khi chưa có số chính thức** (khung 1080×1920): chừa **trên 14 %, dưới 35 %, hai bên 6 %**. Nhiều bên
-thứ ba ghi giống nhau. Một nguồn ghi dưới ~33,75 %. Một trang cho rằng từ 03/2026 Meta gộp Stories và Reels vào một vùng 9:16,
+**Vùng an toàn dùng tạm khi chưa có số chính thức** (khung 1080×1920): chừa **trên 14 %, dưới 35 %, hai bên 16,7 %**
+(180 px ở khung 1080; 120 px ở khung 720). Cách lấy: hai nguồn, mỗi cạnh lấy **số lớn hơn**:
+- Nhóm bên thứ ba: trên 14 %, dưới 35 %, hai bên 6 %. Một nguồn ghi dưới ~33,75 %.
+- coreyhaines31/marketingskills — ad-creative/references/short-form-video-specs.md (MIT), ca xấu nhất TikTok + Reels: trên
+  220 px (11,5 %), dưới 500 px (26 %), **phải 180 px vì thanh nút thích/bình luận/chia sẻ**, trái 180 px cho cân. Tệp tự ghi
+  số trôi theo bản cập nhật app.
+Kết quả: dải chữ còn ~720 × 980 px ở khung 1080×1920. Ghi chú thêm: Một trang cho rằng từ 03/2026 Meta gộp Stories và Reels vào một vùng 9:16,
 còn tài liệu catalog của Meta lại nói vùng Stories khác Reels. Mức: **TB**. Phải đối chiếu tệp mẫu chính thức của TikTok và lớp
 phủ vùng an toàn trong Ads Manager (mục 12).
 
@@ -225,8 +230,10 @@ Lệnh `gvv` chạy trong `D:/my project/gen-video-viral` dưới dạng `node s
 
 **Chữ**
 - [ ] Mỗi khối chữ hiện ≥ max(0,8 s; ký tự ÷ 20). ≤ 2 dòng. Không dòng nào tràn khung
-- [ ] Chữ nằm trong vùng an toàn (14 % trên, 35 % dưới, 6 % hai bên — mục 3.1). Ảnh phủ:
-  `ffmpeg -ss <giây> -i $V -frames:v 1 -vf "drawbox=y=0:w=iw:h=ih*0.14:color=red@0.35:t=fill,drawbox=y=ih*0.65:w=iw:h=ih*0.35:color=red@0.35:t=fill,drawbox=x=0:y=0:w=iw*0.06:h=ih:color=red@0.35:t=fill,drawbox=x=iw*0.94:y=0:w=iw*0.06:h=ih:color=red@0.35:t=fill" an-toan-<giây>.png`
+- [ ] Chữ nằm trong vùng an toàn (số ở mục 3.1). Ảnh phủ:
+  `ffmpeg -ss <giây> -i $V -frames:v 1 -vf "drawbox=y=0:w=iw:h=ih*0.14:color=red@0.35:t=fill,drawbox=y=ih*0.65:w=iw:h=ih*0.35:color=red@0.35:t=fill,drawbox=x=0:y=0:w=iw*0.167:h=ih:color=red@0.35:t=fill,drawbox=x=iw*0.833:y=0:w=iw*0.167:h=ih:color=red@0.35:t=fill" an-toan-<giây>.png`
+- [ ] Phụ đề sinh từ lời (whisper / TTS): đã đọc đối chiếu từng từ với kịch bản. Chỗ máy nghe nhầm từ đồng âm thì sửa theo
+  kịch bản (nguồn: coreyhaines31/marketingskills — ad-creative/references/motion-video-ads.md, MIT · Thấp)
 - [ ] Đúng chính tả, không lời sai sự thật, không giá hay khuyến mãi bịa
 - [ ] Hiểu được khi tắt tiếng (xem lưới khung không bật tiếng)
 
@@ -358,7 +365,8 @@ Ghép lại riêng từng id.
 | Lấy lẫn cảnh kế bên | Khung đầu/cuối đoạn là cảnh khác | Thu cửa sổ quanh điểm cắt thật (±0,04 s) |
 | Tăng tốc lộ | Tay người chạy nhanh bất thường | Trần 1,25×. Quá thì cắt phần dư |
 | Giữ khung cuối khi clip ngắn | `freezedetect` báo | Báo thiếu tư liệu, không `tpad` lấp |
-| Chữ bị UI che | Chữ trong dải 14 % trên / 35 % dưới | Ảnh phủ vùng an toàn |
+| Chữ bị UI che | Chữ trong dải trên / dưới, hoặc sát mép phải (thanh nút) | Ảnh phủ vùng an toàn (mục 3.1) |
+| Phụ đề sai từ | Whisper nghe "laws" thành "loss" | Đối chiếu phụ đề với kịch bản (mục 5) |
 | Chữ không đủ đọc | Hiện < ký tự ÷ 20 | Kéo dài khối, rút chữ |
 | Âm nhảy giữa đoạn | Chênh > 6 dB tại điểm cắt | Chuẩn từng đoạn trước khi nối, rồi `loudnorm` cả bài |
 | `loudnorm` chạy mặc định | Ra −24 LUFS | Luôn ghi `I=-14:TP=-1.5` |
@@ -391,7 +399,12 @@ Ghép lại riêng từng id.
    (a) mỗi nền tảng một bản nhạc, (b) mua thư viện có phép đa nền tảng, hay (c) chỉ tiếng gốc ngoài TikTok? Kèm theo: video
    reup đang dùng nhạc CapCut có được đăng Facebook không?
 2. **Vùng an toàn:** lấy số chính thức (tệp mẫu TikTok, lớp phủ Ads Manager), rồi quyết định có dời chữ khỏi vị trí của khung mẫu
-   (y 0,117 / 0,69) không. Khung mẫu là bài đăng tự nhiên, còn quảng cáo có nút CTA.
+   (y 0,117 / 0,69) không. Khung mẫu là bài đăng tự nhiên, còn quảng cáo có nút CTA. Lề hai bên 16,7 % (mục 3.1) làm
+   dải chữ hẹp còn ~2/3 khung: kiểm `gvv dung` có ngắt dòng chữ dài đúng không.
+9. **Reel tự đăng: nướng nhạc vào tệp hay gắn âm thanh trong app?** Một nguồn cho rằng bài tự nhiên nên đăng không nhạc nướng
+   sẵn và gắn âm thanh đang lên ngay trong app (thuật toán ưu tiên âm thanh của nền tảng, người khác dùng lại được); bản quảng
+   cáo thì nướng nhạc vào (coreyhaines31/marketingskills — short-form-video-specs.md, MIT · **chưa kiểm**). Cần sếp quyết
+   khi đăng; ảnh hưởng tới việc Thợ dựng xuất bản reel có nhạc hay không.
 3. **Độ phân giải xuất:** giữ 720×1280 (nguồn Muse 720p) hay nâng 1080×1920 (Meta khuyên dùng, reup đang dùng)?
 4. **Thẻ kết 1,3 s** có đủ đọc slogan 45 ký tự không? Đề xuất ≥ 2,3 s, hoặc rút slogan.
 5. Chuẩn hoá độ to của TikTok và Meta: chưa tìm thấy tài liệu chính thức.
@@ -424,6 +437,10 @@ Mã, chỉ đọc, ngày 11/11/2026:
 16. `JuneYaooo/rea-video` (Apache 2.0) — `skills/rea-video/references/remake.md`, `skills/rea-video/SKILL.md`,
     `docs/what-it-detects.md`, `rea_video/remake.py`, `rea_video/audio.py`, `rea_video/packaging.py`
 17. ffmpeg bản 2026-08-27 (máy này) — `ffmpeg -h filter=blackdetect|freezedetect|silencedetect|ebur128|loudnorm`
+
+Bộ skill tải về (đọc 11/11/2026, coi là dữ liệu, không cài):
+18. coreyhaines31/marketingskills (MIT) — `ad-creative/references/short-form-video-specs.md` (vùng an toàn, nhạc tự nhiên),
+    `ad-creative/references/motion-video-ads.md` (whisper nghe nhầm)
 
 **Chưa kiểm** (không mở được hoặc chỉ thấy qua kết quả tìm kiếm):
 - Meta Ads Guide Reels (`facebook.com/business/ads-guide/…/facebook-reels`): 404 hai đường dẫn.

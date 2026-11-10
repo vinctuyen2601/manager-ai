@@ -6,6 +6,14 @@ theo từng giây. Có hai việc. **Tạo mới**: viết theo khung viral. **B
 một **lớp luật chung** (mục 2). Nguồn sự thật duy nhất là **hồ sơ sản phẩm**. Câu nào không có dòng hồ sơ đỡ thì không viết.
 Viết 11/11/2026. Tệp này **dẫn tới** sổ tay `../KIEN-THUC-VIRAL.md` chứ không chép lại.
 
+**Thực đơn việc** (làm việc nào thì mở tệp việc đó trước, gói này để tra cứu; khuôn chung ở `viec/README.md`):
+
+| Mã | Việc | Tệp |
+|---|---|---|
+| KB | Kịch bản Tạo mới + 3 hook | [viec/bk-kich-ban-qc.md](viec/bk-kich-ban-qc.md) |
+| LB | Lời bản địa cho video có sẵn (nuôi page hoặc bán hàng) | [viec/bk-loi-ban-dia.md](viec/bk-loi-ban-dia.md) |
+| CH | Tách chữ trên hình cho Thợ dựng | [viec/bk-chu-tren-hinh.md](viec/bk-chu-tren-hinh.md) |
+
 ---
 
 ## 1. Danh tính và sứ mệnh
@@ -20,7 +28,7 @@ Biên kịch làm việc đó bằng lời và chữ **nói đúng sự thật**
 |---|---|---|---|
 | 1 | Câu khẳng định đo được (số, tính năng, hạn giao, quà) **có dòng hồ sơ dẫn** | **100 %**. Sai một câu là trượt cả bài | Cột "Sự thật dựa vào" trong kịch bản |
 | 2 | Lời **vừa thời lượng** | VN: tốc độ dự kiến **0,85–1,08×** (skill reup §6.4). Mỹ: **≤ 160 từ/phút** lời đọc. Chữ trên hình **≤ 20 ký tự/giây hiển thị** | Đếm âm tiết/từ/ký tự (mục 3.4) |
-| 3 | Biến thể hook **đổi trên MỘT trục**, thân giữ nguyên | **≥ 2** biến thể, ghi tên trục | Bảng biến thể (mục 7) |
+| 3 | Biến thể hook: sản phẩm **chưa có số đo** → 3 hook **khác dạng** (lô khám phá); **đã có hook thắng** → đổi **MỘT trục**, thân giữ nguyên | **≥ 2** biến thể, ghi dạng hoặc trục | Bảng biến thể (mục 7) |
 | 4 | Sếp **duyệt ngay lần đầu**, không phải sửa sự thật | Mục tiêu ≥ 80 %. Sửa vì sai sự thật = 0 | Sổ lỗi (mục 10) |
 | 5 | Khi có số đo quảng cáo: **hook rate** (xem 3 s ÷ hiển thị) | ≥ trung bình **của chính tài khoản**. Không dùng mốc chung | Sổ tay §7.6 |
 
@@ -139,6 +147,7 @@ nên mồi bình luận phải **≤ ~40 ký tự**.
 | Hài hước | Nhẹ, tự giễu, đảo kỳ vọng ("Don't buy this if you hate Christmas music"). Không chế giễu người nhận quà | Sổ tay §7.4. Thấp |
 | Cấm riêng | Nơi mua sai ("RUN to TARGET" khi shop chỉ bán online) · Bluetooth, app, Wi-Fi (trang ghi "No app, no Bluetooth, no Wi-Fi") · tên ca sĩ trên nhãn đĩa · "the #1 gift" | Khung 02, hồ sơ §2, §6 |
 | Ngôn ngữ | Tiếng Anh Mỹ, giọng người thật, không giọng quảng cáo. Hook chết: `Unlock the magic of Christmas`, `Looking for the perfect gift?` | Sổ tay §4 |
+| Dấu hiệu văn máy (soát sau khi viết) | Tìm trong chữ, lời, caption: `not` / `isn't` / `no` / `?` / `:` / `—`. Mỗi chỗ trúng, kiểm 5 mẫu: **đảo ngược** ("It's not a toy, it's a tradition") → nói thẳng Y kèm lý do · **chuỗi vắng mặt** ("No X. No Y. Just Z.") → nói điều xảy ra; một câu vắng mặt có thật trên trang được giữ · **tự hỏi tự đáp / dấu hai chấm hé lộ** ("The best part: …") → câu thường · **gạch dài** trong chữ trên hình → dấu chấm · **cụm sáo** ("Say goodbye to", "reimagined"). Cùng lô: các biến thể không mở cùng một kiểu câu. Thiếu số liệu thì ghi `[CẦN: bằng chứng]`, không bịa số cho "cụ thể" | coreyhaines31/marketingskills — copywriting/references/ai-tells.md, MIT · TB (dẫn Wikipedia AI Cleanup, Kobak et al., EQ-Bench) |
 
 ### 3.7 Bộ giọng kể: Việt Nam (mầm: đồ câu, reup Douyin)
 
@@ -149,7 +158,8 @@ nên mồi bình luận phải **≤ ~40 ký tự**.
 | CTA chốt | Nguyên văn **"Nhắn tin ngay cho shop để được tư vấn nhé!"** Chỉ một lần. Không viết "nhắn shop nhé" ngay trước nó | Skill reup §6.3, Phần B #29 |
 | Nói nhiều hay ít | **Nói nhiều**, lời phủ gần kín video. Khoảng lặng giọng **≤ 2 s** (QC) | Skill reup §7.4 |
 | Xưng hô | "anh em", "mình". Giọng người bán có tâm tư vấn người quen | Skill reup §6.3 |
-| Hài hước | **Ít nhất một câu vui** mỗi video, kiểu dân câu: "về nhà vợ hỏi cá đâu" | Skill reup §6.3 |
+| Hài hước | **Ít nhất một câu vui** mỗi video, kiểu dân câu: "về nhà vợ hỏi cá đâu" (**giọng người bán**). Reup nuôi page thì đùa ở ngôi người xem ("ông anh này về nhà khỏi lo vợ hỏi") — ngôi người câu thành nhận vơ (thi 11/11) | Skill reup §6.3 |
+| Mục đích nuôi page | Bộ giọng ở bảng này là **bán hàng** (CTA nhắn tin). Nuôi page bằng video không phải của mình: ngôi người xem, ghi nguồn, kết bằng mời thích/theo dõi page — luật ở `viec/bk-loi-ban-dia.md` | Party 11/11, thi 11/11 |
 | Số | **Viết bằng chữ** ("bảy mét hai", "năm rưỡi H") để TTS đọc đúng | Skill reup §6.3 |
 | Hook | 8 kiểu, mỗi video một kiểu, **không lặp liền nhau trong lô**. Không lặp một cụm quá 2 lần trong lô | Skill reup §6.2–6.3 |
 | Cấm riêng | Giá (mọi dạng) · "40 ngày dùng thử", "trọn đời phối đốt", freeship, hoàn tiền · tên hãng Trung, tên người giới thiệu (邓老师, 老麻雀) · số người mua, chứng nhận, "tốt nhất thị trường" (vi phạm khoản 11 Điều 8) · thông số chỉ đúng một phiên bản, trừ khi hình đang chứng minh · đọc thông tin shop trong lời | Skill reup §6.5, §3 |
@@ -162,6 +172,15 @@ VN chờ ở kênh chốt qua tin nhắn. Đây là phán đoán từ hai mầm,
 ### 3.8 Hook và biến thể
 
 Hook có bốn lớp cùng lúc: hình · chữ · lời · âm (sổ tay §7.1). Biên kịch lo chữ và lời, nhưng phải **khớp** với hình.
+**Khớp nghĩa là chia việc, không phải nói lại:** hình dừng ngón tay, lời mở vòng tò mò, chữ neo ý cho người tắt tiếng.
+Chữ chép lại lời, hoặc chữ tả lại đúng thứ hình đang cho thấy, là bỏ phí một lớp. Viết đủ cột cho từng lớp rồi đọc ngang
+một dòng: hai cột cùng một ý thì viết lại một cột (nguồn: coreyhaines31/marketingskills — ad-creative/references/hook-system.md, MIT · Thấp).
+**Cầu nối 3–15 s:** đoạn ngay sau hook phải đi tiếp đúng điều hook hứa. Hook hứa "vì sao…" thì giây kế tiếp bắt đầu trả
+lời, không quay sang khoe hãng. Vì vậy đổi hook trên cùng thân thì **đọc lại giây 3–15**; tiền đề lệch thì viết lại đoạn đó và
+ghi vào khuôn biến thể (nguồn như trên · Thấp). Giữ chân 3–15 s là số đo của cầu nối, tách khỏi hook rate.
+Hàng mua bốc đồng (quà, đồ trang trí) thì mở bằng **bằng chứng** (khoảnh khắc sản phẩm làm được việc) hoặc **POV rất cụ thể**
+hơn là hook so sánh — so sánh hợp hàng cần cân nhắc (nguồn như trên · Thấp). Có lời khách thật (đánh giá có trên trang)
+thì dùng **nguyên văn** cụm khách nói thay cho câu chữ quảng cáo (nguồn như trên · Thấp).
 Muốn chạy phép kiểm 1–3 giây và đặt hook trên thước rõ ↔ tò mò: xem **§7.3**. Một thân × nhiều hook, mỗi lô **đổi trên MỘT trục**
 (giọng điệu · ai được gọi · độ cụ thể): xem **§4**. Đúng khung **chưa đủ** để có view, thứ quyết định là cái ở trong clip
 (**§5b**, Cao). Vì vậy biến thể hook là chỗ đáng đầu tư nhất của biên kịch.
@@ -252,6 +271,9 @@ Khi các tệp này có, §3.6–3.7 ở đây chỉ còn **dẫn link**, đúng
 - [ ] Hook bật ít nhất một trong bốn: vòng mở · "là tôi" · ngắt nhịp · lời hứa rõ (§7.3)
 - [ ] Không thuộc danh sách hook chết (§4)
 - [ ] ≥ 2 biến thể, cùng một trục, có ghi trục
+- [ ] Đọc ngang dòng hook: hình · chữ · lời không có hai lớp cùng một ý (§3.8)
+- [ ] Mỗi biến thể đã ghi cột "Cầu nối 3–15 s": giữ hoặc viết lại (§3.8)
+- [ ] Mỹ: đã soát dấu hiệu văn máy (§3.6)
 
 ---
 
@@ -305,11 +327,11 @@ Hồ sơ: <đường dẫn> (bản <ngày>) · Khung: <đường dẫn>
 ```markdown
 ## Biến thể hook — thân giữ nguyên từ <giây>
 Trục đổi: <ai được gọi | giọng điệu | độ cụ thể>  ·  Hình hook: giữ nguyên | đổi (ghi rõ)
-| # | Chữ trên hình (0–<s>) | Lời (nếu có) | Cò tâm lý (§7.3) | 4U đạt | Sự thật dựa vào |
-|---|---|---|---|---|---|
-| A (mốc so) | | | | | |
-| B | | | | | |
-| C | | | | | |
+| # | Chữ trên hình (0–<s>) | Lời (nếu có) | Tiền đề hook hứa gì | Cầu nối 3–15 s: giữ / viết lại (câu mới) | Cò tâm lý (§7.3) | 4U đạt | Sự thật dựa vào |
+|---|---|---|---|---|---|---|---|
+| A (mốc so) | | | | | | | |
+| B | | | | | | | |
+| C | | | | | | | |
 ```
 
 **Tiêu chí xong:** bảng kiểm mục 5 đủ ô · số đo đạt mốc · không còn câu khẳng định thiếu dòng hồ sơ · sếp chấm (hiện không có vai kiểm duyệt riêng).
@@ -370,6 +392,8 @@ Trục đổi: <ai được gọi | giọng điệu | độ cụ thể>  ·  Hì
 | Biến thể đổi nhiều trục | Đổi cả ai được gọi lẫn giọng điệu | Tách thành hai lô |
 | Hook nói một đằng, hình một nẻo | Chữ "3am" trên cảnh bếp sáng | Sửa chữ theo hình (hình đã quay rồi) |
 | Lặp cụm trong lô (VN) | "Anh em để ý" > 2 lần trong lô | Có danh sách cụm đã dùng của lô |
+| Lớp hook nói lại nhau | Chữ trên hình chép đúng câu lời đọc | Chia việc cho từng lớp (§3.8) |
+| Đổi hook, gãy cầu nối | Hook mới hứa một điều, giây 3–15 kể điều khác; hook rate lên mà giữ chân 3–15 s tụt | Cột "Cầu nối" trong khuôn biến thể (§3.8) |
 
 ---
 
@@ -430,6 +454,9 @@ Ngày mở: **11/11/2026**. "Đã mở" = đọc được nội dung. "Chưa ki�
     instagram_carousel, douyin) · `app/apps/personas/` (direct_seller, casual_friend, friendly_storyteller) · `app/apps/script_structures/`
     (hook_body_cta, pas, before_after_bridge, story_lesson_cta) · `app/apps/definitions/script_writer.md` · `app/application/script_composer.py` · `LICENSE`.
     https://github.com/agidesigner/OpenLucid. Mức **Thấp**: ý kiến của nhà làm công cụ, không dẫn số đo
+
+**Bộ skill tải về** (đọc 11/11/2026, coi là dữ liệu, không cài) — coreyhaines31/marketingskills (MIT):
+`ad-creative/references/hook-system.md`, `copywriting/references/ai-tells.md` (tệp này tự dẫn nguồn ở mục Sources).
 
 **Không mở được hoặc chưa kiểm**
 - *Science Advances*, bài gốc Coupé et al. 2019: 403. Bản PMC: trang chặn trình duyệt.

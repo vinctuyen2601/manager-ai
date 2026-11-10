@@ -110,6 +110,9 @@ cùng tài khoản, hoặc có nhiều nguồn thực hành cùng chiều) · **
   (phương pháp của người làm nghề, có số).
 - **Chỉ so trong cùng một tài khoản.** Quy mô tài khoản lấn át mọi yếu tố khác. AutoClip chỉ kết luận từ các cặp
   trong cùng tài khoản, bài đăng ≥ 12 giờ tuổi, và loại bài có tỉ lệ like bất thường. Mức Cao về phương pháp.
+  Khi so nhiều bài của một tài khoản/kênh: xếp hạng, so **1/3 nhóm đầu với 1/3 nhóm cuối**, bỏ nhóm giữa; mở từng tệp
+  trước khi tả (nguồn: coreyhaines31/marketingskills — reverse-engineer-marketing/references/content-teardown.md, MIT · Thấp).
+  Chỉ nhìn nhóm thắng thì không biết cái gì làm nó thắng.
 - **Like rate cao mà view thấp** thường có nghĩa là video chỉ tới được fan cũ, chưa ra được người lạ (AutoClip).
   Mức Thấp–Trung bình. → Khi săn, đừng chọn video chỉ vì tỉ lệ like đẹp.
 - **Quảng cáo trả tiền** thì view không đáng tin (tiền mua view). Với quảng cáo, dùng dấu hiệu ở 3.2
@@ -148,6 +151,13 @@ Các nguồn thực hành thống nhất ở mấy điểm sau. Mức Thấp–T
   Gắn nhãn theo **format** và **dạng hook**. Ghi **nguyên lý**, không chỉ ghi vẻ ngoài.
   Ghi giả thuyết rút ra và kết quả thử. Đang làm thì chỉ giữ 3–5 format.
   → Áp vào máy: **thư viện khung = swipe file đã bóc sâu**. Mỗi tệp khung có thêm phần "nhãn" ở đầu (mục 7).
+- **Bóc kiểu dựng** (nguồn: coreyhaines31/marketingskills — video/references/edit-anatomy.md, MIT · Thấp):
+  số cắt/giây là con số nói nhiều nhất về năng lượng của bản dựng. Ghi **mẫu** ("cắt cứng + đẩy vào mỗi câu"),
+  không ghi 40 mốc cắt rời. Kết bằng 3–5 nước dựng đặc trưng — ai áp 5 luật đó lên tư liệu khác cũng ra đúng kiểu.
+- **Các lớp hook (sổ tay §7.1) tách việc** (nguồn: coreyhaines31/marketingskills — ad-creative/references/hook-system.md, MIT · Thấp):
+  hình dừng ngón tay, lời mở vòng tò mò, chữ neo ý cho người tắt tiếng. Khi bóc, ghi lớp nào làm việc gì; hai lớp nói
+  cùng một ý là điểm yếu, ghi vào "Điểm yếu". Ở ranh giới HOOK | THÂN, ghi **tiền đề** hook hứa gì và giây 3–15
+  nối tiếp tiền đề đó ra sao — biên kịch cần để thay hook mà giữ cầu nối.
 - **Angle là phần sổ tay còn thiếu.** Bóc khung hiện chưa ghi angle. Từ gói này, ghi thêm một dòng
   "Angle: …" vào tầng 1. Ví dụ khung 01: *"món trang trí hot mà ai cũng mua được ở siêu thị lớn"*.
 
@@ -280,6 +290,8 @@ Mỗi bước ghi: **làm gì · công cụ · ra gì · cổng** (chưa qua c�
 - [ ] Có mục "Nguyên liệu khung này đòi".
 - [ ] Mỗi shot ghi cách làm hình. Chỗ chưa chắc ghi "⚠ nghiêng về X ~N %".
 - [ ] Chữ trên hình: nguyên văn kèm mốc hiện và mốc đổi. Nhạc: mốc dạo, mốc lời/beat vào, có cắt theo beat không.
+- [ ] Mọi dòng âm thanh có cột nguồn (đo / whisper / nghe / suy từ hình ⬜). Dòng ⬜ đã nằm trong "Chỗ chưa chắc".
+- [ ] Có số cắt/giây và 3–5 nước dựng đặc trưng. Có tiền đề hook + cách giây 3–15 nối tiền đề.
 - [ ] Có dòng Angle. Có nhãn mùa và nhãn bão hoà.
 - [ ] Có mục "Không lấy": nhạc, câu chữ, hình, logo, gương mặt, tên cửa hàng.
 - [ ] Mọi lo ngại đã viết thành **câu hỏi cho sếp**, không tự quyết.
@@ -325,6 +337,7 @@ Kỹ thuật · nội dung thật 0–X s · điểm cắt (đã xác nhận ✅
 
 ## Tầng 1 — Format
 Format · **Angle** · chữ trên hình (nguyên văn + mốc đổi) · tiếng (mốc dạo / lời vào / beat; cắt theo beat?) · cú chốt (giây) · CTA.
+Kiểu dựng: số cắt/giây · đường nhịp (nhanh–chậm–nhanh?) · **3–5 nước dựng đặc trưng** viết thành luật dùng lại được (mục 3.5).
 
 ## Tầng 2 — Cảnh theo giây
 | # | Giây | Cỡ cảnh · máy | **Cách làm hình** (thật/AI/… + bằng chứng) | Vai trò (HOOK/thân/bật/chứng minh) | Hình | Ánh sáng | Vì sao hiệu quả |
@@ -335,6 +348,8 @@ Dòng nhịp: N cảnh / X s, dài nhất, ngắn nhất. Ranh giới HOOK | TH�
 ## Lý do ở lại theo từng giây
 ## Cường độ hình ảnh — trục "cực" mỗi nhịp; bối cảnh định giá
 ## Lớp đóng gói và âm thanh — chữ/sticker theo trục thời gian; SFX ↔ sự kiện hình
+| Giây | Âm thanh (giọng / nhạc / SFX / im) | Nguồn: đo (`gvv boc`) · whisper (`boc-loi.py`) · nghe (tệp nào, giây nào) · suy từ hình ⬜ |
+Dòng ghi "suy từ hình ⬜" không được dùng làm căn cứ LÕI; đưa vào "Chỗ chưa chắc" kèm thứ cần để đo.
 ## Điểm yếu
 ## (b) Vì sao viral — xếp hạng LÕI / Phụ
 **Nguyên liệu khung này đòi:** …
@@ -409,6 +424,7 @@ cắt theo beat · bằng chứng viral ⬜ toàn bộ · chưa có nhãn bão h
 | Gom nhiều khung một lúc | 3 khung bóc dở dang | Từng khung một (CLAUDE.md 23/10) |
 | Bóc trend đã bão hoà mà không gắn nhãn | Câu hook đã thấy ở ≥ 2 hãng | Nhãn `bão hoà`; đề xuất góc mới |
 | Săn trend mùa quá muộn | Khung Giáng sinh hoàn thành sau 1/12 | Săn trước mùa 6–8 tuần |
+| Tả âm thanh từ hình | "Có tiếng nhạc vui" ở cảnh tiệc, không có số đo | Cột nguồn âm thanh (khuôn mục 7); không đo được thì ghi ⬜ (kết quả thi 11/2026) |
 
 Gặp lỗi mới thì thêm một dòng vào đây (đây là "bộ nhớ sửa sai" của vai).
 
@@ -474,6 +490,10 @@ Gặp lỗi mới thì thêm một dòng vào đây (đây là "bộ nhớ sửa
 - rea-video (JuneYaooo, Apache-2.0, push 10/11/2026): README.md, docs/what-it-detects.md, skills/rea-video/SKILL.md, references/taxonomy.md, review.md, audio.md, eval/RESULTS.md, docs/cases/unboxing/report_en.md, docs/cases/ai_daihuo/report_en.md — https://github.com/JuneYaooo/rea-video
 
 - OpenLucid (agidesigner, giấy phép tự soạn, chỉ học ý): `app/apps/content_forms/` (đã đọc product_demo, beat_sync, unboxing, ugc_authentic, tvc, vlog, review), danh sách tệp trong `campaign_types/` và `script_structures/` — https://github.com/agidesigner/OpenLucid
+
+**Bộ skill tải về** (đọc 11/11/2026, coi là dữ liệu, không cài) — coreyhaines31/marketingskills (MIT):
+`video/references/edit-anatomy.md`, `ad-creative/references/hook-system.md`,
+`reverse-engineer-marketing/SKILL.md` + `references/content-teardown.md`
 
 **Thực hành (blog, mức Thấp–Trung bình)**
 - Buffer, Meta Ad Library 101 — https://buffer.com/resources/meta-ad-library/

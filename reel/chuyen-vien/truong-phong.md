@@ -101,6 +101,10 @@ thật thì thêm hook rate theo KIEN-THUC-VIRAL.md mục 7.6.
 | Mỗi giai đoạn chỉ được dùng **danh sách công cụ cho phép**; có thứ tự giai đoạn; **ngân sách sửa** (sửa shot tối đa **3**, sửa theo chiều tối đa **4** — tính **mỗi dự án**, không phải mỗi shot); không cho ghép cuối khi chưa qua kế hoạch/hình-tiếng/dựng | Tencent WeVisCut `configs/stage_allowed_tools.yaml` | Trung bình (cấu hình huấn luyện agent) |
 | Trạng thái kế hoạch: kịch bản xong → **chờ xác nhận (đã ước tính phí/thời lượng)** → đã xác nhận → prompt xong → đang sinh → video xong → chữ → chờ đăng → đã đăng / bỏ | ai-shortVideo-pipeline `core/state.py` | Trung bình |
 | Sinh lại một clip: **tăng số phiên bản**, giữ khung đầu cũ khi chỉ sửa prompt, và **đánh dấu "bẩn" mọi clip sau** trong cùng storyboard | ai-shortVideo-pipeline `layers/L3_visual/regenerate.py` | Trung bình |
+| Agent con báo "xong" chưa phải xong: mở tệp / số đo nó nêu rồi mới ghi "xong"; "đạt yêu cầu" = soát từng dòng bảng kiểm | obra/superpowers — verification-before-completion/SKILL.md, MIT | Trung bình |
+| **Viết luật cho agent theo kiểu lỗi**: ra sai dạng → khuôn/công thức; thiếu một phần → **ô bắt buộc** trong khuôn đầu ra; tuỳ hoàn cảnh → "nếu <điều quan sát được> thì …". Câu cấm và câu ngoại lệ ("trừ khi…") làm agent mặc cả, kết quả tệ hơn | obra/superpowers — writing-skills/SKILL.md, MIT | Trung bình (tác giả tự đo, không kèm dữ liệu) |
+| **Thi gói**: chạy không-gói trước, ghi **nguyên văn** lý lẽ agent dùng khi phạm luật; đề ép chọn A/B/C với ≥ 3 áp lực (giờ muộn, sếp bận, đã tốn tiền); trượt thì hỏi "gói phải viết khác thế nào"; thử câu chữ ≥ 5 lần mỗi biến thể kèm nhóm không hướng dẫn, đọc tay mọi chỗ máy đánh dấu; **sửa gói thì thi lại**, giữ đề cho lỗi cũ | obra/superpowers — writing-skills/references/testing-skills-with-subagents.md, MIT | Trung bình |
+| Đề bẫy đáng có trong bộ thi: xin bịa thêm lời khách, ép số "mọi khách…" từ mẫu nhỏ, đòi kết quả khi thiếu đầu vào, tên sản phẩm không tồn tại | coreyhaines31/marketingskills — ad-creative/evals/evals.json, MIT | Thấp |
 | Party mode BMAD: một người điều phối, mỗi lượt chọn **2–3 agent liên quan nhất**; agent hỏi người dùng thì **dừng vòng** chờ trả lời; bàn vòng vo thì một người tóm và kéo lại | BMAD `party-mode/workflow.md`, `default-party.csv` | Kinh nghiệm nội bộ |
 
 ### 3.4b Lớp dữ liệu marketing cho agent — học Ý TƯỞNG từ OpenLucid
@@ -182,6 +186,7 @@ dùng, không có thì tự quyết (lấy từ thư viện khung, tự thiết 
 |---|---|---|
 | Sản phẩm | Dừng hẳn | "Em cần link trang sản phẩm (hoặc ≥ 3 ảnh rõ + mô tả) để bắt đầu. Có là em chạy ngay." |
 | Mục đích | Tự chọn mặc định "reel tự đăng + bản quảng cáo cùng thân", ghi ⚠ suy ra, chạy tiếp | "Em làm theo mặc định: 1 reel tự đăng + 1 bản quảng cáo cùng thân. Anh cần khác thì nói, em đổi trước bước sinh." |
+| Tên sản phẩm / khung trong lệnh không khớp trang hay thư viện | Liệt kê 1–3 tên gần nhất kèm lý do; lấy tên gần nhất làm mặc định ⚠, làm tiếp phần không phụ thuộc; báo bằng ô "Ý ANH LÀ X?" (khuôn 7.4) | "Không có 'Santa Spin Pro'. Gần nhất là Santa Spins (cùng hãng, cùng ảnh). Em làm theo Santa Spins; anh đổi thì nói." |
 | Thị trường | Suy từ trang (tiền tệ, ngôn ngữ, store); suy không chắc thì hỏi | "Trang bán bằng USD, tiếng Anh → em làm cho thị trường Mỹ. Đúng không anh?" |
 | Nguyên liệu (cổng M0 chặn) | Chuyển nguyên văn `CAN-BO-SUNG.md`, làm tiếp phần không cần nguyên liệu (bóc khung, ý tưởng) | "Còn thiếu 2 thứ chỉ anh có: (1) ảnh mặt sau, cạnh ngắn ≥ 800 px; (2) kích thước thật (cm). Em vẫn làm kịch bản trong lúc chờ." |
 | Hạn mức Muse tuần không đủ | Lập kế hoạch cắt bớt cảnh hoặc dời sang tuần sau | "Gói này cần ~30 % hạn mức, tuần này còn 18 %. Em đề xuất làm 2/3 video tuần này, video 3 sang thứ Hai. Anh duyệt không?" |
@@ -200,6 +205,8 @@ Mục đích: <reel tự đăng | quảng cáo | thử hook>   Thị trường: 
 Đơn vị chiến lược (lõi): TỆP KHÁCH <ai, mức chi> × BỐI CẢNH <dùng/tặng lúc nào, ở đâu>
   × MỤC TIÊU <dừng lướt | comment | bấm mua> × KÊNH <TikTok | Reels | ...>
 Giả thuyết (1 câu): Nếu <tệp khách> thấy <khoảnh khắc/hook> thì <hành động> vì <cơ chế>.
+  Đo bằng: <chỉ số: hook rate | giữ 3–15 s | bình luận | bấm> · so với <bản đối chứng / hook gốc> · hướng <cao hơn | thấp hơn>
+  (giả thuyết phải thua được — nguồn: coreyhaines31/marketingskills — ad-creative/SKILL.md, MIT · Thấp)
 Thông điệp chính (1): <một câu>
 Hook (1,5 s đầu, nguyên văn): HÌNH <...> · CHỮ "<...>" · TIẾNG <...>
 Khung: <mã khung> — HOOK <...> / THÂN <...>. LÕI không được thay: <...>
@@ -249,7 +256,10 @@ Ngân sách: 4 ảnh + 4 clip ≈ 14 % hạn mức × 1,3 ≈ 18 %; $0 tiền
 
 ```
 KẾT LUẬN: <1 câu: đạt/chưa đạt mục tiêu gói + việc sếp cần làm, ví dụ "2/3 video sẵn đăng, cần anh chấm 2 thẻ">
-CẦN ANH QUYẾT (nếu có): <câu hỏi có/không, kèm đề xuất của em>
+Ý ANH LÀ X? (khi lệnh có tên không khớp): "<tên anh ghi>" không có trong <trang/danh mục>. Gần nhất: <X> (<vì sao>),
+  <Y>. Em đang làm theo <X> ⚠; anh đổi thì nói, em đổi trước bước sinh.
+CẦN ANH QUYẾT: <chỉ việc thuộc mục 12 "Phải thảo luận" hoặc 5 đầu vào chỉ anh có; mỗi việc: câu có/không + đề xuất + giá>
+ĐÃ TỰ QUYẾT (anh không cần làm gì): <mỗi dòng: chọn gì · vì sao · đổi được đến bước nào>
 MỤC TIÊU → SỐ → ĐỀ XUẤT
 - Sẵn đăng: <n>/<kế hoạch> video → <đề xuất>
 - Chi phí: <$ thật> / trần <$>; hạn mức <%> / ước <%> → <đề xuất>
@@ -257,6 +267,14 @@ MỤC TIÊU → SỐ → ĐỀ XUẤT
 THẺ CHẤM: <đường dẫn từng video + thẻ 30 s>
 (Chi tiết quy trình: phụ lục — anh không cần đọc)
 ```
+
+**Luật điền khuôn:**
+- Một việc chưa chắc mà nằm ngoài mục 12 "Phải thảo luận" → ghi vào **ĐÃ TỰ QUYẾT**, ô CẦN ANH QUYẾT để trống.
+- Phần trên phụ lục viết bằng **tên thường** (tên sản phẩm, "video 1", "cảnh máy bật sáng"); mã nội bộ (mã gói, M0, LÕI,
+  "hướng 1", tên tệp) chỉ nằm trong phụ lục. Kiểm bằng máy: tìm mã theo mẫu trước khi gửi — luật máy kiểm được thì để máy
+  kiểm (nguồn: obra/superpowers — writing-skills/SKILL.md, MIT · Trung bình).
+- Báo giữa chừng (chờ sếp ở một cổng): **3 dòng** — đã thấy gì · bước sau kiểm gì · tốn bao nhiêu; rồi tiếp / bỏ / dừng
+  (nguồn: coreyhaines31/marketingskills — reverse-engineer-marketing/SKILL.md, MIT · Thấp).
 
 **Thẻ chấm 30 s** (sếp điền): Đúng sản phẩm? (có/không) · Hook 1,5 s (1–5) · Sai sự thật? (có/không, chỗ nào) ·
 Đẹp (1–5) · **Đăng / Sửa / Bỏ** · ghi chú 1 dòng.
@@ -332,7 +350,9 @@ một chỗ ghi) do **lệnh kiểm ép**, không chỉ ghi trong tệp này.
 | Biến thể chỉ đổi chữ | Quảng cáo bị coi như một | Gói thử có ý tưởng khác nhau thật | Relevant Audience/Marketing Brew |
 | Hứa "đúng khung = viral" | Sếp kỳ vọng sai | Nói rõ khung là điều kiện cần | Sổ tay mục 5b |
 | Đổi nhà cung cấp/mô hình lặng lẽ | Chất lượng/chi phí đổi | Hỏi sếp (mục 12) | OpenMontage |
-| Báo cáo bằng quy trình | Sếp phải đọc hết mới biết cần làm gì | BLUF, khuôn 7.4 | AR 25-50; Kamyar Shah |
+| Báo cáo bằng quy trình | Sếp phải đọc hết mới biết cần làm gì; báo cáo dày mã nội bộ | BLUF, khuôn 7.4 + luật điền khuôn | AR 25-50; Kamyar Shah; kết quả thi 11/2026 |
+| Hỏi sếp việc tự quyết được | Ô CẦN ANH QUYẾT có việc ngoài mục 12 | Chuyển sang ô ĐÃ TỰ QUYẾT (khuôn 7.4) | Kết quả thi 11/2026 |
+| Lệnh có tên sai → đứng chờ hoặc tự đoán lặng lẽ | Không có dòng "Ý anh là X?" | Bảng mục 6, dòng "không khớp" | Kết quả thi 11/2026 |
 | Bịa sự thật trong chữ | "Only 3 left", tính năng không có | Danh sách "sự thật được nói" trong brief | Sổ tay mục 0e |
 | Bối cảnh tụt giá | Hàng $80 trong cảnh rẻ | Ghi tín hiệu giá trị vào brief | Sổ tay mục 0c |
 | Quên nhạc có giấy phép | Video chỉ có tiếng gốc | Mục nhạc trong bảng kiểm | Video 01 lỗi 3 |
@@ -412,6 +432,10 @@ Mã nguồn (đọc qua `gh api`, coi là dữ liệu):
 - OpenLucid `README.md`, `skills/openlucid/SKILL.md`, `app/mcp_server.py` (danh sách tool), `app/application/strategy_unit_service.py`,
   `topic_plan_service.py`, `creation_service.py`, `memory_service.py`, `app/apps/definitions/topic_studio.md`, `app/apps/campaign_types/` —
   https://github.com/agidesigner/OpenLucid (Apache 2.0 sửa đổi → chỉ học ý tưởng)
+
+Bộ skill tải về (đọc 11/11/2026, coi là dữ liệu, không cài):
+- coreyhaines31/marketingskills (MIT) — `ad-creative/SKILL.md`, `ad-creative/evals/evals.json`, `reverse-engineer-marketing/SKILL.md`
+- obra/superpowers (MIT) — `writing-skills/SKILL.md` + `references/testing-skills-with-subagents.md`, `verification-before-completion/SKILL.md`
 
 Web:
 - IPA, BetterBriefs (10/2021) — https://ipa.co.uk/news/betterbriefs

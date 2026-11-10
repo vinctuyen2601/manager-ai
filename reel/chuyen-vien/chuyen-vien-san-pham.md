@@ -201,7 +201,8 @@ Nguồn: `agidesigner/OpenLucid` (README, `app/domain/enums.py`, `knowledge_infe
 
 | Thiếu | Làm gì | Câu báo mẫu |
 |---|---|---|
-| Không link, không ảnh | Dừng. Không đoán sản phẩm từ tên | "Em cần ít nhất link trang bán hoặc 1 ảnh sản phẩm thật để bắt đầu hồ sơ. Anh gửi giúp một trong hai." |
+| Chỉ có tên, không link, không ảnh | Tìm tên đó trên cửa hàng sếp nói (ô tìm kiếm, sitemap). **Thấy** → làm như có link. **Không thấy** → làm theo `truong-phong.md` mục 6, dòng "không khớp": nêu 1–3 món gần nhất, **dựng hồ sơ cho món gần nhất ⚠**, báo "Ý sếp là X?". **Không có món nào gần** → dừng. Không bao giờ tả sản phẩm từ cái tên (thi 11/11: gói cũ ghi "dừng" → thua bài đối chứng 11–17) | "Không thấy '<tên>' trên <cửa hàng>. Gần nhất là <X> (<vì sao>). Em làm hồ sơ <X>; anh đổi thì nói." · Không có gì gần: "Em cần link trang bán hoặc 1 ảnh sản phẩm thật để bắt đầu hồ sơ." |
+| Trang chặn (429, chặn bot) | Chờ rồi thử lại theo luật đề/luồng; **không** đổi tên miền, đổi user-agent hay tìm đường vòng để lách chặn | "Trang đang chặn máy đọc. Anh gửi giúp link trực tiếp hoặc chụp màn hình trang." |
 | Chỉ có ảnh, không link | Làm tiếp; mục 2 (cơ chế) để ⬜, cổng sẽ chặn "Mô tả" | "Em đã dựng hình dáng từ ảnh. Để viết lời, anh gửi mô tả ngắn: là gì, dùng thế nào, trong hộp có gì. Máy chỉ hứa những gì anh viết." |
 | Link không đọc được (chặn bot, cần đăng nhập) | Thử `.js` / JSON-LD / og:; không được thì xin ảnh + mô tả | "Trang chặn máy đọc. Anh chụp giúp màn hình trang hoặc gửi 3 ảnh + đoạn mô tả." |
 | Giá ra VND | Kiểm tham số `country`; chạy lại | (không cần báo — tự sửa) |
