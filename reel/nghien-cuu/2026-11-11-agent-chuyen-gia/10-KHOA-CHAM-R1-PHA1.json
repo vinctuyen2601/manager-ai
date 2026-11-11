@@ -1,0 +1,22 @@
+{
+ "SP7-A": "pha1/SP-lan1",
+ "SP7-B": "pha1/SP-lan2",
+ "SP7-C": "goc/SP-lan1",
+ "SP7-D": "goc/SP-lan2",
+ "SP9-A": "pha1/SP-lan2",
+ "SP9-B": "pha1/SP-lan1",
+ "SP10-A": "pha1/SP-lan1",
+ "SP10-B": "pha1/SP-lan2",
+ "SX4-A": "goc/SXH-lan2",
+ "SX4-B": "pha1/SXH-lan1",
+ "SX4-C": "goc/SXH-lan1",
+ "SX4-D": "pha1/SXH-lan2",
+ "SX5-A": "pha1/SXH-lan2",
+ "SX5-B": "goc/SXH-lan2",
+ "SX5-C": "pha1/SXH-lan1",
+ "SX5-D": "goc/SXH-lan1",
+ "SX6-A": "pha1/SXH-lan1",
+ "SX6-B": "pha1/SXH-lan2",
+ "SX6-C": "goc/SXH-lan2",
+ "SX6-D": "goc/SXH-lan1"
+}
