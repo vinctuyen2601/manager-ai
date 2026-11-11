@@ -12,16 +12,20 @@ Bản địa hoá không phải dịch. Kiến thức: `../vai/bien-kich.md` §3
 | Xong khi | Số đo đạt mốc · ô "Ngôi kể" và "Nguồn" đã điền · phiếu giao đủ ô |
 
 ## Luật bắt buộc
+0. **Nếu là reup / bản địa hoá** (sếp chốt 12/11: "reup thì chỉ trích xuất text → biến thành giọng văn phù hợp người Việt, chứ không phải tự nghĩ")
+   → nguồn ý **chỉ** gồm: lời gốc đã phiên âm (whisper, có giây) · chữ trên hình gốc (poster, phụ đề, nhãn — đọc từ lưới, ghi giây) ·
+   caption/hashtag gốc. Lập bảng **"Chữ gốc → Việt"** (nguyên văn · nghĩa · câu Việt) rồi mới viết lời. **Không thêm ý không có trong nguồn**
+   (không lấy thêm từ trang sản phẩm); chỉ được **bỏ** ý sai sự thật với hàng của shop, ý cấm (giá, khan hiếm, tên hãng), ý B2B. Nguồn quá ít
+   (chỉ nhạc, 1–2 dòng chữ) → lời ngắn đúng bằng chừng đó, phần còn lại để hình + nhạc; không độn. Không có chữ lẫn lời → viết theo đúng thứ đang hiện trên hình.
 1. **Nếu mục đích = nuôi page** (video không phải của mình) → kể ở **ngôi người xem/bình luận viên** ("ông anh này", "con cá này"),
    không ngôi người câu ("mình câu", "về nhà vợ hỏi cá đâu"). Caption ghi `Nguồn: <nền tảng>/<tài khoản nếu biết>`.
    Câu kết = mời **thích/theo dõi page** + một mồi bình luận. Không "nhắn shop".
    **Nếu mục đích = bán hàng** → bộ giọng gói §3.6 hoặc §3.7 nguyên vẹn (VN: CTA nhắn tin nguyên văn).
 2. **Nếu video gốc có tên hãng, chữ nước ngoài, logo, người giới thiệu** → không nhắc trong lời; liệt kê từng thứ kèm giây
    vào "Cần che" cho Thợ dựng.
-3. **Nếu chi tiết chỉ ước bằng mắt** (cân nặng, kích thước, loài) → nói dạng hỏi hoặc "cỡ", hoặc thành mồi bình luận
-   ("anh em đoán mấy ký?"). Không khẳng định con số.
+3. **Nếu chi tiết chỉ ước bằng mắt** (cân nặng, kích thước, loài) **hoặc khó tin với dân trong nghề** (vd chép ăn lure) → nói dạng hỏi
+   hoặc "cỡ", hoặc thành mồi bình luận ("anh em đoán mấy ký?"); không khẳng định; ghi vào "Suy ra ⚠".
 4. **Nếu có cú bật** (cá lên, đèn sáng, kết quả hiện) → im 0,5–1 s quanh cú bật; chữ đổi thay lời (gói §10 "Lời đè cú bật").
-5. **Nếu chi tiết trong video có vẻ khó tin với dân trong nghề** (vd chép ăn lure) → không khẳng định cách câu; ghi vào "Suy ra ⚠".
 
 ## Bước
 1. Điền ô đầu tệp: mục đích · thị trường · ngôi kể · nguồn (luật 1).
