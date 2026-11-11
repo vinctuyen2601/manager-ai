@@ -1173,7 +1173,7 @@ bán của listing nguồn — đúng con số đã loại món người tuyết
 **Làm gì:** tài sản AI độc lập tự sinh video Reel tiếng Anh từ sản phẩm (Shopify
 hoặc nhập tay) + reel viral mẫu. Khung là skill Hypit; tự viết M0 (sơ chế
 nguyên liệu), M3 (thư viện khung ba tầng), M7 (viết lại lời theo video thật).
-Trần $10 / video, mặc định 15 giây. Hồ sơ: `reel/CLAUDE.md`.
+Trần $10 / video, mặc định 15 giây. Hồ sơ: `phong-marketing/CLAUDE.md` (trước 11/11 là `reel/`).
 
 **Vì sao Hypit:** đọc mã bốn dự án Trung Quốc. ClipForge dán link thì trả 6 cảnh
 gõ cứng, font phụ đề thiếu 53/70 ký tự tiếng Việt; ai-video-studio 2 commit và
