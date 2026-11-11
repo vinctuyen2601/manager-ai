@@ -8,6 +8,7 @@ Mức quyền theo `../quy-che/QUYEN-TU-CHU.md`. Đổi máy thì kiểm lại c
 |---|---|---|---|---|---|
 | `gvv boc <video>` | Bóc video: điểm cắt, độ sáng, âm, lưới 4 khung/giây | Săn xu hướng, Đạo diễn | L0 | `~/my-project/gen-video-viral`, Node ≥ 22, ffmpeg | Không đo được **đổi màu** LED (chỉ đo độ sáng cả khung) |
 | `gvv san-pham <link>` + `--kiem` | Lấy sản phẩm từ trang công khai + cổng M0 | **chỉ Chuyên viên SP** (một agent một shop một lúc — lỗi 429) | L0 | như trên | Lấy nhầm video của **sản phẩm khác** trên trang · cổng coi đường kính 0,85 mm là kích thước thật |
+| `gvv tim "<từ khoá>"` (`--ngay --toi-da --dai --trung-vi`) | Tìm video viral YouTube qua **Data API v3 chính thức**: view, sub, ×sub, cờ outlier §5, view/ngày, lift trung vị, kênh lặp → `tim-<ngày>.md/.json`; **không tải video** | Săn xu hướng | L0 | `YT_API_KEY` (env hoặc `.env` repo — không in, không ghi tệp khác) · nhánh `tim-video-viral` (worktree `D:/my project/gvv-tim`), **chưa gộp main** | Chưa chạy thật (chưa có khoá) · `videoDuration=short` của YouTube = < 4 phút · ~102 đơn vị/từ khoá, `--trung-vi` +2/kênh · không có TikTok/Facebook |
 | `gvv cat`, `gvv prompt`, `gvv dung` | Đề xuất cắt, ghép prompt Muse, dựng | Đạo diễn, Thợ dựng | L2 | như trên | Danh sách sửa còn treo: `../BAN-GIAO.md` mục 4 |
 | tờ sản phẩm (`src/to-san-pham.ts`) | Ghép tờ 9:16 từ khung thật | Chuyên viên SP | L2 | ffmpeg ≥ 7 cho lệnh có sẵn | Với ffmpeg 4.4.2: chạy bộ lọc `boLocTo` qua `-filter_complex_script` |
 | ffmpeg / ffprobe | Đo, cắt, dựng | mọi vai làm hình | L0–L2 | ffmpeg 4.4.2 (apt) | — |
