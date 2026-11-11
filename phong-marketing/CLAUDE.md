@@ -23,6 +23,20 @@ Hai khối, như một phòng marketing phục vụ nhiều khách:
 Shop hiện có: `17fishing` (ngành `do-cau-vn`) · `christmas-spins` (Santa Spins, ngành `giang-sinh-my`) · `merry-orb` (Memory Orb, `giang-sinh-my`).
 Thêm shop = thêm `khach-hang/<shop>/`, rồi chạy `nhan-su/viec/tp-lap-doi.md`.
 
+## Mô hình 4 lớp (sếp chốt 11/11/2026 — mô hình khái niệm + điều hướng SaaS; thư mục KHÔNG xếp lại theo lớp)
+
+| Lớp | Thành phần | Thư mục |
+|---|---|---|
+| **1 · Foundation** — doanh nghiệp, sản phẩm, tri thức | hồ sơ shop, hồ sơ sản phẩm (sự thật), gói ngành, sổ tay, khung video của NGƯỜI KHÁC | `khach-hang/<shop>/HO-SO.md` (chưa có), `khach-hang/<shop>/san-pham/`, `thu-vien/` |
+| **2 · Capabilities** — agents, tools, workflows | gói vai + tệp việc, công cụ (`gvv`, ffmpeg, Muse, API shop), luồng + luật chung | `nhan-su/vai/`, `nhan-su/viec/`, `xuong/`, `quy-che/` |
+| **3 · Execution** — works, orchestration, assets | các lần chạy việc + phiếu giao, điều phối của Trưởng phòng, thành phẩm CỦA MÌNH (video, kịch bản, prompt) | `khach-hang/<shop>/viec/`, `thu-nghiem/` |
+| **4 · Intelligence & Improvement** — evaluations, lessons | bộ đề, bảng điểm, cấp năng lực, sổ dự đoán, đúc kết, kế hoạch đào tạo | `nhan-su/danh-gia/`, `nhan-su/_kin/`, `khach-hang/<shop>/kinh-nghiem/`, `khach-hang/<shop>/doi/DAO-TAO.md` |
+
+**Vòng ngược là phần quan trọng nhất** — lớp 4 không chỉ đo mà SỬA lớp 1 và 2:
+lớp 4 → lớp 2 (đào tạo: sửa luật, gói vai, tệp việc — có dự đoán + thi lại) · lớp 4 → lớp 1 (sự thật mới sếp xác nhận, bài học lặp ≥ 2 lần thăng hạng vào gói ngành).
+Trục **khách hàng** cắt ngang cả 4 lớp (lớp 1, 3, 4 có phần riêng mỗi shop) → thư mục xếp theo khối chung + `khach-hang/`, không theo lớp.
+`khach-hang/<shop>/doi/` cố ý gom 3 lớp (cấu hình đội · đào tạo · xin tài nguyên) vì đó là hồ sơ Trưởng phòng mở đầu phiên.
+
 ## Tài liệu gốc — đọc trước khi làm gì
 
 | Tài liệu | Ở đâu | Dùng khi |
