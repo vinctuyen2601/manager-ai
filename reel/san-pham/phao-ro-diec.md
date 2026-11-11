@@ -70,7 +70,7 @@ Chung cả 3 mã ✅ sếp xác nhận 11/11 (sau thi điểm gốc): **chống 
 - "Câu chép trắm ở hồ sâu, gió nhiều, thả xa thì anh em nên lấy phao điện chuyên chép của shop." · "Phao rô diếc không làm tốt việc đó." ✅ trang (FAQ)
 - "Cất phao sau buổi câu: Lau khô, tháo pin nếu lâu không dùng, cất trong ống đựng phao" ✅ trang
 - Mua hàng ✅ trang: "Freeship cho đơn từ 150.000đ" · "Đổi trả 7 ngày Lỗi nhà sản xuất đổi 1 đổi 1" · "Kiểm tra trước khi nhận Thanh toán sau khi kiểm tra hàng" (COD) · nhắn Zalo shop để được chọn mã
-- ⬜ Trang KHÔNG nói (đã đọc mô tả + FAQ + đánh giá + chữ video + chữ ảnh): ~~pin bao nhiêu giờ · chống nước · cảm biến · kèm chì dây~~ (sếp đã trả lời, xem trên — TRANG vẫn chưa ghi) · pin lắp ở chỗ nào trên phao · trong gói có gì ngoài phao + 1 pin (ống/hộp?) · thời gian giao hàng
+- ✅ 11/11/2026 chiều: TRANG đã thêm pin (sạc lại, tối đa 12 h, ~3 buổi), chống nước có gioăng, cảm biến theo nhịp ăn, không kèm chì dây (mô tả + thông số + 2 câu hỏi đáp mới) — sếp duyệt, đã kiểm trên trang thật. Còn chưa ghi: · pin lắp ở chỗ nào trên phao · trong gói có gì ngoài phao + 1 pin (ống/hộp?) · thời gian giao hàng
 
 🔴 **Mâu thuẫn giữa ảnh và chữ trên trang (không tự chọn — nêu cho sếp):**
 1. `anh-05` ghi **"Công nghệ tự động chuyển đổi tầm nhìn ngày/đêm"**; chữ trang + FAQ + chủ shop: chuyển bằng **đảo chiều pin** (bằng tay). Hồ sơ theo chữ trang.

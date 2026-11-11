@@ -12,8 +12,7 @@
   → Săn xu hướng bóc thành khung `khung/` đúng ngành (gắn ngành do-cau-vn) → thi lại SX1 (đáp án sếp ở `nghien-cuu/.../08-DAP-AN-SEP-KIN.md`, đề kín).
 - Sau 2b: pha 3 (thi lại toàn bộ → đạt thì chạy tiếp luồng phao từ bước 3, `viec-dang-chay/2026-11-11-phao-ro-diec-qc/`), pha 4 (sổ kinh nghiệm).
 - Sổ dự đoán: `kinh-nghiem/DU-DOAN.md` (D-01 QF-02 bán chạy nhất, D-02 kèm chì dây thấp — hạn 15/12).
-- **Chờ sếp:** freeship 100k (hồ sơ 14/09) hay 150k (trang phao 11/11)? · sửa TRANG phao trên 17-fishing.com thêm 4 sự thật
-  (chống nước có gioăng, pin 12 h ~3 buổi sạc lại được, cảm biến theo nhịp ăn, không kèm chì dây) — cần sếp đồng ý trước khi ghi production.
+- ✅ Xong 11/11 chiều: freeship = **150k** (sếp + cấu hình máy chủ) · TRANG phao đã thêm 4 sự thật (sao lưu bản trước ở scratchpad phiên).
 - Ghi ngoài phòng: bảng từ khoá Search Console 17fishing không đồng bộ từ 22/09 (bảng theo trang vẫn mới) — kiểm việc đồng bộ.
 - Luật làm việc của rework: mọi sửa đổi có **dự đoán ghi trước** + **thi lại** (2 lượt, chấm mù/trộn, khoá giải mã trong `nghien-cuu/`). Đề kín không đưa vào gói.
 
