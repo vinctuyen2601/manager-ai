@@ -27,7 +27,7 @@ Thêm shop = thêm `khach-hang/<shop>/`, rồi chạy `nhan-su/viec/tp-lap-doi.m
 
 | Lớp | Thành phần | Thư mục |
 |---|---|---|
-| **1 · Foundation** — doanh nghiệp, sản phẩm, tri thức | hồ sơ shop, hồ sơ sản phẩm (sự thật), gói ngành, sổ tay, khung video của NGƯỜI KHÁC | `khach-hang/<shop>/HO-SO.md` (chưa có), `khach-hang/<shop>/san-pham/`, `thu-vien/` |
+| **1 · Foundation** — doanh nghiệp, sản phẩm, tri thức | hồ sơ shop, hồ sơ sản phẩm (sự thật), gói ngành, sổ tay, khung video của NGƯỜI KHÁC | `khach-hang/<shop>/HO-SO.md` (khuôn `quy-che/khuon/ho-so-doanh-nghiep.md`; viết 2 đợt: tự khảo sát trước khi thuê · nhập việc sau khi thuê), `khach-hang/<shop>/san-pham/`, `thu-vien/` |
 | **2 · Capabilities** — agents, tools, workflows | gói vai + tệp việc, công cụ (`gvv`, ffmpeg, Muse, API shop), luồng + luật chung | `nhan-su/vai/`, `nhan-su/viec/`, `xuong/`, `quy-che/` |
 | **3 · Execution** — works, orchestration, assets | các lần chạy việc + phiếu giao, điều phối của Trưởng phòng, thành phẩm CỦA MÌNH (video, kịch bản, prompt) | `khach-hang/<shop>/viec/`, `thu-nghiem/` |
 | **4 · Intelligence & Improvement** — evaluations, lessons | bộ đề, bảng điểm, cấp năng lực, sổ dự đoán, đúc kết, kế hoạch đào tạo | `nhan-su/danh-gia/`, `nhan-su/_kin/`, `khach-hang/<shop>/kinh-nghiem/`, `khach-hang/<shop>/doi/DAO-TAO.md` |

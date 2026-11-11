@@ -27,7 +27,7 @@ Kiến thức: `../vai/truong-phong.md`, `../../quy-che/LUAT-CHUNG.md`, khuôn g
 8. **Vai đạt L4:** tự làm việc nội bộ (nghiên cứu, kế hoạch, hồ sơ, kịch bản, prompt). Đăng bài, tiêu tiền, sửa trang web → hỏi sếp (sếp chốt 11/11).
 
 ## Bước
-1. **Khảo sát** (không hỏi sếp): kho shop, trang web, Search Console nếu có quyền. Có gói ngành chưa? Chưa → giao `sxh-dung-nganh`.
+1. **Khảo sát** (không hỏi sếp): kho shop, trang web, Search Console nếu có quyền → viết **phần 1** của `khach-hang/<shop>/HO-SO.md` (khuôn `../../quy-che/khuon/ho-so-doanh-nghiep.md`), gửi sếp sửa chỗ sai. Có gói ngành chưa? Chưa → giao `sxh-dung-nganh`. Phần 2 của hồ sơ hỏi khi nhập việc, sau khi thuê.
 2. **Lập đội**: mục tiêu cần vai nào. Không thi vai đội chưa cần (vd chỉ làm hồ sơ sản phẩm → chỉ SP).
 3. **Đánh giá**: soạn bộ đề theo ngành (câu thường + ≥ 30 % câu thiếu dữ liệu); xin sếp đáp án (`TAI-NGUYEN.md`); thi 2 lượt; chấm mù + chấm thang; ra cấp.
 4. **Tìm nguyên nhân** mỗi năng lực < L3: thiếu kiến thức · thiếu kỹ năng · đầu vào kém · luật trong gói đẩy sai. Kiểm dòng trích.
