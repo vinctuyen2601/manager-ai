@@ -2,6 +2,21 @@
 
 Đọc tệp này trước khi làm tiếp. Xong một mục thì gạch/xoá dòng đó; hết việc thì xoá tệp.
 
+## 0. ĐANG LÀM: rework agent thành chuyên gia — TẠM DỪNG sau pha 2 (11/11 chiều, sếp: "buổi tối sẽ tiếp tục")
+Đọc theo thứ tự: `nghien-cuu/2026-11-11-agent-chuyen-gia/05-PHUONG-AN-KIEN-TRUC.md` (phương án + mục 6b/6c sếp chốt) →
+`thi/2026-11-11-diem-goc/BANG-DIEM-GOC.md` → `thi/2026-11-11-pha1/KET-QUA-PHA1.md` → `thi/2026-11-11-pha2/TONG-KET-PHA2.md`.
+- Đã xong: pha 0 (điểm gốc), pha 1 (`chuyen-vien/LUAT-CHUNG.md`: sự thật ra ngoài / phán đoán nội bộ), pha 2 (`nganh/do-cau-vn/` 12 trang + MUC-LUC,
+  mục "Trang bị" ở 6 gói vai, ô `nganh:` ở phiếu). Cấp nay: L4 ở 4/6 năng lực; **hiểu xu hướng video ngành vẫn L2–L3** (SX1 thua sếp 2/2).
+- **Bước kế = pha 2b, chờ sếp:** gửi 3–5 video câu cá VN nhiều lượt xem vào `~/Downloads` (ưu tiên: phao điện/câu đêm cận lúc cá ăn ·
+  so độ nhạy 2 phao · 1 video "câu xong nấu tại chỗ" hoặc "câu đài thi đấu"), kèm ảnh chụp lượt xem + số theo dõi nếu được.
+  → Săn xu hướng bóc thành khung `khung/` đúng ngành (gắn ngành do-cau-vn) → thi lại SX1 (đáp án sếp ở `nghien-cuu/.../08-DAP-AN-SEP-KIN.md`, đề kín).
+- Sau 2b: pha 3 (thi lại toàn bộ → đạt thì chạy tiếp luồng phao từ bước 3, `viec-dang-chay/2026-11-11-phao-ro-diec-qc/`), pha 4 (sổ kinh nghiệm).
+- Sổ dự đoán: `kinh-nghiem/DU-DOAN.md` (D-01 QF-02 bán chạy nhất, D-02 kèm chì dây thấp — hạn 15/12).
+- **Chờ sếp:** freeship 100k (hồ sơ 14/09) hay 150k (trang phao 11/11)? · sửa TRANG phao trên 17-fishing.com thêm 4 sự thật
+  (chống nước có gioăng, pin 12 h ~3 buổi sạc lại được, cảm biến theo nhịp ăn, không kèm chì dây) — cần sếp đồng ý trước khi ghi production.
+- Ghi ngoài phòng: bảng từ khoá Search Console 17fishing không đồng bộ từ 22/09 (bảng theo trang vẫn mới) — kiểm việc đồng bộ.
+- Luật làm việc của rework: mọi sửa đổi có **dự đoán ghi trước** + **thi lại** (2 lượt, chấm mù/trộn, khoá giải mã trong `nghien-cuu/`). Đề kín không đưa vào gói.
+
 ## 1. Đang chạy dở: quảng cáo Memory Orb (luồng Quảng cáo, dừng ở bước 3/11)
 - Thư mục: [viec-dang-chay/2026-11-11-orb-qc/](viec-dang-chay/2026-11-11-orb-qc/) — đọc `00-dieu-phoi.md` (nhật ký) rồi phiếu số lớn nhất.
 - Hồ sơ: [san-pham/orb.md](san-pham/orb.md) (Memory Orb™, merryorb.store, $59.99, Mỹ ✅). Cổng M0 chặn: trang **không có mô tả**.
