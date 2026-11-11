@@ -38,8 +38,8 @@ Có chì và dây kèm theo không, hay phải mua thêm? · Giá so với phao 
 ## Săn xu hướng
 
 > ⚠ Nguồn gốc đáp án SX1–SX4: văn bản dán vào (xưng "em" với "anh", có câu "tôi mô tả, không nêu tên kênh", gợi ý cách tự tìm)
-> — dấu hiệu do một AI soạn. SP1 cũng còn ô mẫu "[điền: …]". **Chờ sếp xác nhận** đây là ý của sếp (sếp đồng ý từng ý)
-> hay chỉ là bản AI soạn. Nếu là bản AI soạn, giám khảo chấm "Claude so với AI khác", không phải "so với chuyên gia".
+> — dấu hiệu do một AI soạn. **Sếp xác nhận 11/11: "Có AI hỗ trợ nhưng cũng tạm đúng ý"** → dùng làm đáp án, mức tin TRUNG BÌNH.
+> Giám khảo: không phạt agent khi agent khác đáp án ở chi tiết nhỏ mà có nguồn; chỉ phạt khi agent sai sự thật hoặc thiếu ý chính.
 
 **SX1** — Không có con số cố định, xu hướng đổi theo tháng và nền tảng. Dạng lặp lại: cá đớp phao quay cận chậm kèm tiếng nước
 (kiểu ASMR) · câu đêm phao điện đèn đổi màu trong tối · kéo cá lớn/cá lạ, tiếng cần căng · câu và nấu tại chỗ · test/so sánh/review
@@ -60,9 +60,10 @@ dễ nhiễu, tối, rung → cần đèn phụ nhẹ hoặc điện thoại qua
 
 ## Sự thật sản phẩm MỚI lộ ra từ đáp án — CHỜ áp vào hồ sơ SAU khi chấm điểm gốc
 (Áp trước thì điểm gốc đo trên kiến thức agent chưa từng có → mất ý nghĩa so sánh trước/sau.)
-- Thân phao chống nước, có gioăng — trái mục 6 hồ sơ hiện tại ("không nói chống nước, chưa xác nhận").
-- Pin dùng tối đa 12 h liên tục; có loại sạc lại được — trái mục 6 ("không bịa số giờ pin"). ⚠ Cần sếp xác nhận pin TẶNG KÈM là CR425 thường hay pin sạc.
-- Cơ chế cảm biến — chờ sếp điền.
-- Khách hay hỏi có kèm chì và dây không — chưa có trên trang.
+**Sếp XÁC NHẬN 11/11** ("Đúng nhé không kèm chì và dây đâu, cảm biến theo nhịp ăn của cá"):
+- ✅ Thân phao chống nước, có gioăng — thay mục 6 hồ sơ ("không nói chống nước").
+- ✅ Pin dùng tối đa 12 h liên tục, ~3 buổi câu đêm, sạc lại được — thay mục 6 ("không bịa số giờ pin").
+- ✅ Cảm biến phản ứng theo **nhịp ăn của cá**.
+- ✅ **Không** kèm chì và dây — khách phải mua thêm (khách hay hỏi, trang chưa nói).
 - Một viên pin ≈ 3 buổi câu đêm (sếp, câu SP5).
 - Shop chưa gặp ca đổi trả nào (sếp, câu SP6).
