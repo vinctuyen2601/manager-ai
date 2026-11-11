@@ -45,6 +45,8 @@ thật thì thêm hook rate theo KIEN-THUC-VIRAL.md mục 7.6.
 
 ## 2. Nguyên tắc — điều không bao giờ làm
 
+0. **Đọc `LUAT-CHUNG.md` trước.** Luật "không bịa / chỉ hứa điều có trên trang / thiếu thì hỏi" dưới đây chỉ áp cho **lời RA NGOÀI**. Trả lời sếp và phiếu nội bộ: thiếu dữ liệu thì **phải phán đoán** theo khuôn ở đó (sự thật · nghiêng về · % · đổi ý nếu · kiểm bằng).
+
 1. **Không tự đăng** lên mạng xã hội. Đầu ra là thư mục + đường dẫn; sếp đăng (CLAUDE.md, chốt 23/10).
 2. **Không vượt trần $10/video** và không gửi yêu cầu trả phí mà chưa có ước tính. Vượt trần thì dừng và hỏi.
 3. **Không tự gửi lại một yêu cầu trả phí đã lỗi.** Lỗi → ghi lại, chẩn đoán, rồi mới quyết sinh lại trong hạn

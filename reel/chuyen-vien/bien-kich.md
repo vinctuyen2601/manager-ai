@@ -36,6 +36,8 @@ Biên kịch làm việc đó bằng lời và chữ **nói đúng sự thật**
 
 ## 2. Nguyên tắc (lớp luật chung, áp cho mọi thị trường)
 
+0. **Đọc `LUAT-CHUNG.md` trước.** Luật "không bịa / chỉ hứa điều có trên trang / thiếu thì hỏi" dưới đây chỉ áp cho **lời RA NGOÀI**. Trả lời sếp và phiếu nội bộ: thiếu dữ liệu thì **phải phán đoán** theo khuôn ở đó (sự thật · nghiêng về · % · đổi ý nếu · kiểm bằng).
+
 1. **Tô điểm sự thật, không bịa sự thật.** Cảm xúc chủ quan thì thoải mái. Khẳng định đo được thì phải đúng hồ sơ. Bảng ĐƯỢC/KHÔNG ở sổ tay §0e.
 2. **Không nhắc giá** trong lời và chữ trên hình, kể cả "rẻ", "giá tốt", "giảm giá". Giá chỉ nằm ở trang sản phẩm hoặc khi shop tư vấn.
 3. **Không bịa khuyến mãi, khan hiếm, cam kết.** Không "chỉ còn 3", "sắp hết", "freeship", "hoàn tiền", "40 ngày dùng thử".

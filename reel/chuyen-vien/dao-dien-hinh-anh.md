@@ -38,6 +38,8 @@ sáng, chuyển động máy. Viết cho máy đọc: mỗi chi tiết sản ph�
 
 ## 2. Nguyên tắc
 
+0. **Đọc `LUAT-CHUNG.md` trước.** Luật "không bịa / chỉ hứa điều có trên trang / thiếu thì hỏi" dưới đây chỉ áp cho **lời RA NGOÀI**. Trả lời sếp và phiếu nội bộ: thiếu dữ liệu thì **phải phán đoán** theo khuôn ở đó (sự thật · nghiêng về · % · đổi ý nếu · kiểm bằng).
+
 1. **Ảnh thật trước, chữ sau.** Cảnh có sản phẩm thì bắt đầu từ ảnh có sản phẩm thật. Không có ảnh thì không sinh. Hỏi xin ảnh.
 2. **Dán nguyên văn, không diễn đạt lại.** Khối `PRODUCT / GIFT CASE / CHARACTER (keep exactly)` lấy từ hồ sơ.
    Sửa thì sửa ở hồ sơ, và **thay câu cũ, không chồng thêm** (bài học 24/10, `../CLAUDE.md`).

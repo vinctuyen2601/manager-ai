@@ -41,6 +41,8 @@ từng hình (`../CLAUDE.md` mục "Nhịp video do DỰNG", điểm 3).
 
 ## 2. Nguyên tắc
 
+0. **Đọc `LUAT-CHUNG.md` trước.** Luật "không bịa / chỉ hứa điều có trên trang / thiếu thì hỏi" dưới đây chỉ áp cho **lời RA NGOÀI**. Trả lời sếp và phiếu nội bộ: thiếu dữ liệu thì **phải phán đoán** theo khuôn ở đó (sự thật · nghiêng về · % · đổi ý nếu · kiểm bằng).
+
 1. **Clip AI là tư liệu, không phải cảnh cuối.** Nhịp do dựng tạo ra: cắt mỗi nhịp về đúng độ dài khung (0,5–2,6 s)
    (`../CLAUDE.md`, 23/10).
 2. **Giống khung = giống cấu trúc.** Thứ tự nhịp, vai trò, mốc cú bật, độ dài cảnh. Đồ vật và bối cảnh là của mình.

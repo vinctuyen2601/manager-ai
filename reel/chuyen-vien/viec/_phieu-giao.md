@@ -22,6 +22,9 @@ ngay: <YYYY-MM-DD>
 ## Còn thiếu ⬜
 - <thứ thiếu> — <ảnh hưởng tới phần nào>
 
+## Phán đoán (bắt buộc cho mỗi chỗ thiếu ⬜ có ảnh hưởng tới quyết định — khuôn `../LUAT-CHUNG.md` mục 2)
+- <chỗ thiếu>: nghiêng về <X> · ~<N> % · vì <lý do + nguồn> · đổi ý nếu <W> · kiểm bằng <Z>, ngưỡng <…>, hạn <ngày>
+
 ## Đã tự quyết (sếp không cần làm gì)
 - <quyết định> — <vì sao>
 
@@ -30,6 +33,7 @@ ngay: <YYYY-MM-DD>
 ```
 
 **Luật điền:**
+- Nếu có ô "Còn thiếu ⬜" ảnh hưởng tới quyết định mà ô "Phán đoán" trống → phiếu không hợp lệ (thi điểm gốc 11/11: agent dừng ở "không biết").
 - Nếu ô nào không có gì → ghi `—`. Ô bị **xoá** thì phiếu không hợp lệ.
 - Nếu đầu vào sai tên hoặc không tìm thấy (sản phẩm, khung, page) → ô "Cần sếp" mở bằng **"Ý sếp là <tên gần nhất>?"**,
   ghi tên gần nhất làm mặc định ⚠ và làm tiếp phần không phụ thuộc.

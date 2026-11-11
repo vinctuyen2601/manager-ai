@@ -41,12 +41,14 @@ Tô điểm là việc của vai khác; vai này canh **cái gì là thật**.
 
 ## 2. Nguyên tắc
 
+0. **Đọc `LUAT-CHUNG.md` trước.** Luật "không bịa / chỉ hứa điều có trên trang / thiếu thì hỏi" dưới đây chỉ áp cho **lời RA NGOÀI**. Trả lời sếp và phiếu nội bộ: thiếu dữ liệu thì **phải phán đoán** theo khuôn ở đó (sự thật · nghiêng về · % · đổi ý nếu · kiểm bằng).
+
 1. **Một điều ghi một chỗ.** Sự thật sản phẩm chỉ nằm trong `san-pham/<sp>.md`. Prompt dán khối từ đó, không viết lại.
 2. **Sửa khối = thay câu cũ, không chồng câu mới.** Bài học 24/10: "frosted white" và "thin grey" cùng tồn tại (`../CLAUDE.md`, dòng 24/10).
 3. **Video quay thật > ảnh khách > ảnh chụp nhà bán > ảnh render.** Đo tỉ lệ từ video thật, không từ ảnh hero.
 4. **Đúng mẫu trước, đẹp sau.** Nhà cung cấp làm nhiều mẫu trên cùng một máy. Ảnh/video của mẫu khác = sai sự thật, dù đẹp.
 5. **Ba nhãn, không có nhãn thứ tư:** ✅ đã kiểm (ghi nguồn) · ⚠ suy ra (ghi suy từ đâu) · ⬜ chưa biết. Không ghi gì = lỗi.
-6. **Chỉ hứa điều có trên trang.** Lời thoại chỉ được nói cơ chế ở mục 2 của hồ sơ. Thiếu thì hỏi, không bịa.
+6. **Chỉ hứa điều có trên trang.** Lời thoại chỉ được nói cơ chế ở mục 2 của hồ sơ. Thiếu thì hỏi, không bịa. *(Lời ra ngoài. Khi sếp hỏi thẳng mà hồ sơ chưa có: trả lời bằng khuôn phán đoán của `LUAT-CHUNG.md`, rồi mới hỏi.)*
 7. **Tự quyết phần mình biết, chỉ hỏi phần chỉ sếp biết** (kích thước, mặt sau, phụ kiện thật, bao bì thật) — và chỉ khi cảnh đang làm cần (luật 5 đầu vào, `../CLAUDE.md`).
 8. **Chặn "NOT …" theo lỗi đã gặp.** Mỗi lần AI vẽ sai một kiểu, thêm một vế "NOT/NO" vào khối (ví dụ "NO tonearm").
 9. **Thị trường đích quyết định giá và chữ.** Ép `?country=US` (hoặc nước đích); giá VND = đang đọc theo IP Việt Nam.
@@ -142,7 +144,7 @@ Nguồn: `agidesigner/OpenLucid` (README, `app/domain/enums.py`, `knowledge_infe
 | **AI suy tri thức từ link sản phẩm, ghi `ai_inferred`, người duyệt sau**; ghi lại lần chạy nào sinh ra mục nào | Có cho phần lấy (`gvv san-pham` ghi ✅ chép trang); phần viết do trợ lý, chưa ghi lần chạy | Mục 2b do máy nháp → nhãn ⚠ "AI suy" → sếp chấm. Không để mục AI suy đi thẳng vào lời quảng cáo |
 | Tư liệu có **trạng thái**: raw → reviewed → approved → deprecated | Chưa (chỉ có cột Thật/Render) | Thêm cột "Trạng thái" ở mục 4: *thô · đã xem · dùng được · bỏ* — ảnh render sai máy = **bỏ cho máy**, giữ cho vali |
 | Tách phạm vi **merchant (shop)** và **offer (sản phẩm)**; loại offer: vật lý · số · dịch vụ tại chỗ · dịch vụ chuyên môn · gói · giải pháp | Chưa (thương hiệu đang nằm trong hồ sơ sản phẩm) | Ghi "Loại sản phẩm" ở mục 1. Tách hồ sơ shop riêng khi một shop có ≥ 2 sản phẩm — câu hỏi mở 9 |
-| Hỏi đáp trên kho **chỉ trả lời có trích dẫn**, trả cờ "không có tri thức liên quan" thay vì bịa; câu hỏi ưu tiên mục faq/objection | Ngầm (nguyên tắc 6) | Khi vai khác hỏi "sản phẩm có X không?": trả lời kèm dòng hồ sơ; không có dòng → "hồ sơ không có, cần hỏi sếp" |
+| Hỏi đáp trên kho **chỉ trả lời có trích dẫn**, trả cờ "không có tri thức liên quan" thay vì bịa; câu hỏi ưu tiên mục faq/objection | Ngầm (nguyên tắc 6) | Khi vai khác hỏi "sản phẩm có X không?": trả lời kèm dòng hồ sơ; không có dòng → "hồ sơ không có" **+ phán đoán theo `LUAT-CHUNG.md`** + câu hỏi sếp |
 | **Luật nguồn sự thật do máy chủ ép**, không trông chờ agent tự đọc luật | Có một phần: cổng M0 chặn bằng mã; `gvv prompt` dán khối nguyên văn | Hướng đi: thêm phép kiểm bằng mã cho khối (công cụ nên có 2) và cho claim trong lời (đối chiếu mục 2/2b) |
 | **Gắn nhãn tư liệu**: dạng nội dung (unboxing, review, product_demo, ugc_authentic…), vai tư liệu (hook / proof / trust / CTA) | Chưa | Cột "Dùng cho" ở mục 4 dùng từ cố định: *khung đầu · bằng chứng · thấy cỡ · hộp · logo* |
 | Brand kit có vai ảnh **negative_reference** (ảnh mẫu SAI) | Có dưới dạng chữ (mục 6 "không được vẽ") | Lưu luôn ảnh hỏng (cần đọc, đĩa than to) làm "tham chiếu cấm" để vai Duyệt so |

@@ -39,6 +39,7 @@ Thông số theo mã (✅ trang "Bảng tra cứu thông số" + `anh-06/07/08` 
 | QF-03 | 40,0 cm | 2,15 g | 1,8 g | 3m6 – 6m3 | hôm gió lăn tăn hoặc thả xa |
 
 Chung cả 3 mã ✅ trang: nước sâu 1 – 3,5 m · nơi câu sông, hồ dịch vụ, ao · cân 5 – 7 vạch, câu 2 – 4 vạch · đuôi thuỷ tinh cứng 0,85 mm, LED nhiều màu · pin CR425 (tặng kèm 1 viên) · fom chuyên rô phi, diếc.
+Chung cả 3 mã ✅ sếp xác nhận 11/11 (sau thi điểm gốc): **chống nước, có gioăng** · pin dùng **tối đa 12 giờ liên tục, khoảng 3 buổi câu đêm, sạc lại được** · cảm biến phản ứng theo **nhịp ăn của cá** · **KHÔNG kèm chì và dây** (khách mua thêm) · shop chưa gặp ca đổi trả nào.
 
 ## 1b. Thương hiệu
 
@@ -54,6 +55,11 @@ Chung cả 3 mã ✅ trang: nước sâu 1 – 3,5 m · nơi câu sông, hồ d�
 
 - "Đuôi LED bình thường sáng nhiều màu theo từng đoạn. Cảm biến bắt được tín hiệu cá cắn thì cả đuôi chuyển sang đỏ, ngồi xa vẫn thấy." ✅ trang · ✅ chủ shop 11/11 · thấy trong video-01 (đổi đỏ ở ~5,0 · 7,75 · 10,25 · 13,75 s)
 - "Cá chạm mồi là cả đuôi chuyển sang đỏ, nên ngồi xa hay mắt mỏi về khuya vẫn thấy tín hiệu rõ." ✅ trang
+- Cảm biến phản ứng theo **nhịp ăn của cá**. ✅ sếp xác nhận 11/11 (sau thi điểm gốc)
+- **Độ nhạy cao** — điểm mạnh số 1 theo sếp; nói bằng lời, không kèm số đo. ✅ sếp xác nhận 11/11 (sau thi điểm gốc)
+- Thân phao **chống nước, có gioăng**. ✅ sếp xác nhận 11/11 (sau thi điểm gốc)
+- Pin dùng **tối đa 12 giờ liên tục, khoảng 3 buổi câu đêm, sạc lại được**. ✅ sếp xác nhận 11/11 (sau thi điểm gốc) · ⚠ CR425 thường là pin dùng một lần; sếp xác nhận "sạc lại được" → khi viết lời, nói "pin sạc lại được" theo sếp, đừng tự giải thích loại pin.
+- **Không kèm chì và dây** — khách hay hỏi, phải nói rõ để khỏi bị hỏi lại. ✅ sếp xác nhận 11/11 (sau thi điểm gốc)
 - "Đảo chiều pin để chuyển giữa câu ngày và câu đêm. Ban ngày đọc mắt phao trên đuôi sơn màu như phao thường." · "không phải mua thêm đuôi" ✅ trang · ✅ chủ shop 11/11
 - "Lắp pin CR425 theo chiều của chế độ muốn dùng." ✅ trang
 - "Phao dùng pin CR425. Shop tặng kèm một viên với mỗi phao." · quà kèm "Pin CR425 - 3V" ✅ trang · ✅ chủ shop
@@ -64,7 +70,7 @@ Chung cả 3 mã ✅ trang: nước sâu 1 – 3,5 m · nơi câu sông, hồ d�
 - "Câu chép trắm ở hồ sâu, gió nhiều, thả xa thì anh em nên lấy phao điện chuyên chép của shop." · "Phao rô diếc không làm tốt việc đó." ✅ trang (FAQ)
 - "Cất phao sau buổi câu: Lau khô, tháo pin nếu lâu không dùng, cất trong ống đựng phao" ✅ trang
 - Mua hàng ✅ trang: "Freeship cho đơn từ 150.000đ" · "Đổi trả 7 ngày Lỗi nhà sản xuất đổi 1 đổi 1" · "Kiểm tra trước khi nhận Thanh toán sau khi kiểm tra hàng" (COD) · nhắn Zalo shop để được chọn mã
-- ⬜ Trang KHÔNG nói (đã đọc mô tả + FAQ + đánh giá + chữ video + chữ ảnh): pin dùng được bao nhiêu giờ · có chống nước không · cảm biến hoạt động bằng gì · pin lắp ở chỗ nào trên phao · trong gói có gì ngoài phao + 1 pin (ống/hộp?) · thời gian giao hàng
+- ⬜ Trang KHÔNG nói (đã đọc mô tả + FAQ + đánh giá + chữ video + chữ ảnh): ~~pin bao nhiêu giờ · chống nước · cảm biến · kèm chì dây~~ (sếp đã trả lời, xem trên — TRANG vẫn chưa ghi) · pin lắp ở chỗ nào trên phao · trong gói có gì ngoài phao + 1 pin (ống/hộp?) · thời gian giao hàng
 
 🔴 **Mâu thuẫn giữa ảnh và chữ trên trang (không tự chọn — nêu cho sếp):**
 1. `anh-05` ghi **"Công nghệ tự động chuyển đổi tầm nhìn ngày/đêm"**; chữ trang + FAQ + chủ shop: chuyển bằng **đảo chiều pin** (bằng tay). Hồ sơ theo chữ trang.
@@ -86,12 +92,12 @@ Lưu ý nguồn đánh giá: trang hiện "4.4/5 · 23 đánh giá" và "Đã b�
 | Điểm bán | Trước: nhìn vạch phao trong đêm, dễ lỡ nhịp → Tính năng: đuôi LED nhiều màu, cảm biến đổi cả đuôi sang đỏ → Ưu thế: tín hiệu là đổi MÀU, không phải chờ phao chìm → Lợi ích: ngồi xa vẫn thấy, biết ngay có cá → Bằng chứng: `that-bat-nhieu-mau.jpg` → `that-ca-can-do-2.jpg` (video-01 @4,0 → @10,5) | trang + video thật | — | — | ⚠ (chuỗi AI ghép, từng mắt ✅ ở mục 2/3b) |
 | Điểm bán | Một phao dùng cả ngày lẫn đêm: đảo chiều pin | trang + sếp | — | — | ⚠ chuỗi · cơ chế ✅ · chưa có khung quay cảnh đảo pin |
 | Phản đối (khi MUA) | "Lấy mã nào?" → nhìn cây cần: 2m7–4m5 lấy QF-01, 3m6–5m4 lấy QF-02, gió/thả xa tới 6m3 lấy QF-03; chưa biết thì QF-02; hoặc nhắn Zalo | trang | — | — | ⚠ câu hỏi AI suy · cách gỡ ✅ |
-| Phản đối (khi MUA) | "Hết pin thì sao?" → tặng 1 viên CR425, "loại phổ biến cho phao điện", cần thêm nhắn shop | trang | — | — | ⚠ câu hỏi · cách gỡ ✅ (KHÔNG nói số giờ pin) |
+| Phản đối (khi MUA) | "Hết pin thì sao?" → tặng 1 viên CR425, "loại phổ biến cho phao điện", cần thêm nhắn shop · **tối đa 12 giờ, ~3 buổi câu đêm, sạc lại được** | trang + sếp 11/11 | — | — | ⚠ câu hỏi · cách gỡ ✅ |
 | Phản đối (khi MUA) | "Đuôi đèn có dễ gãy?" → đuôi thuỷ tinh cứng, ít gãy hơn đuôi mềm; trang tự nói va đá vẫn gãy | trang | — | — | ⚠ câu hỏi · cách gỡ ✅ |
 | Phản đối (khi MUA) | "Hàng không như hình?" → kiểm tra trước khi nhận, thanh toán sau; lỗi nhà sản xuất đổi 1 đổi 1 trong 7 ngày | trang | — | — | ✅ |
 | Bằng chứng | Video quay thật của shop (tay cầm 3 phao, đèn nhiều màu → đổi đỏ 4 lần trong 15 s) | `video-01.mp4` | — | — | ✅ |
 | Bằng chứng | Bảng thông số 3 mã (dài, nặng, tải chì) | trang + sếp | 2 | — | ✅ |
-| Hỏi đáp | Đèn đổi màu khi nào? → "Khi cảm biến bắt được tín hiệu cá cắn thì cả đuôi chuyển sang đỏ" (FAQ ✅) · Ban ngày dùng được? → "Được. Đảo chiều pin…" (FAQ ✅) · Có kèm pin? → 1 viên CR425 (FAQ ✅) · Câu chép được? → không nên, lấy phao chép (FAQ ✅) · Pin bao lâu / chống nước? → hồ sơ không có, cần hỏi sếp | trang | — | — | ✅ / ⬜ |
+| Hỏi đáp | Đèn đổi màu khi nào? → "Khi cảm biến bắt được tín hiệu cá cắn thì cả đuôi chuyển sang đỏ" (FAQ ✅) · Ban ngày dùng được? → "Được. Đảo chiều pin…" (FAQ ✅) · Có kèm pin? → 1 viên CR425 (FAQ ✅) · Câu chép được? → không nên, lấy phao chép (FAQ ✅) · Pin bao lâu? → tối đa 12 giờ, ~3 buổi câu đêm, sạc lại được (sếp) · Chống nước? → có, có gioăng (sếp) · Có kèm chì, dây? → không (sếp) | trang + sếp 11/11 | — | — | ✅ |
 
 ## 3. Hình dáng
 
@@ -103,7 +109,7 @@ Lưu ý nguồn đánh giá: trang hiện "4.4/5 · 23 đánh giá" và "Đã b�
 | Cổ | Đoạn **đen** ngắn nối thân với đuôi | ✅ ô "BODY", `that-tat-duoi-son.jpg` |
 | Bộ phận "trả lời": đuôi | Que **thuỷ tinh cứng 0,85 mm**, thẳng, dài hơn thân. **Sơn (chưa sáng):** các đoạn ngắn **đỏ · vàng chanh · cam** xen nhau, ngăn bằng **vạch đen mảnh**. **LED nhiều màu:** mỗi đoạn sáng một màu — **trắng hồng, xanh lá, vàng cam** — như chuỗi hạt sáng. **Cá cắn:** mọi đoạn đang sáng chuyển **ĐỎ** cùng lúc | ✅ sơn: `that-tat-cam-tay.jpg` (nửa dưới đuôi), `that-tat-duoi-son.jpg` · ✅ nhiều màu: `that-bat-nhieu-mau.jpg` (@4,0) · ✅ đỏ: `that-ca-can-do.jpg` (@5,25), `that-ca-can-do-2.jpg` (@10,5) · 0,85 mm ✅ trang · ⚠ **chưa có khung TẮT hẳn**: từ 0 s phần trên đuôi đã sáng trắng hồng (`that-tat-cam-tay.jpg`, `that-tat-duoi-son.jpg`) · ⬜ chế độ câu ngày trên mặt nước |
 | Pin | Pin **CR425** (que pin nhỏ), 1 viên tặng kèm | ✅ trang · ⬜ lắp ở chỗ nào trên phao, trông ra sao — video/ảnh không thấy |
-| Phụ kiện đi kèm | 1 pin CR425 | ✅ trang · ⬜ ống/hộp đựng |
+| Phụ kiện đi kèm | 1 pin CR425 · **không** kèm chì, dây | ✅ trang · ✅ sếp 11/11 (chì, dây) · ⬜ ống/hộp đựng |
 | Tỉ lệ | Cả phao ≈ 40 cm; **thân mảnh hơn một ngón tay người lớn, dài hơn bề ngang lòng bàn tay**; **đuôi dài hơn thân** | ✅ đo mắt từ `that-tat-cam-tay.jpg` · 40 cm ✅ trang · ⚠ tỉ lệ đuôi ≈ ½ chiều dài, thân ≈ 1/5 — đo từ hình nhỏ có thước ở `anh-06` (đồ hoạ ghép), không vào khối |
 | Hộp / bao bì | Chưa có ảnh | ⬜ ảnh gói thật (chỉ hỏi khi có cảnh mở gói) |
 
@@ -167,18 +173,18 @@ PRODUCT (keep exactly): LED-425 electric bite-alarm fishing float, a slim stick 
 
 **Luật shop (chủ shop chốt 11/11):**
 - **KHÔNG khai xuất xứ Trung Quốc ở bất cứ đâu** — lời thoại, chữ trên hình, mô tả, chú thích đăng bài. Không nói "hàng Trung", "nội địa Trung", "nhập Trung Quốc". Không thêm chữ Hán/chữ Trung vào hình.
-- **Không bịa số giờ pin** — trang không ghi. Không nói "tiết kiệm pin", "pin trâu", "dùng cả tháng".
-- **Không nói "chống nước"** (chưa được xác nhận) — kể cả "chống nước tuyệt đối", "ngâm nước thoải mái".
+- **Số giờ pin chỉ được nói đúng lời sếp**: "tối đa 12 giờ liên tục, khoảng 3 buổi câu đêm, sạc lại được" (sếp 11/11). Không nói con số khác, không "tiết kiệm pin", "pin trâu", "dùng cả tháng".
+- **Chống nước: chỉ nói "chống nước, có gioăng"** (sếp 11/11). Không nói "chống nước tuyệt đối", "ngâm nước thoải mái", không kèm độ sâu hay chuẩn IP.
 
 **Từ hồ sơ:**
 - Không nói đổi ngày/đêm **"tự động"** (`anh-05`) — chỉ nói "đảo chiều pin".
 - Không nhắc **QF-04 / 2,0 g**; không quay/vẽ cận chữ mã trên thân `anh-01`, `anh-04`.
-- Không dùng lời chỉ có trên ảnh mà chữ trang không có: "Lọc tín hiệu báo ảo", "Mẫu phao nâng cấp 2026", "Phù hợp nhiều địa hình", "Độ nhạy cao" kiểu con số. Chữ "SIÊU NHẠY" đã có sẵn trong video thân của shop — giữ được (lời chủ quan của chính shop), nhưng không thêm số đo độ nhạy.
+- Không dùng lời chỉ có trên ảnh mà chữ trang không có: "Lọc tín hiệu báo ảo", "Mẫu phao nâng cấp 2026", "Phù hợp nhiều địa hình". **"Độ nhạy cao" ĐƯỢC nói** (sếp 11/11 xếp là điểm mạnh số 1) — nhưng không kèm số đo độ nhạy. Chữ "SIÊU NHẠY" đã có sẵn trong video thân của shop — giữ được (lời chủ quan của chính shop), nhưng không thêm số đo độ nhạy.
 - Không dùng **"4.4/5", "23 đánh giá", "Đã bán 59"**, không biến lời đánh giá trên trang thành lời chứng thực ("chính hãng, tem mác", "câu được nhiều cá hơn hẳn", "đặt sáng chiều nhận").
 - Không hứa **câu được chép, trắm**, câu xa trên 6 m, nước sâu hơn 3,5 m — trang nói phao không hợp.
 - Không nói đuôi **"không bao giờ gãy"**, "không gãy" — trang chỉ nói "ít gãy", va đá vẫn gãy.
 - Không hứa thời gian giao hàng (trang không ghi). Được nói: freeship từ 150.000đ, kiểm hàng trước khi trả tiền, lỗi nhà sản xuất đổi 1 đổi 1 trong 7 ngày.
-- Không nói cảm biến hoạt động bằng gì (rung, áp lực, chuyển động…) — trang chỉ nói "bắt được tín hiệu cá cắn".
+- Cảm biến: chỉ nói **"theo nhịp ăn của cá"** (sếp 11/11). Không tự giải thích thêm bằng gì (rung, áp lực, gia tốc…).
 - Không nói giá trong video (phòng đã quyết, phiếu 01). Nếu sau này có giá: 99.000 ₫, giá gốc 199.000 ₫, đồng giá 3 mã.
 - Không vẽ: phao tròn / phao bóng đỏ trắng, phao thân trắng, phao xốp, **đuôi mềm cong**, đèn trên thân (chỉ đuôi sáng), cổng sạc USB / dây sạc (phao chạy pin CR425), nút bấm hay công tắc ngoài, logo hay chữ lớn trên phao, phao chép CHUANZE của shop.
 - Không trộn đồ của `_nham-sp-khac/` (cần, máy câu) vào cảnh như thể là món này.
@@ -189,8 +195,9 @@ PRODUCT (keep exactly): LED-425 electric bite-alarm fishing float, a slim stick 
 
 1. Ảnh trang ghi "tự động chuyển ngày/đêm" và in mã QF-04 — trái với mô tả (đảo chiều pin, chỉ 3 mã). Video theo mô tả (mặc định).
 2. Trang hiện 23 đánh giá + "đã bán 59" cho món mới lên — video không dùng (mặc định); trang giữ hay gỡ là việc của sếp.
-3. Pin lắp ở chỗ nào, giao kèm ống/hộp gì — chỉ cần nếu muốn cảnh đảo pin / mở gói (mặc định: không có hai cảnh đó).
+3. ~~Pin bao lâu, chống nước, cảm biến, kèm chì dây~~ — sếp trả lời 11/11 (mục 2). Còn: pin lắp ở chỗ nào, giao kèm ống/hộp gì — chỉ cần nếu muốn cảnh đảo pin / mở gói (mặc định: không có hai cảnh đó).
 
 ## Lịch sử sửa khối
 
+- 11/11/2026 · KHÔNG đổi khối PRODUCT (4 sự thật mới không thấy được bằng hình). Áp vào mục 1, 2, 2b, 3, 6, 7 sau thi điểm gốc: chống nước có gioăng · pin 12 h / ~3 buổi / sạc lại được · cảm biến theo nhịp ăn · không kèm chì dây · gỡ cấm "Độ nhạy cao".
 - 11/11/2026 · tạo khối lần đầu · từ video thật của shop (`video-01.mp4`, 5 khung `that-*.jpg`) + chữ trang + lời chủ shop. Ảnh trang (đồ hoạ ghép) chỉ dùng cho thông số, không cho hình dáng.

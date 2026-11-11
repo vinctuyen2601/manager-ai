@@ -43,11 +43,14 @@ Chỉ số 5 đo khung **trên tài khoản của mình**. Không đo bằng vie
 
 ## 2. Nguyên tắc
 
+0. **Đọc `LUAT-CHUNG.md` trước.** Luật "không bịa / chỉ hứa điều có trên trang / thiếu thì hỏi" dưới đây chỉ áp cho **lời RA NGOÀI**. Trả lời sếp và phiếu nội bộ: thiếu dữ liệu thì **phải phán đoán** theo khuôn ở đó (sự thật · nghiêng về · % · đổi ý nếu · kiểm bằng).
+
 1. **Đọc sổ tay trước khi bóc.** Đây là bước 0, không bỏ qua.
 2. **Đo trước, đoán sau.** Số đo (giây, cắt, sáng, âm) lấy từ `gvv boc`. Mắt chỉ dùng để **xác nhận** số đo.
 3. **Mọi kết luận phải có bằng chứng.** Bằng chứng là một giây cụ thể, một khung hình, hoặc một số đo.
-   Chưa chắc thì ghi **"⚠ chưa chắc, nghiêng về X ~70 %"** và nói còn thiếu gì để chắc. Không được bịa
-   một câu trả lời chắc chắn. Luật này học từ rea-video ("待确认" kèm xác suất).
+   Chưa chắc thì dùng **đủ khuôn phán đoán** ở `LUAT-CHUNG.md` mục 2: nghiêng về X · ~N % · vì Y · **đổi ý nếu W** ·
+   **kiểm bằng Z, ngưỡng, hạn**. Không được bịa một câu trả lời chắc chắn, và cũng không được dừng ở "chưa có số".
+   Luật này học từ rea-video ("待确认" kèm xác suất); bổ sung "đổi ý nếu" và "kiểm bằng" sau thi điểm gốc 11/11.
 4. **LÕI là luật cứng.** Không tự thay yếu tố LÕI. Nếu lo về kỹ thuật hay pháp lý thì viết thành **câu hỏi
    cho sếp**, không tự quyết (CLAUDE.md, quy tắc M3, 1–3).
 5. **Học cấu trúc, không chép vật liệu.** Được lấy: thứ tự nhịp, vai trò từng cảnh, mốc cú bật, cơ chế hook.
@@ -243,7 +246,7 @@ Nhãn dùng tiếng Anh, đúng như id gốc, để máy lọc được và sau
 - Máy dò `scene` báo **cắt giả khi đèn bật** (khung 01, 7,9 s). `gvv boc` đã tự gắn cờ ⚠ cho điểm cắt nằm sát
   một lần bật sáng (`danhDauCatDoSang`, sát ≤ 0,25 s).
 - Đèn LED **sáng dần ~0,5 s**, không bật một phát (CLAUDE.md, mục 24/10). Mốc cú bật là **điểm giữa đoạn tăng sáng**.
-- Cả 3 khung đều trả lời câu hỏi ở **7,8–7,9 s** và kết thúc 3,7–4 s sau cú bật (sổ tay 0, 0b).
+- Cả 3 khung đều trả lời câu hỏi ở **7,8–7,9 s** và kết thúc 3,7–4 s sau cú bật (sổ tay 0, 0b). ⚠ **Rút từ 3 video Giáng sinh Mỹ — bằng chứng của nhóm đó, KHÔNG phải luật chung** (`LUAT-CHUNG.md` mục 4). Thi 11/11: áp luật này cho phao điện làm agent khuyên giấu cú đổi đỏ khỏi giây đầu, ngược ý sếp.
 - Khung 02 = thân khung 01 + hook khác. Đo bằng SSIM được **0,80–0,93**, so với đối chứng 0,39.
   → Phép so thân nên thành lệnh (mục 8).
 - Câu hook giống nhau xuất hiện ở hai hãng khác nhau (khung 01 và 03) → đó là trend, không phải ý của riêng ai.
