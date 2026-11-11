@@ -98,6 +98,14 @@ tự viết lại kỹ năng không người duyệt · Deep Dream ghi đè trí
   Thư viện bằng chứng (lớp 3) chỉ còn: video viral trong ngách (ai làm cũng được) + video của chính shop.
 - Bộ đề nháp: `06-BO-DE-NHAP.md`, chờ sếp điền đáp án.
 
+## 6c. Lấy từ bản tham khảo SaaS (07) — sếp chốt KHÔNG xây phần mềm, chỉ lấy ý
+- **Cấp năng lực L1–L5 theo từng năng lực** (ma trận ở 06). Cấp quyết định việc được giao → nối thẳng với hướng tự chủ: cấp càng cao càng nới workflow.
+- **Phân tích nguyên nhân trước khi sửa** (kiến thức / kỹ năng / đầu vào / ràng buộc) — thêm vào `tp-duc-ket`.
+- **Claim 4 tầng** trong hồ sơ sản phẩm: sự thật có nguồn · đã chứng minh bằng kết quả · giả thuyết marketing · cấm nói.
+- **Reviewer/Trưởng phòng chỉ chấm chất lượng sáng tạo**; hiệu quả kinh doanh chỉ kết luận bằng số liệu sau đăng.
+- Bảng quyền tự chủ L0 quan sát · L1 đề xuất · L2 làm nội bộ · L3 hành động bên ngoài (đăng, tiêu tiền) — ghi vào gói Trưởng phòng khi chuyển sang tự chủ.
+- Không lấy: đa tenant, DB, giao diện, workflow engine, tình báo đối thủ, kiểm duyệt bản quyền (trái quyết định sếp 11/11).
+
 ## 7. Câu hỏi còn mở
 1. Phòng được **đọc (trỏ tới)** kho 17fishing và GaRutin? Lật quyết định "tài sản độc lập" trong `reel/CLAUDE.md`.
 2. Sếp có ~30 phút viết đáp án chuẩn cho bộ đề không? Không có thì chấm lệch về phía Claude chấm Claude.
