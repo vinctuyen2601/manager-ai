@@ -75,7 +75,7 @@ Mỗi dòng: lấy gì · đưa vào tệp nào · công cụ/chi phí · bằng
 - **Không đăng ký ScrapeCreators** trước khi có bộ đề cho `sxh-tim-nguon` để đo xem dữ liệu tự động có làm bài tốt hơn không.
 - **Không giữ hook gốc** dù 01 content-repurposing khuyên vậy: gói §3.6 chỉ cho học **cơ chế** hook, không học câu chữ.
 
-## 5. Câu hỏi cho sếp
+## 5. Câu hỏi cho sếp — **sếp chốt 11/11 tối: theo cả 3 mặc định** (A1 vào `sxh-tim-nguon` bước 6 + gói §3.3 · không mua ScrapeCreators · tệp việc `sxh-dao-binh-luan.md`)
 1. **Outlier theo trung vị kênh** (A1): thêm vào bộ lọc cạnh luật ≥ 700k và ≥ 5× follower?
    *Mặc định:* ghi cả hai cột. Trung vị chỉ tính khi có ≥ 10 bài cùng kênh. Kết luận "dùng / chờ / loại" vẫn theo luật cũ.
 2. **Mua ScrapeCreators** (C1) để tự lấy bình luận, transcript, quảng cáo?

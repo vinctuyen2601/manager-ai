@@ -30,7 +30,11 @@ Kiến thức: `../vai/san-xu-huong.md` §3.3 (lọc viral), §3.6 (pháp lý), 
 3. Có tệp: `gvv boc <tệp>` (gói §4 bước 3) để có thời lượng, **nội dung thật 0–X s**, lưới 4 khung/giây, lời gốc.
 4. Xem từng lưới: tìm **giây cú bật** (cá lên, đớp mồi, kết quả hiện…) và mọi chữ/logo/sticker/ID (luật 4).
 5. Chạy bộ lọc nguồn từng điều (luật 3). Ghi rủi ro (luật 5).
-6. *(Tuỳ chọn, có số liệu)* Lọc outlier: ≥ 700.000 view **và** ≥ 5× follower (sổ tay §5). Không có số → ghi ⬜, không chặn.
+6. *(Tuỳ chọn, có số liệu)* Lọc outlier, ghi **hai cột** (sếp chốt 11/11 tối):
+   - Luật cũ: ≥ 700.000 view **và** ≥ 5× follower (sổ tay §5). **Kết luận dùng / chờ / loại vẫn theo cột này.**
+   - Lift trung vị: view bài ÷ trung vị view của ≥ 10 bài gần nhất **cùng kênh, cùng nền tảng, cùng định dạng** (đọc trên trang kênh, ghi ngày đọc).
+     ≥ 5× rất lớn · 2–5× mạnh · 1,5–2× nhẹ. Dưới 10 bài → ghi số kèm "tin thấp". Nguồn: ScrapeCreators social-media-research-skills (MIT), `../../thu-vien/nghien-cuu/2026-11-11-repo-video-trend/01-scrapecreators-skills.md`.
+   Không có số → ghi ⬜, không chặn.
 7. Kết luận dùng / chờ / loại. Đủ số video cần chưa? Thiếu → ô "Cần sếp" xin thêm link.
 8. Phiếu giao. Dòng "dùng" là đầu vào của `sxh-boc-khung` (chế độ nuôi page).
 
@@ -38,7 +42,7 @@ Kiến thức: `../vai/san-xu-huong.md` §3.3 (lọc viral), §3.6 (pháp lý), 
 ```
 Chủ đề page: …  ·  Thị trường: …  ·  Cần: N video  ·  Đạt "dùng": M  ·  Ngày lọc: …
 | # | Link | Nguồn (nền tảng · ID/tài khoản · lấy từ đâu) | Tệp (đường dẫn | ⬜) | Nội dung thật | Cú bật (giây · thứ gì) |
-| Bộ lọc 5 điều (✅/✗ từng điều) | Cần che sơ bộ (giây · thứ · vị trí | ⬜ chưa xem hết lưới) | Rủi ro (nhạc · người · hãng) | Kết luận + lý do |
+| Outlier (luật cũ · lift trung vị) | Bộ lọc 5 điều (✅/✗ từng điều) | Cần che sơ bộ (giây · thứ · vị trí | ⬜ chưa xem hết lưới) | Rủi ro (nhạc · người · hãng) | Kết luận + lý do |
 ```
 Ô trống = chưa xong. Không có gì thì ghi `—`.
 

@@ -132,6 +132,8 @@ cùng tài khoản, hoặc có nhiều nguồn thực hành cùng chiều) · **
   Khi so nhiều bài của một tài khoản/kênh: xếp hạng, so **1/3 nhóm đầu với 1/3 nhóm cuối**, bỏ nhóm giữa; mở từng tệp
   trước khi tả (nguồn: coreyhaines31/marketingskills — reverse-engineer-marketing/references/content-teardown.md, MIT · Thấp).
   Chỉ nhìn nhóm thắng thì không biết cái gì làm nó thắng.
+- **Lift trung vị kênh** (cột thứ hai, sếp chốt 11/11): view bài ÷ trung vị ≥ 10 bài cùng kênh/nền tảng/định dạng; ≥ 5× rất lớn · 2–5× mạnh ·
+  1,5–2× nhẹ (ScrapeCreators, MIT · Thấp–TB). Ghi cạnh luật outlier trên, **không thay**: kết luận vẫn theo luật trên.
 - **Like rate cao mà view thấp** thường có nghĩa là video chỉ tới được fan cũ, chưa ra được người lạ (AutoClip).
   Mức Thấp–Trung bình. → Khi săn, đừng chọn video chỉ vì tỉ lệ like đẹp.
 - **Quảng cáo trả tiền** thì view không đáng tin (tiền mua view). Với quảng cáo, dùng dấu hiệu ở 3.2
