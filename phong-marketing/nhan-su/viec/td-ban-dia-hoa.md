@@ -18,9 +18,8 @@ lồng giọng CapCut, nhạc hợp lệ, chữ mới. Kiến thức: `../vai/th
 2. **Nếu video gốc có giọng người nói** → bỏ hẳn track tiếng gốc khi lắp giọng mới (không hạ nhỏ). Muốn giữ tiếng nền thì
    phải có tiếng nền tách sạch; không có → dùng nhạc mới. Ô "Tiếng gốc" ghi đã làm gì.
 3. **Nếu giọng CapCut cần tốc độ ngoài 0,8–1,15×** để vừa giây → không ép `atempo`; trả Biên kịch rút lời (gói §3.9).
-4. **Nếu nhạc lấy từ thư viện CapCut hoặc TikTok CML** → ô "Nền tảng được phép" ghi "chỉ TikTok/CapCut". Bản đăng Facebook,
-   Instagram, YouTube → không dùng bài đó; ghi "Cần sếp" kèm mặc định "chỉ tiếng nền/không nhạc ngoài TikTok" (gói §3.7, §12.1).
-   Giữ nhạc của video gốc → ghi "chưa rõ quyền", đưa lên "Cần sếp".
+4. **Nếu nhạc lấy từ thư viện CapCut hoặc TikTok CML** → ô "Nền tảng được phép" ghi "chỉ TikTok/CapCut" (bản Facebook/Instagram/YouTube dùng tiếng nền
+   hoặc nhạc khác). **Không hỏi sếp về quyền** (sếp chốt 11/11 "bỏ kiểm quyền khỏi quy trình tạo video"; rủi ro tắt tiếng chỉ ghi một dòng trong phiếu).
 5. **Nếu che ID/watermark tài khoản gốc** → caption phải có dòng `Nguồn:` ghi đúng ID đó (luật 1 của `bk-loi-ban-dia`).
    Caption thiếu dòng Nguồn → không che ID, ghi lý do vào phiếu.
 
