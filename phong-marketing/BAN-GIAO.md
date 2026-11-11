@@ -9,7 +9,11 @@
 `nhan-su/danh-gia/2026-11-11-diem-goc/BANG-DIEM-GOC.md` → `nhan-su/danh-gia/2026-11-11-pha1/KET-QUA-PHA1.md` → `nhan-su/danh-gia/2026-11-11-pha2/TONG-KET-PHA2.md`.
 - Đã xong: pha 0 (điểm gốc), pha 1 (`quy-che/LUAT-CHUNG.md`: sự thật ra ngoài / phán đoán nội bộ), pha 2 (`thu-vien/nganh/do-cau-vn/` 12 trang + MUC-LUC,
   mục "Trang bị" ở 6 gói vai, ô `nganh:` ở phiếu). Cấp nay: L4 ở 4/6 năng lực; **hiểu xu hướng video ngành vẫn L2–L3** (SX1 thua sếp 2/2).
-- **Bước kế = pha 2b, chờ sếp:** gửi 3–5 video câu cá VN nhiều lượt xem vào `~/Downloads` (ưu tiên: phao điện/câu đêm cận lúc cá ăn ·
+- ✅ **Pha 2c xong (11/11 tối, máy Windows):** Săn xu hướng tự nghiên cứu nguồn công khai → `thu-vien/nganh/do-cau-vn/video-nganh.md` (12 dạng, chỉ YouTube);
+  sếp gửi giáo trình → `thu-vien/so-tay/video-trends-kb-v0.1.md` + mục 3.10 gói SXH. Thi lại chấm mù: SX1 thua·thua → **thắng·thắng**, SX2 thắng·thắng.
+  Chi tiết + giới hạn: `nhan-su/danh-gia/2026-11-11-pha2c/DU-DOAN.md`. Nghiên cứu 6 repo video/trend: `thu-vien/nghien-cuu/2026-11-11-repo-video-trend/00-TONG-HOP.md` (3 câu chờ sếp).
+  → **Bước kế: pha 3** (thi lại toàn bộ) hoặc chạy tiếp luồng phao từ bước 3. Pha 2b (video sếp) thành tuỳ chọn.
+- (cũ) **Pha 2b, không còn chặn:** gửi 3–5 video câu cá VN nhiều lượt xem vào `~/Downloads` (ưu tiên: phao điện/câu đêm cận lúc cá ăn ·
   so độ nhạy 2 phao · 1 video "câu xong nấu tại chỗ" hoặc "câu đài thi đấu"), kèm ảnh chụp lượt xem + số theo dõi nếu được.
   → Săn xu hướng bóc thành khung `thu-vien/khung/` đúng ngành (gắn ngành do-cau-vn) → thi lại SX1 (đáp án sếp ở `nghien-cuu/.../08-DAP-AN-SEP-KIN.md`, đề kín).
 - Sau 2b: pha 3 (thi lại toàn bộ → đạt thì chạy tiếp luồng phao từ bước 3, `khach-hang/17fishing/viec/2026-11-11-phao-ro-diec-qc/`), pha 4 (sổ kinh nghiệm).

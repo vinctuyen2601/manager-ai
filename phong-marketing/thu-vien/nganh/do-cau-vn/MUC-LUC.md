@@ -27,6 +27,7 @@ Gói này nói **khách là ai, nói gì, mua gì giá bao nhiêu, nội dung g�
 | `thuat-ngu.md` | Vốn từ dân câu; từ người ngoài dùng sai (2,0g là tải chì, số 14 là cỡ lưỡi, "vòng bi" không "bạc đạn"); chữ chập khi bỏ dấu (mồi/mới, cần/cân) | viết lời, chữ trên hình, caption, hashtag | 11/11 |
 | `ngon-ngu-khach.md` | Chữ THẬT khách gõ: truy vấn Google theo ý định, ô tìm kiếm site, câu kiểu tin nhắn; mục riêng phao / phao điện / câu đêm / rô diếc | viết hook, chữ trên hình bằng chữ của khách; chọn chủ đề | 11/11 (bảng từ khoá cũ từ 22/09) |
 | `noi-dung-thang.md` | Trang/bài của shop có người tìm và đọc (90 ngày): cụm "buộc" thắng, "các loại phao" lớn nhất, nhóm "X là gì" có tìm mà 0 nhấp; 6 dạng video gợi ý ⚠ | chọn chủ đề video nuôi page, chọn dạng video | 11/11 |
+| `video-nganh.md` | 12 dạng video câu cá VN đang được xem (chỉ có số YouTube; TikTok/Reels bị chặn). Phao điện: Shorts 8–29 s của kênh shop, test trong cốc/chậu nước, đèn sáng từ giây đầu, dạng này đang bão hoà; nhịp phao và cân phao ra outlier ở kênh nhỏ; kênh lớn nhất ngành là một shop (Fishcamp, 1,61 Tr sub) | chọn dạng video, bóc khung, viết hook, trả lời sếp về xu hướng video ngành | 11/11 |
 | `mua-vu.md` | Giờ đông (12–16h, mức tin thấp), lịch sale (Black Friday 27/11/2026), câu đêm | chọn giờ đăng, lên kế hoạch tuần, video cho đợt sale | 11/11 |
 | `gia.md` | Mặt bằng giá theo loại hàng có ngày đo; hàng nhiều cỡ ghi "từ X"; món đã bỏ bán; freeship từ 150k (chốt 11/11) | sắp nói tới giá, so giá, CTA | 11/11 |
 | `hoi-dap/phao.md` | Hỏi đáp về phao: số gam là gì, tải chì sai thì sao, phao điện so phao nano… | mọi việc có phao | 11/11 |
@@ -36,5 +37,5 @@ Gói này nói **khách là ai, nói gì, mua gì giá bao nhiêu, nội dung g�
 | `nhat-ky.md` | Nạp gì, từ đâu, ngày nào; các mâu thuẫn chưa chốt | trước khi sửa một trang | 11/11 |
 
 ## Gói này CHƯA biết (đừng giả vờ biết — phán đoán theo `../../../quy-che/LUAT-CHUNG.md`)
-Tin nhắn Zalo thật của khách · mùa vụ theo tháng · video câu cá nào đang viral ở VN (0 khung mẫu trong `../../khung/`) ·
+Tin nhắn Zalo thật của khách · mùa vụ theo tháng · video câu cá viral **trên TikTok và Facebook Reels** (bị chặn; các dạng video thì đã biết qua YouTube, xem `video-nganh.md`) · âm thanh và giây đầu thật của các video đó (chưa tải video, vẫn 0 khung mẫu trong `../../khung/`) ·
 giá ngoài shop · số liệu sau đăng video.

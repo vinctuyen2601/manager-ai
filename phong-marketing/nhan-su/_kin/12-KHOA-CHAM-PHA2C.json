@@ -1,0 +1,18 @@
+{
+ "SXH-lan1/SX1": {
+  "A": "agent",
+  "B": "sep"
+ },
+ "SXH-lan1/SX2": {
+  "A": "sep",
+  "B": "agent"
+ },
+ "SXH-lan2/SX1": {
+  "A": "agent",
+  "B": "sep"
+ },
+ "SXH-lan2/SX2": {
+  "A": "agent",
+  "B": "sep"
+ }
+}

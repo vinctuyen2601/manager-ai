@@ -95,3 +95,30 @@ Không mở `phong-marketing/thu-vien/nghien-cuu/` và `phong-marketing/nhan-su/
 | `hoi-dap/_thu-trung.md` | 10 câu thử, trỏ trang | 11/11 |
 
 Chưa viết (người khác làm): `ngon-ngu-khach.md`, `noi-dung-thang.md`, `MUC-LUC.md`.
+
+## Phần từ nguồn công khai · 11/11/2026 · người nạp: agent Săn xu hướng
+
+Viết thành trang `video-nganh.md`. Không mở `phong-marketing/thu-vien/nghien-cuu/`, `nhan-su/danh-gia/`, `nhan-su/_kin/`.
+Không đăng nhập, không giả User-Agent, không proxy, không tải video, không cài công cụ. YouTube đọc bằng `curl` mặc định, rồi bóc phần `ytInitialData` / `ytInitialPlayerResponse` có sẵn trong HTML công khai.
+Ảnh khung là ảnh tĩnh do YouTube tự sinh (`i.ytimg.com/vi/<id>/hq1|hq2|hq3.jpg`, ở 25/50/75 %). Không ghi tên hay số điện thoại người thường. Tên kênh công khai thì có ghi.
+WebFetch không đọc được trang tìm kiếm YouTube: trang dựng bằng JS nên trả về trống, không phải bị chặn.
+
+| # | Nguồn (URL) | Đọc được / bị chặn | Ý rút ra |
+|---|---|---|---|
+| W01 | youtube.com/results?search_query= "câu cá đêm phao điện" | đọc được | Kết quả gần như toàn Shorts phao điện của kênh shop. Fishcamp 8,34 Tr / 2,58 Tr / 629 N |
+| W02 | YouTube tìm "câu cá", "câu đài rô diếc", "review cần câu", "câu cá đêm", "câu cá giải trí", "test phao câu" | đọc được | Shorts chiếm đa số. Có dạng hài "và cái kết", nhịp phao diếc, review combo rẻ. "Câu cá đêm" ra chuyện ma |
+| W03 | YouTube tìm "phao điện rô diếc", "so sánh phao câu đài", "nhịp phao câu đêm", "đập hộp đồ câu", "câu đêm hồ dịch vụ phao điện" | đọc được | Phao điện rô diếc chỉ ≤ 57 N. Nhịp phao diếc 91–247 N. "Phao Đài Siêu Nhạy VS Phao Câu Đêm" 2,58 Tr |
+| W04 | ~40 trang youtube.com/watch?v=… (videoDetails + microformat) | đọc được | Kênh, view chính xác, thời lượng, ngày đăng của mọi ví dụ trong bảng |
+| W05 | 17 trang kênh: @fishcamp-vietnam, @lkhoa999, @docaulk.hoa99, @bietdoisanhang, @Hungno2k1, @Anhbabao789, @casixom, @caucareview102, @BắtCáTV, @KinhNghiệmCâuĐài, @gafishing, @thamcau, @HoiquancaudaiND, @Cancaugiare87, @fishingld2009, @vufishing2498, @ĐàmĐứcReview | đọc được | Số sub để tính ×sub. Kênh shop Fishcamp 1,61 Tr là lớn nhất. KOL bán hàng chính chủ (LK, BĐSH). Hùng Nổ và Anh Ba Báo chuyển sang làm diều |
+| W06 | i.ytimg.com, ảnh khung của 16 video (LpF0CJiXELw, smpCh8ZsPHo, jGbUc9o28TA, Rs6EtzvZs7k, OqMFqJWWrSo, DR3g2cS-NnI, zyVINo_jvi4, 0PGGGGL5jlI, Aq_oe31srkM, lkqiJUd4W3c, sKfn2GqlVWM, BZRFUROhWzg, kMvuqZ7YADg, 8xqxlIrR-Ng, WbxdphmoETw, klIHkT07-Ms) | đọc được | Phao điện đã sáng ở khung 25 %. Test trong cốc/chậu. Video 8,34 Tr chỉ có phao thường ban ngày (tiêu đề nhồi "LED"). Lakaa có phụ đề Trung + Việt (đăng lại). Chữ đếm "+25kg". Phụ đề kể chuyện |
+| W07 | https://tuoitre.vn/can-thu.html | đọc được | 10 clip cần thủ 04–10/2026: sổng cá, rơi xuống hồ, cá khủng. Báo xác nhận dạng 10. Không có số view |
+| W08 | https://www.lazada.vn/videodetail/?video_id=30220234553 | đọc được (không có số) | Sàn có video phao ngày đêm "cảm ứng đổi màu", nhưng không hiện view hay ngày |
+| W09 | https://www.tiktok.com/tag/phaodien (WebFetch + curl) | **bị chặn** | Chỉ có khung trang, captcha/đăng nhập. Bỏ qua |
+| W10 | https://www.tiktok.com/@fishcampvietnam (curl) | **bị chặn** | Trả về 1,4 KB trống. Bỏ qua |
+| W11 | https://ads.tiktok.com/business/creativecenter/inspiration/popular/hashtag/pc/vi | **bị chặn** (trống, có nút đăng nhập) | Không thấy hashtag nào |
+| W12 | https://www.facebook.com/watch/search/?q=phao điện | **bị chặn** (trống) | Không có số Reels |
+| W13 | https://www.vietnam.vn/nguoi-dan-ong-mang-ca-di-tang-nguoi-la | **bị chặn** (403) | Chỉ thấy qua đoạn tóm tắt: kênh "tặng cá cho người lạ" gần 5 Tr view. Không dùng |
+| W14 | WebSearch (5 lượt: kênh câu cá VN, YouTuber câu cá, phao điện TikTok, TikToker câu cá trên báo, trào lưu câu cá) | chỉ kết quả tìm kiếm | Không có bài báo VN nào tổng hợp xu hướng video câu cá. Số trên vidiq/socialblade chưa mở, không dùng |
+
+Tổng: **8 nhóm nguồn đọc được** (W01–W08: 12 trang tìm kiếm, ~40 trang video, 17 trang kênh, ảnh khung của 16 video, 2 trang ngoài YouTube) · **5 nguồn bị chặn** (W09–W13).
+Chỗ yếu: 7/8 nhóm đọc được là YouTube, tức chỉ một nền tảng. Mọi kết luận về TikTok/Reels trong `video-nganh.md` là phán đoán.

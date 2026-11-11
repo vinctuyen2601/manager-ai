@@ -258,6 +258,19 @@ Nhãn dùng tiếng Anh, đúng như id gốc, để máy lọc được và sau
   → Phép so thân nên thành lệnh (mục 8).
 - Câu hook giống nhau xuất hiện ở hai hãng khác nhau (khung 01 và 03) → đó là trend, không phải ý của riêng ai.
 
+### 3.10 Gọi tên đúng thứ mình thấy: dạng, chủ đề, trend
+Nguồn: `../../thu-vien/so-tay/video-trends-kb-v0.1.md` (sếp gửi 11/11/2026; giáo trình, không có số liệu → mức Thấp–Trung bình) mục VK04, VK10, VK11, 7.
+
+| Nếu | Thì |
+|---|---|
+| Sếp hỏi "có bao nhiêu xu hướng" | Tách 5 thứ trước khi đếm: **dạng** (cách tổ chức: review, so sánh, cận cảnh…), **chủ đề**, **hook**, **phong cách**, **trend** (mô thức đang **tăng** trong một cộng đồng). Đếm riêng từng loại, nói rõ đang đếm loại nào |
+| Thấy một video nhiều view | Chưa gọi là trend. Trend cần **lặp lại ở ≥ 3 nguồn độc lập** (kênh khác nhau) và có dấu hiệu tăng. Một video = một ví dụ |
+| Gắn nhãn một trend | Ghi quy mô: **khoảnh khắc** (âm thanh/câu nói/meme, sống vài tuần) · **tín hiệu** (dạng mới nổi trong một ngành, vài tháng) · **dòng chảy** (đổi hành vi lớn, nhiều năm). Và giai đoạn: mới nổi → tăng → đỉnh → bão hoà → giảm (xem 3.4). Dạng sống lâu thì ghi `bền`, không gọi trend |
+| Chấm xem có nên dùng trend | Chấm 1–5 từng ô, kèm bằng chứng: tốc độ tăng · độ lan · độ mới · làm lại được · hợp ngành · hợp khách · bão hoà · an toàn thương hiệu/bản quyền. **Không cộng thành một điểm "viral"**: điểm chỉ để sàng, không phải dự báo |
+| Ô số liệu không thấy được trên nguồn | Ghi `chưa thấy`, không ước. Số xem luôn đi kèm **ngày đọc** |
+| So hiệu quả nhiều video | So cùng nền tảng, cùng mục tiêu, cùng khoảng thời gian; nhìn **trung vị**, không nhìn video tốt nhất. View cao ≠ bán được |
+| Lấy trend từ ngành khác | Không mặc định chạy được ở ngành mình (cùng ý `../../quy-che/LUAT-CHUNG.md` mục 4). Tách cơ chế lõi, viết ≥ 3 cách chuyển, ghi rủi ro |
+
 ---
 
 ## 4. Quy trình làm việc
@@ -493,6 +506,7 @@ Gặp lỗi mới thì thêm một dòng vào đây (đây là "bộ nhớ sửa
 Đã mở thật ngày 11/11/2026, trừ chỗ ghi khác.
 
 **Nội bộ**
+- `../../thu-vien/so-tay/video-trends-kb-v0.1.md` (sếp gửi 11/11/2026, đọc toàn bộ; mục 3.10)
 - `../../thu-vien/so-tay/KIEN-THUC-VIRAL.md` (toàn bộ) · `../../CLAUDE.md` (quy tắc M3) · `../../thu-vien/khung/reel-01-frostglow.md`, `reel-02-frostglow-hook-me.md`, `reel-03-merryspin-tu-lanh.md`
 - `D:/my project/gen-video-viral/src/boc.ts`, `src/do-tin-hieu.ts`
 
