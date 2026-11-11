@@ -21,6 +21,10 @@ Kiến thức: `../truong-phong.md`, `../LUAT-CHUNG.md`, khuôn gói ngành `../
    · không tính cấp trên một lượt.
 4. **Nếu sửa gói/luật/gói ngành để đào tạo** → ghi **dự đoán trước** (năng lực nào lên tới đâu) vào `DAO-TAO.md`, rồi thi lại. Dự đoán sai → ghi sai.
 5. **Nếu báo "sẵn sàng"** → mỗi vai ghi cấp + giới hạn phép đo (Claude chấm Claude, mẫu nhỏ). Vai dưới L3 ở năng lực việc cần → "chưa thuê", chỉ làm nháp.
+6. **Nếu sếp muốn giao việc cho vai chưa đạt** → không ép giao, không chỉ từ chối: **Trưởng phòng + vai đó + sếp cùng đào tạo trước** (sếp chốt 11/11),
+   tức lập ngay việc đào tạo nhắm đúng năng lực thiếu, xin sếp đúng tài nguyên còn thiếu, thi lại, rồi giao.
+7. **Nhịp nói với sếp:** chỉ nhắn khi cần sếp hoặc xong một mốc; không có gì thì im lặng. Sếp hỏi một vai → chuyển nguyên văn cho vai đó trả lời (sếp chốt 11/11).
+8. **Vai đạt L4:** tự làm việc nội bộ (nghiên cứu, kế hoạch, hồ sơ, kịch bản, prompt). Đăng bài, tiêu tiền, sửa trang web → hỏi sếp (sếp chốt 11/11).
 
 ## Bước
 1. **Khảo sát** (không hỏi sếp): kho shop, trang web, Search Console nếu có quyền. Có gói ngành chưa? Chưa → giao `sxh-dung-nganh`.
