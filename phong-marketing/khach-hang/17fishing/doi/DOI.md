@@ -2,6 +2,8 @@
 
 Ngành: `do-cau-vn` (`../../../thu-vien/nganh/do-cau-vn/MUC-LUC.md`). Bộ đề và đáp án kín: `../../../thu-vien/nghien-cuu/2026-11-11-agent-chuyen-gia/06-*`, `08-*`.
 
+Phiên bản gói lúc thi (agent = `<vai>@<commit>`, kiến trúc v0.2 mục 4): **điểm gốc** `f39e650` · **pha 1** `21059e0` · **pha 2** `5b8fbf8` + gói ngành `38987b3`.
+
 | Vai | Năng lực | 11/11 điểm gốc | 11/11 sau pha 1 | 11/11 sau pha 2 | Nguồn |
 |---|---|---|---|---|---|
 | Chuyên viên SP | N1 Hiểu sản phẩm | L4 82 % | — | — | `../../../nhan-su/danh-gia/2026-11-11-diem-goc/BANG-DIEM-GOC.md` |

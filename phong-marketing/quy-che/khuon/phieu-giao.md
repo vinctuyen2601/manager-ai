@@ -11,6 +11,7 @@ trang_thai: xong | chan | can-sep
 nhan: [<tệp đã đọc>]
 giao: [<tệp đã viết>]
 con_thieu: [<thứ còn ⬜, rỗng nếu không>]
+chi_phi: <$ thật · % hạn mức Muse · lượt gọi dịch vụ trả phí · "0" nếu không tốn>   # G9
 ngay: <YYYY-MM-DD>
 ---
 

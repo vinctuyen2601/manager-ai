@@ -18,7 +18,7 @@ Kiến thức: `../vai/truong-phong.md`, `../../quy-che/LUAT-CHUNG.md`, khuôn g
 2. **Nếu xin sếp một tài nguyên** → ghi đủ 5 ô: xin gì · cho vai/năng lực nào · sếp mất bao lâu · không có thì làm sao (mặc định) · chặn hay không.
    Tối đa 3 mục "chặn" một lần. Câu chỉ cần sau khi thuê (page, mục tiêu, hạn mức, quyền) → để sau, không hỏi trong lúc lập đội.
 3. **Nếu chấm một vai** → bộ đề ≥ 30 % câu thiếu dữ liệu · mỗi đề 2 lượt · đáp án sếp kín (agent thi không đọc) · chấm mù có khoá giải mã
-   · không tính cấp trên một lượt.
+   · không tính cấp trên một lượt · **ghi commit của gói vai (và gói ngành) lúc thi** vào bảng điểm và `DOI.md` — agent = `<vai>@<commit>`.
 4. **Nếu sửa gói/luật/gói ngành để đào tạo** → ghi **dự đoán trước** (năng lực nào lên tới đâu) vào `DAO-TAO.md`, rồi thi lại. Dự đoán sai → ghi sai.
 5. **Nếu báo "sẵn sàng"** → mỗi vai ghi cấp + giới hạn phép đo (Claude chấm Claude, mẫu nhỏ). Vai dưới L3 ở năng lực việc cần → "chưa thuê", chỉ làm nháp.
 6. **Nếu sếp muốn giao việc cho vai chưa đạt** → không ép giao, không chỉ từ chối: **Trưởng phòng + vai đó + sếp cùng đào tạo trước** (sếp chốt 11/11),
