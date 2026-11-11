@@ -469,6 +469,12 @@ mua hàng.
 
 ### 🔴 Mô tả BIẾN MẤT nếu `blockOrder` thiếu khối `mo-ta`
 
+> **Cập nhật 11/11/2026 — đọc trước khi báo động.** Đo 11/11: **10/14** sản phẩm
+> đang bán để `mo-ta` ở `bat: false` (chỉ NAG, Bennuo, AS-HA, AS-H1 còn bật).
+> Chủ shop xác nhận: **tắt là CHỦ Ý**, "không cần bật tắt". Đừng báo đây là lỗi,
+> đừng tự bật lại. Bẫy bên dưới vẫn đúng về cơ chế (tắt thì `description` chỉ
+> còn trong JSON-LD) — chỉ là giờ nó là lựa chọn của chủ shop, không phải sự cố.
+
 Sản phẩm có `templateId` thì trang dựng theo `blockOrder`. **Không có khối
 `mo-ta` trong đó thì trường `description` không render ra chữ nào** — nó chỉ còn
 nằm trong JSON-LD cho Google đọc.
