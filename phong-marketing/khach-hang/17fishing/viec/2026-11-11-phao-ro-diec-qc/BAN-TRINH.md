@@ -49,6 +49,31 @@ kế hoạch (cột trái) cạnh việc đã xảy ra (cột phải) để sế
 | H3 | "Mẹo câu diếc đêm: nhìn màu đuôi phao" | Dạng 4 mẹo | ✅ 10,5 s |
 | Đối chứng | Video shop gần nguyên | Bản so, 0 Muse | ✅ 10,8 s |
 
+## 4b. Căn cứ từ nghiên cứu xu hướng (Săn xu hướng)
+Nguồn đầy đủ: `thu-vien/nganh/do-cau-vn/video-nganh.md` (12 dạng video câu cá VN, số YouTube đọc 11/11) ·
+lập luận chọn khung: phiếu `03b-sxh-khung.md` · thi lại chấm mù: `nhan-su/danh-gia/2026-11-11-pha2c/DU-DOAN.md`.
+**Giới hạn:** mọi số từ YouTube; TikTok/Reels chặn máy đọc → chuyển sang hai nền tảng đó là giả định (~65 %).
+
+**Năm điều rút ra (mỗi điều ≥ 3 kênh):**
+1. Video phao chạy được là Shorts 6–30 s, không người nói, chỉ tay và phao (6 kênh bán hàng).
+2. Kênh **shop** thắng kênh KOL ở chủ đề phao — lớn nhất: Fishcamp Việt Nam 1,61 Tr sub, toàn Shorts giới thiệu hàng.
+3. Kỹ thuật khô (cân phao, nhịp phao) ra view gấp 67–251 lần số sub ở kênh nhỏ → hợp nuôi page.
+4. KOL lớn tự bán hàng mang tên mình (L.k. Hoà, Biệt Đội Săn Hàng).
+5. "Câu cá đêm" trên YouTube VN ra chuyện ma nhiều hơn phao — phao điện là nhánh nhỏ.
+
+**Các dạng đã xét cho video phao:**
+| Dạng | Bằng chứng | Quyết định |
+|---|---|---|
+| 1 · Test phao điện trong cốc/chậu | Fishcamp 629 N, 465 N; Cần câu giá rẻ 198 N (5,9× sub) · 4 kênh | **Không làm khung chính — bão hoà** (≥ 5 shop). Chỉ mượn cảnh tay của video shop làm đoạn "Thử cảm biến" 2,5 s |
+| **3 · Cận cảnh nhịp phao** | vườn cây ao cá "nhịp ăn cá diếc" 247 N; Chợ Online Tiền Hải 476 N; Vũ Ngọc Thảo "phao sáng câu đêm" 211 N · 5 kênh | **Chọn** — người xem đều ở 5 kênh, **chưa shop nào ghép với phao điện** (khoảng trống), tốn ít cảnh sinh nhất |
+| 4 · Mẹo có người nói | Thẩm Câu 969 N (67×) · 4 kênh | Chỉ mượn chữ tiêu đề → mở đầu H3 (shop chưa có người đứng nói) |
+| 6 · So sánh A vs B | Fishcamp "Phao đài vs phao câu đêm" 2,58 Tr · 4 kênh | Mở đầu H2 → **bỏ** (Muse không sinh được) |
+| 2 · Tay cầm ngoài hồ | Fishcamp 8,34 Tr — nhưng hình là phao thường ban ngày, tiêu đề nhồi chữ | Loại — view không chứng minh phao điện |
+| 9 · Cá cắn, kéo cá | 1,28 Tr (251×) | Để dành — cần cảnh tay + cần + cá, rủi ro sinh cao |
+| Khung Giáng sinh Mỹ (01–03) | — | Loại — sai ngành |
+
+**Dự đoán của Săn xu hướng:** nghiêng ~60 % dạng 3 (H1) thắng dạng mẹo (H3) về xem 3 s · kiểm bằng số 48 h · hạn 25/11.
+
 ## 5. Hạn mức
 | | Ảnh | Clip | % |
 |---|---|---|---|

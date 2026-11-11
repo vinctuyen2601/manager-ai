@@ -49,12 +49,13 @@ Tổng: <%> · Dự phòng 10 %: <%> · Còn lại: <%>
 ```
 Mã món và trạng thái theo gói §7.3. Sau khuôn là phiếu giao chung.
 
-**Bản chi tiết trình sếp (12 mục, đi sau bản 1 trang trên)** — mẫu đầy đủ: `../../khach-hang/17fishing/viec/2026-11-11-phao-ro-diec-qc/BAN-TRINH.md`
+**Bản chi tiết trình sếp (12 mục + 4b, đi sau bản 1 trang trên)** — mẫu đầy đủ: `../../khach-hang/17fishing/viec/2026-11-11-phao-ro-diec-qc/BAN-TRINH.md`
 ```
 1. Bối cảnh        — sản phẩm, thị trường/kênh, hạn cứng, đã có gì, hạn mức
 2. Mục tiêu · đo   — mục tiêu có số + mốc đạt + đo bằng gì (trước đăng / sau đăng)
 3. Lịch theo ngày  — bảng Ngày · Phòng làm · Sếp làm (phút)
 4. Từng video      — thân chung theo giây + các kiểu mở đầu (khác cả HÌNH) + nguồn hình
+4b. Căn cứ xu hướng — điều rút ra (≥ 3 nguồn) · bảng dạng đã xét: bằng chứng (kênh, view) → chọn / mượn / loại + lý do · giới hạn dữ liệu · dự đoán của Săn xu hướng
 5. Hạn mức         — bảng ảnh/clip/% · × 1,3 · thứ tự tự cắt khi thiếu
 6. Nói / không nói — chép từ hồ sơ sản phẩm
 7. Rủi ro          — khả năng · ảnh hưởng · cách xử lý
