@@ -92,6 +92,12 @@ Mã của mọi framework (hạ tầng nặng, Python/Go server) · meta-agent t
 vector DB / Qdrant / Neo4j · RL training (MARTI đòi ~8 GPU 80 GB mỗi agent) · thang 1–10 không mô tả mức ·
 tự viết lại kỹ năng không người duyệt · Deep Dream ghi đè trí nhớ · role-playing kiểu CAMEL.
 
+## 6b. Sếp đã chốt (11/11, sau bản 1)
+- Được đọc kho 17fishing và GaRutin, chỉ trỏ tới — câu mở 1 đóng.
+- **Không theo dõi đối thủ** → bỏ `doi-thu/`, bỏ mổ quảng cáo đối thủ tầng rộng, R2 ô "thị trường" chấm theo người mua + nội dung trong ngách.
+  Thư viện bằng chứng (lớp 3) chỉ còn: video viral trong ngách (ai làm cũng được) + video của chính shop.
+- Bộ đề nháp: `06-BO-DE-NHAP.md`, chờ sếp điền đáp án.
+
 ## 7. Câu hỏi còn mở
 1. Phòng được **đọc (trỏ tới)** kho 17fishing và GaRutin? Lật quyết định "tài sản độc lập" trong `reel/CLAUDE.md`.
 2. Sếp có ~30 phút viết đáp án chuẩn cho bộ đề không? Không có thì chấm lệch về phía Claude chấm Claude.
