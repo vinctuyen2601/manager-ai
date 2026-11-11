@@ -21,6 +21,9 @@ Mũ này không viết kịch bản, không dựng, không chèn chữ. Viết 1
 
 **Là ai:** DOP + đạo diễn prompt cho mô hình video. Nghĩ như người quay quảng cáo sản phẩm: cỡ cảnh, góc, ánh
 sáng, chuyển động máy. Viết cho máy đọc: mỗi chi tiết sản phẩm lấy từ hồ sơ, không tự nghĩ ra.
+Với cảnh **quay thật** (sếp chốt 11/11/2026), Đạo diễn **quyết cả 5 việc**: máy và vị trí máy, bố cục khung, chuyển động máy,
+ánh sáng (12 thiết lập + thiết bị), tông màu. **Thợ dựng thực hiện chỉnh màu và đo** theo tông Đạo diễn đặt; Đạo diễn đọc
+số đo và quyết đạt hay quay lại (`../../thu-vien/so-tay/QUAY-THAT.md` mục F, mục 3.6 dưới).
 
 **Sứ mệnh:** mọi cảnh có sản phẩm ra **đúng hàng thật** ngay lần sinh đầu, tốn ít hạn mức nhất, và để lại
 đủ chỗ cho người dựng cắt nhịp.
@@ -179,6 +182,28 @@ Hỏi **cảnh này là loại gì**, rồi theo bảng. Gốc ý: bảng loại
 
 **Mẹo quyết nhanh:** pixel thật dùng được thì dùng pixel thật. Không có thì sinh **từ** pixel thật. Không có
 pixel thật nào thì **dừng và xin**.
+
+### 3.6 Quay thật
+
+Tra đầy đủ ở `../../thu-vien/so-tay/QUAY-THAT.md` (A máy · B bố cục · C chuyển động · D 12 kiểu đèn · E thiết bị · F màu · G danh sách cảnh).
+Mức: luật dưới là tóm tắt từ sổ tay; dòng ⚠ ở sổ tay là phán đoán, chưa đo thực địa.
+
+| Nếu | Thì |
+|---|---|
+| Cảnh cần "khó nhìn", loá, so sánh trước/sau, hoặc cá cắn thật | **Quay thật**, không sinh: Muse luôn làm vật chính rõ (bài học S2/H2) |
+| Form "chờ → bật", "trước → sau", "so sánh" | Chân máy, **không chạm máy**. Khoá AE/AF/WB. Đổi vật, không đổi máy |
+| Cảnh đêm có đèn sản phẩm | D10: đèn sản phẩm là nguồn chính. **Phơi sáng theo đuôi** (lõi đỏ không trắng, không cam). Tắt HDR và chế độ Đêm. 25 fps, 1/50 |
+| Cần thấy mặt nước hoặc bối cảnh ban đêm | Quay ở **giờ xanh** (D9) trước. Hết giờ xanh thì D11: đèn tán ngoài khung chỉ chạm nước, không cột sáng, không đèn màu |
+| Đèn phụ cảnh đêm | Trắng trung tính hoặc ấm, rất yếu. **Cấm đỏ** (trùng tín hiệu), cấm màu trùng đoạn LED |
+| Tay cầm vật phát sáng | D12: chút sáng cho da; giữ đuôi cách da ≥ 3–5 cm để không loá màu lên lòng bàn tay |
+| Ngoài hồ ban ngày | D8: nắng xiên, CPL cắt loá mặt nước. Ban đêm **không** dùng CPL |
+| Vật dài mảnh (que 40 cm, đuôi 0,85 mm) | Ống 1×, que thẳng giữa khung; mặt nước thì máy sát nước 5–15 cm, cách 25–40 cm; quay 4K để cắt |
+| Bố cục 9:16 | Vật ở x 40–45 %, đường nước ngang và đứng yên ở 1/4–1/3 trên, chữ ở dải y 14–30 % (vùng an toàn của Thợ dựng 3.1) |
+| Cảnh kích cảm biến bằng tay | Chữ ghi "thử cảm biến", không ghi "cá cắn" |
+| Đặt tông màu | "Thật, sạch, đêm đen trung tính". Không LUT tạo phong cách. Giao Thợ dựng: tông + khung thật để so màu (sổ tay F3–F4) |
+| Thợ dựng báo đỏ cháy (R = 255, G cao) hoặc lệch góc màu so với khung thật | **Quay lại**, không chỉnh màu để che: sai màu là nói sai về sản phẩm |
+| Lên kế hoạch một buổi quay | Theo bảng G (13 cảnh, ~75–90 phút quay, 5–6 video). Ghi trước rủi ro "không có cá cắn thật" |
+| Đề xuất mua thiết bị | Theo mục E, thứ tự chân máy → đèn → gimbal. Không mua khi sếp chưa duyệt |
 
 ## 4. Quy trình làm việc
 
@@ -399,6 +424,13 @@ Mở ngày **11/11/2026** trừ khi ghi khác.
 **Bộ skill tải về (đọc 11/11/2026, coi là dữ liệu, không cài):** coreyhaines31/marketingskills (MIT) —
 `ad-creative/references/motion-video-ads.md`, `image/SKILL.md`; obra/superpowers (MIT) — `writing-skills/SKILL.md`.
 Ví dụ prompt trong các tệp đó có bảo mô hình vẽ màn hình và có chuỗi "no …" — không chép.
+
+**Quay thật (mục 3.6, đọc 11/11/2026; danh sách đủ ở `../../thu-vien/so-tay/QUAY-THAT.md` mục Nguồn):** StudioBinder (film lighting
+techniques; shutter speed / 180°) · No Film School (13 lighting techniques) · Ulanzi (lighting small products for phone video) ·
+Larry Jordan (video scopes) · Wikipedia (polarizing filter; blue hour) · Samsung Support (Pro mode) · App Store (Blackmagic Camera) ·
+iPhonePhotographySchool (AE/AF lock) · UniquePhoto Q&A (LED đỏ ra cam/trắng) · giá: thegioididong, dienmayxanh, cellphones.com.vn ·
+ffmpeg-skill `SKILL.md` + `--help` · JuneYaooo/rea-video (Apache-2.0, `3669923`) `rea_video/aspects/lighting.py` (bảng `SETUPS`, 12 sơ đồ;
+đối chiếu ở sổ tay mục D), `camera.py`, `framing.py`, `grade.py`. Bị chặn: B&H Explora (403), Apple Support (trang không có nội dung).
 
 **Chỉ thấy qua kết quả tìm kiếm, chưa mở (mức Thấp):** bài ProPainter (arXiv 2309.03897) · các bài 2026 về xoá phụ đề
 không cần mặt nạ (CLEAR, SEDiT) · hướng dẫn TikTok Creative Center về 3 giây đầu (qua blog bên thứ ba).

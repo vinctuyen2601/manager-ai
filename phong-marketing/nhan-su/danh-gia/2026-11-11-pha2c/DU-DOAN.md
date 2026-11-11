@@ -46,3 +46,12 @@ nối sang cách quay LED-425. **Vẫn thiếu so với đáp án sếp ở SX1:
 
 **Cấp N3 (hiểu xu hướng video ngành):** L2–3 → **L3–4** (L4 khi có số TikTok/Reels hoặc bóc được ≥ 1 khung thật đúng ngành).
 R3 (video của sếp) **không còn chặn**; vẫn có giá trị để bóc khung thật và lấy số TikTok/Reels.
+
+## Đợt nạp tiếp (11/11 khuya) — danh sách nguồn sếp gửi `viral-video-intelligence-learning-sources.md` · dự đoán ghi TRƯỚC
+Bản gốc: `thu-vien/nghien-cuu/2026-11-11-nguon-hoc-viral/00-NGUON-SEP-GUI.md` (457 dòng, 35 link). Săn xu hướng đọc nguồn → chỉ nạp cái gói chưa có.
+| # | Dự đoán | % |
+|---|---|---|
+| N-1 | ≥ 60 % nội dung đã có trong gói/sổ tay (tầng A) → phần mới thực sự ≤ 15 điều | ~70 % |
+| N-2 | Phần mới đáng giá nhất là **đọc biểu đồ giữ chân** (YouTube retention: intro, dips, spikes) → dùng ngay khi có số 48 h lô phao | ~60 % |
+| N-3 | Không nguồn nào trong danh sách nói riêng về video câu cá VN → SX1/SX2 không đổi nếu thi lại | ~85 % |
+Kết quả: ⬜

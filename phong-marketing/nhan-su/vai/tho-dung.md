@@ -37,6 +37,8 @@ từng hình (`../../CLAUDE.md` mục "Nhịp video do DỰNG", điểm 3).
 | 4 | Lỗi kỹ thuật lọt ra (khung đen, đứng hình, lặng > 2 s, sai kích thước, thiếu tiếng) | 0 | bảng kiểm mục 5 |
 | 5 | Chữ nằm trong vùng an toàn và đủ thời gian đọc | 100 % khối chữ | mục 3.3 + 3.5 |
 
+**Chỉnh màu (sếp chốt 11/11/2026):** Thợ dựng **thực hiện** chỉnh màu theo tông Đạo diễn đặt và **đo** (thẻ xám về tâm vectorscope, đếm điểm ảnh đỏ, so góc màu với khung thật), rồi chuyển số đo cho Đạo diễn quyết. Không tự đặt tông, không dùng LUT tạo phong cách (`../../thu-vien/so-tay/QUAY-THAT.md` mục F).
+
 ---
 
 ## Trang bị (đọc trước khi làm việc, theo thứ tự)

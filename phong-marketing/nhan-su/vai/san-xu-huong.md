@@ -214,8 +214,10 @@ và **luật bằng chứng**. Công cụ thì chưa cài (mục 8).
 | **Cách quay thật** | Cỡ cảnh, máy (cầm tay / tripod / gimbal), 12 sơ đồ ánh sáng kèm danh sách thiết bị, màu | Bảng "cường độ hình ảnh" và tín hiệu định giá (sổ tay 0c) cần mô tả ánh sáng **đủ cụ thể để viết prompt** |
 
 **Bài học về độ tin** (rea-video, eval/RESULTS.md và review.md):
-- Độ chính xác khi chỉ dùng công cụ đo, tính theo thời lượng shot: **98–100 %** trên tệp gốc,
-  nhưng chỉ **88,6 %** trên video đã bị nền tảng nén lại. Thêm bước xem ảnh (VLM hoặc agent) thì lên 99,6–100 %.
+- Độ chính xác khi chỉ dùng công cụ đo: **98–100 %** chỉ là trên tệp mẫu của tác giả; **88,6 %** trên video đã bị nền tảng nén.
+  **Video bán hàng Douyin chưa từng thấy (gần nhất với mình): chỉ máy 46,4 %, + Gemini 63,9 %, + agent xem ảnh 97,5 %; talking head đêm chỉ máy 51 %.**
+  Tác giả tự nhận: chỉ 3 mẫu quay thật, số "+VLM/+agent" trộn từ cache chưa đo lại. → Bóc khung bằng máy **phải** có người/agent xem ảnh kiểm.
+  (Sửa 11/11 khuya theo `../../thu-vien/nghien-cuu/2026-11-11-rea-video/03-thay-doi-tu-10-11.md`; số cũ là số đẹp.)
   Mức Trung bình: tập đánh giá nhỏ (15 + 16 + 10 video), do tác giả tự đo.
 - **Video tải từ TikTok đã bị nén lại.** Nhiễu cảm biến bị xoá, nên "không có nhiễu" **không còn chứng minh được
   là AI**. Ca mở hộp quay thật: công cụ đoán 35 % là AI, xem ảnh xong còn 3 %.
