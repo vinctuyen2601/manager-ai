@@ -16,7 +16,8 @@
 - (cũ) **Pha 2b, không còn chặn:** gửi 3–5 video câu cá VN nhiều lượt xem vào `~/Downloads` (ưu tiên: phao điện/câu đêm cận lúc cá ăn ·
   so độ nhạy 2 phao · 1 video "câu xong nấu tại chỗ" hoặc "câu đài thi đấu"), kèm ảnh chụp lượt xem + số theo dõi nếu được.
   → Săn xu hướng bóc thành khung `thu-vien/khung/` đúng ngành (gắn ngành do-cau-vn) → thi lại SX1 (đáp án sếp ở `nghien-cuu/.../08-DAP-AN-SEP-KIN.md`, đề kín).
-- Sau 2b: pha 3 (thi lại toàn bộ → đạt thì chạy tiếp luồng phao từ bước 3, `khach-hang/17fishing/viec/2026-11-11-phao-ro-diec-qc/`), pha 4 (sổ kinh nghiệm).
+- **11/11 tối, máy Windows: sếp bỏ pha 3, chạy luồng phao ra kết quả rồi look back.** Luồng tới bước 7 (03b→07b); dừng trước Muse vì ảnh mẫu thật + video shop chỉ ở máy Linux — đọc `00-dieu-phoi.md` dòng cuối.
+- (cũ) Sau 2b: pha 3 (thi lại toàn bộ → đạt thì chạy tiếp luồng phao từ bước 3, `khach-hang/17fishing/viec/2026-11-11-phao-ro-diec-qc/`), pha 4 (sổ kinh nghiệm).
 - Sổ dự đoán: `khach-hang/17fishing/kinh-nghiem/DU-DOAN.md` (D-01 QF-02 bán chạy nhất, D-02 kèm chì dây thấp — hạn 15/12).
 - ✅ Xong 11/11 chiều: freeship = **150k** (sếp + cấu hình máy chủ) · TRANG phao đã thêm 4 sự thật (sao lưu bản trước ở scratchpad phiên).
 - Ghi ngoài phòng: bảng từ khoá Search Console 17fishing không đồng bộ từ 22/09 (bảng theo trang vẫn mới) — kiểm việc đồng bộ.
