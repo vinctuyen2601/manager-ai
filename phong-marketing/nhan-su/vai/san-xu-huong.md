@@ -97,7 +97,7 @@ cùng tài khoản, hoặc có nhiều nguồn thực hành cùng chiều) · **
 - Lọc được theo Region, Industry, Campaign Objective, Likes và Time frame. Trên máy tính lọc thêm được
   Ad language và Ad format. Tìm được theo sản phẩm hoặc từ khoá.
 - Sắp xếp được theo Reach, CTR, tỉ lệ xem 2 giây, tỉ lệ xem 6 giây. Trên máy tính có thêm CVR và Likes.
-- **Phải đăng nhập.** Không đăng nhập thì chỉ thấy 5 quảng cáo.
+- **Muốn xem đủ thì phải đăng nhập.** Không đăng nhập thì chỉ thấy 5 quảng cáo. *(Sửa 11/11, theo trang help "About Creative Center": "a login is not required to access Creative Center", nhưng muốn có đủ tính năng và dữ liệu thì phải đăng nhập. Trang "How to use Trends" ghi bước 1 là đăng nhập. Mức Cao.)*
 - "See Analytics" cho xem **biểu đồ hiệu quả theo từng giây** để tìm khoảnh khắc người xem tương tác nhiều nhất.
   → Vai dùng nó để **kiểm mốc cú bật / cú trả lời** mà mình bóc ra có trùng với đỉnh tương tác không.
 - Quảng cáo trong Top Ads đều do nhà quảng cáo **cho phép hiển thị**. Nghĩa là đây là mẫu đã qua tay chọn,
@@ -274,6 +274,22 @@ Nguồn: `../../thu-vien/so-tay/video-trends-kb-v0.1.md` (sếp gửi 11/11/2026
 | Ô số liệu không thấy được trên nguồn | Ghi `chưa thấy`, không ước. Số xem luôn đi kèm **ngày đọc** |
 | So hiệu quả nhiều video | So cùng nền tảng, cùng mục tiêu, cùng khoảng thời gian; nhìn **trung vị**, không nhìn video tốt nhất. View cao ≠ bán được |
 | Lấy trend từ ngành khác | Không mặc định chạy được ở ngành mình (cùng ý `../../quy-che/LUAT-CHUNG.md` mục 4). Tách cơ chế lõi, viết ≥ 3 cách chuyển, ghi rủi ro |
+| Gặp một hệ phân loại format mới (vd 5 nhóm A–E / 33 dạng trong nguồn sếp gửi 11/11) | **Không lập danh sách thứ tư.** Gắn từng dạng mới vào **dạng ngành** (`video-nganh.md`, 12 dạng có bằng chứng) và **form nhịp** (5 form trên trang trực quan). Dạng không gắn được thì ghi "ứng viên" kèm lý do, chờ ≥ 3 nguồn ngành. Bảng gộp: `../../thu-vien/nghien-cuu/2026-11-11-nguon-hoc-viral/01-DOI-CHIEU.md` mục 3 · nguồn tự lập · Thấp |
+
+### 3.11 Đọc số 48 h của một lô (TikTok / Reels): mượn cách đọc đường giữ chân của YouTube
+Nguồn kiến thức: sổ tay mục 8.1 (YouTube Help, mức Cao). Áp cho video 8–15 s là **phán đoán của vai**: mốc 30 s của YouTube không dùng nguyên được.
+Ô số lấy theo khuôn `../../quy-che/khuon/so-lieu-sau-dang.md`.
+
+| Nếu | Thì |
+|---|---|
+| Đọc số một bản | Tách **3 câu hỏi**, không gộp thành một điểm: **dừng** = xem ≥ 3 s ÷ lượt xem (đây là "intro" thu nhỏ; lượt xem được đếm ngay lúc video bắt đầu phát) · **ở lại** = thời lượng xem TB ÷ độ dài nội dung thật, cộng xem hết ÷ lượt xem · **làm gì** = bình luận, chia sẻ, khách hỏi Zalo. Mức: Cao (định nghĩa) · Thấp (cách áp) |
+| So hai bản trong lô | So **tỉ lệ**, không so số đếm, vì mỗi bản được phát cho một số người khác nhau. Chỉ so bản **cùng nền tảng, cùng nguồn** (tự nhiên với tự nhiên, chạy tiền với chạy tiền) và **độ dài gần nhau**. Mốc lâu dài là trung vị ≥ 10 bài cùng độ dài của chính page. Chưa có mốc đó thì so với bản đối chứng cùng lô. YouTube Help · Cao |
+| Một bản < 100 lượt xem | Ghi số, **không** kết luận về đường giữ chân hay điểm rơi. Mượn ngưỡng YouTube dùng để vẽ khoảnh khắc. Phán đoán · Thấp |
+| Thời lượng xem TB > độ dài video, hoặc đồ thị có chỗ dồn lên | Có người **xem lại**. Chưa được ghi là điểm mạnh: YouTube nói spike có thể là "content wasn't clear". Đọc bình luận trước. Thấy "đâu?", "không thấy", "AI à" thì đó là **khó hiểu**. Ví dụ: H1 đổi đỏ ở 1,4 s, có thể quá nhanh. YouTube Help · Cao (hai nghĩa) |
+| Đồ thị có điểm rơi | Ghi giây, đặt cạnh bảng cảnh của khung. Rơi ngay sau cú bật = trả lời sớm hoặc hết lý do ở lại (sổ tay 0b). Rơi đúng chỗ nối hai nguồn hình (Muse → video shop) = nối lệch. Phán đoán · Thấp |
+| "Dừng" tốt mà "ở lại" kém | Hook đúng, thân hỏng: giữ hook, sửa thân. Ngược lại thì thử hook mới (3.5, cách chẩn đoán của Runneth) |
+| Nền tảng chỉ cho số tổng, không cho đồ thị | Ô đồ thị ghi `chưa thấy`. Không suy hình dạng đường từ số tổng |
+| Chạy tiền cho một lô | TikTok khuyên 5–10 bản cho mỗi nhóm QC (sổ tay 8.4). Lô 3 bản thì ghi rõ "ít biến thể" khi kết luận |
 
 ---
 
@@ -362,11 +378,14 @@ Thêm nếu có: link, view, follower, ngày đăng, nguồn (Top Ads / Ad Libra
 Nhãn: dạng-nội-dung=<unboxing+ugc_authentic…> (mục 3.8) · hook=<dạng1+dạng2> (sổ tay 7.4) · ngành=<…>
 · khuyến-mãi=<time_limited/không> · khung-kịch-bản=<hook_body_cta/…> · angle=<…> · mùa=<Giáng sinh/quanh năm/…>
 · bão hoà=<chưa/đang/đã> · thân=<riêng | = khung MM> · nguồn=<Top Ads/Ad Library/feed/sếp gửi>
+· nền tảng=<TikTok/Reels/Shorts> · ngôn ngữ=<…> · mục tiêu=<nhận biết/dạy/giải trí/chốt đơn> · dạng ngành=<số dạng trong video-nganh.md> · form=<1–5>
+(5 ô cuối thêm 11/11, theo schema mục 7 của nguồn sếp gửi; xem `../../thu-vien/nghien-cuu/2026-11-11-nguon-hoc-viral/01-DOI-CHIEU.md`)
 
 Bóc <ngày> từ <tệp>. Bản chép: thu-nghiem/khung/reel-NN/goc.mp4 (gitignore).
 
 ## Bằng chứng viral (không bắt buộc)
-| Nguồn · tài khoản · loại (quảng cáo hãng / UGC) | Link | View · follower · ngày | Dấu hiệu khác (chạy N ngày, N phiên bản) |
+| Nguồn · tài khoản · loại (quảng cáo hãng / UGC) | Link | View · thích · bình luận · chia sẻ · follower | **Ngày đăng · ngày đọc số** (hai ngày riêng) | Dấu hiệu khác (chạy N ngày, N phiên bản) |
+Thêm nếu có: **một video cùng kênh, cùng dạng mà kém hơn** để đối chứng (3.3). **Đường giữ chân** (Top Ads "See Analytics", hoặc số của chính mình): mốc rơi và mốc dồn lên, kèm nguồn (3.11).
 
 ## Đo bằng máy
 Kỹ thuật · nội dung thật 0–X s · điểm cắt (đã xác nhận ✅/✗) · bật sáng · âm lượng · lời theo từ.
@@ -519,6 +538,7 @@ Gặp lỗi mới thì thêm một dòng vào đây (đây là "bộ nhớ sửa
 - TikTok, How to use the Top Ads Dashboard — https://ads.tiktok.com/resources/help/article/how-to-use-the-top-ads-dashboard?lang=en
 - TikTok, Trends — https://ads.tiktok.com/help/article/how-to-use-trends · https://ads.tiktok.com/help/article/trend-discovery?lang=en
 - Meta Transparency Center, Ad Library tools — https://transparency.meta.com/en-us/researchtools/ad-library-tools
+- TikTok, About Creative Center — https://ads.tiktok.com/help/article/creative-center?lang=en (11/11, mục 3.2 sửa) · YouTube Help 9314415 / 9313698 / 12942217 (mục 3.11, qua sổ tay 8.1)
 - U.S. Copyright Office, FAQ "What does copyright protect?" — https://www.copyright.gov/help/faq/faq-protect.html
 - NRF, dự báo mùa lễ 2026 (15/10/2026) — https://nrf.com/media-center/press-releases/nrf-forecasts-2026-holiday-sales-growth-as-consumers-remain-resilient
 

@@ -259,7 +259,7 @@ lo**) — được chia sẻ nhiều hơn; cảm xúc **kích thích thấp** (b
 không giải thích đủ ([toàn văn](https://faculty.wharton.upenn.edu/wp-content/uploads/2011/11/Virality.pdf)).
 Lưu ý: dữ liệu là **bài báo chữ**, không phải video ngắn.
 → Đích của cú trả lời: **kinh ngạc / phấn khích / buồn cười**, không phải "dễ chịu". Với hàng quà tặng
-mình không dùng giận/lo.
+mình không dùng giận/lo. *(11/11/2026: số liệu từng cảm xúc, "giá trị thực tiễn +30 %", và sửa câu "dễ chịu không lan" thành phán đoán, xem mục 8.2.)*
 
 **9. "Ấn tượng" có tên khoa học: kinh ngạc (awe) = bao la + phải nghĩ lại.**
 Keltner & Haidt (2003): mọi trải nghiệm kinh ngạc có hai thành phần — **cảm nhận sự bao la** (lớn hơn
@@ -592,3 +592,75 @@ Lô thứ hai (khi lô 1 có câu thắng) đổi trục **độ cụ thể**: `
 - geethikaisuru, [archetypes.md + anti-patterns.md](https://github.com/geethikaisuru/viral-hook-writer-for-textheavy-formats) (12 dạng hook chữ, 14 kiểu hook chết)
 - Blog thực hành (ý kiến người làm, không phải số đo): [sovran.ai — pattern interrupt](https://sovran.ai/blog/pattern-interrupt-techniques), [zeely.ai — scroll-stopping hooks](https://zeely.ai/blog/7-scroll-stopping-hooks/), [gethookd.ai — TikTok in-feed ads](https://www.gethookd.ai/learn/6-effective-tiktok-in-feed-ads-examples-to-try-in-2026/), [imagine.art — TikTok ad hooks](https://www.imagine.art/blogs/tiktok-ad-hooks)
 - Brendan Kane, *Hook Point* — chỉ đọc được bản tóm tắt ([Blinkist](https://www.blinkist.com/en/books/hook-point-en)); không có danh mục dạng hook đáng tin → không dùng
+
+---
+
+## 8. Đọc số sau khi đăng: đường giữ chân, và vì sao người ta chia sẻ (đọc 11/11/2026)
+
+Nạp từ danh sách nguồn sếp gửi (`../nghien-cuu/2026-11-11-nguon-hoc-viral/`, đối chiếu ở `01-DOI-CHIEU.md`). Chỉ ghi điều
+mục 0–7 **chưa có**. Còn cách vai đọc số 48 h của một lô thì ghi ở gói Săn xu hướng mục 3.11, không chép lại ở đây.
+
+### 8.1 Đường giữ chân: YouTube định nghĩa thế nào (mức Cao, trang trợ giúp chính thức)
+- **Bốn hình dạng.** Đường *phẳng* là người xem xem trọn đoạn đó. Đường *giảm dần* là bình thường, vì "videos generally taper off".
+  *Dồn lên* (spike) là đoạn được xem lại hoặc được chia sẻ. *Rơi* (dip) là đoạn bị tua qua hoặc bị bỏ.
+- **Spike có hai nghĩa.** Có thể là đoạn đáng xem, cũng có thể là "content wasn't clear", tức người xem phải xem lại vì không hiểu.
+  → Một spike chưa phải điểm mạnh khi chưa loại được khả năng thứ hai.
+- **Intro** là tỉ lệ người còn xem sau **30 s**. Video có ≥ **50 %** còn xem ở mốc đó được xếp "above typical".
+  Intro tốt nghĩa là phần mở **khớp với tiêu đề và ảnh bìa**: lời hứa ở bìa phải được giữ ngay trong phần mở (cùng ý mục 7.1, "lệch").
+- **Top moments** là đoạn gần như không ai bỏ. Nếu nó nằm cuối video thì nên đưa phần hay lên sớm hơn, vì khán giả luôn mỏng dần về cuối.
+- **Mốc để so** ("typical retention") là **10 video gần nhất có độ dài tương đương** của chính kênh. YouTube cũng dặn chỉ so
+  **video cùng loại**, vì người xem cư xử khác nhau theo định dạng. Cùng chiều với mục 5b và gói 3.3, nhưng thêm điều kiện **cùng độ dài**.
+- **Ngưỡng hiển thị:** YouTube chỉ đánh dấu các khoảnh khắc khi video dài **≥ 60 s** và có **≥ 100 lượt xem**.
+  Đường giữ chân tách được theo người xem mới / cũ, có / chưa đăng ký, và **tự nhiên / trả tiền**.
+- **Mẫu số khác nhau.** YouTube đếm một lượt xem "the moment a video starts to play". Thời lượng xem trung bình thì tính trên
+  "engaged views". Bên thứ ba ghi Instagram tính thời lượng xem trung bình = tổng thời gian xem ÷ lượt phát đầu; tử số có cả lượt xem lại
+  nên con số **có thể lớn hơn độ dài video** (mức Thấp, trang trợ giúp Instagram trả về trống). → Không so thẳng số của hai nền tảng (VK10).
+
+**Giới hạn khi áp cho máy:** mọi mốc trên là của video YouTube dài. Video của máy dài 8–15 s, nên mốc 30 s và ngưỡng 60 s
+**không dùng được nguyên**. Thứ mang sang được là **cách đọc**: hình dạng, hai nghĩa của spike, so cùng độ dài, tách theo nguồn.
+
+### 8.2 Số của Berger & Milkman, và "giá trị thực tiễn" (mức Cao, nhưng dữ liệu là bài báo chữ)
+Đọc bản toàn văn tác giả đăng ở Wharton (bản "Ahead of Print" 2011; JMR 2012). Dữ liệu là **6956 bài** trên trang chủ New York Times
+từ 30/8 đến 30/11/2008. 20 % số bài lọt danh sách "most e-mailed" (tr. 2–3). Kết quả: tăng 1 độ lệch chuẩn thì xác suất lọt danh sách
+thay đổi như sau (Hình 2, tr. 8):
+
+| Đặc điểm (+1 SD) | Thay đổi | | Đặc điểm (+1 SD) | Thay đổi |
+|---|---|---|---|---|
+| Giận | **+34 %** | | Cảm xúc nói chung | +18 % |
+| Kinh ngạc (awe) | **+30 %** | | Bất ngờ | +14 % |
+| **Giá trị thực tiễn** | **+30 %** | | Tích cực | +13 % |
+| Thú vị (interest) | +25 % | | Buồn | **−16 %** |
+| Lo âu | +21 % | | *Thời gian nằm đầu trang chủ* | +20 % |
+
+- Tác động của "giận +34 %" ngang với việc nằm thêm **2,9 giờ** ở vị trí bài chính trang chủ (tr. 8).
+  → **Nội dung nặng ký ngang chỗ đặt.** Đây là bằng chứng có số cho mục 5b: phân phối quan trọng, nhưng không phải tất cả.
+- Hai thí nghiệm (tr. 8–10: N = 49 với "buồn cười"; với "giận", N ≈ 45 suy từ bậc tự do F(1, 43)) cho thấy **mức kích thích** là thứ trung gian dẫn tới việc chia sẻ.
+  Nói cách khác, **buồn cười** cũng là cảm xúc kích thích cao.
+- **Điều mục 0d.8 bỏ sót: giá trị thực tiễn (+30 %) mạnh ngang kinh ngạc**. Cả hai cùng nằm trong một mô hình và đều dương (tóm tắt: kết quả về cảm xúc giữ nguyên khi đã kiểm soát mức bất ngờ, thú vị, hữu ích).
+  → Với hàng của máy, video **mẹo / hướng dẫn** (dạng 4 trong `../nganh/do-cau-vn/video-nganh.md`, form 5 "Mẹo") là
+  **lý do chia sẻ có số**, không chỉ là video "nuôi page". ⚠ Chưa kiểm trên video ngắn. Đây là phán đoán: rút từ bài báo chữ.
+- **Sửa mục 0 ("Để lại") và 2E:** câu "'dễ chịu' thì không lan" **chưa được đo trực tiếp**. Nghiên cứu này chỉ đo *buồn*, là cảm xúc
+  kích thích thấp và tiêu cực. Mức thoả mãn / dễ chịu (thấp, tích cực) không có trong dữ liệu của họ. Coi câu đó là phán đoán.
+
+### 8.3 Video viral: Guadagno và cộng sự 2013 (mức Trung bình: thí nghiệm sinh viên, đo ý định chứ không đo hành vi)
+Trang ScienceDirect chặn (403). Đọc qua bài tóm tắt của BPS Research Digest và bài blog của chính tác giả đầu (Psychology Today, 5/4/2013).
+- **Nghiên cứu 1:** 256 sinh viên, mỗi người xem 1 trong 10 video từng nổi trên YouTube 2005–2007 (dễ thương, buồn cười, ghê, gây giận, và
+  2 video nhạt để đối chứng). Video **dễ thương và buồn cười** được định chuyển tiếp nhiều nhất. Cảm xúc tích cực đi cùng chiều với ý định
+  chuyển tiếp, cảm xúc tiêu cực đi ngược chiều. Dù vậy, video ghê và video gây giận vẫn **hơn video nhạt**.
+  Thứ tự: tích cực > tỉnh táo/chú ý > kích thích tiêu cực > nhạt.
+- **Nghiên cứu 2:** 163 sinh viên. Video gây giận được chuyển tiếp nhiều hơn khi **nguồn đăng là người ngoài nhóm** (trường đối thủ).
+  → **Ai đăng** cũng làm đổi hành vi chia sẻ, không chỉ nội dung. Cùng chiều với mục 5b, phát hiện 4.
+- Giới hạn tác giả tự ghi: mẫu là sinh viên, ít video, chỉ là **ý định** chuyển tiếp.
+- → Với máy: cú trả lời nên nhắm tới **thích thú / buồn cười / kinh ngạc**. Không dùng giận hay ghê (đã có ở 0d.8, nay thêm một nguồn đo trên video).
+
+### 8.4 Số lượng biến thể khi chạy quảng cáo (mức Cao về khuyến nghị; nền tảng có lợi khi mình làm nhiều)
+TikTok for Business (trang công cụ sáng tạo, bản tiếng Việt): **5–10 nội dung sáng tạo cho mỗi nhóm quảng cáo, 3–5 nhóm cho mỗi chiến dịch**.
+Khi thử nghiệm thì dùng các ý tưởng **khác biệt rõ rệt**. Trang này không cho số giữ chân hay độ dài.
+→ Khớp với mục 4 và 7.6 (một thân × nhiều hook). Lô 3 bản là **ít hơn mức nền tảng khuyên** nếu chạy tiền. Đăng tự nhiên thì không áp.
+
+### Nguồn mục 8 (mở ngày 11/11/2026)
+- YouTube Help: [Measure key moments for audience retention](https://support.google.com/youtube/answer/9314415?hl=en) · [Understand your YouTube engagement](https://support.google.com/youtube/answer/9313698?hl=en) · [Content tab tips](https://support.google.com/youtube/answer/12942217?hl=en) (phần Shorts của trang này máy không đọc tới)
+- Berger & Milkman, [toàn văn bản tác giả](https://faculty.wharton.upenn.edu/wp-content/uploads/2011/11/Virality.pdf) (DOI 10.1509/jmr.10.0353. Trang SAGE không trả nội dung)
+- Guadagno et al. 2013, DOI 10.1016/j.chb.2013.04.016. ScienceDirect 403, Semantic Scholar ghi tóm tắt bị nhà xuất bản ẩn. Đọc qua [BPS Research Digest](https://bps.org.uk/research-digest/what-makes-internet-video-go-viral) và [Psychology Today (Guadagno)](https://www.psychologytoday.com/us/blog/why-people-click/201304/what-makes-videos-go-viral)
+- TikTok for Business, [Công cụ sáng tạo](https://ads.tiktok.com/business/vi/products/creative)
+- Instagram, cách tính thời lượng xem trung bình: chỉ có nguồn thứ ba qua kết quả tìm kiếm (metricool, sociality.io). Trang help.instagram.com trả về trống

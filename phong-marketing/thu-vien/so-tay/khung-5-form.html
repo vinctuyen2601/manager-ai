@@ -1,0 +1,158 @@
+<title>Khung 5 form video</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: mỗi form là một "dải thời gian" ngang chia theo giây thật, như thanh dựng video; ghi chú bên dưới */
+:root{
+  --bg:#f3f6f6; --panel:#ffffff; --fg:#14232a; --muted:#5b6d73; --line:#d5dfe1;
+  --c-dung:#2f6f8f; --c-hua:#6b5bb5; --c-cho:#8a9aa0; --c-bat:#d6332b; --c-ket:#c08a1e; --c-chung:#3d8a5f;
+  --on-seg:#ffffff;
+  --f-body:"Be Vietnam Pro", system-ui, sans-serif; --f-mono:"IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0b1418; --panel:#122027; --fg:#e4eef0; --muted:#93a8ae; --line:#24363d;
+  --c-dung:#3f8db3; --c-hua:#8a7ad6; --c-cho:#55676d; --c-bat:#ff4a3d; --c-ket:#d9a43a; --c-chung:#4fa676; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b1418; --panel:#122027; --fg:#e4eef0; --muted:#93a8ae; --line:#24363d;
+  --c-dung:#3f8db3; --c-hua:#8a7ad6; --c-cho:#55676d; --c-bat:#ff4a3d; --c-ket:#d9a43a; --c-chung:#4fa676; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.55}
+.wrap{max-width:1040px;margin:0 auto;padding-block:28px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:22px}
+h1{font-size:clamp(24px,4vw,34px);font-weight:800;letter-spacing:-.01em;margin:0;text-wrap:balance}
+.lead{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:14px;height:14px;border-radius:3px;display:inline-block}
+.note{font-size:13px;color:var(--muted);border-left:3px solid var(--c-bat);padding:4px 10px;max-width:80ch}
+.form{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:12px;min-width:0}
+.head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.head h2{margin:0;font-size:19px;font-weight:700}
+.tag{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.why{margin:0;color:var(--muted);font-size:14px;max-width:80ch}
+.scroll{overflow-x:auto}
+.track{min-width:560px;display:grid;gap:4px}
+.bar{display:flex;height:58px;border-radius:6px;overflow:hidden}
+.seg{display:flex;flex-direction:column;justify-content:center;padding:0 8px;color:var(--on-seg);font-size:12.5px;line-height:1.25;min-width:0;border-right:2px solid var(--panel)}
+.seg:last-child{border-right:0}
+.seg b{font-weight:700;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg i{font-style:normal;opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg.loi{box-shadow:inset 0 -5px 0 rgba(255,255,255,.55)}
+.ruler{position:relative;height:18px;font-family:var(--f-mono);font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ruler span{position:absolute;transform:translateX(-50%)}
+.ruler span:first-child{transform:none}
+.ruler span:last-child{transform:translateX(-100%)}
+.ex{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;font-size:13.5px}
+.ex div{min-width:0}
+.ex .k{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:600}
+.c-dung{background:var(--c-dung)}.c-hua{background:var(--c-hua)}.c-cho{background:var(--c-cho)}.c-bat{background:var(--c-bat)}.c-ket{background:var(--c-ket)}.c-chung{background:var(--c-chung)}
+footer{font-size:13px;color:var(--muted)}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Khung video của 5 form</h1>
+    <p class="lead">Mỗi dải là một video chia theo giây thật. Màu cho biết nhịp đang làm việc gì. Vạch trắng dưới ô = <b>LÕI</b> (bỏ là hỏng form); ô không vạch đổi được theo sản phẩm. Ví dụ lấy từ ngành đồ câu VN và phao LED-425.</p>
+  </header>
+
+  <div class="legend" aria-label="Chú giải màu">
+    <span><i class="sw c-dung"></i>Dừng tay (khung đầu)</span>
+    <span><i class="sw c-hua"></i>Hứa / đặt câu hỏi</span>
+    <span><i class="sw c-cho"></i>Chờ / dẫn</span>
+    <span><i class="sw c-bat"></i>Bật / trả lời</span>
+    <span><i class="sw c-chung"></i>Bằng chứng</span>
+    <span><i class="sw c-ket"></i>Kết / hành động</span>
+  </div>
+
+  <p class="note">Giây trong các khung là <b>trung bình ước</b> từ sổ tay và ảnh khung YouTube, chưa bóc từ video thật của ngành (0 khung đồ câu đã đo). Khi có 3 video mẫu mỗi form, Săn xu hướng thay bằng trung vị đo thật.</p>
+
+  <!-- FORM 1 -->
+  <section class="form" aria-labelledby="f1">
+    <div class="head"><h2 id="f1">1 · Chờ → bật (đoán nhịp)</h2><span class="tag">9–15 s · không lời · dạng 3 "cận cảnh nhịp phao"</span></div>
+    <p class="why">Giữ người xem bằng trò đoán: họ ở lại để biết mình đoán đúng không. Cú bật phải đến <b>muộn</b>, khoảng 60 % độ dài.</p>
+    <div class="scroll"><div class="track">
+      <div class="bar">
+        <div class="seg c-dung loi" style="flex:2"><b>Phao đứng yên</b><i>mặt hồ thật</i></div>
+        <div class="seg c-hua loi" style="flex:1"><b>Chữ đoán</b><i>"Nhịp này diếc ăn chưa?"</i></div>
+        <div class="seg c-cho loi" style="flex:3"><b>Chờ</b><i>nhấp khẽ, sóng lăn tăn</i></div>
+        <div class="seg c-bat loi" style="flex:1.5"><b>BẬT</b><i>cả đuôi đỏ</i></div>
+        <div class="seg c-chung" style="flex:1.5"><b>Trả lời</b><i>"Cá cắn là đuôi chuyển đỏ"</i></div>
+        <div class="seg c-ket" style="flex:1"><b>Kết</b><i>logo · Zalo</i></div>
+      </div>
+      <div class="ruler"><span style="left:0">0 s</span><span style="left:20%">2</span><span style="left:30%">3</span><span style="left:60%">6</span><span style="left:75%">7,5</span><span style="left:90%">9</span><span style="left:100%">10 s</span></div>
+    </div></div>
+    <div class="ex"><div><div class="k">Ngành có</div>vườn cây ao cá "nhịp ăn cá diếc" 247 N · Chợ Online Tiền Hải 476 N · 5 kênh</div><div><div class="k">Lỗi lô phao</div>Clip Muse đỏ ở 1,4 s → mất nhịp chờ (LÕI). Lô sau: quay thật một cảnh liền</div></div>
+  </section>
+
+  <!-- FORM 2 -->
+  <section class="form" aria-labelledby="f2">
+    <div class="head"><h2 id="f2">2 · Trước → sau trong một cảnh liền</h2><span class="tag">8–12 s · không cắt · thoả mãn</span></div>
+    <p class="why">Biến đổi không cắt làm người xem tin là thật. Cắt ngang giữa biến đổi là hỏng form.</p>
+    <div class="scroll"><div class="track">
+      <div class="bar">
+        <div class="seg c-dung loi" style="flex:2"><b>Trạng thái A</b><i>đuôi nhiều màu</i></div>
+        <div class="seg c-hua" style="flex:1.5"><b>Hứa</b><i>"Nhìn kỹ đuôi phao"</i></div>
+        <div class="seg c-cho loi" style="flex:2"><b>Dẫn</b><i>cùng khung, máy đứng</i></div>
+        <div class="seg c-bat loi" style="flex:2"><b>BIẾN ĐỔI</b><i>A → B, một cảnh</i></div>
+        <div class="seg c-chung" style="flex:1.5"><b>Giữ B</b><i>để mắt kịp nhìn</i></div>
+        <div class="seg c-ket" style="flex:1"><b>Kết</b><i>CTA</i></div>
+      </div>
+      <div class="ruler"><span style="left:0">0 s</span><span style="left:20%">2</span><span style="left:35%">3,5</span><span style="left:55%">5,5</span><span style="left:75%">7,5</span><span style="left:90%">9</span><span style="left:100%">10 s</span></div>
+    </div></div>
+    <div class="ex"><div><div class="k">Phao dùng thế nào</div>Video shop có sẵn: tay cầm 3 phao, nhiều màu → cả đuôi đỏ, một cảnh liền 15 s</div><div><div class="k">Khung đã bóc</div>Khung 03 Giáng sinh (tủ lạnh trơn → bật → bếp rực) — cùng form, khác ngành</div></div>
+  </section>
+
+  <!-- FORM 3 -->
+  <section class="form" aria-labelledby="f3">
+    <div class="head"><h2 id="f3">3 · Thử / test</h2><span class="tag">8–29 s · dạng 1 "test trong cốc" · đang bão hoà</span></div>
+    <p class="why">Đặt phép thử, làm thật, cho thấy kết quả. Kết quả phải đo hoặc nhìn được, không chỉ nói.</p>
+    <div class="scroll"><div class="track">
+      <div class="bar">
+        <div class="seg c-dung loi" style="flex:1.5"><b>Phép thử</b><i>phao trong cốc</i></div>
+        <div class="seg c-hua" style="flex:1"><b>Hỏi</b><i>"Có nhạy thật?"</i></div>
+        <div class="seg c-cho loi" style="flex:2"><b>Làm</b><i>ngón tay ấn phao</i></div>
+        <div class="seg c-bat loi" style="flex:1.5"><b>Kết quả</b><i>xanh → đỏ</i></div>
+        <div class="seg c-chung" style="flex:2.5"><b>Lặp 2–3 lần</b><i>chứng minh không ăn may</i></div>
+        <div class="seg c-ket" style="flex:1.5"><b>Kết</b><i>tên hàng, thông số</i></div>
+      </div>
+      <div class="ruler"><span style="left:0">0 s</span><span style="left:15%">1,5</span><span style="left:25%">2,5</span><span style="left:45%">4,5</span><span style="left:60%">6</span><span style="left:85%">8,5</span><span style="left:100%">10 s</span></div>
+    </div></div>
+    <div class="ex"><div><div class="k">Ngành có</div>Fishcamp 629 N, 465 N · Cần câu giá rẻ 198 N · ≥ 5 shop cùng làm</div><div><div class="k">Quyết định</div>Không làm khung chính (bão hoà). Chỉ mượn 2,5 s tay thật làm bằng chứng</div></div>
+  </section>
+
+  <!-- FORM 4 -->
+  <section class="form" aria-labelledby="f4">
+    <div class="head"><h2 id="f4">4 · So sánh A vs B</h2><span class="tag">14–58 s · dạng 6</span></div>
+    <p class="why">Hai thứ cạnh nhau, cùng điều kiện, một kết luận ngắn. Khoảng cách giữa A và B phải thật và nhìn thấy được.</p>
+    <div class="scroll"><div class="track">
+      <div class="bar">
+        <div class="seg c-dung loi" style="flex:2"><b>A | B</b><i>chia đôi khung</i></div>
+        <div class="seg c-hua loi" style="flex:1.5"><b>Câu hỏi</b><i>"Cái nào thấy rõ?"</i></div>
+        <div class="seg c-cho loi" style="flex:4.5"><b>Cùng điều kiện</b><i>cùng hồ, cùng đêm, cùng mồi</i></div>
+        <div class="seg c-bat loi" style="flex:3"><b>Khác biệt</b><i>B đỏ, A mờ</i></div>
+        <div class="seg c-chung" style="flex:2"><b>Kết luận</b><i>một câu</i></div>
+        <div class="seg c-ket" style="flex:2"><b>Kết</b><i>CTA</i></div>
+      </div>
+      <div class="ruler"><span style="left:0">0 s</span><span style="left:13.33%">2</span><span style="left:23.33%">3,5</span><span style="left:53.33%">8</span><span style="left:73.33%">11</span><span style="left:86.67%">13</span><span style="left:100%">15 s</span></div>
+    </div></div>
+    <p class="why">Bản dài (45–60 s, kiểu Ca Sĩ Xóm) không kéo giãn dải này mà <b>lặp vòng "cùng điều kiện → khác biệt" 2–3 lần</b> (rẻ vs đắt, nhiều hạng mức), kết luận gom ở cuối.</p>
+    <div class="ex"><div><div class="k">Ngành có (độ dài)</div>Fishcamp "Phao đài vs phao câu đêm" 2,58 Tr — <b>14 s</b> · Ca Sĩ Xóm "Ít tiền có mua được cần xịn?" 7,30 Tr — <b>58 s</b> · mới 2 video có số giây</div><div><div class="k">Lỗi lô phao</div>Muse không sinh được phao A "khó nhìn" → bỏ H2. Form này phải quay thật</div></div>
+  </section>
+
+  <!-- FORM 5 -->
+  <section class="form" aria-labelledby="f5">
+    <div class="head"><h2 id="f5">5 · Mẹo / hướng dẫn nhanh</h2><span class="tag">23–59 s · dạng 4 · hợp nuôi page</span></div>
+    <p class="why">Nêu vấn đề người xem đang gặp, đưa 1–3 bước, cho thấy kết quả. Người xem lưu lại để dùng.</p>
+    <div class="scroll"><div class="track">
+      <div class="bar">
+        <div class="seg c-dung loi" style="flex:1"><b>Chữ lớn</b><i>tiêu đề mẹo</i></div>
+        <div class="seg c-hua loi" style="flex:1.5"><b>Vấn đề</b><i>"Về khuya mắt mỏi"</i></div>
+        <div class="seg c-cho loi" style="flex:4"><b>Bước 1 → 2 → 3</b><i>mỗi bước một cảnh, một dòng chữ</i></div>
+        <div class="seg c-bat loi" style="flex:1.5"><b>Kết quả</b><i>làm đúng thì thấy gì</i></div>
+        <div class="seg c-ket" style="flex:2"><b>Kết</b><i>"Lưu lại" · phần 2</i></div>
+      </div>
+      <div class="ruler"><span style="left:0">0 s</span><span style="left:10%">3</span><span style="left:25%">7,5</span><span style="left:65%">19,5</span><span style="left:80%">24</span><span style="left:100%">30 s</span></div>
+    </div></div>
+    <div class="ex"><div><div class="k">Ngành có</div>Thẩm Câu "3 bước chọn phao" 969 N (67× sub) · Vũ Tập Cân Phao 1,28 Tr (251×)</div><div><div class="k">Phao dùng thế nào</div>H3 mượn chữ tiêu đề. Bản đầy đủ cần người nói — shop chưa có gương mặt</div></div>
+  </section>
+
+  <footer>Nguồn: sổ tay KIEN-THUC-VIRAL.md §1, §7.4 · thu-vien/nganh/do-cau-vn/video-nganh.md (YouTube, đọc 11/11/2026) · phiếu 03b, 09 lô phao PRD-G01. Thang thời gian theo độ dài ngành của từng form: dải 1, 2, 3 là 10 s · dải 4 là 15 s · dải 5 là 30 s.</footer>
+</div>

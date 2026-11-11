@@ -7,7 +7,7 @@ kế hoạch (cột trái) cạnh việc đã xảy ra (cột phải) để sế
 - **Ra 4 video** (3 bản thử mở đầu + 1 bản đối chứng) cho phao rô diếc, Reels/TikTok, tiếng Việt, không lời đọc.
 - **Đã tốn:** Muse ~7 % (ước — số thật ⬜ sếp báo) · tiền $0 · sếp ~20 phút (gửi video, bấm Muse).
 - **Sếp cần làm:** đăng H1, H3, đối chứng · 48 giờ sau gửi số (xem, xem > 3 giây, bình luận) · duyệt/sửa 11 quyết định ở mục 11.
-- **Thắng khi:** bản mới đạt **≥ 1,5 lần** tỉ lệ xem 3 giây của bản đối chứng · hạn kiểm **25/11/2026**.
+- **Thắng khi:** bản mới đạt **≥ 1,5 lần** tỉ lệ xem 3 giây (xem ≥ 3 s ÷ lượt xem — **tỉ lệ, không so số đếm**) của bản đối chứng · mỗi bản ≥ 100 lượt xem mới kết luận · hạn kiểm **25/11/2026**. Cách đọc số: gói Săn xu hướng §3.11.
 
 ## 1. Bối cảnh
 | | |
