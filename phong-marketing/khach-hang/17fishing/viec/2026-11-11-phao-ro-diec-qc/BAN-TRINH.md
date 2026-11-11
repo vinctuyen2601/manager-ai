@@ -121,7 +121,7 @@ H1 / H3 / Đối chứng — thu-nghiem/out/prd-g01/
 |---|---|---|---|
 | 1 | Đăng ở page/kênh nào, chạy tiền hay đăng thường? | Không đo được giả thuyết | Đăng thường, Reels page 17fishing |
 | 2 | % hạn mức Muse thật đã tốn và còn mỗi tuần | Không lập được kế hoạch tuần | Coi như 40 %/tuần |
-| 3 | Nhạc nền video shop là bài gì, có lời không? | Có thể bị tắt tiếng | Giữ |
+| ~~3~~ | ~~Nhạc nền video shop là bài gì, có lời không?~~ **Gỡ 12/11:** trái quyết định sếp 11/11 "bỏ kiểm quyền khỏi quy trình tạo video" (`CLAUDE.md` phòng) — Thợ dựng chỉ ra ở buổi phỏng vấn. Rủi ro tắt tiếng chỉ nêu một lần, không hỏi | — | Giữ nhạc |
 | 4 | Xuất lại 1080×1920 trước khi đăng? | Hình kém nét hơn | Có, nếu sếp chưa đăng |
 
 ## 11. Đã tự quyết thay sếp (lấy mặc định) — **sếp soát lại**
