@@ -173,6 +173,34 @@ chuyển sang `Đã được gửi và lập chỉ mục`. Nếu sau khi Google 
 bò mới hơn ngày sửa) mà vẫn bị chấm không lập chỉ mục, thì manh mối này sai và
 quay về giả thuyết chất lượng.
 
+#### Đo lại 03/11/2026 — chưa có gì đổi, vì chưa có gì được làm
+
+81/119 = **68%** (29/10: 71%). Bài 59/96. Sản phẩm 14/14. Phân bố ngày bò cuối
+của nhóm "đã thu thập – chưa lập chỉ mục" (32 bài): `05: 21 · 06: 1 · 07: 1 ·
+09: 9` — **không bài nào được bò lại sau 29/10**, tức danh sách 26 bài ở trên
+chưa được bấm yêu cầu lập chỉ mục. Hai bài QĐ-18 vẫn "đã phát hiện – chưa bò"
+sau 25 ngày: dự đoán QĐ-18 kiểm 08/11 gần như chắc sẽ không đạt, và lý do sẽ
+là chưa được bò chứ không phải bài dở — ghi trước để lúc kiểm khỏi đọc nhầm.
+
+#### 03/11/2026 · Gỡ 4 bài video mỏng về nháp — chủ shop duyệt
+
+Bốn bài `…-vietnam-fishing-tv` 10–14 từ (`cau-ca-diec-tai-ho-doi-luu-chay-manh`,
+`qua-mat-chu-ho-keo-tram-den-khong-kip-tho`, `bai-moi-cau-diec-tu-nhien-cuc-ky-hieu-qua`,
+`cau-ro-phi-dam-chay-sieu-khoe`). Lý do bằng số: **0 hiển thị** trong 90 ngày
+(`gsc-trang`), **1 lượt xem** từ 01/05 (`admin/analytics/table`, bộ lọc đã thử
+trên một bài sống ra 34 lượt). Hai bài video khác CÓ chữ vẫn vào chỉ mục nên
+không đụng tới.
+
+**Bẫy gặp khi làm:** 9 bài sống có 10 liên kết do `noiNoiBo` tự gắn vào bốn bài
+này. Thứ tự bắt buộc là **về nháp TRƯỚC, sửa nội dung SAU** — `baiDeNoi()` chỉ
+lấy bài `published`, làm ngược lại thì lần PATCH nội dung gắn lại đúng link vừa
+gỡ. Gỡ thẻ `<a>`, giữ chữ. Sao lưu nội dung trước khi sửa nằm ở scratchpad
+phiên, không giữ lâu dài.
+
+Kiểm trên bản chạy: 4 URL trả 404, 0 link cũ trên trang sống, sitemap sạch ở
+lượt tải thứ hai (lượt đầu là bản đệm Vercel), `canh-hang-ngay` thoát 0.
+Không có dự đoán lưu lượng — không có lưu lượng để đổi.
+
 ### QĐ-09 · Viết lại 30/35 bài nháp, bỏ hẳn 5 bài — 17fishing
 **Vì sao:** chủ shop yêu cầu tăng số lượng bài. Đo trước khi viết cho thấy
 "thêm bài" không phải đòn bẩy: 15 bài đầu chiếm **85%** toàn bộ 6.687 hiển thị
@@ -429,6 +457,31 @@ làm Google hạ ưu tiên bò trong một thời gian.
 thì kết luận: viết thêm bài cho GaRutin là vô ích cho tới khi giải được bài
 toán uy tín — và chuyển sức sang 17fishing, nơi 82% nội dung thật sự vào được
 chỉ mục.
+
+#### Kết quả kiểm 03/11/2026 (muộn 13 ngày) — GaRutin: ✅ nhóm "Đã phát hiện thấy" giảm mạnh
+
+`node kiem-chi-muc.mjs garutin`, 78/78 URL quét được:
+
+| | 21/09 | 03/11 |
+|---|---|---|
+| **Tổng đã vào chỉ mục** | 25/76 = 32% | **58/78 = 74%** |
+| Bài viết | 7/52 | **37/54** |
+| Sản phẩm | 15/20 | 18/20 |
+| "Đã phát hiện thấy – chưa lập chỉ mục" | 35 | **12** |
+
+Điều kiện "không giảm thì viết thêm là vô ích" **không xảy ra**. Số liệu khớp
+giả thuyết "đổi URL hàng loạt làm Google tạm hạ ưu tiên bò" — nhưng đây chỉ là
+khớp, không phải chứng minh: nhịp hằng ngày có việc chủ shop bấm yêu cầu lập
+chỉ mục bằng tay, và tôi chưa hỏi việc đó có được làm không — nếu có thì không
+tách được hai nguyên nhân.
+
+Hệ quả vận hành: GaRutin đã **vượt ngưỡng 70%**, tức việc hằng ngày "bấm yêu
+cầu lập chỉ mục 10 URL" trong `NHIP-LAM-VIEC.md` **dừng được** cho GaRutin.
+
+Còn sót đáng để ý: `/san-pham?cat=long-va-phu-kien` trả "Google không xác định
+được URL" — danh mục duy nhất, và là URL có tham số truy vấn. Hai sản phẩm
+"đã thu thập – chưa lập chỉ mục": `mau-bo-sua-ga-rutin-trong-mai`,
+`trung-cut-trong-den` (cái sau chính là slug sai nghĩa ghi ở QĐ-19).
 
 **⚠ Bẫy đo đã dính hai lần ở chính phép đo này:** xem mục "Đo đạc" trong
 `chung/CLAUDE.md`.
