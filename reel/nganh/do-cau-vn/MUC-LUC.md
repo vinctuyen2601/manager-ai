@@ -28,7 +28,7 @@ Gói này nói **khách là ai, nói gì, mua gì giá bao nhiêu, nội dung g�
 | `ngon-ngu-khach.md` | Chữ THẬT khách gõ: truy vấn Google theo ý định, ô tìm kiếm site, câu kiểu tin nhắn; mục riêng phao / phao điện / câu đêm / rô diếc | viết hook, chữ trên hình bằng chữ của khách; chọn chủ đề | 11/11 (bảng từ khoá cũ từ 22/09) |
 | `noi-dung-thang.md` | Trang/bài của shop có người tìm và đọc (90 ngày): cụm "buộc" thắng, "các loại phao" lớn nhất, nhóm "X là gì" có tìm mà 0 nhấp; 6 dạng video gợi ý ⚠ | chọn chủ đề video nuôi page, chọn dạng video | 11/11 |
 | `mua-vu.md` | Giờ đông (12–16h, mức tin thấp), lịch sale (Black Friday 27/11/2026), câu đêm | chọn giờ đăng, lên kế hoạch tuần, video cho đợt sale | 11/11 |
-| `gia.md` | Mặt bằng giá theo loại hàng có ngày đo; hàng nhiều cỡ ghi "từ X"; món đã bỏ bán; ⚠ freeship 100k hay 150k còn lệch | sắp nói tới giá, so giá, CTA | 11/11 |
+| `gia.md` | Mặt bằng giá theo loại hàng có ngày đo; hàng nhiều cỡ ghi "từ X"; món đã bỏ bán; freeship từ 150k (chốt 11/11) | sắp nói tới giá, so giá, CTA | 11/11 |
 | `hoi-dap/phao.md` | Hỏi đáp về phao: số gam là gì, tải chì sai thì sao, phao điện so phao nano… | mọi việc có phao | 11/11 |
 | `hoi-dap/chon-do-theo-kieu-cau.md` | Bảng lối câu → món của shop; cần đài vs lăng xê vs lục; chọn máy, ghế | tư vấn chọn món, video so sánh, hướng dẫn | 11/11 |
 | `hoi-dap/mua-hang.md` | Chốt đơn ở đâu, CTA dẫn đi đâu, giao bao lâu, freeship, đổi trả | viết CTA, câu cuối video, trả lời khách | 11/11 |

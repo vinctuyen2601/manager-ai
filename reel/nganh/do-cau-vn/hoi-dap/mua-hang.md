@@ -22,7 +22,7 @@ khoa: false
 ⬜ Trang không ghi. **Không hứa thời gian giao.** `reel/san-pham/phao-ro-diec.md:186`
 
 **B5. Freeship từ bao nhiêu?**
-⚠ Hai nguồn lệch: 100k (14/09, `17fishing/CLAUDE.md:212`) và 150k (trang phao rô diếc 11/11, `reel/san-pham/phao-ro-diec.md:72`). Hỏi sếp trước khi nói. Chi tiết `../gia.md`.
+✅ **Từ 150.000đ** (sếp chốt 11/11/2026, khớp cấu hình máy chủ `freeship_threshold`). Phí ship 15.000đ phẳng. Phao 99k mua 1 cây không đạt, 2 cây thì đạt. Chi tiết `../gia.md`.
 
 **B6. Đổi trả thế nào?**
 ✅ 7 ngày (sếp chốt 21/09). `17fishing/CLAUDE.md:734-740`

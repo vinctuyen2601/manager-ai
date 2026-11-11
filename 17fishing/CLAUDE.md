@@ -209,7 +209,8 @@ tiền. Quà thành một dòng `OrderItem` giá 0đ, cờ `laQua`.
 
 ### Số đo về freeship — biết trước kẻo quảng cáo hão
 
-Ngưỡng miễn phí ship **100.000đ**, phí ship **15.000đ** phẳng.
+Ngưỡng miễn phí ship **150.000đ** (đổi từ 100k; `site-config` `freeship_threshold` = 150000 đo 11/11/2026, sếp xác nhận), phí ship **15.000đ** phẳng.
+Mặc định trong mã (`orders.service.ts`) vẫn là 100000 — chỉ dùng khi cấu hình trống. **Số đo bên dưới làm với ngưỡng 100k cũ**: với 150k, nhóm phao 80–120k và lưỡi 55k mua MỘT cái đều KHÔNG tự đạt ngưỡng.
 
 ```
 7/11 sản phẩm  mua MỘT món đã vượt ngưỡng

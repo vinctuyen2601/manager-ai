@@ -64,7 +64,7 @@ Không mở `reel/nghien-cuu/` và `reel/thi/`. Không lên web, không gọi AP
 
 ### Mâu thuẫn giữa nguồn (chưa tự chọn)
 
-1. ⚠ **Ngưỡng freeship:** 100k (`17fishing/CLAUDE.md:212`, 14/09) so với "từ 150.000đ" trên trang phao rô diếc (`reel/san-pham/phao-ro-diec.md:72`, 11/11). Số mới hơn là 150k. Cần sếp chốt.
+1. ⚠ **Ngưỡng freeship:** 100k (`17fishing/CLAUDE.md:212`, 14/09) so với "từ 150.000đ" trên trang phao rô diếc (`reel/san-pham/phao-ro-diec.md:72`, 11/11). Số mới hơn là 150k. **Sếp chốt 150k ngày 11/11** (khớp cấu hình máy chủ).
 2. ⚠ **Strong Bull 4.769.000đ** là cỡ 7m2 (`17fishing/QUAN-LY.md:97`, 10/09) hay cỡ 10m (`17fishing/CLAUDE.md:548`, 18/09). Lấy bản mới hơn: cỡ 10m.
 3. ⚠ **Máy AS H1 16000 = 1,83tr** vượt dải máy "750k–1,75tr" đo 09/10. Có thể lên sau 09/10, hoặc giá nháp. Chưa kiểm production.
 4. ⚠ **"Không kèm chì và dây (khách mua thêm)"** (`phao-ro-diec.md:42`) đọc dễ thành "mua thêm ở shop". Sếp 11/11: shop không bán chì. Gói ghi: khách tự lo chì.

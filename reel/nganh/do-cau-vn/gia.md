@@ -45,7 +45,7 @@ khoa: false
 
 - ✅ 14/09/2026: ngưỡng freeship **100.000đ**, phí ship **15.000đ** phẳng. 7/11 món mua một cái đã vượt ngưỡng. `17fishing/CLAUDE.md:210-221`
 - ✅ 11/11/2026, trang phao rô diếc ghi: **"Freeship cho đơn từ 150.000đ"**. `reel/san-pham/phao-ro-diec.md:72`
-- ⚠ **Hai nguồn lệch.** Số mới hơn là 150k. Trước khi nói freeship trong video, hỏi sếp chốt. Nếu dùng: phao 99k **không** tự đạt ngưỡng 150k.
+- ✅ **Chốt 11/11/2026: freeship từ 150.000đ** — sếp xác nhận + cấu hình máy chủ `freeship_threshold` = 150000. Số 100k ở trên là cũ. Phao 99k mua 1 cây **không** đạt ngưỡng; 2 cây (198k) thì đạt.
 - ✅ Freeship do ngưỡng hay do quà, giao diện không phân biệt. Sếp bác việc tách ra. `17fishing/CLAUDE.md:225-227`
 
 ## Đổi trả, thanh toán
