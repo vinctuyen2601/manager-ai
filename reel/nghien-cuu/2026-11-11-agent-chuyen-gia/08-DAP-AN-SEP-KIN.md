@@ -58,6 +58,19 @@ hình lạ mắt + tò mò; đèn đổi màu vừa là điểm hấp dẫn vừ
 **SX4** ⓘ — Nghiêng về câu đêm / chiều tối: đèn chỉ nổi khi nền tối, ban ngày phao điện trông như phao thường. Đổi lại quay đêm
 dễ nhiễu, tối, rung → cần đèn phụ nhẹ hoặc điện thoại quay tốt. Câu ngày hình đẹp, dễ quay, nhưng mất điểm khác biệt.
 
+**SX5** ⓘ — 6h sáng, 11h trưa, 18h chiều. (Không nói ngày trong tuần.)
+
+**SX6** ⓘ — Tháng nào cũng giống nhau; mùa đông giảm chút vì lạnh.
+
+**SX7** — Giữ người xem ở tính năng sản phẩm; mất ở chỗ tính năng không có gì nổi bật hoặc người xem không có nhu cầu mua.
+> Giám khảo: đáp án sếp ở mức nguyên tắc, không chỉ giây. Agent chỉ ra giây cụ thể có số đo (vd đổi đỏ 5,1 s; 2 s đầu đứng yên)
+> mà khớp nguyên tắc này → tính là thêm ý (R2 ô e).
+
+**SX8** — Video viral về câu cá: (1) POV câu cá: cận phao, tín hiệu cá ăn, giật cần, kéo cá, đặc biệt cận cảnh cá quấn ổ ·
+(2) review thiết bị: phao, cần, máy, dây, mồi — học cách trình bày · (3) hướng dẫn kỹ thuật: cân chì, chỉnh phao, chọn phao theo hồ,
+đọc tín hiệu cá · (4) câu đêm: phao LED, ánh sáng phản chiếu mặt nước, khoảnh khắc cá ăn · (5) giải trí, hài: hụt cá, cá thoát lưỡi,
+cả ngày không được con nào · (6) mở hộp, bộ sưu tập đồ câu: khui hộp, giới thiệu sản phẩm mới, so sánh dòng phao và phụ kiện.
+
 ## Sự thật sản phẩm MỚI lộ ra từ đáp án — CHỜ áp vào hồ sơ SAU khi chấm điểm gốc
 (Áp trước thì điểm gốc đo trên kiến thức agent chưa từng có → mất ý nghĩa so sánh trước/sau.)
 **Sếp XÁC NHẬN 11/11** ("Đúng nhé không kèm chì và dây đâu, cảm biến theo nhịp ăn của cá"):
