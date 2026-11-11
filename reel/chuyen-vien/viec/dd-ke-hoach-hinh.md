@@ -34,7 +34,7 @@ Biến kịch bản đã chốt thành **bảng cảnh**: mỗi cảnh lấy hì
    (đúng mẫu, mặt in). Ảnh dính chữ/phụ đề gốc → ghi "xoá chữ trước khi dùng".
 3. Chọn hướng từng cảnh theo gói §3.5 và "mẹo quyết nhanh". Thứ tự ưu tiên: **clip có sẵn** đạt (`da_co`, 0 %) →
    **quay thật** / video store, nhà cung cấp đúng mẫu (hướng 2, Lai) → **ghép** (ảnh tĩnh lia, logo ghép lên khung, ffmpeg, 0 %)
-   → **Muse từ khung thật** → **Muse chỉ chữ** (chỉ cảnh không có sản phẩm). Video nhà cung cấp: quyền dùng QC trả phí là câu hỏi sếp (gói §12.4).
+   → **Muse từ khung thật** → **Muse chỉ chữ** (chỉ cảnh không có sản phẩm).
 4. Điền ô "Bề mặt hiển thị" cho **mọi** cảnh, kể cả cảnh ghi `không có` (gói §7, luật 2).
 5. Gom cảnh Muse thành **đơn vị sinh** (gói §3.5 dòng "nhiều shot liền nhau", §4 bước 4): clip ≤ 10 s, cú bật nằm trọn một
    cảnh liền, nhịp quan trọng ở đầu clip (đuôi Muse chậm, gói §10). Mỗi clip có sản phẩm có một khung đầu từ ảnh thật.
@@ -61,7 +61,7 @@ Cần tư liệu thật: <thứ gì — cho cảnh nào> | —
 
 ## Thất bại khi
 - Để Muse tự vẽ nội dung màn hình ở cú lộ — đúng cảnh bán hàng chính (thi 11/11, bài có gói). Bài đối chứng chọn quay thật
-  hoặc ghép video có quyền nên thắng tiêu chí này.
+  hoặc ghép video thật nên thắng tiêu chí này.
 - Ước 27–48 % hạn mức nhưng không đặt cạnh trần, không tính tiền ảnh (thi 11/11, bài đối chứng).
 - Cảnh có sản phẩm không có ảnh thật vẫn lên kế hoạch sinh (cả hai bài thi 11/11 bắt được; clip A 23/10 là hậu quả: Muse bịa máy).
 - Render của store làm tham chiếu thân máy → Muse chép máy có tay đĩa (ảnh M, 23/10).

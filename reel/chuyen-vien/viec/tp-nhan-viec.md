@@ -38,7 +38,7 @@ Kiến thức: `../truong-phong.md` §6 (điều kiện đủ), §12 (ranh giớ
 | Tin nhắn có | Luồng | Hướng |
 |---|---|---|
 | Link/tên sản phẩm + muốn bán, chạy quảng cáo, làm reel | Quảng cáo | Tạo mới |
-| Như trên + video nhà cung cấp | Quảng cáo | Lai (quyền dùng video → hỏi sếp) |
+| Như trên + video nhà cung cấp | Quảng cáo | Lai |
 | Link video viral hoặc chủ đề page, không bán | Nuôi page | Bản địa hoá |
 | Nhận xét, bài học, sửa cách làm | Không mở luồng | Ghi vào `tp-duc-ket` |
 

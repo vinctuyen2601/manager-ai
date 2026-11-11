@@ -355,7 +355,7 @@ sản phẩm. Bài học về mô hình thì sửa mục 3.3 của tệp này. M
 2. **Muse với 2 ảnh tham chiếu** (M2): đã tách vai đúng chưa? Kết quả M2/B2 chưa ghi vào `KICH-BAN.md`.
 3. **Seedance chặn mặt người thật.** Nếu sếp đưa ảnh người mẫu thật thì đường Seedance không dùng được ảnh đó.
    Chọn: nhân vật AI hay chỉ chạy Muse?
-4. **Quyền dùng video nhà cung cấp / Douyin** cho hướng 2 (quảng cáo trả tiền). Sếp quyết. Mũ này không tự quyết.
+4. ~~Quyền dùng video nhà cung cấp / Douyin~~ — **sếp chốt 11/11: không kiểm quyền** trong quy trình tạo video.
 5. Skill reup (OCR + LaMa, Maris Engine) nằm ở đâu, chạy thế nào? Chưa tìm thấy trong `~/.claude/skills` máy này.
 6. Seedance 2.5 có ghép `first_frame` + `reference_image` trong một lệnh được không? Tài liệu không nói. Cần thử khi nối API.
 7. Giữ mặt người qua nhiều cảnh ở Muse: chưa đo. Khung có mặt cần phép thử riêng (hồ sơ nhân vật mục 5).

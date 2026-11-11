@@ -51,7 +51,7 @@ từng hình (`../CLAUDE.md` mục "Nhịp video do DỰNG", điểm 3).
 6. **Tiếng là một nửa video.** Nhạc vào đúng giây cú bật. Không nhảy âm lượng giữa các đoạn. Chuẩn −14 LUFS.
 7. **Chữ do dựng chèn.** Không bảo model vẽ chữ: Muse vẽ chữ sai (đo 23/10). Chữ phải đọc được khi tắt tiếng.
 8. **Không nói sai sự thật trên chữ.** Không bịa nơi bán, hết hàng, khuyến mãi (`../CLAUDE.md` 23/10. Skill reup mục 6.5).
-9. **Nhạc chỉ dùng khi giấy phép phủ đúng nền tảng sẽ đăng.** Không rõ thì để tiếng gốc và báo (mục 3.7).
+9. ~~Nhạc chỉ dùng khi giấy phép phủ đúng nền tảng~~ — **sếp chốt 11/11: không kiểm quyền**. Mục 3.7 giữ làm tham khảo.
 10. **Lo ngại kỹ thuật hay pháp lý là CÂU HỎI cho sếp**, không phải quyết định tự làm (`../CLAUDE.md`, quy tắc bóc 3).
 
 ---
@@ -233,7 +233,7 @@ Lệnh `gvv` chạy trong `D:/my project/gen-video-viral` dưới dạng `node s
 - [ ] Không lặng > 2 s: `ffmpeg -i $V -af silencedetect=n=-45dB:d=2 -f null - 2>&1 | grep silence_duration` → rỗng
 - [ ] Không nhảy âm lượng giữa các đoạn > 6 dB (đo `ebur128` short-term quanh mỗi `moc_cat`) — ngưỡng đề xuất, chưa kiểm thực tế
 - [ ] Nhạc vào ở cú bật ± 0,1 s (nếu có nhạc)
-- [ ] Giấy phép nhạc phủ **mọi** nền tảng sẽ đăng (mục 3.7). Ghi tên bài và nguồn vào báo cáo
+- [ ] Ghi tên bài nhạc và nguồn vào báo cáo
 - [ ] SFX (nếu có) cách sự kiện hình ≤ 0,2 s
 - [ ] Nếu dựng theo nhạc: tỉ lệ cắt rơi trong ±0,07 s của phách được ghi vào báo cáo (công cụ ⬜, mục 8)
 
@@ -419,7 +419,7 @@ Ghép lại riêng từng id.
 5. Chuẩn hoá độ to của TikTok và Meta: chưa tìm thấy tài liệu chính thức.
 6. Ngưỡng "nhảy âm lượng 6 dB", `freezedetect` 0,5 s, `blackdetect` 0,03 s (đã chỉnh sau thi 11/11) là đề xuất. Cần chạy thử trên v01 và lô reup để chỉnh.
 7. TikTok "5–10 words per second": đọc lại nguyên văn và ngữ cảnh.
-8. Giọng TTS CapCut thuộc loại Dual Use hay Non-commercial? Nếu Non-commercial thì cả video mất quyền dùng thương mại.
+8. ~~Giọng TTS CapCut thuộc loại giấy phép nào~~ — sếp chốt 11/11: không kiểm quyền.
 
 ---
 

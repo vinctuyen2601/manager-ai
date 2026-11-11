@@ -184,7 +184,7 @@ Trước khi giao brief / kế hoạch gói cho chuyên viên:
 - [ ] Tín hiệu giá trị khớp mức giá (KIEN-THUC-VIRAL.md mục 0c, "Bối cảnh định giá")
 - [ ] Mọi món có **mã, người làm, trạng thái, ước tính** (tiền và % hạn mức)
 - [ ] Tổng ước tính × 1,3 ≤ trần $10/video và ≤ hạn mức tuần còn lại, đã giữ 10 % dự phòng
-- [ ] Nhạc: có bài có giấy phép chưa? Chưa thì ghi rõ "dùng tiếng gốc clip" (lỗi mở từ video 01)
+- [ ] Nhạc: đã chọn bài chưa? Chưa thì ghi rõ "dùng tiếng gốc clip" (lỗi mở từ video 01)
 - [ ] Bản xuất cần: reel tự đăng · quảng cáo (+ thẻ kết) · ≤ 15 s · 6 s
 - [ ] Mỗi agent con nhận: mục tiêu · khuôn đầu ra · công cụ được dùng · ranh giới · nơi ghi kết quả
 - [ ] Không có việc trùng giữa hai agent; việc song song thật sự không phụ thuộc nhau
@@ -404,7 +404,7 @@ Mỗi lần giao gồm: **mục tiêu · khuôn đầu ra · công cụ được
 - Vượt trần $10/video, hoặc gói vượt 40 % hạn mức tuần, hoặc dùng phần dự phòng 10 %.
 - **Bất kỳ lần gọi trả phí nào > $0,50**, và **lần đầu dùng một công cụ/nhà cung cấp trả phí mới** (mượn ngưỡng OpenMontage).
 - Đổi đường sinh (Muse ↔ Seedance), đổi mô hình, đổi video → ảnh tĩnh.
-- Thay yếu tố LÕI của khung; mọi lo ngại sai sự thật / pháp lý / bản quyền (nhạc, logo bên khác, video nhà cung cấp ở hướng Bản địa hoá)
+- Thay yếu tố LÕI của khung; mọi lo ngại sai sự thật / pháp lý (logo bên khác)
   **khi muốn giữ thứ rủi ro**. Chọn phương án an toàn không tốn thêm (bỏ hoặc che logo bên khác, bật nhãn AI) thì **tự quyết**,
   ghi vào "Đã tự quyết" (thi 11/11: hỏi sếp về logo Target là hỏi thừa).
 - Đổi thị trường, đổi slogan, đổi chữ hook ra khỏi lô đã duyệt.
@@ -421,9 +421,9 @@ quyết định trong biên bản.
 2. Một gói tuần gồm bao nhiêu video/hook? Đề xuất gói đầu: 1 thân × 3 hook (TikTok khuyên 3–5 creative/nhóm) — cần sếp chốt.
 3. Hạn mức Muse tuần đổi theo tuần không, đặt lại ngày nào? Cần số thật để lập lịch.
 4. Bảng theo dõi việc (⬜): làm thành JSON trong kho hay lệnh `gvv`? Ai viết?
-5. Hướng Bản địa hoá dùng video nhà cung cấp/Douyin: quyền sử dụng — cần sếp hỏi nhà cung cấp; chưa nghiên cứu luật.
+5. ~~Quyền dùng video nhà cung cấp/Douyin~~ — sếp chốt 11/11: không kiểm quyền.
 6. Giá Seedance/BytePlus chính thức — **chưa kiểm**.
-7. Nguồn nhạc có giấy phép cho thị trường Mỹ — chưa có.
+7. ~~Nguồn nhạc có giấy phép~~ — sếp chốt 11/11: không kiểm quyền.
 8. Số chính thức của Meta về số creative/bộ quảng cáo — không có; cần thử trên tài khoản mình.
 9. Mốc chỉ số mục 1 là đề xuất; chỉnh sau 3 gói.
 10. ~~Câu "không tự gửi lại yêu cầu trả phí" chưa tìm được~~ → đã xác nhận ở OpenMontage `tools/provider_jobs.py` dòng 1 (11/11/2026).

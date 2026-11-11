@@ -21,8 +21,6 @@ Kiến thức: `../tho-dung.md`. Tệp này chỉ giữ thứ tự làm và lu�
    phiếu giao ghi thiếu bản quảng cáo. Hiện từ đen (`fade=in` trên nền đen) đẻ khung đen → hiện từ khung cuối của thân hoặc bỏ fade.
 4. **Nếu soát lưới nguồn thấy chữ, nhãn, sticker, logo in sẵn** (kể cả ở vùng UI che và sticker nền tảng ở góc) → ghi từng thứ
    vào bảng "In sẵn từ nguồn" kèm giây, vị trí, cách xử lý. Bảng không có dòng nào → ghi "đã soát lưới 4 khung/giây: không có".
-5. **Nếu nhạc hoặc hình nguồn chưa rõ quyền dùng cho quảng cáo trả phí** → ghi vào ô "Cần sếp" của phiếu kèm mặc định
-   (vd "chỉ xuất bản reel tự đăng"). Không tự quyết dùng hay bỏ (gói §2 nguyên tắc 9–10, §3.7).
 
 ## Bước
 1. Kiểm đầu vào: đủ clip, đúng tên, đủ độ dài (gói §4 bước 1, §6). Thiếu → dừng, báo theo câu mẫu gói §6.

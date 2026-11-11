@@ -25,7 +25,6 @@
 **Sau bước 11:** `tp.hop` (cuối lô) → `tp.duc-ket`.
 
 **Hướng Lai:** bước 3 chọn video nhà cung cấp làm thân; bước 7 chỉ lập cảnh **còn thiếu**; bước 8 chỉ sinh cảnh đó.
-Video nhà cung cấp phải có quyền dùng cho quảng cáo trả phí (câu hỏi mở cho sếp, chưa chốt).
 
 ## Chạy song song được
 - Bước 3 chạy cùng bước 2 khi đã biết loại sản phẩm (khung không phụ thuộc chi tiết hồ sơ).

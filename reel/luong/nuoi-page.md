@@ -25,7 +25,6 @@ có cú bật trong ~3 s đầu hoặc một khoảnh khắc rõ · không phả
 
 ## Khác luồng Quảng cáo
 Không bước 2 (hồ sơ), không bước Muse, không cổng hạn mức. Có thể chạy **song song** với một luồng Quảng cáo.
-Rủi ro riêng: bản quyền video gốc và nhạc — ghi trong phiếu mỗi video, sếp quyết theo lô.
 
 ## Chờ sếp trước khi chạy được
 Page nuôi thử · chủ đề · số video/tuần (README câu hỏi 4). Nguồn: mặc định sếp gửi link (câu hỏi 5).

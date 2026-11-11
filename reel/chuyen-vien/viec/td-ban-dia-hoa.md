@@ -54,7 +54,6 @@ Tái lập: <ra>/dung.sh + <tệp lọc> — chạy lại: có
 ## Thất bại khi
 - Chữ in sẵn "works very well" ở vùng UI che và sticker TikTok góc trên còn trong bản giao (thi 11/11, cả hai bài).
 - Để lộ logo hãng (thi 11/11 bộ Biên kịch đề 03, bài đối chứng — lỗi ở khâu lời, Thợ dựng là chốt chặn cuối).
-- Nhạc thư viện CapCut đăng lên Facebook — ngoài giấy phép (gói §3.7).
 - Lặng 2,1 s giữa hai câu giọng (skill reup p05, gói §9).
 
 ## Bộ thi
