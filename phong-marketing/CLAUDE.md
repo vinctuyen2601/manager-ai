@@ -1,4 +1,4 @@
-# Máy làm Reel — hồ sơ dự án
+# Phòng Marketing AI — hồ sơ phòng
 
 Tài sản thứ tư, bắt đầu 23/10/2026: **Phòng Marketing AI** cho các shop của chủ dự án (định hình 11/11/2026).
 Ban đầu là máy làm reel tiếng Anh (Mỹ) độc lập; từ 11/11 phòng **được đọc kho của 17fishing và GaRutin** (chỉ đọc,
@@ -42,11 +42,12 @@ Trục **khách hàng** cắt ngang cả 4 lớp (lớp 1, 3, 4 có phần riên
 | Tài liệu | Ở đâu | Dùng khi |
 |---|---|---|
 | **Bàn giao phiên gần nhất** (việc đang dở, chờ sếp, sửa mã còn treo) | `BAN-GIAO.md` | **Đầu mỗi phiên** — có thì đọc trước tiên |
+| **Kiến trúc v0.2** (chủ thể, 4 lớp, miền, định nghĩa, quản trị, giao thức đánh giá, khoảng cách G1–G9) | `du-an-phong/KIEN-TRUC.md` | Trước khi thêm/đổi bất kỳ thành phần nào của phòng |
 | Phòng Marketing AI: luồng phối hợp + việc từng vai | `quy-che/luong/` · `nhan-su/viec/` | Chạy một video qua các vai |
 | Kế hoạch sản phẩm (yêu cầu FR/NFR, module M0–M9, UI, kiến trúc, lộ trình) | Bản gốc: https://claude.ai/artifact/AMhN1DQDB32o14HAAmA1da · bản chép: `du-an-phong/KE-HOACH.md` | Mọi quyết định về phạm vi và thứ tự làm. Sửa ở bản gốc rồi chép lại |
 | Bản thiết kế sơ đồ (bản 6) | https://claude.ai/artifact/Poxf3b8AzDytHAyMC7HhTG | Nhìn nhanh luồng và lý do loại các repo khác |
 | Việc giai đoạn 0 và kết quả đo | `du-an-phong/GIAI-DOAN-0.md` cùng thư mục | Đang làm giai đoạn 0 |
-| **Mã của máy: repo `gen-video-viral`** | `D:/my project/gen-video-viral` · remote `github.com/vinctuyen2601/gen-video-viral` (máy Windows: alias `github.com-vinctuyen2601`) | Mọi việc viết mã. Repo đó **chỉ chứa mã**; hiểu biết ghi ở đây |
+| **Mã của máy: repo `gen-video-viral`** | Linux: `~/my-project/gen-video-viral` · Windows: `D:/my project/gen-video-viral` · remote `github.com/vinctuyen2601/gen-video-viral` (máy Windows: alias `github.com-vinctuyen2601`) | Mọi việc viết mã. Repo đó **chỉ chứa mã**; hiểu biết ghi ở đây |
 | **Sổ tay viral** — vì sao video ngắn viral, bộ câu hỏi bóc (A–H), STEPPS, dạng hook, hook chết, quy tắc outlier | `thu-vien/so-tay/KIEN-THUC-VIRAL.md` | **Trước khi bóc BẤT KỲ khung nào.** Cập nhật khi một video của máy thắng/thua rõ |
 
 Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên mới cần để không
