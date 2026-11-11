@@ -1,7 +1,7 @@
 # Săn xu hướng · tìm-nguồn
 
 Lọc video có sẵn (Douyin, TikTok, Reels…) làm **nguồn nuôi page**: video nào dùng được, video nào loại, vì sao.
-**Mặc định sếp gửi link.** Tự đi tìm và tự tải (`yt-dlp`) **chưa được duyệt** (gói §12 câu 2, `luong/README.md` câu 5).
+**Mặc định sếp gửi link.** Từ 12/11/2026 Săn xu hướng **tự tải bằng `yt-dlp` các link sếp gửi** (chỉ link sếp gửi · tải về máy (`thu-nghiem/`, không git) để bóc khung · không đăng lại · không đăng nhập, không cookie, không lách chặn). Tự đi tìm nguồn: chưa duyệt.
 Kiến thức: `../vai/san-xu-huong.md` §3.3 (lọc viral), §3.6 (pháp lý), §6 (điều kiện đủ). Tệp này chỉ giữ thứ tự và luật.
 
 ## Hợp đồng
@@ -13,8 +13,8 @@ Kiến thức: `../vai/san-xu-huong.md` §3.3 (lọc viral), §3.6 (pháp lý), 
 | Xong khi | Mỗi link có một dòng kết luận **dùng / chờ / loại** kèm lý do · ô "Nguồn" và "Cần che sơ bộ" không trống · phiếu đủ ô |
 
 ## Luật bắt buộc
-1. **Nếu chỉ có link, chưa có tệp video** → không tự tải, không xem qua bản quay màn hình. Ô "Tệp" = ⬜, kết luận = **chờ**,
-   xin sếp tải bằng câu mẫu gói §6 (bản gốc, đặt vào `thu-nghiem/nguon/<lô>/NN-goc.mp4`). Không kết luận "dùng" khi chưa xem tệp.
+1. **Nếu chỉ có link, chưa có tệp video** → tải bằng `yt-dlp <link> -o thu-nghiem/nguon/<lô>/NN-goc.%(ext)s` (link sếp gửi). Tải không được
+   (chặn, đòi đăng nhập) → ô "Tệp" = ⬜, kết luận = **chờ**, xin sếp tải tay bằng câu mẫu gói §6 (bản gốc, đặt vào `thu-nghiem/nguon/<lô>/NN-goc.mp4`). Không kết luận "dùng" khi chưa xem tệp.
 2. **Nếu không ghi được nguồn** (nền tảng + ID/tài khoản gốc, lấy từ link hoặc **chữ ID trên hình**) → ô "Nguồn" = ⬜,
    kết luận tối đa là **chờ**. Video không ghi được nguồn không vào lô (Biên kịch cần dòng `Nguồn:` cho caption).
 3. **Nếu video trượt một điều của bộ lọc nguồn** (`luong/nuoi-page.md`, dưới bảng) → **loại**, ghi điều trượt kèm giây.

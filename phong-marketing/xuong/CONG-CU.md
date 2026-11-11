@@ -21,6 +21,6 @@ Mức quyền theo `../quy-che/QUYEN-TU-CHU.md`. Đổi máy thì kiểm lại c
 | `tools/boc-loi.py` (faster-whisper) | Bóc lời có giờ từng từ, **có tiếng Việt** | Săn xu hướng, Biên kịch | L0 | Python + faster-whisper | — |
 | WebSearch / WebFetch / `curl` | Đọc trang công khai (YouTube đọc được) | mọi vai nghiên cứu | L0 | — | TikTok, Facebook, Creative Center, Meta Help **chặn máy** — không lách |
 | `gh api` (chỉ đọc) | Đọc repo GitHub làm nghiên cứu | mọi vai nghiên cứu | L0 | `gh` đã đăng nhập | — |
-| **yt-dlp** | Tải video công khai | — | **chưa duyệt** | **Có sẵn trên Windows** (`Python310/Scripts/yt-dlp`) | Sếp chưa duyệt dùng (gói SXH §12, `luong/README.md` câu 5) |
+| **yt-dlp** | Tải video từ link | Săn xu hướng, Đạo diễn | L1 (sếp duyệt 12/11/2026) | Windows: có sẵn (`Python310/Scripts/yt-dlp`). Linux: chưa | chỉ link sếp gửi · tải về máy (`thu-nghiem/`, không git) để bóc khung · không đăng lại · không đăng nhập, không cookie, không lách chặn |
 | Claude in Chrome / trình duyệt trong app | Xem TikTok/Reels qua trình duyệt đã đăng nhập của sếp | Săn xu hướng | **chưa bật** | Bật tiện ích + sếp cho từng trang | Đề xuất 11/11, chưa duyệt |
 | rea-video | Bóc cảnh, nguồn gốc, cách quay, phách | — | **không cài** (12/11) | — | Không tiếng Việt; `--vlm` gửi video ra ngoài. Học ý vào `gvv boc` (nhánh `boc-cat-thich-nghi`) |

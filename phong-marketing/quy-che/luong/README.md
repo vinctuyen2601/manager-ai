@@ -35,4 +35,4 @@ và Trưởng phòng mở kiểm kỹ đầu ra (`tp-dieu-phoi`).
 | 2 | Sếp được báo ở mức nào khi luồng chạy? | Chỉ khi chặn và khi xong |
 | 3 | Sếp duyệt ở đâu? | Bản cuối + khi vượt ngân sách (> 40 % hạn mức Muse tuần). Không duyệt ảnh khung đầu |
 | 4 | Page nuôi thử, chủ đề, số video/tuần? | ⬜ chưa có — luồng Nuôi page chưa chạy được |
-| 5 | Nguồn video nuôi page: tự tìm hay sếp gửi link? | Sếp gửi link (tự tìm cần cài yt-dlp, chờ duyệt) |
+| 5 | Nguồn video nuôi page: tự tìm hay sếp gửi link? | Sếp gửi link; phòng tự tải bằng yt-dlp (duyệt 12/11, chỉ link sếp gửi). Tự đi tìm nguồn: chưa duyệt |

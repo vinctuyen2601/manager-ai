@@ -428,7 +428,7 @@ Dòng ghi "suy từ hình ⬜" không được dùng làm căn cứ LÕI; đưa 
 | Xem ảnh khung hình (agent đọc ảnh) | Bước 4–5, xác nhận cắt, đọc chữ trên hình | ✅ | Lệnh cắt khung dày (10 khung/giây) cho một đoạn, kiểu `rea-video tiles` |
 | `cong-cu/boc-loi.py` | Gọi bên trong `gvv boc` | ✅ | — |
 | **rea-video** (JuneYaooo, Apache-2.0) | Bóc cách làm hình từng shot, lớp đóng gói (OCR, SRT/ASS), tách giọng / nhạc, BPM, SFX ↔ hình, ánh sáng | ⬜ chưa cài, **cần sếp duyệt** | Ứng viên bổ sung, hoặc thay một phần `gvv boc`. Chạy offline miễn phí được. Không gửi video cho VLM của bên thứ ba khi chưa duyệt (các ca mẫu của họ gọi Gemini qua một endpoint trung gian). Cần ffmpeg và Python ≥ 3.10. Lần đầu tải model tách tiếng ~67 MB |
-| Tải video từ link | Bước 2–3 | ⬜ sếp tải tay | `yt-dlp` hoặc tương đương. Cần sếp quyết vì liên quan điều khoản nền tảng |
+| Tải video từ link | Bước 2–3 | ✅ `yt-dlp` (sếp duyệt 12/11/2026) | chỉ link sếp gửi · tải về máy (`thu-nghiem/`, không git) để bóc khung · không đăng lại · không đăng nhập, không cookie, không lách chặn. Link bị chặn/đòi đăng nhập → xin sếp tải tay |
 | TikTok Creative Center (Top Ads, Trends) | Bước 2. Tìm mẫu, kiểm mốc tương tác theo giây, đo tuổi trend | ⬜ làm tay, cần sếp đăng nhập | Bảng tra cố định: bộ lọc mặc định cho từng ngành |
 | Meta Ad Library | Bước 2. Tìm quảng cáo chạy lâu, có nhiều phiên bản | ⬜ làm tay | Ad Library API: có lọc theo quốc gia, trạng thái, ngày. Chưa kiểm quyền truy cập cho quảng cáo thường |
 | Thư viện khung `khung/` | Bước 8, 11 | 🟡 chỉ là thư mục, chưa có chỉ mục | Tệp chỉ mục (một dòng một khung, gồm các nhãn ở mục 7) để lọc theo dạng nội dung × hook × ngành × mùa. Bảng nhãn lấy theo mục 3.8 |
@@ -509,7 +509,7 @@ Gặp lỗi mới thì thêm một dòng vào đây (đây là "bộ nhớ sửa
 **Cần sếp quyết:**
 1. **Cài rea-video?** Chạy offline, miễn phí, Apache-2.0. Có VLM thì chính xác hơn trên video đã bị nén,
    nhưng phải gửi khung hình cho bên thứ ba. Đề xuất: cài, **chỉ chạy offline**, dùng agent tự xem ảnh thay cho VLM.
-2. **Công cụ tải video từ link** (`yt-dlp`): có dùng không, hay sếp vẫn tải tay?
+2. ~~**Công cụ tải video từ link** (`yt-dlp`)~~ — **sếp duyệt 12/11/2026**: chỉ link sếp gửi · tải về máy (`thu-nghiem/`, không git) để bóc khung · không đăng lại · không đăng nhập, không cookie, không lách chặn.
 3. Vai có **tự đi săn** (bước 2) không, hay chỉ bóc video sếp đưa? Nếu tự săn thì cần ai đăng nhập Creative Center.
 4. Bước (c) do vai này viết hay do vai viết kịch bản? Gói này đang để: chỉ viết khi brief có sản phẩm.
 5. Có thêm dòng **Angle** và cột **Cách làm hình** vào khuôn khung chính thức không? Nếu có thì sửa `gvv boc`
