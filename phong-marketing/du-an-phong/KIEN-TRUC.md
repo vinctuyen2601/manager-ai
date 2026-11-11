@@ -1,6 +1,6 @@
 # Phòng Marketing AI — Kiến trúc v0.2
 
-Trạng thái: **Đề xuất, chờ sếp duyệt** · 11/11/2026 · Markdown-first, Git, Claude Code
+Trạng thái: **ĐÃ DUYỆT** (sếp, 11/11/2026 — thay v0.1) · khoảng cách G1–G9 đã lấp cùng ngày (mục 11) · Markdown-first, Git, Claude Code
 Nguồn: bản v0.1 sếp đưa (bộ khung, 12 nguyên tắc) + lõi đã dựng và đo ngày 11/11 (`../nhan-su/danh-gia/`, `../thu-vien/nghien-cuu/2026-11-11-agent-chuyen-gia/`).
 Ký hiệu trạng thái: ✅ có trong lõi và đã chạy · 🟡 có một phần · ⬜ chưa có.
 
@@ -40,18 +40,18 @@ Lâu dài có SaaS làm **lớp nhìn**; SaaS đọc và ghi lõi, không có s�
 | | **Knowledge** | Tri thức ngành dùng chung nhiều shop: khách, chữ khách, giá, mùa vụ, hỏi đáp | `thu-vien/nganh/<ngành>/` | ✅ |
 | | **Evidence** | Bằng chứng học từ bên ngoài, có ngày và nguồn: khung video viral, nghiên cứu | `thu-vien/khung/`, `thu-vien/nghien-cuu/` | 🟡 0 khung ngành đồ câu |
 | **2 Capabilities** | **Roles** | Chức danh: trách nhiệm, quyền, báo cáo cho ai | `nhan-su/vai/<vai>.md` (phần đầu) | 🟡 gộp với Agent |
-| | **Agents** | Một **phiên bản** của gói vai đang giữ chức danh, kèm hồ sơ năng lực | `nhan-su/vai/<vai>.md` @ commit | ⬜ chưa tách phiên bản |
+| | **Agents** | Một **phiên bản** của gói vai đang giữ chức danh, kèm hồ sơ năng lực | `nhan-su/vai/<vai>.md` @ commit, ghi ở `khach-hang/<shop>/doi/DOI.md` | ✅ |
 | | **Skills** | Tệp việc: làm gì, theo bước nào, khuôn đầu ra, bộ thi | `nhan-su/viec/` | ✅ |
-| | **Tools** | Khả năng hành động, độc lập với vai, có danh mục và quyền dùng | `xuong/` | ⬜ chưa có danh mục |
+| | **Tools** | Khả năng hành động, độc lập với vai, có danh mục và quyền dùng | `xuong/CONG-CU.md` | ✅ |
 | | **Workflows** | Luồng nối các việc, không gắn cứng vào một agent | `quy-che/luong/` | ✅ |
-| | **Policies** | Luật chung, quyền tự chủ, luật lời nói | `quy-che/` | 🟡 L0–L3 chưa thành bảng |
-| **3 Execution** | **Works** | Một đơn vị việc có mục tiêu, chủ, trạng thái, hạn | `khach-hang/<shop>/viec/<lần chạy>/` | 🟡 không có danh sách chung |
+| | **Policies** | Luật chung, quyền tự chủ, luật lời nói, nhịp | `quy-che/LUAT-CHUNG.md`, `QUYEN-TU-CHU.md`, `NHIP.md` | ✅ |
+| **3 Execution** | **Works** | Một đơn vị việc có mục tiêu, chủ, trạng thái, hạn | `khach-hang/<shop>/viec/README.md` (danh sách) + `<lần chạy>/` | ✅ |
 | | **Orchestration** | Trưởng phòng điều phối, phiếu giao, nhật ký | `00-dieu-phoi.md`, phiếu giao | ✅ |
 | | **Requests** | Thứ phòng xin Boss: checklist, quiz, hộp "Cần anh" | `khach-hang/<shop>/doi/CHECKLIST-SEP.md`, `TAI-NGUYEN.md` | ✅ |
-| | **Assets** | Thành phẩm **của mình**: kịch bản, prompt, video, có phiên bản | phiếu giao + `thu-nghiem/` | 🟡 media không theo git, không có sổ |
-| **4 Intelligence** | **Evaluations** | Đánh giá agent (bộ đề, cấp L1–L5 theo năng lực) và đánh giá work (chất lượng, KPI) | `nhan-su/danh-gia/`, `nhan-su/_kin/` | 🟡 mới có đánh giá agent |
+| | **Assets** | Thành phẩm **của mình**: kịch bản, prompt, video, có phiên bản | chữ: trong Work (git) · media: `thu-nghiem/` trên máy Linux này (sếp chốt 11/11) · sổ: cột Thành phẩm của `viec/README.md` | 🟡 chưa có thành phẩm nào |
+| **4 Intelligence** | **Evaluations** | Đánh giá agent (bộ đề, cấp L1–L5 theo năng lực) và đánh giá work (chất lượng, KPI) | `nhan-su/danh-gia/`, `nhan-su/_kin/`, `khach-hang/<shop>/kinh-nghiem/SO-LIEU.md` | 🟡 đánh giá work chờ video đầu tiên |
 | | **Predictions** | Phán đoán có %, cách kiểm, hạn. Thứ duy nhất chứng minh **đoán đúng** chứ không chỉ **biết cách đoán** | `khach-hang/<shop>/kinh-nghiem/DU-DOAN.md` | ✅ 2 dự đoán, hạn 15/12 |
-| | **Lessons** | Bài học có nguồn, bằng chứng, **phạm vi áp dụng**, độ tin, trạng thái kiểm chứng | sổ lỗi trong gói vai, `DAO-TAO.md` | 🟡 chưa có khuôn chung |
+| | **Lessons** | Bài học có nguồn, bằng chứng, **phạm vi áp dụng**, độ tin, trạng thái kiểm chứng | khuôn `quy-che/khuon/bai-hoc.md` · sổ theo phạm vi: `nhan-su/BAI-HOC.md`, `khach-hang/<shop>/kinh-nghiem/BAI-HOC.md`, gói ngành | ✅ |
 
 ## 4. Định nghĩa lõi
 
@@ -97,14 +97,14 @@ trước) → agent nạp mục lục, làm, ghi phiếu (có ô Phán đoán) �
 Đánh giá chỉ ra nguyên nhân (thiếu kiến thức · thiếu kỹ năng · đầu vào kém · luật đẩy sai) → sửa **đúng lớp** → ghi dự đoán trước →
 thi lại → giữ nếu đạt, hoàn lại nếu tụt (bánh cóc). Bài học lặp ≥ 2 lần mới thăng hạng vào gói vai hoặc gói ngành.
 
-**6.4 Nhịp kích hoạt** ⬜
-Claude không tự thức dậy. Cần: lịch (vd Trưởng phòng lên kế hoạch tuần mỗi thứ Hai), sự kiện (Boss trả lời một câu "Cần anh",
-dự đoán tới hạn). Chưa có thì phòng chỉ chạy khi Boss mở chat.
+**6.4 Nhịp kích hoạt** 🟡 `quy-che/NHIP.md`
+Bảng việc theo nhịp: mở phiên · dự đoán tới hạn · số liệu 48h/7 ngày · kế hoạch thứ Hai · sếp trả lời. Còn thiếu cách **tự mở phiên**:
+sếp chốt sau sẽ điều khiển qua **Claude Remote**; lịch tự động để sau khi bảng chạy ổn bằng tay.
 
 ## 7. Quản trị
 
-**7.1 Hành động** (L0 quan sát · L1 đề xuất · L2 làm nội bộ · L3 ra ngoài). Vai L4 được L2; đăng bài, tiêu tiền, sửa trang web, xoá dữ liệu
-→ hỏi Boss (quiz 11/11). 🟡 chưa thành bảng trong `quy-che/`.
+**7.1 Hành động** ✅ `quy-che/QUYEN-TU-CHU.md` (L0 quan sát · L1 đề xuất · L2 làm nội bộ · L3 ra ngoài). Vai L4 được L2; L3 luôn hỏi Boss.
+Ngoại lệ một lần ghi ngày và lời Boss.
 
 **7.2 Lời nói** ✅ `quy-che/LUAT-CHUNG.md`. Lời ra ngoài chỉ nói Fact đã xác nhận. Lời nội bộ bắt buộc phán đoán đủ 5 ô. Dưới 3 bằng chứng
 độc lập không viết thành kết luận. Bài học một ngành không phải luật ngành khác.
@@ -129,8 +129,8 @@ Báo Boss chỉ khi cần Boss hoặc xong mốc.
 | Communication | Phiếu giao có khuôn | ✅ |
 | Memory / Retrieval | Tệp + mục lục + "≤ 3 trang" | ✅ |
 | Governance | `quy-che/` + bảng quyết định trong `CLAUDE.md` | 🟡 |
-| Observability | Nhật ký điều phối, ô "Đã đọc", git log | 🟡 chưa có ghi chi phí |
-| Scheduling | — | ⬜ |
+| Observability | Nhật ký điều phối, ô "Đã đọc", ô `chi_phi` trong phiếu, git log | ✅ |
+| Scheduling | `quy-che/NHIP.md`; tự mở phiên qua Claude Remote (sau) | 🟡 |
 | Lớp nhìn | Trang artifact phác thảo; sau: SaaS | 🟡 |
 
 ## 10. Nguyên tắc
@@ -147,21 +147,20 @@ Báo Boss chỉ khi cần Boss hoặc xong mốc.
 11. Quyền tối thiểu cần thiết; mọi hoạt động quan trọng truy vết được.
 12. Lõi chạy được không cần SaaS; SaaS không có sự thật riêng.
 
-## 11. Khoảng cách: lõi hiện tại so với v0.2 (xếp theo mức chặn)
+## 11. Khoảng cách: lõi so với v0.2 — đã lấp 11/11/2026
 
-| # | Thiếu | Làm gì | Tốn |
+| # | Thiếu | Đã làm | Còn |
 |---|---|---|---|
-| G1 | Số liệu sau đăng | Định nghĩa đường về: Boss nhập tay vài số mỗi tuần vào `khach-hang/<shop>/kinh-nghiem/` | nhỏ, cần Boss |
-| G2 | Agent chưa tách phiên bản | Ghi commit gói vai vào mọi bài thi và `doi/DOI.md` | rất nhỏ |
-| G3 | Không có danh sách Works | `khach-hang/<shop>/viec/README.md`: bảng việc, chủ, trạng thái, hạn | nhỏ |
-| G4 | L0–L3 chưa thành bảng | `quy-che/QUYEN-TU-CHU.md` | nhỏ |
-| G5 | Không có danh mục Tools | `xuong/CONG-CU.md`: công cụ, vai được dùng, cần gì để chạy | nhỏ |
-| G6 | Assets không có sổ, media lạc khi đổi máy | Sổ thành phẩm trong mỗi Work; quyết nơi giữ media (ổ đám mây?) | vừa, cần Boss |
-| G7 | Lessons chưa có khuôn chung | Khuôn Lesson theo mục 4, dùng trong `tp-duc-ket` | nhỏ |
-| G8 | Không có nhịp kích hoạt | Lịch chạy Claude Code hoặc routine | vừa |
-| G9 | Không ghi chi phí | Ghi hạn mức Muse, lượt gọi trả phí vào phiếu | nhỏ |
+| G1 | Số liệu sau đăng | Khuôn `quy-che/khuon/so-lieu-sau-dang.md` (sếp nhập tay, 48h + 7 ngày) · sổ `khach-hang/17fishing/kinh-nghiem/SO-LIEU.md` | Kênh đăng: hỏi khi nhập việc |
+| G2 | Agent chưa tách phiên bản | Agent = `<vai>@<commit>`; ghi commit cả 3 đợt thi vào `DOI.md`; luật trong `tp-lap-doi` | — |
+| G3 | Không có danh sách Works | `khach-hang/<shop>/viec/README.md` cho 3 shop | — |
+| G4 | L0–L3 chưa thành bảng | `quy-che/QUYEN-TU-CHU.md` (cấp năng lực → mức; ngoại lệ có ngày) | — |
+| G5 | Không có danh mục Tools | `xuong/CONG-CU.md` (vai được dùng, mức, cần gì, lỗi đã biết) | — |
+| G6 | Media lạc khi đổi máy | Sếp chốt: media ở `thu-nghiem/` máy Linux này, điều khiển từ xa qua Claude Remote; chữ theo git | Media cũ trên máy Windows không chuyển |
+| G7 | Lessons chưa có khuôn | `quy-che/khuon/bai-hoc.md` + 3 sổ theo phạm vi, đã ghi 10 bài học ngày 11/11 | — |
+| G8 | Không có nhịp kích hoạt | `quy-che/NHIP.md` | Tự mở phiên (Claude Remote / lịch) |
+| G9 | Không ghi chi phí | Ô `chi_phi` trong phiếu giao + cột chi phí trong danh sách Works | — |
 
-## 12. Quyết định còn mở
-1. Duyệt v0.2 (thay v0.1).
-2. Thứ tự lấp khoảng cách G1–G9, hay làm video phao trước rồi lấp theo chỗ vướng thật.
-3. Media (G6) giữ ở đâu khi làm trên nhiều máy.
+## 12. Quyết định
+- 11/11: duyệt v0.2 thay v0.1 · lấp G1–G9 trước khi làm video · media giữ ở máy Linux, sau điều khiển qua Claude Remote.
+- Còn mở: cách tự mở phiên (G8) · kênh đăng và mục tiêu (nhập việc, sau khi thuê đội).

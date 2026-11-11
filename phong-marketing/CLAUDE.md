@@ -12,13 +12,13 @@ Hai khối, như một phòng marketing phục vụ nhiều khách:
 
 | Thư mục | Là gì | Ai đọc |
 |---|---|---|
-| `quy-che/` | Phòng vận hành thế nào: `LUAT-CHUNG.md` (đọc trước mọi gói vai), `luong/`, `khuon/` (phiếu giao, khuôn việc, khuôn gói ngành) | mọi vai |
+| `quy-che/` | Phòng vận hành thế nào: `LUAT-CHUNG.md` (đọc trước mọi gói vai), `QUYEN-TU-CHU.md` (L0–L3), `NHIP.md`, `luong/`, `khuon/` (phiếu giao, khuôn việc, gói ngành, hồ sơ doanh nghiệp, bài học, số liệu sau đăng) | mọi vai |
 | `nhan-su/` | Nhân sự: `vai/` (gói nghề 6 vai), `viec/` (tệp việc + bộ thi), `danh-gia/` (các đợt thi, bảng điểm) | Trưởng phòng; vai đọc gói và việc của mình |
 | `nhan-su/_kin/` | **Đáp án sếp + khoá chấm mù. Agent thi KHÔNG BAO GIỜ đọc.** | chỉ giám khảo + Trưởng phòng |
 | `thu-vien/` | Tri thức dùng chung: `nganh/<ngành>/` (đọc `MUC-LUC.md`), `khung/` (video mẫu đã bóc), `so-tay/`, `nhan-vat/`, `nghien-cuu/` | mọi vai, theo mục lục |
 | `khach-hang/<shop>/` | Tài khoản từng shop: `doi/` (**`BAO-CAO.md` đọc đầu phiên**), `san-pham/`, `viec/<ngày>-<sp>-<qc\|page>/`, `kinh-nghiem/` | Trưởng phòng + vai đang làm cho shop đó |
 | `xuong/` · `du-an-phong/` | Công cụ phụ · hồ sơ xây dựng chính phòng (kế hoạch, giai đoạn 0, sơ đồ) | khi cần |
-| `thu-nghiem/` | Media, đầu ra thử — **gitignore**, không chuyển giữa máy | công cụ `gvv` |
+| `thu-nghiem/` | Media, đầu ra thử — **gitignore**, nằm ở **máy Linux này** (sếp chốt 11/11), không đồng bộ giữa máy | công cụ `gvv` |
 
 Shop hiện có: `17fishing` (ngành `do-cau-vn`) · `christmas-spins` (Santa Spins, ngành `giang-sinh-my`) · `merry-orb` (Memory Orb, `giang-sinh-my`).
 Thêm shop = thêm `khach-hang/<shop>/`, rồi chạy `nhan-su/viec/tp-lap-doi.md`.
@@ -50,8 +50,8 @@ Trục **khách hàng** cắt ngang cả 4 lớp (lớp 1, 3, 4 có phần riên
 | **Mã của máy: repo `gen-video-viral`** | Linux: `~/my-project/gen-video-viral` · Windows: `D:/my project/gen-video-viral` · remote `github.com/vinctuyen2601/gen-video-viral` (máy Windows: alias `github.com-vinctuyen2601`) | Mọi việc viết mã. Repo đó **chỉ chứa mã**; hiểu biết ghi ở đây |
 | **Sổ tay viral** — vì sao video ngắn viral, bộ câu hỏi bóc (A–H), STEPPS, dạng hook, hook chết, quy tắc outlier | `thu-vien/so-tay/KIEN-THUC-VIRAL.md` | **Trước khi bóc BẤT KỲ khung nào.** Cập nhật khi một video của máy thắng/thua rõ |
 
-Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên mới cần để không
-đi lạc, và những quyết định đã chốt với chủ dự án.
+**Kiến trúc v0.2 (`du-an-phong/KIEN-TRUC.md`) là nguồn đúng về cách phòng được dựng**; `du-an-phong/KE-HOACH.md` giữ yêu cầu và lộ trình
+của công cụ video. Tệp này chỉ giữ những gì một phiên mới cần để không đi lạc, và những quyết định đã chốt với chủ dự án.
 
 ## Đã chốt với chủ dự án
 
@@ -93,6 +93,7 @@ Kế hoạch là nguồn đúng. Tệp này chỉ giữ những gì một phiên
 | 11/11 | **KHÔNG xây phần mềm** (sếp chọn b). Bản thiết kế SaaS "AI Marketing Department" (sếp trao đổi với AI khác, chép ở `thu-vien/nghien-cuu/2026-11-11-agent-chuyen-gia/07-tham-khao-blueprint.md`) chỉ dùng **tham khảo** để xây bộ của mình trên tệp + Claude Code. Chứng minh phòng trên các shop của sếp trước. Lấy ý: cấp năng lực L1–L5 theo từng năng lực, phân tích nguyên nhân yếu, claim 4 tầng, "reviewer không phán hiệu quả kinh doanh" |
 | 11/11 | **Lâu dài: dựng SaaS làm LỚP NHÌN trực quan, LÕI vẫn là kiến trúc hiện tại** (sếp, chiều 11/11 — điều chỉnh dòng "KHÔNG xây phần mềm"). Lõi = tệp Markdown/JSON + Claude Code: gói nghề, gói ngành, thư viện bằng chứng, sổ kinh nghiệm, luồng, phiếu giao, bộ đề. SaaS đọc/ghi lõi đó và hiển thị, không thay nó. Thứ tự vẫn: chứng minh phòng trên shop của sếp trước (pha 2b–4), rồi mới làm lớp nhìn |
 | 11/11 | **Lập đội trước mọi việc** (sếp): "việc đầu tiên là tìm nhân sự phù hợp, chứng minh khả năng thì mới được boss thuê"; Trưởng phòng nhận đầu vào, lập đội, đánh giá, đào tạo, xin tài nguyên qua **checklist + quiz** (`nhan-su/viec/tp-lap-doi.md`, `khach-hang/<shop>/`). Quiz 11/11: báo sếp chỉ khi cần/xong mốc · sếp hỏi thẳng từng vai · vai chưa đạt mà sếp muốn giao → **ba bên cùng đào tạo trước** · vai L4 tự làm việc nội bộ, đăng/tiêu tiền/sửa web phải hỏi |
+| 11/11 | **Duyệt kiến trúc v0.2** (`du-an-phong/KIEN-TRUC.md`, thay v0.1) · **lấp G1–G9 trước khi làm video** · **media giữ trong `thu-nghiem/` của máy Linux này**, chữ theo git; sau điều khiển từ xa qua **Claude Remote** (không đồng bộ media giữa máy) |
 | 23/10 | Muse (muse.ai) chỉ là nhánh thử, chạy **bên trong** Muse. Không dùng useapi.net, AutoMuse (giao mật khẩu, cookie Meta cho bên thứ ba) |
 
 ## Quy tắc bóc khung (M3) — rút ra từ lỗi khung 01, 23/10
