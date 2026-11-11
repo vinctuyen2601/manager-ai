@@ -17,6 +17,12 @@
   (chạy trong `gen-video-viral`), rồi ghép lại tờ sản phẩm từ cấu hình đã lưu ở `san-pham/to-san-pham/orb.json`
   (tên tệp ảnh/khung lấy từ phiếu `02-sp-ho-so.md`; `that-*.jpg` và `trang-anh/` phải tách/tải lại theo bảng trong phiếu đó).
 
+## 1b. Chạy thử phòng trên 17fishing — TẠM DỪNG ở bước 3 (11/11)
+- Thư mục: [viec-dang-chay/2026-11-11-phao-ro-diec-qc/](viec-dang-chay/2026-11-11-phao-ro-diec-qc/) — đọc `00-dieu-phoi.md`.
+- Sản phẩm mới tạo trên 17fishing 11/11: phao điện rô diếc LED-425 (hồ sơ `san-pham/phao-ro-diec.md`, M0 7/7).
+- Dừng vì sếp phỏng vấn và kết luận các vai "toàn là newbie" → **rework cách dựng agent thành chuyên gia** trước khi chạy tiếp.
+- `gen-video-viral` đã clone vào `~/my-project/gen-video-viral` (máy Linux); ffmpeg 4.4.2. 4 lỗi máy lộ ra, ghi ở nhật ký luồng.
+
 ## 2. Video 01 Santa Spins bản 2 — chờ sếp chạy Muse
 Prompt sẵn: `gen-video-viral/vi-du/v01-ban2-prompt.md` (ảnh M2, K2; clip M2, B2). Xong thì `gvv cat vi-du/v01-ban2-ke-hoach-cat.json --dung`.
 Media Santa Spins cũng ở `thu-nghiem/` (không theo git); cấu hình tờ sản phẩm: `san-pham/to-san-pham/santa-spins.json`.
