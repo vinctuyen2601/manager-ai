@@ -121,3 +121,8 @@ Test cũ `danhDauCatDoSang` đã bỏ cùng với luật của nó. Các test kh
   nhưng khi đó vẫn có cờ để soi.
 - Đèn nhỏ giữ sáng thì gắn nhãn "chuyển động" chứ không phải "đèn". Kết luận "không cắt" vẫn đúng.
 - `gvv cat` vẫn dùng hai ngưỡng cố định cũ (không thuộc phạm vi việc này).
+
+## Bổ sung 12/11 — video thật đầu tiên sau khi gộp (reel-04 Fishcamp, khung `thu-vien/khung/reel-04-fishcamp-phao-dien-coc.md`)
+Săn xu hướng soi khung dày từng điểm: **đúng 1 (7,233) · sót 1 (3,767, cắt nhảy điểm 0,091) · báo nhầm 2 (2,633, 5,733 "nhảy?" = bàn tay úp + LED đổi màu)**.
+Ca khó mới: **LED đổi màu trong 1 khung + tay chuyển động cùng lúc** → điểm scene cao như cắt nhảy. Cắt nhảy thật 0,091 vẫn dưới ngưỡng thích nghi.
+→ Luật `sxh-boc-khung` "soi mọi điểm, kể cả dưới ngưỡng" vẫn bắt buộc. Ứng viên sửa: ngưỡng "nhảy?" xét thêm % điểm ảnh đổi màu cục bộ.
