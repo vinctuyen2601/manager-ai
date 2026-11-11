@@ -4,7 +4,7 @@ Dùng để chấm điểm gốc agent hiện tại (pha 0), rồi chấm lại 
 Câu đánh ⓘ là câu **cố ý thiếu dữ liệu**: không tra được ở đâu. Chấm xem agent có dám phán đoán đúng cách không (thang R1), không chấm đúng/sai.
 Câu thường chấm theo thang R2 (hiểu biết ngành), so với **đáp án của sếp**.
 
-**Sếp điền cột "Đáp án sếp"**: 1–2 dòng, viết như nhắn Zalo. Câu ⓘ thì ghi điều sếp tin là đúng (agent không được xem cột này).
+**Đáp án sếp KHÔNG ghi ở tệp này** mà ở `08-DAP-AN-SEP-KIN.md` (agent thi không được đọc). Cột "Đáp án sếp" bên dưới để trống có chủ ý. Sếp trả lời: 1–2 dòng, viết như nhắn Zalo. Câu ⓘ thì ghi điều sếp tin là đúng (agent không được xem cột này).
 Câu nào sếp không trả lời được → ghi "bỏ", câu đó loại khỏi bộ đề.
 
 ## Chuyên viên Sản phẩm
