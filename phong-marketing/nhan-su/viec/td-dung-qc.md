@@ -21,6 +21,9 @@ Kiến thức: `../vai/tho-dung.md`. Tệp này chỉ giữ thứ tự làm và 
    phiếu giao ghi thiếu bản quảng cáo. Hiện từ đen (`fade=in` trên nền đen) đẻ khung đen → hiện từ khung cuối của thân hoặc bỏ fade.
 4. **Nếu soát lưới nguồn thấy chữ, nhãn, sticker, logo in sẵn** (kể cả ở vùng UI che và sticker nền tảng ở góc) → ghi từng thứ
    vào bảng "In sẵn từ nguồn" kèm giây, vị trí, cách xử lý. Bảng không có dòng nào → ghi "đã soát lưới 4 khung/giây: không có".
+5. **Nếu bản dựng lệch kịch bản/bảng chữ** (mốc chữ hay cú bật lệch > 1 s, bỏ hoặc đổi một dòng chữ, đổi thứ tự cảnh) → ghi bảng "Lệch kịch bản"
+   (dòng gốc · dòng dựng · vì sao) và **trả Biên kịch xem trước khi xuất bản cuối** (sếp chốt 12/11; lô phao 11/11: bỏ "Nhiều màu là đang chờ" không hỏi).
+   Có cảnh quay thật → chạy `td-chinh-mau` trước khi đặt chữ.
 
 ## Bước
 1. Kiểm đầu vào: đủ clip, đúng tên, đủ độ dài (gói §4 bước 1, §6). Thiếu → dừng, báo theo câu mẫu gói §6.

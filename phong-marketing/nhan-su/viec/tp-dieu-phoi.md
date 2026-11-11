@@ -23,6 +23,7 @@ Cách chạy chung: `../../quy-che/luong/README.md`. Kiến thức: `../vai/truo
    hồ sơ (thi 11/11: 12 agent cùng gọi một shop → lỗi 429 hàng loạt).
 5. **Nếu việc của bước kế chưa qua bộ thi** (`README.md`) → vẫn giao, ghi ⚠ vào lệnh giao, và khi nhận về thì đọc **toàn tệp**,
    không chỉ ô "Xong khi".
+6. **Nếu phiếu dựng có bảng "Lệch kịch bản" không rỗng** → chưa giao bước 11; giao Biên kịch duyệt lệch (đồng ý / sửa chữ) rồi mới báo sếp.
 
 ## Bước
 1. Mở thư mục, lấy phiếu số lớn nhất, đọc phần đầu.

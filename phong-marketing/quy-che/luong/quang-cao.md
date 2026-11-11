@@ -26,6 +26,8 @@
 **Sau bước 11:** `tp.hop` (cuối lô) → `tp.duc-ket`.
 
 **Hướng Lai:** bước 3 chọn video nhà cung cấp làm thân; bước 7 chỉ lập cảnh **còn thiếu**; bước 8 chỉ sinh cảnh đó.
+**Quay thật thay Muse** (12/11): cảnh thiếu quay được → bước 7 là `dd.ke-hoach-quay` 🟡 (phiếu đi quay), bước 8 là **[Sếp/shop đi quay]**, bước 10 thêm `td.chinh-mau` 🟡.
+**Sau khi đăng:** `sxh.doc-so` 🟡 ở 48 h và 7 ngày → `tp.duc-ket`.
 
 ## Chạy song song được
 - Bước 3 chạy cùng bước 2 khi đã biết loại sản phẩm (khung không phụ thuộc chi tiết hồ sơ).

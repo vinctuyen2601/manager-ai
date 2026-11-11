@@ -18,9 +18,9 @@ Chốt 11/11/2026 (party mode): giải phẫu agent = danh tính + kiến thức
 | Biên kịch | [bk-kich-ban-qc](bk-kich-ban-qc.md) · [bk-loi-ban-dia](bk-loi-ban-dia.md) · [bk-chu-tren-hinh](bk-chu-tren-hinh.md) | ✅ đã thi (23/24 vs đối chứng 18/24) |
 | Trưởng phòng | [tp-lap-doi](tp-lap-doi.md) (lập đội, đánh giá, đào tạo, xin tài nguyên — chạy TRƯỚC mọi luồng cho shop mới) · [tp-nhan-viec](tp-nhan-viec.md) · [tp-dieu-phoi](tp-dieu-phoi.md) · [tp-ke-hoach-tuan](tp-ke-hoach-tuan.md) · [tp-brief](tp-brief.md) · [tp-hop](tp-hop.md) · [tp-duc-ket](tp-duc-ket.md) | 🟡 có tệp, chưa thi |
 | Chuyên viên SP | [sp-dung-ho-so](sp-dung-ho-so.md) · [sp-bo-sung-nguyen-lieu](sp-bo-sung-nguyen-lieu.md) · [sp-to-san-pham](sp-to-san-pham.md) | 🟡 có tệp, chưa thi |
-| Săn xu hướng | [sxh-tim-nguon](sxh-tim-nguon.md) · [sxh-boc-khung](sxh-boc-khung.md) · [sxh-chuyen-khung](sxh-chuyen-khung.md) · [sxh-theo-doi-doi-thu](sxh-theo-doi-doi-thu.md) · [sxh-dao-binh-luan](sxh-dao-binh-luan.md) | 🟡 có tệp, chưa thi |
-| Đạo diễn | [dd-ke-hoach-hinh](dd-ke-hoach-hinh.md) · [dd-viet-prompt](dd-viet-prompt.md) · [dd-kiem-clip](dd-kiem-clip.md) (nội dung hình) | 🟡 có tệp, chưa thi |
-| Thợ dựng | [td-dung-qc](td-dung-qc.md) · [td-ban-dia-hoa](td-ban-dia-hoa.md) · [td-do-qc](td-do-qc.md) (kỹ thuật) · [td-xuat-bien-the](td-xuat-bien-the.md) | 🟡 có tệp, chưa thi |
+| Săn xu hướng | [sxh-tim-nguon](sxh-tim-nguon.md) · [sxh-boc-khung](sxh-boc-khung.md) · [sxh-chuyen-khung](sxh-chuyen-khung.md) · [sxh-theo-doi-doi-thu](sxh-theo-doi-doi-thu.md) · [sxh-dao-binh-luan](sxh-dao-binh-luan.md) · [sxh-doc-so](sxh-doc-so.md) | 🟡 có tệp, chưa thi |
+| Đạo diễn | [dd-ke-hoach-hinh](dd-ke-hoach-hinh.md) · [dd-viet-prompt](dd-viet-prompt.md) · [dd-kiem-clip](dd-kiem-clip.md) (nội dung hình) · [dd-ke-hoach-quay](dd-ke-hoach-quay.md) (quay thật) | 🟡 có tệp, chưa thi |
+| Thợ dựng | [td-dung-qc](td-dung-qc.md) · [td-ban-dia-hoa](td-ban-dia-hoa.md) · [td-do-qc](td-do-qc.md) (kỹ thuật) · [td-xuat-bien-the](td-xuat-bien-the.md) · [td-chinh-mau](td-chinh-mau.md) | 🟡 có tệp, chưa thi |
 
 **Sếp chốt 11/11:** mẫu Biên kịch đã chứng minh cách viết này tốt hơn, nên các vai còn lại **viết mới, tạm chưa thi**.
 Việc 🟡 được gọi trong luồng, phiếu giao đánh dấu ⚠ và Trưởng phòng mở kiểm kỹ đầu ra (`tp-dieu-phoi`).
