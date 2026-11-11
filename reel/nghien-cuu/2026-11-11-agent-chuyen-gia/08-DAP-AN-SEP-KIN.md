@@ -35,6 +35,29 @@ Có chì và dây kèm theo không, hay phải mua thêm? · Giá so với phao 
 > (vd "không hợp câu chép trắm hồ sâu") → tính là "thêm ý chủ shop chưa nghĩ tới" (R2 ô e), không trừ điểm.
 > Câu ⓘ chấm theo R1 (cách phán đoán), đáp án sếp chỉ để xem agent nghiêng đúng phía hay không.
 
+## Săn xu hướng
+
+> ⚠ Nguồn gốc đáp án SX1–SX4: văn bản dán vào (xưng "em" với "anh", có câu "tôi mô tả, không nêu tên kênh", gợi ý cách tự tìm)
+> — dấu hiệu do một AI soạn. SP1 cũng còn ô mẫu "[điền: …]". **Chờ sếp xác nhận** đây là ý của sếp (sếp đồng ý từng ý)
+> hay chỉ là bản AI soạn. Nếu là bản AI soạn, giám khảo chấm "Claude so với AI khác", không phải "so với chuyên gia".
+
+**SX1** — Không có con số cố định, xu hướng đổi theo tháng và nền tảng. Dạng lặp lại: cá đớp phao quay cận chậm kèm tiếng nước
+(kiểu ASMR) · câu đêm phao điện đèn đổi màu trong tối · kéo cá lớn/cá lạ, tiếng cần căng · câu và nấu tại chỗ · test/so sánh/review
+dụng cụ (phao nào nhạy hơn, mồi nào ăn hơn) · câu đài thi đấu đếm cá trong thời gian giới hạn · mẹo nhanh 15–30 s (chỉnh chì,
+buộc thẻo, làm mồi) · hài, "fail". Riêng phao: nổi nhất là cảnh phao nhúng, nháy/đổi màu đúng lúc cá cắn, quay gần; và so độ nhạy hai phao.
+
+**SX2** — (1) Cá đớp phao cận cảnh: 15–30 s, máy sát mặt nước, phao nhúng rồi kéo lên rô/diếc, gần như không lời.
+(2) Câu đêm phao điện: chiều tối ở ao/hồ, đèn đổi màu nổi trên nền tối, chốt bằng cảnh xâu cá cuối buổi.
+(3) Review/thử phao: hai phao cạnh nhau, cùng mồi, cùng điểm, xem phao nào báo sớm hơn, kết luận ngắn.
+Không nêu tên kênh; gợi ý tìm "câu đài", "phao điện", "câu đêm" trên YouTube/TikTok, lọc lượt xem tháng gần nhất, xem 10 video đầu.
+
+**SX3** — Đúng một thứ: phao sáng đổi màu trong tối, quay cận, đúng khoảnh khắc cá đớp + một dòng chữ lớn 3–5 chữ
+(vd "Cá ăn là đèn báo ngay"). Không mở bằng logo, lời chào, giới thiệu. Vì người xem quyết định ở 1–2 giây đầu; thứ làm họ dừng là
+hình lạ mắt + tò mò; đèn đổi màu vừa là điểm hấp dẫn vừa là điểm bán.
+
+**SX4** ⓘ — Nghiêng về câu đêm / chiều tối: đèn chỉ nổi khi nền tối, ban ngày phao điện trông như phao thường. Đổi lại quay đêm
+dễ nhiễu, tối, rung → cần đèn phụ nhẹ hoặc điện thoại quay tốt. Câu ngày hình đẹp, dễ quay, nhưng mất điểm khác biệt.
+
 ## Sự thật sản phẩm MỚI lộ ra từ đáp án — CHỜ áp vào hồ sơ SAU khi chấm điểm gốc
 (Áp trước thì điểm gốc đo trên kiến thức agent chưa từng có → mất ý nghĩa so sánh trước/sau.)
 - Thân phao chống nước, có gioăng — trái mục 6 hồ sơ hiện tại ("không nói chống nước, chưa xác nhận").
