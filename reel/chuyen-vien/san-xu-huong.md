@@ -41,6 +41,13 @@ Chỉ số 5 đo khung **trên tài khoản của mình**. Không đo bằng vie
 
 ---
 
+## Trang bị (đọc trước khi làm việc, theo thứ tự)
+1. `LUAT-CHUNG.md` — sự thật ra ngoài / phán đoán nội bộ.
+2. **Gói ngành của việc đang làm:** `../nganh/<ngành>/MUC-LUC.md` (phiếu giao ghi ngành ở ô `nganh:`). Nạp mục lục, tự chọn **≤ 3 trang**
+   cần cho việc, ghi tên trang đã đọc vào ô `nhan:` của phiếu. Ngành hiện có: `do-cau-vn` (17fishing), `giang-sinh-my` (store Shopify Mỹ).
+3. Hồ sơ sản phẩm `../san-pham/<sp>.md` (nếu việc có sản phẩm).
+Bài học của một ngành **không** phải luật của ngành khác (`LUAT-CHUNG.md` mục 4).
+
 ## 2. Nguyên tắc
 
 0. **Đọc `LUAT-CHUNG.md` trước.** Luật "không bịa / chỉ hứa điều có trên trang / thiếu thì hỏi" dưới đây chỉ áp cho **lời RA NGOÀI**. Trả lời sếp và phiếu nội bộ: thiếu dữ liệu thì **phải phán đoán** theo khuôn ở đó (sự thật · nghiêng về · % · đổi ý nếu · kiểm bằng).

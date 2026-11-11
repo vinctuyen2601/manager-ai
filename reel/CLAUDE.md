@@ -1,8 +1,8 @@
 # Máy làm Reel — hồ sơ dự án
 
-Tài sản thứ tư, bắt đầu 23/10/2026. **Không phải công cụ của 17fishing hay
-GaRutin**: một tài sản AI độc lập, đưa vào một sản phẩm + một reel viral mẫu,
-ra video dọc 9:16 tiếng Anh (Mỹ) trong một thư mục.
+Tài sản thứ tư, bắt đầu 23/10/2026: **Phòng Marketing AI** cho các shop của chủ dự án (định hình 11/11/2026).
+Ban đầu là máy làm reel tiếng Anh (Mỹ) độc lập; từ 11/11 phòng **được đọc kho của 17fishing và GaRutin** (chỉ đọc,
+trỏ tới, không chép) và làm việc theo **ngành** — tri thức ngành ở `nganh/<ngành>/`, đọc `MUC-LUC.md` của ngành trước.
 
 Đọc `~/my-project/CLAUDE.md` trước (vai trò, quyền hạn, bẫy chung), rồi tệp này.
 

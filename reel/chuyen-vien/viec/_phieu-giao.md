@@ -6,6 +6,7 @@ Trưởng phòng đọc **phần đầu** để quyết định bước tiếp, 
 ```markdown
 ---
 viec: <vai>.<tên-việc>          # vd bk.kich-ban-qc
+nganh: <mã ngành>               # vd do-cau-vn · giang-sinh-my — vai nhận việc nạp nganh/<mã>/MUC-LUC.md
 trang_thai: xong | chan | can-sep
 nhan: [<tệp đã đọc>]
 giao: [<tệp đã viết>]

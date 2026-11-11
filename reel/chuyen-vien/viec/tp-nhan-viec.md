@@ -48,6 +48,7 @@ Tin nhắn sếp (nguyên văn): "<…>"   ·   Ngày nhận: <YYYY-MM-DD>
 Tên sếp viết: <…>  ·  Tên trên trang: <… | ⬜ chờ SP kiểm>  ·  Khớp: có | không | chưa kiểm
 Sản phẩm/page: <link>       Mục đích: <…> (✅ sếp nói | ⚠ mặc định)
 Thị trường: <Mỹ | VN> (✅ | ⚠ suy từ <tiền tệ/ngôn ngữ trang>)    Kênh: <…>
+Ngành: <mã ngành trong nganh/> (chưa có gói ngành → ghi ⬜ và giao `sxh-dung-nganh` trước khi làm video)
 Luồng: <Quảng cáo | Nuôi page> · Hướng: <…> · Xếp hàng: <ngay | sau thư mục …>
 Lịch (ngày thật): có link <ngày> → sếp bấm Muse khoảng <ngày> → sếp chấm thẻ <ngày>
 | Câu hỏi sếp (lời thường) | Chặn bước số | Mặc định nếu sếp không trả lời |
