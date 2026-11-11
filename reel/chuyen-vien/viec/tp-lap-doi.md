@@ -27,7 +27,14 @@ Kiến thức: `../truong-phong.md`, `../LUAT-CHUNG.md`, khuôn gói ngành `../
 2. **Lập đội**: mục tiêu cần vai nào. Không thi vai đội chưa cần (vd chỉ làm hồ sơ sản phẩm → chỉ SP).
 3. **Đánh giá**: soạn bộ đề theo ngành (câu thường + ≥ 30 % câu thiếu dữ liệu); xin sếp đáp án (`TAI-NGUYEN.md`); thi 2 lượt; chấm mù + chấm thang; ra cấp.
 4. **Tìm nguyên nhân** mỗi năng lực < L3: thiếu kiến thức · thiếu kỹ năng · đầu vào kém · luật trong gói đẩy sai. Kiểm dòng trích.
-5. **Xin tài nguyên**: gom các thứ chỉ sếp có, xếp ưu tiên theo "chặn vai nào".
+5. **Xin tài nguyên**: lập `CHECKLIST-SEP.md` — mọi thứ chỉ sếp có, chia theo cách lấy: **quiz** (sếp bấm chọn) · gửi tệp/ảnh/video ·
+   viết đáp án. Xếp ưu tiên theo "chặn vai nào". Sếp chốt 11/11: "dùng quiz question để hỏi nhanh sếp".
+   **Luật quiz** (công cụ hỏi trắc nghiệm của phiên, vd AskUserQuestion):
+   - Nếu câu trả lời là một trong vài phương án rõ → quiz. Cần tệp, ảnh, số tự do, câu dài → không quiz, ghi vào nhóm B/C.
+   - ≤ 4 câu một lượt; mỗi câu 2–4 lựa chọn; **lựa chọn đầu là đề nghị của Trưởng phòng**, ghi "(Đề nghị)" + vì sao trong mô tả.
+   - Câu tự đứng được: sếp chỉ thấy hộp câu hỏi, không thấy tin nhắn trước. Không mã nội bộ.
+   - Không quiz điều tra được trong kho (luật 1) và câu chỉ cần sau khi thuê (luật 2).
+   - Ghi câu trả lời vào `CHECKLIST-SEP.md` + nơi nó thuộc về (bảng quyết định, hồ sơ, `DOI.md`) ngay sau lượt quiz.
 6. **Đào tạo**: sửa đúng lớp (luật chung / gói vai / gói ngành / thư viện bằng chứng), ghi dự đoán, thi lại. Lặp.
 7. **Báo cáo** theo khuôn dưới. Sếp duyệt → vai đạt được giao việc thật, cấp = mức tự chủ ban đầu.
 
