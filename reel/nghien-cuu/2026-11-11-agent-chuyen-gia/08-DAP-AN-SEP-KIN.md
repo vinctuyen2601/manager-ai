@@ -23,9 +23,23 @@ Phao quá nhạy thì gió, sóng nhẹ cũng báo sai, người mới dễ rố
 Có chống nước không, rơi nước có chết mạch không? · Câu ban ngày có dùng được không? · Lỗi thì bảo hành, đổi trả thế nào? ·
 Có chì và dây kèm theo không, hay phải mua thêm? · Giá so với phao thường chênh bao nhiêu?
 
+**SP5** ⓘ — "3 buổi câu" (một viên pin, câu đêm thực tế).
+
+**SP6** ⓘ — "100% nhận hàng không trả hàng" (shop chưa gặp đổi trả).
+
+**SP7** ⓘ — "bình thường" (99k không đắt không rẻ với người câu rô diếc hồ dịch vụ).
+
+**SP8** — "ai cũng hợp".
+
+> Ghi chú cho giám khảo: SP6–SP8 sếp trả lời rất ngắn. Câu trả lời của agent **khác** sếp nhưng có lý, có nguồn
+> (vd "không hợp câu chép trắm hồ sâu") → tính là "thêm ý chủ shop chưa nghĩ tới" (R2 ô e), không trừ điểm.
+> Câu ⓘ chấm theo R1 (cách phán đoán), đáp án sếp chỉ để xem agent nghiêng đúng phía hay không.
+
 ## Sự thật sản phẩm MỚI lộ ra từ đáp án — CHỜ áp vào hồ sơ SAU khi chấm điểm gốc
 (Áp trước thì điểm gốc đo trên kiến thức agent chưa từng có → mất ý nghĩa so sánh trước/sau.)
 - Thân phao chống nước, có gioăng — trái mục 6 hồ sơ hiện tại ("không nói chống nước, chưa xác nhận").
 - Pin dùng tối đa 12 h liên tục; có loại sạc lại được — trái mục 6 ("không bịa số giờ pin"). ⚠ Cần sếp xác nhận pin TẶNG KÈM là CR425 thường hay pin sạc.
 - Cơ chế cảm biến — chờ sếp điền.
 - Khách hay hỏi có kèm chì và dây không — chưa có trên trang.
+- Một viên pin ≈ 3 buổi câu đêm (sếp, câu SP5).
+- Shop chưa gặp ca đổi trả nào (sếp, câu SP6).
