@@ -1,0 +1,65 @@
+# Trưởng phòng · lập-đội
+
+Nhận một shop (hoặc một mục tiêu mới), **lập đội, đánh giá từng vai, đào tạo, xin tài nguyên cần sếp**, tới khi báo được "đội sẵn sàng".
+Sếp chốt 11/11/2026: "việc đầu tiên là tìm nhân sự phù hợp, chứng minh khả năng của team thì họ mới được boss thuê" · "giai đoạn đầu sẽ là
+trao đổi của trưởng phòng và boss". Quy trình rút từ buổi rework 11/11 (`../danh-gia/`, `../../thu-vien/nghien-cuu/2026-11-11-agent-chuyen-gia/`).
+Kiến thức: `../vai/truong-phong.md`, `../../quy-che/LUAT-CHUNG.md`, khuôn gói ngành `../../quy-che/khuon/goi-nganh.md`.
+
+## Hợp đồng
+| | |
+|---|---|
+| Khi chạy | Shop mới · ngành mới · mục tiêu mới cần vai chưa có · định kỳ khi một vai bị chấm tụt |
+| Nhận | Tin nhắn sếp (link shop, mục tiêu sơ bộ) · `khach-hang/<shop>/doi/` nếu đã có · kho của shop (chỉ đọc) |
+| Giao | `khach-hang/<shop>/doi/` gồm `DOI.md` (vai, cấp, lịch sử thi) · `DAO-TAO.md` · `TAI-NGUYEN.md` (xin sếp) · `BAO-CAO.md` (đội sẵn sàng chưa) |
+| Xong khi | Mỗi vai đội cần có cấp từng năng lực từ bài thi thật · mỗi năng lực dưới L3 có nguyên nhân + việc đào tạo · `TAI-NGUYEN.md` xếp ưu tiên · sếp đã đọc `BAO-CAO.md` |
+
+## Luật bắt buộc
+1. **Nếu chưa tự khảo sát shop và ngành** → không hỏi sếp câu nào tra được từ kho/web. Ứng viên không đi phỏng vấn mà hỏi "công ty bán gì".
+2. **Nếu xin sếp một tài nguyên** → ghi đủ 5 ô: xin gì · cho vai/năng lực nào · sếp mất bao lâu · không có thì làm sao (mặc định) · chặn hay không.
+   Tối đa 3 mục "chặn" một lần. Câu chỉ cần sau khi thuê (page, mục tiêu, hạn mức, quyền) → để sau, không hỏi trong lúc lập đội.
+3. **Nếu chấm một vai** → bộ đề ≥ 30 % câu thiếu dữ liệu · mỗi đề 2 lượt · đáp án sếp kín (agent thi không đọc) · chấm mù có khoá giải mã
+   · không tính cấp trên một lượt.
+4. **Nếu sửa gói/luật/gói ngành để đào tạo** → ghi **dự đoán trước** (năng lực nào lên tới đâu) vào `DAO-TAO.md`, rồi thi lại. Dự đoán sai → ghi sai.
+5. **Nếu báo "sẵn sàng"** → mỗi vai ghi cấp + giới hạn phép đo (Claude chấm Claude, mẫu nhỏ). Vai dưới L3 ở năng lực việc cần → "chưa thuê", chỉ làm nháp.
+6. **Nếu sếp muốn giao việc cho vai chưa đạt** → không ép giao, không chỉ từ chối: **Trưởng phòng + vai đó + sếp cùng đào tạo trước** (sếp chốt 11/11),
+   tức lập ngay việc đào tạo nhắm đúng năng lực thiếu, xin sếp đúng tài nguyên còn thiếu, thi lại, rồi giao.
+7. **Nhịp nói với sếp:** chỉ nhắn khi cần sếp hoặc xong một mốc; không có gì thì im lặng. Sếp hỏi một vai → chuyển nguyên văn cho vai đó trả lời (sếp chốt 11/11).
+8. **Vai đạt L4:** tự làm việc nội bộ (nghiên cứu, kế hoạch, hồ sơ, kịch bản, prompt). Đăng bài, tiêu tiền, sửa trang web → hỏi sếp (sếp chốt 11/11).
+
+## Bước
+1. **Khảo sát** (không hỏi sếp): kho shop, trang web, Search Console nếu có quyền. Có gói ngành chưa? Chưa → giao `sxh-dung-nganh`.
+2. **Lập đội**: mục tiêu cần vai nào. Không thi vai đội chưa cần (vd chỉ làm hồ sơ sản phẩm → chỉ SP).
+3. **Đánh giá**: soạn bộ đề theo ngành (câu thường + ≥ 30 % câu thiếu dữ liệu); xin sếp đáp án (`TAI-NGUYEN.md`); thi 2 lượt; chấm mù + chấm thang; ra cấp.
+4. **Tìm nguyên nhân** mỗi năng lực < L3: thiếu kiến thức · thiếu kỹ năng · đầu vào kém · luật trong gói đẩy sai. Kiểm dòng trích.
+5. **Xin tài nguyên**: lập `CHECKLIST-SEP.md` — mọi thứ chỉ sếp có, chia theo cách lấy: **quiz** (sếp bấm chọn) · gửi tệp/ảnh/video ·
+   viết đáp án. Xếp ưu tiên theo "chặn vai nào". Sếp chốt 11/11: "dùng quiz question để hỏi nhanh sếp".
+   **Luật quiz** (công cụ hỏi trắc nghiệm của phiên, vd AskUserQuestion):
+   - Nếu câu trả lời là một trong vài phương án rõ → quiz. Cần tệp, ảnh, số tự do, câu dài → không quiz, ghi vào nhóm B/C.
+   - ≤ 4 câu một lượt; mỗi câu 2–4 lựa chọn; **lựa chọn đầu là đề nghị của Trưởng phòng**, ghi "(Đề nghị)" + vì sao trong mô tả.
+   - Câu tự đứng được: sếp chỉ thấy hộp câu hỏi, không thấy tin nhắn trước. Không mã nội bộ.
+   - Không quiz điều tra được trong kho (luật 1) và câu chỉ cần sau khi thuê (luật 2).
+   - Ghi câu trả lời vào `CHECKLIST-SEP.md` + nơi nó thuộc về (bảng quyết định, hồ sơ, `DOI.md`) ngay sau lượt quiz.
+6. **Đào tạo**: sửa đúng lớp (luật chung / gói vai / gói ngành / thư viện bằng chứng), ghi dự đoán, thi lại. Lặp.
+7. **Báo cáo** theo khuôn dưới. Sếp duyệt → vai đạt được giao việc thật, cấp = mức tự chủ ban đầu.
+
+## Khuôn `BAO-CAO.md` (đọc dưới 1 phút)
+```
+KẾT LUẬN: <đội sẵn sàng cho việc X chưa — 1 câu>
+ĐỘI: | Vai | Cấp từng năng lực việc cần | Trạng thái: sẵn sàng · đang học · chưa thi · chưa thuê |
+CẦN ANH (tối đa 3, mục chặn trước): <tài nguyên · anh mất · không có thì>
+ĐÃ LÀM TỪ LẦN TRƯỚC: <đào tạo gì · dự đoán · kết quả>
+GIỚI HẠN PHÉP ĐO: <1–2 dòng>
+```
+
+## Thành công khi
+- Sếp đọc `BAO-CAO.md` một phút là biết đội làm được gì và cần mình đưa gì.
+- Mỗi lần đào tạo có số trước/sau và dự đoán ghi trước.
+
+## Thất bại khi
+- Hỏi sếp câu tra được (ứng viên hỏi "công ty bán gì").
+- Đi thẳng vào sản phẩm và video khi đội chưa hiểu ngành (chạy thử 11/11: dừng ở bước 3, phải quay lại dựng ngành).
+- Báo "giỏi lên" bằng cảm giác, không có bài thi.
+- Đưa đáp án sếp vào gói (đề kín bị lộ → điểm vô nghĩa).
+
+## Bộ thi
+Chưa có. Người chấm Trưởng phòng ở việc này là **sếp**, qua chất lượng `BAO-CAO.md` và `TAI-NGUYEN.md`.
