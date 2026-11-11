@@ -23,6 +23,12 @@ Kiến thức: `../vai/truong-phong.md` §3.2 (ước tính), §4 bước 6, khu
 5. **Nếu món có hạn ngoài** (vd hạn ship Giáng sinh 12/12) → xếp trước, mốc tính lùi từ hạn đó. Mốc khác tính từ ngày có
    link, viết bằng ngày thật; nguyên liệu tới trễ thì lịch lùi theo (thi 11/11).
 
+## Luật trình (sếp chốt 11/11/2026: "không có bản kế hoạch trình lên thì rất khó review để hỗ trợ chỉnh sửa trong giai đoạn học")
+6. **Nếu chưa có bản trình được sếp duyệt** → không mở luồng nào quá bước 2 (cổng 1b của luồng). Gấp thì trình bản 1 trang trước, chi tiết theo sau trong ngày.
+7. **Trong giai đoạn học (tới khi mọi vai đã thi theo ngành)** → bản trình phải có mục 12 "Học gì · sếp soi chỗ nào": mỗi vai ghi
+   một dự đoán có % và cách kiểm, và một chỗ muốn sếp soi. Sau lô, báo cáo đối chiếu từng dự đoán (đúng/sai) — đó là đầu vào của đúc kết.
+8. **Nếu Trưởng phòng phải lấy mặc định thay sếp** → liệt kê đủ ở mục 11 kèm ảnh hưởng; quá 3 quyết định có ảnh hưởng tới video ra ngoài → dừng, trình lại.
+
 ## Bước
 1. Liệt kê việc treo: thư mục chưa có báo cáo cuối. Đọc phần đầu phiếu mới nhất của từng thư mục (`trang_thai`).
 2. Số món mỗi việc: mặc định 1 thân × 3 hook (gói §13 câu 2 — chưa chốt, ghi ⚠).
@@ -42,6 +48,22 @@ Tổng: <%> · Dự phòng 10 %: <%> · Còn lại: <%>
 Đã cắt / dời: <món · lý do · sang ngày>
 ```
 Mã món và trạng thái theo gói §7.3. Sau khuôn là phiếu giao chung.
+
+**Bản chi tiết trình sếp (12 mục, đi sau bản 1 trang trên)** — mẫu đầy đủ: `../../khach-hang/17fishing/viec/2026-11-11-phao-ro-diec-qc/BAN-TRINH.md`
+```
+1. Bối cảnh        — sản phẩm, thị trường/kênh, hạn cứng, đã có gì, hạn mức
+2. Mục tiêu · đo   — mục tiêu có số + mốc đạt + đo bằng gì (trước đăng / sau đăng)
+3. Lịch theo ngày  — bảng Ngày · Phòng làm · Sếp làm (phút)
+4. Từng video      — thân chung theo giây + các kiểu mở đầu (khác cả HÌNH) + nguồn hình
+5. Hạn mức         — bảng ảnh/clip/% · × 1,3 · thứ tự tự cắt khi thiếu
+6. Nói / không nói — chép từ hồ sơ sản phẩm
+7. Rủi ro          — khả năng · ảnh hưởng · cách xử lý
+8. Ai làm gì       — vai · việc · giao ra · hạn
+9. Thẻ chấm sếp    — mẫu thẻ ĐĂNG / SỬA / BỎ
+10. Cần sếp quyết  — câu · ảnh hưởng nếu chưa trả lời · mặc định
+11. Đã tự quyết    — kèm ảnh hưởng
+12. Học gì · sếp soi chỗ nào — mỗi vai: dự đoán % + cách kiểm + chỗ muốn sếp soi (luật 7)
+```
 
 ## Thành công khi
 - Sếp biết đúng ngày nào phải bấm Muse, ngày nào chấm thẻ, mà không đọc bảng.

@@ -5,4 +5,4 @@ Trạng thái: `mới · chờ nguyên liệu · đang làm · chờ sếp · t�
 
 | Mã | Mục tiêu | Luồng | Chủ | Trạng thái | Đang ở | Chặn bởi | Hạn | Chi phí đã dùng | Thành phẩm |
 |---|---|---|---|---|---|---|---|---|---|
-| `2026-11-11-phao-ro-diec-qc` | Video quảng cáo phao rô diếc LED-425; đồng thời chạy thử phòng | Quảng cáo · Lai | Trưởng phòng | **tạm dừng** | bước 3/11 | đội chưa sẵn sàng: Săn xu hướng cần video mẫu (`../doi/TAI-NGUYEN.md` R3) | — | $0 · 0 % Muse | — |
+| `2026-11-11-phao-ro-diec-qc` | Video quảng cáo phao rô diếc LED-425; đồng thời chạy thử phòng | Quảng cáo · Lai | Trưởng phòng | **chờ sếp** | bước 11/11 (4 bản dựng xong) | sếp đăng; số liệu 48 h | 25/11 (kiểm giả thuyết) | $0 · ~7 % Muse (ước) | `thu-nghiem/out/prd-g01/` H1 · H3 · cat6s · đối chứng |

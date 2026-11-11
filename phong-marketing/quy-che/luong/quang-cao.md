@@ -7,6 +7,7 @@
 
 | # | Việc (vai.việc) | Nhận | Giao | Cổng | Nếu chặn |
 |---|---|---|---|---|---|
+| 1b | **[Cổng KẾ HOẠCH — sếp duyệt]** (sếp chốt 11/11) | Phiếu 01 | **Bản trình**: 1 trang + chi tiết 12 mục (khuôn `nhan-su/viec/tp-ke-hoach-tuan.md`) | Sếp trả lời "duyệt" hoặc sửa | Không chạy bước 3 trở đi (bước 2 được chạy để có số liệu cho bản trình) |
 | 1 | `tp.nhan-viec` 🟡 | Tin nhắn sếp | Phiếu nhận việc: sản phẩm, thị trường, kênh, hạn | Có link + thị trường | Hỏi sếp, kèm "Ý sếp là <tên gần nhất>?" |
 | 2 | `sp.dung-ho-so` 🟡 | Link | Hồ sơ `khach-hang/<shop>/san-pham/<tên>.md` + tờ sản phẩm + phiếu M0 | M0 = ĐẠT | **Dừng luồng.** Báo sếp danh sách cần bổ sung (một lần) |
 | 3 | `sxh.chuyen-khung` 🟡 | Hồ sơ · thư viện khung | Khung đã chọn + lý do + phần phải đổi | Có khung chuyển được | Chạy `sxh.boc-khung` trên video mẫu sếp gửi; không có thì hỏi |
