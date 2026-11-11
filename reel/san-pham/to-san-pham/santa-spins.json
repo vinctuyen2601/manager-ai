@@ -1,0 +1,12 @@
+{
+  "ra": "to-san-pham.jpg",
+  "cot": 2,
+  "o": [
+    { "tep": "video-san-pham-1080p.mp4", "t": 0.75, "nhan": "REAL - front, ring ON" },
+    { "tep": "video-san-pham-1080p.mp4", "t": 6.0,  "nhan": "REAL - ring OFF (thin grey)" },
+    { "tep": "video-san-pham-1080p.mp4", "t": 8.5,  "nhan": "REAL - whole player on fridge" },
+    { "tep": "that-anh-khach.jpg",                  "nhan": "REAL - side view, thickness" },
+    { "tep": "video-san-pham-1080p.mp4", "t": 1.75, "nhan": "REAL - disc size vs fingers" },
+    { "tep": "video-san-pham-1080p.mp4", "t": 2.5,  "nhan": "REAL - discs, all different" }
+  ]
+}

@@ -10,6 +10,8 @@ ra video dọc 9:16 tiếng Anh (Mỹ) trong một thư mục.
 
 | Tài liệu | Ở đâu | Dùng khi |
 |---|---|---|
+| **Bàn giao phiên gần nhất** (việc đang dở, chờ sếp, sửa mã còn treo) | `BAN-GIAO.md` | **Đầu mỗi phiên** — có thì đọc trước tiên |
+| Phòng Marketing AI: luồng phối hợp + việc từng vai | `luong/` · `chuyen-vien/viec/` | Chạy một video qua các vai |
 | Kế hoạch sản phẩm (yêu cầu FR/NFR, module M0–M9, UI, kiến trúc, lộ trình) | Bản gốc: https://claude.ai/artifact/AMhN1DQDB32o14HAAmA1da · bản chép: `KE-HOACH.md` | Mọi quyết định về phạm vi và thứ tự làm. Sửa ở bản gốc rồi chép lại |
 | Bản thiết kế sơ đồ (bản 6) | https://claude.ai/artifact/Poxf3b8AzDytHAyMC7HhTG | Nhìn nhanh luồng và lý do loại các repo khác |
 | Việc giai đoạn 0 và kết quả đo | `GIAI-DOAN-0.md` cùng thư mục | Đang làm giai đoạn 0 |

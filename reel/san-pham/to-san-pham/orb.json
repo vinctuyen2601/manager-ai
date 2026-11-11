@@ -1,0 +1,9 @@
+{ "ra": "to-san-pham.jpg", "cot": 2,
+  "o": [
+    { "tep": "video-02.mp4", "t": 3.0, "nhan": "FRONT - IN HAND" },
+    { "tep": "video-01.mp4", "t": 3.0, "nhan": "PLAYING - ON TREE" },
+    { "tep": "anh-02.jpg", "nhan": "SIDE - CLEAR DOME" },
+    { "tep": "anh-01.jpg", "nhan": "BACK - USB-C" },
+    { "tep": "trang-anh/IMG_7403.jpg", "nhan": "IN HAND - PLAYING" },
+    { "tep": "video-02.mp4", "t": 2.0, "nhan": "BACK - CABLE IN" }
+  ] }
