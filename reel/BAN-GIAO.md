@@ -2,6 +2,8 @@
 
 Đọc tệp này trước khi làm tiếp. Xong một mục thì gạch/xoá dòng đó; hết việc thì xoá tệp.
 
+**Mở phiên: đọc `doi/17fishing/BAO-CAO.md` trước** (trạng thái đội + tài nguyên cần sếp; việc `chuyen-vien/viec/tp-lap-doi.md`).
+
 ## 0. ĐANG LÀM: rework agent thành chuyên gia — TẠM DỪNG sau pha 2 (11/11 chiều, sếp: "buổi tối sẽ tiếp tục")
 Đọc theo thứ tự: `nghien-cuu/2026-11-11-agent-chuyen-gia/05-PHUONG-AN-KIEN-TRUC.md` (phương án + mục 6b/6c sếp chốt) →
 `thi/2026-11-11-diem-goc/BANG-DIEM-GOC.md` → `thi/2026-11-11-pha1/KET-QUA-PHA1.md` → `thi/2026-11-11-pha2/TONG-KET-PHA2.md`.
