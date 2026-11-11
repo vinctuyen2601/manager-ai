@@ -22,6 +22,16 @@ Tri thức ngành: `../../thu-vien/nganh/do-cau-vn/MUC-LUC.md`. Đội: `doi/BAO
 | Đang thiếu gì | 0 video (chưa có kênh video nào được ghi nhận); bảng từ khoá Search Console không đồng bộ từ 22/09; chưa có tin nhắn Zalo thật nào được lưu để học chữ khách | `../../thu-vien/nganh/do-cau-vn/ngon-ngu-khach.md` | ⬜ |
 | Điều không được nói | Không khai xuất xứ Trung Quốc · không hứa vượt thông số ("chống nước tuyệt đối", "không gãy", "tự động") · không dùng số sao, "đã bán N" làm bằng chứng · không viết như có cửa hàng ở Hà Nội | `../../../17fishing/GIONG-TRANG-SAN-PHAM.md` §6b · gói ngành | ✅ xuất xứ (30/09) |
 
+## Khối liên hệ (dùng nguyên văn cho caption / bộ content quảng cáo — không đọc trong lời thoại)
+Nguồn: trang 17-fishing.com (Zalo hiện ở đầu trang, kiểm 12/11/2026) · `../../thu-vien/nganh/do-cau-vn/muc-dich.md` (kho, shop online).
+```
+📍 Kho: Đông Tiên Hưng, Hưng Yên (shop online, không có cửa hàng ở Hà Nội)
+📞 Hotline/Zalo: 0358319291
+🌐 Website: https://17-fishing.com
+🚚 Freeship đơn từ 150.000đ · Kiểm tra hàng rồi mới thanh toán · Đổi trả 7 ngày
+```
+⚠ Địa chỉ ghi mức "kho, huyện/xã" — sếp muốn ghi chi tiết hơn thì sửa ở đây (một chỗ).
+
 ## Phần 2 — Nhập việc (hỏi SAU khi sếp thuê đội, bằng quiz)
 | Ô | Nội dung | Ngày chốt |
 |---|---|---|
