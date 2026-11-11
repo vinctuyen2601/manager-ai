@@ -23,7 +23,7 @@ nganh/<ma-nganh>/
 1. Frontmatter bắt buộc:
    ```
    ---
-   loai: khach-hang | thuat-ngu | ngon-ngu-khach | mua-vu | gia | noi-dung | hoi-dap | muc-dich
+   loai: muc-luc | muc-dich | khach-hang | thuat-ngu | ngon-ngu-khach | mua-vu | gia | noi-dung | hoi-dap | nhat-ky
    nguon: [<đường dẫn tệp + dòng, hoặc endpoint API + khoảng ngày>]
    ngay: <YYYY-MM-DD>
    muc_tin: cao | trung-binh | thap
