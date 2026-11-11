@@ -51,6 +51,7 @@ Tái lập: <ra>/dung.sh + <tệp lọc> — chạy lại: có
 - Sếp biết nhạc được đăng ở nền tảng nào trước khi đăng.
 
 ## Thất bại khi
+- `loudnorm` tự đẩy tần số âm lên 96 kHz → thêm `aresample=48000` sau loudnorm. Nguồn Douyin mang nhãn màu BT.601 → re-encode sang BT.709 hoặc `color.py --retag bt709` (ffmpeg-skill `check.py` bắt cả hai, thử 12/11).
 - Chữ in sẵn "works very well" ở vùng UI che và sticker TikTok góc trên còn trong bản giao (thi 11/11, cả hai bài).
 - Để lộ logo hãng (thi 11/11 bộ Biên kịch đề 03, bài đối chứng — lỗi ở khâu lời, Thợ dựng là chốt chặn cuối).
 - Lặng 2,1 s giữa hai câu giọng (skill reup p05, gói §9).

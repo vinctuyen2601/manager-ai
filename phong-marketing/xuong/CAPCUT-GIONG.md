@@ -20,3 +20,8 @@ Xong báo đường dẫn tệp giọng; không ghép, không chỉnh tốc đ�
 - Chỉ thao tác trong CapCut và File Explorer; không mở link, không đăng nhập tài khoản mạng xã hội, **không bấm "Chia sẻ"/đăng**.
 - Toạ độ là của màn cũ → luôn chụp màn hình và tìm nút theo chữ trước khi bấm.
 - Ghép giọng, chỉnh tốc độ (0,8–1,15×), nhạc, chuẩn âm: Thợ dựng làm bằng script/ffmpeg-skill ở phiên VS Code (`td-ban-dia-hoa`).
+
+## Bài học lần chạy thử đầu (12/11/2026, "thu-may-cau-as")
+- **Tắt tiếng track video trước khi xuất** — lần xuất đầu lẫn tiếng gốc của video (−9 dB). Phiên desktop tự phát hiện và xuất lại.
+- CapCut xuất vào thư mục mặc định (`Desktop/fb reels/fb đồ câu lục/videos/`), không phải thư mục lô → phiên desktop phải báo đường dẫn.
+- Giọng 45 tiếng = 10,54 s ở 1,0x (tỉ lệ 0,94 so với 4 tiếng/giây).
