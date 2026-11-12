@@ -15,7 +15,7 @@ Bản địa hoá không phải dịch. Kiến thức: `../vai/bien-kich.md` §3
 0. **Nếu là reup / bản địa hoá** (sếp chốt 12/11: "reup thì chỉ trích xuất text → biến thành giọng văn phù hợp người Việt, chứ không phải tự nghĩ")
    → nguồn ý **chỉ** gồm: lời gốc đã phiên âm (whisper, có giây) · chữ trên hình gốc (poster, phụ đề, nhãn — đọc từ lưới, ghi giây) ·
    caption/hashtag gốc. Lập bảng **"Chữ gốc → Việt"** (nguyên văn · nghĩa · câu Việt) rồi mới viết lời. **Không thêm ý không có trong nguồn**
-   (không lấy thêm từ trang sản phẩm); chỉ được **bỏ** ý sai sự thật với hàng của shop, ý cấm (giá, khan hiếm, tên hãng), ý B2B. Nguồn quá ít
+   (không lấy thêm từ trang sản phẩm); chỉ được **bỏ** ý sai sự thật với hàng của shop, ý cấm (giá, khan hiếm, tên hãng), ý B2B. Lời người bán gốc nói về **hàng xuất khẩu Âu Mỹ** → **được nói**, dạng kể lại ("hàng này bên họ làm xuất Âu Mỹ"), không khẳng định thành chứng nhận (sếp chốt 12/11). Nguồn quá ít
    (chỉ nhạc, 1–2 dòng chữ) → lời ngắn đúng bằng chừng đó, phần còn lại để hình + nhạc; không độn. Không có chữ lẫn lời → viết theo đúng thứ đang hiện trên hình.
 1. **Nếu mục đích = nuôi page** (video không phải của mình) → kể ở **ngôi người xem/bình luận viên** ("ông anh này", "con cá này"),
    không ngôi người câu ("mình câu", "về nhà vợ hỏi cá đâu"). Caption ghi `Nguồn: <nền tảng>/<tài khoản nếu biết>`.
