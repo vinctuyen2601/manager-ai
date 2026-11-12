@@ -32,3 +32,4 @@ Xong báo đường dẫn tệp giọng; không ghép, không chỉnh tốc đ�
 - Mở dự án cũ có thể **mở nhầm dự án khác** (tệp thông tin trỏ thư mục cũ) → không sửa tệp nội bộ CapCut, tạo dự án mới.
 - Đọc mốc clip từ `draft_content.json`, không đọc bằng mắt trên timecode (lệch ~0,06 s).
 - Nhạc: tìm "upbeat acoustic" ra nhạc thư viện không lời; kiểm "không lời" bằng whisper (0 đoạn = không lời).
+- (12/11) **Không chạy CapCut cùng lúc với công cụ xoá chữ (VSR).** VSR chiếm GPU ~98 %, VRAM 5,8/6 GB (GTX 1660 Super) → CapCut lỗi vẽ: hộp thoại Xuất trống, đứng hình, cửa sổ trong suốt. Xếp lịch: xoá chữ cả lô xong rồi mới mở CapCut (hoặc ngược lại).

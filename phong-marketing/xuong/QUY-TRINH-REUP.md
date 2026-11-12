@@ -39,5 +39,7 @@ Quy trình gốc của sếp: `C:/Users/PC/Downloads/cau-lenh-reup-video-auto.md
 - CapCut chỉ xuất âm thanh MP3 (sếp). Không bấm "Chia sẻ".
 - Không hỏi sếp về quyền nhạc (quyết định 11/11).
 
+**Thứ tự chạy (12/11):** xoá chữ (VSR, GPU) và CapCut **không chạy cùng lúc** — card 6 GB không đủ cho cả hai (CapCut lỗi vẽ/đứng hình). Kết quả kiểm khung: trước bản vá 3 còn 3 khung phụ đề (14,23 · 14,27 · 20,73 s), sau bản vá 0.
+
 ## Chỗ yếu còn lại
 Xoá chữ chậm (~16 s/1 s video, dò chữ trên CPU) · VSR xoá nhầm chữ nhỏ trên tem sản phẩm · CapCut tự động chưa ổn định (Arena che, đứng hình, mở nhầm dự án) · whisper nghe nhầm tiếng Trung (sửa bằng phụ đề trên hình) · chưa có script ghép cho cả lô (đang chạy tay từng video).
