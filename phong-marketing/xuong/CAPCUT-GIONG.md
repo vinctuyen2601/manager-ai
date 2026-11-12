@@ -27,3 +27,8 @@ Xong báo đường dẫn tệp giọng; không ghép, không chỉnh tốc đ�
 - **Tắt tiếng track video trước khi xuất** — lần xuất đầu lẫn tiếng gốc của video (−9 dB). Phiên desktop tự phát hiện và xuất lại.
 - CapCut xuất vào thư mục mặc định (`Desktop/fb reels/fb đồ câu lục/videos/`), không phải thư mục lô → phiên desktop phải báo đường dẫn.
 - Giọng 45 tiếng = 10,54 s ở 1,0x (tỉ lệ 0,94 so với 4 tiếng/giây).
+- (12/11, lô thu-can-cau) **Cửa sổ ARENA** ghim trên cùng che hộp thoại Xuất → sếp thu nhỏ trước khi chạy. Hộp thoại Xuất có lúc hiện **trống** trên ảnh chụp (lỗi vẽ) → chưa đo được ô "Âm thanh"; tạm xuất 480P rồi tách MP3 bằng ffmpeg.
+- CapCut **đứng hình khi xuất** → đường lui tốt: ghép giọng từ các tệp `.wav` TTS CapCut đã tạo trong `<thư mục dự án>\textReading`, đặt theo mốc trong `draft_content.json` (khớp bản xuất tới mili giây). Sau đó tắt hẳn rồi mở lại CapCut.
+- Mở dự án cũ có thể **mở nhầm dự án khác** (tệp thông tin trỏ thư mục cũ) → không sửa tệp nội bộ CapCut, tạo dự án mới.
+- Đọc mốc clip từ `draft_content.json`, không đọc bằng mắt trên timecode (lệch ~0,06 s).
+- Nhạc: tìm "upbeat acoustic" ra nhạc thư viện không lời; kiểm "không lời" bằng whisper (0 đoạn = không lời).
