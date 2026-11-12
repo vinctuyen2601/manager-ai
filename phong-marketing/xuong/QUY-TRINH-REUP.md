@@ -11,7 +11,8 @@ Quy trình gốc của sếp: `C:/Users/PC/Downloads/cau-lenh-reup-video-auto.md
 | ffmpeg 8 / ffprobe | PATH | Đo, cắt poster, khung dọc nền mờ, lưới khung, ghép, chuẩn âm |
 | yt-dlp | PATH (Python 3.10) | Tải link sếp gửi (khi nguồn là link) |
 | video-subtitle-remover (VSR) | `D:/tools/video-subtitle-remover` (commit e109b9d, venv 3.11, 2 bản vá) | Xoá phụ đề/chữ chạy — `XOA-CHU.md` |
-| CapCut (qua phiên **Claude desktop**, computer use) | app CapCut | Giọng "Cô Gái Hoạt Ngôn", nhạc thư viện — `CAPCUT-GIONG.md` |
+| CapCut (phiên **Claude desktop mới mỗi lô**, mức 3 `cong-cu/capcut-auto.py`) | app CapCut 9.7.0.4153 | Chỉ tạo giọng "Cô Gái Hoạt Ngôn" + chọn nhạc thư viện, **không xuất gì** — đọc trước `BAI-HOC-AGENT-CAPCUT.md`, `CAPCUT-TIET-KIEM-TOKEN.md`, `CAPCUT-GIONG.md` |
+| `tools/capcut-draft.py` · `tools/ghep-lo.py` (gen-video-viral) | `D:/my project/gen-video-viral/tools/` | Lấy giọng + nhạc từ dự án CapCut · ghép cả lô + QC |
 | ffmpeg-skill 3.4.3 | `~/.claude/skills/ffmpeg-skill` | `check.py --platform reels` (QC), `color.py --retag bt709`, `look.py` (lưới xem) |
 | faster-whisper | `tools/boc-loi.py` | Lời gốc; kiểm nhạc không lời (0 đoạn) |
 | Agent vai | phiên VS Code | Biên kịch (lời), agent cài/chạy VSR; Trưởng phòng điều phối, ghép, QC |
@@ -28,18 +29,18 @@ Quy trình gốc của sếp: `C:/Users/PC/Downloads/cau-lenh-reup-video-auto.md
 | 6 | Giọng | phiên Claude desktop **mới cho mỗi lô**, chạy **`xuong/cong-cu/capcut-auto.py`** (mức 3, tự bấm + tự kiểm) (mẫu câu giao việc: `CAPCUT-TIET-KIEM-TOKEN.md`; kiểm bằng `cong-cu/kiem-draft.py`) | SendMessage giao việc → CapCut: nhập video (tắt tiếng) → clip chữ đúng giây → TTS "Cô Gái Hoạt Ngôn" 1,0x → **không xuất**: chờ tự lưu, rồi `python -I tools/capcut-draft.py <dự án> <lô> --lo <lô>` lấy giọng + nhạc từ dự án | `<lô>_voice.mp3` |
 | 7 | Nhạc | phiên Claude desktop | thư viện CapCut, ô tìm kiếm, mỗi video 1 bài, không lời — lấy ra cùng lệnh `capcut-draft.py` ở bước 6 | `<lô>_music.mp3` + `.json` |
 | 8 | Kiểm nhạc không lời | TP | `python -I tools/boc-loi.py <music>.mp3` → 0 đoạn | — |
-| 9 | Ghép | TP | bỏ tiếng gốc; giọng `adelay`; nhạc `volume=-12dB` + `afade` 1,5 s cuối; `amix` → `loudnorm I=-14:TP=-1.5` → `aresample=48000`; hình `scale 1080:1920` + BT.709 | `vNN-final-nhac.mp4` |
-| 10 | QC | TP | `check.py vNN.mp4 --platform reels` (0 trượt) · `color.py --retag bt709` nếu cảnh báo màu | — |
+| 9 | Ghép **cả lô** | TP | `python -I tools/ghep-lo.py <thư mục lô> [--chi <id>] [--video <id>=<tệp sạch>] --check` — bỏ tiếng gốc; giọng đã đúng mốc (từ `capcut-draft.py`); nhạc −12 dB + mờ 1,5 s cuối; `amix` → `loudnorm I=-14:TP=-1.5` → 48 kHz; 1080×1920 BT.709 (`setparams`) | `<id>-final-nhac.mp4` |
+| 10 | QC | TP | `--check` của `ghep-lo.py`: 1080×1920, BT.709, có tiếng 48 kHz, −14 ± 1,5 LUFS, TP ≤ −1,5 (dung sai 0,1), độ dài khớp video ±0,1 s, không lặng giọng > 2 s **trong** một đoạn lời → bảng ĐẠT/SAI, mã thoát 1 nếu SAI. Kiểm chéo: `check.py --platform reels` | — |
 | 11 | Gửi sếp | TP | bản xem 540×960 nếu > 30 MB | — |
 
 ## Luật đã chốt trong lúc chạy (12/11)
 - **Trừ đầu đuôi 0,1–0,2 s** ở mọi ranh giới cắt và mọi đoạn phụ đề, để không còn khung chữ Trung loé vài ms (sếp).
 - Reup chỉ trích xuất chữ gốc → văn phong Việt, không tự nghĩ (sếp).
 - Ý bị cấm thay câu chung chung, không để trống; "giá mềm" được nói; "hàng xuất khẩu Âu Mỹ" được nói dạng kể lại (sếp).
-- CapCut chỉ xuất âm thanh MP3 (sếp). Không bấm "Chia sẻ".
+- CapCut **không xuất gì** (12/11, thay luật "chỉ xuất MP3"): lấy giọng + nhạc từ dự án bằng `tools/capcut-draft.py`; CapCut chạy bằng `cong-cu/capcut-auto.py` (mức 3). Không bấm "Chia sẻ".
 - Không hỏi sếp về quyền nhạc (quyết định 11/11).
 
 **Thứ tự chạy (12/11):** xoá chữ (VSR, GPU) và CapCut **không chạy cùng lúc** — card 6 GB không đủ cho cả hai (CapCut lỗi vẽ/đứng hình). Kết quả kiểm khung: trước bản vá 3 còn 3 khung phụ đề (14,23 · 14,27 · 20,73 s), sau bản vá 0.
 
 ## Chỗ yếu còn lại
-Xoá chữ chậm (~16 s/1 s video, dò chữ trên CPU) · VSR xoá nhầm chữ nhỏ trên tem sản phẩm · CapCut tự động chưa ổn định (Arena che, đứng hình, mở nhầm dự án) · whisper nghe nhầm tiếng Trung (sửa bằng phụ đề trên hình) · chưa có script ghép cho cả lô (đang chạy tay từng video).
+Xoá chữ chậm (~16 s/1 s video, dò chữ trên CPU) · VSR xoá nhầm chữ nhỏ trên tem sản phẩm · whisper nghe nhầm tiếng Trung (sửa bằng phụ đề trên hình).

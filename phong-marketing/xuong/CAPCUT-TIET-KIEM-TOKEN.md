@@ -26,7 +26,14 @@ python -I -X utf8 xuong/cong-cu/capcut-auto.py --du-an <tên> --video <mp4> --lo
 ```
 - Trước khi chạy: CapCut phải ở trên cùng. Sếp không dùng chuột hay bàn phím trong khoảng 2 phút script chạy.
 - Script tự làm 7 bước: tạo và đặt tên dự án → nhập video, tắt tiếng, khoá → clip chữ đúng mốc (về 0 rồi bấm Right × số khung) → tạo giọng → nhạc (tìm theo tên bài, lấy kết quả đầu, kiểm tên trong draft) → cắt nhạc ở cuối video + 0,3 s → tự kiểm (lời, mốc, giọng BV074, tắt tiếng, nhạc).
-- Mã thoát: 0 = ĐẠT, 1 = sai, 3 = khoá an toàn dừng. Nhật ký ghi ở `<thư mục lời>\<dự án>-auto.log`. Hỏng ở bước nào thì sửa tay rồi chạy tiếp bằng `--tu-buoc N`.
+- Nhật ký ghi ở `<thư mục lời>\<dự án>-auto.log`. **Bảng mã thoát:**
+
+| Mã | Nghĩa | Phiên desktop làm gì |
+|---|---|---|
+| 0 | ĐẠT | Đo token, báo kết quả |
+| 1 | Sai hoặc lỗi trong lúc bấm | Đọc nhật ký và chạy `kiem-draft.py`, sửa tối thiểu (1–2 thao tác), chạy tiếp bằng `--tu-buoc N`. Quá 2 lần thì chuyển sang mức 2 |
+| 2 | Tham số sai, hoặc tệp lời bị chặn khi kiểm trước. **Chưa bấm gì vào CapCut** | Không tự sửa lời. Báo phiên VS Code dòng `KIEM TRUOC` để họ sửa tệp lời. Chỉ dùng `--bo-qua-kiem-truoc` khi phía giao việc nói rõ là cố ý |
+| 3 | Khoá an toàn dừng (CapCut không ở trên cùng, có cửa sổ khác che) | Đưa CapCut lên trên cùng (xem dòng "Đưa CapCut lên trước" trong bảng toạ độ), rồi chạy tiếp bằng `--tu-buoc N` |
 - Khoá an toàn: chỉ bấm khi cửa sổ trên cùng và cửa sổ dưới điểm bấm đều thuộc CapCut.exe; cấm vùng nút Xuất/Chia sẻ; kéo chuột vào góc màn hình để dừng gấp.
 - Tên mới của dự án được ghi vào `root_meta_info.json` ngay khi bấm Lưu. `draft_meta_info.json` chỉ cập nhật muộn hơn, và thư mục chỉ đổi tên khi đóng dự án. Các script đều dò theo `root_meta_info.json`.
 - Đã thử lô 81 giây 5 đoạn: bấm Right khoảng 2.000 lần mỗi đoạn không rớt phím, mốc lệch ≤ 0,01 s, bước clip chữ mất khoảng 2 phút.
@@ -49,7 +56,7 @@ Trong lần đo đó, hướng dẫn hệ thống chiếm khoảng 47%, việc t
    - Muốn đọc chữ: `zoom` một vùng nhỏ, `scale` ≤ 0.5.
    - Đọc timecode: zoom vùng (505,405)–(565,421).
    - Chỉ chụp ở chỗ dễ sai: hộp thoại chọn tệp, thẻ giọng (viền xanh), kết quả tìm nhạc.
-4. **Gộp thao tác.** Mỗi lần `computer_batch` làm trọn một bước, ví dụ thêm một clip chữ (rê chuột, "+", bấm ô, Ctrl+A, gõ). Không chụp xen giữa các thao tác.
+4. **Gộp thao tác.** Mỗi lần `computer_batch` làm trọn một bước, ví dụ thêm một clip chữ (rê chuột, "+", bấm ô, dán lời). Không chụp xen giữa các thao tác.
 5. **Dùng toạ độ cố định ở bảng dưới, không dò lại.** Toạ độ lệch thì đo lại một lần và sửa bảng.
 6. **Báo cáo gọn.** Nhắn phiên VS Code một lần khi xong, kèm kết quả `kiem-draft.py`. Không nhắn từng bước.
 7. **Chỉ làm những việc chỉ CapCut làm được:** tạo giọng và chọn nhạc.
@@ -78,14 +85,14 @@ Không mở Xuất, không bấm "Chia sẻ". Xong nhắn phiên VS Code: tên d
 | Đưa CapCut lên trước | Kiểm bằng PowerShell trước, không chụp ảnh: lấy `MainWindowHandle` của tiến trình CapCut, xem `IsIconic` (cửa sổ có đang thu nhỏ không). Nếu thu nhỏ thì `open_application` không đưa lên được: mở File Explorer, rồi bấm biểu tượng CapCut trên thanh tác vụ, đo ngày 12/11 ở **(977,800)**. Thứ tự biểu tượng có thể đổi |
 | Gõ chữ dài hoặc có dấu | **Không dùng `type`**, vì nó từng dán nhầm nội dung clipboard (chuỗi tiếng Nhật, đường dẫn lạ). Dùng `write_clipboard` → bấm ô → Ctrl+A → Delete → Ctrl+V |
 | Trang chủ | Menu (83,13) → Quay lại trang chủ (108,183). Tạo dự án (600,113) |
-| Đặt tên dự án | Sửa đổi (1412,415) → bấm 3 lần ô Tên (790,252), Ctrl+A, gõ tên → Lưu (635,625) |
-| Nhập video | Nhập (300,190) → Từ thiết bị (280,215) → ô File name (350,357), gõ đường dẫn, Enter → kéo (152,143) xuống (120,620) |
+| Đặt tên dự án | Sửa đổi (1412,415) → bấm 3 lần ô Tên (790,252), dán tên (`write_clipboard` + Ctrl+A + Ctrl+V) → Lưu (635,625) |
+| Nhập video | Nhập (300,190) → Từ thiết bị (280,215) → ô File name (350,357), dán đường dẫn, zoom kiểm, Enter → kéo (152,143) xuống (120,620) |
 | Track video | Tắt tiếng (72,624), khoá (34,624) |
 | Thước timeline | y=467, mốc 0 ở x=139. Video 81 s: 5,28 px/giây; video 15 s: khoảng 30,4 px/giây. Bấm gần đích, đọc timecode, rồi bấm Left/Right đúng (đích − hiện tại) × 30 lần (1 lần = 1/30 s). Thước **không phải lúc nào cũng hút vào cuối video** |
-| Clip chữ | Tab Văn bản (132,42) → rê chuột vào (140,100) → "+" (165,122) → bấm 3 lần ô chữ (1222,120), Ctrl+A, gõ lời |
+| Clip chữ | Tab Văn bản (132,42) → rê chuột vào (140,100) → "+" (165,122) → bấm 3 lần ô chữ (1222,120), dán lời (`write_clipboard` + Ctrl+A + Ctrl+V) |
 | Chọn mọi clip chữ | Khoá track video trước. Bấm clip chữ đầu (146,585), rồi Ctrl+A |
 | Tạo giọng | Tab TTS (1265,42) bấm 2 lần → ★ **(1007,110)**, nằm sát bên trái "Xu hướng"; đúng mục thì có tiêu đề "Yêu thích" phía trên lưới thẻ → "Cô Gái Hoạt Ngôn" (1140,163), zoom kiểm viền xanh → Tạo lời nói (1411,416), chờ khoảng 25 giây |
-| Nhạc | Tab Âm thanh (93,42) → ô tìm (285,77), gõ xong zoom kiểm chữ → kết quả ở x=474: bấm 1 lần để tải (chờ 10 giây), bấm lần nữa để thêm "+" |
+| Nhạc | Tab Âm thanh (93,42) → ô tìm (285,77), dán từ khoá, zoom kiểm chữ → bấm **nút** ở cột x=474 trên hàng của bài (nút tải ⬇ hoặc "+"; không bấm vào tên bài). Chờ 10 giây → **kiểm draft đã có `music` chưa** → chưa có thì mới bấm nút "+" lần hai |
 | Cắt nhạc | Chọn clip nhạc (300,712) → bấm thước gần cuối video → đọc timecode → Left/Right tới cuối video + 0,3 s → Tách (157,447) → Delete |
 | Nhạc đã tải sẵn | Kết quả tìm hiện "+" thay vì nút tải. Bấm "+" một lần là thêm. "Upbeat Acoustic Groove" ở hàng y≈385 khi tìm "upbeat acoustic" |
 | Tắt tiếng track giọng / nhạc | x=72 trên hàng của track đó (giọng y≈673, nhạc y≈712 khi có đủ 3 track) |
@@ -99,7 +106,7 @@ Các bước **MÙ** thì làm trong `computer_batch` mà không chụp ảnh n�
 | 1 | Tạo dự án, đặt tên | MÙ | Tên dự án ở giữa thanh tiêu đề. Thư mục draft vẫn là `1112 (n)`; `kiem-draft.py` tự tìm theo tên |
 | 2 | Nhập video: dán đường dẫn (`write_clipboard` + Ctrl+V) | MÙ, rồi KIỂM zoom (100,348)–(560,366) trước khi Enter | Đường dẫn đúng |
 | 3 | Kéo video xuống timeline (chờ 3 s sau Enter), tắt tiếng, khoá track | MÙ. Kiểm bằng TỆP ở bước 5: zoom 0.4 không đủ nét để thấy biểu tượng tắt tiếng/khoá | — |
-| 4 | Clip chữ (mỗi đoạn: bấm thước → đọc timecode → Left/Right → "+" → gõ lời) | Timecode: KIỂM zoom (505,405)–(565,421) `scale` 1. Phần còn lại MÙ | Mốc ±0,3 s |
+| 4 | Clip chữ (mỗi đoạn: bấm thước → đọc timecode → Left/Right → "+" → dán lời) | Timecode: KIỂM zoom (505,405)–(565,421) `scale` 1. Phần còn lại MÙ | Mốc ±0,3 s |
 | 5 | Kiểm toàn bộ chữ | TỆP: chờ khoảng 10 giây cho CapCut tự lưu, rồi chạy `kiem-draft.py <dự án> <tệp lời>` | KET QUA: DAT |
 | 6 | Chọn chữ → TTS ×2 → ★ → thẻ giọng | MÙ, rồi KIỂM zoom (1000,95)–(1456,430) `scale` 0.5 | Thẻ "Cô Gái Hoạt Ngôn" có viền xanh |
 | 7 | Tạo lời nói, chờ 25 giây | MÙ, rồi TỆP | Có đủ số clip `text_to_audio` |
@@ -120,10 +127,10 @@ Các bước **MÙ** thì làm trong `computer_batch` mà không chụp ảnh n�
 | Bấm vào dự án cũ mà mở ra dự án khác | Không sửa tệp nội bộ CapCut. Tạo dự án mới |
 | Lỡ kéo thanh trượt hay đổi số | Ctrl+Z ngay, rồi zoom kiểm lại một lần |
 | Hộp thoại xin quyền bị từ chối | Hỏi sếp một câu rồi dừng. Không tự xin lại nhiều lần |
-| Ô tìm kiếm hiện chữ lạ (dán nhầm clipboard) | Ctrl+A, Delete, gõ lại, zoom kiểm |
+| Ô tìm kiếm hiện chữ lạ (dán nhầm clipboard) | Ctrl+A, Delete, dán lại bằng `write_clipboard` + Ctrl+V, zoom kiểm |
 
 ## Đo chi phí sau mỗi lô
 ```
 python -I -X utf8 xuong/cong-cu/do-token.py --moi-nhat
 ```
-`--moi-nhat` lấy tệp phiên được sửa gần nhất. Nếu có phiên khác (ví dụ VS Code) đang chạy cùng lúc thì nó có thể lấy nhầm. Khi đó truyền thẳng đường dẫn tệp `.jsonl` của phiên CapCut, nằm trong `C:\Users\PC\.claude\projects\<thư mục dự án>\`. Ghi kết quả vào sổ lô: token quy đổi, số lượt, token/lượt, số ảnh, số phút. Một lô 81 giây vượt 1,2 triệu token thì xem lại lô đó gặp sự cố gì.
+`--moi-nhat` lấy tệp phiên được sửa gần nhất. Nếu có phiên khác (ví dụ VS Code) đang chạy cùng lúc thì nó có thể lấy nhầm. Khi đó truyền thẳng đường dẫn tệp `.jsonl` của phiên CapCut, nằm trong `C:\Users\PC\.claude\projects\<thư mục dự án>\`. Ghi kết quả vào sổ lô: token quy đổi, số lượt, token/lượt, số ảnh, số phút. Ngưỡng xem lại: **mức 3 > 0,3 triệu** hoặc **mức 2 > 0,8 triệu** một lô → tìm sự cố của lô đó.

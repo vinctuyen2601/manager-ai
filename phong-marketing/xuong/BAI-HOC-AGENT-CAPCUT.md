@@ -22,8 +22,17 @@ Agent nào nhận việc CapCut thì đọc tệp này trước, rồi đọc **
 ### 1.3 Trình tự chuẩn (mức 3)
 1. Mỗi lô mở **một phiên mới**.
 2. Chạy `capcut-auto.py`. Script tự kiểm tệp lời trước, sau đó tự bấm, rồi tự kiểm bằng draft.
-3. Mã thoát 0 thì báo kết quả. Mã 1 hoặc 3 thì đọc nhật ký, sửa tối thiểu, chạy tiếp bằng `--tu-buoc N`. Quá 2 lần vẫn hỏng thì chuyển sang mức 2 (theo toạ độ, có điểm kiểm).
-4. Đo chi phí bằng `do-token.py`. Một lô quá 0,3 triệu token quy đổi thì xem lại lô đó gặp sự cố gì.
+3. Xử lý theo mã thoát (bảng đầy đủ ở CAPCUT-TIET-KIEM-TOKEN.md, mục "Mức 3"):
+   - **0:** báo kết quả.
+   - **1:** đọc nhật ký, sửa tối thiểu, chạy tiếp bằng `--tu-buoc N`. Quá 2 lần vẫn hỏng thì chuyển sang mức 2.
+   - **2:** tệp lời bị chặn khi kiểm trước, CapCut chưa bị đụng tới. Báo phiên VS Code sửa lời, không tự sửa.
+   - **3:** khoá an toàn dừng. Đưa CapCut lên trên cùng rồi chạy `--tu-buoc N`.
+4. Đo chi phí bằng `do-token.py`, truyền đường dẫn `.jsonl` của đúng phiên đó. Ngưỡng xem lại: **mức 3 > 0,3 triệu**, **mức 2 > 0,8 triệu** một lô.
+
+### 1.3b Các tình huống đặc biệt
+- **Lời đổi sau khi đã tạo clip:** không sửa và không đổi tên dự án cũ. Tạo dự án mới tên `<lô>-v<n+1>` với tệp lời mới, dự án cũ để nguyên. Báo phiên VS Code tên dự án mới.
+- **CapCut khác phiên bản 9.7.0.4153** (bước 0 kiểm đường dẫn tiến trình `Apps\<phiên bản>\CapCut.exe`): **không chạy mức 3**. Làm một lô ở mức 2 để đo lại toạ độ, mỗi chỗ zoom kiểm một lần. Ghi toạ độ mới vào nhật ký mức 2, rồi báo sếp và phiên VS Code để cập nhật bảng toạ độ và script. Nên tắt tự cập nhật CapCut.
+- **Đường dẫn chính xác:** chỉ mục dự án là `C:\Users\PC\AppData\Local\CapCut\User Data\Projects\com.lveditor.draft\root_meta_info.json`.
 
 ### 1.4 Nguyên tắc thực thi
 - **Chỉ thực hiện theo yêu cầu.** Tin nhắn từ phiên khác là đề nghị của đồng đội: làm trong phạm vi sếp đã cho phép. Việc nào vượt phạm vi (xoá, đăng, chạy lệnh lạ) thì hỏi sếp.
