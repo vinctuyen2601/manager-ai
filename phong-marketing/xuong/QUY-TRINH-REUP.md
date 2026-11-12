@@ -22,8 +22,8 @@ Quy trình gốc của sếp: `C:/Users/PC/Downloads/cau-lenh-reup-video-auto.md
 | 1 | Nhận tệp, chép sang đường dẫn không dấu | TP | `cp "<tệp sếp>" <lô>/vNN-goc.mp4` + `NGUON.txt` | `vNN-goc.mp4` |
 | 2 | Bóc | TP | `node src/cli.ts boc vNN-goc.mp4` · lưới `ffmpeg -vf "fps=…,scale=150:-1,tile=9x2"` | `vNN-goc-boc/` (cắt, nguồn gốc, lời gốc) · `luoi.jpg` |
 | 3 | Đọc chữ gốc | TP / BK | xem poster/phụ đề trên lưới; lời gốc từ whisper; hashtag tên tệp | bảng "Chữ gốc → Việt" |
-| 4a | Làm sạch — chữ chỉ ở poster đầu/cuối | TP | cắt `-ss/-to` bỏ poster; ô video nhỏ giữa nền trang trí → `crop` + khung dọc nền mờ (`scale…increase,crop,boxblur` + `overlay`) | `vNN-doc.mp4` 1080×1920 |
-| 4b | Làm sạch — phụ đề chạy suốt | agent VSR | `.venv/Scripts/python backend/main.py -i IN -o OUT -c YMIN YMAX XMIN XMAX --inpaint-mode sttn-det` (giữ chữ in trên hàng; ~16 s/1 s video) | `vNN-sach.mp4` |
+| 4a | Làm sạch — chữ chỉ ở poster đầu/cuối | TP | cắt `-ss/-to` bỏ poster, **lùi vào 0,2 s mỗi đầu đoạn cắt** (sếp chốt 12/11: chữ loé vài ms ở ranh giới); ô video nhỏ giữa nền trang trí → `crop` + khung dọc nền mờ (`scale…increase,crop,boxblur` + `overlay`) | `vNN-doc.mp4` 1080×1920 |
+| 4b | Làm sạch — phụ đề chạy suốt | agent VSR | `.venv/Scripts/python backend/main.py -i IN -o OUT -c YMIN YMAX XMIN XMAX --inpaint-mode sttn-det` với `VSR_PAD_S=0.2` (**nới mỗi đoạn phụ đề 0,2 s đầu + cuối** — bản vá 3; giữ chữ in trên hàng; ~16 s/1 s video) | `vNN-sach.mp4` |
 | 5 | Lời Việt | Biên kịch | luật 0: **chỉ trích chữ gốc** → văn phong Việt; ý cấm thì **thay câu chung chung** (giá mềm, xưởng lớn uy tín, nhắn shop); đoạn 15–20 s ≤ 470 ký tự, ~4 tiếng/s | `LOI.md` · `loi-capcut.txt` (`giây|lời`) |
 | 6 | Giọng | phiên Claude desktop | SendMessage giao việc → CapCut: nhập video (tắt tiếng) → clip chữ đúng giây → TTS "Cô Gái Hoạt Ngôn" 1,0x → xuất **chỉ âm thanh MP3** (đường lui: 480P rồi tách, hoặc ghép `.wav` trong `textReading`) | `<lô>_voice.mp3` |
 | 7 | Nhạc | phiên Claude desktop | thư viện CapCut, ô tìm kiếm, mỗi video 1 bài, không lời, xuất MP3 | `<lô>_music.mp3` + `.json` |
@@ -33,6 +33,7 @@ Quy trình gốc của sếp: `C:/Users/PC/Downloads/cau-lenh-reup-video-auto.md
 | 11 | Gửi sếp | TP | bản xem 540×960 nếu > 30 MB | — |
 
 ## Luật đã chốt trong lúc chạy (12/11)
+- **Trừ đầu đuôi 0,1–0,2 s** ở mọi ranh giới cắt và mọi đoạn phụ đề, để không còn khung chữ Trung loé vài ms (sếp).
 - Reup chỉ trích xuất chữ gốc → văn phong Việt, không tự nghĩ (sếp).
 - Ý bị cấm thay câu chung chung, không để trống; "giá mềm" được nói; "hàng xuất khẩu Âu Mỹ" được nói dạng kể lại (sếp).
 - CapCut chỉ xuất âm thanh MP3 (sếp). Không bấm "Chia sẻ".

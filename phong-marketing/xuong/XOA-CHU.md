@@ -67,3 +67,9 @@ Video thật (Douyin, 81,5 s, 720×1280, H.264 30 fps, 2446 khung), phụ đề 
 - Vùng tô càng to thì vết càng lộ; STTN để lại nhoè/vân khi vật chuyển động đi qua vùng.
 - VRAM đỉnh 5,8 GB ở 720×1280 (sttn-det) — video 1080p dài hơn có thể tràn 6 GB.
 - Cửa sổ không cần GUI; mỗi lần chạy in quảng cáo QFluentWidgets ra log (vô hại).
+
+## Bản vá 3 (12/11/2026) — nới đầu/cuối mỗi đoạn phụ đề (sếp: "trừ đầu đuôi 0,1–0,2 s")
+- Gốc lỗi: `backend/tools/subtitle_detect.py` `find_subtitle_frame_no` chỉ OCR mỗi `SAMPLE_STEP` = 2–4 khung rồi điền giữa hai mẫu → các khung **trước mẫu đầu / sau mẫu cuối** của mỗi câu không bị xoá → chữ Trung loé vài ms (sếp thấy khi xem v02).
+- Sửa: sau bước điền, gom các khung liên tiếp thành đoạn, **nới mỗi đoạn thêm `pad = max(SAMPLE_STEP, round(VSR_PAD_S × fps))` khung ở hai đầu** (mặc định `VSR_PAD_S=0.2` → 6 khung ở 30 fps), dùng hộp chữ của khung đầu/cuối đoạn. Thêm `import os`.
+- Gọi: `VSR_PAD_S=0.2` trong môi trường (0 = tắt nới). Cập nhật repo VSR thì vá lại (cùng 2 bản vá trước).
+
