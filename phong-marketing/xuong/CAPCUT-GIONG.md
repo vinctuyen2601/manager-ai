@@ -17,6 +17,8 @@ Chụp màn hình trước khi bấm nếu toạ độ không khớp (toạ đ�
 Xong báo đường dẫn tệp giọng; không ghép, không chỉnh tốc độ trong CapCut.
 ```
 
+**Giao việc + tiết kiệm token:** `CAPCUT-TIET-KIEM-TOKEN.md` (mẫu câu giao việc, 7 quy tắc, toạ độ cố định) — **mỗi lô một phiên Claude desktop mới**; kiểm dự án bằng `cong-cu/kiem-draft.py <dự án> [tệp giây|lời]`, đo token bằng `cong-cu/do-token.py`.
+
 ## Cách lấy tệp (từ 12/11/2026): KHÔNG mở hộp thoại Xuất
 CapCut chỉ dùng để **tạo giọng + chọn nhạc**; chờ "Tự động lưu" (hoặc đóng dự án), rồi phiên VS Code chạy:
 `python -I tools/capcut-draft.py <tên dự án> <thư mục lô> --lo <lô>` (trong `D:/my project/gen-video-viral`)
