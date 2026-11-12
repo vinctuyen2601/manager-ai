@@ -25,8 +25,8 @@ Quy trình gốc của sếp: `C:/Users/PC/Downloads/cau-lenh-reup-video-auto.md
 | 4a | Làm sạch — chữ chỉ ở poster đầu/cuối | TP | cắt `-ss/-to` bỏ poster, **lùi vào 0,2 s mỗi đầu đoạn cắt** (sếp chốt 12/11: chữ loé vài ms ở ranh giới); ô video nhỏ giữa nền trang trí → `crop` + khung dọc nền mờ (`scale…increase,crop,boxblur` + `overlay`) | `vNN-doc.mp4` 1080×1920 |
 | 4b | Làm sạch — phụ đề chạy suốt | agent VSR | `.venv/Scripts/python backend/main.py -i IN -o OUT -c YMIN YMAX XMIN XMAX --inpaint-mode sttn-det` với `VSR_PAD_S=0.2` (**nới mỗi đoạn phụ đề 0,2 s đầu + cuối** — bản vá 3; giữ chữ in trên hàng; ~16 s/1 s video) | `vNN-sach.mp4` |
 | 5 | Lời Việt | Biên kịch | luật 0: **chỉ trích chữ gốc** → văn phong Việt; ý cấm thì **thay câu chung chung** (giá mềm, xưởng lớn uy tín, nhắn shop); đoạn 15–20 s ≤ 470 ký tự, ~4 tiếng/s | `LOI.md` · `loi-capcut.txt` (`giây|lời`) |
-| 6 | Giọng | phiên Claude desktop | SendMessage giao việc → CapCut: nhập video (tắt tiếng) → clip chữ đúng giây → TTS "Cô Gái Hoạt Ngôn" 1,0x → xuất **chỉ âm thanh MP3** (đường lui: 480P rồi tách, hoặc ghép `.wav` trong `textReading`) | `<lô>_voice.mp3` |
-| 7 | Nhạc | phiên Claude desktop | thư viện CapCut, ô tìm kiếm, mỗi video 1 bài, không lời, xuất MP3 | `<lô>_music.mp3` + `.json` |
+| 6 | Giọng | phiên Claude desktop | SendMessage giao việc → CapCut: nhập video (tắt tiếng) → clip chữ đúng giây → TTS "Cô Gái Hoạt Ngôn" 1,0x → **không xuất**: chờ tự lưu, rồi `python -I tools/capcut-draft.py <dự án> <lô> --lo <lô>` lấy giọng + nhạc từ dự án | `<lô>_voice.mp3` |
+| 7 | Nhạc | phiên Claude desktop | thư viện CapCut, ô tìm kiếm, mỗi video 1 bài, không lời — lấy ra cùng lệnh `capcut-draft.py` ở bước 6 | `<lô>_music.mp3` + `.json` |
 | 8 | Kiểm nhạc không lời | TP | `python -I tools/boc-loi.py <music>.mp3` → 0 đoạn | — |
 | 9 | Ghép | TP | bỏ tiếng gốc; giọng `adelay`; nhạc `volume=-12dB` + `afade` 1,5 s cuối; `amix` → `loudnorm I=-14:TP=-1.5` → `aresample=48000`; hình `scale 1080:1920` + BT.709 | `vNN-final-nhac.mp4` |
 | 10 | QC | TP | `check.py vNN.mp4 --platform reels` (0 trượt) · `color.py --retag bt709` nếu cảnh báo màu | — |

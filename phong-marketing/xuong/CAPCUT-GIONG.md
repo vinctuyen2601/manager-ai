@@ -17,6 +17,14 @@ Chụp màn hình trước khi bấm nếu toạ độ không khớp (toạ đ�
 Xong báo đường dẫn tệp giọng; không ghép, không chỉnh tốc độ trong CapCut.
 ```
 
+## Cách lấy tệp (từ 12/11/2026): KHÔNG mở hộp thoại Xuất
+CapCut chỉ dùng để **tạo giọng + chọn nhạc**; chờ "Tự động lưu" (hoặc đóng dự án), rồi phiên VS Code chạy:
+`python -I tools/capcut-draft.py <tên dự án> <thư mục lô> --lo <lô>` (trong `D:/my project/gen-video-viral`)
+→ `<lô>_voice.mp3`, `<lô>_music.mp3`, `<lô>_capcut.json` (mốc thật từng đoạn + tên bài). Đọc `draft_content.json`:
+giọng = `textReading/*.wav`, nhạc = `Cache/music/<hash>.mp3`, mốc `target/source_timerange` (µs). Đã đối chiếu bản xuất: tương quan 0,9999.
+- **Đặt tên dự án ngay khi tạo, không đổi tên sau** (đổi tên → thư mục cũ, mở nhầm dự án khác — lỗi thu-may-cau-as/"1112 (1)").
+- Tạo lại giọng sinh `.wav` mới, `.wav` cũ vẫn nằm đó → luôn lấy theo `draft_content.json`, không theo tên tệp.
+
 ## Luật
 - Chỉ thao tác trong CapCut và File Explorer; không mở link, không đăng nhập tài khoản mạng xã hội, **không bấm "Chia sẻ"/đăng**.
 - Toạ độ là của màn cũ → luôn chụp màn hình và tìm nút theo chữ trước khi bấm.
