@@ -16,6 +16,14 @@ def tim_du_an(ten):
     p = os.path.join(GOC, ten)
     if os.path.isfile(os.path.join(p, "draft_content.json")):
         return p
+    # ten moi nam o root_meta_info.json ngay khi bam Luu; draft_meta_info.json cap nhat muon hon
+    try:
+        r = json.load(open(os.path.join(GOC, "root_meta_info.json"), encoding="utf-8"))
+        for d in r.get("all_draft_store", []):
+            if d.get("draft_name") == ten and os.path.isdir(d.get("draft_fold_path", "")):
+                return d["draft_fold_path"]
+    except Exception:
+        pass
     for meta in glob.glob(os.path.join(GOC, "*", "draft_meta_info.json")):
         try:
             if json.load(open(meta, encoding="utf-8")).get("draft_name") == ten:

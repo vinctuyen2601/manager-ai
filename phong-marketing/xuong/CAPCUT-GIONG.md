@@ -17,6 +17,10 @@ Chụp màn hình trước khi bấm nếu toạ độ không khớp (toạ đ�
 Xong báo đường dẫn tệp giọng; không ghép, không chỉnh tốc độ trong CapCut.
 ```
 
+**Mức 3 — tự động (12/11/2026, sếp đồng ý):** phiên Claude desktop mới mỗi lô chỉ chạy
+`python -I -X utf8 xuong/cong-cu/capcut-auto.py --du-an <tên> --video <mp4> --loi <tệp giây|lời> --nhac "<tên bài>" --tim "<từ khoá>"`
+(mã 0 = ĐẠT; nhật ký `<thư mục lời>/<dự án>-auto.log`) rồi báo tên dự án → phiên VS Code chạy `capcut-draft.py`. Đo: lô 81 s, 5 đoạn + nhạc ĐẠT lần đầu, lệch ≤ 0,01 s, 243 s, **0,09 triệu token, 0 ảnh** (sáng 12/11: ~2 triệu). Điều kiện: CapCut 9.7.0.4153 phóng to 1920×1080 trên cùng, **sếp không dùng chuột/phím khi chạy**, giọng BV074. Khoá an toàn trong script: chỉ bấm cửa sổ CapCut, cấm vùng Xuất/Chia sẻ, kéo chuột vào góc = dừng. CapCut đổi giao diện → chạy một lô mức 2 đo lại toạ độ.
+
 **Giao việc + tiết kiệm token:** `CAPCUT-TIET-KIEM-TOKEN.md` (mẫu câu giao việc, 7 quy tắc, toạ độ cố định) — **mỗi lô một phiên Claude desktop mới**; kiểm dự án bằng `cong-cu/kiem-draft.py <dự án> [tệp giây|lời]`, đo token bằng `cong-cu/do-token.py`.
 
 ## Cách lấy tệp (từ 12/11/2026): KHÔNG mở hộp thoại Xuất
