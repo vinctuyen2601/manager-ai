@@ -30,6 +30,10 @@ python -I -X utf8 xuong/cong-cu/capcut-auto.py --du-an <tên> --video <mp4> --lo
 - Khoá an toàn: chỉ bấm khi cửa sổ trên cùng và cửa sổ dưới điểm bấm đều thuộc CapCut.exe; cấm vùng nút Xuất/Chia sẻ; kéo chuột vào góc màn hình để dừng gấp.
 - Tên mới của dự án được ghi vào `root_meta_info.json` ngay khi bấm Lưu. `draft_meta_info.json` chỉ cập nhật muộn hơn, và thư mục chỉ đổi tên khi đóng dự án. Các script đều dò theo `root_meta_info.json`.
 - Đã thử lô 81 giây 5 đoạn: bấm Right khoảng 2.000 lần mỗi đoạn không rớt phím, mốc lệch ≤ 0,01 s, bước clip chữ mất khoảng 2 phút.
+- Đã sửa và thử thật (lô thu-may-cau-as-v5: đoạn đầu ở 2 s, ĐẠT, 106 s, 0,08 triệu token, 0 ảnh):
+  - Chọn clip chữ không phụ thuộc vị trí clip đầu: bấm thước rồi Ctrl+A.
+  - **Kiểm trước khi bấm** (mã thoát 2): hai mốc phải cách nhau ≥ 3,1 s, vì clip chữ mặc định dài 3 s. Giọng ước tính (số tiếng ÷ 4,3 giây) không được tràn sang đoạn sau. Nếu cố ý muốn chạy thì thêm `--bo-qua-kiem-truoc`.
+  - Hàng của track nhạc được tính từ bố cục track trong draft. Nếu có nhiều track chữ hoặc nhiều track giọng thì script dừng, chuyển sang cắt nhạc bằng tay (mức 2).
 - Chưa thử: CapCut đang thu nhỏ khi bắt đầu, bài nhạc chưa tải sẵn (script đã có nhánh bấm lần 2 nhưng chưa chạy thật). Lần đầu gặp các trường hợp này thì cho một phiên mức 2 đứng xem.
 
 Mức 2 chỉ tốn 0,75 triệu cho cả giọng lẫn nhạc. Mức 1 chỉ riêng phần giọng của lô này đã tốn 0,95 triệu. Token mỗi lượt vẫn khoảng 18K vì phần hướng dẫn hệ thống cố định. Muốn giảm tiếp thì phải bớt số lượt (đi lên mức 3) hoặc làm nhẹ phần hướng dẫn (tắt kết nối không dùng).

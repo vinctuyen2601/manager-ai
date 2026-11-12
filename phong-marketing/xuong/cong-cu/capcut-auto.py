@@ -280,7 +280,9 @@ def b3_chu(a, loi):
 
 
 def b4_giong(a, loi):
-    bam(146, 585, cho=0.6, ghi="clip chu dau")
+    # Chon moi clip chu ma khong phu thuoc vi tri: bam thuoc de timeline nhan ban phim
+    # (giu nguyen lua chon), roi Ctrl+A. Track video da khoa nen chi chon clip chu.
+    bam(139, 467, cho=0.6, ghi="thuoc (timeline nhan ban phim)")
     phim("ctrl", "a", cho=0.8)
     bam(1265, 42, cho=1.0, ghi="tab TTS")
     bam(1265, 42, cho=2.5, ghi="tab TTS lan 2")
@@ -331,10 +333,51 @@ def dai_video_draft(ten, mac_dinh):
     return round(v[0][1], 3) if v else mac_dinh
 
 
+TIENG_MOI_GIAY = 4.3   # do 12/11: 45 tieng = 10,5 s; 5 doan thu-can-cau ~4,3 tieng/s
+CLIP_CHU_MAC_DINH = 3.0
+
+
+def kiem_truoc(loi, dv):
+    """Bao loi neu bo cuc lam CapCut day clip sang track moi (lam lech toa do)."""
+    van_de = []
+    for i, (g, l) in enumerate(loi):
+        uoc = len(l.split()) / TIENG_MOI_GIAY
+        if i + 1 < len(loi):
+            g2 = loi[i + 1][0]
+            if g2 <= g:
+                van_de.append(f"doan {i+2} ({g2}s) khong sau doan {i+1} ({g}s)")
+            elif g2 - g < CLIP_CHU_MAC_DINH + 0.1:
+                van_de.append(f"doan {i+1}->{i+2}: cach {g2-g:.2f}s < 3,1s (clip chu mac dinh 3s se sang track moi)")
+            elif g + uoc > g2 - 0.2:
+                van_de.append(f"doan {i+1}: giong uoc {uoc:.1f}s ({len(l.split())} tieng) se tran sang doan {i+2} o {g2}s")
+        elif g + uoc > dv + 0.5:
+            van_de.append(f"doan cuoi: giong uoc {uoc:.1f}s vuot cuoi video ({dv:.2f}s)")
+    return van_de
+
+
+def vi_tri_nhac_draft(ten):
+    """Tinh hang y cua clip nhac tu bo cuc track trong draft; loi neu bo cuc khac thuong."""
+    if THU:
+        return 712
+    dc = doc_draft(ten, 0, 5)
+    tr = dc["tracks"]
+    auds = {m["id"]: m["type"] for m in dc["materials"].get("audios", [])}
+    so_chu = sum(1 for t in tr if t["type"] == "text")
+    am = [t for t in tr if t["type"] == "audio"]
+    loai = [{auds.get(s.get("material_id")) for s in t["segments"]} for t in am]
+    so_giong = sum(1 for x in loai if "text_to_audio" in x)
+    if so_chu != 1 or so_giong != 1:
+        raise RuntimeError(f"bo cuc track khac thuong: {so_chu} track chu, {so_giong} track giong -> cat nhac bang tay (muc 2)")
+    idx = next((i for i, x in enumerate(loai) if "music" in x), None)
+    if idx is None:
+        raise RuntimeError("khong thay track nhac")
+    return 673 + 39 * idx
+
+
 def b6_cat_nhac(a, co_giong, dai_video):
     dai_video = dai_video_draft(a.du_an, dai_video)
     cat = dai_video + a.them_giay
-    bam(300, vi_tri_nhac(co_giong), cho=0.6, ghi="chon clip nhac")
+    bam(300, vi_tri_nhac_draft(a.du_an), cho=0.6, ghi="chon clip nhac")
     ve_moc(cat, f"cat {cat:.2f}s")
     bam(157, 447, cho=1.0, ghi="Tach")
     phim("delete", cho=1.0)
@@ -357,6 +400,7 @@ def main():
     ap.add_argument("--them-giay", type=float, default=0.3)
     ap.add_argument("--tu-buoc", type=int, default=1)
     ap.add_argument("--thu", action="store_true")
+    ap.add_argument("--bo-qua-kiem-truoc", action="store_true")
     a = ap.parse_args()
     THU = a.thu
     loi = [(float(x.split("|", 1)[0]), x.split("|", 1)[1].strip())
@@ -364,6 +408,13 @@ def main():
     if not loi or not os.path.isfile(a.video):
         print("thieu loi hoac video"); return 2
     dv = dai_video(a.video)
+    vd = kiem_truoc(loi, dv)
+    if vd:
+        for x in vd:
+            log("KIEM TRUOC:", x)
+        if not a.bo_qua_kiem_truoc:
+            log("DUNG truoc khi bam: sua tep loi (gian moc / rut gon loi) hoac them --bo-qua-kiem-truoc")
+            return 2
     log(f"bat dau: du an {a.du_an} | video {dv:.2f}s | {len(loi)} doan | nhac: {a.nhac or '-'} | man {SW}x{SH} | thu={THU}")
     if a.tu_buoc > 1 and not THU and not tim_draft(a.du_an):
         print("chua co du an", a.du_an); return 2
