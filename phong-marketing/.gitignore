@@ -18,3 +18,5 @@ output/
 # Khoá API
 .env
 .env.*
+__pycache__/
+*.pyc
