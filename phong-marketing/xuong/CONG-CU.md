@@ -2,6 +2,11 @@
 
 Mức quyền theo `../quy-che/QUYEN-TU-CHU.md`. Đổi máy thì kiểm lại cột "Cần để chạy".
 
+**Máy Linux (kiểm 17/11/2026) cho quy trình reup** (`QUY-TRINH-REUP.md`): Ubuntu 22.04 · 12 nhân · RAM 46 GB · trống 79 GB · **KHÔNG có card NVIDIA**
+(chỉ Intel UHD 730) · Python 3.10.12 nhưng **thiếu pip và ensurepip** · Node 22 · ffmpeg **4.4.2 → 3/52 test `gen-video-viral` trượt** (bóc cắt + encoder `Lavf58`),
+cần ffmpeg ≥ 7 · **chưa có**: yt-dlp, faster-whisper, ffmpeg-skill · **CapCut và Claude desktop không có bản Linux** → bước giọng + nhạc (6–7) không chạy ở máy này ·
+xoá chữ VSR chỉ chạy được bằng CPU (chậm hơn nhiều, chưa đo). Ổ Windows gắn ở `/media/.../F438B52C38B4EEAC` là của tài khoản `vinctuyen`, KHÔNG phải máy Windows "PC" đã chạy reup.
+
 **Hai máy (kiểm 12/11/2026):** Linux `~/my-project/` (ffmpeg 4.4.2) · **Windows** `D:/my project/gen-video-viral` + `C:/Users/PC/OneDrive/Desktop/my project/manager-ai` — Node 23.11, **ffmpeg 8** (bản 2026-08-27, có `-/filter_complex`), Python 3.10.10, numpy 1.26.4, faster-whisper 1.2.1. Media (`thu-nghiem/`) không theo git: mỗi máy một bản.
 
 | Công cụ | Làm gì | Vai được dùng | Mức | Cần để chạy (máy Linux 11/11) | Lỗi đã biết |
